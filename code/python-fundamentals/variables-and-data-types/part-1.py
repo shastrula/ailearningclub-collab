@@ -1,0 +1,1 @@
+# Variable assignmentname = "Alice"age = 25height = 5.6is_student = True# Type checkingprint(type(name))      # <class 'str'>print(type(age))       # <class 'int'># Type conversionage_str = str(age)     # "25"count = int("42")      # 42# Collectionsnumbers = [1, 2, 3, 4, 5]person = {"name": "Bob", "age": 30, "city": "NYC"}
