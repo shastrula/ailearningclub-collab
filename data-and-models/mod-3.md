@@ -81,7 +81,24 @@ print(X_scaled.describe().round(2))
 
 > **💡 Tip:** Always fit the scaler on training data only, then transform both train and test. Fitting on the full dataset leaks information about the test set.
 
-<div class="quiz">
+Most ML algorithms perform better when features are on the same scale. Income ranges from 0.5 to 15, while Population ranges from 3 to 35,000 — without scaling, population dominates.
+
+```python title="scaling.py"
+from sklearn.preprocessing import StandardScaler
+import pandas as pd
+from sklearn.datasets import fetch_california_housing
+
+df = fetch_california_housing(as_frame=True).frame
+X = df.drop('MedHouseVal', axis=1)
+y = df['MedHouseVal']
+
+scaler = StandardScaler()
+X_scaled = pd.DataFrame(scaler.fit_transform(X), columns=X.columns)
+print(X_scaled.describe().round(2))
+# All columns now have mean≈0 and std≈1
+```
+
+>
   <p class="font-semibold mb-3">❓ Why should you fit a StandardScaler only on training data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

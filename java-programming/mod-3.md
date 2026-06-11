@@ -87,7 +87,30 @@ public class ControlFlowExample {
 
 > **💡 Tip:** Always include a break statement at the end of each case in a switch statement to prevent fall-through to subsequent cases.
 
-<div class="quiz">
+The switch statement is used to perform different actions based on different conditions. It is a multi-way branch statement that provides an efficient way to dispatch execution to different parts of code based on the value of an expression. It is particularly useful when you have multiple possible values to check against.
+
+```java title="example2.java"
+public class ControlFlowExample {
+    public static void main(String[] args) {
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Good");
+                break;
+            case 'C':
+                System.out.println("Well done");
+                break;
+            default:
+                System.out.println("Try again");
+        }
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ What will be the output of the if-else statement if the number is less than or equal to 5?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -111,7 +134,30 @@ public class ControlFlowExample {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The switch statement is used to perform different actions based on different conditions. It is a multi-way branch statement that provides an efficient way to dispatch execution to different parts of code based on the value of an expression. It is particularly useful when you have multiple possible values to check against.
+
+```java title="example2.java"
+public class ControlFlowExample {
+    public static void main(String[] args) {
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Good");
+                break;
+            case 'C':
+                System.out.println("Well done");
+                break;
+            default:
+                System.out.println("Try again");
+        }
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ What will be the output of the switch statement if the grade is 'B'?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -174,7 +220,30 @@ public class Example5 {
 Example 5
 ```
 
-<div class="quiz">
+The switch statement is used to perform different actions based on different conditions. It is a multi-way branch statement that provides an efficient way to dispatch execution to different parts of code based on the value of an expression. It is particularly useful when you have multiple possible values to check against.
+
+```java title="example2.java"
+public class ControlFlowExample {
+    public static void main(String[] args) {
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Good");
+                break;
+            case 'C':
+                System.out.println("Well done");
+                break;
+            default:
+                System.out.println("Try again");
+        }
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 3: What is a key concept in Control Flow Statements?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -198,7 +267,30 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The switch statement is used to perform different actions based on different conditions. It is a multi-way branch statement that provides an efficient way to dispatch execution to different parts of code based on the value of an expression. It is particularly useful when you have multiple possible values to check against.
+
+```java title="example2.java"
+public class ControlFlowExample {
+    public static void main(String[] args) {
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Good");
+                break;
+            case 'C':
+                System.out.println("Well done");
+                break;
+            default:
+                System.out.println("Try again");
+        }
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 4: What is a key concept in Control Flow Statements?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -222,7 +314,30 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The switch statement is used to perform different actions based on different conditions. It is a multi-way branch statement that provides an efficient way to dispatch execution to different parts of code based on the value of an expression. It is particularly useful when you have multiple possible values to check against.
+
+```java title="example2.java"
+public class ControlFlowExample {
+    public static void main(String[] args) {
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Good");
+                break;
+            case 'C':
+                System.out.println("Well done");
+                break;
+            default:
+                System.out.println("Try again");
+        }
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 5: What is a key concept in Control Flow Statements?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -246,7 +361,30 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The switch statement is used to perform different actions based on different conditions. It is a multi-way branch statement that provides an efficient way to dispatch execution to different parts of code based on the value of an expression. It is particularly useful when you have multiple possible values to check against.
+
+```java title="example2.java"
+public class ControlFlowExample {
+    public static void main(String[] args) {
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Good");
+                break;
+            case 'C':
+                System.out.println("Well done");
+                break;
+            default:
+                System.out.println("Try again");
+        }
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 6: What is a key concept in Control Flow Statements?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -270,7 +408,30 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The switch statement is used to perform different actions based on different conditions. It is a multi-way branch statement that provides an efficient way to dispatch execution to different parts of code based on the value of an expression. It is particularly useful when you have multiple possible values to check against.
+
+```java title="example2.java"
+public class ControlFlowExample {
+    public static void main(String[] args) {
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Good");
+                break;
+            case 'C':
+                System.out.println("Well done");
+                break;
+            default:
+                System.out.println("Try again");
+        }
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 7: What is a key concept in Control Flow Statements?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -294,7 +455,30 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The switch statement is used to perform different actions based on different conditions. It is a multi-way branch statement that provides an efficient way to dispatch execution to different parts of code based on the value of an expression. It is particularly useful when you have multiple possible values to check against.
+
+```java title="example2.java"
+public class ControlFlowExample {
+    public static void main(String[] args) {
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Good");
+                break;
+            case 'C':
+                System.out.println("Well done");
+                break;
+            default:
+                System.out.println("Try again");
+        }
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 8: What is a key concept in Control Flow Statements?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -318,7 +502,30 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The switch statement is used to perform different actions based on different conditions. It is a multi-way branch statement that provides an efficient way to dispatch execution to different parts of code based on the value of an expression. It is particularly useful when you have multiple possible values to check against.
+
+```java title="example2.java"
+public class ControlFlowExample {
+    public static void main(String[] args) {
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Good");
+                break;
+            case 'C':
+                System.out.println("Well done");
+                break;
+            default:
+                System.out.println("Try again");
+        }
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 9: What is a key concept in Control Flow Statements?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -342,7 +549,30 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The switch statement is used to perform different actions based on different conditions. It is a multi-way branch statement that provides an efficient way to dispatch execution to different parts of code based on the value of an expression. It is particularly useful when you have multiple possible values to check against.
+
+```java title="example2.java"
+public class ControlFlowExample {
+    public static void main(String[] args) {
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Good");
+                break;
+            case 'C':
+                System.out.println("Well done");
+                break;
+            default:
+                System.out.println("Try again");
+        }
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 10: What is a key concept in Control Flow Statements?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

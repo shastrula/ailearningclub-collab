@@ -58,7 +58,7 @@ Recognizing these patterns helps you avoid repeating them.
 
 ## Quiz
 
-<div class="quiz">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which cloud model provides the most control over infrastructure?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

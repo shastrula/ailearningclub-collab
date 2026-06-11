@@ -75,7 +75,18 @@ print(cot_result[0]['generated_text'])
 
 > **💡 Tip:** When using Chain-of-Thought prompting, ensure that the intermediate steps are clear and logically connected to avoid confusion and improve the model's performance.
 
-<div class="quiz">
+Chain-of-Thought prompting encourages models to generate intermediate reasoning steps before arriving at a final answer, enhancing the model's ability to solve complex problems. ReAct (Reason + Act) prompting involves guiding the model to reason about a task and then perform an action based on that reasoning, useful for tasks requiring multi-step problem-solving.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Chain-of-Thought example
+cot_pipeline = pipeline("text-generation")
+cot_result = cot_pipeline("To solve 23 * 7, first multiply 20 by 7 to get 140, then multiply 3 by 7 to get 21, and finally add 140 and 21 to get 161. So, 23 * 7 = ")
+print(cot_result[0]['generated_text'])
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary difference between zero-shot and few-shot prompting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -99,7 +110,18 @@ print(cot_result[0]['generated_text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Chain-of-Thought prompting encourages models to generate intermediate reasoning steps before arriving at a final answer, enhancing the model's ability to solve complex problems. ReAct (Reason + Act) prompting involves guiding the model to reason about a task and then perform an action based on that reasoning, useful for tasks requiring multi-step problem-solving.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Chain-of-Thought example
+cot_pipeline = pipeline("text-generation")
+cot_result = cot_pipeline("To solve 23 * 7, first multiply 20 by 7 to get 140, then multiply 3 by 7 to get 21, and finally add 140 and 21 to get 161. So, 23 * 7 = ")
+print(cot_result[0]['generated_text'])
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the purpose of Chain-of-Thought prompting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

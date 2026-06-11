@@ -93,7 +93,16 @@ print(quicksort(arr))  # Output: [11, 12, 22, 25, 34, 64, 90]
 
 > **💡 Tip:** When choosing a sorting algorithm, consider the size and nature of your data. For small datasets, bubble sort might be sufficient, but for larger datasets, quicksort or other efficient algorithms like mergesort or heapsort are recommended.
 
-<div class="quiz">
+Sorting algorithms are critical for organizing data efficiently, which is a common requirement in AI. Bubble sort and quicksort are two fundamental sorting algorithms. Bubble sort is simple but inefficient for large datasets, while quicksort is more efficient and widely used. Understanding these algorithms helps in choosing the right sorting method based on the specific requirements of the task at hand.
+
+**example2.py**
+
+```
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] >
   <p class="font-semibold mb-3">❓ What is the primary advantage of using a dictionary over a list?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,7 +126,16 @@ print(quicksort(arr))  # Output: [11, 12, 22, 25, 34, 64, 90]
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Sorting algorithms are critical for organizing data efficiently, which is a common requirement in AI. Bubble sort and quicksort are two fundamental sorting algorithms. Bubble sort is simple but inefficient for large datasets, while quicksort is more efficient and widely used. Understanding these algorithms helps in choosing the right sorting method based on the specific requirements of the task at hand.
+
+**example2.py**
+
+```
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] >
   <p class="font-semibold mb-3">❓ Which sorting algorithm is more efficient for large datasets?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

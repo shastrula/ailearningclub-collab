@@ -82,7 +82,25 @@ print('Cluster labels:', labels)
 
 > **💡 Tip:** When using DBSCAN, carefully choose the `eps` (epsilon) and `min_samples` parameters to ensure meaningful clusters. Too large an `eps` can merge distinct clusters, while too small a value can create too many clusters.
 
-<div class="quiz">
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is a density-based clustering algorithm. Unlike K-Means, DBSCAN does not require specifying the number of clusters beforehand. It forms clusters based on the density of data points, identifying core points, border points, and noise points.
+
+```python title="example2.py"
+from sklearn.cluster import DBSCAN
+from sklearn.datasets import make_moons
+
+# Generate sample data
+X, _ = make_moons(n_samples=300, noise=0.05, random_state=0)
+
+# Apply DBSCAN clustering
+dbsc = DBSCAN(eps=0.3, min_samples=5).fit(X)
+
+# Get cluster labels
+labels = dbsc.labels_
+
+print('Cluster labels:', labels)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary difference between K-Means and DBSCAN clustering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +124,25 @@ print('Cluster labels:', labels)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is a density-based clustering algorithm. Unlike K-Means, DBSCAN does not require specifying the number of clusters beforehand. It forms clusters based on the density of data points, identifying core points, border points, and noise points.
+
+```python title="example2.py"
+from sklearn.cluster import DBSCAN
+from sklearn.datasets import make_moons
+
+# Generate sample data
+X, _ = make_moons(n_samples=300, noise=0.05, random_state=0)
+
+# Apply DBSCAN clustering
+dbsc = DBSCAN(eps=0.3, min_samples=5).fit(X)
+
+# Get cluster labels
+labels = dbsc.labels_
+
+print('Cluster labels:', labels)
+```
+
+>
   <p class="font-semibold mb-3">❓ In DBSCAN, what does the parameter `eps` control?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

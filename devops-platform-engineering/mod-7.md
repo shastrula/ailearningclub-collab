@@ -100,7 +100,40 @@ terraform-docs markdown . > README.md
 
 ---
 
-<div class="quiz">
+### Code Organization
+
+```
+terraform/
+├── main.tf              # Main configuration
+├── variables.tf         # Variable definitions
+├── outputs.tf           # Output definitions
+├── backend.tf           # Backend configuration
+├── terraform.tfvars     # Variable values (gitignored)
+├── modules/
+│   ├── vpc/
+│   ├── rds/
+│   └── ecs/
+└── environments/
+    ├── dev/
+    ├── staging/
+    └── production/
+```
+
+### Validation and Testing
+
+```bash
+# Validate syntax
+terraform validate
+
+# Format code
+terraform fmt -recursive
+
+# Use tflint for linting
+tflint --init
+tflint
+
+# Use terraform-docs to generate documentation
+terraform-docs markdown . >
   <p class="font-semibold mb-3">❓ What is the primary purpose of Terraform?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,7 +157,40 @@ terraform-docs markdown . > README.md
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+### Code Organization
+
+```
+terraform/
+├── main.tf              # Main configuration
+├── variables.tf         # Variable definitions
+├── outputs.tf           # Output definitions
+├── backend.tf           # Backend configuration
+├── terraform.tfvars     # Variable values (gitignored)
+├── modules/
+│   ├── vpc/
+│   ├── rds/
+│   └── ecs/
+└── environments/
+    ├── dev/
+    ├── staging/
+    └── production/
+```
+
+### Validation and Testing
+
+```bash
+# Validate syntax
+terraform validate
+
+# Format code
+terraform fmt -recursive
+
+# Use tflint for linting
+tflint --init
+tflint
+
+# Use terraform-docs to generate documentation
+terraform-docs markdown . >
   <p class="font-semibold mb-3">❓ What does `terraform plan` do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -148,7 +214,40 @@ terraform-docs markdown . > README.md
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+### Code Organization
+
+```
+terraform/
+├── main.tf              # Main configuration
+├── variables.tf         # Variable definitions
+├── outputs.tf           # Output definitions
+├── backend.tf           # Backend configuration
+├── terraform.tfvars     # Variable values (gitignored)
+├── modules/
+│   ├── vpc/
+│   ├── rds/
+│   └── ecs/
+└── environments/
+    ├── dev/
+    ├── staging/
+    └── production/
+```
+
+### Validation and Testing
+
+```bash
+# Validate syntax
+terraform validate
+
+# Format code
+terraform fmt -recursive
+
+# Use tflint for linting
+tflint --init
+tflint
+
+# Use terraform-docs to generate documentation
+terraform-docs markdown . >
   <p class="font-semibold mb-3">❓ What is a Terraform module?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -172,7 +271,40 @@ terraform-docs markdown . > README.md
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+### Code Organization
+
+```
+terraform/
+├── main.tf              # Main configuration
+├── variables.tf         # Variable definitions
+├── outputs.tf           # Output definitions
+├── backend.tf           # Backend configuration
+├── terraform.tfvars     # Variable values (gitignored)
+├── modules/
+│   ├── vpc/
+│   ├── rds/
+│   └── ecs/
+└── environments/
+    ├── dev/
+    ├── staging/
+    └── production/
+```
+
+### Validation and Testing
+
+```bash
+# Validate syntax
+terraform validate
+
+# Format code
+terraform fmt -recursive
+
+# Use tflint for linting
+tflint --init
+tflint
+
+# Use terraform-docs to generate documentation
+terraform-docs markdown . >
   <p class="font-semibold mb-3">❓ Where should Terraform state be stored for team collaboration?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -196,7 +328,40 @@ terraform-docs markdown . > README.md
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+### Code Organization
+
+```
+terraform/
+├── main.tf              # Main configuration
+├── variables.tf         # Variable definitions
+├── outputs.tf           # Output definitions
+├── backend.tf           # Backend configuration
+├── terraform.tfvars     # Variable values (gitignored)
+├── modules/
+│   ├── vpc/
+│   ├── rds/
+│   └── ecs/
+└── environments/
+    ├── dev/
+    ├── staging/
+    └── production/
+```
+
+### Validation and Testing
+
+```bash
+# Validate syntax
+terraform validate
+
+# Format code
+terraform fmt -recursive
+
+# Use tflint for linting
+tflint --init
+tflint
+
+# Use terraform-docs to generate documentation
+terraform-docs markdown . >
   <p class="font-semibold mb-3">❓ What is the purpose of Terraform workspaces?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

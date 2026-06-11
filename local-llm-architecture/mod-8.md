@@ -77,7 +77,20 @@ print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
 
 > **💡 Tip:** Regularly monitor system resource usage to ensure optimal performance and avoid bottlenecks when running LLMs.
 
-<div class="quiz">
+Running LLMs locally demands significant computational resources. Enterprises must ensure they have adequate CPU and GPU capabilities, sufficient RAM, and fast storage solutions. Additionally, optimizing model parameters and utilizing quantization techniques can help manage resource usage effectively, making it feasible to deploy LLMs in resource-constrained environments.
+
+```python title="example2.py"
+import psutil
+
+# Check system resources
+cpu_percent = psutil.cpu_percent(interval=1)
+memory_info = psutil.virtual_memory()
+
+print(f'CPU Usage: {cpu_percent}%)')
+print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary function of Ollama in LLM deployment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +114,20 @@ print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Running LLMs locally demands significant computational resources. Enterprises must ensure they have adequate CPU and GPU capabilities, sufficient RAM, and fast storage solutions. Additionally, optimizing model parameters and utilizing quantization techniques can help manage resource usage effectively, making it feasible to deploy LLMs in resource-constrained environments.
+
+```python title="example2.py"
+import psutil
+
+# Check system resources
+cpu_percent = psutil.cpu_percent(interval=1)
+memory_info = psutil.virtual_memory()
+
+print(f'CPU Usage: {cpu_percent}%)')
+print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which component is crucial for efficient LLM inference in resource-constrained environments?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

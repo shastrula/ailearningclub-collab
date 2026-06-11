@@ -76,7 +76,23 @@ print(dbscan.labels_)
 
 > **💡 Tip:** When using DBSCAN, carefully choose the eps and min_samples parameters, as they significantly affect the resulting clusters.
 
-<div class="quiz">
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) groups together points that are closely packed, marking points that lie alone in low-density regions as outliers. It requires two parameters: eps (the maximum distance between two points to be considered in the same neighborhood) and min_samples (the minimum number of points in a neighborhood for a point to be considered a core point).
+
+```python title="example2.py"
+from sklearn.cluster import DBSCAN
+
+# Generate sample data
+X = np.array([[1, 2], [2, 2], [2, 3],
+              [8, 7], [8, 8], [25, 80]])
+
+# Apply DBSCAN clustering
+dbscan = DBSCAN(eps=3, min_samples=2).fit(X)
+
+# Print cluster labels
+print(dbscan.labels_)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of K-Means clustering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -100,7 +116,23 @@ print(dbscan.labels_)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) groups together points that are closely packed, marking points that lie alone in low-density regions as outliers. It requires two parameters: eps (the maximum distance between two points to be considered in the same neighborhood) and min_samples (the minimum number of points in a neighborhood for a point to be considered a core point).
+
+```python title="example2.py"
+from sklearn.cluster import DBSCAN
+
+# Generate sample data
+X = np.array([[1, 2], [2, 2], [2, 3],
+              [8, 7], [8, 8], [25, 80]])
+
+# Apply DBSCAN clustering
+dbscan = DBSCAN(eps=3, min_samples=2).fit(X)
+
+# Print cluster labels
+print(dbscan.labels_)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which parameter in DBSCAN determines the maximum distance between two points to be considered in the same neighborhood?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

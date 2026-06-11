@@ -77,7 +77,20 @@ print(labels_dbscan)
 
 > **💡 Tip:** When using DBSCAN, carefully choose the 'eps' and'min_samples' parameters to ensure meaningful clusters are formed.
 
-<div class="quiz">
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is another unsupervised learning algorithm that can identify clusters of varying shapes and sizes in time series data. Unlike K-Means, DBSCAN does not require specifying the number of clusters beforehand and can detect outliers effectively.
+
+```python title="example2.py"
+from sklearn.cluster import DBSCAN
+
+# Apply DBSCAN clustering
+dbscan = DBSCAN(eps=0.3, min_samples=5).fit(data_scaled)
+
+# Get cluster labels
+labels_dbscan = dbscan.labels_
+print(labels_dbscan)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using K-Means clustering for time series data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +114,20 @@ print(labels_dbscan)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is another unsupervised learning algorithm that can identify clusters of varying shapes and sizes in time series data. Unlike K-Means, DBSCAN does not require specifying the number of clusters beforehand and can detect outliers effectively.
+
+```python title="example2.py"
+from sklearn.cluster import DBSCAN
+
+# Apply DBSCAN clustering
+dbscan = DBSCAN(eps=0.3, min_samples=5).fit(data_scaled)
+
+# Get cluster labels
+labels_dbscan = dbscan.labels_
+print(labels_dbscan)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which parameter in DBSCAN controls the maximum distance between two samples for them to be considered as in the same neighborhood?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

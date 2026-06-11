@@ -82,7 +82,25 @@ print(np.__version__)
 
 > **💡 Tip:** Always remember to activate the environment you are working in to ensure that you are using the correct set of packages and dependencies.
 
-<div class="quiz">
+Conda environments allow you to create isolated spaces for different projects, each with its own set of dependencies. This is particularly useful when working on multiple projects that require different versions of the same package. To create a new environment, you use the `conda create` command followed by the environment name and the packages you want to include.
+
+```python title="example2.py"
+import conda
+
+# Create a new environment named'myenv' with Python 3.8 and numpy
+conda.cli.main.create(['--name','myenv', 'python=3.8', 'numpy'])
+
+# Activate the new environment
+conda.cli.main.activate(['myenv'])
+
+# Verify the environment and installed packages
+import sys
+import numpy as np
+print(sys.executable)
+print(np.__version__)
+```
+
+>
   <p class="font-semibold mb-3">❓ What command is used to install a package in Conda?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +124,25 @@ print(np.__version__)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Conda environments allow you to create isolated spaces for different projects, each with its own set of dependencies. This is particularly useful when working on multiple projects that require different versions of the same package. To create a new environment, you use the `conda create` command followed by the environment name and the packages you want to include.
+
+```python title="example2.py"
+import conda
+
+# Create a new environment named'myenv' with Python 3.8 and numpy
+conda.cli.main.create(['--name','myenv', 'python=3.8', 'numpy'])
+
+# Activate the new environment
+conda.cli.main.activate(['myenv'])
+
+# Verify the environment and installed packages
+import sys
+import numpy as np
+print(sys.executable)
+print(np.__version__)
+```
+
+>
   <p class="font-semibold mb-3">❓ How do you create a new Conda environment with specific packages?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

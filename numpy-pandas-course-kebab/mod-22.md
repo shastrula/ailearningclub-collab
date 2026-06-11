@@ -85,7 +85,28 @@ print(data.head())
 
 > **💡 Tip:** Always make a copy of your original dataset before performing any cleaning operations. This allows you to revert to the original data if needed.
 
-<div class="quiz">
+Data cleaning is a critical step in any data analysis project. This section will cover techniques for handling missing values, removing duplicates, and transforming data to prepare it for analysis.
+
+```python title="example2.py"
+import pandas as pd
+
+# Load the dataset
+data = pd.read_csv('data.csv')
+
+# Handle missing values by filling them with the mean
+data.fillna(data.mean(), inplace=True)
+
+# Remove duplicate rows
+data.drop_duplicates(inplace=True)
+
+# Convert a column to datetime
+data['date_column'] = pd.to_datetime(data['date_column'])
+
+# Display the cleaned dataset
+print(data.head())
+```
+
+>
   <p class="font-semibold mb-3">❓ What function is used to load a CSV file into a Pandas DataFrame?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -109,7 +130,28 @@ print(data.head())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Data cleaning is a critical step in any data analysis project. This section will cover techniques for handling missing values, removing duplicates, and transforming data to prepare it for analysis.
+
+```python title="example2.py"
+import pandas as pd
+
+# Load the dataset
+data = pd.read_csv('data.csv')
+
+# Handle missing values by filling them with the mean
+data.fillna(data.mean(), inplace=True)
+
+# Remove duplicate rows
+data.drop_duplicates(inplace=True)
+
+# Convert a column to datetime
+data['date_column'] = pd.to_datetime(data['date_column'])
+
+# Display the cleaned dataset
+print(data.head())
+```
+
+>
   <p class="font-semibold mb-3">❓ Which method is used to remove duplicate rows in a DataFrame?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

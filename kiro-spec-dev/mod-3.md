@@ -64,7 +64,9 @@ Learning from others' experiences:
 
 After implementation, design.md stays in your repo as documentation. Future developers (and future AI agents) can read it to understand why the code is structured the way it is — not just what it does.
 
-<div class="quiz">
+After implementation, design.md stays in your repo as documentation. Future developers (and future AI agents) can read it to understand why the code is structured the way it is — not just what it does.
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of design.md in Kiro's spec workflow?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

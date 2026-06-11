@@ -88,7 +88,31 @@ print(exp.as_list())
 
 > **💡 Tip:** When deploying AI models, always keep documentation of the model's training data, hyperparameters, and performance metrics to ensure accountability and facilitate audits.
 
-<div class="quiz">
+Algorithmic transparency and accountability are critical for building trust in AI systems. Regulations often require that AI decisions be explainable and that there are mechanisms in place for users to contest automated decisions.
+
+```python title="example2.py"
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import make_classification
+import lime
+import lime.lime_tabular
+
+# Generate a synthetic dataset
+X, y = make_classification(n_samples=100, n_features=4,
+                            n_informative=2, n_redundant=0,
+                            random_state=42)
+
+# Train a RandomForestClassifier
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(X, y)
+
+# Explain predictions using LIME
+explainer = lime.lime_tabular.LimeTabularExplainer(X, feature_names=['feature1', 'feature2', 'feature3', 'feature4'],
+                                                    class_names=['class0', 'class1'], mode='classification')
+exp = explainer.explain_instance(X[0], model.predict_proba, num_features=4)
+print(exp.as_list())
+```
+
+>
   <p class="font-semibold mb-3">❓ Which regulation specifically addresses data privacy in the European Union?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -112,7 +136,31 @@ print(exp.as_list())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Algorithmic transparency and accountability are critical for building trust in AI systems. Regulations often require that AI decisions be explainable and that there are mechanisms in place for users to contest automated decisions.
+
+```python title="example2.py"
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import make_classification
+import lime
+import lime.lime_tabular
+
+# Generate a synthetic dataset
+X, y = make_classification(n_samples=100, n_features=4,
+                            n_informative=2, n_redundant=0,
+                            random_state=42)
+
+# Train a RandomForestClassifier
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(X, y)
+
+# Explain predictions using LIME
+explainer = lime.lime_tabular.LimeTabularExplainer(X, feature_names=['feature1', 'feature2', 'feature3', 'feature4'],
+                                                    class_names=['class0', 'class1'], mode='classification')
+exp = explainer.explain_instance(X[0], model.predict_proba, num_features=4)
+print(exp.as_list())
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a common method for ensuring algorithmic transparency?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

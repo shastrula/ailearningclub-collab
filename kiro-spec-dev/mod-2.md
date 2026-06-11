@@ -79,7 +79,22 @@ so that other users can recognise me.
 
 > **💡 Tip:** Edit requirements.md directly before moving to design. Add missing edge cases, remove things you don't need. Kiro will use the final version as ground truth.
 
-<div class="quiz">
+### US-1: Upload a profile photo
+As a logged-in user, I want to upload a profile photo
+so that other users can recognise me.
+
+**Acceptance Criteria:**
+- WHEN a user POSTs a valid image to /api/profile/photo
+  THEN the system SHALL resize it to 200x200 pixels
+- WHEN the upload succeeds
+  THEN the system SHALL return the public S3 URL
+- IF the file exceeds 5MB
+  THEN the system SHALL return HTTP 413 with an error message
+- IF the file is not jpeg, png, or webp
+  THEN the system SHALL return HTTP 415
+```
+
+>
   <p class="font-semibold mb-3">❓ In Kiro's spec workflow, what happens BEFORE any code is generated?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -77,7 +77,22 @@ Learning from others' experiences:
 - Uses surrogate model and acquisition function
 - Useful for hyperparameter tuning
 
-<div class="quiz">
+### Naive Bayes Classifier
+- Assumes feature independence
+- Fast and effective for text classification
+- P(Class|Features) ∝ P(Features|Class) × P(Class)
+
+### Bayesian Networks
+- Directed acyclic graphs of variables
+- Encode conditional dependencies
+- Used in reasoning and inference
+
+### Bayesian Optimization
+- Efficiently search parameter space
+- Uses surrogate model and acquisition function
+- Useful for hyperparameter tuning
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ In Bayes' theorem, what is P(A)?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -104,7 +104,47 @@ w, b = sgd(x_data, y_data, w, b, learning_rate, num_iterations)
 
 > **💡 Tip:** When implementing SGD, ensure that your data is shuffled at the beginning of each epoch to avoid the model getting stuck in a local minimum.
 
-<div class="quiz">
+Stochastic Gradient Descent is a variant of Gradient Descent that updates the model parameters for each training example rather than the entire dataset. This makes it computationally more efficient and suitable for large datasets. By updating parameters incrementally, SGD can converge faster and escape local minima more effectively. It introduces randomness which can help in finding a global minimum.
+
+```python title="example2.py"
+import numpy as np
+
+# Sample data
+x_data = np.array([1, 2, 3, 4, 5])
+y_data = np.array([2, 4, 6, 8, 10])
+
+# Model parameters
+w = 0.0
+b = 0.0
+
+# Learning rate
+learning_rate = 0.01
+
+# Number of iterations
+num_iterations = 1000
+
+# SGD algorithm
+def sgd(x_data, y_data, w, b, learning_rate, num_iterations):
+    N = len(x_data)
+    for i in range(num_iterations):
+        for j in range(N):
+            x = x_data[j]
+            y = y_data[j]
+            # Compute the gradient
+            dw = -2 * (y - (w * x + b)) * x
+            db = -2 * (y - (w * x + b))
+            # Update parameters
+            w = w - learning_rate * dw
+            b = b - learning_rate * db
+        if i % 100 == 0:
+            print(f'Iteration {i}: w = {w}, b = {b}')
+    return w, b
+
+# Run SGD
+w, b = sgd(x_data, y_data, w, b, learning_rate, num_iterations)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary difference between Gradient Descent and Stochastic Gradient Descent?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -128,7 +168,47 @@ w, b = sgd(x_data, y_data, w, b, learning_rate, num_iterations)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Stochastic Gradient Descent is a variant of Gradient Descent that updates the model parameters for each training example rather than the entire dataset. This makes it computationally more efficient and suitable for large datasets. By updating parameters incrementally, SGD can converge faster and escape local minima more effectively. It introduces randomness which can help in finding a global minimum.
+
+```python title="example2.py"
+import numpy as np
+
+# Sample data
+x_data = np.array([1, 2, 3, 4, 5])
+y_data = np.array([2, 4, 6, 8, 10])
+
+# Model parameters
+w = 0.0
+b = 0.0
+
+# Learning rate
+learning_rate = 0.01
+
+# Number of iterations
+num_iterations = 1000
+
+# SGD algorithm
+def sgd(x_data, y_data, w, b, learning_rate, num_iterations):
+    N = len(x_data)
+    for i in range(num_iterations):
+        for j in range(N):
+            x = x_data[j]
+            y = y_data[j]
+            # Compute the gradient
+            dw = -2 * (y - (w * x + b)) * x
+            db = -2 * (y - (w * x + b))
+            # Update parameters
+            w = w - learning_rate * dw
+            b = b - learning_rate * db
+        if i % 100 == 0:
+            print(f'Iteration {i}: w = {w}, b = {b}')
+    return w, b
+
+# Run SGD
+w, b = sgd(x_data, y_data, w, b, learning_rate, num_iterations)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the purpose of the learning rate in Gradient Descent and SGD?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

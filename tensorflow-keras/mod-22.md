@@ -93,7 +93,36 @@ shap.summary_plot(shap_values, X_test, plot_type="bar")
 
 > **💡 Tip:** When using SHAP values, ensure that the dataset is representative and unbiased to avoid misleading interpretations.
 
-<div class="quiz">
+SHAP (SHapley Additive exPlanations) values provide a unified measure of feature importance. They are based on game theory and offer a way to explain the output of any machine learning model. SHAP values can be used to understand the impact of each feature on the model's predictions, making them a powerful tool for interpretability.
+
+```python title="example2.py"
+import shap
+import xgboost as xgb
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+
+# Generate a binary classification dataset.
+X, y = make_classification(n_samples=1000, n_features=10,
+                            n_informative=5, n_redundant=0,
+                            random_state=42)
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train an XGBoost model
+model = xgb.XGBClassifier().
+fit(X_train, y_train)
+
+# Create a SHAP explainer object
+explainer = shap.Explainer(model)
+
+shap_values = explainer(X_test)
+
+# Plot SHAP summary plot
+shap.summary_plot(shap_values, X_test, plot_type="bar")
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of model interpretability?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,7 +146,36 @@ shap.summary_plot(shap_values, X_test, plot_type="bar")
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+SHAP (SHapley Additive exPlanations) values provide a unified measure of feature importance. They are based on game theory and offer a way to explain the output of any machine learning model. SHAP values can be used to understand the impact of each feature on the model's predictions, making them a powerful tool for interpretability.
+
+```python title="example2.py"
+import shap
+import xgboost as xgb
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+
+# Generate a binary classification dataset.
+X, y = make_classification(n_samples=1000, n_features=10,
+                            n_informative=5, n_redundant=0,
+                            random_state=42)
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train an XGBoost model
+model = xgb.XGBClassifier().
+fit(X_train, y_train)
+
+# Create a SHAP explainer object
+explainer = shap.Explainer(model)
+
+shap_values = explainer(X_test)
+
+# Plot SHAP summary plot
+shap.summary_plot(shap_values, X_test, plot_type="bar")
+```
+
+>
   <p class="font-semibold mb-3">❓ Which technique is used to measure the impact of each feature on model predictions using game theory?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -89,7 +89,32 @@ for name, param in model.named_parameters():
 
 > **💡 Tip:** Ensure that the quantization level (e.g., 8-bit) is compatible with your hardware to avoid runtime errors.
 
-<div class="quiz">
+QLoRA extends LoRA by incorporating quantization techniques to further reduce memory usage and computational cost. This is particularly useful for deploying large models on resource-constrained environments.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import bitsandbytes as bnb
+
+# Load pre-trained model and tokenizer
+model_name = 'EleutherAI/gpt-neo-125M'
+model = AutoModelForCausalLM.from_pretrained(model_name, load_in_8bit=True)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Define QLoRA adaptation
+lora_r = 8
+lora_alpha = 32
+lora_dropout = 0.1
+
+for name, param in model.named_parameters():
+    if 'query' in name or 'key' in name or 'value' in name:
+        param.data = bnb.nn.quantized_LowRankMatrix(param.data, rank=lora_r, alpha=lora_alpha, dropout=lora_dropout)
+
+# Fine-tune the model
+#... (fine-tuning code here)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using LoRA for fine-tuning large models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -113,7 +138,32 @@ for name, param in model.named_parameters():
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+QLoRA extends LoRA by incorporating quantization techniques to further reduce memory usage and computational cost. This is particularly useful for deploying large models on resource-constrained environments.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import bitsandbytes as bnb
+
+# Load pre-trained model and tokenizer
+model_name = 'EleutherAI/gpt-neo-125M'
+model = AutoModelForCausalLM.from_pretrained(model_name, load_in_8bit=True)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Define QLoRA adaptation
+lora_r = 8
+lora_alpha = 32
+lora_dropout = 0.1
+
+for name, param in model.named_parameters():
+    if 'query' in name or 'key' in name or 'value' in name:
+        param.data = bnb.nn.quantized_LowRankMatrix(param.data, rank=lora_r, alpha=lora_alpha, dropout=lora_dropout)
+
+# Fine-tune the model
+#... (fine-tuning code here)
+```
+
+>
   <p class="font-semibold mb-3">❓ How does QLoRA differ from LoRA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

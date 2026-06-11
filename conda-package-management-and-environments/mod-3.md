@@ -79,7 +79,22 @@ conda.deactivate()
 
 > **💡 Tip:** Always remember to deactivate your environment when you are done working in it to avoid accidentally installing packages in the wrong environment.
 
-<div class="quiz">
+Once an environment is created, you can activate it using the `conda activate` command. This will switch your shell session to the specified environment, allowing you to install and use packages within that environment. To deactivate the environment and return to the base environment, use the `conda deactivate` command.
+
+```python title="example2.py"
+import conda
+
+# Activate the 'myenv' environment
+conda.activate('myenv')
+
+# Install a package within the activated environment
+conda.install('numpy')
+
+# Deactivate the current environment
+conda.deactivate()
+```
+
+>
   <p class="font-semibold mb-3">❓ What command is used to create a new environment in Conda?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -103,7 +118,22 @@ conda.deactivate()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Once an environment is created, you can activate it using the `conda activate` command. This will switch your shell session to the specified environment, allowing you to install and use packages within that environment. To deactivate the environment and return to the base environment, use the `conda deactivate` command.
+
+```python title="example2.py"
+import conda
+
+# Activate the 'myenv' environment
+conda.activate('myenv')
+
+# Install a package within the activated environment
+conda.install('numpy')
+
+# Deactivate the current environment
+conda.deactivate()
+```
+
+>
   <p class="font-semibold mb-3">❓ How do you deactivate an active environment in Conda?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

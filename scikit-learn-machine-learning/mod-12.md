@@ -98,7 +98,41 @@ print(f'Average accuracy: {sum(scores)/len(scores):.2f}')
 
 > **💡 Tip:** Always use Stratified K-Fold for classification problems with imbalanced datasets to ensure each fold is representative of the class distribution.
 
-<div class="quiz">
+Stratified K-Fold Cross-Validation is a variation of K-Fold where the folds are made by preserving the percentage of samples for each class. This is particularly useful for classification problems where the target variable is imbalanced. By maintaining the same class distribution in each fold, this method ensures that each fold is a good representative of the whole.
+
+```python title="example2.py"
+from sklearn.model_selection import StratifiedKFold
+from sklearn.datasets import load_iris
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Initialize StratifiedKFold
+skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=1)
+
+# Initialize model
+model = LogisticRegression(max_iter=200)
+
+# List to store scores
+scores = []
+
+# Perform Stratified K-Fold Cross-Validation
+for train_index, test_index in skf.split(X, y):
+    X_train, X_test = X[train_index], X[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+    model.fit(X_train, y_train)
+    predictions = model.predict(X_test)
+    score = accuracy_score(y_test, predictions)
+    scores.append(score)
+
+# Print average score
+print(f'Average accuracy: {sum(scores)/len(scores):.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of K-Fold Cross-Validation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -122,7 +156,41 @@ print(f'Average accuracy: {sum(scores)/len(scores):.2f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Stratified K-Fold Cross-Validation is a variation of K-Fold where the folds are made by preserving the percentage of samples for each class. This is particularly useful for classification problems where the target variable is imbalanced. By maintaining the same class distribution in each fold, this method ensures that each fold is a good representative of the whole.
+
+```python title="example2.py"
+from sklearn.model_selection import StratifiedKFold
+from sklearn.datasets import load_iris
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Initialize StratifiedKFold
+skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=1)
+
+# Initialize model
+model = LogisticRegression(max_iter=200)
+
+# List to store scores
+scores = []
+
+# Perform Stratified K-Fold Cross-Validation
+for train_index, test_index in skf.split(X, y):
+    X_train, X_test = X[train_index], X[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+    model.fit(X_train, y_train)
+    predictions = model.predict(X_test)
+    score = accuracy_score(y_test, predictions)
+    scores.append(score)
+
+# Print average score
+print(f'Average accuracy: {sum(scores)/len(scores):.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Why is Stratified K-Fold Cross-Validation preferred for imbalanced datasets?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

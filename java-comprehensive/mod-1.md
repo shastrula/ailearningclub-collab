@@ -209,7 +209,122 @@ a || b: true
 
 Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/
 
-<div class="quiz">
+The Java ecosystem consists of three key components: JVM (Java Virtual Machine) executes bytecode, JRE (Java Runtime Environment) provides libraries and JVM, and JDK (Java Development Kit) includes compiler and tools. Understanding these distinctions is crucial for Java development. The JVM is what makes Java platform-independent - it abstracts away OS-specific details. The JDK is what you need for development, while JRE is sufficient for running Java applications.
+
+```java title="HelloWorld.java"
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+
+
+```
+Hello, World!
+```
+
+```java title="Variables.java"
+public class Variables {
+    public static void main(String[] args) {
+        int age = 25;
+        String name = "Alice";
+        double salary = 50000.50;
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+    }
+}
+```
+
+```
+Name: Alice
+Age: 25
+Salary: 50000.5
+```
+
+```java title="DataTypes.java"
+public class DataTypes {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+        System.out.println("All data types initialized");
+    }
+}
+```
+
+```
+All data types initialized
+```
+
+```java title="TypeCasting.java"
+public class TypeCasting {
+    public static void main(String[] args) {
+        int intValue = 100;
+        long longValue = intValue;
+        double doubleValue = 99.99;
+        int intFromDouble = (int) doubleValue;
+        System.out.println("Int to Long: " + longValue);
+        System.out.println("Double to Int: " + intFromDouble);
+    }
+}
+```
+
+```
+Int to Long: 100
+Double to Int: 99
+```
+
+```java title="Comments.java"
+public class Comments {
+    // Single line comment
+    public static void main(String[] args) {
+        /* Multi-line comment
+           explaining the code */
+        System.out.println("Comments example");
+    }
+}
+```
+
+```
+Comments example
+```
+
+```java title="Operators.java"
+public class Operators {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+    }
+}
+```
+
+```
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+```
+
+```java title="Comparison.java"
+public class Comparison {
+    public static void main(String[] args) {
+        int x = 10, y = 20;
+        System.out.println("x == y: " + (x == y));
+        System.out.println("x != y: " + (x != y));
+        System.out.println("x >
   <p class="font-semibold mb-3">❓ What does JVM stand for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -233,7 +348,122 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The Java ecosystem consists of three key components: JVM (Java Virtual Machine) executes bytecode, JRE (Java Runtime Environment) provides libraries and JVM, and JDK (Java Development Kit) includes compiler and tools. Understanding these distinctions is crucial for Java development. The JVM is what makes Java platform-independent - it abstracts away OS-specific details. The JDK is what you need for development, while JRE is sufficient for running Java applications.
+
+```java title="HelloWorld.java"
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+
+
+```
+Hello, World!
+```
+
+```java title="Variables.java"
+public class Variables {
+    public static void main(String[] args) {
+        int age = 25;
+        String name = "Alice";
+        double salary = 50000.50;
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+    }
+}
+```
+
+```
+Name: Alice
+Age: 25
+Salary: 50000.5
+```
+
+```java title="DataTypes.java"
+public class DataTypes {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+        System.out.println("All data types initialized");
+    }
+}
+```
+
+```
+All data types initialized
+```
+
+```java title="TypeCasting.java"
+public class TypeCasting {
+    public static void main(String[] args) {
+        int intValue = 100;
+        long longValue = intValue;
+        double doubleValue = 99.99;
+        int intFromDouble = (int) doubleValue;
+        System.out.println("Int to Long: " + longValue);
+        System.out.println("Double to Int: " + intFromDouble);
+    }
+}
+```
+
+```
+Int to Long: 100
+Double to Int: 99
+```
+
+```java title="Comments.java"
+public class Comments {
+    // Single line comment
+    public static void main(String[] args) {
+        /* Multi-line comment
+           explaining the code */
+        System.out.println("Comments example");
+    }
+}
+```
+
+```
+Comments example
+```
+
+```java title="Operators.java"
+public class Operators {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+    }
+}
+```
+
+```
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+```
+
+```java title="Comparison.java"
+public class Comparison {
+    public static void main(String[] args) {
+        int x = 10, y = 20;
+        System.out.println("x == y: " + (x == y));
+        System.out.println("x != y: " + (x != y));
+        System.out.println("x >
   <p class="font-semibold mb-3">❓ Which component contains the Java compiler?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -257,7 +487,122 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The Java ecosystem consists of three key components: JVM (Java Virtual Machine) executes bytecode, JRE (Java Runtime Environment) provides libraries and JVM, and JDK (Java Development Kit) includes compiler and tools. Understanding these distinctions is crucial for Java development. The JVM is what makes Java platform-independent - it abstracts away OS-specific details. The JDK is what you need for development, while JRE is sufficient for running Java applications.
+
+```java title="HelloWorld.java"
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+
+
+```
+Hello, World!
+```
+
+```java title="Variables.java"
+public class Variables {
+    public static void main(String[] args) {
+        int age = 25;
+        String name = "Alice";
+        double salary = 50000.50;
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+    }
+}
+```
+
+```
+Name: Alice
+Age: 25
+Salary: 50000.5
+```
+
+```java title="DataTypes.java"
+public class DataTypes {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+        System.out.println("All data types initialized");
+    }
+}
+```
+
+```
+All data types initialized
+```
+
+```java title="TypeCasting.java"
+public class TypeCasting {
+    public static void main(String[] args) {
+        int intValue = 100;
+        long longValue = intValue;
+        double doubleValue = 99.99;
+        int intFromDouble = (int) doubleValue;
+        System.out.println("Int to Long: " + longValue);
+        System.out.println("Double to Int: " + intFromDouble);
+    }
+}
+```
+
+```
+Int to Long: 100
+Double to Int: 99
+```
+
+```java title="Comments.java"
+public class Comments {
+    // Single line comment
+    public static void main(String[] args) {
+        /* Multi-line comment
+           explaining the code */
+        System.out.println("Comments example");
+    }
+}
+```
+
+```
+Comments example
+```
+
+```java title="Operators.java"
+public class Operators {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+    }
+}
+```
+
+```
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+```
+
+```java title="Comparison.java"
+public class Comparison {
+    public static void main(String[] args) {
+        int x = 10, y = 20;
+        System.out.println("x == y: " + (x == y));
+        System.out.println("x != y: " + (x != y));
+        System.out.println("x >
   <p class="font-semibold mb-3">❓ What is the correct syntax for the main method?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -281,7 +626,122 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The Java ecosystem consists of three key components: JVM (Java Virtual Machine) executes bytecode, JRE (Java Runtime Environment) provides libraries and JVM, and JDK (Java Development Kit) includes compiler and tools. Understanding these distinctions is crucial for Java development. The JVM is what makes Java platform-independent - it abstracts away OS-specific details. The JDK is what you need for development, while JRE is sufficient for running Java applications.
+
+```java title="HelloWorld.java"
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+
+
+```
+Hello, World!
+```
+
+```java title="Variables.java"
+public class Variables {
+    public static void main(String[] args) {
+        int age = 25;
+        String name = "Alice";
+        double salary = 50000.50;
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+    }
+}
+```
+
+```
+Name: Alice
+Age: 25
+Salary: 50000.5
+```
+
+```java title="DataTypes.java"
+public class DataTypes {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+        System.out.println("All data types initialized");
+    }
+}
+```
+
+```
+All data types initialized
+```
+
+```java title="TypeCasting.java"
+public class TypeCasting {
+    public static void main(String[] args) {
+        int intValue = 100;
+        long longValue = intValue;
+        double doubleValue = 99.99;
+        int intFromDouble = (int) doubleValue;
+        System.out.println("Int to Long: " + longValue);
+        System.out.println("Double to Int: " + intFromDouble);
+    }
+}
+```
+
+```
+Int to Long: 100
+Double to Int: 99
+```
+
+```java title="Comments.java"
+public class Comments {
+    // Single line comment
+    public static void main(String[] args) {
+        /* Multi-line comment
+           explaining the code */
+        System.out.println("Comments example");
+    }
+}
+```
+
+```
+Comments example
+```
+
+```java title="Operators.java"
+public class Operators {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+    }
+}
+```
+
+```
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+```
+
+```java title="Comparison.java"
+public class Comparison {
+    public static void main(String[] args) {
+        int x = 10, y = 20;
+        System.out.println("x == y: " + (x == y));
+        System.out.println("x != y: " + (x != y));
+        System.out.println("x >
   <p class="font-semibold mb-3">❓ Which data type is used for whole numbers?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -305,7 +765,122 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The Java ecosystem consists of three key components: JVM (Java Virtual Machine) executes bytecode, JRE (Java Runtime Environment) provides libraries and JVM, and JDK (Java Development Kit) includes compiler and tools. Understanding these distinctions is crucial for Java development. The JVM is what makes Java platform-independent - it abstracts away OS-specific details. The JDK is what you need for development, while JRE is sufficient for running Java applications.
+
+```java title="HelloWorld.java"
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+
+
+```
+Hello, World!
+```
+
+```java title="Variables.java"
+public class Variables {
+    public static void main(String[] args) {
+        int age = 25;
+        String name = "Alice";
+        double salary = 50000.50;
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+    }
+}
+```
+
+```
+Name: Alice
+Age: 25
+Salary: 50000.5
+```
+
+```java title="DataTypes.java"
+public class DataTypes {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+        System.out.println("All data types initialized");
+    }
+}
+```
+
+```
+All data types initialized
+```
+
+```java title="TypeCasting.java"
+public class TypeCasting {
+    public static void main(String[] args) {
+        int intValue = 100;
+        long longValue = intValue;
+        double doubleValue = 99.99;
+        int intFromDouble = (int) doubleValue;
+        System.out.println("Int to Long: " + longValue);
+        System.out.println("Double to Int: " + intFromDouble);
+    }
+}
+```
+
+```
+Int to Long: 100
+Double to Int: 99
+```
+
+```java title="Comments.java"
+public class Comments {
+    // Single line comment
+    public static void main(String[] args) {
+        /* Multi-line comment
+           explaining the code */
+        System.out.println("Comments example");
+    }
+}
+```
+
+```
+Comments example
+```
+
+```java title="Operators.java"
+public class Operators {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+    }
+}
+```
+
+```
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+```
+
+```java title="Comparison.java"
+public class Comparison {
+    public static void main(String[] args) {
+        int x = 10, y = 20;
+        System.out.println("x == y: " + (x == y));
+        System.out.println("x != y: " + (x != y));
+        System.out.println("x >
   <p class="font-semibold mb-3">❓ What is type casting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -329,7 +904,122 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The Java ecosystem consists of three key components: JVM (Java Virtual Machine) executes bytecode, JRE (Java Runtime Environment) provides libraries and JVM, and JDK (Java Development Kit) includes compiler and tools. Understanding these distinctions is crucial for Java development. The JVM is what makes Java platform-independent - it abstracts away OS-specific details. The JDK is what you need for development, while JRE is sufficient for running Java applications.
+
+```java title="HelloWorld.java"
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+
+
+```
+Hello, World!
+```
+
+```java title="Variables.java"
+public class Variables {
+    public static void main(String[] args) {
+        int age = 25;
+        String name = "Alice";
+        double salary = 50000.50;
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+    }
+}
+```
+
+```
+Name: Alice
+Age: 25
+Salary: 50000.5
+```
+
+```java title="DataTypes.java"
+public class DataTypes {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+        System.out.println("All data types initialized");
+    }
+}
+```
+
+```
+All data types initialized
+```
+
+```java title="TypeCasting.java"
+public class TypeCasting {
+    public static void main(String[] args) {
+        int intValue = 100;
+        long longValue = intValue;
+        double doubleValue = 99.99;
+        int intFromDouble = (int) doubleValue;
+        System.out.println("Int to Long: " + longValue);
+        System.out.println("Double to Int: " + intFromDouble);
+    }
+}
+```
+
+```
+Int to Long: 100
+Double to Int: 99
+```
+
+```java title="Comments.java"
+public class Comments {
+    // Single line comment
+    public static void main(String[] args) {
+        /* Multi-line comment
+           explaining the code */
+        System.out.println("Comments example");
+    }
+}
+```
+
+```
+Comments example
+```
+
+```java title="Operators.java"
+public class Operators {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+    }
+}
+```
+
+```
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+```
+
+```java title="Comparison.java"
+public class Comparison {
+    public static void main(String[] args) {
+        int x = 10, y = 20;
+        System.out.println("x == y: " + (x == y));
+        System.out.println("x != y: " + (x != y));
+        System.out.println("x >
   <p class="font-semibold mb-3">❓ Which operator is used for modulus operation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -353,7 +1043,122 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The Java ecosystem consists of three key components: JVM (Java Virtual Machine) executes bytecode, JRE (Java Runtime Environment) provides libraries and JVM, and JDK (Java Development Kit) includes compiler and tools. Understanding these distinctions is crucial for Java development. The JVM is what makes Java platform-independent - it abstracts away OS-specific details. The JDK is what you need for development, while JRE is sufficient for running Java applications.
+
+```java title="HelloWorld.java"
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+
+
+```
+Hello, World!
+```
+
+```java title="Variables.java"
+public class Variables {
+    public static void main(String[] args) {
+        int age = 25;
+        String name = "Alice";
+        double salary = 50000.50;
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+    }
+}
+```
+
+```
+Name: Alice
+Age: 25
+Salary: 50000.5
+```
+
+```java title="DataTypes.java"
+public class DataTypes {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+        System.out.println("All data types initialized");
+    }
+}
+```
+
+```
+All data types initialized
+```
+
+```java title="TypeCasting.java"
+public class TypeCasting {
+    public static void main(String[] args) {
+        int intValue = 100;
+        long longValue = intValue;
+        double doubleValue = 99.99;
+        int intFromDouble = (int) doubleValue;
+        System.out.println("Int to Long: " + longValue);
+        System.out.println("Double to Int: " + intFromDouble);
+    }
+}
+```
+
+```
+Int to Long: 100
+Double to Int: 99
+```
+
+```java title="Comments.java"
+public class Comments {
+    // Single line comment
+    public static void main(String[] args) {
+        /* Multi-line comment
+           explaining the code */
+        System.out.println("Comments example");
+    }
+}
+```
+
+```
+Comments example
+```
+
+```java title="Operators.java"
+public class Operators {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+    }
+}
+```
+
+```
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+```
+
+```java title="Comparison.java"
+public class Comparison {
+    public static void main(String[] args) {
+        int x = 10, y = 20;
+        System.out.println("x == y: " + (x == y));
+        System.out.println("x != y: " + (x != y));
+        System.out.println("x >
   <p class="font-semibold mb-3">❓ What is the output of 10 / 3 in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -377,7 +1182,122 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The Java ecosystem consists of three key components: JVM (Java Virtual Machine) executes bytecode, JRE (Java Runtime Environment) provides libraries and JVM, and JDK (Java Development Kit) includes compiler and tools. Understanding these distinctions is crucial for Java development. The JVM is what makes Java platform-independent - it abstracts away OS-specific details. The JDK is what you need for development, while JRE is sufficient for running Java applications.
+
+```java title="HelloWorld.java"
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+
+
+```
+Hello, World!
+```
+
+```java title="Variables.java"
+public class Variables {
+    public static void main(String[] args) {
+        int age = 25;
+        String name = "Alice";
+        double salary = 50000.50;
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+    }
+}
+```
+
+```
+Name: Alice
+Age: 25
+Salary: 50000.5
+```
+
+```java title="DataTypes.java"
+public class DataTypes {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+        System.out.println("All data types initialized");
+    }
+}
+```
+
+```
+All data types initialized
+```
+
+```java title="TypeCasting.java"
+public class TypeCasting {
+    public static void main(String[] args) {
+        int intValue = 100;
+        long longValue = intValue;
+        double doubleValue = 99.99;
+        int intFromDouble = (int) doubleValue;
+        System.out.println("Int to Long: " + longValue);
+        System.out.println("Double to Int: " + intFromDouble);
+    }
+}
+```
+
+```
+Int to Long: 100
+Double to Int: 99
+```
+
+```java title="Comments.java"
+public class Comments {
+    // Single line comment
+    public static void main(String[] args) {
+        /* Multi-line comment
+           explaining the code */
+        System.out.println("Comments example");
+    }
+}
+```
+
+```
+Comments example
+```
+
+```java title="Operators.java"
+public class Operators {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+    }
+}
+```
+
+```
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+```
+
+```java title="Comparison.java"
+public class Comparison {
+    public static void main(String[] args) {
+        int x = 10, y = 20;
+        System.out.println("x == y: " + (x == y));
+        System.out.println("x != y: " + (x != y));
+        System.out.println("x >
   <p class="font-semibold mb-3">❓ Which of these is a valid variable name?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -401,7 +1321,122 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The Java ecosystem consists of three key components: JVM (Java Virtual Machine) executes bytecode, JRE (Java Runtime Environment) provides libraries and JVM, and JDK (Java Development Kit) includes compiler and tools. Understanding these distinctions is crucial for Java development. The JVM is what makes Java platform-independent - it abstracts away OS-specific details. The JDK is what you need for development, while JRE is sufficient for running Java applications.
+
+```java title="HelloWorld.java"
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+
+
+```
+Hello, World!
+```
+
+```java title="Variables.java"
+public class Variables {
+    public static void main(String[] args) {
+        int age = 25;
+        String name = "Alice";
+        double salary = 50000.50;
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+    }
+}
+```
+
+```
+Name: Alice
+Age: 25
+Salary: 50000.5
+```
+
+```java title="DataTypes.java"
+public class DataTypes {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+        System.out.println("All data types initialized");
+    }
+}
+```
+
+```
+All data types initialized
+```
+
+```java title="TypeCasting.java"
+public class TypeCasting {
+    public static void main(String[] args) {
+        int intValue = 100;
+        long longValue = intValue;
+        double doubleValue = 99.99;
+        int intFromDouble = (int) doubleValue;
+        System.out.println("Int to Long: " + longValue);
+        System.out.println("Double to Int: " + intFromDouble);
+    }
+}
+```
+
+```
+Int to Long: 100
+Double to Int: 99
+```
+
+```java title="Comments.java"
+public class Comments {
+    // Single line comment
+    public static void main(String[] args) {
+        /* Multi-line comment
+           explaining the code */
+        System.out.println("Comments example");
+    }
+}
+```
+
+```
+Comments example
+```
+
+```java title="Operators.java"
+public class Operators {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+    }
+}
+```
+
+```
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+```
+
+```java title="Comparison.java"
+public class Comparison {
+    public static void main(String[] args) {
+        int x = 10, y = 20;
+        System.out.println("x == y: " + (x == y));
+        System.out.println("x != y: " + (x != y));
+        System.out.println("x >
   <p class="font-semibold mb-3">❓ What does the && operator do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -425,7 +1460,122 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The Java ecosystem consists of three key components: JVM (Java Virtual Machine) executes bytecode, JRE (Java Runtime Environment) provides libraries and JVM, and JDK (Java Development Kit) includes compiler and tools. Understanding these distinctions is crucial for Java development. The JVM is what makes Java platform-independent - it abstracts away OS-specific details. The JDK is what you need for development, while JRE is sufficient for running Java applications.
+
+```java title="HelloWorld.java"
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+
+
+```
+Hello, World!
+```
+
+```java title="Variables.java"
+public class Variables {
+    public static void main(String[] args) {
+        int age = 25;
+        String name = "Alice";
+        double salary = 50000.50;
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+    }
+}
+```
+
+```
+Name: Alice
+Age: 25
+Salary: 50000.5
+```
+
+```java title="DataTypes.java"
+public class DataTypes {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+        System.out.println("All data types initialized");
+    }
+}
+```
+
+```
+All data types initialized
+```
+
+```java title="TypeCasting.java"
+public class TypeCasting {
+    public static void main(String[] args) {
+        int intValue = 100;
+        long longValue = intValue;
+        double doubleValue = 99.99;
+        int intFromDouble = (int) doubleValue;
+        System.out.println("Int to Long: " + longValue);
+        System.out.println("Double to Int: " + intFromDouble);
+    }
+}
+```
+
+```
+Int to Long: 100
+Double to Int: 99
+```
+
+```java title="Comments.java"
+public class Comments {
+    // Single line comment
+    public static void main(String[] args) {
+        /* Multi-line comment
+           explaining the code */
+        System.out.println("Comments example");
+    }
+}
+```
+
+```
+Comments example
+```
+
+```java title="Operators.java"
+public class Operators {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+    }
+}
+```
+
+```
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+```
+
+```java title="Comparison.java"
+public class Comparison {
+    public static void main(String[] args) {
+        int x = 10, y = 20;
+        System.out.println("x == y: " + (x == y));
+        System.out.println("x != y: " + (x != y));
+        System.out.println("x >
   <p class="font-semibold mb-3">❓ How do you write a single-line comment in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -84,7 +84,27 @@ print(f'Quantized Model Accuracy: {quantized_accuracy}')
 
 > **💡 Tip:** Always compare the quantized model's performance metrics with those of the original model to understand the impact of quantization.
 
-<div class="quiz">
+Model accuracy post-quantization is another vital metric. It measures how well the quantized model performs on a validation dataset compared to the original model. This metric helps determine if the quantization process has significantly degraded the model's ability to make correct predictions.
+
+```python title="example2.py"
+from sklearn.metrics import accuracy_score
+
+# Original model predictions
+original_labels = [0, 1, 1, 0]
+original_predictions = [0, 1, 1, 0]
+
+# Quantized model predictions
+quantized_predictions = [0, 1, 0, 0]
+
+# Calculate accuracy
+original_accuracy = accuracy_score(original_labels, original_predictions)
+quantized_accuracy = accuracy_score(original_labels, quantized_predictions)
+
+print(f'Original Model Accuracy: {original_accuracy}')
+print(f'Quantized Model Accuracy: {quantized_accuracy}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What does quantization error measure?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -108,7 +128,27 @@ print(f'Quantized Model Accuracy: {quantized_accuracy}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Model accuracy post-quantization is another vital metric. It measures how well the quantized model performs on a validation dataset compared to the original model. This metric helps determine if the quantization process has significantly degraded the model's ability to make correct predictions.
+
+```python title="example2.py"
+from sklearn.metrics import accuracy_score
+
+# Original model predictions
+original_labels = [0, 1, 1, 0]
+original_predictions = [0, 1, 1, 0]
+
+# Quantized model predictions
+quantized_predictions = [0, 1, 0, 0]
+
+# Calculate accuracy
+original_accuracy = accuracy_score(original_labels, original_predictions)
+quantized_accuracy = accuracy_score(original_labels, quantized_predictions)
+
+print(f'Original Model Accuracy: {original_accuracy}')
+print(f'Quantized Model Accuracy: {quantized_accuracy}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which metric helps determine if quantization has degraded model performance?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

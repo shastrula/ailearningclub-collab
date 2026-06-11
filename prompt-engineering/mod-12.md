@@ -80,7 +80,23 @@ print(response.choices[0].text.strip())
 
 > **💡 Tip:** When evaluating CoT and ReAct prompts, ensure that each step in the chain is logically sound and contributes to the final answer.
 
-<div class="quiz">
+Chain-of-Thought (CoT) and ReAct prompting techniques enhance model reasoning by breaking down complex problems into simpler, step-by-step thoughts. Evaluating their effectiveness requires analyzing the logical flow and correctness of the model's reasoning process.
+
+```python title="example2.py"
+import openai
+
+openai.api_key = 'your_api_key'
+
+# CoT prompting example
+response = openai.Completion.create(
+  engine="text-davinci-003",
+  prompt="What is the capital of France? Think step-by-step.",
+  max_tokens=100
+)
+print(response.choices[0].text.strip())
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of zero-shot prompting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -104,7 +120,23 @@ print(response.choices[0].text.strip())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Chain-of-Thought (CoT) and ReAct prompting techniques enhance model reasoning by breaking down complex problems into simpler, step-by-step thoughts. Evaluating their effectiveness requires analyzing the logical flow and correctness of the model's reasoning process.
+
+```python title="example2.py"
+import openai
+
+openai.api_key = 'your_api_key'
+
+# CoT prompting example
+response = openai.Completion.create(
+  engine="text-davinci-003",
+  prompt="What is the capital of France? Think step-by-step.",
+  max_tokens=100
+)
+print(response.choices[0].text.strip())
+```
+
+>
   <p class="font-semibold mb-3">❓ What should be analyzed when evaluating the effectiveness of CoT prompts?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

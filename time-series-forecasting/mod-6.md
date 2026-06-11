@@ -92,7 +92,35 @@ print('Cross-Validation Errors:', errors)
 
 > **💡 Tip:** When performing cross-validation on time series data, ensure that the splits maintain the temporal order to avoid look-ahead bias.
 
-<div class="quiz">
+Cross-validation is a technique used to evaluate the generalizability of a time series model. By splitting the data into training and testing sets multiple times, we can obtain a more robust estimate of the model's performance. This helps in identifying overfitting and ensuring that the model performs well on unseen data.
+
+```python title="example2.py"
+from sklearn.model_selection import TimeSeriesSplit
+from sklearn.metrics import mean_squared_error
+from statsmodels.tsa.arima.model import ARIMA
+
+# Generate some sample data
+p = np.random.normal(0, 1, 100)
+data = np.cumsum(p)
+
+# Define the number of splits
+tscv = TimeSeriesSplit(n_splits=5)
+
+# Initialize an empty list to store errors
+errors = []
+
+for train_index, test_index in tscv.split(data):
+    train, test = data[train_index], data[test_index]
+    model = ARIMA(train, order=(1, 1, 1))
+    model_fit = model.fit()
+    forecast = model_fit.forecast(steps=len(test))
+    error = mean_squared_error(test, forecast)
+    errors.append(error)
+
+print('Cross-Validation Errors:', errors)
+```
+
+>
   <p class="font-semibold mb-3">❓ What does a non-random pattern in the residuals plot indicate?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -116,7 +144,35 @@ print('Cross-Validation Errors:', errors)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Cross-validation is a technique used to evaluate the generalizability of a time series model. By splitting the data into training and testing sets multiple times, we can obtain a more robust estimate of the model's performance. This helps in identifying overfitting and ensuring that the model performs well on unseen data.
+
+```python title="example2.py"
+from sklearn.model_selection import TimeSeriesSplit
+from sklearn.metrics import mean_squared_error
+from statsmodels.tsa.arima.model import ARIMA
+
+# Generate some sample data
+p = np.random.normal(0, 1, 100)
+data = np.cumsum(p)
+
+# Define the number of splits
+tscv = TimeSeriesSplit(n_splits=5)
+
+# Initialize an empty list to store errors
+errors = []
+
+for train_index, test_index in tscv.split(data):
+    train, test = data[train_index], data[test_index]
+    model = ARIMA(train, order=(1, 1, 1))
+    model_fit = model.fit()
+    forecast = model_fit.forecast(steps=len(test))
+    error = mean_squared_error(test, forecast)
+    errors.append(error)
+
+print('Cross-Validation Errors:', errors)
+```
+
+>
   <p class="font-semibold mb-3">❓ Why is cross-validation important in time series forecasting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

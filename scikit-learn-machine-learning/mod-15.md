@@ -88,7 +88,31 @@ print('Feature Ranking: %s' % fit.ranking_)
 
 > **💡 Tip:** When using RFE, ensure that the number of features to select is appropriate for your dataset and model. Selecting too few features might lead to underfitting, while selecting too many might not provide significant benefits.
 
-<div class="quiz">
+Recursive Feature Elimination (RFE) is a wrapper method for feature selection that recursively removes attributes and builds a model on the remaining attributes. It uses the model's performance to guide the selection process, making it a powerful technique for identifying the most relevant features for a given model.
+
+```python title="example2.py"
+from sklearn.datasets import load_iris
+from sklearn.feature_selection import RFE
+from sklearn.linear_model import LogisticRegression
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Create a logistic regression model
+model = LogisticRegression(max_iter=200)
+
+# Create the RFE model and select 3 attributes
+rfe = RFE(model, n_features_to_select=3)
+fit = rfe.fit(X, y)
+
+# Print summary of feature selection
+print('Num Features: %d' % fit.n_features_)
+print('Selected Features: %s' % fit.support_)
+print('Feature Ranking: %s' % fit.ranking_)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of feature selection in machine learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -112,7 +136,31 @@ print('Feature Ranking: %s' % fit.ranking_)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Recursive Feature Elimination (RFE) is a wrapper method for feature selection that recursively removes attributes and builds a model on the remaining attributes. It uses the model's performance to guide the selection process, making it a powerful technique for identifying the most relevant features for a given model.
+
+```python title="example2.py"
+from sklearn.datasets import load_iris
+from sklearn.feature_selection import RFE
+from sklearn.linear_model import LogisticRegression
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Create a logistic regression model
+model = LogisticRegression(max_iter=200)
+
+# Create the RFE model and select 3 attributes
+rfe = RFE(model, n_features_to_select=3)
+fit = rfe.fit(X, y)
+
+# Print summary of feature selection
+print('Num Features: %d' % fit.n_features_)
+print('Selected Features: %s' % fit.support_)
+print('Feature Ranking: %s' % fit.ranking_)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which method is used in the second example for feature selection?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

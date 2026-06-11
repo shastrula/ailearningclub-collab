@@ -110,7 +110,39 @@ print("TIES merge completed.")
 
 > **💡 Tip:** TIES works best when adapters are trained on related tasks. For unrelated tasks, consider using separate models or mixture-of-experts approaches.
 
-<div class="quiz">
+TIES (Task-Specific Inverse Scaling) merges multiple task-specific LoRA adapters by: (1) removing redundant parameters via magnitude pruning, (2) resolving sign conflicts between adapters, and (3) scaling by task importance. This enables a single model to handle multiple tasks without catastrophic forgetting.
+
+```python title="example2.py"
+import torch
+from peft import PeftModel
+from transformers import AutoModelForCausalLM
+
+# Load base model
+base_model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-neo-125M")
+
+# Load multiple task-specific adapters
+adapters = {}
+for task in ["summarization", "translation", "qa"]:
+    model = PeftModel.from_pretrained(base_model, f"path/to/{task}-adapter")
+    adapters[task] = model.peft_config
+
+# TIES merging: combine adapters with conflict resolution
+def ties_merge(base_model, adapters, pruning_ratio=0.9):
+    """Merge multiple adapters using TIES strategy"""
+    merged_state = base_model.state_dict().copy()
+    
+    # Collect all adapter weights
+    adapter_weights = {}
+    for task, config in adapters.items():
+        # Load adapter weights (simplified)
+        adapter_weights[task] = {}
+    
+    # Prune redundant parameters and resolve conflicts
+    for param_name in merged_state:
+        if 'lora' in param_name:
+            # Apply magnitude pruning
+            weights = [adapter_weights[task].get(param_name, 0) for task in adapters]
+            mask = torch.abs(torch.stack(weights)) >
   <p class="font-semibold mb-3">❓ What is the primary benefit of LoRA merging?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -134,7 +166,39 @@ print("TIES merge completed.")
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+TIES (Task-Specific Inverse Scaling) merges multiple task-specific LoRA adapters by: (1) removing redundant parameters via magnitude pruning, (2) resolving sign conflicts between adapters, and (3) scaling by task importance. This enables a single model to handle multiple tasks without catastrophic forgetting.
+
+```python title="example2.py"
+import torch
+from peft import PeftModel
+from transformers import AutoModelForCausalLM
+
+# Load base model
+base_model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-neo-125M")
+
+# Load multiple task-specific adapters
+adapters = {}
+for task in ["summarization", "translation", "qa"]:
+    model = PeftModel.from_pretrained(base_model, f"path/to/{task}-adapter")
+    adapters[task] = model.peft_config
+
+# TIES merging: combine adapters with conflict resolution
+def ties_merge(base_model, adapters, pruning_ratio=0.9):
+    """Merge multiple adapters using TIES strategy"""
+    merged_state = base_model.state_dict().copy()
+    
+    # Collect all adapter weights
+    adapter_weights = {}
+    for task, config in adapters.items():
+        # Load adapter weights (simplified)
+        adapter_weights[task] = {}
+    
+    # Prune redundant parameters and resolve conflicts
+    for param_name in merged_state:
+        if 'lora' in param_name:
+            # Apply magnitude pruning
+            weights = [adapter_weights[task].get(param_name, 0) for task in adapters]
+            mask = torch.abs(torch.stack(weights)) >
   <p class="font-semibold mb-3">❓ What does TIES merging address when combining multiple adapters?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

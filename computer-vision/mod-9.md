@@ -94,7 +94,37 @@ for images, targets in data_loader:
 
 > **💡 Tip:** Ensure your custom dataset annotations are accurate and in the correct COCO format to avoid training issues and improve model performance.
 
-<div class="quiz">
+To use Mask R-CNN on custom datasets, you need to prepare your data in COCO format, which includes images and corresponding annotations for bounding boxes and masks. You then fine-tune the pre-trained Mask R-CNN model on your dataset. This involves setting up data loaders, defining a custom dataset class, and training the model with appropriate loss functions for classification, bounding box regression, and mask prediction.
+
+```python title="example2.py"
+import torch
+import torchvision
+from torch.utils.data import DataLoader
+from torchvision.models.detection.mask_rcnn import MaskRCNN_ResNet50_FPN_Weights
+
+# Load a pre-trained Mask R-CNN model
+model = torchvision.models.detection.maskrcnn_resnet50_fpn(weights=MaskRCNN_ResNet50_FPN_Weights.DEFAULT)
+model.train()
+
+# Define a custom dataset and data loader
+# Assume CustomDataset is a class that loads your custom dataset
+dataset = CustomDataset()
+data_loader = DataLoader(dataset, batch_size=2, shuffle=True)
+
+# Define optimizer and loss function
+optimizer = torch.optim.SGD(model.parameters(), lr=0.005, momentum=0.9, weight_decay=0.0005)
+
+# Training loop
+for images, targets in data_loader:
+    optimizer.zero_grad()
+    loss_dict = model(images, targets)
+    losses = sum(loss for loss in loss_dict.values())
+    losses.backward()
+    optimizer.step()
+    print(f'Loss: {losses.item()}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary addition of Mask R-CNN over Faster R-CNN?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,7 +148,37 @@ for images, targets in data_loader:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+To use Mask R-CNN on custom datasets, you need to prepare your data in COCO format, which includes images and corresponding annotations for bounding boxes and masks. You then fine-tune the pre-trained Mask R-CNN model on your dataset. This involves setting up data loaders, defining a custom dataset class, and training the model with appropriate loss functions for classification, bounding box regression, and mask prediction.
+
+```python title="example2.py"
+import torch
+import torchvision
+from torch.utils.data import DataLoader
+from torchvision.models.detection.mask_rcnn import MaskRCNN_ResNet50_FPN_Weights
+
+# Load a pre-trained Mask R-CNN model
+model = torchvision.models.detection.maskrcnn_resnet50_fpn(weights=MaskRCNN_ResNet50_FPN_Weights.DEFAULT)
+model.train()
+
+# Define a custom dataset and data loader
+# Assume CustomDataset is a class that loads your custom dataset
+dataset = CustomDataset()
+data_loader = DataLoader(dataset, batch_size=2, shuffle=True)
+
+# Define optimizer and loss function
+optimizer = torch.optim.SGD(model.parameters(), lr=0.005, momentum=0.9, weight_decay=0.0005)
+
+# Training loop
+for images, targets in data_loader:
+    optimizer.zero_grad()
+    loss_dict = model(images, targets)
+    losses = sum(loss for loss in loss_dict.values())
+    losses.backward()
+    optimizer.step()
+    print(f'Loss: {losses.item()}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What format should your custom dataset annotations be in for Mask R-CNN training?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

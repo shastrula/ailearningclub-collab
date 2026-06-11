@@ -76,7 +76,26 @@ print(result)
 
 > **💡 Tip:** Ensure that reflection tasks are scheduled regularly to maintain continuous improvement and adaptability of the agents.
 
-<div class="quiz">
+Reflection in CrewAI allows agents to evaluate their performance and make adjustments based on outcomes. This involves analyzing the results of actions, comparing them to expected outcomes, and updating strategies accordingly. Reflection enhances learning and adaptability in dynamic environments.
+
+```python title="example2.py"
+from crewai import Agent, Task, Crew
+
+# Define an agent
+reflector = Agent(role='Reflector', goal='Evaluate and improve performance')
+
+# Define a task
+task = Task(description='Analyze campaign results', expected_output='Performance report and recommendations')
+
+# Create a crew
+crew = Crew(agents=[reflector], tasks=[task])
+
+# Execute the task
+result = crew.execute()
+print(result)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of planning in CrewAI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -100,7 +119,26 @@ print(result)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Reflection in CrewAI allows agents to evaluate their performance and make adjustments based on outcomes. This involves analyzing the results of actions, comparing them to expected outcomes, and updating strategies accordingly. Reflection enhances learning and adaptability in dynamic environments.
+
+```python title="example2.py"
+from crewai import Agent, Task, Crew
+
+# Define an agent
+reflector = Agent(role='Reflector', goal='Evaluate and improve performance')
+
+# Define a task
+task = Task(description='Analyze campaign results', expected_output='Performance report and recommendations')
+
+# Create a crew
+crew = Crew(agents=[reflector], tasks=[task])
+
+# Execute the task
+result = crew.execute()
+print(result)
+```
+
+>
   <p class="font-semibold mb-3">❓ What does reflection in CrewAI help agents to do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

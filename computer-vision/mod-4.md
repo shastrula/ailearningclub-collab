@@ -92,7 +92,39 @@ plt.show()
 
 > **💡 Tip:** When using pre-trained models for object detection, ensure the input image is pre-processed correctly to match the model's expected input format.
 
-<div class="quiz">
+Deep learning has revolutionized object detection with the introduction of Convolutional Neural Networks (CNNs). Modern object detection algorithms like YOLO (You Only Look Once) and Faster R-CNN use CNNs to achieve high accuracy and speed. These algorithms can detect objects in real-time and are widely used in various applications.
+
+```python title="example2.py"
+import torch
+import torchvision
+from PIL import Image
+import matplotlib.pyplot as plt
+
+# Load a pre-trained Faster R-CNN model
+model = torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
+model.eval()
+
+# Load an image
+image = Image.open('example.jpg').convert('RGB')
+
+# Transform the image
+transform = torchvision.transforms.Compose([torchvision.transforms.ToTensor()])
+img_t = transform(image)
+
+# Add a batch dimension
+img_batch = img_t.unsqueeze(0)
+
+# Perform object detection
+with torch.no_grad():
+    predictions = model(img_batch)
+
+# Plot the results
+torchvision.utils.draw_bounding_boxes(image, predictions[0]['boxes'], colors='red', width=3)
+plt.imshow(image)
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary difference between object detection and image classification?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -116,7 +148,39 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Deep learning has revolutionized object detection with the introduction of Convolutional Neural Networks (CNNs). Modern object detection algorithms like YOLO (You Only Look Once) and Faster R-CNN use CNNs to achieve high accuracy and speed. These algorithms can detect objects in real-time and are widely used in various applications.
+
+```python title="example2.py"
+import torch
+import torchvision
+from PIL import Image
+import matplotlib.pyplot as plt
+
+# Load a pre-trained Faster R-CNN model
+model = torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
+model.eval()
+
+# Load an image
+image = Image.open('example.jpg').convert('RGB')
+
+# Transform the image
+transform = torchvision.transforms.Compose([torchvision.transforms.ToTensor()])
+img_t = transform(image)
+
+# Add a batch dimension
+img_batch = img_t.unsqueeze(0)
+
+# Perform object detection
+with torch.no_grad():
+    predictions = model(img_batch)
+
+# Plot the results
+torchvision.utils.draw_bounding_boxes(image, predictions[0]['boxes'], colors='red', width=3)
+plt.imshow(image)
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which algorithm is known for its real-time object detection capabilities?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

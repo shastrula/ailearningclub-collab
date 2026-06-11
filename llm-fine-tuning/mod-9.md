@@ -86,7 +86,36 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 > **💡 Tip:** Ensure that the quantization scales are properly calibrated to avoid significant loss in model performance.
 
-<div class="quiz">
+QLoRA combines quantization techniques with LoRA to further reduce memory usage and computational cost during fine-tuning. This approach is particularly useful for deploying LLMs on resource-constrained devices.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Load pre-trained model and tokenizer
+model = AutoModelForCausalLM.from_pretrained('distilgpt2')
+tokenizer = AutoTokenizer.from_pretrained('distilgpt2')
+
+# Define QLoRA adaptation
+lora_rank = 4
+lora_a = torch.nn.Parameter(torch.quantize_per_tensor(torch.randn(model.config.hidden_size, lora_rank), 0.01, 0, torch.quint8))
+lora_b = torch.nn.Parameter(torch.quantize_per_tensor(torch.randn(lora_rank, model.config.hidden_size), 0.01, 0, torch.quint8))
+
+# Apply QLoRA to the model
+def apply_qlora(hidden_states):
+    return hidden_states + torch.matmul(lora_a.dequantize(), torch.matmul(hidden_states, lora_b.dequantize()))
+
+# Fine-tune the model with QLoRA
+model.forward = apply_qlora
+
+# Example input
+input_text = 'Hello, how are you?'
+inputs = tokenizer(input_text, return_tensors='pt')
+outputs = model.generate(**inputs, max_length=50)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using LoRA for fine-tuning LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -110,7 +139,36 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+QLoRA combines quantization techniques with LoRA to further reduce memory usage and computational cost during fine-tuning. This approach is particularly useful for deploying LLMs on resource-constrained devices.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Load pre-trained model and tokenizer
+model = AutoModelForCausalLM.from_pretrained('distilgpt2')
+tokenizer = AutoTokenizer.from_pretrained('distilgpt2')
+
+# Define QLoRA adaptation
+lora_rank = 4
+lora_a = torch.nn.Parameter(torch.quantize_per_tensor(torch.randn(model.config.hidden_size, lora_rank), 0.01, 0, torch.quint8))
+lora_b = torch.nn.Parameter(torch.quantize_per_tensor(torch.randn(lora_rank, model.config.hidden_size), 0.01, 0, torch.quint8))
+
+# Apply QLoRA to the model
+def apply_qlora(hidden_states):
+    return hidden_states + torch.matmul(lora_a.dequantize(), torch.matmul(hidden_states, lora_b.dequantize()))
+
+# Fine-tune the model with QLoRA
+model.forward = apply_qlora
+
+# Example input
+input_text = 'Hello, how are you?'
+inputs = tokenizer(input_text, return_tensors='pt')
+outputs = model.generate(**inputs, max_length=50)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+>
   <p class="font-semibold mb-3">❓ How does QLoRA differ from LoRA in terms of resource usage?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

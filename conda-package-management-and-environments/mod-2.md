@@ -82,7 +82,25 @@ conda 4.10.1
 
 > **💡 Tip:** Ensure you close and reopen your terminal or command prompt after installation to update the environment variables.
 
-<div class="quiz">
+After installation, it's important to verify that Conda was installed correctly. You can do this by opening a new terminal or command prompt and running the command `conda --version`. This will print the version of Conda installed.
+
+```python title="verify_conda_installation.py"
+import subprocess
+
+# Run the command to check Conda version
+result = subprocess.run(["conda", "--version"], capture_output=True, text=True)
+
+# Print the output
+print(result.stdout)
+```
+
+```
+Expected output:
+conda 4.10.1
+
+```
+
+>
   <p class="font-semibold mb-3">❓ What command do you use to verify the installation of Conda?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +124,25 @@ conda 4.10.1
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+After installation, it's important to verify that Conda was installed correctly. You can do this by opening a new terminal or command prompt and running the command `conda --version`. This will print the version of Conda installed.
+
+```python title="verify_conda_installation.py"
+import subprocess
+
+# Run the command to check Conda version
+result = subprocess.run(["conda", "--version"], capture_output=True, text=True)
+
+# Print the output
+print(result.stdout)
+```
+
+```
+Expected output:
+conda 4.10.1
+
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the purpose of running the installer script with the `./` prefix?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

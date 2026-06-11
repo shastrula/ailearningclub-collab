@@ -86,7 +86,29 @@ print([model.decode(output) for output in outputs])
 
 > **💡 Tip:** Always ensure that your model is quantized appropriately for your hardware to avoid unnecessary memory usage and to speed up inference times.
 
-<div class="quiz">
+Optimizing LLM performance also depends significantly on the underlying hardware. GPUs are commonly used for their parallel processing capabilities, but CPUs and TPUs can also be effective depending on the specific use case. Efficient memory management, batch processing, and quantization techniques can further enhance performance.
+
+```python title="example2.py"
+import torch
+
+# Load a quantized model
+model = torch.load('quantized_model.pth')
+
+# Move the model to GPU if available
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+model.to(device)
+
+# Define a batch of inputs
+inputs = ['Hello world!', 'How are you today?']
+input_tensor = torch.tensor([model.encode(text) for text in inputs]).to(device)
+
+# Generate output for the batch
+outputs = model.generate(input_tensor)
+
+print([model.decode(output) for output in outputs])
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using Ollama for LLM deployment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -110,7 +132,29 @@ print([model.decode(output) for output in outputs])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Optimizing LLM performance also depends significantly on the underlying hardware. GPUs are commonly used for their parallel processing capabilities, but CPUs and TPUs can also be effective depending on the specific use case. Efficient memory management, batch processing, and quantization techniques can further enhance performance.
+
+```python title="example2.py"
+import torch
+
+# Load a quantized model
+model = torch.load('quantized_model.pth')
+
+# Move the model to GPU if available
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+model.to(device)
+
+# Define a batch of inputs
+inputs = ['Hello world!', 'How are you today?']
+input_tensor = torch.tensor([model.encode(text) for text in inputs]).to(device)
+
+# Generate output for the batch
+outputs = model.generate(input_tensor)
+
+print([model.decode(output) for output in outputs])
+```
+
+>
   <p class="font-semibold mb-3">❓ Which hardware component is commonly used for parallel processing in LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -74,7 +74,21 @@ df
 
 > **💡 Tip:** Remember to save your notebook regularly to avoid losing your work. You can do this by clicking the save icon or pressing `Ctrl+S`.
 
-<div class="quiz">
+To use Jupyter Notebooks, you need to install Jupyter via pip or conda. Once installed, you can start a new notebook by running `jupyter notebook` in your terminal. This opens a web interface where you can create new notebooks, open existing ones, and interact with the code. Cells within a notebook can be either Markdown for text or Code for executable Python code.
+
+```python title="example2.py"
+# Importing pandas library
+import pandas as pd
+
+# Creating a simple DataFrame
+data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35]}
+df = pd.DataFrame(data)
+
+# Displaying the DataFrame
+df
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary use of Jupyter Notebooks?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -98,7 +112,21 @@ df
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+To use Jupyter Notebooks, you need to install Jupyter via pip or conda. Once installed, you can start a new notebook by running `jupyter notebook` in your terminal. This opens a web interface where you can create new notebooks, open existing ones, and interact with the code. Cells within a notebook can be either Markdown for text or Code for executable Python code.
+
+```python title="example2.py"
+# Importing pandas library
+import pandas as pd
+
+# Creating a simple DataFrame
+data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35]}
+df = pd.DataFrame(data)
+
+# Displaying the DataFrame
+df
+```
+
+>
   <p class="font-semibold mb-3">❓ Which library is used for plotting in the first example?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

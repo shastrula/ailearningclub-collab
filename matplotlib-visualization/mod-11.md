@@ -78,7 +78,21 @@ fig.show()
 
 > **💡 Tip:** When creating dashboards with Plotly, make use of the `update_layout` method to customize the appearance of your plots, such as adding annotations, modifying axis labels, and adjusting the legend.
 
-<div class="quiz">
+Plotly is a powerful library for creating interactive plots and dashboards. It allows you to build dynamic visualizations that can be embedded in web applications, making it easier to share insights with stakeholders. Plotly's flexibility and interactivity make it an excellent choice for EDA, especially when dealing with large datasets.
+
+```python title="example2.py"
+import plotly.express as px
+import pandas as pd
+
+# Load a sample dataset
+data = px.data.iris()
+
+# Create an interactive scatter plot
+fig = px.scatter(data, x='sepal_length', y='sepal_width', color='species', title='Interactive Scatter Plot of Sepal Length vs Sepal Width')
+fig.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which Python library is used for creating static, animated, and interactive visualizations in Python?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -102,7 +116,21 @@ fig.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Plotly is a powerful library for creating interactive plots and dashboards. It allows you to build dynamic visualizations that can be embedded in web applications, making it easier to share insights with stakeholders. Plotly's flexibility and interactivity make it an excellent choice for EDA, especially when dealing with large datasets.
+
+```python title="example2.py"
+import plotly.express as px
+import pandas as pd
+
+# Load a sample dataset
+data = px.data.iris()
+
+# Create an interactive scatter plot
+fig = px.scatter(data, x='sepal_length', y='sepal_width', color='species', title='Interactive Scatter Plot of Sepal Length vs Sepal Width')
+fig.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What function from Seaborn is used to create a matrix of scatterplots showing pairwise relationships in a dataset?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

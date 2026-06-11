@@ -85,7 +85,35 @@ unet_model.compile(optimizer='adam', loss='binary_crossentropy')
 
 > **💡 Tip:** When training U-Net, ensure your dataset is properly preprocessed and augmented to avoid overfitting.
 
-<div class="quiz">
+U-Net is a popular architecture for biomedical image segmentation. It consists of a contracting path (encoder) to capture context and a symmetric expanding path (decoder) that enables precise localization. U-Net is particularly effective for segmenting images into meaningful parts.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, UpSampling2D, concatenate
+
+def unet(input_size=(256, 256, 1)):
+    inputs = Input(input_size)
+
+    # Contracting path
+    c1 = Conv2D(64, (3, 3), activation='relu', padding='same')(inputs)
+    c1 = Conv2D(64, (3, 3), activation='relu', padding='same')(c1)
+    p1 = MaxPooling2D((2, 2))(c1)
+
+    # Expanding path
+    u1 = UpSampling2D((2, 2))(c1)
+    u1 = Conv2D(64, (2, 2), activation='relu', padding='same')(u1)
+
+    outputs = Conv2D(1, (1, 1), activation='sigmoid')(u1)
+
+    model = Model(inputs=[inputs], outputs=[outputs])
+    return model
+
+unet_model = unet()
+unet_model.compile(optimizer='adam', loss='binary_crossentropy')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using YOLO for object detection?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -109,7 +137,35 @@ unet_model.compile(optimizer='adam', loss='binary_crossentropy')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+U-Net is a popular architecture for biomedical image segmentation. It consists of a contracting path (encoder) to capture context and a symmetric expanding path (decoder) that enables precise localization. U-Net is particularly effective for segmenting images into meaningful parts.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, UpSampling2D, concatenate
+
+def unet(input_size=(256, 256, 1)):
+    inputs = Input(input_size)
+
+    # Contracting path
+    c1 = Conv2D(64, (3, 3), activation='relu', padding='same')(inputs)
+    c1 = Conv2D(64, (3, 3), activation='relu', padding='same')(c1)
+    p1 = MaxPooling2D((2, 2))(c1)
+
+    # Expanding path
+    u1 = UpSampling2D((2, 2))(c1)
+    u1 = Conv2D(64, (2, 2), activation='relu', padding='same')(u1)
+
+    outputs = Conv2D(1, (1, 1), activation='sigmoid')(u1)
+
+    model = Model(inputs=[inputs], outputs=[outputs])
+    return model
+
+unet_model = unet()
+unet_model.compile(optimizer='adam', loss='binary_crossentropy')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the key feature of U-Net that makes it suitable for image segmentation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

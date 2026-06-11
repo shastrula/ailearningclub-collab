@@ -90,7 +90,37 @@ barking
 
 > **💡 Tip:** Remember to use the 'super' keyword to call the superclass constructor from the subclass constructor when you need to initialize inherited fields.
 
-<div class="quiz">
+Inheritance is a mechanism where one class inherits the fields and methods of another class. This allows for code reusability and the creation of a hierarchical class structure. The class that is inherited from is called the superclass, and the class that inherits is called the subclass.
+
+```java title="example2.java"
+class Animal {
+    void eat() {
+        System.out.println("eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();
+        myDog.bark();
+    }
+}
+```
+
+```
+eating
+barking
+
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of a class in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -114,7 +144,37 @@ barking
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Inheritance is a mechanism where one class inherits the fields and methods of another class. This allows for code reusability and the creation of a hierarchical class structure. The class that is inherited from is called the superclass, and the class that inherits is called the subclass.
+
+```java title="example2.java"
+class Animal {
+    void eat() {
+        System.out.println("eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();
+        myDog.bark();
+    }
+}
+```
+
+```
+eating
+barking
+
+```
+
+>
   <p class="font-semibold mb-3">❓ What does inheritance allow in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -177,7 +237,37 @@ public class Example5 {
 Example 5
 ```
 
-<div class="quiz">
+Inheritance is a mechanism where one class inherits the fields and methods of another class. This allows for code reusability and the creation of a hierarchical class structure. The class that is inherited from is called the superclass, and the class that inherits is called the subclass.
+
+```java title="example2.java"
+class Animal {
+    void eat() {
+        System.out.println("eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();
+        myDog.bark();
+    }
+}
+```
+
+```
+eating
+barking
+
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 3: What is a key concept in Object-Oriented Programming Basics?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -201,7 +291,37 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Inheritance is a mechanism where one class inherits the fields and methods of another class. This allows for code reusability and the creation of a hierarchical class structure. The class that is inherited from is called the superclass, and the class that inherits is called the subclass.
+
+```java title="example2.java"
+class Animal {
+    void eat() {
+        System.out.println("eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();
+        myDog.bark();
+    }
+}
+```
+
+```
+eating
+barking
+
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 4: What is a key concept in Object-Oriented Programming Basics?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -225,7 +345,37 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Inheritance is a mechanism where one class inherits the fields and methods of another class. This allows for code reusability and the creation of a hierarchical class structure. The class that is inherited from is called the superclass, and the class that inherits is called the subclass.
+
+```java title="example2.java"
+class Animal {
+    void eat() {
+        System.out.println("eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();
+        myDog.bark();
+    }
+}
+```
+
+```
+eating
+barking
+
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 5: What is a key concept in Object-Oriented Programming Basics?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -249,7 +399,37 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Inheritance is a mechanism where one class inherits the fields and methods of another class. This allows for code reusability and the creation of a hierarchical class structure. The class that is inherited from is called the superclass, and the class that inherits is called the subclass.
+
+```java title="example2.java"
+class Animal {
+    void eat() {
+        System.out.println("eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();
+        myDog.bark();
+    }
+}
+```
+
+```
+eating
+barking
+
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 6: What is a key concept in Object-Oriented Programming Basics?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -273,7 +453,37 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Inheritance is a mechanism where one class inherits the fields and methods of another class. This allows for code reusability and the creation of a hierarchical class structure. The class that is inherited from is called the superclass, and the class that inherits is called the subclass.
+
+```java title="example2.java"
+class Animal {
+    void eat() {
+        System.out.println("eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();
+        myDog.bark();
+    }
+}
+```
+
+```
+eating
+barking
+
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 7: What is a key concept in Object-Oriented Programming Basics?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -297,7 +507,37 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Inheritance is a mechanism where one class inherits the fields and methods of another class. This allows for code reusability and the creation of a hierarchical class structure. The class that is inherited from is called the superclass, and the class that inherits is called the subclass.
+
+```java title="example2.java"
+class Animal {
+    void eat() {
+        System.out.println("eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();
+        myDog.bark();
+    }
+}
+```
+
+```
+eating
+barking
+
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 8: What is a key concept in Object-Oriented Programming Basics?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -321,7 +561,37 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Inheritance is a mechanism where one class inherits the fields and methods of another class. This allows for code reusability and the creation of a hierarchical class structure. The class that is inherited from is called the superclass, and the class that inherits is called the subclass.
+
+```java title="example2.java"
+class Animal {
+    void eat() {
+        System.out.println("eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();
+        myDog.bark();
+    }
+}
+```
+
+```
+eating
+barking
+
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 9: What is a key concept in Object-Oriented Programming Basics?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -345,7 +615,37 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Inheritance is a mechanism where one class inherits the fields and methods of another class. This allows for code reusability and the creation of a hierarchical class structure. The class that is inherited from is called the superclass, and the class that inherits is called the subclass.
+
+```java title="example2.java"
+class Animal {
+    void eat() {
+        System.out.println("eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();
+        myDog.bark();
+    }
+}
+```
+
+```
+eating
+barking
+
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 10: What is a key concept in Object-Oriented Programming Basics?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

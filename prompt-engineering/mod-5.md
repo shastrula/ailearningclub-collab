@@ -78,7 +78,21 @@ print(response.choices[0].text.strip())
 
 > **💡 Tip:** Ensure that your reasoning steps are clear and logically ordered to help the model understand and follow the process effectively.
 
-<div class="quiz">
+0 = Saturday, 1 = Sunday, 2 = Monday,..., 6 = Friday
+
+The answer is [calculated day of the week]."""
+
+# Generate the response
+response = openai.Completion.create(
+  engine="text-davinci-003",
+  prompt=prompt,
+  max_tokens=100
+)
+
+print(response.choices[0].text.strip())
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using the ReAct framework?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -102,7 +116,21 @@ print(response.choices[0].text.strip())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+0 = Saturday, 1 = Sunday, 2 = Monday,..., 6 = Friday
+
+The answer is [calculated day of the week]."""
+
+# Generate the response
+response = openai.Completion.create(
+  engine="text-davinci-003",
+  prompt=prompt,
+  max_tokens=100
+)
+
+print(response.choices[0].text.strip())
+```
+
+>
   <p class="font-semibold mb-3">❓ Which step in the ReAct framework involves breaking down the problem into smaller parts?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

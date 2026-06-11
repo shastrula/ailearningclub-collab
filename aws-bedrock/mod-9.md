@@ -194,7 +194,9 @@ print(result)
 
 ---
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of LangChain?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -218,7 +220,9 @@ print(result)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does ConversationBufferMemory do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -242,7 +246,9 @@ print(result)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a Chain in LangChain?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -266,7 +272,9 @@ print(result)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How do you implement RAG with LangChain?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

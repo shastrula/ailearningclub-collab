@@ -172,7 +172,19 @@ developer_satisfaction.labels(team='backend').set(8.5)
 
 ---
 
-<div class="quiz">
+### Service not starting
+- Check logs: `platform logs my-app`
+- Verify resources: `platform status my-app`
+- Check health: `platform health my-app`
+
+### High latency
+- Scale up: `platform scale my-app --replicas 5`
+- Check metrics: `platform metrics my-app`
+```
+
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is an Internal Developer Platform (IDP)?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -196,7 +208,19 @@ developer_satisfaction.labels(team='backend').set(8.5)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+### Service not starting
+- Check logs: `platform logs my-app`
+- Verify resources: `platform status my-app`
+- Check health: `platform health my-app`
+
+### High latency
+- Scale up: `platform scale my-app --replicas 5`
+- Check metrics: `platform metrics my-app`
+```
+
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is a service catalog in platform engineering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -220,7 +244,19 @@ developer_satisfaction.labels(team='backend').set(8.5)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+### Service not starting
+- Check logs: `platform logs my-app`
+- Verify resources: `platform status my-app`
+- Check health: `platform health my-app`
+
+### High latency
+- Scale up: `platform scale my-app --replicas 5`
+- Check metrics: `platform metrics my-app`
+```
+
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What are golden paths?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -244,7 +280,19 @@ developer_satisfaction.labels(team='backend').set(8.5)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+### Service not starting
+- Check logs: `platform logs my-app`
+- Verify resources: `platform status my-app`
+- Check health: `platform health my-app`
+
+### High latency
+- Scale up: `platform scale my-app --replicas 5`
+- Check metrics: `platform metrics my-app`
+```
+
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is Backstage?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -268,7 +316,19 @@ developer_satisfaction.labels(team='backend').set(8.5)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+### Service not starting
+- Check logs: `platform logs my-app`
+- Verify resources: `platform status my-app`
+- Check health: `platform health my-app`
+
+### High latency
+- Scale up: `platform scale my-app --replicas 5`
+- Check metrics: `platform metrics my-app`
+```
+
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the primary goal of platform engineering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

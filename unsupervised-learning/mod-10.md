@@ -62,7 +62,9 @@ t-SNE has several important parameters that can significantly affect the results
 
 > **💡 Tip:** Choosing the right value for perplexity is crucial. A too-small value can lead to a fragmented visualization, while a too-large value can lead to overlapping points.
 
-<div class="quiz">
+t-SNE has several important parameters that can significantly affect the results, including perplexity, learning rate, and number of iterations. Perplexity can be thought of as a guess about the number of close neighbors each point has. The learning rate controls how much the points are allowed to move in each iteration.
+
+>
   <p class="font-semibold mb-3">❓ What does the perplexity parameter in t-SNE represent?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

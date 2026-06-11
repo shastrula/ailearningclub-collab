@@ -77,7 +77,20 @@ print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
 
 > **💡 Tip:** Always monitor your system's resource usage when running LLMs to avoid performance bottlenecks and ensure smooth operation.
 
-<div class="quiz">
+Running LLMs locally requires significant computational resources. Key hardware components include a powerful CPU, ample RAM, and preferably a GPU for accelerated processing. Ensuring your system meets these requirements is essential for efficient model inference and training.
+
+```python title="example2.py"
+import psutil
+
+# Check CPU and memory usage
+cpu_percent = psutil.cpu_percent(interval=1)
+memory_info = psutil.virtual_memory()
+
+print(f'CPU Usage: {cpu_percent}%)')
+print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary function of Ollama in LLM deployment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +114,20 @@ print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Running LLMs locally requires significant computational resources. Key hardware components include a powerful CPU, ample RAM, and preferably a GPU for accelerated processing. Ensuring your system meets these requirements is essential for efficient model inference and training.
+
+```python title="example2.py"
+import psutil
+
+# Check CPU and memory usage
+cpu_percent = psutil.cpu_percent(interval=1)
+memory_info = psutil.virtual_memory()
+
+print(f'CPU Usage: {cpu_percent}%)')
+print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which hardware component is crucial for accelerated LLM processing?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

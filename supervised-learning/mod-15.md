@@ -81,7 +81,24 @@ print(df)
 
 > **💡 Tip:** Always check the distribution of your features before and after transformation to ensure that the transformation has the desired effect.
 
-<div class="quiz">
+Feature transformation involves applying mathematical functions to existing features to make them more suitable for the model. Common transformations include log transformation for skewed data, polynomial features for capturing non-linear relationships, and scaling features to have a mean of zero and a standard deviation of one. These transformations can help stabilize variance, reduce skewness, and improve the model's performance.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+
+# Sample dataset
+data = {'feature1': [1, 2, 3, 4], 'feature2': [5, 6, 7, 8]}
+df = pd.DataFrame(data)
+
+# Standardizing features
+scaler = StandardScaler()
+df[['feature1', 'feature2']] = scaler.fit_transform(df[['feature1', 'feature2']])
+
+print(df)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of creating new features in feature engineering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -105,7 +122,24 @@ print(df)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Feature transformation involves applying mathematical functions to existing features to make them more suitable for the model. Common transformations include log transformation for skewed data, polynomial features for capturing non-linear relationships, and scaling features to have a mean of zero and a standard deviation of one. These transformations can help stabilize variance, reduce skewness, and improve the model's performance.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+
+# Sample dataset
+data = {'feature1': [1, 2, 3, 4], 'feature2': [5, 6, 7, 8]}
+df = pd.DataFrame(data)
+
+# Standardizing features
+scaler = StandardScaler()
+df[['feature1', 'feature2']] = scaler.fit_transform(df[['feature1', 'feature2']])
+
+print(df)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which transformation is commonly used to handle skewed data in feature engineering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

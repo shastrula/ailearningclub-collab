@@ -66,7 +66,9 @@ Variance is the error introduced by sensitivity to small fluctuations in the tra
 
 > **💡 Tip:** To reduce variance, consider using techniques such as regularization, cross-validation, or ensemble methods.
 
-<div class="quiz">
+Variance is the error introduced by sensitivity to small fluctuations in the training set. A high variance model is one that models the random noise in the training data, rather than the intended outputs. This can lead to overfitting, where the model performs well on the training data but poorly on unseen data.
+
+>
   <p class="font-semibold mb-3">❓ What is the primary cause of high bias in a model?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

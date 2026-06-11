@@ -76,7 +76,26 @@ print('Cluster labels:', labels)
 
 > **💡 Tip:** When using DBSCAN, carefully choose the eps (maximum distance between two samples) and min_samples (minimum number of samples in a neighborhood for a point to be considered as a core point) parameters to achieve the desired clustering results.
 
-<div class="quiz">
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is a density-based clustering algorithm. Unlike K-Means, DBSCAN does not require specifying the number of clusters beforehand. It forms clusters based on the density of data points, effectively identifying clusters of varying shapes and sizes and marking outliers as noise. DBSCAN is particularly useful in spatial data analysis and anomaly detection.
+
+```python title="example2.py"
+from sklearn.cluster import DBSCAN
+import numpy as np
+
+# Generate synthetic data
+X = np.array([[1, 2], [2, 2], [2, 3],
+              [8, 7], [8, 8], [25, 80]])
+
+# Apply DBSCAN clustering
+dbscan = DBSCAN(eps=3, min_samples=2).fit(X)
+
+# Get cluster labels
+labels = dbscan.labels_
+
+print('Cluster labels:', labels)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of K-Means clustering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -100,7 +119,26 @@ print('Cluster labels:', labels)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is a density-based clustering algorithm. Unlike K-Means, DBSCAN does not require specifying the number of clusters beforehand. It forms clusters based on the density of data points, effectively identifying clusters of varying shapes and sizes and marking outliers as noise. DBSCAN is particularly useful in spatial data analysis and anomaly detection.
+
+```python title="example2.py"
+from sklearn.cluster import DBSCAN
+import numpy as np
+
+# Generate synthetic data
+X = np.array([[1, 2], [2, 2], [2, 3],
+              [8, 7], [8, 8], [25, 80]])
+
+# Apply DBSCAN clustering
+dbscan = DBSCAN(eps=3, min_samples=2).fit(X)
+
+# Get cluster labels
+labels = dbscan.labels_
+
+print('Cluster labels:', labels)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which parameter in DBSCAN determines the maximum distance between two samples for them to be considered as in the same neighborhood?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

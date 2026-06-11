@@ -78,7 +78,21 @@ print(f'Memory Usage: {memory_usage}%')
 
 > **💡 Tip:** Regularly monitor your resource usage to avoid unexpected runtime terminations due to resource exhaustion.
 
-<div class="quiz">
+Monitoring resource usage helps in understanding how your code is performing and where potential bottlenecks might be. Google Colab provides built-in tools to monitor CPU and memory usage, which can be accessed through the 'Runtime' menu.
+
+```python title="example2.py"
+# Import necessary libraries
+import psutil
+
+# Get CPU and memory usage
+cpu_usage = psutil.cpu_percent(interval=1)
+memory_usage = psutil.virtual_memory().percent
+
+print(f'CPU Usage: {cpu_usage}%')
+print(f'Memory Usage: {memory_usage}%')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which runtime is best suited for deep learning tasks?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -102,7 +116,21 @@ print(f'Memory Usage: {memory_usage}%')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Monitoring resource usage helps in understanding how your code is performing and where potential bottlenecks might be. Google Colab provides built-in tools to monitor CPU and memory usage, which can be accessed through the 'Runtime' menu.
+
+```python title="example2.py"
+# Import necessary libraries
+import psutil
+
+# Get CPU and memory usage
+cpu_usage = psutil.cpu_percent(interval=1)
+memory_usage = psutil.virtual_memory().percent
+
+print(f'CPU Usage: {cpu_usage}%')
+print(f'Memory Usage: {memory_usage}%')
+```
+
+>
   <p class="font-semibold mb-3">❓ What does the psutil library help you monitor in Google Colab?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

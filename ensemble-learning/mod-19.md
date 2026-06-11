@@ -69,7 +69,7 @@ Ensemble learning techniques such as bagging, boosting, and stacking are widely 
 
 > **💡 Tip:** When deploying ensemble models in production, always monitor their performance and retrain them periodically to adapt to new data.
 
-<div class="quiz">
+>
   <p class="font-semibold mb-3">❓ Which ensemble learning technique is best suited for handling imbalanced datasets in production?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

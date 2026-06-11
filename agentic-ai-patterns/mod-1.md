@@ -79,7 +79,26 @@ print(reflection)
 
 > **💡 Tip:** Ensure that the reflection process includes both successful and unsuccessful actions to provide a comprehensive learning experience for the agent.
 
-<div class="quiz">
+Reflection in Agentic AI is the process by which an agent evaluates its past actions and decisions to improve future performance. This involves analyzing the outcomes of actions, identifying what worked and what didn't, and adjusting strategies accordingly. Reflection enables agents to learn from experience and adapt to changing conditions.
+
+```python title="example2.py"
+def reflect_on_actions(actions, outcomes):
+    reflection = {}
+    for action, outcome in zip(actions, outcomes):
+        if outcome =='success':
+            reflection[action] = 'effective'
+        else:
+            reflection[action] = 'ineffective'
+    return reflection
+
+# Example actions and outcomes
+actions = ['move_forward', 'turn_left', 'pick_up_object']
+outcomes = ['success', 'failure','success']
+reflection = reflect_on_actions(actions, outcomes)
+print(reflection)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of planning in Agentic AI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -103,7 +122,26 @@ print(reflection)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Reflection in Agentic AI is the process by which an agent evaluates its past actions and decisions to improve future performance. This involves analyzing the outcomes of actions, identifying what worked and what didn't, and adjusting strategies accordingly. Reflection enables agents to learn from experience and adapt to changing conditions.
+
+```python title="example2.py"
+def reflect_on_actions(actions, outcomes):
+    reflection = {}
+    for action, outcome in zip(actions, outcomes):
+        if outcome =='success':
+            reflection[action] = 'effective'
+        else:
+            reflection[action] = 'ineffective'
+    return reflection
+
+# Example actions and outcomes
+actions = ['move_forward', 'turn_left', 'pick_up_object']
+outcomes = ['success', 'failure','success']
+reflection = reflect_on_actions(actions, outcomes)
+print(reflection)
+```
+
+>
   <p class="font-semibold mb-3">❓ What does reflection in Agentic AI help an agent to do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

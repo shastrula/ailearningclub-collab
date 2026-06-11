@@ -115,7 +115,7 @@ print(a[::2])     # [10, 30, 50] - every 2nd element
 
 ## Quiz
 
-<div class="quiz">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does np.array([1, 2, 3]).shape return?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

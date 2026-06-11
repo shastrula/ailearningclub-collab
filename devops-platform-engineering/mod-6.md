@@ -99,7 +99,18 @@ jobs:
 
 ---
 
-<div class="quiz">
+```yaml
+# Comprehensive testing strategy
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >
   <p class="font-semibold mb-3">❓ What is the main goal of Continuous Integration?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -123,7 +134,18 @@ jobs:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+```yaml
+# Comprehensive testing strategy
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >
   <p class="font-semibold mb-3">❓ What does GitHub Actions use to define workflows?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -147,7 +169,18 @@ jobs:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+```yaml
+# Comprehensive testing strategy
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >
   <p class="font-semibold mb-3">❓ What is the purpose of AWS CodeBuild?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -171,7 +204,18 @@ jobs:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+```yaml
+# Comprehensive testing strategy
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >
   <p class="font-semibold mb-3">❓ What file does AWS CodeDeploy use to define deployment steps?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -195,7 +239,18 @@ jobs:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+```yaml
+# Comprehensive testing strategy
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >
   <p class="font-semibold mb-3">❓ How should sensitive data like API keys be handled in CI/CD pipelines?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -89,7 +89,36 @@ public class UDPServer {
 
 > **💡 Tip:** When using datagram sockets, always handle exceptions properly to avoid socket leaks, which can lead to resource exhaustion.
 
-<div class="quiz">
+Datagram sockets are used for sending and receiving UDP packets, which are connectionless and do not guarantee delivery, order, or duplication protection. This method is useful for applications like online games or live broadcasts where speed is more critical than reliability. Understanding datagram sockets is essential for handling real-time data transmission.
+
+```java title="example2.java"
+import java.io.*;
+import java.net.*;
+
+public class UDPServer {
+    public static void main(String[] args) throws IOException {
+        DatagramSocket socket = new DatagramSocket(9876);
+        byte[] buffer = new byte[1024];
+
+        DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+        System.out.println("Waiting for packets");
+
+        socket.receive(packet);
+        String message = new String(packet.getData(), 0, packet.getLength());
+        System.out.println("Received: " + message);
+
+        InetAddress address = packet.getAddress();
+        int port = packet.getPort();
+        String response = "Hello from UDP Server";
+        DatagramPacket responsePacket = new DatagramPacket(response.getBytes(), response.length(), address, port);
+        socket.send(responsePacket);
+
+        socket.close();
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary use of socket programming in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -113,7 +142,36 @@ public class UDPServer {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Datagram sockets are used for sending and receiving UDP packets, which are connectionless and do not guarantee delivery, order, or duplication protection. This method is useful for applications like online games or live broadcasts where speed is more critical than reliability. Understanding datagram sockets is essential for handling real-time data transmission.
+
+```java title="example2.java"
+import java.io.*;
+import java.net.*;
+
+public class UDPServer {
+    public static void main(String[] args) throws IOException {
+        DatagramSocket socket = new DatagramSocket(9876);
+        byte[] buffer = new byte[1024];
+
+        DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+        System.out.println("Waiting for packets");
+
+        socket.receive(packet);
+        String message = new String(packet.getData(), 0, packet.getLength());
+        System.out.println("Received: " + message);
+
+        InetAddress address = packet.getAddress();
+        int port = packet.getPort();
+        String response = "Hello from UDP Server";
+        DatagramPacket responsePacket = new DatagramPacket(response.getBytes(), response.length(), address, port);
+        socket.send(responsePacket);
+
+        socket.close();
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Which type of socket is used for UDP communication in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

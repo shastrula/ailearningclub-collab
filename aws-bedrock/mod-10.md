@@ -371,7 +371,33 @@ def analyze_ab_test_results():
 
 ---
 
-<div class="quiz">
+**AWS Bedrock Documentation:**
+- https://docs.aws.amazon.com/bedrock/
+- https://docs.aws.amazon.com/bedrock/latest/userguide/
+
+**Model Documentation:**
+- Claude: https://docs.anthropic.com/claude/reference/
+- Llama: https://www.llama.com/docs/
+- Mistral: https://docs.mistral.ai/
+- Stable Diffusion: https://huggingface.co/stabilityai
+
+**LangChain:**
+- https://python.langchain.com/docs/
+- https://python.langchain.com/docs/integrations/providers/bedrock
+
+**Best Practices:**
+- AWS Well-Architected Framework: https://aws.amazon.com/architecture/well-architected/
+- Prompt Engineering Guide: https://www.promptingguide.ai/
+- RAG Best Practices: https://aws.amazon.com/blogs/machine-learning/
+
+**Community:**
+- AWS Bedrock Discord: https://discord.gg/bedrock
+- Stack Overflow: Tag `aws-bedrock`
+- GitHub: https://github.com/aws/bedrock-examples
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is exponential backoff used for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -395,7 +421,33 @@ def analyze_ab_test_results():
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+**AWS Bedrock Documentation:**
+- https://docs.aws.amazon.com/bedrock/
+- https://docs.aws.amazon.com/bedrock/latest/userguide/
+
+**Model Documentation:**
+- Claude: https://docs.anthropic.com/claude/reference/
+- Llama: https://www.llama.com/docs/
+- Mistral: https://docs.mistral.ai/
+- Stable Diffusion: https://huggingface.co/stabilityai
+
+**LangChain:**
+- https://python.langchain.com/docs/
+- https://python.langchain.com/docs/integrations/providers/bedrock
+
+**Best Practices:**
+- AWS Well-Architected Framework: https://aws.amazon.com/architecture/well-architected/
+- Prompt Engineering Guide: https://www.promptingguide.ai/
+- RAG Best Practices: https://aws.amazon.com/blogs/machine-learning/
+
+**Community:**
+- AWS Bedrock Discord: https://discord.gg/bedrock
+- Stack Overflow: Tag `aws-bedrock`
+- GitHub: https://github.com/aws/bedrock-examples
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the main benefit of caching responses?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -419,7 +471,33 @@ def analyze_ab_test_results():
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+**AWS Bedrock Documentation:**
+- https://docs.aws.amazon.com/bedrock/
+- https://docs.aws.amazon.com/bedrock/latest/userguide/
+
+**Model Documentation:**
+- Claude: https://docs.anthropic.com/claude/reference/
+- Llama: https://www.llama.com/docs/
+- Mistral: https://docs.mistral.ai/
+- Stable Diffusion: https://huggingface.co/stabilityai
+
+**LangChain:**
+- https://python.langchain.com/docs/
+- https://python.langchain.com/docs/integrations/providers/bedrock
+
+**Best Practices:**
+- AWS Well-Architected Framework: https://aws.amazon.com/architecture/well-architected/
+- Prompt Engineering Guide: https://www.promptingguide.ai/
+- RAG Best Practices: https://aws.amazon.com/blogs/machine-learning/
+
+**Community:**
+- AWS Bedrock Discord: https://discord.gg/bedrock
+- Stack Overflow: Tag `aws-bedrock`
+- GitHub: https://github.com/aws/bedrock-examples
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is A/B testing used for in production?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -443,7 +521,33 @@ def analyze_ab_test_results():
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+**AWS Bedrock Documentation:**
+- https://docs.aws.amazon.com/bedrock/
+- https://docs.aws.amazon.com/bedrock/latest/userguide/
+
+**Model Documentation:**
+- Claude: https://docs.anthropic.com/claude/reference/
+- Llama: https://www.llama.com/docs/
+- Mistral: https://docs.mistral.ai/
+- Stable Diffusion: https://huggingface.co/stabilityai
+
+**LangChain:**
+- https://python.langchain.com/docs/
+- https://python.langchain.com/docs/integrations/providers/bedrock
+
+**Best Practices:**
+- AWS Well-Architected Framework: https://aws.amazon.com/architecture/well-architected/
+- Prompt Engineering Guide: https://www.promptingguide.ai/
+- RAG Best Practices: https://aws.amazon.com/blogs/machine-learning/
+
+**Community:**
+- AWS Bedrock Discord: https://discord.gg/bedrock
+- Stack Overflow: Tag `aws-bedrock`
+- GitHub: https://github.com/aws/bedrock-examples
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What should you do before invoking a model in production?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

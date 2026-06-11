@@ -70,7 +70,13 @@ Learning from others' experiences:
 
 > **💡 Tip:** Start with a dataset that has a clear target variable (what you're predicting) and under 100,000 rows. You can iterate fast and see results quickly.
 
-<div class="quiz">
+- California Housing — predict house prices from location, rooms, income. Great for regression.
+- Titanic — predict survival. The classic classification starter.
+- MNIST — 70,000 handwritten digits. The 'Hello World' of image classification.
+- IMDB Reviews — 50,000 movie reviews for sentiment analysis.
+- Iris — 150 flower measurements. Tiny but perfect for learning clustering and classification.
+
+>
   <p class="font-semibold mb-3">❓ Which platform hosts the largest community of ML datasets and competitions?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

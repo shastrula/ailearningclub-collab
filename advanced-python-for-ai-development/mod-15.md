@@ -80,7 +80,23 @@ print(sum_pairs.flatten()[np.triu_indices_from(sum_pairs, k=1)])
 
 > **💡 Tip:** Always prefer using built-in functions and libraries for operations on large datasets, as they are often optimized for performance.
 
-<div class="quiz">
+Python's built-in functions and libraries are optimized for performance and should be utilized wherever possible. Libraries like NumPy and Pandas offer efficient data structures and operations that can drastically reduce execution time compared to standard Python code.
+
+**example2.py**
+
+```
+# Using NumPy for efficient array operations
+import numpy as np
+
+# Create a NumPy array
+numbers = np.array([1, 2, 3, 4])
+
+# Efficiently compute the sum of pairs
+sum_pairs = numbers[:, None] + numbers
+print(sum_pairs.flatten()[np.triu_indices_from(sum_pairs, k=1)])
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the time complexity of the 'find_sum_of_pairs' function?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -104,7 +120,23 @@ print(sum_pairs.flatten()[np.triu_indices_from(sum_pairs, k=1)])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Python's built-in functions and libraries are optimized for performance and should be utilized wherever possible. Libraries like NumPy and Pandas offer efficient data structures and operations that can drastically reduce execution time compared to standard Python code.
+
+**example2.py**
+
+```
+# Using NumPy for efficient array operations
+import numpy as np
+
+# Create a NumPy array
+numbers = np.array([1, 2, 3, 4])
+
+# Efficiently compute the sum of pairs
+sum_pairs = numbers[:, None] + numbers
+print(sum_pairs.flatten()[np.triu_indices_from(sum_pairs, k=1)])
+```
+
+>
   <p class="font-semibold mb-3">❓ Which library is recommended for efficient array operations in Python?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

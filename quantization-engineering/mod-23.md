@@ -97,7 +97,42 @@ model.quantize(calibration_data)
 
 # Save quantized model
 
-<div class="quiz">
+GPTQ is a post-training quantization technique that quantizes model weights to low precision (typically INT4) while minimizing accuracy loss. It uses second-order information (Hessian) to identify which weights are most important, then quantizes layer-by-layer using calibration data. The key insight: $\text{minimize} \|Wq - W\|^2$ subject to quantization constraints, where $Wq$ is the quantized weight matrix.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from auto_gptq import AutoGPTQForCausalLM
+
+# Load model and tokenizer
+model_name = "EleutherAI/gpt-neo-125M"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Quantize to INT4 using GPTQ
+model = AutoGPTQForCausalLM.from_pretrained(
+    model_name,
+    use_safetensors=True,
+    device_map="auto",
+    quantize_config={
+        "bits": 4,
+        "group_size": 128,
+        "desc_act": False,
+        "damp_percent": 0.1
+    }
+)
+
+# Calibrate on sample data
+calibration_data = [
+    "The quick brown fox jumps over the lazy dog.",
+    "Machine learning is a subset of artificial intelligence."
+]
+
+# Quantize (in practice, use calibration_data for better results)
+model.quantize(calibration_data)
+
+# Save quantized model
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of GGUF?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -121,7 +156,42 @@ model.quantize(calibration_data)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+GPTQ is a post-training quantization technique that quantizes model weights to low precision (typically INT4) while minimizing accuracy loss. It uses second-order information (Hessian) to identify which weights are most important, then quantizes layer-by-layer using calibration data. The key insight: $\text{minimize} \|Wq - W\|^2$ subject to quantization constraints, where $Wq$ is the quantized weight matrix.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from auto_gptq import AutoGPTQForCausalLM
+
+# Load model and tokenizer
+model_name = "EleutherAI/gpt-neo-125M"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Quantize to INT4 using GPTQ
+model = AutoGPTQForCausalLM.from_pretrained(
+    model_name,
+    use_safetensors=True,
+    device_map="auto",
+    quantize_config={
+        "bits": 4,
+        "group_size": 128,
+        "desc_act": False,
+        "damp_percent": 0.1
+    }
+)
+
+# Calibrate on sample data
+calibration_data = [
+    "The quick brown fox jumps over the lazy dog.",
+    "Machine learning is a subset of artificial intelligence."
+]
+
+# Quantize (in practice, use calibration_data for better results)
+model.quantize(calibration_data)
+
+# Save quantized model
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ When does GPTQ apply quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

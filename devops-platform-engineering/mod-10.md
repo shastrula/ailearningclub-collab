@@ -97,7 +97,18 @@ trivy image --format cyclonedx myapp:latest > sbom.json
 
 ---
 
-<div class="quiz">
+```bash
+# Scan Docker image with Trivy
+trivy image myapp:latest
+
+# Scan Kubernetes manifests
+trivy config ./k8s/
+
+# Scan filesystem
+trivy fs ./src/
+
+# Generate SBOM (Software Bill of Materials)
+trivy image --format cyclonedx myapp:latest >
   <p class="font-semibold mb-3">❓ What is AWS IAM used for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -121,7 +132,18 @@ trivy image --format cyclonedx myapp:latest > sbom.json
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+```bash
+# Scan Docker image with Trivy
+trivy image myapp:latest
+
+# Scan Kubernetes manifests
+trivy config ./k8s/
+
+# Scan filesystem
+trivy fs ./src/
+
+# Generate SBOM (Software Bill of Materials)
+trivy image --format cyclonedx myapp:latest >
   <p class="font-semibold mb-3">❓ What is AWS Secrets Manager used for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -145,7 +167,18 @@ trivy image --format cyclonedx myapp:latest > sbom.json
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+```bash
+# Scan Docker image with Trivy
+trivy image myapp:latest
+
+# Scan Kubernetes manifests
+trivy config ./k8s/
+
+# Scan filesystem
+trivy fs ./src/
+
+# Generate SBOM (Software Bill of Materials)
+trivy image --format cyclonedx myapp:latest >
   <p class="font-semibold mb-3">❓ What does AWS GuardDuty do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -169,7 +202,18 @@ trivy image --format cyclonedx myapp:latest > sbom.json
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+```bash
+# Scan Docker image with Trivy
+trivy image myapp:latest
+
+# Scan Kubernetes manifests
+trivy config ./k8s/
+
+# Scan filesystem
+trivy fs ./src/
+
+# Generate SBOM (Software Bill of Materials)
+trivy image --format cyclonedx myapp:latest >
   <p class="font-semibold mb-3">❓ What is the principle of least privilege?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -193,7 +237,18 @@ trivy image --format cyclonedx myapp:latest > sbom.json
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+```bash
+# Scan Docker image with Trivy
+trivy image myapp:latest
+
+# Scan Kubernetes manifests
+trivy config ./k8s/
+
+# Scan filesystem
+trivy fs ./src/
+
+# Generate SBOM (Software Bill of Materials)
+trivy image --format cyclonedx myapp:latest >
   <p class="font-semibold mb-3">❓ What is CloudTrail used for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

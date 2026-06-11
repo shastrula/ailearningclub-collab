@@ -87,7 +87,30 @@ print('Mutual Information:', mutual_info)
 
 > **💡 Tip:** When calculating mutual information, ensure that the joint probability distribution is correctly normalized to sum to 1. Misnormalization can lead to incorrect mutual information values.
 
-<div class="quiz">
+Mutual information measures the dependency between two random variables. It quantifies the amount of information obtained about one random variable through the other. For two discrete random variables X and Y, the mutual information I(X;Y) is defined as I(X;Y) = H(X) + H(Y) - H(X,Y), where H(X,Y) is the joint entropy of X and Y. Higher mutual information indicates a stronger dependency.
+
+```python title="example2.py"
+import numpy as np
+from scipy.stats import entropy
+
+# Define joint probability distribution
+joint_prob = np.array([[0.1, 0.05, 0.05], [0.1, 0.3, 0.1], [0.1, 0.1, 0.2]])
+
+# Marginal probabilities
+marginal_x = np.sum(joint_prob, axis=1)
+marginal_y = np.sum(joint_prob, axis=0)
+
+# Calculate entropies
+H_X = entropy(marginal_x, base=2)
+H_Y = entropy(marginal_y, base=2)
+H_XY = entropy(joint_prob, base=2, axis=None)
+
+# Calculate mutual information
+mutual_info = H_X + H_Y - H_XY
+print('Mutual Information:', mutual_info)
+```
+
+>
   <p class="font-semibold mb-3">❓ What does higher entropy indicate about a random variable?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -111,7 +134,30 @@ print('Mutual Information:', mutual_info)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Mutual information measures the dependency between two random variables. It quantifies the amount of information obtained about one random variable through the other. For two discrete random variables X and Y, the mutual information I(X;Y) is defined as I(X;Y) = H(X) + H(Y) - H(X,Y), where H(X,Y) is the joint entropy of X and Y. Higher mutual information indicates a stronger dependency.
+
+```python title="example2.py"
+import numpy as np
+from scipy.stats import entropy
+
+# Define joint probability distribution
+joint_prob = np.array([[0.1, 0.05, 0.05], [0.1, 0.3, 0.1], [0.1, 0.1, 0.2]])
+
+# Marginal probabilities
+marginal_x = np.sum(joint_prob, axis=1)
+marginal_y = np.sum(joint_prob, axis=0)
+
+# Calculate entropies
+H_X = entropy(marginal_x, base=2)
+H_Y = entropy(marginal_y, base=2)
+H_XY = entropy(joint_prob, base=2, axis=None)
+
+# Calculate mutual information
+mutual_info = H_X + H_Y - H_XY
+print('Mutual Information:', mutual_info)
+```
+
+>
   <p class="font-semibold mb-3">❓ What does higher mutual information between two random variables indicate?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

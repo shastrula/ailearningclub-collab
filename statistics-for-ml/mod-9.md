@@ -77,7 +77,24 @@ print(f'Posterior probabilities: {posterior}')
 
 > **💡 Tip:** When performing Bayesian updating, ensure that the likelihoods are correctly calculated and that the priors are reasonable to avoid skewed results.
 
-<div class="quiz">
+Bayesian updating is the process of revising the probability of a hypothesis as new data is observed. This is done by applying Bayes' Theorem iteratively, using the posterior probability from one update as the prior for the next.
+
+```python title="example2.py"
+import numpy as np
+
+# Initial prior
+prior = np.array([0.1, 0.2, 0.3, 0.4])
+
+# Likelihood of observing data given each hypothesis
+likelihood = np.array([0.1, 0.2, 0.5, 0.2])
+
+# Normalize to get the posterior
+posterior = (prior * likelihood) / np.sum(prior * likelihood)
+
+print(f'Posterior probabilities: {posterior}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What does P(H|E) represent in Bayes' Theorem?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +118,24 @@ print(f'Posterior probabilities: {posterior}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Bayesian updating is the process of revising the probability of a hypothesis as new data is observed. This is done by applying Bayes' Theorem iteratively, using the posterior probability from one update as the prior for the next.
+
+```python title="example2.py"
+import numpy as np
+
+# Initial prior
+prior = np.array([0.1, 0.2, 0.3, 0.4])
+
+# Likelihood of observing data given each hypothesis
+likelihood = np.array([0.1, 0.2, 0.5, 0.2])
+
+# Normalize to get the posterior
+posterior = (prior * likelihood) / np.sum(prior * likelihood)
+
+print(f'Posterior probabilities: {posterior}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the purpose of Bayesian updating?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

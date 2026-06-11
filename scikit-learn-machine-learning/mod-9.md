@@ -94,7 +94,37 @@ print(grid_search.best_params_)
 
 > **💡 Tip:** Always perform cross-validation when tuning hyperparameters to avoid overfitting and ensure the model generalizes well to unseen data.
 
-<div class="quiz">
+Tuning the parameters of a Gradient Boosting model is essential for achieving optimal performance. Key parameters include `n_estimators` (number of boosting stages), `learning_rate` (shrinkage rate), and `max_depth` (maximum depth of individual trees). Proper tuning can significantly enhance the model's accuracy and generalization capability.
+
+```python title="example2.py"
+from sklearn.model_selection import GridSearchCV
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.datasets import make_classification
+
+# Generate a binary classification dataset
+X, y = make_classification(n_samples=100, n_features=4,
+                           n_informative=2, n_redundant=0,
+                           random_state=0, shuffle=False)
+
+# Define the model
+gbm = GradientBoostingClassifier()
+
+# Define the parameter grid
+param_grid = {
+    'n_estimators': [50, 100, 200],
+    'learning_rate': [0.01, 0.1, 0.2],
+    'max_depth': [1, 3, 5]
+}
+
+# Perform Grid Search
+grid_search = GridSearchCV(estimator=gbm, param_grid=param_grid, cv=3, n_jobs=-1)
+grid_search.fit(X, y)
+
+# Best parameters
+print(grid_search.best_params_)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of each new model in Gradient Boosting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,7 +148,37 @@ print(grid_search.best_params_)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Tuning the parameters of a Gradient Boosting model is essential for achieving optimal performance. Key parameters include `n_estimators` (number of boosting stages), `learning_rate` (shrinkage rate), and `max_depth` (maximum depth of individual trees). Proper tuning can significantly enhance the model's accuracy and generalization capability.
+
+```python title="example2.py"
+from sklearn.model_selection import GridSearchCV
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.datasets import make_classification
+
+# Generate a binary classification dataset
+X, y = make_classification(n_samples=100, n_features=4,
+                           n_informative=2, n_redundant=0,
+                           random_state=0, shuffle=False)
+
+# Define the model
+gbm = GradientBoostingClassifier()
+
+# Define the parameter grid
+param_grid = {
+    'n_estimators': [50, 100, 200],
+    'learning_rate': [0.01, 0.1, 0.2],
+    'max_depth': [1, 3, 5]
+}
+
+# Perform Grid Search
+grid_search = GridSearchCV(estimator=gbm, param_grid=param_grid, cv=3, n_jobs=-1)
+grid_search.fit(X, y)
+
+# Best parameters
+print(grid_search.best_params_)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which parameter controls the number of boosting stages in Gradient Boosting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

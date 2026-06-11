@@ -81,7 +81,24 @@ print(output_buffer.value.decode())
 
 > **💡 Tip:** Ensure that the llama.cpp library is compiled with the appropriate optimization flags to maximize performance. Additionally, verify that your system has sufficient RAM and CPU resources to handle the model's requirements.
 
-<div class="quiz">
+llama.cpp is a port of Facebook's LLaMA model in C/C++. It allows for efficient inference of LLMs on local hardware. By leveraging C++ optimizations, llama.cpp can achieve significant performance improvements compared to pure Python implementations. This makes it ideal for resource-constrained environments.
+
+```python title="llama_cpp_inference.py"
+import ctypes
+
+# Load the llama.cpp shared library
+lib = ctypes.CDLL('./libllama.so')
+
+# Set up the input and output buffers
+input_text = b'What is the capital of France?'
+output_buffer = ctypes.create_string_buffer(1024)
+
+# Call the inference function
+lib.inference(input_text, output_buffer, 1024)
+print(output_buffer.value.decode())
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using Ollama for LLM deployment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -105,7 +122,24 @@ print(output_buffer.value.decode())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+llama.cpp is a port of Facebook's LLaMA model in C/C++. It allows for efficient inference of LLMs on local hardware. By leveraging C++ optimizations, llama.cpp can achieve significant performance improvements compared to pure Python implementations. This makes it ideal for resource-constrained environments.
+
+```python title="llama_cpp_inference.py"
+import ctypes
+
+# Load the llama.cpp shared library
+lib = ctypes.CDLL('./libllama.so')
+
+# Set up the input and output buffers
+input_text = b'What is the capital of France?'
+output_buffer = ctypes.create_string_buffer(1024)
+
+# Call the inference function
+lib.inference(input_text, output_buffer, 1024)
+print(output_buffer.value.decode())
+```
+
+>
   <p class="font-semibold mb-3">❓ Which language is primarily used for optimizations in llama.cpp?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -88,7 +88,35 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 > **💡 Tip:** When applying LoRA or QLoRA, ensure that the rank chosen is appropriate for the model size to balance between efficiency and performance.
 
-<div class="quiz">
+QLoRA extends the LoRA technique by incorporating quantization, which further reduces memory usage and computational requirements. This makes it feasible to fine-tune very large models on devices with limited resources.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Load pre-trained model and tokenizer
+model_name = 'distilgpt2'
+model = AutoModelForCausalLM.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Define QLoRA parameters
+lora_rank = 4
+quantization_bits = 4
+
+# Apply QLoRA to the model
+for name, param in model.named_parameters():
+    if 'weight' in name:
+        param.data = torch.mm(torch.mm(param.data, torch.randn(param.size(-1), lora_rank)), torch.randn(lora_rank, param.size(-2)))
+        param.data = torch.round(param.data / 2**quantization_bits) * 2**quantization_bits
+
+# Fine-tune the model
+input_text = 'Translate English to French: Hello, how are you?'
+input_ids = tokenizer(input_text, return_tensors='pt').input_ids
+outputs = model.generate(input_ids)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using LoRA for fine-tuning large language models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -112,7 +140,35 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+QLoRA extends the LoRA technique by incorporating quantization, which further reduces memory usage and computational requirements. This makes it feasible to fine-tune very large models on devices with limited resources.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Load pre-trained model and tokenizer
+model_name = 'distilgpt2'
+model = AutoModelForCausalLM.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Define QLoRA parameters
+lora_rank = 4
+quantization_bits = 4
+
+# Apply QLoRA to the model
+for name, param in model.named_parameters():
+    if 'weight' in name:
+        param.data = torch.mm(torch.mm(param.data, torch.randn(param.size(-1), lora_rank)), torch.randn(lora_rank, param.size(-2)))
+        param.data = torch.round(param.data / 2**quantization_bits) * 2**quantization_bits
+
+# Fine-tune the model
+input_text = 'Translate English to French: Hello, how are you?'
+input_ids = tokenizer(input_text, return_tensors='pt').input_ids
+outputs = model.generate(input_ids)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+>
   <p class="font-semibold mb-3">❓ How does QLoRA differ from LoRA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

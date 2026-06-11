@@ -85,7 +85,28 @@ print(secure_response)
 
 > **💡 Tip:** Always ensure that your hardware is up-to-date and supports the latest security features to maintain the integrity of your private AI deployments.
 
-<div class="quiz">
+Deploying private AI models requires careful consideration of hardware capabilities. GPUs are often necessary for efficient model inference, and secure enclaves can be used to protect sensitive data. This section explores the necessary hardware configurations and deployment strategies to ensure data privacy.
+
+```python title="example2.py"
+import llama_cpp
+
+# Set up hardware configuration for secure deployment
+config = {
+    'gpu': 'NVIDIA GeForce RTX 3080',
+   'secure_enclave': True
+}
+
+# Initialize llama.cpp model with the configuration
+model = llama_cpp.initialize(config=config)
+
+# Process a private query
+private_query = 'sensitive_information'
+secure_response = model.query(private_query)
+
+print(secure_response)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a critical step in ensuring data privacy when using local LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -109,7 +130,28 @@ print(secure_response)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Deploying private AI models requires careful consideration of hardware capabilities. GPUs are often necessary for efficient model inference, and secure enclaves can be used to protect sensitive data. This section explores the necessary hardware configurations and deployment strategies to ensure data privacy.
+
+```python title="example2.py"
+import llama_cpp
+
+# Set up hardware configuration for secure deployment
+config = {
+    'gpu': 'NVIDIA GeForce RTX 3080',
+   'secure_enclave': True
+}
+
+# Initialize llama.cpp model with the configuration
+model = llama_cpp.initialize(config=config)
+
+# Process a private query
+private_query = 'sensitive_information'
+secure_response = model.query(private_query)
+
+print(secure_response)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which hardware component is often necessary for efficient model inference in local LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

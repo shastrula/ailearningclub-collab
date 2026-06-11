@@ -96,7 +96,39 @@ print(f'Best: {grid_result.best_score_} using {grid_result.best_params_}')
 
 > **💡 Tip:** When performing hyperparameter tuning, it's important to use a validation set to evaluate the performance of different hyperparameter combinations. This helps prevent overfitting to the training data.
 
-<div class="quiz">
+There are several techniques for hyperparameter tuning, including Grid Search, Random Search, and Bayesian Optimization. These methods systematically explore different combinations of hyperparameters to find the optimal settings for your model.
+
+```python title="example2.py"
+from sklearn.model_selection import GridSearchCV
+from tensorflow.keras.wrappers.scikit_learn import KerasClassifier
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+# Define a function to create a model
+def create_model(learning_rate=0.01):
+    model = Sequential([
+        Dense(64, activation='relu', input_shape=(784,)),
+        Dense(10, activation='softmax')
+    ])
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate),
+                  loss='sparse_categorical_crossentropy',
+                  metrics=['accuracy'])
+    return model
+
+# Create a KerasClassifier
+model = KerasClassifier(build_fn=create_model, verbose=0)
+
+# Define the parameter grid
+param_grid = {'learning_rate': [0.01, 0.001, 0.0001]}
+
+# Perform Grid Search
+grid = GridSearchCV(estimator=model, param_grid=param_grid, cv=3)
+grid_result = grid.fit(X_train, y_train)
+
+print(f'Best: {grid_result.best_score_} using {grid_result.best_params_}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a hyperparameter in the context of neural networks?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,7 +152,39 @@ print(f'Best: {grid_result.best_score_} using {grid_result.best_params_}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+There are several techniques for hyperparameter tuning, including Grid Search, Random Search, and Bayesian Optimization. These methods systematically explore different combinations of hyperparameters to find the optimal settings for your model.
+
+```python title="example2.py"
+from sklearn.model_selection import GridSearchCV
+from tensorflow.keras.wrappers.scikit_learn import KerasClassifier
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+# Define a function to create a model
+def create_model(learning_rate=0.01):
+    model = Sequential([
+        Dense(64, activation='relu', input_shape=(784,)),
+        Dense(10, activation='softmax')
+    ])
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate),
+                  loss='sparse_categorical_crossentropy',
+                  metrics=['accuracy'])
+    return model
+
+# Create a KerasClassifier
+model = KerasClassifier(build_fn=create_model, verbose=0)
+
+# Define the parameter grid
+param_grid = {'learning_rate': [0.01, 0.001, 0.0001]}
+
+# Perform Grid Search
+grid = GridSearchCV(estimator=model, param_grid=param_grid, cv=3)
+grid_result = grid.fit(X_train, y_train)
+
+print(f'Best: {grid_result.best_score_} using {grid_result.best_params_}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which technique involves exploring a predefined set of hyperparameter combinations?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

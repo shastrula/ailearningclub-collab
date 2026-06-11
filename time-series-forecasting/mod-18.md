@@ -89,7 +89,32 @@ print(forecast)
 
 > **💡 Tip:** When using LSTMs for time series forecasting, ensure your data is properly scaled and normalized to improve model performance and convergence.
 
-<div class="quiz">
+Long Short-Term Memory (LSTM) networks are a type of recurrent neural network capable of learning order dependence in sequence prediction problems. LSTMs are particularly effective for multivariate time series forecasting as they can capture complex temporal dependencies and interactions between multiple variables.
+
+```python title="example2.py"
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
+
+# Sample data
+data = np.random.randn(100, 2, 1)  # 100 samples, 2 features, 1 time step
+
+# Define LSTM model
+model = Sequential()
+model.add(LSTM(50, activation='relu', input_shape=(2, 1)))
+model.add(Dense(1))
+model.compile(optimizer='adam', loss='mse')
+
+# Train model
+model.fit(data[:80], np.random.randn(80, 1), epochs=200, verbose=0)
+
+# Forecast
+forecast = model.predict(data[-20:])
+print(forecast)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary use of VAR models in time series forecasting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -113,7 +138,32 @@ print(forecast)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Long Short-Term Memory (LSTM) networks are a type of recurrent neural network capable of learning order dependence in sequence prediction problems. LSTMs are particularly effective for multivariate time series forecasting as they can capture complex temporal dependencies and interactions between multiple variables.
+
+```python title="example2.py"
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
+
+# Sample data
+data = np.random.randn(100, 2, 1)  # 100 samples, 2 features, 1 time step
+
+# Define LSTM model
+model = Sequential()
+model.add(LSTM(50, activation='relu', input_shape=(2, 1)))
+model.add(Dense(1))
+model.compile(optimizer='adam', loss='mse')
+
+# Train model
+model.fit(data[:80], np.random.randn(80, 1), epochs=200, verbose=0)
+
+# Forecast
+forecast = model.predict(data[-20:])
+print(forecast)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which neural network architecture is effective for capturing complex temporal dependencies in multivariate time series forecasting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

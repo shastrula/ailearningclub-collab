@@ -90,7 +90,33 @@ print(f'Different topics:  {cosine(emb1, emb3):.3f}')   # ~0.18
 
 > **💡 Tip:** Embeddings are the foundation of RAG systems. Once you can turn text into vectors, you can build semantic search, recommendation systems, and document Q&A.
 
-<div class="quiz">
+```python title="embeddings.py"
+from transformers import AutoTokenizer, AutoModel
+import torch
+
+tokenizer = AutoTokenizer.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
+model = AutoModel.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
+
+def get_embedding(text):
+    inputs = tokenizer(text, return_tensors='pt', truncation=True, padding=True)
+    with torch.no_grad():
+        outputs = model(**inputs)
+    # Mean pool the token embeddings
+    return outputs.last_hidden_state.mean(dim=1).squeeze().numpy()
+
+emb1 = get_embedding('California house prices are high')
+emb2 = get_embedding('Real estate in California is expensive')
+emb3 = get_embedding('I enjoy playing football')
+
+# Cosine similarity
+from numpy.linalg import norm
+def cosine(a, b): return (a @ b) / (norm(a) * norm(b))
+
+print(f'Similar sentences: {cosine(emb1, emb2):.3f}')   # ~0.92
+print(f'Different topics:  {cosine(emb1, emb3):.3f}')   # ~0.18
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a text embedding?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

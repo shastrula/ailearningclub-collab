@@ -89,7 +89,32 @@ public class DataAccessLayer {
 
 > **💡 Tip:** Always ensure that database connections are properly closed to avoid resource leaks. Using try-with-resources is a good practice to automatically close resources.
 
-<div class="quiz">
+The data access layer (DAL) is responsible for interacting with the database. It abstracts the database operations and provides a clean interface for the business logic layer to access data. Using a DAL helps in maintaining data integrity and separation of concerns, making the application more modular and easier to manage.
+
+```java title="example2.java"
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class DataAccessLayer {
+    public String getData(String query) {
+        String result = "";
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb", "user", "password")) {
+            PreparedStatement stmt = conn.prepareStatement(query);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                result += rs.getString("column_name") + " ";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of the Service Layer in an enterprise application?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -113,7 +138,32 @@ public class DataAccessLayer {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The data access layer (DAL) is responsible for interacting with the database. It abstracts the database operations and provides a clean interface for the business logic layer to access data. Using a DAL helps in maintaining data integrity and separation of concerns, making the application more modular and easier to manage.
+
+```java title="example2.java"
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class DataAccessLayer {
+    public String getData(String query) {
+        String result = "";
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb", "user", "password")) {
+            PreparedStatement stmt = conn.prepareStatement(query);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                result += rs.getString("column_name") + " ";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Which of the following is a benefit of using a Data Access Layer?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

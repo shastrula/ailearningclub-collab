@@ -80,7 +80,23 @@ print(f'P-value: {p_value}')
 
 > **💡 Tip:** Always check the assumptions of your data before choosing between parametric and non-parametric tests. Misapplying these tests can lead to incorrect conclusions.
 
-<div class="quiz">
+Non-parametric tests do not assume a specific distribution for the data. They are useful when the data does not meet the assumptions of parametric tests, such as normality. Examples include the Mann-Whitney U test and the Kruskal-Wallis test.
+
+```python title="example2.py"
+import scipy.stats as stats
+
+# Sample data
+data1 = [5, 7, 8, 6, 7]
+data2 = [6, 8, 9, 7, 8]
+
+# Perform Mann-Whitney U test
+u_stat, p_value = stats.mannwhitneyu(data1, data2)
+
+print(f'U-statistic: {u_stat}')
+print(f'P-value: {p_value}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which test assumes the data follows a specific distribution?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -104,7 +120,23 @@ print(f'P-value: {p_value}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Non-parametric tests do not assume a specific distribution for the data. They are useful when the data does not meet the assumptions of parametric tests, such as normality. Examples include the Mann-Whitney U test and the Kruskal-Wallis test.
+
+```python title="example2.py"
+import scipy.stats as stats
+
+# Sample data
+data1 = [5, 7, 8, 6, 7]
+data2 = [6, 8, 9, 7, 8]
+
+# Perform Mann-Whitney U test
+u_stat, p_value = stats.mannwhitneyu(data1, data2)
+
+print(f'U-statistic: {u_stat}')
+print(f'P-value: {p_value}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which test does not assume a specific distribution for the data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

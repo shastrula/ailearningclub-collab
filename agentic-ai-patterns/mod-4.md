@@ -82,7 +82,25 @@ print(output)
 
 > **💡 Tip:** When integrating tools, always test for compatibility and performance under various conditions to ensure reliability and efficiency.
 
-<div class="quiz">
+Effective tool integration involves selecting the appropriate tools based on the task requirements, ensuring compatibility with the agent's architecture, and implementing robust error handling. It is also important to monitor tool performance and update integrations as needed to maintain optimal functionality.
+
+```python title="example2.py"
+import subprocess
+
+# Define a function to use a local tool (e.g., a script or command-line tool)
+def run_local_tool(command):
+    try:
+        result = subprocess.run(command, shell=True, capture_output=True, text=True)
+        return result.stdout
+    except Exception as e:
+        return str(e)
+
+# Example usage
+output = run_local_tool('echo Hello, World!')
+print(output)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of tool use in Agentic AI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +124,25 @@ print(output)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Effective tool integration involves selecting the appropriate tools based on the task requirements, ensuring compatibility with the agent's architecture, and implementing robust error handling. It is also important to monitor tool performance and update integrations as needed to maintain optimal functionality.
+
+```python title="example2.py"
+import subprocess
+
+# Define a function to use a local tool (e.g., a script or command-line tool)
+def run_local_tool(command):
+    try:
+        result = subprocess.run(command, shell=True, capture_output=True, text=True)
+        return result.stdout
+    except Exception as e:
+        return str(e)
+
+# Example usage
+output = run_local_tool('echo Hello, World!')
+print(output)
+```
+
+>
   <p class="font-semibold mb-3">❓ What should be considered when integrating a new tool with an Agentic AI system?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

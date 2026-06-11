@@ -83,7 +83,26 @@ print('Model saved')
 
 > **💡 Tip:** Always ensure that your Google Drive is mounted before attempting to save or load files to avoid path-related errors.
 
-<div class="quiz">
+Saving and loading models in Google Colab is essential for maintaining progress and ensuring reproducibility. This involves understanding how to use Google Drive for persistent storage and how to manage file paths effectively.
+
+```python title="example2.py"
+# Import necessary libraries
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from google.colab import drive
+
+# Mount Google Drive
+drive.mount('/content/drive')
+
+# Create a simple model
+model = Sequential([Dense(10, input_shape=(5,), activation='relu')])
+
+# Save the model
+model.save('/content/drive/My Drive/Colab Notebooks/my_model.h5')
+print('Model saved')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of leveraging GPU acceleration in Google Colab?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -107,7 +126,26 @@ print('Model saved')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Saving and loading models in Google Colab is essential for maintaining progress and ensuring reproducibility. This involves understanding how to use Google Drive for persistent storage and how to manage file paths effectively.
+
+```python title="example2.py"
+# Import necessary libraries
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from google.colab import drive
+
+# Mount Google Drive
+drive.mount('/content/drive')
+
+# Create a simple model
+model = Sequential([Dense(10, input_shape=(5,), activation='relu')])
+
+# Save the model
+model.save('/content/drive/My Drive/Colab Notebooks/my_model.h5')
+print('Model saved')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which of the following is a correct way to save a model in Google Colab?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

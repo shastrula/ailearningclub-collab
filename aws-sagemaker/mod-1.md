@@ -91,7 +91,7 @@ print("SageMaker is ready for ML workflows")
 
 ## Quiz
 
-<div class="quiz">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of AWS SageMaker?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

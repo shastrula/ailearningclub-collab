@@ -95,7 +95,38 @@ history = model.fit(
 
 > **💡 Tip:** Ensure your dataset is balanced to avoid bias in the model. Also, monitor the training and validation accuracy to detect overfitting early.
 
-<div class="quiz">
+Convolutional Neural Networks (CNNs) are the state-of-the-art models for image classification tasks. They automatically and adaptively learn spatial hierarchies of features from input images. In this section, we will build a simple CNN using Keras and train it on our preprocessed data.
+
+```python title="example2.py"
+from tensorflow.keras import layers, models
+
+# Build the CNN model
+model = models.Sequential()
+model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(150, 150, 3)))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(128, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Flatten())
+model.add(layers.Dense(512, activation='relu'))
+model.add(layers.Dense(1, activation='sigmoid'))
+
+# Compile the model
+model.compile(optimizer='adam',
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+
+# Train the model
+history = model.fit(
+    train_generator,
+    steps_per_epoch=100,
+    epochs=10,
+    validation_data=validation_generator,
+    validation_steps=50)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the purpose of the ImageDataGenerator in TensorFlow?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -119,7 +150,38 @@ history = model.fit(
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Convolutional Neural Networks (CNNs) are the state-of-the-art models for image classification tasks. They automatically and adaptively learn spatial hierarchies of features from input images. In this section, we will build a simple CNN using Keras and train it on our preprocessed data.
+
+```python title="example2.py"
+from tensorflow.keras import layers, models
+
+# Build the CNN model
+model = models.Sequential()
+model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(150, 150, 3)))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(128, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Flatten())
+model.add(layers.Dense(512, activation='relu'))
+model.add(layers.Dense(1, activation='sigmoid'))
+
+# Compile the model
+model.compile(optimizer='adam',
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+
+# Train the model
+history = model.fit(
+    train_generator,
+    steps_per_epoch=100,
+    epochs=10,
+    validation_data=validation_generator,
+    validation_steps=50)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which layer is typically used at the end of a CNN for binary classification?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

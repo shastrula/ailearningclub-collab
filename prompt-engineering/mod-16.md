@@ -73,7 +73,23 @@ print(result[0]['generated_text'])
 
 > **💡 Tip:** When using Chain-of-Thought prompting, ensure that the intermediate steps are logically coherent and relevant to the final answer to improve the model's performance.
 
-<div class="quiz">
+Chain-of-Thought prompting encourages models to provide intermediate reasoning steps before arriving at a final answer, enhancing the model's ability to solve complex problems. ReAct prompting combines reasoning and action, allowing models to perform tasks that require external information or actions.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Text generation pipeline
+generator = pipeline("text-generation")
+
+# Example input using CoT
+prompt = "What is the capital of France? Let's think step by step: France is a country in Europe. The capital of France is Paris."
+
+# Generate text
+result = generator(prompt, max_length=50)
+print(result[0]['generated_text'])
+```
+
+>
   <p class="font-semibold mb-3">❓ Which technique involves providing a model with a task it has never seen before, without any examples?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -97,7 +113,23 @@ print(result[0]['generated_text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Chain-of-Thought prompting encourages models to provide intermediate reasoning steps before arriving at a final answer, enhancing the model's ability to solve complex problems. ReAct prompting combines reasoning and action, allowing models to perform tasks that require external information or actions.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Text generation pipeline
+generator = pipeline("text-generation")
+
+# Example input using CoT
+prompt = "What is the capital of France? Let's think step by step: France is a country in Europe. The capital of France is Paris."
+
+# Generate text
+result = generator(prompt, max_length=50)
+print(result[0]['generated_text'])
+```
+
+>
   <p class="font-semibold mb-3">❓ What does CoT prompting encourage models to do before arriving at a final answer?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

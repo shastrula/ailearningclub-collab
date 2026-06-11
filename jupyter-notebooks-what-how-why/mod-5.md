@@ -93,7 +93,27 @@ Beyond basic formatting, Markdown supports more advanced features like lists, li
 
 > **💡 Tip:** When writing Markdown, always ensure that your cells are properly formatted to avoid rendering issues. For example, make sure there are no extra spaces before Markdown symbols like '#' for headers.
 
-<div class="quiz">
+Beyond basic formatting, Markdown supports more advanced features like lists, links, images, and code blocks. Lists can be unordered (using '-' or '*') or ordered (using numbers). Links and images can be added using the syntax `[text](URL)` and `![alt text](URL)` respectively. Code blocks can be added using triple backticks (```).
+
+```python title="example2.py"
+# Unordered List
+#- Item 1
+#- Item 2
+#
+# Ordered List
+#1. First Item
+#2. Second Item
+
+# Link
+#This is a [link](https://www.example.com)
+
+# Image
+#![Image](https://www.example.com/image.jpg)
+
+# Code Block
+#
+
+>
   <p class="font-semibold mb-3">❓ What is the correct syntax to create a header 1 in Markdown?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,7 +137,27 @@ Beyond basic formatting, Markdown supports more advanced features like lists, li
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Beyond basic formatting, Markdown supports more advanced features like lists, links, images, and code blocks. Lists can be unordered (using '-' or '*') or ordered (using numbers). Links and images can be added using the syntax `[text](URL)` and `![alt text](URL)` respectively. Code blocks can be added using triple backticks (```).
+
+```python title="example2.py"
+# Unordered List
+#- Item 1
+#- Item 2
+#
+# Ordered List
+#1. First Item
+#2. Second Item
+
+# Link
+#This is a [link](https://www.example.com)
+
+# Image
+#![Image](https://www.example.com/image.jpg)
+
+# Code Block
+#
+
+>
   <p class="font-semibold mb-3">❓ How do you create an unordered list item in Markdown?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

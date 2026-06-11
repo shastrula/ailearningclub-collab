@@ -162,7 +162,7 @@ print(f"R²: {r_squared}")
 
 ## Quiz
 
-<div class="quiz">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does np.std() compute?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

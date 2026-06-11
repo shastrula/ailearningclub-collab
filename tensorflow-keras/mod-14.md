@@ -94,7 +94,37 @@ history = model.fit(
 
 > **💡 Tip:** Always ensure your input shape matches the expected input shape of your CNN model. Mismatches can lead to errors during training.
 
-<div class="quiz">
+CNNs are the go-to architecture for image classification tasks. They automatically detect important features without any feature engineering. TensorFlow and Keras make it straightforward to build and train CNNs.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+# Build a CNN model
+model = models.Sequential()
+model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(150, 150, 3)))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(128, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Flatten())
+model.add(layers.Dense(512, activation='relu'))
+model.add(layers.Dense(1, activation='sigmoid'))
+
+# Compile the model
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Train the model
+history = model.fit(
+    generator,
+    steps_per_epoch=100,  # Number of batches per epoch
+    epochs=10,
+    validation_data=val_generator,  # Validation data generator
+    validation_steps=50)  # Number of validation batches
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the purpose of normalizing pixel values in image preprocessing?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,7 +148,37 @@ history = model.fit(
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+CNNs are the go-to architecture for image classification tasks. They automatically detect important features without any feature engineering. TensorFlow and Keras make it straightforward to build and train CNNs.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+# Build a CNN model
+model = models.Sequential()
+model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(150, 150, 3)))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(128, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Flatten())
+model.add(layers.Dense(512, activation='relu'))
+model.add(layers.Dense(1, activation='sigmoid'))
+
+# Compile the model
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Train the model
+history = model.fit(
+    generator,
+    steps_per_epoch=100,  # Number of batches per epoch
+    epochs=10,
+    validation_data=val_generator,  # Validation data generator
+    validation_steps=50)  # Number of validation batches
+```
+
+>
   <p class="font-semibold mb-3">❓ Which layer is typically used after a Conv2D layer in a CNN to reduce spatial dimensions?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

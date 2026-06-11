@@ -88,7 +88,35 @@ print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
 
 > **💡 Tip:** When using Prophet, ensure your date column is named 'ds' and your target variable is named 'y'. This is a requirement for the library to function correctly.
 
-<div class="quiz">
+Prophet can incorporate holidays and seasonal effects into its forecasts. By specifying holidays, you can improve the accuracy of your forecasts, especially for data that is influenced by specific events or days of the year.
+
+```python title="example2.py"
+import pandas as pd
+from fbprophet import Prophet
+
+# Sample data
+df = pd.DataFrame({'ds': pd.date_range(start='2020-01-01', periods=100, freq='D'), 'y': range(100)})
+
+# Define holidays
+holidays = pd.DataFrame({'holiday': 'new_year', 'ds': pd.to_datetime(['2020-01-01'])})
+
+# Initialize the model with holidays
+model = Prophet(holidays=holidays)
+
+# Fit the model
+model.fit(df)
+
+# Create future dataframe
+future = model.make_future_dataframe(periods=30)
+
+# Make predictions
+forecast = model.predict(future)
+
+# Print the forecast
+print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using Prophet for time series forecasting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -112,7 +140,35 @@ print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Prophet can incorporate holidays and seasonal effects into its forecasts. By specifying holidays, you can improve the accuracy of your forecasts, especially for data that is influenced by specific events or days of the year.
+
+```python title="example2.py"
+import pandas as pd
+from fbprophet import Prophet
+
+# Sample data
+df = pd.DataFrame({'ds': pd.date_range(start='2020-01-01', periods=100, freq='D'), 'y': range(100)})
+
+# Define holidays
+holidays = pd.DataFrame({'holiday': 'new_year', 'ds': pd.to_datetime(['2020-01-01'])})
+
+# Initialize the model with holidays
+model = Prophet(holidays=holidays)
+
+# Fit the model
+model.fit(df)
+
+# Create future dataframe
+future = model.make_future_dataframe(periods=30)
+
+# Make predictions
+forecast = model.predict(future)
+
+# Print the forecast
+print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
+```
+
+>
   <p class="font-semibold mb-3">❓ Which of the following is a required column name in your dataset when using Prophet?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

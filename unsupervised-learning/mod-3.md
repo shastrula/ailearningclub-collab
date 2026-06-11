@@ -77,7 +77,27 @@ print('Silhouette Score:', score)
 
 > **💡 Tip:** Always experiment with different initialization methods and evaluate the clustering performance using metrics like the Silhouette Score to ensure the best possible results.
 
-<div class="quiz">
+Evaluating the performance of K-Means clustering is essential to ensure the quality of the clusters. Metrics like the Silhouette Score can be used to measure how similar an object is to its own cluster compared to other clusters. Higher Silhouette Scores indicate better-defined clusters.
+
+```python title="example2.py"
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+import numpy as np
+
+# Generate sample data
+X = np.array([[1, 2], [1, 4], [1, 0],
+               [4, 2], [4, 4], [4, 0]])
+
+# Apply KMeans
+kmeans = KMeans(n_clusters=2, random_state=0)
+kmeans.fit(X)
+
+# Calculate Silhouette Score
+score = silhouette_score(X, kmeans.labels_)
+print('Silhouette Score:', score)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which initialization technique is used to improve the performance of K-Means clustering by smartly selecting initial centroids?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +121,27 @@ print('Silhouette Score:', score)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Evaluating the performance of K-Means clustering is essential to ensure the quality of the clusters. Metrics like the Silhouette Score can be used to measure how similar an object is to its own cluster compared to other clusters. Higher Silhouette Scores indicate better-defined clusters.
+
+```python title="example2.py"
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+import numpy as np
+
+# Generate sample data
+X = np.array([[1, 2], [1, 4], [1, 0],
+               [4, 2], [4, 4], [4, 0]])
+
+# Apply KMeans
+kmeans = KMeans(n_clusters=2, random_state=0)
+kmeans.fit(X)
+
+# Calculate Silhouette Score
+score = silhouette_score(X, kmeans.labels_)
+print('Silhouette Score:', score)
+```
+
+>
   <p class="font-semibold mb-3">❓ What metric is used to evaluate the performance of K-Means clustering by measuring how similar an object is to its own cluster compared to other clusters?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

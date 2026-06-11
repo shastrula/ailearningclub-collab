@@ -195,7 +195,9 @@ for result in response['retrievalResults']:
 
 ---
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the main problem that RAG solves?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -219,7 +221,9 @@ for result in response['retrievalResults']:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of document chunking?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -243,7 +247,9 @@ for result in response['retrievalResults']:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does an embedding represent?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -267,7 +273,9 @@ for result in response['retrievalResults']:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a typical optimal chunk size?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

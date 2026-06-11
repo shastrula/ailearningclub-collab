@@ -85,7 +85,28 @@ print(f'95% Confidence Interval: {confidence_interval}')
 
 > **💡 Tip:** When interpreting confidence intervals, remember that they provide a range of plausible values for the parameter, not a probability that the parameter lies within the interval.
 
-<div class="quiz">
+A confidence interval provides a range of values which is likely to contain the population parameter with a certain level of confidence. It is calculated from the observed data and gives an estimated range within which the true parameter lies. For example, a 95% confidence interval means that if we were to take 100 different samples and compute a 95% confidence interval for each sample, then approximately 95 of the 100 confidence intervals will contain the true mean value.
+
+```python title="example2.py"
+import numpy as np
+from scipy import stats
+
+# Example: Calculating a 95% confidence interval for the mean
+sample_data = np.random.normal(loc=100, scale=15, size=30)
+
+# Calculate the mean and standard deviation
+sample_mean = np.mean(sample_data)
+sample_std_dev = np.std(sample_data, ddof=1)
+
+# Calculate the standard error
+standard_error = sample_std_dev / np.sqrt(len(sample_data))
+
+# Calculate the confidence interval
+confidence_interval = stats.t.interval(0.95, len(sample_data)-1, loc=sample_mean, scale=standard_error)
+print(f'95% Confidence Interval: {confidence_interval}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What does a P-value less than 0.05 typically indicate?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -109,7 +130,28 @@ print(f'95% Confidence Interval: {confidence_interval}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+A confidence interval provides a range of values which is likely to contain the population parameter with a certain level of confidence. It is calculated from the observed data and gives an estimated range within which the true parameter lies. For example, a 95% confidence interval means that if we were to take 100 different samples and compute a 95% confidence interval for each sample, then approximately 95 of the 100 confidence intervals will contain the true mean value.
+
+```python title="example2.py"
+import numpy as np
+from scipy import stats
+
+# Example: Calculating a 95% confidence interval for the mean
+sample_data = np.random.normal(loc=100, scale=15, size=30)
+
+# Calculate the mean and standard deviation
+sample_mean = np.mean(sample_data)
+sample_std_dev = np.std(sample_data, ddof=1)
+
+# Calculate the standard error
+standard_error = sample_std_dev / np.sqrt(len(sample_data))
+
+# Calculate the confidence interval
+confidence_interval = stats.t.interval(0.95, len(sample_data)-1, loc=sample_mean, scale=standard_error)
+print(f'95% Confidence Interval: {confidence_interval}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What does a 95% confidence interval represent?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -96,7 +96,7 @@ lambda_client.update_function_code(
 
 ## Quiz
 
-<div class="quiz">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is AWS Lambda?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

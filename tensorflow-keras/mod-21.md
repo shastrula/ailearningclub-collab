@@ -88,7 +88,31 @@ model.fit(train, epochs=50, batch_size=32)
 
 > **💡 Tip:** Ensure your time series data is stationary before feeding it into the LSTM model. Non-stationary data can lead to poor model performance.
 
-<div class="quiz">
+Once the data is preprocessed, we can build a time series forecasting model using TensorFlow and Keras. We will use a simple LSTM (Long Short-Term Memory) model for this purpose. LSTMs are a type of recurrent neural network (RNN) that can learn long-term dependencies, making them suitable for time series data.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
+
+# Define the LSTM model
+model = Sequential()
+model.add(LSTM(50, return_sequences=True, input_shape=(train.shape[1], 1)))
+model.add(LSTM(50))
+model.add(Dense(1))
+
+# Compile the model
+model.compile(optimizer='adam', loss='mean_squared_error')
+
+# Reshape data for LSTM
+train = np.reshape(train, (train.shape[0], train.shape[1], 1))
+test = np.reshape(test, (test.shape[0], test.shape[1], 1))
+
+# Fit the model
+model.fit(train, epochs=50, batch_size=32)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of preprocessing time series data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -112,7 +136,31 @@ model.fit(train, epochs=50, batch_size=32)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Once the data is preprocessed, we can build a time series forecasting model using TensorFlow and Keras. We will use a simple LSTM (Long Short-Term Memory) model for this purpose. LSTMs are a type of recurrent neural network (RNN) that can learn long-term dependencies, making them suitable for time series data.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
+
+# Define the LSTM model
+model = Sequential()
+model.add(LSTM(50, return_sequences=True, input_shape=(train.shape[1], 1)))
+model.add(LSTM(50))
+model.add(Dense(1))
+
+# Compile the model
+model.compile(optimizer='adam', loss='mean_squared_error')
+
+# Reshape data for LSTM
+train = np.reshape(train, (train.shape[0], train.shape[1], 1))
+test = np.reshape(test, (test.shape[0], test.shape[1], 1))
+
+# Fit the model
+model.fit(train, epochs=50, batch_size=32)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which type of neural network is commonly used for time series forecasting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

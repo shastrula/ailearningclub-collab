@@ -150,7 +150,7 @@ print(f"π ≈ {pi_estimate}")  # ≈ 3.14159
 
 ## Quiz
 
-<div class="quiz">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does np.random.randn() generate?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -79,7 +79,22 @@ pip install tensorflow
 
 > **💡 Tip:** Always activate your virtual environment before starting your machine learning project to ensure that the correct versions of libraries are used.
 
-<div class="quiz">
+Using a virtual environment is a best practice for Python development, as it allows you to manage dependencies for different projects separately. This section will guide you through creating a virtual environment using venv, activating it, and installing TensorFlow and Keras within this isolated environment.
+
+```python title="setup_virtual_environment.sh"
+#!/bin/bash
+
+# Create a virtual environment
+python3 -m venv tf_env
+
+# Activate the virtual environment
+source tf_env/bin/activate
+
+# Install TensorFlow and Keras
+pip install tensorflow
+```
+
+>
   <p class="font-semibold mb-3">❓ Which command is used to verify the installation of TensorFlow?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -103,7 +118,22 @@ pip install tensorflow
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Using a virtual environment is a best practice for Python development, as it allows you to manage dependencies for different projects separately. This section will guide you through creating a virtual environment using venv, activating it, and installing TensorFlow and Keras within this isolated environment.
+
+```python title="setup_virtual_environment.sh"
+#!/bin/bash
+
+# Create a virtual environment
+python3 -m venv tf_env
+
+# Activate the virtual environment
+source tf_env/bin/activate
+
+# Install TensorFlow and Keras
+pip install tensorflow
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using a virtual environment in Python development?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

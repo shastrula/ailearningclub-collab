@@ -89,7 +89,39 @@ print(f'Feature Importances: {importances}')
 
 > **💡 Tip:** When using ensemble methods like Bagging with Random Forests, ensure that the base estimator is well-tuned to avoid redundant complexity and potential overfitting.
 
-<div class="quiz">
+Feature importance helps identify which features contribute most to the predictive power of the model. Random Forests provide a built-in method to compute feature importances. Additionally, ensemble methods like Bagging and Boosting can be combined with Random Forests to further enhance performance. These techniques help in reducing overfitting and improving generalization.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier, BaggingClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Split the data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Define the base Random Forest model
+rf = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Apply Bagging
+bagging = BaggingClassifier(base_estimator=rf, n_estimators=10, random_state=42)
+bagging.fit(X_train, y_train)
+
+# Predict and evaluate
+y_pred = bagging.predict(X_test)
+print(f'Accuracy: {accuracy_score(y_test, y_pred)}')
+
+# Feature importance
+importances = rf.feature_importances_
+print(f'Feature Importances: {importances}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which hyperparameter is crucial for controlling the depth of individual trees in a Random Forest?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -113,7 +145,39 @@ print(f'Feature Importances: {importances}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Feature importance helps identify which features contribute most to the predictive power of the model. Random Forests provide a built-in method to compute feature importances. Additionally, ensemble methods like Bagging and Boosting can be combined with Random Forests to further enhance performance. These techniques help in reducing overfitting and improving generalization.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier, BaggingClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Split the data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Define the base Random Forest model
+rf = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Apply Bagging
+bagging = BaggingClassifier(base_estimator=rf, n_estimators=10, random_state=42)
+bagging.fit(X_train, y_train)
+
+# Predict and evaluate
+y_pred = bagging.predict(X_test)
+print(f'Accuracy: {accuracy_score(y_test, y_pred)}')
+
+# Feature importance
+importances = rf.feature_importances_
+print(f'Feature Importances: {importances}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using Bagging with Random Forests?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -111,7 +111,54 @@ print(ensemble_prediction)
 
 > **💡 Tip:** When stacking models, ensure that the input data is appropriately preprocessed and scaled for each model to avoid discrepancies in predictions.
 
-<div class="quiz">
+Another powerful ensemble approach is stacking deep learning models like LSTM (Long Short-Term Memory) and Transformers. LSTMs are great for capturing long-term dependencies, while Transformers excel at handling complex patterns and relationships in the data. Stacking these models can lead to highly accurate and robust forecasts.
+
+```python title="example2.py"
+import numpy as np
+import tensorflow as tf
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+
+# Sample time series data
+data = np.random.randn(100).cumsum()
+
+# LSTM model
+model_lstm = tf.keras.Sequential([
+    tf.keras.layers.LSTM(50, activation='relu', input_shape=(10, 1)),
+    tf.keras.layers.Dense(1)
+])
+model_lstm.compile(optimizer='adam', loss='mse')
+
+# Prepare data for LSTM
+X, y = [], []
+for i in range(len(data)-10):
+    X.append(data[i:i+10])
+    y.append(data[i+10])
+X, y = np.array(X), np.array(y)
+X = X.reshape((X.shape[0], X.shape[1], 1))
+
+# Fit LSTM model
+model_lstm.fit(X, y, epochs=200, verbose=0)
+
+# Transformer model
+tokenizer = AutoTokenizer.from_pretrained('t5-small')
+model_transformer = AutoModelForSeq2SeqLM.from_pretrained('t5-small')
+
+# Prepare input for Transformer
+input_text = ' '.join(map(str, data))
+input_ids = tokenizer.encode(input_text, return_tensors='pt')
+
+# Generate prediction with Transformer
+outputs = model_transformer.generate(input_ids, max_length=110)
+prediction_transformer = tokenizer.decode(outputs[0], skip_special_tokens=True)
+prediction_transformer = np.array(list(map(float, prediction_transformer.split())))
+
+# Ensemble prediction
+ensemble_prediction = (model_lstm.predict(X[-1].reshape(1, 10, 1)) + prediction_transformer[-10:]) / 2
+print(ensemble_prediction)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of combining ARIMA and Prophet models in time series forecasting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -135,7 +182,54 @@ print(ensemble_prediction)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Another powerful ensemble approach is stacking deep learning models like LSTM (Long Short-Term Memory) and Transformers. LSTMs are great for capturing long-term dependencies, while Transformers excel at handling complex patterns and relationships in the data. Stacking these models can lead to highly accurate and robust forecasts.
+
+```python title="example2.py"
+import numpy as np
+import tensorflow as tf
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+
+# Sample time series data
+data = np.random.randn(100).cumsum()
+
+# LSTM model
+model_lstm = tf.keras.Sequential([
+    tf.keras.layers.LSTM(50, activation='relu', input_shape=(10, 1)),
+    tf.keras.layers.Dense(1)
+])
+model_lstm.compile(optimizer='adam', loss='mse')
+
+# Prepare data for LSTM
+X, y = [], []
+for i in range(len(data)-10):
+    X.append(data[i:i+10])
+    y.append(data[i+10])
+X, y = np.array(X), np.array(y)
+X = X.reshape((X.shape[0], X.shape[1], 1))
+
+# Fit LSTM model
+model_lstm.fit(X, y, epochs=200, verbose=0)
+
+# Transformer model
+tokenizer = AutoTokenizer.from_pretrained('t5-small')
+model_transformer = AutoModelForSeq2SeqLM.from_pretrained('t5-small')
+
+# Prepare input for Transformer
+input_text = ' '.join(map(str, data))
+input_ids = tokenizer.encode(input_text, return_tensors='pt')
+
+# Generate prediction with Transformer
+outputs = model_transformer.generate(input_ids, max_length=110)
+prediction_transformer = tokenizer.decode(outputs[0], skip_special_tokens=True)
+prediction_transformer = np.array(list(map(float, prediction_transformer.split())))
+
+# Ensemble prediction
+ensemble_prediction = (model_lstm.predict(X[-1].reshape(1, 10, 1)) + prediction_transformer[-10:]) / 2
+print(ensemble_prediction)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which deep learning model is particularly effective at capturing long-term dependencies in time series data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

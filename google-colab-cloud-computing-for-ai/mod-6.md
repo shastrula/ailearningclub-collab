@@ -77,7 +77,20 @@ df.to_csv('/content/drive/My Drive/data/processed_data.csv', index=False)
 
 > **💡 Tip:** Ensure your file paths are correctly specified, including the full path from the root of your Drive to the file. Misplaced or incorrect paths can lead to file not found errors.
 
-<div class="quiz">
+Once Google Drive is mounted, you can access its contents just like a local file system. This section covers how to read from and write to files in your Drive, facilitating seamless data manipulation and model training processes. Understanding file paths and operations is key to efficiently managing your data.
+
+```python title="example2.py"
+import pandas as pd
+
+# Reading a CSV file from Google Drive
+file_path = '/content/drive/My Drive/data/my_data.csv'
+df = pd.read_csv(file_path)
+
+# Writing a DataFrame back to Google Drive
+df.to_csv('/content/drive/My Drive/data/processed_data.csv', index=False)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of mounting Google Drive in Colab?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +114,20 @@ df.to_csv('/content/drive/My Drive/data/processed_data.csv', index=False)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Once Google Drive is mounted, you can access its contents just like a local file system. This section covers how to read from and write to files in your Drive, facilitating seamless data manipulation and model training processes. Understanding file paths and operations is key to efficiently managing your data.
+
+```python title="example2.py"
+import pandas as pd
+
+# Reading a CSV file from Google Drive
+file_path = '/content/drive/My Drive/data/my_data.csv'
+df = pd.read_csv(file_path)
+
+# Writing a DataFrame back to Google Drive
+df.to_csv('/content/drive/My Drive/data/processed_data.csv', index=False)
+```
+
+>
   <p class="font-semibold mb-3">❓ How can you read a CSV file from your Google Drive in Colab?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -257,7 +257,9 @@ def orchestrate_support_request(customer_id, issue_type):
 
 ---
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of Bedrock Agents?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -281,7 +283,9 @@ def orchestrate_support_request(customer_id, issue_type):
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is an action group?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -305,7 +309,9 @@ def orchestrate_support_request(customer_id, issue_type):
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does a session ID do in agent invocation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -329,7 +335,9 @@ def orchestrate_support_request(customer_id, issue_type):
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How does an agent decide which action to take?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -81,7 +81,28 @@ plt.show()
 
 > **💡 Tip:** When creating visualizations, always consider your audience and the message you want to convey. Avoid cluttering your plots with too much information, and ensure that your color choices and labels are clear and accessible.
 
-<div class="quiz">
+Creating effective visualizations involves choosing the right type of chart for your data and ensuring that the visual is clear and easy to understand. This section will cover various types of plots and when to use them, along with best practices for design and aesthetics.
+
+```python title="example2.py"
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load example dataset
+tips = sns.load_dataset('tips')
+
+# Create a bar plot
+sns.barplot(x='day', y='total_bill', data=tips)
+
+# Add title and labels
+plt.title('Average Total Bill by Day')
+plt.xlabel('Day')
+plt.ylabel('Average Total Bill')
+
+# Display the plot
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of data visualization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -105,7 +126,28 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Creating effective visualizations involves choosing the right type of chart for your data and ensuring that the visual is clear and easy to understand. This section will cover various types of plots and when to use them, along with best practices for design and aesthetics.
+
+```python title="example2.py"
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load example dataset
+tips = sns.load_dataset('tips')
+
+# Create a bar plot
+sns.barplot(x='day', y='total_bill', data=tips)
+
+# Add title and labels
+plt.title('Average Total Bill by Day')
+plt.xlabel('Day')
+plt.ylabel('Average Total Bill')
+
+# Display the plot
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which Python library is commonly used for creating static, animated, and interactive visualizations?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

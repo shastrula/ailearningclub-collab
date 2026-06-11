@@ -87,7 +87,30 @@ print(sum_arr1)
 
 > **💡 Tip:** When performing operations on arrays, ensure that the arrays have compatible shapes to avoid broadcasting errors.
 
-<div class="quiz">
+NumPy provides a wide range of operations that can be performed on arrays, including arithmetic operations, aggregation functions, and element-wise operations. These operations are highly optimized and allow for efficient computation on large datasets.
+
+```python title="example2.py"
+import numpy as np
+
+# Creating two arrays
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+# Element-wise addition
+addition = arr1 + arr2
+
+# Element-wise multiplication
+multiplication = arr1 * arr2
+
+# Aggregation: sum of elements
+sum_arr1 = np.sum(arr1)
+
+print(addition)
+print(multiplication)
+print(sum_arr1)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which function is used to create an array of zeros in NumPy?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -111,7 +134,30 @@ print(sum_arr1)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+NumPy provides a wide range of operations that can be performed on arrays, including arithmetic operations, aggregation functions, and element-wise operations. These operations are highly optimized and allow for efficient computation on large datasets.
+
+```python title="example2.py"
+import numpy as np
+
+# Creating two arrays
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+# Element-wise addition
+addition = arr1 + arr2
+
+# Element-wise multiplication
+multiplication = arr1 * arr2
+
+# Aggregation: sum of elements
+sum_arr1 = np.sum(arr1)
+
+print(addition)
+print(multiplication)
+print(sum_arr1)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the result of element-wise addition of arrays [1, 2, 3] and [4, 5, 6]?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

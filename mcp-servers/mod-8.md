@@ -80,7 +80,23 @@ if __name__ == '__main__':
 
 > **💡 Tip:** Ensure that your MCP Server and AI agent are running on the same network to avoid connectivity issues. Additionally, always validate the data sent and received to maintain data integrity.
 
-<div class="quiz">
+Integrating AI agents involves creating a seamless connection between the agent and the MCP Server. This requires defining clear APIs, handling authentication, and ensuring that the agent can interpret and act upon the data it receives. Effective integration allows AI agents to provide real-time insights and automate decision-making processes.
+
+```python title="example2.py"
+import requests
+
+def send_mcp_request(data):
+    url = 'http://localhost:5000/api/mcp'
+    response = requests.post(url, json=data)
+    return response.json()
+
+if __name__ == '__main__':
+    data = {"key": "value"}
+    result = send_mcp_request(data)
+    print(result)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary role of an MCP Server?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -104,7 +120,23 @@ if __name__ == '__main__':
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Integrating AI agents involves creating a seamless connection between the agent and the MCP Server. This requires defining clear APIs, handling authentication, and ensuring that the agent can interpret and act upon the data it receives. Effective integration allows AI agents to provide real-time insights and automate decision-making processes.
+
+```python title="example2.py"
+import requests
+
+def send_mcp_request(data):
+    url = 'http://localhost:5000/api/mcp'
+    response = requests.post(url, json=data)
+    return response.json()
+
+if __name__ == '__main__':
+    data = {"key": "value"}
+    result = send_mcp_request(data)
+    print(result)
+```
+
+>
   <p class="font-semibold mb-3">❓ What method is used to send data to an MCP Server in the provided example?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

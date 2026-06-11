@@ -90,7 +90,33 @@ with open('model.engine', 'wb') as f:
 
 > **💡 Tip:** When optimizing models with TensorRT, ensure that your model architecture is compatible with the TensorRT operations. Some custom layers may require additional implementation to be supported.
 
-<div class="quiz">
+TensorRT is a high-performance deep learning inference optimizer and runtime. It accelerates neural networks by converting them into optimized graphs that can run efficiently on GPUs. This section will cover how to use TensorRT to optimize your models for faster inference, reducing latency and improving throughput in multi-cloud environments.
+
+```python title="example2.py"
+import tensorrt as trt
+
+# Initialize TensorRT builder
+builder = trt.Builder(trt.Logger(trt.Logger.WARNING))
+
+# Create a network definition
+network = builder.create_network(1 << int(trt.NetworkDefinitionCreationFlag.EXPLICIT_BATCH))
+
+# Define input and output tensors
+input_tensor = network.add_input('input', trt.float32, (1, 3, 224, 224))
+output_tensor = network.add_input('output', trt.float32, (1, 1000))
+
+# Add layers and operations to the network
+#... (add your model layers here)
+
+# Build the engine
+engine = builder.build_cuda_engine(network)
+
+# Save the engine to a file
+with open('model.engine', 'wb') as f:
+    f.write(engine.serialize())
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using vLLM for model serving?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -114,7 +140,33 @@ with open('model.engine', 'wb') as f:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+TensorRT is a high-performance deep learning inference optimizer and runtime. It accelerates neural networks by converting them into optimized graphs that can run efficiently on GPUs. This section will cover how to use TensorRT to optimize your models for faster inference, reducing latency and improving throughput in multi-cloud environments.
+
+```python title="example2.py"
+import tensorrt as trt
+
+# Initialize TensorRT builder
+builder = trt.Builder(trt.Logger(trt.Logger.WARNING))
+
+# Create a network definition
+network = builder.create_network(1 << int(trt.NetworkDefinitionCreationFlag.EXPLICIT_BATCH))
+
+# Define input and output tensors
+input_tensor = network.add_input('input', trt.float32, (1, 3, 224, 224))
+output_tensor = network.add_input('output', trt.float32, (1, 1000))
+
+# Add layers and operations to the network
+#... (add your model layers here)
+
+# Build the engine
+engine = builder.build_cuda_engine(network)
+
+# Save the engine to a file
+with open('model.engine', 'wb') as f:
+    f.write(engine.serialize())
+```
+
+>
   <p class="font-semibold mb-3">❓ Which of the following is a key feature of TensorRT?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

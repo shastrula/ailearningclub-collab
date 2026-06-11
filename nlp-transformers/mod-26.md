@@ -69,7 +69,14 @@ Learning from others' experiences:
 - [NLP Course (Hugging Face)](https://huggingface.co/learn/nlp-course) — Free NLP course
 
 
-<div class="quiz">
+- [Hugging Face Documentation](https://huggingface.co/docs) — Transformers library reference
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) — Visual explanation
+- [CS224N (Stanford)](https://web.stanford.edu/class/cs224n/) — NLP with Deep Learning
+- [Attention Is All You Need (paper)](https://arxiv.org/abs/1706.03762) — Original transformer paper
+- [NLP Course (Hugging Face)](https://huggingface.co/learn/nlp-course) — Free NLP course
+
+
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ What are the trade-offs of this approach?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -92,7 +99,14 @@ Learning from others' experiences:
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-<div class="quiz">
+- [Hugging Face Documentation](https://huggingface.co/docs) — Transformers library reference
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) — Visual explanation
+- [CS224N (Stanford)](https://web.stanford.edu/class/cs224n/) — NLP with Deep Learning
+- [Attention Is All You Need (paper)](https://arxiv.org/abs/1706.03762) — Original transformer paper
+- [NLP Course (Hugging Face)](https://huggingface.co/learn/nlp-course) — Free NLP course
+
+
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ How would you optimize this for production?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

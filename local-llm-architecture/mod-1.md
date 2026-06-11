@@ -74,7 +74,21 @@ print(output)
 
 > **💡 Tip:** Ensure that your hardware meets the minimum requirements for running LLMs locally, including sufficient RAM and a compatible CPU or GPU.
 
-<div class="quiz">
+llama.cpp is a C++ library that allows for the efficient running of LLMs on local machines. It provides a lightweight and fast interface for inference, making it suitable for resource-constrained environments. Using llama.cpp, developers can deploy models without relying on cloud services.
+
+```python title="example2.py"
+import llama_cpp
+
+# Initialize llama.cpp model
+model = llama_cpp.Model('path/to/model')
+
+# Generate text using the model
+output = model.generate('In the beginning', max_tokens=50)
+
+print(output)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary function of Ollama?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -98,7 +112,21 @@ print(output)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+llama.cpp is a C++ library that allows for the efficient running of LLMs on local machines. It provides a lightweight and fast interface for inference, making it suitable for resource-constrained environments. Using llama.cpp, developers can deploy models without relying on cloud services.
+
+```python title="example2.py"
+import llama_cpp
+
+# Initialize llama.cpp model
+model = llama_cpp.Model('path/to/model')
+
+# Generate text using the model
+output = model.generate('In the beginning', max_tokens=50)
+
+print(output)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which library allows for efficient running of LLMs on local machines?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

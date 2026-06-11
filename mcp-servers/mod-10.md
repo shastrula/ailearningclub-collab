@@ -82,7 +82,25 @@ asyncio.run(main())
 
 > **💡 Tip:** When implementing asynchronous processing, ensure that all I/O-bound operations are awaited properly to avoid blocking the event loop. Also, be mindful of the Global Interpreter Lock (GIL) in Python, which can limit the effectiveness of asynchronous code in CPU-bound tasks.
 
-<div class="quiz">
+Asynchronous processing allows AI agents to handle multiple requests concurrently, reducing overall response time. By using Python's asyncio library, we can create non-blocking code that efficiently manages I/O-bound and high-level structured network code.
+
+```python title="example2.py"
+import asyncio
+
+async def ai_agent_async_task():
+    # Simulate an asynchronous task with a sleep
+    await asyncio.sleep(1)
+    return 'Async task completed'
+
+async def main():
+    tasks = [ai_agent_async_task() for _ in range(3)]
+    results = await asyncio.gather(*tasks)
+    print(results)
+
+asyncio.run(main())
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary cause of high latency in AI agents?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +124,25 @@ asyncio.run(main())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Asynchronous processing allows AI agents to handle multiple requests concurrently, reducing overall response time. By using Python's asyncio library, we can create non-blocking code that efficiently manages I/O-bound and high-level structured network code.
+
+```python title="example2.py"
+import asyncio
+
+async def ai_agent_async_task():
+    # Simulate an asynchronous task with a sleep
+    await asyncio.sleep(1)
+    return 'Async task completed'
+
+async def main():
+    tasks = [ai_agent_async_task() for _ in range(3)]
+    results = await asyncio.gather(*tasks)
+    print(results)
+
+asyncio.run(main())
+```
+
+>
   <p class="font-semibold mb-3">❓ Which Python library is used for implementing asynchronous processing?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

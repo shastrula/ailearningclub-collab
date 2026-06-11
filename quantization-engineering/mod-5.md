@@ -106,7 +106,35 @@ print(model.fc1.weight)
 
 > **💡 Tip:** Ensure that the quantization levels are chosen carefully to balance between model accuracy and compression. Experiment with different thresholds for gradient magnitudes to find the optimal quantization strategy for your specific model and task.
 
-<div class="quiz">
+To implement AWQ in PyTorch, you can create a custom quantization function that evaluates the significance of each weight and applies appropriate quantization levels. This involves calculating the gradient of each weight concerning the loss function and using this information to determine the quantization granularity.
+
+```python title="example2.py"
+import torch
+
+# Define a simple neural network
+class SimpleNN(torch.nn.Module):
+    def __init__(self):
+        super(SimpleNN, self).__init__()
+        self.fc1 = torch.nn.Linear(10, 5)
+
+    def forward(self, x):
+        return self.fc1(x)
+
+# Initialize the model
+model = SimpleNN()
+
+# Custom AWQ function
+def awq(model, loss_fn, inputs, targets):
+    model.zero_grad()
+    outputs = model(inputs)
+    loss = loss_fn(outputs, targets)
+    loss.backward()
+
+    for name, param in model.named_parameters():
+        if 'weight' in name:
+            # Quantize based on gradient magnitude
+            grad = param.grad.abs()
+            quant_level = torch.where(grad >
   <p class="font-semibold mb-3">❓ What is the primary advantage of using Adaptive Weight Quantization (AWQ)?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -130,7 +158,35 @@ print(model.fc1.weight)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+To implement AWQ in PyTorch, you can create a custom quantization function that evaluates the significance of each weight and applies appropriate quantization levels. This involves calculating the gradient of each weight concerning the loss function and using this information to determine the quantization granularity.
+
+```python title="example2.py"
+import torch
+
+# Define a simple neural network
+class SimpleNN(torch.nn.Module):
+    def __init__(self):
+        super(SimpleNN, self).__init__()
+        self.fc1 = torch.nn.Linear(10, 5)
+
+    def forward(self, x):
+        return self.fc1(x)
+
+# Initialize the model
+model = SimpleNN()
+
+# Custom AWQ function
+def awq(model, loss_fn, inputs, targets):
+    model.zero_grad()
+    outputs = model(inputs)
+    loss = loss_fn(outputs, targets)
+    loss.backward()
+
+    for name, param in model.named_parameters():
+        if 'weight' in name:
+            # Quantize based on gradient magnitude
+            grad = param.grad.abs()
+            quant_level = torch.where(grad >
   <p class="font-semibold mb-3">❓ How does AWQ determine the quantization level for each weight?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -97,7 +97,14 @@ Converted: 123, type: <class 'int'>
 
 > **💡 Tip:** Use type() to check a variable's type, or isinstance() for more flexible type checking. Type conversion functions like int(), str(), float() are commonly used.
 
-<div class="quiz">
+Python uses dynamic typing, meaning you don't declare variable types explicitly. The type is inferred from the value assigned. This is different from statically-typed languages like Java where you must declare types upfront.
+
+Learn more: https://docs.python.org/3/tutorial/
+
+```python title="dynamic_typing.py"
+# Dynamic typing - type is inferred
+x = 42              # x is an int
+print(type(x))      # <class 'int'>
   <p class="font-semibold mb-3">❓ What is a best practice when working with Variables, Data Types & Type System?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

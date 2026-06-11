@@ -81,7 +81,24 @@ print(output)
 
 > **💡 Tip:** When using TensorRT, ensure that your model is compatible with the FP16 precision to take full advantage of the speedups offered by the framework.
 
-<div class="quiz">
+TensorRT is a high-performance deep learning inference optimizer and runtime. It provides significant speedups by optimizing the inference graph and leveraging the GPU's parallel processing capabilities. This makes it ideal for deploying models that require low-latency responses.
+
+```python title="example2.py"
+import tensorrt as trt
+
+# Initialize the TensorRT engine
+engine = trt.Builder(trt.BuilderFlags.FP16).build_engine_from_onnx('model.onnx')
+
+# Define a sample input
+input_data = [1.0, 2.0, 3.0, 4.0]
+
+# Perform inference
+output = engine.execute(input_data)
+
+print(output)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using vLLM for inference?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -105,7 +122,24 @@ print(output)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+TensorRT is a high-performance deep learning inference optimizer and runtime. It provides significant speedups by optimizing the inference graph and leveraging the GPU's parallel processing capabilities. This makes it ideal for deploying models that require low-latency responses.
+
+```python title="example2.py"
+import tensorrt as trt
+
+# Initialize the TensorRT engine
+engine = trt.Builder(trt.BuilderFlags.FP16).build_engine_from_onnx('model.onnx')
+
+# Define a sample input
+input_data = [1.0, 2.0, 3.0, 4.0]
+
+# Perform inference
+output = engine.execute(input_data)
+
+print(output)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which precision mode is recommended for optimal performance in TensorRT?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

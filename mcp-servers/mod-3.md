@@ -78,7 +78,21 @@ logging.error('Connection failed')
 
 > **💡 Tip:** Always ensure your logging level is set appropriately to balance between verbosity and essential information. Overly verbose logs can be as problematic as insufficient logging.
 
-<div class="quiz">
+Monitoring and logging tools are essential for tracking server performance, diagnosing issues, and ensuring security. These tools provide real-time data and historical logs, enabling administrators to make informed decisions and maintain server health.
+
+```python title="monitor_logs.py"
+import logging
+
+# Configure logging
+logging.basicConfig(filename='server.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Log messages
+logging.info('Server started')
+logging.warning('Resource usage is high')
+logging.error('Connection failed')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of MCP Server Configuration Tools?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -102,7 +116,21 @@ logging.error('Connection failed')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Monitoring and logging tools are essential for tracking server performance, diagnosing issues, and ensuring security. These tools provide real-time data and historical logs, enabling administrators to make informed decisions and maintain server health.
+
+```python title="monitor_logs.py"
+import logging
+
+# Configure logging
+logging.basicConfig(filename='server.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Log messages
+logging.info('Server started')
+logging.warning('Resource usage is high')
+logging.error('Connection failed')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which logging level should you use for general information about server operations?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -80,7 +80,23 @@ fig.show()
 
 > **💡 Tip:** Avoid using too many colors in a single chart, as it can confuse the viewer. Stick to a consistent color palette and use color to highlight important data points or categories.
 
-<div class="quiz">
+Enhancing the readability and aesthetics of your visualizations can significantly improve their effectiveness. This includes using appropriate color schemes, adding labels and annotations, and ensuring that the chart is not overcrowded with information. Aesthetically pleasing charts are more likely to engage viewers and convey the intended message clearly.
+
+```python title="example2.py"
+import plotly.express as px
+import pandas as pd
+
+# Sample data
+data = {'Fruit': ['Apples', 'Oranges', 'Bananas', 'Cherries'], 'Amount': [4, 1, 2, 3], 'City': ['SF', 'SF', 'Montreal', 'Montreal']}
+df = pd.DataFrame(data)
+
+# Enhanced scatter plot
+fig = px.scatter(df, x='Fruit', y='Amount', color='City', title='Fruit Amounts by City', labels={'Amount': 'Amount of fruit'}, height=400)
+fig.update_layout(showlegend=True)
+fig.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which chart type is best for comparing quantities across different categories?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -104,7 +120,23 @@ fig.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Enhancing the readability and aesthetics of your visualizations can significantly improve their effectiveness. This includes using appropriate color schemes, adding labels and annotations, and ensuring that the chart is not overcrowded with information. Aesthetically pleasing charts are more likely to engage viewers and convey the intended message clearly.
+
+```python title="example2.py"
+import plotly.express as px
+import pandas as pd
+
+# Sample data
+data = {'Fruit': ['Apples', 'Oranges', 'Bananas', 'Cherries'], 'Amount': [4, 1, 2, 3], 'City': ['SF', 'SF', 'Montreal', 'Montreal']}
+df = pd.DataFrame(data)
+
+# Enhanced scatter plot
+fig = px.scatter(df, x='Fruit', y='Amount', color='City', title='Fruit Amounts by City', labels={'Amount': 'Amount of fruit'}, height=400)
+fig.update_layout(showlegend=True)
+fig.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a key practice for enhancing the readability of a chart?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

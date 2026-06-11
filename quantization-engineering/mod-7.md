@@ -80,7 +80,23 @@ torch.save(quantized_model, 'quantized_model.pth')
 
 > **💡 Tip:** When quantizing models, it's important to evaluate the quantized model's performance to ensure it meets your accuracy requirements. Sometimes, fine-tuning the quantized model can help recover any lost accuracy.
 
-<div class="quiz">
+Quantization is a technique used to reduce the precision of model weights and activations, leading to smaller model sizes and faster computations. The bitsandbytes library provides tools to quantize models to 8-bit and 4-bit precision. This can be particularly beneficial for deploying models on edge devices or in environments with limited computational resources.
+
+```python title="example2.py"
+import torch
+import bitsandbytes as bnb
+
+# Load a pre-trained model
+model = torch.load('pretrained_model.pth')
+
+# Quantize the model to 8-bit
+quantized_model = bnb.nn.quantize(model, bits=8)
+
+# Save the quantized model
+torch.save(quantized_model, 'quantized_model.pth')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of the bitsandbytes library?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -104,7 +120,23 @@ torch.save(quantized_model, 'quantized_model.pth')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Quantization is a technique used to reduce the precision of model weights and activations, leading to smaller model sizes and faster computations. The bitsandbytes library provides tools to quantize models to 8-bit and 4-bit precision. This can be particularly beneficial for deploying models on edge devices or in environments with limited computational resources.
+
+```python title="example2.py"
+import torch
+import bitsandbytes as bnb
+
+# Load a pre-trained model
+model = torch.load('pretrained_model.pth')
+
+# Quantize the model to 8-bit
+quantized_model = bnb.nn.quantize(model, bits=8)
+
+# Save the quantized model
+torch.save(quantized_model, 'quantized_model.pth')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which precision levels does bitsandbytes support for quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

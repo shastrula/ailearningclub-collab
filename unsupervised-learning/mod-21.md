@@ -87,7 +87,30 @@ plt.show()
 
 > **💡 Tip:** When using t-SNE, be mindful of the perplexity parameter. It controls the balance between local and global aspects of the data. A too-small perplexity makes the map look like a cluster, while a too-large perplexity makes it look like a single Gaussian.
 
-<div class="quiz">
+t-Distributed Stochastic Neighbor Embedding (t-SNE) is a powerful technique for dimensionality reduction that is particularly well suited for the visualization of high-dimensional datasets. It works by converting similarities between data points to joint probabilities and trying to minimize the Kullback-Leibler divergence between the joint probabilities of the low-dimensional embedding and the high-dimensional data.
+
+```python title="example2.py"
+from sklearn.datasets import load_digits
+from sklearn.manifold import TSNE
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Load Digits dataset
+digits = load_digits()
+X = digits.data
+y = digits.target
+
+# Apply t-SNE
+tsne = TSNE(n_components=2, random_state=42)
+X_tsne = tsne.fit_transform(X)
+
+# Plot the t-SNE results
+plt.scatter(X_tsne[:, 0], X_tsne[:, 1], c=y, cmap=plt.cm.get_cmap('tab10', 10))
+plt.title('t-SNE Visualization of Digits Dataset')
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of K-Means clustering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -111,7 +134,30 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+t-Distributed Stochastic Neighbor Embedding (t-SNE) is a powerful technique for dimensionality reduction that is particularly well suited for the visualization of high-dimensional datasets. It works by converting similarities between data points to joint probabilities and trying to minimize the Kullback-Leibler divergence between the joint probabilities of the low-dimensional embedding and the high-dimensional data.
+
+```python title="example2.py"
+from sklearn.datasets import load_digits
+from sklearn.manifold import TSNE
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Load Digits dataset
+digits = load_digits()
+X = digits.data
+y = digits.target
+
+# Apply t-SNE
+tsne = TSNE(n_components=2, random_state=42)
+X_tsne = tsne.fit_transform(X)
+
+# Plot the t-SNE results
+plt.scatter(X_tsne[:, 0], X_tsne[:, 1], c=y, cmap=plt.cm.get_cmap('tab10', 10))
+plt.title('t-SNE Visualization of Digits Dataset')
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What does t-SNE aim to preserve in its low-dimensional embedding?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

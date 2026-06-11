@@ -84,7 +84,27 @@ public class HelloWorldService {
 
 > **💡 Tip:** Ensure that your JAX-RS application is correctly configured in your web.xml or use a JAX-RS application class to bootstrap your application.
 
-<div class="quiz">
+JAX-RS (Java API for RESTful Web Services) is a Java programming framework that facilitates the development of RESTful web services in Java. It provides a set of annotations to map Java classes and methods to HTTP requests. This section will cover how to set up a simple RESTful service using JAX-RS.
+
+```java title="example2.java"
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/hello/{name}")
+public class HelloWorldService {
+
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String sayHello(@PathParam("name") String name) {
+        return "Hello, " + name + "!";
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ What does the @Path annotation do in a JAX-RS service?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -108,7 +128,27 @@ public class HelloWorldService {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+JAX-RS (Java API for RESTful Web Services) is a Java programming framework that facilitates the development of RESTful web services in Java. It provides a set of annotations to map Java classes and methods to HTTP requests. This section will cover how to set up a simple RESTful service using JAX-RS.
+
+```java title="example2.java"
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/hello/{name}")
+public class HelloWorldService {
+
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String sayHello(@PathParam("name") String name) {
+        return "Hello, " + name + "!";
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Which HTTP method is typically used to create a new resource in a RESTful service?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

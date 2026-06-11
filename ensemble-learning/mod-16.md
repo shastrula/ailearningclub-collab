@@ -91,7 +91,38 @@ print(predictions)
 
 > **💡 Tip:** Ensure that all base classifiers in a soft voting ensemble support probability estimates, as this is required for averaging predictions.
 
-<div class="quiz">
+Soft voting ensembles average the predicted probabilities from each model to make a final prediction. This method often provides better performance than hard voting, especially when the base models have well-calibrated probability outputs.
+
+```python title="example2.py"
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import VotingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create base classifiers
+log_clf = LogisticRegression()
+tree_clf = DecisionTreeClassifier()
+svm_clf = SVC(probability=True)
+
+# Create a soft voting classifier
+voting_clf = VotingClassifier(estimators=[('lr', log_clf), ('dt', tree_clf), ('svc', svm_clf)], voting='soft')
+voting_clf.fit(X_train, y_train)
+
+# Make predictions
+predictions = voting_clf.predict(X_test)
+print(predictions)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary difference between hard voting and soft voting ensembles?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -115,7 +146,38 @@ print(predictions)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Soft voting ensembles average the predicted probabilities from each model to make a final prediction. This method often provides better performance than hard voting, especially when the base models have well-calibrated probability outputs.
+
+```python title="example2.py"
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import VotingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create base classifiers
+log_clf = LogisticRegression()
+tree_clf = DecisionTreeClassifier()
+svm_clf = SVC(probability=True)
+
+# Create a soft voting classifier
+voting_clf = VotingClassifier(estimators=[('lr', log_clf), ('dt', tree_clf), ('svc', svm_clf)], voting='soft')
+voting_clf.fit(X_train, y_train)
+
+# Make predictions
+predictions = voting_clf.predict(X_test)
+print(predictions)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which type of voting ensemble often provides better performance when base models have well-calibrated probability outputs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

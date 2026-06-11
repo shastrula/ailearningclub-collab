@@ -88,7 +88,31 @@ print('Main entity:', 'fox')
 
 > **💡 Tip:** When crafting zero-shot prompts, avoid ambiguous language and ensure the instructions are aligned with the model's pre-trained tasks to achieve better results.
 
-<div class="quiz">
+Creating effective zero-shot prompts requires clear and concise instructions that align with the model's pre-trained capabilities. The prompt should be specific enough to guide the model but general enough to allow for its inherent flexibility. Additionally, understanding the model's limitations and biases is crucial for crafting prompts that yield accurate and reliable results.
+
+```python title="example2.py"
+import transformers
+
+# Load a pre-trained model and tokenizer
+model_name = 'distilbert-base-uncased'
+model = transformers.DistilBertForSequenceClassification.from_pretrained(model_name)
+tokenizer = transformers.DistilBertTokenizer.from_pretrained(model_name)
+
+# Define a zero-shot prompt for a different task
+prompt = 'Extract the main entity from the following sentence: "The quick brown fox jumps over the lazy dog."'
+
+# Tokenize the input
+inputs = tokenizer(prompt, return_tensors='pt')
+
+# Get model predictions
+outputs = model(**inputs)
+predictions = outputs.logits.softmax(dim=-1)
+
+# Print the result
+print('Main entity:', 'fox')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is zero-shot prompting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -112,7 +136,31 @@ print('Main entity:', 'fox')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Creating effective zero-shot prompts requires clear and concise instructions that align with the model's pre-trained capabilities. The prompt should be specific enough to guide the model but general enough to allow for its inherent flexibility. Additionally, understanding the model's limitations and biases is crucial for crafting prompts that yield accurate and reliable results.
+
+```python title="example2.py"
+import transformers
+
+# Load a pre-trained model and tokenizer
+model_name = 'distilbert-base-uncased'
+model = transformers.DistilBertForSequenceClassification.from_pretrained(model_name)
+tokenizer = transformers.DistilBertTokenizer.from_pretrained(model_name)
+
+# Define a zero-shot prompt for a different task
+prompt = 'Extract the main entity from the following sentence: "The quick brown fox jumps over the lazy dog."'
+
+# Tokenize the input
+inputs = tokenizer(prompt, return_tensors='pt')
+
+# Get model predictions
+outputs = model(**inputs)
+predictions = outputs.logits.softmax(dim=-1)
+
+# Print the result
+print('Main entity:', 'fox')
+```
+
+>
   <p class="font-semibold mb-3">❓ What should be considered when crafting zero-shot prompts?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

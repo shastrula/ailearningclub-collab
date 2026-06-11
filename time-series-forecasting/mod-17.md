@@ -93,7 +93,36 @@ print(df_filled)
 
 > **💡 Tip:** When using KNNImputer, carefully choose the number of neighbors (n_neighbors) to balance between overfitting and underfitting. A common practice is to start with a small number and increase it if necessary.
 
-<div class="quiz">
+Advanced techniques for handling missing data include interpolation, regression imputation, and model-based approaches. Interpolation fills missing values based on the trend of the data, while regression imputation uses a regression model to predict missing values. Model-based approaches use algorithms like K-Nearest Neighbors (KNN) or machine learning models to estimate missing values.
+
+```python title="example2.py"
+from sklearn.impute import KNNImputer
+import pandas as pd
+import numpy as np
+
+# Create a sample time series with missing values
+data = {'date': pd.date_range(start='1/1/2020', periods=10),
+         'value': [1, 2, np.nan, 4, 5, np.nan, 7, 8, np.nan, 10]}
+df = pd.DataFrame(data)
+
+# Separate date and value columns
+dates = df['date']
+values = df[['value']]
+
+# Apply KNNImputer to fill missing values
+imputer = KNNImputer(n_neighbors=2)
+values_filled = imputer.fit_transform(values)
+
+# Create a new DataFrame with filled values
+df_filled = pd.DataFrame(values_filled, columns=['value'])
+df_filled['date'] = dates
+
+# Print the DataFrame after filling missing values
+print('DataFrame after filling missing values using KNNImputer:')
+print(df_filled)
+```
+
+>
   <p class="font-semibold mb-3">❓ What are the three types of missing data in time series?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,7 +146,36 @@ print(df_filled)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Advanced techniques for handling missing data include interpolation, regression imputation, and model-based approaches. Interpolation fills missing values based on the trend of the data, while regression imputation uses a regression model to predict missing values. Model-based approaches use algorithms like K-Nearest Neighbors (KNN) or machine learning models to estimate missing values.
+
+```python title="example2.py"
+from sklearn.impute import KNNImputer
+import pandas as pd
+import numpy as np
+
+# Create a sample time series with missing values
+data = {'date': pd.date_range(start='1/1/2020', periods=10),
+         'value': [1, 2, np.nan, 4, 5, np.nan, 7, 8, np.nan, 10]}
+df = pd.DataFrame(data)
+
+# Separate date and value columns
+dates = df['date']
+values = df[['value']]
+
+# Apply KNNImputer to fill missing values
+imputer = KNNImputer(n_neighbors=2)
+values_filled = imputer.fit_transform(values)
+
+# Create a new DataFrame with filled values
+df_filled = pd.DataFrame(values_filled, columns=['value'])
+df_filled['date'] = dates
+
+# Print the DataFrame after filling missing values
+print('DataFrame after filling missing values using KNNImputer:')
+print(df_filled)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which method is used in the second code example to handle missing data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

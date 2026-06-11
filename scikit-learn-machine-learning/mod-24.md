@@ -86,7 +86,36 @@ print(feature_importance_df)
 
 > **💡 Tip:** When using GridSearchCV, be mindful of the computational cost, especially with large datasets or complex models. Consider using RandomizedSearchCV as an alternative for a more efficient search.
 
-<div class="quiz">
+Random Forests are ensemble learning methods that operate by constructing multiple decision trees during training and outputting the class that is the mode of the classes of the individual trees. One of the key advantages of Random Forests is their ability to provide feature importances, which can help in understanding which features contribute most to the predictive power of the model.
+
+```python title="example2.py"
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier
+import pandas as pd
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Initialize Random Forest classifier
+rf = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Fit the model
+rf.fit(X, y)
+
+# Get feature importances
+importances = rf.feature_importances_
+
+# Create a DataFrame for better visualization
+feature_importance_df = pd.DataFrame({'feature': iris.feature_names, 'importance': importances})
+
+# Sort the DataFrame by importance
+feature_importance_df = feature_importance_df.sort_values(by='importance', ascending=False)
+
+print(feature_importance_df)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of GridSearchCV in Scikit-Learn?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -110,7 +139,36 @@ print(feature_importance_df)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Random Forests are ensemble learning methods that operate by constructing multiple decision trees during training and outputting the class that is the mode of the classes of the individual trees. One of the key advantages of Random Forests is their ability to provide feature importances, which can help in understanding which features contribute most to the predictive power of the model.
+
+```python title="example2.py"
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier
+import pandas as pd
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Initialize Random Forest classifier
+rf = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Fit the model
+rf.fit(X, y)
+
+# Get feature importances
+importances = rf.feature_importances_
+
+# Create a DataFrame for better visualization
+feature_importance_df = pd.DataFrame({'feature': iris.feature_names, 'importance': importances})
+
+# Sort the DataFrame by importance
+feature_importance_df = feature_importance_df.sort_values(by='importance', ascending=False)
+
+print(feature_importance_df)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which method is used by Random Forests to determine feature importance?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -82,7 +82,32 @@ print(pm.summary(trace))
 
 > **💡 Tip:** When working with hierarchical models, ensure that your priors are weakly informative to allow the data to drive the inferences. Poorly chosen priors can lead to biased results.
 
-<div class="quiz">
+Hierarchical modeling is a Bayesian modeling technique that allows us to incorporate multiple levels of uncertainty. This is particularly useful when we have grouped data and want to model both group-level and individual-level effects. Hierarchical models can share information across groups, leading to more robust and reliable inferences.
+
+```python title="example2.py"
+import pymc3 as pm
+import numpy as np
+
+# Generate some hierarchical data
+np.random.seed(42)
+group_means = np.random.normal(loc=0, scale=1, size=5)
+group_sizes = np.random.randint(10, 30, size=5)
+data = [np.random.normal(loc=group_means[i], scale=1, size=group_sizes[i]) for i in range(5)]
+
+# Hierarchical model
+with pm.Model() as hierarchical_model:
+    group_mean = pm.Normal('group_mean', mu=0, sigma=1)
+    group_std = pm.HalfNormal('group_std', sigma=1)
+    individual_means = pm.Normal('individual_means', mu=group_mean, sigma=group_std, shape=5)
+    observations = pm.Normal('observations', mu=individual_means, sigma=1, observed=[d for sublist in data for d in sublist])
+
+    trace = pm.sample(1000, return_inferencedata=False)
+
+# Print summary of the trace
+print(pm.summary(trace))
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using Bayesian inference in machine learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +131,32 @@ print(pm.summary(trace))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Hierarchical modeling is a Bayesian modeling technique that allows us to incorporate multiple levels of uncertainty. This is particularly useful when we have grouped data and want to model both group-level and individual-level effects. Hierarchical models can share information across groups, leading to more robust and reliable inferences.
+
+```python title="example2.py"
+import pymc3 as pm
+import numpy as np
+
+# Generate some hierarchical data
+np.random.seed(42)
+group_means = np.random.normal(loc=0, scale=1, size=5)
+group_sizes = np.random.randint(10, 30, size=5)
+data = [np.random.normal(loc=group_means[i], scale=1, size=group_sizes[i]) for i in range(5)]
+
+# Hierarchical model
+with pm.Model() as hierarchical_model:
+    group_mean = pm.Normal('group_mean', mu=0, sigma=1)
+    group_std = pm.HalfNormal('group_std', sigma=1)
+    individual_means = pm.Normal('individual_means', mu=group_mean, sigma=group_std, shape=5)
+    observations = pm.Normal('observations', mu=individual_means, sigma=1, observed=[d for sublist in data for d in sublist])
+
+    trace = pm.sample(1000, return_inferencedata=False)
+
+# Print summary of the trace
+print(pm.summary(trace))
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the main benefit of using hierarchical modeling?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

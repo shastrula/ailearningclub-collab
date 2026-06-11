@@ -82,7 +82,17 @@ for i, example in enumerate(dataset['train']):
 
 > **💡 Tip:** Use streaming=True for any dataset over a few GB. You process it in batches without ever downloading the full thing.
 
-<div class="quiz">
+```python title="streaming.py"
+from datasets import load_dataset
+
+# Stream a huge dataset without downloading it all
+# Common Crawl is terabytes — streaming makes it usable
+dataset = load_dataset('wikipedia', '20220301.en', streaming=True)
+
+# Iterate over batches
+for i, example in enumerate(dataset['train']):
+    print(example['title'])
+    if i >
   <p class="font-semibold mb-3">❓ When should you use streaming=True with load_dataset()?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

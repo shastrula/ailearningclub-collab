@@ -86,7 +86,29 @@ print(decoded_output)
 
 > **💡 Tip:** Ensure that the evaluation dataset is representative of the tasks the model will perform in production to get accurate performance metrics.
 
-<div class="quiz">
+Parameter-Efficient Fine-Tuning (PEFT) and Instruction Tuning are methods to fine-tune models with minimal parameter updates. Evaluating these models requires running them on benchmark datasets and analyzing metrics like accuracy, BLEU score, or perplexity.
+
+```python title="evaluate_peft_model.py"
+import transformers
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+
+# Load the fine-tuned PEFT model and tokenizer
+model_name = 'fine-tuned-peft-model'
+model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Define a sample input
+input_text = 'Summarize: The quick brown fox jumps over the lazy dog.'
+input_ids = tokenizer(input_text, return_tensors='pt').input_ids
+
+# Generate summary
+output = model.generate(input_ids, max_length=30)
+decoded_output = tokenizer.decode(output[0], skip_special_tokens=True)
+
+print(decoded_output)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of using LoRA in fine-tuning large language models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -110,7 +132,29 @@ print(decoded_output)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Parameter-Efficient Fine-Tuning (PEFT) and Instruction Tuning are methods to fine-tune models with minimal parameter updates. Evaluating these models requires running them on benchmark datasets and analyzing metrics like accuracy, BLEU score, or perplexity.
+
+```python title="evaluate_peft_model.py"
+import transformers
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+
+# Load the fine-tuned PEFT model and tokenizer
+model_name = 'fine-tuned-peft-model'
+model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Define a sample input
+input_text = 'Summarize: The quick brown fox jumps over the lazy dog.'
+input_ids = tokenizer(input_text, return_tensors='pt').input_ids
+
+# Generate summary
+output = model.generate(input_ids, max_length=30)
+decoded_output = tokenizer.decode(output[0], skip_special_tokens=True)
+
+print(decoded_output)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a key benefit of using PEFT for model fine-tuning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

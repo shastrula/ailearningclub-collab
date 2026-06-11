@@ -91,7 +91,34 @@ print(f'Model Accuracy: {accuracy:.2f}')
 
 > **💡 Tip:** Always document the data sources, preprocessing steps, and model choices to ensure transparency. Regularly review and update models to adapt to new data and changing contexts.
 
-<div class="quiz">
+Transparency in machine learning involves making the decision-making process of models understandable to stakeholders. Accountability ensures that there are mechanisms in place to address any adverse effects caused by the models. This can be achieved through documentation, clear communication of model limitations, and establishing protocols for model audits and reviews.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# Sample dataset
+data = pd.DataFrame({
+    'feature': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    'label': [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
+})
+
+# Splitting the data
+X_train, X_test, y_train, y_test = train_test_split(data[['feature']], data['label'], test_size=0.2, random_state=42)
+
+# Training a logistic regression model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Predicting and evaluating
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Model Accuracy: {accuracy:.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is bias in machine learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -115,7 +142,34 @@ print(f'Model Accuracy: {accuracy:.2f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Transparency in machine learning involves making the decision-making process of models understandable to stakeholders. Accountability ensures that there are mechanisms in place to address any adverse effects caused by the models. This can be achieved through documentation, clear communication of model limitations, and establishing protocols for model audits and reviews.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# Sample dataset
+data = pd.DataFrame({
+    'feature': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    'label': [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
+})
+
+# Splitting the data
+X_train, X_test, y_train, y_test = train_test_split(data[['feature']], data['label'], test_size=0.2, random_state=42)
+
+# Training a logistic regression model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Predicting and evaluating
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Model Accuracy: {accuracy:.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the importance of transparency in machine learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -94,7 +94,37 @@ Batch 2 complete
 
 > **💡 Tip:** Use async/await for I/O-bound operations and threading for CPU-bound tasks in your AI pipelines.
 
-<div class="quiz">
+Use threading for I/O-bound operations like API calls or file processing.
+
+```python title="threading_example.py"
+import threading
+import time
+
+def process_batch(batch_id):
+    print(f"Processing batch {batch_id}")
+    time.sleep(1)
+    print(f"Batch {batch_id} complete")
+
+threads = []
+for i in range(3):
+    t = threading.Thread(target=process_batch, args=(i,))
+    threads.append(t)
+    t.start()
+
+for t in threads:
+    t.join()
+```
+
+```
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Batch 0 complete
+Batch 1 complete
+Batch 2 complete
+```
+
+>
   <p class="font-semibold mb-3">❓ When should you use async/await?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -78,7 +78,21 @@ fig.show()
 
 > **💡 Tip:** When working with geographic data, ensure that your data is in the correct coordinate reference system (CRS) to avoid distortions in your visualizations.
 
-<div class="quiz">
+Choropleth maps are a type of thematic map in which areas are shaded or patterned in proportion to the measurement of the statistical variable being displayed on the map, such as population density or per-capita income. In Python, libraries like Geopandas and Plotly can be used to create choropleth maps.
+
+```python title="example2.py"
+import plotly.express as px
+
+# Load a sample dataset
+df = px.data.gapminder().query('year == 2007')
+
+# Create a choropleth map
+fig = px.choropleth(df, locations='iso_alpha', color='gdpPercap', hover_name='country',
+                    title='GDP Per Capita in 2007', color_continuous_scale=px.colors.sequential.Plasma)
+fig.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What library is used to plot the world map in the first example?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -102,7 +116,21 @@ fig.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Choropleth maps are a type of thematic map in which areas are shaded or patterned in proportion to the measurement of the statistical variable being displayed on the map, such as population density or per-capita income. In Python, libraries like Geopandas and Plotly can be used to create choropleth maps.
+
+```python title="example2.py"
+import plotly.express as px
+
+# Load a sample dataset
+df = px.data.gapminder().query('year == 2007')
+
+# Create a choropleth map
+fig = px.choropleth(df, locations='iso_alpha', color='gdpPercap', hover_name='country',
+                    title='GDP Per Capita in 2007', color_continuous_scale=px.colors.sequential.Plasma)
+fig.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which Python library is used to create the choropleth map in the second example?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

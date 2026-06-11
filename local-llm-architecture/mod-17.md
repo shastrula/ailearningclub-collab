@@ -77,7 +77,20 @@ print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
 
 > **💡 Tip:** Always monitor system resources during LLM inference to prevent overloading and ensure smooth operation. Utilize tools like psutil for real-time monitoring.
 
-<div class="quiz">
+Running LLMs locally requires careful consideration of hardware resources. Key components include CPU, GPU, and RAM. For optimal performance, it is recommended to use systems with multi-core CPUs, dedicated GPUs, and sufficient RAM to handle large model sizes and complex computations.
+
+```python title="example2.py"
+import psutil
+
+# Check system resources
+cpu_percent = psutil.cpu_percent(interval=1)
+memory_info = psutil.virtual_memory()
+
+print(f'CPU Usage: {cpu_percent}%)')
+print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which tool provides a streamlined interface for managing LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +114,20 @@ print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Running LLMs locally requires careful consideration of hardware resources. Key components include CPU, GPU, and RAM. For optimal performance, it is recommended to use systems with multi-core CPUs, dedicated GPUs, and sufficient RAM to handle large model sizes and complex computations.
+
+```python title="example2.py"
+import psutil
+
+# Check system resources
+cpu_percent = psutil.cpu_percent(interval=1)
+memory_info = psutil.virtual_memory()
+
+print(f'CPU Usage: {cpu_percent}%)')
+print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a critical hardware component for running LLMs efficiently?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

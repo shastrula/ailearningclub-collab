@@ -77,7 +77,13 @@ display(HTML('<script>Jupyter.notebook.save_checkpoint(); alert("Notebook saved 
 
 > **💡 Tip:** Remember to save your notebook frequently to avoid losing any work due to unexpected interruptions.
 
-<div class="quiz">
+Jupyter Notebooks are auto-saved at regular intervals, but it's good practice to manually save your work frequently. You can save the notebook by clicking the 'Save and Checkpoint' icon in the toolbar or by pressing `Ctrl+S` (or `Cmd+S` on Mac). Additionally, you can use the keyboard shortcut `Ctrl+S` (or `Cmd+S` on Mac) to save the notebook without creating a new checkpoint.
+
+```python title="save_notebook.py"
+from IPython.display import display, HTML
+
+# Display a message indicating the notebook has been saved
+display(HTML('<script>
   <p class="font-semibold mb-3">❓ How do you create a new Jupyter Notebook using the command line?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +107,13 @@ display(HTML('<script>Jupyter.notebook.save_checkpoint(); alert("Notebook saved 
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Jupyter Notebooks are auto-saved at regular intervals, but it's good practice to manually save your work frequently. You can save the notebook by clicking the 'Save and Checkpoint' icon in the toolbar or by pressing `Ctrl+S` (or `Cmd+S` on Mac). Additionally, you can use the keyboard shortcut `Ctrl+S` (or `Cmd+S` on Mac) to save the notebook without creating a new checkpoint.
+
+```python title="save_notebook.py"
+from IPython.display import display, HTML
+
+# Display a message indicating the notebook has been saved
+display(HTML('<script>
   <p class="font-semibold mb-3">❓ Which keyboard shortcut is used to save a Jupyter Notebook?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

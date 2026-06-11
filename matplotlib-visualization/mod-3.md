@@ -85,7 +85,28 @@ plt.show()
 
 > **💡 Tip:** When customizing plots, experiment with different line styles, colors, and markers to find the best representation for your data. Remember that clarity and readability are key.
 
-<div class="quiz">
+Matplotlib allows extensive customization of plot appearance, including line styles, colors, markers, and more. This can be done by passing additional arguments to the `plot` function or using other functions like `xlabel`, `ylabel`, and `title`.
+
+```python title="example2.py"
+import matplotlib.pyplot as plt
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+
+# Creating a customized line plot
+plt.plot(x, y, linestyle='--', color='r', marker='o')
+
+# Adding title and labels
+plt.title('Customized Line Plot')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+
+# Displaying the plot
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What function is used to create a line plot in Matplotlib?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -109,7 +130,28 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Matplotlib allows extensive customization of plot appearance, including line styles, colors, markers, and more. This can be done by passing additional arguments to the `plot` function or using other functions like `xlabel`, `ylabel`, and `title`.
+
+```python title="example2.py"
+import matplotlib.pyplot as plt
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+
+# Creating a customized line plot
+plt.plot(x, y, linestyle='--', color='r', marker='o')
+
+# Adding title and labels
+plt.title('Customized Line Plot')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+
+# Displaying the plot
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which argument can be used to change the line style in a Matplotlib plot?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -66,7 +66,9 @@ Adaptive learning prompts are a cutting-edge trend that allows models to learn f
 
 > **💡 Tip:** To implement adaptive learning prompts, start by collecting data on user interactions and feedback, then use this data to refine and personalize the prompts.
 
-<div class="quiz">
+Adaptive learning prompts are a cutting-edge trend that allows models to learn from user interactions and improve over time. This approach tailors the prompts based on the user's previous inputs and responses, leading to more personalized and effective interactions. By dynamically adjusting to the user's needs, adaptive learning prompts can significantly enhance the user experience and model performance.
+
+>
   <p class="font-semibold mb-3">❓ What is a key feature of adaptive learning prompts?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

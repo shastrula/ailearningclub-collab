@@ -245,7 +245,184 @@ Final keyword example
 
 Learn more: https://docs.oracle.com/javase/tutorial/java/concepts/
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on objects and classes. It's the foundation of Java and enables you to write modular, reusable, and maintainable code. OOP principles include encapsulation, inheritance, polymorphism, and abstraction. Understanding OOP is crucial for professional Java development and building large-scale applications.
+
+```java title="ClassExample.java"
+public class Car {
+    private String brand;
+    public Car(String brand) { this.brand = brand; }
+    public void display() { System.out.println("Brand: " + brand); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota");
+        car.display();
+    }
+}
+```
+
+
+
+```
+Brand: Toyota
+```
+
+```java title="Inheritance.java"
+class Animal {
+    void eat() { System.out.println("Eating"); }
+}
+class Dog extends Animal {
+    void bark() { System.out.println("Barking"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+    }
+}
+```
+
+```
+Eating
+Barking
+```
+
+```java title="Polymorphism.java"
+class Shape {
+    void draw() { System.out.println("Shape"); }
+}
+class Circle extends Shape {
+    @Override void draw() { System.out.println("Circle"); }
+}
+class Rectangle extends Shape {
+    @Override void draw() { System.out.println("Rectangle"); }
+}
+```
+
+```
+Polymorphism example
+```
+
+```java title="Encapsulation.java"
+public class Person {
+    private String name;
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+}
+```
+
+```
+Encapsulation example
+```
+
+```java title="Constructor.java"
+public class Student {
+    private String name;
+    public Student() { this.name = "Unknown"; }
+    public Student(String name) { this.name = name; }
+}
+```
+
+```
+Constructor example
+```
+
+```java title="StaticExample.java"
+public class Counter {
+    static int count = 0;
+    Counter() { count++; }
+    static void display() { System.out.println("Count: " + count); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Counter();
+        new Counter();
+        Counter.display();
+    }
+}
+```
+
+```
+Count: 2
+```
+
+```java title="Interface.java"
+interface Animal {
+    void sound();
+}
+class Dog implements Animal {
+    public void sound() { System.out.println("Woof"); }
+}
+class Cat implements Animal {
+    public void sound() { System.out.println("Meow"}; }
+}
+```
+
+```
+Interface example
+```
+
+```java title="AbstractClass.java"
+abstract class Vehicle {
+    abstract void start();
+    void stop() { System.out.println("Stopped"); }
+}
+class Car extends Vehicle {
+    void start() { System.out.println("Car started"); }
+}
+```
+
+```
+Abstract class example
+```
+
+```java title="ThisKeyword.java"
+public class Example {
+    int x = 10;
+    void display() {
+        int x = 20;
+        System.out.println("Local: " + x);
+        System.out.println("Instance: " + this.x);
+    }
+}
+```
+
+```
+Local: 20
+Instance: 10
+```
+
+```java title="SuperKeyword.java"
+class Parent {
+    void display() { System.out.println("Parent"); }
+}
+class Child extends Parent {
+    void display() {
+        super.display();
+        System.out.println("Child");
+    }
+}
+```
+
+```
+Parent
+Child
+```
+
+```java title="FinalKeyword.java"
+public class FinalExample {
+    final int MAX = 100;
+    final void display() { System.out.println("Final method"); }
+}
+final class ImmutableClass { }
+```
+
+```
+Final keyword example
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a class?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -269,7 +446,184 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/concepts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on objects and classes. It's the foundation of Java and enables you to write modular, reusable, and maintainable code. OOP principles include encapsulation, inheritance, polymorphism, and abstraction. Understanding OOP is crucial for professional Java development and building large-scale applications.
+
+```java title="ClassExample.java"
+public class Car {
+    private String brand;
+    public Car(String brand) { this.brand = brand; }
+    public void display() { System.out.println("Brand: " + brand); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota");
+        car.display();
+    }
+}
+```
+
+
+
+```
+Brand: Toyota
+```
+
+```java title="Inheritance.java"
+class Animal {
+    void eat() { System.out.println("Eating"); }
+}
+class Dog extends Animal {
+    void bark() { System.out.println("Barking"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+    }
+}
+```
+
+```
+Eating
+Barking
+```
+
+```java title="Polymorphism.java"
+class Shape {
+    void draw() { System.out.println("Shape"); }
+}
+class Circle extends Shape {
+    @Override void draw() { System.out.println("Circle"); }
+}
+class Rectangle extends Shape {
+    @Override void draw() { System.out.println("Rectangle"); }
+}
+```
+
+```
+Polymorphism example
+```
+
+```java title="Encapsulation.java"
+public class Person {
+    private String name;
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+}
+```
+
+```
+Encapsulation example
+```
+
+```java title="Constructor.java"
+public class Student {
+    private String name;
+    public Student() { this.name = "Unknown"; }
+    public Student(String name) { this.name = name; }
+}
+```
+
+```
+Constructor example
+```
+
+```java title="StaticExample.java"
+public class Counter {
+    static int count = 0;
+    Counter() { count++; }
+    static void display() { System.out.println("Count: " + count); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Counter();
+        new Counter();
+        Counter.display();
+    }
+}
+```
+
+```
+Count: 2
+```
+
+```java title="Interface.java"
+interface Animal {
+    void sound();
+}
+class Dog implements Animal {
+    public void sound() { System.out.println("Woof"); }
+}
+class Cat implements Animal {
+    public void sound() { System.out.println("Meow"}; }
+}
+```
+
+```
+Interface example
+```
+
+```java title="AbstractClass.java"
+abstract class Vehicle {
+    abstract void start();
+    void stop() { System.out.println("Stopped"); }
+}
+class Car extends Vehicle {
+    void start() { System.out.println("Car started"); }
+}
+```
+
+```
+Abstract class example
+```
+
+```java title="ThisKeyword.java"
+public class Example {
+    int x = 10;
+    void display() {
+        int x = 20;
+        System.out.println("Local: " + x);
+        System.out.println("Instance: " + this.x);
+    }
+}
+```
+
+```
+Local: 20
+Instance: 10
+```
+
+```java title="SuperKeyword.java"
+class Parent {
+    void display() { System.out.println("Parent"); }
+}
+class Child extends Parent {
+    void display() {
+        super.display();
+        System.out.println("Child");
+    }
+}
+```
+
+```
+Parent
+Child
+```
+
+```java title="FinalKeyword.java"
+public class FinalExample {
+    final int MAX = 100;
+    final void display() { System.out.println("Final method"); }
+}
+final class ImmutableClass { }
+```
+
+```
+Final keyword example
+```
+
+>
   <p class="font-semibold mb-3">❓ What is inheritance?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -293,7 +647,184 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/concepts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on objects and classes. It's the foundation of Java and enables you to write modular, reusable, and maintainable code. OOP principles include encapsulation, inheritance, polymorphism, and abstraction. Understanding OOP is crucial for professional Java development and building large-scale applications.
+
+```java title="ClassExample.java"
+public class Car {
+    private String brand;
+    public Car(String brand) { this.brand = brand; }
+    public void display() { System.out.println("Brand: " + brand); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota");
+        car.display();
+    }
+}
+```
+
+
+
+```
+Brand: Toyota
+```
+
+```java title="Inheritance.java"
+class Animal {
+    void eat() { System.out.println("Eating"); }
+}
+class Dog extends Animal {
+    void bark() { System.out.println("Barking"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+    }
+}
+```
+
+```
+Eating
+Barking
+```
+
+```java title="Polymorphism.java"
+class Shape {
+    void draw() { System.out.println("Shape"); }
+}
+class Circle extends Shape {
+    @Override void draw() { System.out.println("Circle"); }
+}
+class Rectangle extends Shape {
+    @Override void draw() { System.out.println("Rectangle"); }
+}
+```
+
+```
+Polymorphism example
+```
+
+```java title="Encapsulation.java"
+public class Person {
+    private String name;
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+}
+```
+
+```
+Encapsulation example
+```
+
+```java title="Constructor.java"
+public class Student {
+    private String name;
+    public Student() { this.name = "Unknown"; }
+    public Student(String name) { this.name = name; }
+}
+```
+
+```
+Constructor example
+```
+
+```java title="StaticExample.java"
+public class Counter {
+    static int count = 0;
+    Counter() { count++; }
+    static void display() { System.out.println("Count: " + count); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Counter();
+        new Counter();
+        Counter.display();
+    }
+}
+```
+
+```
+Count: 2
+```
+
+```java title="Interface.java"
+interface Animal {
+    void sound();
+}
+class Dog implements Animal {
+    public void sound() { System.out.println("Woof"); }
+}
+class Cat implements Animal {
+    public void sound() { System.out.println("Meow"}; }
+}
+```
+
+```
+Interface example
+```
+
+```java title="AbstractClass.java"
+abstract class Vehicle {
+    abstract void start();
+    void stop() { System.out.println("Stopped"); }
+}
+class Car extends Vehicle {
+    void start() { System.out.println("Car started"); }
+}
+```
+
+```
+Abstract class example
+```
+
+```java title="ThisKeyword.java"
+public class Example {
+    int x = 10;
+    void display() {
+        int x = 20;
+        System.out.println("Local: " + x);
+        System.out.println("Instance: " + this.x);
+    }
+}
+```
+
+```
+Local: 20
+Instance: 10
+```
+
+```java title="SuperKeyword.java"
+class Parent {
+    void display() { System.out.println("Parent"); }
+}
+class Child extends Parent {
+    void display() {
+        super.display();
+        System.out.println("Child");
+    }
+}
+```
+
+```
+Parent
+Child
+```
+
+```java title="FinalKeyword.java"
+public class FinalExample {
+    final int MAX = 100;
+    final void display() { System.out.println("Final method"); }
+}
+final class ImmutableClass { }
+```
+
+```
+Final keyword example
+```
+
+>
   <p class="font-semibold mb-3">❓ What does encapsulation do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -317,7 +848,184 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/concepts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on objects and classes. It's the foundation of Java and enables you to write modular, reusable, and maintainable code. OOP principles include encapsulation, inheritance, polymorphism, and abstraction. Understanding OOP is crucial for professional Java development and building large-scale applications.
+
+```java title="ClassExample.java"
+public class Car {
+    private String brand;
+    public Car(String brand) { this.brand = brand; }
+    public void display() { System.out.println("Brand: " + brand); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota");
+        car.display();
+    }
+}
+```
+
+
+
+```
+Brand: Toyota
+```
+
+```java title="Inheritance.java"
+class Animal {
+    void eat() { System.out.println("Eating"); }
+}
+class Dog extends Animal {
+    void bark() { System.out.println("Barking"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+    }
+}
+```
+
+```
+Eating
+Barking
+```
+
+```java title="Polymorphism.java"
+class Shape {
+    void draw() { System.out.println("Shape"); }
+}
+class Circle extends Shape {
+    @Override void draw() { System.out.println("Circle"); }
+}
+class Rectangle extends Shape {
+    @Override void draw() { System.out.println("Rectangle"); }
+}
+```
+
+```
+Polymorphism example
+```
+
+```java title="Encapsulation.java"
+public class Person {
+    private String name;
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+}
+```
+
+```
+Encapsulation example
+```
+
+```java title="Constructor.java"
+public class Student {
+    private String name;
+    public Student() { this.name = "Unknown"; }
+    public Student(String name) { this.name = name; }
+}
+```
+
+```
+Constructor example
+```
+
+```java title="StaticExample.java"
+public class Counter {
+    static int count = 0;
+    Counter() { count++; }
+    static void display() { System.out.println("Count: " + count); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Counter();
+        new Counter();
+        Counter.display();
+    }
+}
+```
+
+```
+Count: 2
+```
+
+```java title="Interface.java"
+interface Animal {
+    void sound();
+}
+class Dog implements Animal {
+    public void sound() { System.out.println("Woof"); }
+}
+class Cat implements Animal {
+    public void sound() { System.out.println("Meow"}; }
+}
+```
+
+```
+Interface example
+```
+
+```java title="AbstractClass.java"
+abstract class Vehicle {
+    abstract void start();
+    void stop() { System.out.println("Stopped"); }
+}
+class Car extends Vehicle {
+    void start() { System.out.println("Car started"); }
+}
+```
+
+```
+Abstract class example
+```
+
+```java title="ThisKeyword.java"
+public class Example {
+    int x = 10;
+    void display() {
+        int x = 20;
+        System.out.println("Local: " + x);
+        System.out.println("Instance: " + this.x);
+    }
+}
+```
+
+```
+Local: 20
+Instance: 10
+```
+
+```java title="SuperKeyword.java"
+class Parent {
+    void display() { System.out.println("Parent"); }
+}
+class Child extends Parent {
+    void display() {
+        super.display();
+        System.out.println("Child");
+    }
+}
+```
+
+```
+Parent
+Child
+```
+
+```java title="FinalKeyword.java"
+public class FinalExample {
+    final int MAX = 100;
+    final void display() { System.out.println("Final method"); }
+}
+final class ImmutableClass { }
+```
+
+```
+Final keyword example
+```
+
+>
   <p class="font-semibold mb-3">❓ What is polymorphism?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -341,7 +1049,184 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/concepts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on objects and classes. It's the foundation of Java and enables you to write modular, reusable, and maintainable code. OOP principles include encapsulation, inheritance, polymorphism, and abstraction. Understanding OOP is crucial for professional Java development and building large-scale applications.
+
+```java title="ClassExample.java"
+public class Car {
+    private String brand;
+    public Car(String brand) { this.brand = brand; }
+    public void display() { System.out.println("Brand: " + brand); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota");
+        car.display();
+    }
+}
+```
+
+
+
+```
+Brand: Toyota
+```
+
+```java title="Inheritance.java"
+class Animal {
+    void eat() { System.out.println("Eating"); }
+}
+class Dog extends Animal {
+    void bark() { System.out.println("Barking"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+    }
+}
+```
+
+```
+Eating
+Barking
+```
+
+```java title="Polymorphism.java"
+class Shape {
+    void draw() { System.out.println("Shape"); }
+}
+class Circle extends Shape {
+    @Override void draw() { System.out.println("Circle"); }
+}
+class Rectangle extends Shape {
+    @Override void draw() { System.out.println("Rectangle"); }
+}
+```
+
+```
+Polymorphism example
+```
+
+```java title="Encapsulation.java"
+public class Person {
+    private String name;
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+}
+```
+
+```
+Encapsulation example
+```
+
+```java title="Constructor.java"
+public class Student {
+    private String name;
+    public Student() { this.name = "Unknown"; }
+    public Student(String name) { this.name = name; }
+}
+```
+
+```
+Constructor example
+```
+
+```java title="StaticExample.java"
+public class Counter {
+    static int count = 0;
+    Counter() { count++; }
+    static void display() { System.out.println("Count: " + count); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Counter();
+        new Counter();
+        Counter.display();
+    }
+}
+```
+
+```
+Count: 2
+```
+
+```java title="Interface.java"
+interface Animal {
+    void sound();
+}
+class Dog implements Animal {
+    public void sound() { System.out.println("Woof"); }
+}
+class Cat implements Animal {
+    public void sound() { System.out.println("Meow"}; }
+}
+```
+
+```
+Interface example
+```
+
+```java title="AbstractClass.java"
+abstract class Vehicle {
+    abstract void start();
+    void stop() { System.out.println("Stopped"); }
+}
+class Car extends Vehicle {
+    void start() { System.out.println("Car started"); }
+}
+```
+
+```
+Abstract class example
+```
+
+```java title="ThisKeyword.java"
+public class Example {
+    int x = 10;
+    void display() {
+        int x = 20;
+        System.out.println("Local: " + x);
+        System.out.println("Instance: " + this.x);
+    }
+}
+```
+
+```
+Local: 20
+Instance: 10
+```
+
+```java title="SuperKeyword.java"
+class Parent {
+    void display() { System.out.println("Parent"); }
+}
+class Child extends Parent {
+    void display() {
+        super.display();
+        System.out.println("Child");
+    }
+}
+```
+
+```
+Parent
+Child
+```
+
+```java title="FinalKeyword.java"
+public class FinalExample {
+    final int MAX = 100;
+    final void display() { System.out.println("Final method"); }
+}
+final class ImmutableClass { }
+```
+
+```
+Final keyword example
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the purpose of a constructor?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -365,7 +1250,184 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/concepts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on objects and classes. It's the foundation of Java and enables you to write modular, reusable, and maintainable code. OOP principles include encapsulation, inheritance, polymorphism, and abstraction. Understanding OOP is crucial for professional Java development and building large-scale applications.
+
+```java title="ClassExample.java"
+public class Car {
+    private String brand;
+    public Car(String brand) { this.brand = brand; }
+    public void display() { System.out.println("Brand: " + brand); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota");
+        car.display();
+    }
+}
+```
+
+
+
+```
+Brand: Toyota
+```
+
+```java title="Inheritance.java"
+class Animal {
+    void eat() { System.out.println("Eating"); }
+}
+class Dog extends Animal {
+    void bark() { System.out.println("Barking"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+    }
+}
+```
+
+```
+Eating
+Barking
+```
+
+```java title="Polymorphism.java"
+class Shape {
+    void draw() { System.out.println("Shape"); }
+}
+class Circle extends Shape {
+    @Override void draw() { System.out.println("Circle"); }
+}
+class Rectangle extends Shape {
+    @Override void draw() { System.out.println("Rectangle"); }
+}
+```
+
+```
+Polymorphism example
+```
+
+```java title="Encapsulation.java"
+public class Person {
+    private String name;
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+}
+```
+
+```
+Encapsulation example
+```
+
+```java title="Constructor.java"
+public class Student {
+    private String name;
+    public Student() { this.name = "Unknown"; }
+    public Student(String name) { this.name = name; }
+}
+```
+
+```
+Constructor example
+```
+
+```java title="StaticExample.java"
+public class Counter {
+    static int count = 0;
+    Counter() { count++; }
+    static void display() { System.out.println("Count: " + count); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Counter();
+        new Counter();
+        Counter.display();
+    }
+}
+```
+
+```
+Count: 2
+```
+
+```java title="Interface.java"
+interface Animal {
+    void sound();
+}
+class Dog implements Animal {
+    public void sound() { System.out.println("Woof"); }
+}
+class Cat implements Animal {
+    public void sound() { System.out.println("Meow"}; }
+}
+```
+
+```
+Interface example
+```
+
+```java title="AbstractClass.java"
+abstract class Vehicle {
+    abstract void start();
+    void stop() { System.out.println("Stopped"); }
+}
+class Car extends Vehicle {
+    void start() { System.out.println("Car started"); }
+}
+```
+
+```
+Abstract class example
+```
+
+```java title="ThisKeyword.java"
+public class Example {
+    int x = 10;
+    void display() {
+        int x = 20;
+        System.out.println("Local: " + x);
+        System.out.println("Instance: " + this.x);
+    }
+}
+```
+
+```
+Local: 20
+Instance: 10
+```
+
+```java title="SuperKeyword.java"
+class Parent {
+    void display() { System.out.println("Parent"); }
+}
+class Child extends Parent {
+    void display() {
+        super.display();
+        System.out.println("Child");
+    }
+}
+```
+
+```
+Parent
+Child
+```
+
+```java title="FinalKeyword.java"
+public class FinalExample {
+    final int MAX = 100;
+    final void display() { System.out.println("Final method"); }
+}
+final class ImmutableClass { }
+```
+
+```
+Final keyword example
+```
+
+>
   <p class="font-semibold mb-3">❓ What does the static keyword do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -389,7 +1451,184 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/concepts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on objects and classes. It's the foundation of Java and enables you to write modular, reusable, and maintainable code. OOP principles include encapsulation, inheritance, polymorphism, and abstraction. Understanding OOP is crucial for professional Java development and building large-scale applications.
+
+```java title="ClassExample.java"
+public class Car {
+    private String brand;
+    public Car(String brand) { this.brand = brand; }
+    public void display() { System.out.println("Brand: " + brand); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota");
+        car.display();
+    }
+}
+```
+
+
+
+```
+Brand: Toyota
+```
+
+```java title="Inheritance.java"
+class Animal {
+    void eat() { System.out.println("Eating"); }
+}
+class Dog extends Animal {
+    void bark() { System.out.println("Barking"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+    }
+}
+```
+
+```
+Eating
+Barking
+```
+
+```java title="Polymorphism.java"
+class Shape {
+    void draw() { System.out.println("Shape"); }
+}
+class Circle extends Shape {
+    @Override void draw() { System.out.println("Circle"); }
+}
+class Rectangle extends Shape {
+    @Override void draw() { System.out.println("Rectangle"); }
+}
+```
+
+```
+Polymorphism example
+```
+
+```java title="Encapsulation.java"
+public class Person {
+    private String name;
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+}
+```
+
+```
+Encapsulation example
+```
+
+```java title="Constructor.java"
+public class Student {
+    private String name;
+    public Student() { this.name = "Unknown"; }
+    public Student(String name) { this.name = name; }
+}
+```
+
+```
+Constructor example
+```
+
+```java title="StaticExample.java"
+public class Counter {
+    static int count = 0;
+    Counter() { count++; }
+    static void display() { System.out.println("Count: " + count); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Counter();
+        new Counter();
+        Counter.display();
+    }
+}
+```
+
+```
+Count: 2
+```
+
+```java title="Interface.java"
+interface Animal {
+    void sound();
+}
+class Dog implements Animal {
+    public void sound() { System.out.println("Woof"); }
+}
+class Cat implements Animal {
+    public void sound() { System.out.println("Meow"}; }
+}
+```
+
+```
+Interface example
+```
+
+```java title="AbstractClass.java"
+abstract class Vehicle {
+    abstract void start();
+    void stop() { System.out.println("Stopped"); }
+}
+class Car extends Vehicle {
+    void start() { System.out.println("Car started"); }
+}
+```
+
+```
+Abstract class example
+```
+
+```java title="ThisKeyword.java"
+public class Example {
+    int x = 10;
+    void display() {
+        int x = 20;
+        System.out.println("Local: " + x);
+        System.out.println("Instance: " + this.x);
+    }
+}
+```
+
+```
+Local: 20
+Instance: 10
+```
+
+```java title="SuperKeyword.java"
+class Parent {
+    void display() { System.out.println("Parent"); }
+}
+class Child extends Parent {
+    void display() {
+        super.display();
+        System.out.println("Child");
+    }
+}
+```
+
+```
+Parent
+Child
+```
+
+```java title="FinalKeyword.java"
+public class FinalExample {
+    final int MAX = 100;
+    final void display() { System.out.println("Final method"); }
+}
+final class ImmutableClass { }
+```
+
+```
+Final keyword example
+```
+
+>
   <p class="font-semibold mb-3">❓ What is an interface?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -413,7 +1652,184 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/concepts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on objects and classes. It's the foundation of Java and enables you to write modular, reusable, and maintainable code. OOP principles include encapsulation, inheritance, polymorphism, and abstraction. Understanding OOP is crucial for professional Java development and building large-scale applications.
+
+```java title="ClassExample.java"
+public class Car {
+    private String brand;
+    public Car(String brand) { this.brand = brand; }
+    public void display() { System.out.println("Brand: " + brand); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota");
+        car.display();
+    }
+}
+```
+
+
+
+```
+Brand: Toyota
+```
+
+```java title="Inheritance.java"
+class Animal {
+    void eat() { System.out.println("Eating"); }
+}
+class Dog extends Animal {
+    void bark() { System.out.println("Barking"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+    }
+}
+```
+
+```
+Eating
+Barking
+```
+
+```java title="Polymorphism.java"
+class Shape {
+    void draw() { System.out.println("Shape"); }
+}
+class Circle extends Shape {
+    @Override void draw() { System.out.println("Circle"); }
+}
+class Rectangle extends Shape {
+    @Override void draw() { System.out.println("Rectangle"); }
+}
+```
+
+```
+Polymorphism example
+```
+
+```java title="Encapsulation.java"
+public class Person {
+    private String name;
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+}
+```
+
+```
+Encapsulation example
+```
+
+```java title="Constructor.java"
+public class Student {
+    private String name;
+    public Student() { this.name = "Unknown"; }
+    public Student(String name) { this.name = name; }
+}
+```
+
+```
+Constructor example
+```
+
+```java title="StaticExample.java"
+public class Counter {
+    static int count = 0;
+    Counter() { count++; }
+    static void display() { System.out.println("Count: " + count); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Counter();
+        new Counter();
+        Counter.display();
+    }
+}
+```
+
+```
+Count: 2
+```
+
+```java title="Interface.java"
+interface Animal {
+    void sound();
+}
+class Dog implements Animal {
+    public void sound() { System.out.println("Woof"); }
+}
+class Cat implements Animal {
+    public void sound() { System.out.println("Meow"}; }
+}
+```
+
+```
+Interface example
+```
+
+```java title="AbstractClass.java"
+abstract class Vehicle {
+    abstract void start();
+    void stop() { System.out.println("Stopped"); }
+}
+class Car extends Vehicle {
+    void start() { System.out.println("Car started"); }
+}
+```
+
+```
+Abstract class example
+```
+
+```java title="ThisKeyword.java"
+public class Example {
+    int x = 10;
+    void display() {
+        int x = 20;
+        System.out.println("Local: " + x);
+        System.out.println("Instance: " + this.x);
+    }
+}
+```
+
+```
+Local: 20
+Instance: 10
+```
+
+```java title="SuperKeyword.java"
+class Parent {
+    void display() { System.out.println("Parent"); }
+}
+class Child extends Parent {
+    void display() {
+        super.display();
+        System.out.println("Child");
+    }
+}
+```
+
+```
+Parent
+Child
+```
+
+```java title="FinalKeyword.java"
+public class FinalExample {
+    final int MAX = 100;
+    final void display() { System.out.println("Final method"); }
+}
+final class ImmutableClass { }
+```
+
+```
+Final keyword example
+```
+
+>
   <p class="font-semibold mb-3">❓ What is an abstract class?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -437,7 +1853,184 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/concepts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on objects and classes. It's the foundation of Java and enables you to write modular, reusable, and maintainable code. OOP principles include encapsulation, inheritance, polymorphism, and abstraction. Understanding OOP is crucial for professional Java development and building large-scale applications.
+
+```java title="ClassExample.java"
+public class Car {
+    private String brand;
+    public Car(String brand) { this.brand = brand; }
+    public void display() { System.out.println("Brand: " + brand); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota");
+        car.display();
+    }
+}
+```
+
+
+
+```
+Brand: Toyota
+```
+
+```java title="Inheritance.java"
+class Animal {
+    void eat() { System.out.println("Eating"); }
+}
+class Dog extends Animal {
+    void bark() { System.out.println("Barking"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+    }
+}
+```
+
+```
+Eating
+Barking
+```
+
+```java title="Polymorphism.java"
+class Shape {
+    void draw() { System.out.println("Shape"); }
+}
+class Circle extends Shape {
+    @Override void draw() { System.out.println("Circle"); }
+}
+class Rectangle extends Shape {
+    @Override void draw() { System.out.println("Rectangle"); }
+}
+```
+
+```
+Polymorphism example
+```
+
+```java title="Encapsulation.java"
+public class Person {
+    private String name;
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+}
+```
+
+```
+Encapsulation example
+```
+
+```java title="Constructor.java"
+public class Student {
+    private String name;
+    public Student() { this.name = "Unknown"; }
+    public Student(String name) { this.name = name; }
+}
+```
+
+```
+Constructor example
+```
+
+```java title="StaticExample.java"
+public class Counter {
+    static int count = 0;
+    Counter() { count++; }
+    static void display() { System.out.println("Count: " + count); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Counter();
+        new Counter();
+        Counter.display();
+    }
+}
+```
+
+```
+Count: 2
+```
+
+```java title="Interface.java"
+interface Animal {
+    void sound();
+}
+class Dog implements Animal {
+    public void sound() { System.out.println("Woof"); }
+}
+class Cat implements Animal {
+    public void sound() { System.out.println("Meow"}; }
+}
+```
+
+```
+Interface example
+```
+
+```java title="AbstractClass.java"
+abstract class Vehicle {
+    abstract void start();
+    void stop() { System.out.println("Stopped"); }
+}
+class Car extends Vehicle {
+    void start() { System.out.println("Car started"); }
+}
+```
+
+```
+Abstract class example
+```
+
+```java title="ThisKeyword.java"
+public class Example {
+    int x = 10;
+    void display() {
+        int x = 20;
+        System.out.println("Local: " + x);
+        System.out.println("Instance: " + this.x);
+    }
+}
+```
+
+```
+Local: 20
+Instance: 10
+```
+
+```java title="SuperKeyword.java"
+class Parent {
+    void display() { System.out.println("Parent"); }
+}
+class Child extends Parent {
+    void display() {
+        super.display();
+        System.out.println("Child");
+    }
+}
+```
+
+```
+Parent
+Child
+```
+
+```java title="FinalKeyword.java"
+public class FinalExample {
+    final int MAX = 100;
+    final void display() { System.out.println("Final method"); }
+}
+final class ImmutableClass { }
+```
+
+```
+Final keyword example
+```
+
+>
   <p class="font-semibold mb-3">❓ What does the this keyword refer to?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -461,7 +2054,184 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/concepts/
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on objects and classes. It's the foundation of Java and enables you to write modular, reusable, and maintainable code. OOP principles include encapsulation, inheritance, polymorphism, and abstraction. Understanding OOP is crucial for professional Java development and building large-scale applications.
+
+```java title="ClassExample.java"
+public class Car {
+    private String brand;
+    public Car(String brand) { this.brand = brand; }
+    public void display() { System.out.println("Brand: " + brand); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota");
+        car.display();
+    }
+}
+```
+
+
+
+```
+Brand: Toyota
+```
+
+```java title="Inheritance.java"
+class Animal {
+    void eat() { System.out.println("Eating"); }
+}
+class Dog extends Animal {
+    void bark() { System.out.println("Barking"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+    }
+}
+```
+
+```
+Eating
+Barking
+```
+
+```java title="Polymorphism.java"
+class Shape {
+    void draw() { System.out.println("Shape"); }
+}
+class Circle extends Shape {
+    @Override void draw() { System.out.println("Circle"); }
+}
+class Rectangle extends Shape {
+    @Override void draw() { System.out.println("Rectangle"); }
+}
+```
+
+```
+Polymorphism example
+```
+
+```java title="Encapsulation.java"
+public class Person {
+    private String name;
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+}
+```
+
+```
+Encapsulation example
+```
+
+```java title="Constructor.java"
+public class Student {
+    private String name;
+    public Student() { this.name = "Unknown"; }
+    public Student(String name) { this.name = name; }
+}
+```
+
+```
+Constructor example
+```
+
+```java title="StaticExample.java"
+public class Counter {
+    static int count = 0;
+    Counter() { count++; }
+    static void display() { System.out.println("Count: " + count); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Counter();
+        new Counter();
+        Counter.display();
+    }
+}
+```
+
+```
+Count: 2
+```
+
+```java title="Interface.java"
+interface Animal {
+    void sound();
+}
+class Dog implements Animal {
+    public void sound() { System.out.println("Woof"); }
+}
+class Cat implements Animal {
+    public void sound() { System.out.println("Meow"}; }
+}
+```
+
+```
+Interface example
+```
+
+```java title="AbstractClass.java"
+abstract class Vehicle {
+    abstract void start();
+    void stop() { System.out.println("Stopped"); }
+}
+class Car extends Vehicle {
+    void start() { System.out.println("Car started"); }
+}
+```
+
+```
+Abstract class example
+```
+
+```java title="ThisKeyword.java"
+public class Example {
+    int x = 10;
+    void display() {
+        int x = 20;
+        System.out.println("Local: " + x);
+        System.out.println("Instance: " + this.x);
+    }
+}
+```
+
+```
+Local: 20
+Instance: 10
+```
+
+```java title="SuperKeyword.java"
+class Parent {
+    void display() { System.out.println("Parent"); }
+}
+class Child extends Parent {
+    void display() {
+        super.display();
+        System.out.println("Child");
+    }
+}
+```
+
+```
+Parent
+Child
+```
+
+```java title="FinalKeyword.java"
+public class FinalExample {
+    final int MAX = 100;
+    final void display() { System.out.println("Final method"); }
+}
+final class ImmutableClass { }
+```
+
+```
+Final keyword example
+```
+
+>
   <p class="font-semibold mb-3">❓ What does the super keyword do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

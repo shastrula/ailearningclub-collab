@@ -68,7 +68,13 @@ Learning from others' experiences:
 - **RMSE** (Root Mean Squared Error): Square root of MSE
 - **R²**: Proportion of variance explained
 
-<div class="quiz">
+### For Regression
+- **MAE** (Mean Absolute Error): Average absolute difference
+- **MSE** (Mean Squared Error): Average squared difference
+- **RMSE** (Root Mean Squared Error): Square root of MSE
+- **R²**: Proportion of variance explained
+
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does R² = 0.92 mean?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

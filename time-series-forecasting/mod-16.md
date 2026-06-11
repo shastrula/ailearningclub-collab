@@ -83,7 +83,26 @@ print(forecast[['ds', 'yhat']].tail())
 
 > **💡 Tip:** When using Prophet, ensure your data is in a DataFrame with columns named 'ds' for dates and 'y' for values to avoid common errors.
 
-<div class="quiz">
+Prophet is a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects. LSTM (Long Short-Term Memory) is a type of recurrent neural network capable of learning order dependence in sequence prediction problems.
+
+```python title="example2.py"
+from fbprophet import Prophet
+import numpy as np
+
+# Sample data
+df = pd.DataFrame({'ds': pd.date_range(start='2020-01-01', periods=12, freq='M'), 'y': np.random.randint(1, 100, size=12)})
+
+# Fit Prophet model
+model = Prophet()
+model.fit(df)
+
+# Make future dataframe
+future = model.make_future_dataframe(periods=3)
+forecast = model.predict(future)
+print(forecast[['ds', 'yhat']].tail())
+```
+
+>
   <p class="font-semibold mb-3">❓ What does ARIMA stand for in time series forecasting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -107,7 +126,26 @@ print(forecast[['ds', 'yhat']].tail())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Prophet is a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects. LSTM (Long Short-Term Memory) is a type of recurrent neural network capable of learning order dependence in sequence prediction problems.
+
+```python title="example2.py"
+from fbprophet import Prophet
+import numpy as np
+
+# Sample data
+df = pd.DataFrame({'ds': pd.date_range(start='2020-01-01', periods=12, freq='M'), 'y': np.random.randint(1, 100, size=12)})
+
+# Fit Prophet model
+model = Prophet()
+model.fit(df)
+
+# Make future dataframe
+future = model.make_future_dataframe(periods=3)
+forecast = model.predict(future)
+print(forecast[['ds', 'yhat']].tail())
+```
+
+>
   <p class="font-semibold mb-3">❓ Which model is specifically designed to handle seasonality in time series data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

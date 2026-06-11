@@ -87,7 +87,30 @@ print('R-squared:', r2)
 
 > **💡 Tip:** Always ensure your data is scaled appropriately before training your linear regression model. Unscaled data can lead to coefficients that are difficult to interpret and can affect the performance of the model.
 
-<div class="quiz">
+Once the linear regression model is trained, it's important to evaluate its performance. Common metrics for evaluating regression models include Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R-squared. These metrics help in understanding how well the model fits the data and can be used to compare different models.
+
+```python title="example2.py"
+from sklearn.metrics import mean_squared_error, r2_score
+
+# True values
+y_true = np.array([1, 3, 2, 5, 4])
+# Predicted values
+y_pred = np.array([1.4, 2.6, 2.2, 4.6, 3.8])
+
+# Calculate MSE
+mse = mean_squared_error(y_true, y_pred)
+print('Mean Squared Error:', mse)
+
+# Calculate RMSE
+rMSE = np.sqrt(mse)
+print('Root Mean Squared Error:', rMSE)
+
+# Calculate R-squared
+r2 = r2_score(y_true, y_pred)
+print('R-squared:', r2)
+```
+
+>
   <p class="font-semibold mb-3">❓ What method is used to find the line of best fit in linear regression?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -111,7 +134,30 @@ print('R-squared:', r2)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Once the linear regression model is trained, it's important to evaluate its performance. Common metrics for evaluating regression models include Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R-squared. These metrics help in understanding how well the model fits the data and can be used to compare different models.
+
+```python title="example2.py"
+from sklearn.metrics import mean_squared_error, r2_score
+
+# True values
+y_true = np.array([1, 3, 2, 5, 4])
+# Predicted values
+y_pred = np.array([1.4, 2.6, 2.2, 4.6, 3.8])
+
+# Calculate MSE
+mse = mean_squared_error(y_true, y_pred)
+print('Mean Squared Error:', mse)
+
+# Calculate RMSE
+rMSE = np.sqrt(mse)
+print('Root Mean Squared Error:', rMSE)
+
+# Calculate R-squared
+r2 = r2_score(y_true, y_pred)
+print('R-squared:', r2)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which metric is used to evaluate how well a regression model fits the data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

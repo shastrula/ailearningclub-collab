@@ -68,7 +68,13 @@ HTML("<style>.container { width:80% !important; }
 
 > **💡 Tip:** Be cautious when applying custom CSS, as it can affect the readability and layout of your notebook if not done carefully.
 
-<div class="quiz">
+Customizing the appearance of your Jupyter Notebook can make it more visually appealing and easier to read. You can change themes, adjust cell margins, and even add custom CSS to tailor the notebook to your preferences. This can be particularly useful when sharing notebooks with others.
+
+```python title="example2.py"
+from IPython.core.display import HTML
+
+# Apply custom CSS
+HTML("<style>
   <p class="font-semibold mb-3">❓ What is the purpose of the '%matplotlib inline' magic command?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -92,7 +98,13 @@ HTML("<style>.container { width:80% !important; }
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Customizing the appearance of your Jupyter Notebook can make it more visually appealing and easier to read. You can change themes, adjust cell margins, and even add custom CSS to tailor the notebook to your preferences. This can be particularly useful when sharing notebooks with others.
+
+```python title="example2.py"
+from IPython.core.display import HTML
+
+# Apply custom CSS
+HTML("<style>
   <p class="font-semibold mb-3">❓ Which magic command can be used to apply custom CSS to a Jupyter Notebook?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

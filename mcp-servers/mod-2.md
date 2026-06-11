@@ -93,7 +93,36 @@ print(mcp_json)
 
 > **💡 Tip:** Always validate the context information before serializing it to ensure that all required fields are present and correctly formatted.
 
-<div class="quiz">
+To implement MCP in Python, you need to create a class that handles the serialization and deserialization of MCP messages. This class should also provide methods to extract relevant information from the context.
+
+```python title="example2.py"
+import json
+
+class MCPHandler:
+    def __init__(self, model_name, version, context):
+        self.model_name = model_name
+        self.version = version
+        self.context = context
+
+    def serialize(self):
+        return json.dumps({
+           'model_name': self.model_name,
+            'version': self.version,
+            'context': self.context
+        })
+
+    @staticmethod
+    def deserialize(mcp_json):
+        mcp_dict = json.loads(mcp_json)
+        return MCPHandler(mcp_dict['model_name'], mcp_dict['version'], mcp_dict['context'])
+
+# Example usage
+mcp_handler = MCPHandler('ResNet50', '1.0', {'dataset': 'ImageNet', 'environment': 'production'})
+mcp_json = mcp_handler.serialize()
+print(mcp_json)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of the Model Context Protocol?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,7 +146,36 @@ print(mcp_json)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+To implement MCP in Python, you need to create a class that handles the serialization and deserialization of MCP messages. This class should also provide methods to extract relevant information from the context.
+
+```python title="example2.py"
+import json
+
+class MCPHandler:
+    def __init__(self, model_name, version, context):
+        self.model_name = model_name
+        self.version = version
+        self.context = context
+
+    def serialize(self):
+        return json.dumps({
+           'model_name': self.model_name,
+            'version': self.version,
+            'context': self.context
+        })
+
+    @staticmethod
+    def deserialize(mcp_json):
+        mcp_dict = json.loads(mcp_json)
+        return MCPHandler(mcp_dict['model_name'], mcp_dict['version'], mcp_dict['context'])
+
+# Example usage
+mcp_handler = MCPHandler('ResNet50', '1.0', {'dataset': 'ImageNet', 'environment': 'production'})
+mcp_json = mcp_handler.serialize()
+print(mcp_json)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which Python library is used for serializing and deserializing MCP messages in the example?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

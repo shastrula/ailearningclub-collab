@@ -77,7 +77,24 @@ print(installed_version)
 
 > **💡 Tip:** Always specify the channel when installing packages to ensure you are getting the latest and most secure versions.
 
-<div class="quiz">
+Conda makes it easy to install, upgrade, and remove packages. You can install packages using the `conda install` command, and manage them within your environments to avoid conflicts.
+
+```python title="example2.py"
+import conda
+from conda import api
+
+# Install 'numpy' package in the active environment
+api.install(name='numpy', channel='conda-forge')
+
+# Upgrade 'numpy' to the latest version
+api.upgrade(name='numpy')
+
+# List the installed version of 'numpy'
+installed_version = conda.cli.main.run_command(['list', 'numpy'])
+print(installed_version)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of using Conda environments?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +118,24 @@ print(installed_version)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Conda makes it easy to install, upgrade, and remove packages. You can install packages using the `conda install` command, and manage them within your environments to avoid conflicts.
+
+```python title="example2.py"
+import conda
+from conda import api
+
+# Install 'numpy' package in the active environment
+api.install(name='numpy', channel='conda-forge')
+
+# Upgrade 'numpy' to the latest version
+api.upgrade(name='numpy')
+
+# List the installed version of 'numpy'
+installed_version = conda.cli.main.run_command(['list', 'numpy'])
+print(installed_version)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which command is used to install a package in a Conda environment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

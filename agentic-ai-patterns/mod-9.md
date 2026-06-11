@@ -99,7 +99,42 @@ print(results)
 
 > **💡 Tip:** Ensure that agents have clear, well-defined tasks and goals to prevent confusion and improve coordination efficiency.
 
-<div class="quiz">
+Evaluating agent performance is essential for ensuring that orchestration strategies are effective. This involves monitoring the outcomes of agent tasks, assessing their efficiency, and making adjustments to improve overall system performance.
+
+```python title="example2.py"
+import random
+
+# Define a simple agent class
+class Agent:
+    def __init__(self, name):
+        self.name = name
+        self.success_rate = 0
+
+    def perform_task(self):
+        # Simulate task performance
+        result = random.choice([True, False])
+        if result:
+            self.success_rate += 1
+        return result
+
+# Orchestration function to coordinate and evaluate agents
+def orchestrate_and_evaluate(agents, num_tasks):
+    for _ in range(num_tasks):
+        for agent in agents:
+            agent.perform_task()
+    results = {agent.name: agent.success_rate for agent in agents}
+    return results
+
+# Create agents
+agent1 = Agent('Agent1')
+agent2 = Agent('Agent2')
+
+# Orchestrate and evaluate agents
+results = orchestrate_and_evaluate([agent1, agent2], 10)
+print(results)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of agent coordination in orchestration?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -123,7 +158,42 @@ print(results)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Evaluating agent performance is essential for ensuring that orchestration strategies are effective. This involves monitoring the outcomes of agent tasks, assessing their efficiency, and making adjustments to improve overall system performance.
+
+```python title="example2.py"
+import random
+
+# Define a simple agent class
+class Agent:
+    def __init__(self, name):
+        self.name = name
+        self.success_rate = 0
+
+    def perform_task(self):
+        # Simulate task performance
+        result = random.choice([True, False])
+        if result:
+            self.success_rate += 1
+        return result
+
+# Orchestration function to coordinate and evaluate agents
+def orchestrate_and_evaluate(agents, num_tasks):
+    for _ in range(num_tasks):
+        for agent in agents:
+            agent.perform_task()
+    results = {agent.name: agent.success_rate for agent in agents}
+    return results
+
+# Create agents
+agent1 = Agent('Agent1')
+agent2 = Agent('Agent2')
+
+# Orchestrate and evaluate agents
+results = orchestrate_and_evaluate([agent1, agent2], 10)
+print(results)
+```
+
+>
   <p class="font-semibold mb-3">❓ Why is evaluating agent performance important in orchestration?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -84,7 +84,27 @@ print('Best parameters:', grid_search.best_params_)
 
 > **💡 Tip:** When dealing with real-world datasets, always perform thorough data preprocessing and cleaning to ensure the quality of your model's predictions.
 
-<div class="quiz">
+Optimizing model performance involves fine-tuning hyperparameters, using ensemble methods, and leveraging transfer learning. Techniques like grid search, random search, or Bayesian optimization can be employed to find the optimal hyperparameters.
+
+```python title="example2.py"
+from sklearn.model_selection import GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+
+# Example dataset
+X = np.array([[0], [1], [1], [1], [1]])
+y = np.array([0, 1, 1, 1, 1])
+
+# Define parameter grid
+param_grid = {'n_estimators': [50, 100, 200], 'max_depth': [None, 10, 20, 30]}
+
+# Perform grid search
+grid_search = GridSearchCV(RandomForestClassifier(), param_grid, cv=3)
+grid_search.fit(X, y)
+
+print('Best parameters:', grid_search.best_params_)
+```
+
+>
   <p class="font-semibold mb-3">❓ What technique can be used to handle imbalanced datasets?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -108,7 +128,27 @@ print('Best parameters:', grid_search.best_params_)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Optimizing model performance involves fine-tuning hyperparameters, using ensemble methods, and leveraging transfer learning. Techniques like grid search, random search, or Bayesian optimization can be employed to find the optimal hyperparameters.
+
+```python title="example2.py"
+from sklearn.model_selection import GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+
+# Example dataset
+X = np.array([[0], [1], [1], [1], [1]])
+y = np.array([0, 1, 1, 1, 1])
+
+# Define parameter grid
+param_grid = {'n_estimators': [50, 100, 200], 'max_depth': [None, 10, 20, 30]}
+
+# Perform grid search
+grid_search = GridSearchCV(RandomForestClassifier(), param_grid, cv=3)
+grid_search.fit(X, y)
+
+print('Best parameters:', grid_search.best_params_)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which method can be used to find the optimal hyperparameters for a model?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

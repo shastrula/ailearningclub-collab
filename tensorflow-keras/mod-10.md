@@ -104,7 +104,47 @@ model.fit(train_generator, epochs=5)
 
 > **💡 Tip:** When fine-tuning a pre-trained model, it's important to start with a lower learning rate to avoid drastic changes to the pre-trained weights. Additionally, monitor the validation loss to prevent overfitting.
 
-<div class="quiz">
+Fine-tuning involves taking a pre-trained model and continuing its training on a new dataset. This process allows the model to adapt the learned features to the specific task at hand. Typically, the last few layers of the model are retrained, while the earlier layers, which capture more generic features, are kept frozen. This approach balances the need to leverage pre-trained knowledge with the requirement to specialize the model for the new task.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras.applications.vgg16 import VGG16
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras import layers, models
+
+# Load the VGG16 model without the top classification layer
+base_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
+
+# Freeze the base model
+for layer in base_model.layers:
+    layer.trainable = False
+
+# Add custom layers on top of the base model
+model = models.Sequential([
+    base_model,
+    layers.Flatten(),
+    layers.Dense(256, activation='relu'),
+    layers.Dropout(0.5),
+    layers.Dense(1, activation='sigmoid')
+])
+
+# Compile the model
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Prepare data generators
+train_datagen = ImageDataGenerator(rescale=1./255)
+train_generator = train_datagen.flow_from_directory(
+    'data/train',
+    target_size=(224, 224),
+    batch_size=32,
+    class_mode='binary'
+)
+
+# Train the model
+model.fit(train_generator, epochs=5)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using Transfer Learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -128,7 +168,47 @@ model.fit(train_generator, epochs=5)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Fine-tuning involves taking a pre-trained model and continuing its training on a new dataset. This process allows the model to adapt the learned features to the specific task at hand. Typically, the last few layers of the model are retrained, while the earlier layers, which capture more generic features, are kept frozen. This approach balances the need to leverage pre-trained knowledge with the requirement to specialize the model for the new task.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras.applications.vgg16 import VGG16
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras import layers, models
+
+# Load the VGG16 model without the top classification layer
+base_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
+
+# Freeze the base model
+for layer in base_model.layers:
+    layer.trainable = False
+
+# Add custom layers on top of the base model
+model = models.Sequential([
+    base_model,
+    layers.Flatten(),
+    layers.Dense(256, activation='relu'),
+    layers.Dropout(0.5),
+    layers.Dense(1, activation='sigmoid')
+])
+
+# Compile the model
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Prepare data generators
+train_datagen = ImageDataGenerator(rescale=1./255)
+train_generator = train_datagen.flow_from_directory(
+    'data/train',
+    target_size=(224, 224),
+    batch_size=32,
+    class_mode='binary'
+)
+
+# Train the model
+model.fit(train_generator, epochs=5)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which part of the pre-trained model is typically frozen during fine-tuning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

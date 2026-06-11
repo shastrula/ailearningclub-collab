@@ -62,7 +62,7 @@ Learning from others' experiences:
 
 ## Quiz
 
-<div class="quiz">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What will print if x = 5?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

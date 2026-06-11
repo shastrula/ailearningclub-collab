@@ -81,7 +81,24 @@ print(detect_bias(data, 'sensitive_attribute'))
 
 > **💡 Tip:** Regularly update and re-evaluate your bias detection methods as new data and insights become available to ensure ongoing fairness and equity in AI systems.
 
-<div class="quiz">
+Bias in AI can lead to discriminatory outcomes, undermining the trust and effectiveness of AI systems. Developers must implement strategies to detect and mitigate biases in training data and algorithms. This involves regularly auditing AI systems for bias and applying techniques such as re-sampling, re-weighting, or algorithmic fairness constraints.
+
+```python title="example2.py"
+import numpy as np
+
+def detect_bias(data, sensitive_attribute):
+    """Detects bias in data based on a sensitive attribute."""
+    groups = data.groupby(sensitive_attribute)
+    bias_scores = groups.apply(lambda x: np.mean(x['outcome']))
+    return bias_scores
+
+# Example usage
+data = {'sensitive_attribute': ['A', 'B', 'A', 'B'], 'outcome': [1, 0, 1, 0]}
+data = pd.DataFrame(data)
+print(detect_bias(data, 'sensitive_attribute'))
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of ethical frameworks in AI development?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -105,7 +122,24 @@ print(detect_bias(data, 'sensitive_attribute'))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Bias in AI can lead to discriminatory outcomes, undermining the trust and effectiveness of AI systems. Developers must implement strategies to detect and mitigate biases in training data and algorithms. This involves regularly auditing AI systems for bias and applying techniques such as re-sampling, re-weighting, or algorithmic fairness constraints.
+
+```python title="example2.py"
+import numpy as np
+
+def detect_bias(data, sensitive_attribute):
+    """Detects bias in data based on a sensitive attribute."""
+    groups = data.groupby(sensitive_attribute)
+    bias_scores = groups.apply(lambda x: np.mean(x['outcome']))
+    return bias_scores
+
+# Example usage
+data = {'sensitive_attribute': ['A', 'B', 'A', 'B'], 'outcome': [1, 0, 1, 0]}
+data = pd.DataFrame(data)
+print(detect_bias(data, 'sensitive_attribute'))
+```
+
+>
   <p class="font-semibold mb-3">❓ Which technique is commonly used to mitigate bias in AI systems?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

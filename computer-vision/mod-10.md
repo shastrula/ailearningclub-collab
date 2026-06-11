@@ -90,7 +90,33 @@ print('Finished Training')
 
 > **💡 Tip:** When fine-tuning, it's important to use a lower learning rate to avoid overwriting the pre-trained weights too quickly. Additionally, monitor the validation loss to prevent overfitting.
 
-<div class="quiz">
+Fine-tuning involves training the modified model on a new dataset. During fine-tuning, only the parameters of the newly added layers (or the unfrozen layers) are updated, while the rest of the model remains fixed. This process allows the model to adapt to the specific features of the new dataset while retaining the general knowledge learned from the pre-trained model.
+
+```python title="example2.py"
+import torch
+import torch.optim as optim
+
+# Assuming 'model' is already defined and modified as in example1.py
+
+# Define a loss function and optimizer
+criterion = torch.nn.CrossEntropyLoss()
+optimizer = optim.SGD(model.fc.parameters(), lr=0.001, momentum=0.9)
+
+# Training loop (simplified)
+for epoch in range(5):  # loop over the dataset multiple times
+    running_loss = 0.0
+    for inputs, labels in dataloader:  # Assuming 'dataloader' is defined
+        optimizer.zero_grad()
+        outputs = model(inputs)
+        loss = criterion(outputs, labels)
+        loss.backward()
+        optimizer.step()
+        running_loss += loss.item()
+    print(f'Epoch {epoch+1}, Loss: {running_loss/len(dataloader)}')  # Print loss for each epoch
+print('Finished Training')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using transfer learning in computer vision?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -114,7 +140,33 @@ print('Finished Training')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Fine-tuning involves training the modified model on a new dataset. During fine-tuning, only the parameters of the newly added layers (or the unfrozen layers) are updated, while the rest of the model remains fixed. This process allows the model to adapt to the specific features of the new dataset while retaining the general knowledge learned from the pre-trained model.
+
+```python title="example2.py"
+import torch
+import torch.optim as optim
+
+# Assuming 'model' is already defined and modified as in example1.py
+
+# Define a loss function and optimizer
+criterion = torch.nn.CrossEntropyLoss()
+optimizer = optim.SGD(model.fc.parameters(), lr=0.001, momentum=0.9)
+
+# Training loop (simplified)
+for epoch in range(5):  # loop over the dataset multiple times
+    running_loss = 0.0
+    for inputs, labels in dataloader:  # Assuming 'dataloader' is defined
+        optimizer.zero_grad()
+        outputs = model(inputs)
+        loss = criterion(outputs, labels)
+        loss.backward()
+        optimizer.step()
+        running_loss += loss.item()
+    print(f'Epoch {epoch+1}, Loss: {running_loss/len(dataloader)}')  # Print loss for each epoch
+print('Finished Training')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which part of the model is typically fine-tuned during transfer learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

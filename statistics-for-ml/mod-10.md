@@ -87,7 +87,30 @@ print(f'Predicted class: {prediction[0]}')
 
 > **💡 Tip:** When applying Bayes' Theorem, ensure that the prior probabilities and conditional probabilities are accurately estimated, as incorrect values can lead to misleading results.
 
-<div class="quiz">
+Bayes' Theorem is extensively used in machine learning for tasks such as classification, where it helps in predicting the class of an instance by calculating the probability of a class given the evidence. It is the cornerstone of Naive Bayes classifiers, which are popular for their simplicity and effectiveness in text classification tasks.
+
+```python title="example2.py"
+from sklearn.naive_bayes import GaussianNB
+import numpy as np
+
+# Sample data
+X = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
+Y = np.array([1, 1, 1, 2, 2, 2])
+
+# Create a Gaussian Classifier
+gnb = GaussianNB()
+
+# Train the model using the training sets
+gnb.fit(X, Y)
+
+# Predict the output for a new instance
+new_instance = np.array([[-0.8, -1]])
+prediction = gnb.predict(new_instance)
+
+print(f'Predicted class: {prediction[0]}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What does P(A|B) represent in Bayes' Theorem?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -111,7 +134,30 @@ print(f'Predicted class: {prediction[0]}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Bayes' Theorem is extensively used in machine learning for tasks such as classification, where it helps in predicting the class of an instance by calculating the probability of a class given the evidence. It is the cornerstone of Naive Bayes classifiers, which are popular for their simplicity and effectiveness in text classification tasks.
+
+```python title="example2.py"
+from sklearn.naive_bayes import GaussianNB
+import numpy as np
+
+# Sample data
+X = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
+Y = np.array([1, 1, 1, 2, 2, 2])
+
+# Create a Gaussian Classifier
+gnb = GaussianNB()
+
+# Train the model using the training sets
+gnb.fit(X, Y)
+
+# Predict the output for a new instance
+new_instance = np.array([[-0.8, -1]])
+prediction = gnb.predict(new_instance)
+
+print(f'Predicted class: {prediction[0]}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which machine learning algorithm is based on Bayes' Theorem?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

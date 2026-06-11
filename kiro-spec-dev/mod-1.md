@@ -64,7 +64,9 @@ Learning from others' experiences:
 
 Vibe coding means prompting an AI and iterating until something works. It's fast for throwaway scripts but breaks down on anything with multiple components, edge cases, or future maintainers. Spec-driven development trades a small upfront investment in writing for dramatically better output quality and a codebase you can actually understand later.
 
-<div class="quiz">
+Vibe coding means prompting an AI and iterating until something works. It's fast for throwaway scripts but breaks down on anything with multiple components, edge cases, or future maintainers. Spec-driven development trades a small upfront investment in writing for dramatically better output quality and a codebase you can actually understand later.
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the main advantage of writing a spec before asking Kiro to generate code?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

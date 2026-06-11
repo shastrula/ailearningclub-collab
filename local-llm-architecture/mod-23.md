@@ -78,7 +78,21 @@ print(f'CPU Usage: {cpu_usage}%')
 
 > **💡 Tip:** Always monitor your system's resource usage when running large language models to prevent performance issues and ensure stability.
 
-<div class="quiz">
+Deploying local language models requires careful consideration of hardware requirements. Key components include sufficient RAM, a capable CPU or GPU, and adequate storage. For instance, larger models may require more RAM and faster processors to ensure smooth operation. Understanding these requirements helps in selecting the appropriate hardware for optimal performance.
+
+```python title="example2.py"
+import psutil
+
+# Check available RAM
+ram = psutil.virtual_memory().available
+print(f'Available RAM: {ram / (1024 ** 3):.2f} GB')
+
+# Check CPU usage
+cpu_usage = psutil.cpu_percent(interval=1)
+print(f'CPU Usage: {cpu_usage}%')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of Ollama in local LLM deployment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -102,7 +116,21 @@ print(f'CPU Usage: {cpu_usage}%')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Deploying local language models requires careful consideration of hardware requirements. Key components include sufficient RAM, a capable CPU or GPU, and adequate storage. For instance, larger models may require more RAM and faster processors to ensure smooth operation. Understanding these requirements helps in selecting the appropriate hardware for optimal performance.
+
+```python title="example2.py"
+import psutil
+
+# Check available RAM
+ram = psutil.virtual_memory().available
+print(f'Available RAM: {ram / (1024 ** 3):.2f} GB')
+
+# Check CPU usage
+cpu_usage = psutil.cpu_percent(interval=1)
+print(f'CPU Usage: {cpu_usage}%')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a critical hardware requirement for running large language models locally?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

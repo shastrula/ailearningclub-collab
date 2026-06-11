@@ -85,7 +85,28 @@ if __name__ == '__main__':
 
 > **💡 Tip:** When integrating AI agents, ensure that the communication protocol (like MCP) is well-documented and consistently implemented across all components to avoid compatibility issues.
 
-<div class="quiz">
+AI agent integrations involve embedding intelligent agents within applications to perform specific tasks. These agents can range from simple rule-based systems to complex machine learning models. Effective integration requires understanding the agent's capabilities, the application's requirements, and the communication protocols like MCP.
+
+```python title="example2.py"
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+# Endpoint to receive MCP requests
+@app.route('/mcp', methods=['POST'])
+def receive_mcp_request():
+    data = request.json
+    model = data.get('model')
+    context = data.get('context')
+    # Process the request (example: simple echo)
+    response = {'status':'success','model': model, 'context': context}
+    return jsonify(response)
+
+if __name__ == '__main__':
+    app.run(port=5000)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of Model Context Protocol (MCP)?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -109,7 +130,28 @@ if __name__ == '__main__':
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+AI agent integrations involve embedding intelligent agents within applications to perform specific tasks. These agents can range from simple rule-based systems to complex machine learning models. Effective integration requires understanding the agent's capabilities, the application's requirements, and the communication protocols like MCP.
+
+```python title="example2.py"
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+# Endpoint to receive MCP requests
+@app.route('/mcp', methods=['POST'])
+def receive_mcp_request():
+    data = request.json
+    model = data.get('model')
+    context = data.get('context')
+    # Process the request (example: simple echo)
+    response = {'status':'success','model': model, 'context': context}
+    return jsonify(response)
+
+if __name__ == '__main__':
+    app.run(port=5000)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a key consideration when integrating AI agents into applications?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

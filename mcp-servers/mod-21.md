@@ -83,7 +83,26 @@ print(sentiment)
 
 > **💡 Tip:** When building AI agent integrations, ensure that you handle potential errors gracefully by implementing retry mechanisms and logging. This will help in maintaining the reliability and robustness of your AI solutions.
 
-<div class="quiz">
+Building AI agent integrations involves creating workflows where AI agents interact with various services and APIs to perform tasks. This can include natural language processing, data analysis, and automated decision-making. Effective integrations require careful planning, robust error handling, and continuous monitoring to ensure optimal performance.
+
+```python title="example2.py"
+import requests
+
+# Define the MCP server endpoint for sentiment analysis
+mcp_endpoint = 'http://localhost:5000/api/sentiment'
+
+# Prepare the input data
+input_data = {'text': 'I love this product!'}
+
+# Send a POST request to the MCP server
+response = requests.post(mcp_endpoint, json=input_data)
+
+# Extract and print the sentiment
+sentiment = response.json().get('sentiment')
+print(sentiment)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary function of an MCP server?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -107,7 +126,26 @@ print(sentiment)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Building AI agent integrations involves creating workflows where AI agents interact with various services and APIs to perform tasks. This can include natural language processing, data analysis, and automated decision-making. Effective integrations require careful planning, robust error handling, and continuous monitoring to ensure optimal performance.
+
+```python title="example2.py"
+import requests
+
+# Define the MCP server endpoint for sentiment analysis
+mcp_endpoint = 'http://localhost:5000/api/sentiment'
+
+# Prepare the input data
+input_data = {'text': 'I love this product!'}
+
+# Send a POST request to the MCP server
+response = requests.post(mcp_endpoint, json=input_data)
+
+# Extract and print the sentiment
+sentiment = response.json().get('sentiment')
+print(sentiment)
+```
+
+>
   <p class="font-semibold mb-3">❓ What should you implement to handle potential errors in AI agent integrations?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

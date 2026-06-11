@@ -77,7 +77,20 @@ for i in range(1000000):
 
 > **💡 Tip:** Be cautious when using magic commands, as they can sometimes lead to unexpected behavior if not used correctly. Always refer to the official documentation for guidance.
 
-<div class="quiz">
+Magic commands in Jupyter Notebooks are special commands that start with a '%' or '%%' and provide additional functionality beyond standard Python code. They can be used for tasks like timing code execution, running shell commands, or customizing notebook behavior.
+
+```python title="example2.py"
+# This is a code cell demonstrating a magic command
+# The '%time' magic command times the execution of the following code
+%time
+
+# Example of a simple loop
+sum = 0
+for i in range(1000000):
+    sum += i
+```
+
+>
   <p class="font-semibold mb-3">❓ What are the two primary types of cells in a Jupyter Notebook?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +114,20 @@ for i in range(1000000):
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Magic commands in Jupyter Notebooks are special commands that start with a '%' or '%%' and provide additional functionality beyond standard Python code. They can be used for tasks like timing code execution, running shell commands, or customizing notebook behavior.
+
+```python title="example2.py"
+# This is a code cell demonstrating a magic command
+# The '%time' magic command times the execution of the following code
+%time
+
+# Example of a simple loop
+sum = 0
+for i in range(1000000):
+    sum += i
+```
+
+>
   <p class="font-semibold mb-3">❓ What does the '%time' magic command do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

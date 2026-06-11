@@ -85,7 +85,28 @@ print(f'Prediction for x=[6, 7]: {prediction[0]}')
 
 > **💡 Tip:** When using Logistic Regression, ensure your data is properly scaled and preprocessed to improve model performance.
 
-<div class="quiz">
+Logistic Regression is another supervised learning algorithm, primarily used for classification problems. Despite its name, it is a classification algorithm, not a regression algorithm. It is used to predict the likelihood of a binary outcome based on one or more independent variables.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+
+# Sample data
+x = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])
+y = np.array([0, 0, 1, 1, 1])
+
+# Create and train the model
+model = LogisticRegression()
+model.fit(x, y)
+
+# Predict
+x_new = np.array([[6, 7]])
+prediction = model.predict(x_new)
+
+print(f'Prediction for x=[6, 7]: {prediction[0]}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What type of problems is Linear Regression best suited for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -109,7 +130,28 @@ print(f'Prediction for x=[6, 7]: {prediction[0]}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Logistic Regression is another supervised learning algorithm, primarily used for classification problems. Despite its name, it is a classification algorithm, not a regression algorithm. It is used to predict the likelihood of a binary outcome based on one or more independent variables.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+
+# Sample data
+x = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])
+y = np.array([0, 0, 1, 1, 1])
+
+# Create and train the model
+model = LogisticRegression()
+model.fit(x, y)
+
+# Predict
+x_new = np.array([[6, 7]])
+prediction = model.predict(x_new)
+
+print(f'Prediction for x=[6, 7]: {prediction[0]}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary use of Logistic Regression?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

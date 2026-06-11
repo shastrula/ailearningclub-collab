@@ -90,7 +90,33 @@ print(f'Review: {review}')
 
 > **💡 Tip:** Always use multiple fact-checking sources and cross-verify information to ensure accuracy.
 
-<div class="quiz">
+Fine-tuned models may generate misleading or false information, especially if the fine-tuning data contains inaccuracies. Implementing robust fact-checking mechanisms and continuously updating the model with verified data is vital to combat misinformation.
+
+```python title="example2.py"
+import requests
+
+# Sample fact-checking API
+def fact_check(statement):
+    url = 'https://api.factchecktools.com/v1/claims'
+    params = {'query': statement}
+    response = requests.get(url, params=params)
+    if response.status_code == 200:
+        data = response.json()
+        if data['claims']:
+            return data['claims'][0]['text'], data['claims'][0]['claimReview'][0]['textReview']
+        else:
+            return statement, 'No fact-check available'
+    else:
+        return statement, 'Failed to retrieve fact-check'
+
+# Example usage
+statement = 'The Earth is flat.'
+checked_statement, review = fact_check(statement)
+print(f'Checked Statement: {checked_statement}')
+print(f'Review: {review}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a critical step to mitigate bias in fine-tuned models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -114,7 +140,33 @@ print(f'Review: {review}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Fine-tuned models may generate misleading or false information, especially if the fine-tuning data contains inaccuracies. Implementing robust fact-checking mechanisms and continuously updating the model with verified data is vital to combat misinformation.
+
+```python title="example2.py"
+import requests
+
+# Sample fact-checking API
+def fact_check(statement):
+    url = 'https://api.factchecktools.com/v1/claims'
+    params = {'query': statement}
+    response = requests.get(url, params=params)
+    if response.status_code == 200:
+        data = response.json()
+        if data['claims']:
+            return data['claims'][0]['text'], data['claims'][0]['claimReview'][0]['textReview']
+        else:
+            return statement, 'No fact-check available'
+    else:
+        return statement, 'Failed to retrieve fact-check'
+
+# Example usage
+statement = 'The Earth is flat.'
+checked_statement, review = fact_check(statement)
+print(f'Checked Statement: {checked_statement}')
+print(f'Review: {review}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Why is fact-checking important in fine-tuning LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

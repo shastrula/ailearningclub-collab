@@ -73,7 +73,23 @@ model.compile(optimizer='adam', loss='mean_squared_error')
 
 > **💡 Tip:** When working with RNNs, be mindful of the vanishing and exploding gradient problems. Using LSTM or GRU cells instead of simple RNN cells can help mitigate these issues.
 
-<div class="quiz">
+RNNs are a type of neural network designed to recognize patterns in sequences of data, such as text, genomes, handwriting, or time series data. Unlike feedforward neural networks, RNNs can use their internal state (memory) to process sequences of inputs, making them suitable for tasks like language modeling and time series prediction.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+# Building a simple RNN
+model = models.Sequential()
+model.add(layers.SimpleRNN(50, return_sequences=True, input_shape=(None, 1)))
+model.add(layers.SimpleRNN(50))
+model.add(layers.Dense(1))
+
+# Compiling the model
+model.compile(optimizer='adam', loss='mean_squared_error')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary use case for CNNs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -97,7 +113,23 @@ model.compile(optimizer='adam', loss='mean_squared_error')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+RNNs are a type of neural network designed to recognize patterns in sequences of data, such as text, genomes, handwriting, or time series data. Unlike feedforward neural networks, RNNs can use their internal state (memory) to process sequences of inputs, making them suitable for tasks like language modeling and time series prediction.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+# Building a simple RNN
+model = models.Sequential()
+model.add(layers.SimpleRNN(50, return_sequences=True, input_shape=(None, 1)))
+model.add(layers.SimpleRNN(50))
+model.add(layers.Dense(1))
+
+# Compiling the model
+model.compile(optimizer='adam', loss='mean_squared_error')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which type of RNN cell is designed to address the vanishing gradient problem?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

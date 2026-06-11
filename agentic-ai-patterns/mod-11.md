@@ -88,7 +88,31 @@ orchestration_results = orchestrate_agents(agents)
 
 > **💡 Tip:** Ensure that the tools used by agentic AI are reliable and up-to-date to maintain performance and security standards.
 
-<div class="quiz">
+Effective agentic AI systems often utilize external tools and orchestrate multiple agents to accomplish complex tasks. Tool use involves integrating specialized software or services, while orchestration coordinates the actions of multiple agents to achieve a common goal.
+
+```python title="example2.py"
+import random
+
+# Example of tool use and orchestration
+
+def use_tool(tool):
+    return f'Used {tool}'
+
+def orchestrate_agents(agents):
+    results = {}
+    for agent in agents:
+        tool = random.choice(['toolA', 'toolB'])
+        result = use_tool(tool)
+        results[agent] = result
+        print(f'Agent {agent} {result}')
+    return results
+
+# Define agents and run orchestration
+agents = ['agent1', 'agent2']
+orchestration_results = orchestrate_agents(agents)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of reflection in agentic AI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -112,7 +136,31 @@ orchestration_results = orchestrate_agents(agents)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Effective agentic AI systems often utilize external tools and orchestrate multiple agents to accomplish complex tasks. Tool use involves integrating specialized software or services, while orchestration coordinates the actions of multiple agents to achieve a common goal.
+
+```python title="example2.py"
+import random
+
+# Example of tool use and orchestration
+
+def use_tool(tool):
+    return f'Used {tool}'
+
+def orchestrate_agents(agents):
+    results = {}
+    for agent in agents:
+        tool = random.choice(['toolA', 'toolB'])
+        result = use_tool(tool)
+        results[agent] = result
+        print(f'Agent {agent} {result}')
+    return results
+
+# Define agents and run orchestration
+agents = ['agent1', 'agent2']
+orchestration_results = orchestrate_agents(agents)
+```
+
+>
   <p class="font-semibold mb-3">❓ What does orchestration in agentic AI involve?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

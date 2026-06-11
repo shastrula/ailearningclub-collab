@@ -71,7 +71,16 @@ Second visit: Use cached resources (if not expired)
 
 ---
 
-<div class="quiz">
+Browsers cache resources locally to avoid re-downloading them. When you revisit a site, the browser checks if cached resources are still valid before requesting them again from the server.
+
+```
+First visit: Download all resources
+Second visit: Use cached resources (if not expired)
+```
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does DNS do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -97,7 +106,16 @@ Second visit: Use cached resources (if not expired)
 
 ---
 
-<div class="quiz">
+Browsers cache resources locally to avoid re-downloading them. When you revisit a site, the browser checks if cached resources are still valid before requesting them again from the server.
+
+```
+First visit: Download all resources
+Second visit: Use cached resources (if not expired)
+```
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which HTTP method is used to retrieve data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -123,7 +141,16 @@ Second visit: Use cached resources (if not expired)
 
 ---
 
-<div class="quiz">
+Browsers cache resources locally to avoid re-downloading them. When you revisit a site, the browser checks if cached resources are still valid before requesting them again from the server.
+
+```
+First visit: Download all resources
+Second visit: Use cached resources (if not expired)
+```
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does a 404 status code mean?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -149,7 +176,16 @@ Second visit: Use cached resources (if not expired)
 
 ---
 
-<div class="quiz">
+Browsers cache resources locally to avoid re-downloading them. When you revisit a site, the browser checks if cached resources are still valid before requesting them again from the server.
+
+```
+First visit: Download all resources
+Second visit: Use cached resources (if not expired)
+```
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the correct order of the request-response cycle?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -175,7 +211,16 @@ Second visit: Use cached resources (if not expired)
 
 ---
 
-<div class="quiz">
+Browsers cache resources locally to avoid re-downloading them. When you revisit a site, the browser checks if cached resources are still valid before requesting them again from the server.
+
+```
+First visit: Download all resources
+Second visit: Use cached resources (if not expired)
+```
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Why do browsers cache resources?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

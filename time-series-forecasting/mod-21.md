@@ -82,7 +82,25 @@ print(forecast)
 
 > **💡 Tip:** When working with SARIMA models, ensure your data is stationary and seasonally adjusted to improve model accuracy.
 
-<div class="quiz">
+SARIMA (Seasonal ARIMA) models extend ARIMA by adding seasonal components, making them suitable for time series data with seasonal patterns. SARIMA models are particularly useful in business for forecasting data with regular seasonal fluctuations, such as quarterly sales or monthly website traffic.
+
+```python title="example2.py"
+import pandas as pd
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+
+# Load data
+data = pd.read_csv('sales_data.csv', parse_dates=['date'], index_col='date')
+
+# Fit SARIMA model
+model = SARIMAX(data['sales'], order=(1,1,1), seasonal_order=(1,1,1,12))
+model_fit = model.fit(disp=False)
+
+# Forecast
+forecast = model_fit.forecast(steps=5)
+print(forecast)
+```
+
+>
   <p class="font-semibold mb-3">❓ What does ARIMA stand for in time series forecasting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +124,25 @@ print(forecast)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+SARIMA (Seasonal ARIMA) models extend ARIMA by adding seasonal components, making them suitable for time series data with seasonal patterns. SARIMA models are particularly useful in business for forecasting data with regular seasonal fluctuations, such as quarterly sales or monthly website traffic.
+
+```python title="example2.py"
+import pandas as pd
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+
+# Load data
+data = pd.read_csv('sales_data.csv', parse_dates=['date'], index_col='date')
+
+# Fit SARIMA model
+model = SARIMAX(data['sales'], order=(1,1,1), seasonal_order=(1,1,1,12))
+model_fit = model.fit(disp=False)
+
+# Forecast
+forecast = model_fit.forecast(steps=5)
+print(forecast)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using SARIMA over ARIMA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

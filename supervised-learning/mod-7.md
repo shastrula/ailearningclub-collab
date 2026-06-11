@@ -87,7 +87,37 @@ print(f'Accuracy: {accuracy}')
 
 > **💡 Tip:** When using ensemble techniques like Random Forests, be mindful of the number of trees (n_estimators) and the depth of each tree to avoid overfitting.
 
-<div class="quiz">
+Ensemble techniques combine multiple decision trees to improve predictive performance. Two popular ensemble methods are Random Forests and Gradient Boosting. Random Forests build multiple decision trees and merge their predictions to produce a more accurate and stable prediction. Gradient Boosting builds trees sequentially, with each tree trying to correct the errors of the previous one.
+
+```python title="example2.py"
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create a Random Forest classifier
+rf = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Train the model
+rf.fit(X_train, y_train)
+
+# Make predictions
+y_pred = rf.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Accuracy: {accuracy}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of pruning in decision trees?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -111,7 +141,37 @@ print(f'Accuracy: {accuracy}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Ensemble techniques combine multiple decision trees to improve predictive performance. Two popular ensemble methods are Random Forests and Gradient Boosting. Random Forests build multiple decision trees and merge their predictions to produce a more accurate and stable prediction. Gradient Boosting builds trees sequentially, with each tree trying to correct the errors of the previous one.
+
+```python title="example2.py"
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create a Random Forest classifier
+rf = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Train the model
+rf.fit(X_train, y_train)
+
+# Make predictions
+y_pred = rf.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Accuracy: {accuracy}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which ensemble technique combines multiple decision trees to improve predictive performance?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -90,7 +90,33 @@ Mean cross-validation score: 0.9777777777777777
 
 > **💡 Tip:** When using cross-validation, ensure that the data is shuffled to avoid any bias that might arise from the order of the data.
 
-<div class="quiz">
+Cross-validation is a technique used to assess the performance of a model by training and testing it on different subsets of the data. Common methods include k-fold cross-validation and stratified k-fold cross-validation. These methods help in mitigating overfitting and provide a more reliable estimate of model performance.
+
+```python title="example2.py"
+from sklearn.model_selection import cross_val_score
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Initialize model
+model = RandomForestClassifier()
+
+# Perform 5-fold cross-validation
+scores = cross_val_score(model, X, y, cv=5)
+
+print(f'Cross-validation scores: {scores}')
+print(f'Mean cross-validation score: {scores.mean()}')
+```
+
+```
+Cross-validation scores: [0.96666667 1.         0.96666667 0.93333333 1.        ]
+Mean cross-validation score: 0.9777777777777777
+```
+
+>
   <p class="font-semibold mb-3">❓ What does the F1 score represent in model evaluation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -114,7 +140,33 @@ Mean cross-validation score: 0.9777777777777777
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Cross-validation is a technique used to assess the performance of a model by training and testing it on different subsets of the data. Common methods include k-fold cross-validation and stratified k-fold cross-validation. These methods help in mitigating overfitting and provide a more reliable estimate of model performance.
+
+```python title="example2.py"
+from sklearn.model_selection import cross_val_score
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Initialize model
+model = RandomForestClassifier()
+
+# Perform 5-fold cross-validation
+scores = cross_val_score(model, X, y, cv=5)
+
+print(f'Cross-validation scores: {scores}')
+print(f'Mean cross-validation score: {scores.mean()}')
+```
+
+```
+Cross-validation scores: [0.96666667 1.         0.96666667 0.93333333 1.        ]
+Mean cross-validation score: 0.9777777777777777
+```
+
+>
   <p class="font-semibold mb-3">❓ Which cross-validation technique is best suited for imbalanced datasets?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

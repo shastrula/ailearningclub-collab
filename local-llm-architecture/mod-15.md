@@ -82,7 +82,25 @@ check_resources()
 
 > **💡 Tip:** Ensure your system has sufficient cooling and power supply to handle the intensive computational load when running LLMs locally. Regularly monitor resource usage to prevent overheating and potential hardware failure.
 
-<div class="quiz">
+Running LLMs locally demands substantial hardware resources, including high-performance GPUs and ample RAM. Future trends indicate a shift towards more efficient hardware solutions, such as specialized AI accelerators and optimized memory usage, to handle the computational demands of large models without compromising performance.
+
+```python title="example2.py"
+import psutil
+
+# Function to check system resources
+def check_resources():
+    cpu_percent = psutil.cpu_percent(interval=1)
+    memory_info = psutil.virtual_memory()
+    memory_percent = memory_info.percent
+    
+    print(f'CPU Usage: {cpu_percent}%')
+    print(f'Memory Usage: {memory_percent}%')
+
+# Call the function
+check_resources()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which framework provides a streamlined interface for running LLMs locally?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +124,25 @@ check_resources()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Running LLMs locally demands substantial hardware resources, including high-performance GPUs and ample RAM. Future trends indicate a shift towards more efficient hardware solutions, such as specialized AI accelerators and optimized memory usage, to handle the computational demands of large models without compromising performance.
+
+```python title="example2.py"
+import psutil
+
+# Function to check system resources
+def check_resources():
+    cpu_percent = psutil.cpu_percent(interval=1)
+    memory_info = psutil.virtual_memory()
+    memory_percent = memory_info.percent
+    
+    print(f'CPU Usage: {cpu_percent}%')
+    print(f'Memory Usage: {memory_percent}%')
+
+# Call the function
+check_resources()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a critical hardware requirement for running LLMs locally?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

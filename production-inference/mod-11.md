@@ -85,7 +85,28 @@ print(outputs.shape)
 
 > **💡 Tip:** When implementing batching, ensure that the batch size is optimized for your specific hardware and model to avoid out-of-memory errors and to maximize throughput.
 
-<div class="quiz">
+Batching is a technique where multiple inference requests are grouped together and processed in a single forward pass through the model. This reduces the overhead associated with each inference call and improves overall throughput. Effective batching strategies are crucial for high-performance inference serving.
+
+```python title="example2.py"
+import torch
+
+# Load a pre-trained model
+model = torch.hub.load('pytorch/vision:v0.10.0','resnet18', pretrained=True)
+model.eval()
+
+# Prepare a batch of input tensors
+inputs = [torch.randn(1, 3, 224, 224) for _ in range(10)]
+batch = torch.cat(inputs, 0)
+
+# Run inference on the batch
+with torch.no_grad():
+    outputs = model(batch)
+
+# Print the shape of the outputs
+print(outputs.shape)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using vLLM for inference?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -109,7 +130,28 @@ print(outputs.shape)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Batching is a technique where multiple inference requests are grouped together and processed in a single forward pass through the model. This reduces the overhead associated with each inference call and improves overall throughput. Effective batching strategies are crucial for high-performance inference serving.
+
+```python title="example2.py"
+import torch
+
+# Load a pre-trained model
+model = torch.hub.load('pytorch/vision:v0.10.0','resnet18', pretrained=True)
+model.eval()
+
+# Prepare a batch of input tensors
+inputs = [torch.randn(1, 3, 224, 224) for _ in range(10)]
+batch = torch.cat(inputs, 0)
+
+# Run inference on the batch
+with torch.no_grad():
+    outputs = model(batch)
+
+# Print the shape of the outputs
+print(outputs.shape)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the main advantage of batching in inference workloads?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

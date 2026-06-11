@@ -80,7 +80,23 @@ for policy in policies:
 
 > **💡 Tip:** Always review and update your IAM policies regularly to ensure that access controls are up-to-date and secure.
 
-<div class="quiz">
+Google Colab provides various access control mechanisms to ensure that only authorized users can access your notebooks and data. You can manage access through IAM (Identity and Access Management) policies, which allow you to define roles and permissions for different users.
+
+```python title="example2.py"
+# Import necessary libraries
+from google.colab import auth
+auth.authenticate_user()
+
+# List current IAM policies
+from google.cloud import resource_manager
+client = resource_manager.Client()
+policies = client.list_policies()
+print('Current IAM policies:')
+for policy in policies:
+    print(policy)
+```
+
+>
   <p class="font-semibold mb-3">❓ What does Google Colab use to encrypt data at rest?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -104,7 +120,23 @@ for policy in policies:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Google Colab provides various access control mechanisms to ensure that only authorized users can access your notebooks and data. You can manage access through IAM (Identity and Access Management) policies, which allow you to define roles and permissions for different users.
+
+```python title="example2.py"
+# Import necessary libraries
+from google.colab import auth
+auth.authenticate_user()
+
+# List current IAM policies
+from google.cloud import resource_manager
+client = resource_manager.Client()
+policies = client.list_policies()
+print('Current IAM policies:')
+for policy in policies:
+    print(policy)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which library is used to manage IAM policies in Google Colab?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

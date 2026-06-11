@@ -87,7 +87,33 @@ plt.show()
 > **💡 Tip:** When working with time series data, always check for stationarity. Non-stationary data can lead to misleading results in forecasting models.
 
 
-<div class="quiz">
+Time series data often exhibits several key characteristics: trend, seasonality, and noise. Trend refers to the long-term direction of the data, seasonality represents periodic fluctuations, and noise includes random variations. Identifying these characteristics is essential for effective time series analysis and forecasting.
+
+```python title="example2.py"
+import numpy as np
+
+# Generating synthetic time series data with trend and seasonality
+dates = pd.date_range(start='2023-01-01', periods=50, freq='D')
+trend = np.linspace(0, 10, 50)
+seasonality = np.sin(np.linspace(0, 2*np.pi, 50))
+noise = np.random.normal(0, 1, 50)
+
+# Combining trend, seasonality, and noise
+values = trend + seasonality + noise
+df = pd.DataFrame({'date': dates, 'value': values})
+df.set_index('date', inplace=True)
+
+# Plotting the synthetic time series
+plt.figure(figsize=(10, 5))
+plt.plot(df.index, df['value'], marker='o')
+plt.title('Synthetic Time Series Data with Trend and Seasonality')
+plt.xlabel('Date')
+plt.ylabel('Value')
+plt.grid(True)
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which component of time series data represents periodic fluctuations?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -85,7 +85,28 @@ print('TensorRT engine built successfully.')
 
 > **💡 Tip:** When using TensorRT, ensure your model is compatible with the TensorRT operations to avoid conversion errors.
 
-<div class="quiz">
+TensorRT is a high-performance deep learning inference optimizer and runtime. It provides significant speedups by optimizing models for GPU execution. This is particularly useful for production environments where low latency and high throughput are critical.
+
+```python title="example2.py"
+import tensorrt as trt
+
+# Initialize TensorRT builder
+builder = trt.Builder(trt.Logger(trt.Logger.WARNING))
+
+# Create a network
+network = builder.create_network(1 << int(trt.NetworkDefinitionCreationFlag.EXPLICIT_BATCH))
+
+# Define input and output tensors
+input_tensor = network.add_input('input', trt.float32, (1, 3, 224, 224))
+output_tensor = network.add_input('output', trt.float32, (1, 1000))
+
+# Build the engine
+engine = builder.build_engine(network, builder_config)
+
+print('TensorRT engine built successfully.')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using vLLM for serving large language models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -109,7 +130,28 @@ print('TensorRT engine built successfully.')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+TensorRT is a high-performance deep learning inference optimizer and runtime. It provides significant speedups by optimizing models for GPU execution. This is particularly useful for production environments where low latency and high throughput are critical.
+
+```python title="example2.py"
+import tensorrt as trt
+
+# Initialize TensorRT builder
+builder = trt.Builder(trt.Logger(trt.Logger.WARNING))
+
+# Create a network
+network = builder.create_network(1 << int(trt.NetworkDefinitionCreationFlag.EXPLICIT_BATCH))
+
+# Define input and output tensors
+input_tensor = network.add_input('input', trt.float32, (1, 3, 224, 224))
+output_tensor = network.add_input('output', trt.float32, (1, 1000))
+
+# Build the engine
+engine = builder.build_engine(network, builder_config)
+
+print('TensorRT engine built successfully.')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which technology is specifically designed to optimize deep learning models for GPU execution?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

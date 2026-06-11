@@ -86,7 +86,33 @@ plt.show()
 
 > **💡 Tip:** When applying K-Means clustering, ensure that your data is scaled properly, as the algorithm is sensitive to the scale of the features. Using techniques like StandardScaler from sklearn.preprocessing can help achieve better results.
 
-<div class="quiz">
+One of the critical decisions in K-Means clustering is choosing the optimal number of clusters (K). The Elbow Method is a common technique used to determine the appropriate value of K. This involves plotting the sum of squared distances from each point to its assigned centroid for different values of K and selecting the K where the rate of decrease sharply shifts (the 'elbow' point).
+
+```python title="example2.py"
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+from sklearn.datasets import make_blobs
+
+# Generate synthetic data
+X, _ = make_blobs(n_samples=300, centers=4, cluster_std=0.60, random_state=0)
+
+# Calculate the sum of squared distances for different K values
+sum_of_squared_distances = []
+K = range(1, 10)
+for k in K:
+    kmeans = KMeans(n_clusters=k)
+    kmeans.fit(X)
+    sum_of_squared_distances.append(kmeans.inertia_)
+
+# Plot the Elbow Method graph
+plt.plot(K, sum_of_squared_distances, 'bx-')
+plt.xlabel('Number of clusters')
+plt.ylabel('Sum of squared distances')
+plt.title('Elbow Method For Optimal k')
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of K-Means clustering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -110,7 +136,33 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+One of the critical decisions in K-Means clustering is choosing the optimal number of clusters (K). The Elbow Method is a common technique used to determine the appropriate value of K. This involves plotting the sum of squared distances from each point to its assigned centroid for different values of K and selecting the K where the rate of decrease sharply shifts (the 'elbow' point).
+
+```python title="example2.py"
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+from sklearn.datasets import make_blobs
+
+# Generate synthetic data
+X, _ = make_blobs(n_samples=300, centers=4, cluster_std=0.60, random_state=0)
+
+# Calculate the sum of squared distances for different K values
+sum_of_squared_distances = []
+K = range(1, 10)
+for k in K:
+    kmeans = KMeans(n_clusters=k)
+    kmeans.fit(X)
+    sum_of_squared_distances.append(kmeans.inertia_)
+
+# Plot the Elbow Method graph
+plt.plot(K, sum_of_squared_distances, 'bx-')
+plt.xlabel('Number of clusters')
+plt.ylabel('Sum of squared distances')
+plt.title('Elbow Method For Optimal k')
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which method is commonly used to determine the optimal number of clusters in K-Means?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

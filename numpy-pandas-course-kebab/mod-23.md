@@ -85,7 +85,28 @@ print(data.info())
 
 > **💡 Tip:** Always make a copy of your original dataset before performing any cleaning operations. This allows you to revert to the original data if needed.
 
-<div class="quiz">
+Data cleaning is a critical step in the data analysis process. In this section, you will learn how to handle missing values, remove duplicates, and correct inconsistencies in your data to ensure its quality.
+
+```python title="example2.py"
+import pandas as pd
+
+# Load the dataset
+data = pd.read_csv('data.csv')
+
+# Handling missing values
+data.fillna(method='ffill', inplace=True)
+
+# Removing duplicates
+data.drop_duplicates(inplace=True)
+
+# Correcting data types
+data['age'] = data['age'].astype(int)
+
+# Display the cleaned DataFrame
+print(data.info())
+```
+
+>
   <p class="font-semibold mb-3">❓ What method is used to display the first 5 rows of a DataFrame in Pandas?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -109,7 +130,28 @@ print(data.info())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Data cleaning is a critical step in the data analysis process. In this section, you will learn how to handle missing values, remove duplicates, and correct inconsistencies in your data to ensure its quality.
+
+```python title="example2.py"
+import pandas as pd
+
+# Load the dataset
+data = pd.read_csv('data.csv')
+
+# Handling missing values
+data.fillna(method='ffill', inplace=True)
+
+# Removing duplicates
+data.drop_duplicates(inplace=True)
+
+# Correcting data types
+data['age'] = data['age'].astype(int)
+
+# Display the cleaned DataFrame
+print(data.info())
+```
+
+>
   <p class="font-semibold mb-3">❓ Which method is used to handle missing values by forward filling in Pandas?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

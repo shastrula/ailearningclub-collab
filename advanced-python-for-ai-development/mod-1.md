@@ -77,7 +77,24 @@ print(next(g))  # Output: 3
 
 > **💡 Tip:** Remember to handle the 'StopIteration' exception when working with generators to avoid runtime errors.
 
-<div class="quiz">
+Generators and iterators are powerful tools for managing large datasets in AI applications. They allow for memory-efficient iteration over data, which is crucial when dealing with large datasets that cannot fit into memory. Generators, in particular, yield items one at a time and are defined using a function with the 'yield' keyword.
+
+**example2.py**
+
+```
+def simple_generator():
+    yield 1
+    yield 2
+    yield 3
+
+# Use the generator
+g = simple_generator()
+print(next(g))  # Output: 1
+print(next(g))  # Output: 2
+print(next(g))  # Output: 3
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using a deque over a list?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +118,24 @@ print(next(g))  # Output: 3
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Generators and iterators are powerful tools for managing large datasets in AI applications. They allow for memory-efficient iteration over data, which is crucial when dealing with large datasets that cannot fit into memory. Generators, in particular, yield items one at a time and are defined using a function with the 'yield' keyword.
+
+**example2.py**
+
+```
+def simple_generator():
+    yield 1
+    yield 2
+    yield 3
+
+# Use the generator
+g = simple_generator()
+print(next(g))  # Output: 1
+print(next(g))  # Output: 2
+print(next(g))  # Output: 3
+```
+
+>
   <p class="font-semibold mb-3">❓ What does the 'yield' keyword do in a Python function?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

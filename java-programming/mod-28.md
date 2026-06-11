@@ -98,7 +98,43 @@ Source exists: true
 Destination exists: true
 ```
 
-<div class="quiz">
+NIO makes it easy to copy and move files with various options.
+
+```java title="FileCopyMove.java"
+import java.nio.file.*;
+
+public class FileCopyMove {
+    public static void main(String[] args) throws Exception {
+        Path source = Paths.get("source.txt");
+        Path copy = Paths.get("copy.txt");
+        Path destination = Paths.get("moved.txt");
+        
+        // Create source file
+        Files.writeString(source, "Original content");
+        
+        // Copy file
+        Files.copy(source, copy, StandardCopyOption.REPLACE_EXISTING);
+        System.out.println("File copied");
+        
+        // Move file
+        Files.move(copy, destination, StandardCopyOption.REPLACE_EXISTING);
+        System.out.println("File moved");
+        
+        // Verify
+        System.out.println("Source exists: " + Files.exists(source));
+        System.out.println("Destination exists: " + Files.exists(destination));
+    }
+}
+```
+
+```
+File copied
+File moved
+Source exists: true
+Destination exists: true
+```
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which class is used to read text files line by line in traditional I/O?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -122,7 +158,43 @@ Destination exists: true
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+NIO makes it easy to copy and move files with various options.
+
+```java title="FileCopyMove.java"
+import java.nio.file.*;
+
+public class FileCopyMove {
+    public static void main(String[] args) throws Exception {
+        Path source = Paths.get("source.txt");
+        Path copy = Paths.get("copy.txt");
+        Path destination = Paths.get("moved.txt");
+        
+        // Create source file
+        Files.writeString(source, "Original content");
+        
+        // Copy file
+        Files.copy(source, copy, StandardCopyOption.REPLACE_EXISTING);
+        System.out.println("File copied");
+        
+        // Move file
+        Files.move(copy, destination, StandardCopyOption.REPLACE_EXISTING);
+        System.out.println("File moved");
+        
+        // Verify
+        System.out.println("Source exists: " + Files.exists(source));
+        System.out.println("Destination exists: " + Files.exists(destination));
+    }
+}
+```
+
+```
+File copied
+File moved
+Source exists: true
+Destination exists: true
+```
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the main advantage of try-with-resources?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -146,7 +218,43 @@ Destination exists: true
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+NIO makes it easy to copy and move files with various options.
+
+```java title="FileCopyMove.java"
+import java.nio.file.*;
+
+public class FileCopyMove {
+    public static void main(String[] args) throws Exception {
+        Path source = Paths.get("source.txt");
+        Path copy = Paths.get("copy.txt");
+        Path destination = Paths.get("moved.txt");
+        
+        // Create source file
+        Files.writeString(source, "Original content");
+        
+        // Copy file
+        Files.copy(source, copy, StandardCopyOption.REPLACE_EXISTING);
+        System.out.println("File copied");
+        
+        // Move file
+        Files.move(copy, destination, StandardCopyOption.REPLACE_EXISTING);
+        System.out.println("File moved");
+        
+        // Verify
+        System.out.println("Source exists: " + Files.exists(source));
+        System.out.println("Destination exists: " + Files.exists(destination));
+    }
+}
+```
+
+```
+File copied
+File moved
+Source exists: true
+Destination exists: true
+```
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which NIO class represents a file or directory path?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -170,7 +278,43 @@ Destination exists: true
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+NIO makes it easy to copy and move files with various options.
+
+```java title="FileCopyMove.java"
+import java.nio.file.*;
+
+public class FileCopyMove {
+    public static void main(String[] args) throws Exception {
+        Path source = Paths.get("source.txt");
+        Path copy = Paths.get("copy.txt");
+        Path destination = Paths.get("moved.txt");
+        
+        // Create source file
+        Files.writeString(source, "Original content");
+        
+        // Copy file
+        Files.copy(source, copy, StandardCopyOption.REPLACE_EXISTING);
+        System.out.println("File copied");
+        
+        // Move file
+        Files.move(copy, destination, StandardCopyOption.REPLACE_EXISTING);
+        System.out.println("File moved");
+        
+        // Verify
+        System.out.println("Source exists: " + Files.exists(source));
+        System.out.println("Destination exists: " + Files.exists(destination));
+    }
+}
+```
+
+```
+File copied
+File moved
+Source exists: true
+Destination exists: true
+```
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does Files.readAllLines() return?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -194,7 +338,43 @@ Destination exists: true
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+NIO makes it easy to copy and move files with various options.
+
+```java title="FileCopyMove.java"
+import java.nio.file.*;
+
+public class FileCopyMove {
+    public static void main(String[] args) throws Exception {
+        Path source = Paths.get("source.txt");
+        Path copy = Paths.get("copy.txt");
+        Path destination = Paths.get("moved.txt");
+        
+        // Create source file
+        Files.writeString(source, "Original content");
+        
+        // Copy file
+        Files.copy(source, copy, StandardCopyOption.REPLACE_EXISTING);
+        System.out.println("File copied");
+        
+        // Move file
+        Files.move(copy, destination, StandardCopyOption.REPLACE_EXISTING);
+        System.out.println("File moved");
+        
+        // Verify
+        System.out.println("Source exists: " + Files.exists(source));
+        System.out.println("Destination exists: " + Files.exists(destination));
+    }
+}
+```
+
+```
+File copied
+File moved
+Source exists: true
+Destination exists: true
+```
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which method is used to list files in a directory using NIO?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

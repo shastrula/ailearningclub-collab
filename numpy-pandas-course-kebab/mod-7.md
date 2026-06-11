@@ -78,7 +78,17 @@ print(filtered_df)
 
 > **💡 Tip:** When working with Pandas DataFrames, be mindful of the data types of your columns. Converting columns to the appropriate data type can significantly improve performance and avoid errors.
 
-<div class="quiz">
+Pandas DataFrames are a powerful data structure for data manipulation and analysis. They provide a flexible and intuitive way to work with tabular data, allowing you to perform operations such as filtering, grouping, merging, and reshaping data. DataFrames also integrate seamlessly with other data analysis libraries, making them a essential tool for data scientists.
+
+```python title="example2.py"
+import pandas as pd
+
+# Create a Pandas DataFrame
+data = {'name': ['Alice', 'Bob', 'Charlie'], 'age': [25, 30, 35]}
+df = pd.DataFrame(data)
+
+# Filter the DataFrame
+filtered_df = df[df['age'] >
   <p class="font-semibold mb-3">❓ What is the primary advantage of using NumPy arrays for data manipulation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -102,7 +112,17 @@ print(filtered_df)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Pandas DataFrames are a powerful data structure for data manipulation and analysis. They provide a flexible and intuitive way to work with tabular data, allowing you to perform operations such as filtering, grouping, merging, and reshaping data. DataFrames also integrate seamlessly with other data analysis libraries, making them a essential tool for data scientists.
+
+```python title="example2.py"
+import pandas as pd
+
+# Create a Pandas DataFrame
+data = {'name': ['Alice', 'Bob', 'Charlie'], 'age': [25, 30, 35]}
+df = pd.DataFrame(data)
+
+# Filter the DataFrame
+filtered_df = df[df['age'] >
   <p class="font-semibold mb-3">❓ Which Pandas method is used to filter a DataFrame based on a condition?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -90,7 +90,33 @@ print(pos_tags)
 
 > **💡 Tip:** Ensure you have the necessary NLTK data files downloaded by running `nltk.download('punkt') and `nltk.download('averaged_perceptron_tagger') before attempting tokenization and POS tagging.
 
-<div class="quiz">
+Part-of-Speech (POS) tagging is the process of assigning a part of speech (such as noun, verb, adjective, etc.) to each word in a text. This is crucial for understanding the syntactic structure of sentences and is often used in tasks like parsing and information extraction. POS tagging helps in identifying the roles of words in a sentence, which is fundamental for deeper linguistic analysis.
+
+**example2.py**
+
+```
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk import pos_tag
+
+# Sample text
+text = "Natural Language Processing is fascinating!"
+
+# Tokenize the text
+tokens = word_tokenize(text)
+
+# POS tagging
+pos_tags = pos_tag(tokens)
+
+# Print the POS tags
+print(pos_tags)
+```
+
+```
+[('Natural', 'NNP'), ('Language', 'NNP'), ('Processing', 'NNP'), ('is', 'VBZ'), ('fascinating', 'JJ'), ('!', '.')]
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of tokenization in NLP?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -114,7 +140,33 @@ print(pos_tags)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Part-of-Speech (POS) tagging is the process of assigning a part of speech (such as noun, verb, adjective, etc.) to each word in a text. This is crucial for understanding the syntactic structure of sentences and is often used in tasks like parsing and information extraction. POS tagging helps in identifying the roles of words in a sentence, which is fundamental for deeper linguistic analysis.
+
+**example2.py**
+
+```
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk import pos_tag
+
+# Sample text
+text = "Natural Language Processing is fascinating!"
+
+# Tokenize the text
+tokens = word_tokenize(text)
+
+# POS tagging
+pos_tags = pos_tag(tokens)
+
+# Print the POS tags
+print(pos_tags)
+```
+
+```
+[('Natural', 'NNP'), ('Language', 'NNP'), ('Processing', 'NNP'), ('is', 'VBZ'), ('fascinating', 'JJ'), ('!', '.')]
+```
+
+>
   <p class="font-semibold mb-3">❓ What does POS tagging help identify in a sentence?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

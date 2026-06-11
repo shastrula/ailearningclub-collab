@@ -76,7 +76,19 @@ print(f'Plotly version: {px.__version__}')
 
 > **💡 Tip:** Ensure that you are using a virtual environment to manage your Python packages. This practice helps avoid conflicts between different projects and ensures a clean setup.
 
-<div class="quiz">
+After installing the required libraries, it's important to verify that they are correctly installed and can be imported without issues. This step ensures that your environment is ready for data visualization tasks.
+
+```python title="verify_installation.py"
+import matplotlib
+import seaborn as sns
+import plotly.express as px
+
+print(f'Matplotlib version: {matplotlib.__version__}')
+print(f'Seaborn version: {sns.__version__}')
+print(f'Plotly version: {px.__version__}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which command is used to install Python libraries using pip?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -100,7 +112,19 @@ print(f'Plotly version: {px.__version__}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+After installing the required libraries, it's important to verify that they are correctly installed and can be imported without issues. This step ensures that your environment is ready for data visualization tasks.
+
+```python title="verify_installation.py"
+import matplotlib
+import seaborn as sns
+import plotly.express as px
+
+print(f'Matplotlib version: {matplotlib.__version__}')
+print(f'Seaborn version: {sns.__version__}')
+print(f'Plotly version: {px.__version__}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the purpose of verifying the installation of libraries?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -84,7 +84,27 @@ model.summary()
 
 > **💡 Tip:** When training RNNs, especially LSTMs, be mindful of the sequence length. Very long sequences can lead to vanishing or exploding gradients. Consider using techniques like gradient clipping or breaking the sequence into smaller chunks.
 
-<div class="quiz">
+LSTMs are a special kind of RNN designed to avoid the long-term dependency problem. They can remember information for long periods of time, making them highly effective for tasks like language translation and text generation. LSTMs use gates to control the flow of information, allowing them to selectively forget and remember information.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
+
+# Define an LSTM model
+model = Sequential([
+    LSTM(50, input_shape=(None, 1)),
+    Dense(1)
+])
+
+# Compile the model
+model.compile(optimizer='adam', loss='mean_squared_error')
+
+# Print the model summary
+model.summary()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using RNNs over feedforward neural networks?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -108,7 +128,27 @@ model.summary()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+LSTMs are a special kind of RNN designed to avoid the long-term dependency problem. They can remember information for long periods of time, making them highly effective for tasks like language translation and text generation. LSTMs use gates to control the flow of information, allowing them to selectively forget and remember information.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
+
+# Define an LSTM model
+model = Sequential([
+    LSTM(50, input_shape=(None, 1)),
+    Dense(1)
+])
+
+# Compile the model
+model.compile(optimizer='adam', loss='mean_squared_error')
+
+# Print the model summary
+model.summary()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the main function of gates in LSTM networks?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

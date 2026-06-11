@@ -218,7 +218,7 @@ print(f"Prediction: {response}")
 
 ## Quiz
 
-<div class="quiz">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Which algorithm is best for tabular data classification?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

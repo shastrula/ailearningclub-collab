@@ -78,7 +78,28 @@ print('INT8 Quantization complete.')
 
 > **💡 Tip:** When applying quantization, ensure that the model is calibrated properly to avoid significant performance drops. Use representative datasets for calibration to maintain accuracy.
 
-<div class="quiz">
+INT4 and INT8 quantization techniques further reduce model size by representing weights and activations with fewer bits. The bitsandbytes library provides efficient implementations of these techniques. INT4 quantization uses 4 bits per weight, while INT8 uses 8 bits, striking a balance between model size and performance.
+
+```python title="example2.py"
+import torch
+from bitsandbytes import Int8Params
+from transformers import AutoModel
+
+# Load a pre-trained model
+model = AutoModel.from_pretrained('bert-base-uncased')
+
+# Apply INT8 quantization using bitsandbytes
+for name, param in model.named_parameters():
+    if 'weight' in name:
+        param.data = Int8Params(param.data)
+
+# Save the quantized model
+torch.save(model.state_dict(), 'int8_quantized_bert.pth')
+
+print('INT8 Quantization complete.')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using GGUF and GPTQ quantization techniques?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -102,7 +123,28 @@ print('INT8 Quantization complete.')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+INT4 and INT8 quantization techniques further reduce model size by representing weights and activations with fewer bits. The bitsandbytes library provides efficient implementations of these techniques. INT4 quantization uses 4 bits per weight, while INT8 uses 8 bits, striking a balance between model size and performance.
+
+```python title="example2.py"
+import torch
+from bitsandbytes import Int8Params
+from transformers import AutoModel
+
+# Load a pre-trained model
+model = AutoModel.from_pretrained('bert-base-uncased')
+
+# Apply INT8 quantization using bitsandbytes
+for name, param in model.named_parameters():
+    if 'weight' in name:
+        param.data = Int8Params(param.data)
+
+# Save the quantized model
+torch.save(model.state_dict(), 'int8_quantized_bert.pth')
+
+print('INT8 Quantization complete.')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which library is used for efficient INT4/INT8 quantization in PyTorch?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

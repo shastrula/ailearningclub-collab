@@ -92,7 +92,35 @@ print('Test accuracy:', test_acc)
 
 > **💡 Tip:** Always ensure that your training, validation, and test datasets are disjoint to avoid data leakage, which can lead to overly optimistic performance metrics.
 
-<div class="quiz">
+After training, it's crucial to evaluate the model's performance to ensure it generalizes well to new, unseen data. This is typically done using a separate validation or test dataset. Metrics such as accuracy, precision, recall, and F1-score are commonly used to assess performance.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+# Define a simple neural network
+model = Sequential([
+    Dense(64, activation='relu', input_shape=(784,)),
+    Dense(10, activation='softmax')
+])
+
+# Compile the model
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+# Generate dummy data
+import numpy as np
+x_test = np.random.random((20, 784)).astype(np.float32)
+y_test = np.random.randint(10, size=(20, 1)).astype(np.int32)
+
+# Evaluate the model
+test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
+print('Test accuracy:', test_acc)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary method used to adjust the parameters of a neural network during training?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -116,7 +144,35 @@ print('Test accuracy:', test_acc)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+After training, it's crucial to evaluate the model's performance to ensure it generalizes well to new, unseen data. This is typically done using a separate validation or test dataset. Metrics such as accuracy, precision, recall, and F1-score are commonly used to assess performance.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+# Define a simple neural network
+model = Sequential([
+    Dense(64, activation='relu', input_shape=(784,)),
+    Dense(10, activation='softmax')
+])
+
+# Compile the model
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+# Generate dummy data
+import numpy as np
+x_test = np.random.random((20, 784)).astype(np.float32)
+y_test = np.random.randint(10, size=(20, 1)).astype(np.int32)
+
+# Evaluate the model
+test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
+print('Test accuracy:', test_acc)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which metric is commonly used to evaluate the performance of a classification model?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -78,7 +78,23 @@ plt.colorbar(scatter)
 plt.show()
 ```
 
-<div class="quiz">
+t-SNE (t-Distributed Stochastic Neighbor Embedding) is excellent for visualizing high-dimensional data in 2D/3D, but not suitable for feature extraction (non-deterministic, computationally expensive).
+
+```python title="example4.py"
+from sklearn.manifold import TSNE
+
+# t-SNE: reduce to 2D for visualization
+tsne = TSNE(n_components=2, random_state=42, perplexity=30)
+X_tsne = tsne.fit_transform(X)
+
+plt.figure(figsize=(8, 6))
+scatter = plt.scatter(X_tsne[:, 0], X_tsne[:, 1], c=y, cmap='viridis', alpha=0.6)
+plt.title('t-SNE Visualization')
+plt.colorbar(scatter)
+plt.show()
+```
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the main advantage of wrapper methods over filter methods?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -102,7 +118,23 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+t-SNE (t-Distributed Stochastic Neighbor Embedding) is excellent for visualizing high-dimensional data in 2D/3D, but not suitable for feature extraction (non-deterministic, computationally expensive).
+
+```python title="example4.py"
+from sklearn.manifold import TSNE
+
+# t-SNE: reduce to 2D for visualization
+tsne = TSNE(n_components=2, random_state=42, perplexity=30)
+X_tsne = tsne.fit_transform(X)
+
+plt.figure(figsize=(8, 6))
+scatter = plt.scatter(X_tsne[:, 0], X_tsne[:, 1], c=y, cmap='viridis', alpha=0.6)
+plt.title('t-SNE Visualization')
+plt.colorbar(scatter)
+plt.show()
+```
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ When should you use t-SNE?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

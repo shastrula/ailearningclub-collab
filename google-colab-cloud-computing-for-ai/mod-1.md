@@ -82,7 +82,29 @@ Running on TPU grpc://10.0.0.2:8470
 
 > **💡 Tip:** Always check the runtime type before running long computations to ensure you are using the desired hardware (GPU/TPU) to avoid unexpected costs or performance issues.
 
-<div class="quiz">
+Colab provides access to free GPU and TPU resources, which can be incredibly useful for training machine learning models. You can switch between GPU and TPU runtimes directly from the Colab interface, which allows you to experiment with different hardware setups without any additional cost.
+
+```python title="example2.py"
+# Checking if a GPU is available
+import tensorflow as tf
+
+# List all available GPUs
+print("GPUs Available:", tf.config.experimental.list_physical_devices('GPU'))
+
+# If GPU is available, switch to GPU runtime
+try:
+    tpu = tf.distribute.cluster_resolver.TPUClusterResolver()
+    print('Running on TPU ', tpu.master())
+except ValueError:
+    print("Couldn't find TPU")
+```
+
+```
+GPUs Available: [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU'),...]
+Running on TPU grpc://10.0.0.2:8470
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using Google Colab for machine learning projects?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +128,29 @@ Running on TPU grpc://10.0.0.2:8470
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Colab provides access to free GPU and TPU resources, which can be incredibly useful for training machine learning models. You can switch between GPU and TPU runtimes directly from the Colab interface, which allows you to experiment with different hardware setups without any additional cost.
+
+```python title="example2.py"
+# Checking if a GPU is available
+import tensorflow as tf
+
+# List all available GPUs
+print("GPUs Available:", tf.config.experimental.list_physical_devices('GPU'))
+
+# If GPU is available, switch to GPU runtime
+try:
+    tpu = tf.distribute.cluster_resolver.TPUClusterResolver()
+    print('Running on TPU ', tpu.master())
+except ValueError:
+    print("Couldn't find TPU")
+```
+
+```
+GPUs Available: [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU'),...]
+Running on TPU grpc://10.0.0.2:8470
+```
+
+>
   <p class="font-semibold mb-3">❓ How can you verify if a GPU is available in your Colab environment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

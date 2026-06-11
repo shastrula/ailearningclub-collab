@@ -98,7 +98,41 @@ public class Test {
 
 > **💡 Tip:** When overriding methods, always use the @Override annotation to avoid accidental method signature changes in the superclass.
 
-<div class="quiz">
+Polymorphism allows objects to be treated as instances of their parent class. It is of two types: compile-time (or static) and runtime (or dynamic). Compile-time polymorphism is achieved through method overloading, while runtime polymorphism is achieved through method overriding. This enables a single action to behave differently based on the object that it is acting upon.
+
+```java title="example2.java"
+class Animal {
+    void makeSound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Meow");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Woof");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal a;
+        a = new Cat();
+        a.makeSound();
+        a = new Dog();
+        a.makeSound(};
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ What does the 'extends' keyword do in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -122,7 +156,41 @@ public class Test {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Polymorphism allows objects to be treated as instances of their parent class. It is of two types: compile-time (or static) and runtime (or dynamic). Compile-time polymorphism is achieved through method overloading, while runtime polymorphism is achieved through method overriding. This enables a single action to behave differently based on the object that it is acting upon.
+
+```java title="example2.java"
+class Animal {
+    void makeSound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Meow");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Woof");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal a;
+        a = new Cat();
+        a.makeSound();
+        a = new Dog();
+        a.makeSound(};
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Which type of polymorphism is achieved through method overriding?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

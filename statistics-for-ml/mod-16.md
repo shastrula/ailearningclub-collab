@@ -82,7 +82,25 @@ print(f'Adjusted p-values: {adjusted_p_values}')
 
 > **💡 Tip:** Always pre-register your A/B test hypotheses and analysis plan to avoid p-hacking, which is the practice of cherry-picking results or analyses that yield statistically significant outcomes.
 
-<div class="quiz">
+Another common pitfall is ignoring the issue of multiple comparisons. When conducting multiple A/B tests simultaneously, the probability of obtaining a false positive increases. To mitigate this, adjustments such as the Bonferroni correction should be applied to the significance level to control the family-wise error rate.
+
+```python title="example2.py"
+import numpy as np
+
+# Function to apply Bonferroni correction
+def bonferroni_correction(p_values, num_comparisons):
+    adjusted_p_values = np.array(p_values) * num_comparisons
+    adjusted_p_values = np.clip(adjusted_p_values, 0, 1)  # Ensure values are between 0 and 1
+    return adjusted_p_values
+
+# Example usage
+p_values = [0.01, 0.05, 0.005]
+num_comparisons = 3
+adjusted_p_values = bonferroni_correction(p_values, num_comparisons)
+print(f'Adjusted p-values: {adjusted_p_values}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a common consequence of using an insufficient sample size in A/B testing?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +124,25 @@ print(f'Adjusted p-values: {adjusted_p_values}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Another common pitfall is ignoring the issue of multiple comparisons. When conducting multiple A/B tests simultaneously, the probability of obtaining a false positive increases. To mitigate this, adjustments such as the Bonferroni correction should be applied to the significance level to control the family-wise error rate.
+
+```python title="example2.py"
+import numpy as np
+
+# Function to apply Bonferroni correction
+def bonferroni_correction(p_values, num_comparisons):
+    adjusted_p_values = np.array(p_values) * num_comparisons
+    adjusted_p_values = np.clip(adjusted_p_values, 0, 1)  # Ensure values are between 0 and 1
+    return adjusted_p_values
+
+# Example usage
+p_values = [0.01, 0.05, 0.005]
+num_comparisons = 3
+adjusted_p_values = bonferroni_correction(p_values, num_comparisons)
+print(f'Adjusted p-values: {adjusted_p_values}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which method is used to adjust p-values when performing multiple comparisons?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

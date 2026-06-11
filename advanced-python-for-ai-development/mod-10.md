@@ -95,7 +95,38 @@ plt.show()
 
 > **💡 Tip:** When using Canny edge detection, adjusting the threshold values is crucial. Too low values can miss edges, while too high values can produce too many false edges.
 
-<div class="quiz">
+Edge detection is a fundamental task in computer vision that involves identifying points in a digital image where the image brightness changes sharply. This is crucial for object detection and image segmentation. We'll use the Canny edge detection algorithm, which is widely used for its effectiveness and efficiency.
+
+**example2.py**
+
+```
+import cv2
+import matplotlib.pyplot as plt
+
+# Load an image from file
+image = cv2.imread('path/to/image.jpg', cv2.IMREAD_GRAYSCALE)
+
+# Apply GaussianBlur to reduce noise and improve edge detection
+image_blur = cv2.GaussianBlur(image, (5, 5), 1.4)
+
+# Apply Canny edge detection
+edges = cv2.Canny(image_blur, 100, 200)
+
+# Display the original and edge-detected images
+plt.subplot(1, 2, 1)
+plt.imshow(image, cmap='gray')
+plt.title('Original Image')
+plt.axis('off')
+
+plt.subplot(1, 2, 2)
+plt.imshow(edges, cmap='gray')
+plt.title('Edge Detection')
+plt.axis('off')
+
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of using GaussianBlur before applying Canny edge detection?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -119,7 +150,38 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Edge detection is a fundamental task in computer vision that involves identifying points in a digital image where the image brightness changes sharply. This is crucial for object detection and image segmentation. We'll use the Canny edge detection algorithm, which is widely used for its effectiveness and efficiency.
+
+**example2.py**
+
+```
+import cv2
+import matplotlib.pyplot as plt
+
+# Load an image from file
+image = cv2.imread('path/to/image.jpg', cv2.IMREAD_GRAYSCALE)
+
+# Apply GaussianBlur to reduce noise and improve edge detection
+image_blur = cv2.GaussianBlur(image, (5, 5), 1.4)
+
+# Apply Canny edge detection
+edges = cv2.Canny(image_blur, 100, 200)
+
+# Display the original and edge-detected images
+plt.subplot(1, 2, 1)
+plt.imshow(image, cmap='gray')
+plt.title('Original Image')
+plt.axis('off')
+
+plt.subplot(1, 2, 2)
+plt.imshow(edges, cmap='gray')
+plt.title('Edge Detection')
+plt.axis('off')
+
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which function from OpenCV is used to convert an image from BGR to RGB?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

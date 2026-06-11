@@ -66,7 +66,11 @@ Learning from others' experiences:
 - 95% CI: 95% confident true value is in range
 - Wider interval = less precision, higher confidence
 
-<div class="quiz">
+- Range of values likely to contain true parameter
+- 95% CI: 95% confident true value is in range
+- Wider interval = less precision, higher confidence
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does a p-value < 0.05 typically indicate?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

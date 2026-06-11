@@ -101,7 +101,51 @@ print(f'DPO Loss: {dpo_loss.item()}')
 
 > **💡 Tip:** When implementing DPO, ensure that your dataset of preferred and non-preferred outputs is diverse and representative to avoid overfitting to specific examples.
 
-<div class="quiz">
+To implement DPO, you need to collect user preferences and use them to guide the fine-tuning process. This involves creating a dataset of preferred and non-preferred outputs, then training the model to maximize the likelihood of the preferred outputs. DPO can be particularly effective when combined with other fine-tuning techniques like LoRA or QLoRA.
+
+```python title="example2.py"
+import torch
+import torch.nn as nn
+
+# Define a simple neural network
+class SimpleNN(nn.Module):
+    def __init__(self):
+        super(SimpleNN, self).__init__()
+        self.fc = nn.Linear(10, 1)
+
+    def forward(self, x):
+        return torch.sigmoid(self.fc(x))
+
+# Initialize the model, loss function, and optimizer
+model = SimpleNN()
+criterion = nn.BCELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+
+# Example input and target
+input_data = torch.randn(1, 10)
+preferred_target = torch.tensor([1.0])
+non_preferred_target = torch.tensor([0.0])
+
+# Forward pass for preferred output
+preferred_output = model(input_data)
+preferred_loss = criterion(preferred_output, preferred_target)
+
+# Forward pass for non-preferred output
+non_preferred_output = model(input_data)
+non_preferred_loss = criterion(non_preferred_output, non_preferred_target)
+
+# DPO loss
+dpo_loss = preferred_loss - non_preferred_loss
+
+# Backward pass and optimization
+optimizer.zero_grad()
+dpo_loss.backward()
+optimizer.step()
+
+print(f'DPO Loss: {dpo_loss.item()}') 
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of Direct Preference Optimization (DPO)?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -125,7 +169,51 @@ print(f'DPO Loss: {dpo_loss.item()}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+To implement DPO, you need to collect user preferences and use them to guide the fine-tuning process. This involves creating a dataset of preferred and non-preferred outputs, then training the model to maximize the likelihood of the preferred outputs. DPO can be particularly effective when combined with other fine-tuning techniques like LoRA or QLoRA.
+
+```python title="example2.py"
+import torch
+import torch.nn as nn
+
+# Define a simple neural network
+class SimpleNN(nn.Module):
+    def __init__(self):
+        super(SimpleNN, self).__init__()
+        self.fc = nn.Linear(10, 1)
+
+    def forward(self, x):
+        return torch.sigmoid(self.fc(x))
+
+# Initialize the model, loss function, and optimizer
+model = SimpleNN()
+criterion = nn.BCELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+
+# Example input and target
+input_data = torch.randn(1, 10)
+preferred_target = torch.tensor([1.0])
+non_preferred_target = torch.tensor([0.0])
+
+# Forward pass for preferred output
+preferred_output = model(input_data)
+preferred_loss = criterion(preferred_output, preferred_target)
+
+# Forward pass for non-preferred output
+non_preferred_output = model(input_data)
+non_preferred_loss = criterion(non_preferred_output, non_preferred_target)
+
+# DPO loss
+dpo_loss = preferred_loss - non_preferred_loss
+
+# Backward pass and optimization
+optimizer.zero_grad()
+dpo_loss.backward()
+optimizer.step()
+
+print(f'DPO Loss: {dpo_loss.item()}') 
+```
+
+>
   <p class="font-semibold mb-3">❓ Which loss function is used in the DPO example provided?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

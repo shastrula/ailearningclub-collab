@@ -195,7 +195,9 @@ response = client.converse(
 
 ---
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What temperature should you use for factual Q&A tasks?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -219,7 +221,9 @@ response = client.converse(
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the purpose of a system prompt?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -243,7 +247,9 @@ response = client.converse(
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does top_p=0.5 mean?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -267,7 +273,9 @@ response = client.converse(
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Which technique provides examples to guide model behavior?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

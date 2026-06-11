@@ -77,7 +77,20 @@ print(chain_of_thought_example())
 
 > **💡 Tip:** When designing system prompts, ensure they are clear, concise, and specific to the task at hand. Ambiguous prompts can lead to incorrect or irrelevant responses.
 
-<div class="quiz">
+Chain-of-Thought (CoT) prompting encourages the model to provide intermediate reasoning steps before arriving at a final answer, enhancing transparency and reliability. ReAct prompting combines reasoning and action, allowing the model to perform tasks that require external information or actions.
+
+```python title="example2.py"
+def chain_of_thought_example():
+    """Demonstrates Chain-of-Thought prompting."""
+    prompt = 'What is the capital of France? First, consider the country. Then, think about its capital.'
+    response = 'The capital of France is Paris.'  # Simulated model response
+    return response
+
+# Example usage
+print(chain_of_thought_example())
+```
+
+>
   <p class="font-semibold mb-3">❓ Which type of prompting relies on the model's pre-trained knowledge without any examples?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +114,20 @@ print(chain_of_thought_example())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Chain-of-Thought (CoT) prompting encourages the model to provide intermediate reasoning steps before arriving at a final answer, enhancing transparency and reliability. ReAct prompting combines reasoning and action, allowing the model to perform tasks that require external information or actions.
+
+```python title="example2.py"
+def chain_of_thought_example():
+    """Demonstrates Chain-of-Thought prompting."""
+    prompt = 'What is the capital of France? First, consider the country. Then, think about its capital.'
+    response = 'The capital of France is Paris.'  # Simulated model response
+    return response
+
+# Example usage
+print(chain_of_thought_example())
+```
+
+>
   <p class="font-semibold mb-3">❓ What does Chain-of-Thought prompting aim to enhance in model responses?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

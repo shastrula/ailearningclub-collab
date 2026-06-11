@@ -69,7 +69,18 @@ A practical DevOps journey typically follows this path:
 
 ---
 
-<div class="quiz">
+A practical DevOps journey typically follows this path:
+
+1. **Automate builds** — Use CI to catch issues early
+2. **Automate deployments** — Use CD to reduce manual work
+3. **Monitor everything** — Instrument applications and infrastructure
+4. **Incident response** — Establish runbooks and blameless postmortems
+5. **Infrastructure as Code** — Manage infrastructure like code
+6. **Platform engineering** — Build self-service capabilities
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of DevOps?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -93,7 +104,18 @@ A practical DevOps journey typically follows this path:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+A practical DevOps journey typically follows this path:
+
+1. **Automate builds** — Use CI to catch issues early
+2. **Automate deployments** — Use CD to reduce manual work
+3. **Monitor everything** — Instrument applications and infrastructure
+4. **Incident response** — Establish runbooks and blameless postmortems
+5. **Infrastructure as Code** — Manage infrastructure like code
+6. **Platform engineering** — Build self-service capabilities
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which DORA metric measures how quickly a team can restore service after an incident?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,7 +139,18 @@ A practical DevOps journey typically follows this path:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+A practical DevOps journey typically follows this path:
+
+1. **Automate builds** — Use CI to catch issues early
+2. **Automate deployments** — Use CD to reduce manual work
+3. **Monitor everything** — Instrument applications and infrastructure
+4. **Incident response** — Establish runbooks and blameless postmortems
+5. **Infrastructure as Code** — Manage infrastructure like code
+6. **Platform engineering** — Build self-service capabilities
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the First Way of DevOps focused on?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -141,7 +174,18 @@ A practical DevOps journey typically follows this path:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+A practical DevOps journey typically follows this path:
+
+1. **Automate builds** — Use CI to catch issues early
+2. **Automate deployments** — Use CD to reduce manual work
+3. **Monitor everything** — Instrument applications and infrastructure
+4. **Incident response** — Establish runbooks and blameless postmortems
+5. **Infrastructure as Code** — Manage infrastructure like code
+6. **Platform engineering** — Build self-service capabilities
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does Platform Engineering provide to product teams?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -165,7 +209,18 @@ A practical DevOps journey typically follows this path:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+A practical DevOps journey typically follows this path:
+
+1. **Automate builds** — Use CI to catch issues early
+2. **Automate deployments** — Use CD to reduce manual work
+3. **Monitor everything** — Instrument applications and infrastructure
+4. **Incident response** — Establish runbooks and blameless postmortems
+5. **Infrastructure as Code** — Manage infrastructure like code
+6. **Platform engineering** — Build self-service capabilities
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ In traditional operations, how are deployments typically handled?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

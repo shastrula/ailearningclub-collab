@@ -76,7 +76,19 @@ conda.cli.main.create(name='newenv', yaml_file='myenv.yaml')
 
 > **💡 Tip:** Always ensure that the YAML file is up-to-date with the current environment's packages and versions to avoid discrepancies.
 
-<div class="quiz">
+Exporting your environment allows you to share it with others or replicate it on another machine. This is particularly useful for ensuring that your project runs the same way on different systems.
+
+```python title="example2.py"
+import conda
+
+# Export the current environment to a YAML file
+conda.cli.main.export(name='myenv', filename='myenv.yaml')
+
+# Create a new environment from the YAML file
+conda.cli.main.create(name='newenv', yaml_file='myenv.yaml')
+```
+
+>
   <p class="font-semibold mb-3">❓ Why is it important to create a new Conda environment for each project?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -100,7 +112,19 @@ conda.cli.main.create(name='newenv', yaml_file='myenv.yaml')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Exporting your environment allows you to share it with others or replicate it on another machine. This is particularly useful for ensuring that your project runs the same way on different systems.
+
+```python title="example2.py"
+import conda
+
+# Export the current environment to a YAML file
+conda.cli.main.export(name='myenv', filename='myenv.yaml')
+
+# Create a new environment from the YAML file
+conda.cli.main.create(name='newenv', yaml_file='myenv.yaml')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of exporting an environment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

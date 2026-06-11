@@ -109,7 +109,56 @@ print(f'Stacking Ensemble Accuracy (Cross-Validation): {accuracy:.2f}')
 
 > **💡 Tip:** When implementing stacking, ensure that the base models are sufficiently diverse to capture different aspects of the data. Using cross-validation for training the base models helps prevent overfitting and improves the generalization of the stacking ensemble.
 
-<div class="quiz">
+To avoid overfitting and ensure robust performance, it's essential to use cross-validation when training the base models. This involves splitting the training data into multiple folds, training each base model on different folds, and using the out-of-fold predictions as input for the meta-model. This approach helps generalize the stacking ensemble better.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import KFold, train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+data = load_iris()
+X, y = data.data, data.target
+
+# Split data into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Define base models
+base_models = [
+    ('rf', RandomForestClassifier(n_estimators=50, random_state=42)),
+    ('lr', LogisticRegression(random_state=42))
+]
+
+# Initialize KFold
+kf = KFold(n_splits=5, shuffle=True, random_state=42)
+
+# Initialize arrays to hold out-of-fold predictions
+base_model_predictions = np.zeros((len(X_train), len(base_models)))
+
+# Train base models with cross-validation
+for idx, (name, model) in enumerate(base_models):
+    for train_index, val_index in kf.split(X_train):
+        X_fold_train, X_fold_val = X_train[train_index], X_train[val_index]
+        y_fold_train, y_fold_val = y_train[train_index], y_train[val_index]
+        model.fit(X_fold_train, y_fold_train)
+        base_model_predictions[val_index, idx] = model.predict(X_fold_val)
+
+# Train meta-model on out-of-fold predictions
+meta_model = LogisticRegression(random_state=42)
+meta_model.fit(base_model_predictions, y_train)
+
+# Make final prediction
+final_predictions = meta_model.predict(base_model_predictions)
+
+# Evaluate performance
+accuracy = accuracy_score(y_train, final_predictions)
+print(f'Stacking Ensemble Accuracy (Cross-Validation): {accuracy:.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of stacking ensembles?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -133,7 +182,56 @@ print(f'Stacking Ensemble Accuracy (Cross-Validation): {accuracy:.2f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+To avoid overfitting and ensure robust performance, it's essential to use cross-validation when training the base models. This involves splitting the training data into multiple folds, training each base model on different folds, and using the out-of-fold predictions as input for the meta-model. This approach helps generalize the stacking ensemble better.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import KFold, train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+data = load_iris()
+X, y = data.data, data.target
+
+# Split data into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Define base models
+base_models = [
+    ('rf', RandomForestClassifier(n_estimators=50, random_state=42)),
+    ('lr', LogisticRegression(random_state=42))
+]
+
+# Initialize KFold
+kf = KFold(n_splits=5, shuffle=True, random_state=42)
+
+# Initialize arrays to hold out-of-fold predictions
+base_model_predictions = np.zeros((len(X_train), len(base_models)))
+
+# Train base models with cross-validation
+for idx, (name, model) in enumerate(base_models):
+    for train_index, val_index in kf.split(X_train):
+        X_fold_train, X_fold_val = X_train[train_index], X_train[val_index]
+        y_fold_train, y_fold_val = y_train[train_index], y_train[val_index]
+        model.fit(X_fold_train, y_fold_train)
+        base_model_predictions[val_index, idx] = model.predict(X_fold_val)
+
+# Train meta-model on out-of-fold predictions
+meta_model = LogisticRegression(random_state=42)
+meta_model.fit(base_model_predictions, y_train)
+
+# Make final prediction
+final_predictions = meta_model.predict(base_model_predictions)
+
+# Evaluate performance
+accuracy = accuracy_score(y_train, final_predictions)
+print(f'Stacking Ensemble Accuracy (Cross-Validation): {accuracy:.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Why is cross-validation important in stacking ensembles?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

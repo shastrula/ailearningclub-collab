@@ -86,7 +86,29 @@ cv2.imwrite('anonymized_image.jpg', anonymized_image)
 
 > **💡 Tip:** Always ensure that any dataset used for training computer vision models is collected and stored in compliance with relevant data protection laws and regulations.
 
-<div class="quiz">
+Another significant ethical consideration is the privacy and security of the data used in computer vision applications. Sensitive information can be inadvertently collected or inferred from images, leading to privacy breaches. It is vital to implement robust data protection measures, including anonymization techniques and secure data storage practices, to safeguard user privacy.
+
+```python title="example2.py"
+import cv2
+
+# Example of anonymizing faces in an image using OpenCV
+def anonymize_faces(image_path):
+    image = cv2.imread(image_path)
+    face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+    for (x, y, w, h) in faces:
+        cv2.rectangle(image, (x, y), (x+w, y+h), (0, 0, 0), -1)
+    return image
+
+# Path to the image
+image_path ='sample_image.jpg'
+# Anonymizing faces
+anonymized_image = anonymize_faces(image_path)
+cv2.imwrite('anonymized_image.jpg', anonymized_image)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a primary ethical concern regarding bias in computer vision algorithms?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -110,7 +132,29 @@ cv2.imwrite('anonymized_image.jpg', anonymized_image)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Another significant ethical consideration is the privacy and security of the data used in computer vision applications. Sensitive information can be inadvertently collected or inferred from images, leading to privacy breaches. It is vital to implement robust data protection measures, including anonymization techniques and secure data storage practices, to safeguard user privacy.
+
+```python title="example2.py"
+import cv2
+
+# Example of anonymizing faces in an image using OpenCV
+def anonymize_faces(image_path):
+    image = cv2.imread(image_path)
+    face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+    for (x, y, w, h) in faces:
+        cv2.rectangle(image, (x, y), (x+w, y+h), (0, 0, 0), -1)
+    return image
+
+# Path to the image
+image_path ='sample_image.jpg'
+# Anonymizing faces
+anonymized_image = anonymize_faces(image_path)
+cv2.imwrite('anonymized_image.jpg', anonymized_image)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which technique can be used to protect privacy in computer vision applications?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -92,7 +92,42 @@ print(f'Stacking Ensemble Accuracy: {accuracy:.2f}')
 
 > **💡 Tip:** When using stacking ensembles, ensure that the base models are sufficiently diverse to capture different aspects of the data. This diversity helps the meta-model learn more effectively.
 
-<div class="quiz">
+Stacking is a sophisticated ensemble technique where multiple base models are trained on the original dataset, and a meta-model is trained on the predictions of these base models. The meta-model learns to combine the predictions of the base models, often leading to improved performance. This method can capture complex relationships between the base models' predictions.
+
+```python title="example2.py"
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import StackingClassifier
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create base classifiers
+base_clfs = [('rf', RandomForestClassifier(n_estimators=50, random_state=42)),
+             ('svc', SVC(probability=True, random_state=42)),
+             ('lr', LogisticRegression(random_state=42))]
+
+# Create stacking classifier with logistic regression as the final estimator
+stacking_clf = StackingClassifier(estimators=base_clfs, final_estimator=LogisticRegression())
+
+# Fit and predict
+stacking_clf.fit(X_train, y_train)
+predictions = stacking_clf.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, predictions)
+print(f'Stacking Ensemble Accuracy: {accuracy:.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the purpose of assigning weights in a weighted voting ensemble?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -116,7 +151,42 @@ print(f'Stacking Ensemble Accuracy: {accuracy:.2f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Stacking is a sophisticated ensemble technique where multiple base models are trained on the original dataset, and a meta-model is trained on the predictions of these base models. The meta-model learns to combine the predictions of the base models, often leading to improved performance. This method can capture complex relationships between the base models' predictions.
+
+```python title="example2.py"
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import StackingClassifier
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create base classifiers
+base_clfs = [('rf', RandomForestClassifier(n_estimators=50, random_state=42)),
+             ('svc', SVC(probability=True, random_state=42)),
+             ('lr', LogisticRegression(random_state=42))]
+
+# Create stacking classifier with logistic regression as the final estimator
+stacking_clf = StackingClassifier(estimators=base_clfs, final_estimator=LogisticRegression())
+
+# Fit and predict
+stacking_clf.fit(X_train, y_train)
+predictions = stacking_clf.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, predictions)
+print(f'Stacking Ensemble Accuracy: {accuracy:.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the role of the meta-model in a stacking ensemble?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -87,7 +87,30 @@ print(model.encoder.layer[0].attention.self.query.weight)
 
 > **💡 Tip:** Ensure that the rank 'r' chosen for LoRA is appropriate for the model and task. A too-small rank may not capture sufficient information, while a too-large rank may lead to overfitting and increased computational cost.
 
-<div class="quiz">
+In practical applications, LoRA can be implemented in transformer-based models to fine-tune them for specific tasks. This involves integrating LoRA layers into the existing architecture and training the model on a target dataset.
+
+```python title="example2.py"
+import torch
+import torch.nn as nn
+from transformers import BertModel, BertConfig
+
+# Define a BERT model
+config = BertConfig(vocab_size=30522, hidden_size=768)
+model = BertModel(config)
+
+# Apply LoRA to a specific layer
+def apply_lora(layer, r=4):
+    original_weight = layer.weight
+    layer.weight = nn.Parameter(original_weight @ torch.randn(original_weight.size(1), r) @ torch.randn(r, original_weight.size(0)))
+
+# Apply LoRA to the first layer
+apply_lora(model.encoder.layer[0].attention.self.query)
+
+# Print the adapted weights
+print(model.encoder.layer[0].attention.self.query.weight)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using LoRA for fine-tuning large models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -111,7 +134,30 @@ print(model.encoder.layer[0].attention.self.query.weight)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+In practical applications, LoRA can be implemented in transformer-based models to fine-tune them for specific tasks. This involves integrating LoRA layers into the existing architecture and training the model on a target dataset.
+
+```python title="example2.py"
+import torch
+import torch.nn as nn
+from transformers import BertModel, BertConfig
+
+# Define a BERT model
+config = BertConfig(vocab_size=30522, hidden_size=768)
+model = BertModel(config)
+
+# Apply LoRA to a specific layer
+def apply_lora(layer, r=4):
+    original_weight = layer.weight
+    layer.weight = nn.Parameter(original_weight @ torch.randn(original_weight.size(1), r) @ torch.randn(r, original_weight.size(0)))
+
+# Apply LoRA to the first layer
+apply_lora(model.encoder.layer[0].attention.self.query)
+
+# Print the adapted weights
+print(model.encoder.layer[0].attention.self.query.weight)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which part of the transformer model is typically adapted using LoRA in practical implementations?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

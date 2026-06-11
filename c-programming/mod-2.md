@@ -62,7 +62,7 @@ Learning from others' experiences:
 
 ## Quiz
 
-<div class="quiz">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which data type should you use for storing a person's age?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

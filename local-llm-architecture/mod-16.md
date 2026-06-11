@@ -74,7 +74,17 @@ print(result.stdout)
 
 > **💡 Tip:** When working with llama.cpp, ensure your model files are correctly formatted and that you have the necessary dependencies installed to avoid common errors.
 
-<div class="quiz">
+llama.cpp is a popular C++ library for running LLMs efficiently on local hardware. The llama.cpp GitHub repository and associated Discord channel are invaluable resources for developers. They offer detailed documentation, example code, and a supportive community for discussing performance optimizations and model integrations.
+
+```python title="llama_cpp_example.py"
+import subprocess
+
+# Example: Running a llama.cpp model inference
+result = subprocess.run(['./main', '-m', 'path/to/model.bin', '-p', 'Your prompt here'], capture_output=True, text=True)
+print(result.stdout)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which platform simplifies the deployment and management of local LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -98,7 +108,17 @@ print(result.stdout)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+llama.cpp is a popular C++ library for running LLMs efficiently on local hardware. The llama.cpp GitHub repository and associated Discord channel are invaluable resources for developers. They offer detailed documentation, example code, and a supportive community for discussing performance optimizations and model integrations.
+
+```python title="llama_cpp_example.py"
+import subprocess
+
+# Example: Running a llama.cpp model inference
+result = subprocess.run(['./main', '-m', 'path/to/model.bin', '-p', 'Your prompt here'], capture_output=True, text=True)
+print(result.stdout)
+```
+
+>
   <p class="font-semibold mb-3">❓ Where can you find detailed documentation and example code for llama.cpp?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

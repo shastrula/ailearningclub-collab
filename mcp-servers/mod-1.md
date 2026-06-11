@@ -82,7 +82,29 @@ client_socket.close()
 
 > **💡 Tip:** Ensure that the port number used for the MCP Server is not already in use by another application to avoid connection errors.
 
-<div class="quiz">
+To set up an MCP Server, you need to define the server's address and port, create a socket, bind it to the address and port, and then listen for incoming connections. Once a connection is established, the server can receive and send data to the client. This setup allows multiple AI agents to communicate efficiently within a distributed system.
+
+```python title="example2.py"
+import socket
+
+# Create a socket object
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Connect to the server
+client_socket.connect(('localhost', 65432))
+
+# Send data to the server
+client_socket.sendall(b'Hello, MCP Server!')
+
+# Receive data from the server
+data = client_socket.recv(1024)
+print('Received', repr(data))
+
+# Close the socket
+client_socket.close()
+```
+
+>
   <p class="font-semibold mb-3">❓ What does MCP stand for in MCP Servers?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +128,29 @@ client_socket.close()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+To set up an MCP Server, you need to define the server's address and port, create a socket, bind it to the address and port, and then listen for incoming connections. Once a connection is established, the server can receive and send data to the client. This setup allows multiple AI agents to communicate efficiently within a distributed system.
+
+```python title="example2.py"
+import socket
+
+# Create a socket object
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Connect to the server
+client_socket.connect(('localhost', 65432))
+
+# Send data to the server
+client_socket.sendall(b'Hello, MCP Server!')
+
+# Receive data from the server
+data = client_socket.recv(1024)
+print('Received', repr(data))
+
+# Close the socket
+client_socket.close()
+```
+
+>
   <p class="font-semibold mb-3">❓ What method is used to accept incoming connections on an MCP Server?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

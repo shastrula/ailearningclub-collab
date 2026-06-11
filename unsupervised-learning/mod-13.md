@@ -110,7 +110,60 @@ vae.fit(x_train, epochs=50, batch_size=128, validation_data=(x_test, None))
 
 > **💡 Tip:** When training VAEs, ensure that the latent space dimension is appropriate for the complexity of your data. Too small a dimension may lead to underfitting, while too large may cause overfitting.
 
-<div class="quiz">
+Variational autoencoders (VAEs) are a generative model that not only reconstructs the input data but also learns the latent space distribution. This allows VAEs to generate new data points that are similar to the training data. VAEs introduce a probabilistic twist to the autoencoder framework, making them powerful for tasks like image generation and anomaly detection.
+
+```python title="example2.py"
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+# Custom layers for VAE
+class Sampling(layers.Layer):
+  def call(self, inputs):
+    z_mean, z_log_var = inputs
+    batch = tf.shape(z_mean)[0]
+    dim = tf.shape(z_mean)[1]
+    epsilon = tf.keras.backend.random_normal(shape=(batch, dim))
+    return z_mean + tf.exp(0.5 * z_log_var) * epsilon
+
+# Encoder
+input_img = layers.Input(shape=(784,))
+h1 = layers.Dense(256, activation='relu')(input_img)
+z_mean = layers.Dense(2)(h1)
+z_log_var = layers.Dense(2)(h1)
+z = Sampling()([z_mean, z_log_var])
+
+# Decoder
+decoder_h = layers.Dense(256, activation='relu')
+decoder_mean = layers.Dense(784, activation='sigmoid')
+h_decoded = decoder_h(z)
+decoded = decoder_mean(h_decoded)
+
+# VAE model
+vae = models.Model(input_img, decoded)
+
+# Loss function
+reconstruction_loss = tf.keras.losses.binary_crossentropy(input_img, decoded)
+reconstruction_loss *= 784
+kld_loss = 1 + z_log_var - tf.square(z_mean) - tf.exp(z_log_var)
+kld_loss = tf.reduce_sum(kld_loss, axis=-1)
+kld_loss *= -0.5
+vae_loss = tf.reduce_mean(reconstruction_loss + kld_loss)
+vae.add_loss(vae_loss / 784.0)
+vae.compile(optimizer='adam')
+
+# Load dataset
+(x_train, _), (x_test, _) = tf.keras.datasets.mnist.load_data()
+x_train = x_train.astype('float32') / 255.
+x_test = x_test.astype('float32') / 255.
+x_train = x_train.reshape((len(x_train), np.prod(x_train.shape[1:])))
+x_test = x_test.reshape((len(x_test), np.prod(x_test.shape[1:])))
+
+# Train the model
+vae.fit(x_train, epochs=50, batch_size=128, validation_data=(x_test, None))
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of a denoising autoencoder?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

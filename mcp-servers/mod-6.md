@@ -84,7 +84,31 @@ print(message.to_json())
 
 > **💡 Tip:** When designing AI agents, ensure that the perception and action mechanisms are well-defined and tested to handle various environmental conditions effectively.
 
-<div class="quiz">
+The Model Context Protocol (MCP) is a communication standard used by AI agents to share context and model information. This protocol allows agents to understand each other's states, intentions, and capabilities, facilitating more effective collaboration and decision-making in multi-agent systems.
+
+```python title="example2.py"
+import json
+
+# MCP Message Example
+class MCPMessage:
+    def __init__(self, sender, receiver, context, model):
+        self.sender = sender
+        self.receiver = receiver
+        self.context = context
+        self.model = model
+
+    def to_json(self):
+        return json.dumps(self.__dict__)
+
+# Creating an MCP message
+message = MCPMessage('Agent1', 'Agent2', 'current_state', 'prediction_model')
+
+# Sending the message
+print('Sending MCP message:')
+print(message.to_json())
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary function of an AI agent?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -108,7 +132,31 @@ print(message.to_json())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The Model Context Protocol (MCP) is a communication standard used by AI agents to share context and model information. This protocol allows agents to understand each other's states, intentions, and capabilities, facilitating more effective collaboration and decision-making in multi-agent systems.
+
+```python title="example2.py"
+import json
+
+# MCP Message Example
+class MCPMessage:
+    def __init__(self, sender, receiver, context, model):
+        self.sender = sender
+        self.receiver = receiver
+        self.context = context
+        self.model = model
+
+    def to_json(self):
+        return json.dumps(self.__dict__)
+
+# Creating an MCP message
+message = MCPMessage('Agent1', 'Agent2', 'current_state', 'prediction_model')
+
+# Sending the message
+print('Sending MCP message:')
+print(message.to_json())
+```
+
+>
   <p class="font-semibold mb-3">❓ What does MCP stand for in the context of AI agents?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

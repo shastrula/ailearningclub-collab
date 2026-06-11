@@ -84,7 +84,27 @@ plt.show()
 
 > **💡 Tip:** When working with LSTMs for time series forecasting, ensure your data is properly scaled and normalized. This can significantly impact the model's performance and convergence during training.
 
-<div class="quiz">
+After training an LSTM model, it's crucial to evaluate its performance to ensure it generalizes well to unseen data. Common metrics for time series forecasting include Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE). Additionally, visualizing the predicted vs. actual values can provide insights into the model's accuracy and areas for improvement.
+
+```python title="example2.py"
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+import matplotlib.pyplot as plt
+
+# Calculate MAE and RMSE
+mae = mean_absolute_error(Y, train_predict)
+rMSE = np.sqrt(mean_squared_error(Y, train_predict))
+
+print(f'MAE: {mae}')
+print(f'RMSE: {rMSE}')
+
+# Plot actual vs predicted values
+plt.plot(data, label='Actual')
+plt.plot(range(look_back, look_back + len(train_predict)), train_predict, label='Predicted')
+plt.legend()
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using LSTM networks for time series forecasting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -108,7 +128,27 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+After training an LSTM model, it's crucial to evaluate its performance to ensure it generalizes well to unseen data. Common metrics for time series forecasting include Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE). Additionally, visualizing the predicted vs. actual values can provide insights into the model's accuracy and areas for improvement.
+
+```python title="example2.py"
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+import matplotlib.pyplot as plt
+
+# Calculate MAE and RMSE
+mae = mean_absolute_error(Y, train_predict)
+rMSE = np.sqrt(mean_squared_error(Y, train_predict))
+
+print(f'MAE: {mae}')
+print(f'RMSE: {rMSE}')
+
+# Plot actual vs predicted values
+plt.plot(data, label='Actual')
+plt.plot(range(look_back, look_back + len(train_predict)), train_predict, label='Predicted')
+plt.legend()
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which metric is commonly used to evaluate the performance of an LSTM model in time series forecasting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

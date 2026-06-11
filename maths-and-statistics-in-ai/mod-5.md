@@ -87,7 +87,30 @@ plt.show()
 
 > **💡 Tip:** When working with probability distributions, always ensure that your data fits the assumptions of the chosen distribution. Misapplying a distribution can lead to incorrect conclusions.
 
-<div class="quiz">
+Probability distributions describe how the values of a random variable are distributed. Common distributions include the normal, binomial, and Poisson distributions. Understanding these distributions is vital for making probabilistic predictions and for the proper functioning of many machine learning algorithms.
+
+```python title="example2.py"
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy.stats import norm
+
+# Generate data from a normal distribution
+mu, sigma = 0, 1
+data = np.random.normal(mu, sigma, 1000)
+
+# Plot the histogram
+plt.hist(data, bins=30, density=True)
+
+# Plot the probability density function
+xmin, xmax = plt.xlim()
+x = np.linspace(xmin, xmax, 100)
+p_dens = norm.pdf(x, mu, sigma)
+plt.plot(x, p_dens, 'k', linewidth=2)
+plt.title('Normal Distribution')
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What does the mean represent in a dataset?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -111,7 +134,30 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Probability distributions describe how the values of a random variable are distributed. Common distributions include the normal, binomial, and Poisson distributions. Understanding these distributions is vital for making probabilistic predictions and for the proper functioning of many machine learning algorithms.
+
+```python title="example2.py"
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy.stats import norm
+
+# Generate data from a normal distribution
+mu, sigma = 0, 1
+data = np.random.normal(mu, sigma, 1000)
+
+# Plot the histogram
+plt.hist(data, bins=30, density=True)
+
+# Plot the probability density function
+xmin, xmax = plt.xlim()
+x = np.linspace(xmin, xmax, 100)
+p_dens = norm.pdf(x, mu, sigma)
+plt.plot(x, p_dens, 'k', linewidth=2)
+plt.title('Normal Distribution')
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which function in Python can be used to generate a normal distribution plot?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

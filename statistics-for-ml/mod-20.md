@@ -85,7 +85,28 @@ print(dependence(data1, data2))
 
 > **💡 Tip:** When selecting a copula, consider the tail dependence of your data. Gaussian copulas assume no tail dependence, whereas Student's t and Clayton copulas can model tail dependence.
 
-<div class="quiz">
+Dependence structures can be modeled using various types of copulas, such as Gaussian, Student's t, and Clayton copulas. Each copula type has its own characteristics and is suitable for different kinds of dependencies. Understanding these structures helps in capturing the true relationships in the data.
+
+```python title="example2.py"
+import numpy as np
+from scipy.stats import norm, t, clayton
+
+# Generate data
+data1 = norm.rvs(size=1000)
+data2 = t.rvs(df=4, size=1000)
+
+# Fit a Clayton copula
+def clayton_copula(u1, u2, theta):
+    return (u1**(-theta) + u2**(-theta) - 1)**(-1/theta)
+
+# Calculate dependence
+def dependence(u1, u2):
+    return np.mean(clayton_copula(u1, u2, 2))
+
+print(dependence(data1, data2))
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of using copulas in statistical modeling?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -109,7 +130,28 @@ print(dependence(data1, data2))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Dependence structures can be modeled using various types of copulas, such as Gaussian, Student's t, and Clayton copulas. Each copula type has its own characteristics and is suitable for different kinds of dependencies. Understanding these structures helps in capturing the true relationships in the data.
+
+```python title="example2.py"
+import numpy as np
+from scipy.stats import norm, t, clayton
+
+# Generate data
+data1 = norm.rvs(size=1000)
+data2 = t.rvs(df=4, size=1000)
+
+# Fit a Clayton copula
+def clayton_copula(u1, u2, theta):
+    return (u1**(-theta) + u2**(-theta) - 1)**(-1/theta)
+
+# Calculate dependence
+def dependence(u1, u2):
+    return np.mean(clayton_copula(u1, u2, 2))
+
+print(dependence(data1, data2))
+```
+
+>
   <p class="font-semibold mb-3">❓ Which copula type is suitable for modeling tail dependence?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

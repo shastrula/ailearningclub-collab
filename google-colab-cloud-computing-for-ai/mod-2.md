@@ -79,7 +79,22 @@ Numpy version: 1.21.2
 
 > **💡 Tip:** Always restart the runtime after installing new packages to ensure they are properly loaded.
 
-<div class="quiz">
+Google Colab allows you to manage your project's dependencies using pip or by uploading a requirements.txt file. This ensures that all necessary libraries are installed and available for your project.
+
+```python title="example2.py"
+# Install a package using pip
+# pip install numpy
+
+# Verify the installation
+import numpy as np
+print(f'Numpy version: {np.__version__}')
+```
+
+```
+Numpy version: 1.21.2
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of setting up a working directory in Google Colab?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -103,7 +118,22 @@ Numpy version: 1.21.2
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Google Colab allows you to manage your project's dependencies using pip or by uploading a requirements.txt file. This ensures that all necessary libraries are installed and available for your project.
+
+```python title="example2.py"
+# Install a package using pip
+# pip install numpy
+
+# Verify the installation
+import numpy as np
+print(f'Numpy version: {np.__version__}')
+```
+
+```
+Numpy version: 1.21.2
+```
+
+>
   <p class="font-semibold mb-3">❓ How can you verify that a package has been successfully installed in Google Colab?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

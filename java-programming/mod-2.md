@@ -90,7 +90,33 @@ public class Main {
 
 > **💡 Tip:** When using floating-point numbers, always append an 'f' or 'F' to a float literal to ensure it is treated as a float, not a double.
 
-<div class="quiz">
+Java has several primitive data types that are used to define variables and constants. These include integer types (byte, short, int, long), floating-point types (float, double), character type (char), and boolean type. Each type has a specific size and range, which is important for memory management and performance.
+
+```java title="example2.java"
+public class Main {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+
+        System.out.println("Byte: " + b);
+        System.out.println("Short: " + s);
+        System.out.println("Int: " + i);
+        System.out.println("Long: " + l);
+        System.out.println("Float: " + f);
+        System.out.println("Double: " + d);
+        System.out.println("Char: " + c);
+        System.out.println("Boolean: " + bool);
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the output of the following code snippet?
 int x = 10;
 x = x++ + ++x;
@@ -117,7 +143,33 @@ System.out.println(x);</p>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Java has several primitive data types that are used to define variables and constants. These include integer types (byte, short, int, long), floating-point types (float, double), character type (char), and boolean type. Each type has a specific size and range, which is important for memory management and performance.
+
+```java title="example2.java"
+public class Main {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+
+        System.out.println("Byte: " + b);
+        System.out.println("Short: " + s);
+        System.out.println("Int: " + i);
+        System.out.println("Long: " + l);
+        System.out.println("Float: " + f);
+        System.out.println("Double: " + d);
+        System.out.println("Char: " + c);
+        System.out.println("Boolean: " + bool);
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Which of the following is NOT a valid primitive data type in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -180,7 +232,33 @@ public class Example5 {
 Example 5
 ```
 
-<div class="quiz">
+Java has several primitive data types that are used to define variables and constants. These include integer types (byte, short, int, long), floating-point types (float, double), character type (char), and boolean type. Each type has a specific size and range, which is important for memory management and performance.
+
+```java title="example2.java"
+public class Main {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+
+        System.out.println("Byte: " + b);
+        System.out.println("Short: " + s);
+        System.out.println("Int: " + i);
+        System.out.println("Long: " + l);
+        System.out.println("Float: " + f);
+        System.out.println("Double: " + d);
+        System.out.println("Char: " + c);
+        System.out.println("Boolean: " + bool);
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 3: What is a key concept in Java Syntax and Data Types?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -204,7 +282,33 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Java has several primitive data types that are used to define variables and constants. These include integer types (byte, short, int, long), floating-point types (float, double), character type (char), and boolean type. Each type has a specific size and range, which is important for memory management and performance.
+
+```java title="example2.java"
+public class Main {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+
+        System.out.println("Byte: " + b);
+        System.out.println("Short: " + s);
+        System.out.println("Int: " + i);
+        System.out.println("Long: " + l);
+        System.out.println("Float: " + f);
+        System.out.println("Double: " + d);
+        System.out.println("Char: " + c);
+        System.out.println("Boolean: " + bool);
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 4: What is a key concept in Java Syntax and Data Types?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -228,7 +332,33 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Java has several primitive data types that are used to define variables and constants. These include integer types (byte, short, int, long), floating-point types (float, double), character type (char), and boolean type. Each type has a specific size and range, which is important for memory management and performance.
+
+```java title="example2.java"
+public class Main {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+
+        System.out.println("Byte: " + b);
+        System.out.println("Short: " + s);
+        System.out.println("Int: " + i);
+        System.out.println("Long: " + l);
+        System.out.println("Float: " + f);
+        System.out.println("Double: " + d);
+        System.out.println("Char: " + c);
+        System.out.println("Boolean: " + bool);
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 5: What is a key concept in Java Syntax and Data Types?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -252,7 +382,33 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Java has several primitive data types that are used to define variables and constants. These include integer types (byte, short, int, long), floating-point types (float, double), character type (char), and boolean type. Each type has a specific size and range, which is important for memory management and performance.
+
+```java title="example2.java"
+public class Main {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+
+        System.out.println("Byte: " + b);
+        System.out.println("Short: " + s);
+        System.out.println("Int: " + i);
+        System.out.println("Long: " + l);
+        System.out.println("Float: " + f);
+        System.out.println("Double: " + d);
+        System.out.println("Char: " + c);
+        System.out.println("Boolean: " + bool);
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 6: What is a key concept in Java Syntax and Data Types?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -276,7 +432,33 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Java has several primitive data types that are used to define variables and constants. These include integer types (byte, short, int, long), floating-point types (float, double), character type (char), and boolean type. Each type has a specific size and range, which is important for memory management and performance.
+
+```java title="example2.java"
+public class Main {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+
+        System.out.println("Byte: " + b);
+        System.out.println("Short: " + s);
+        System.out.println("Int: " + i);
+        System.out.println("Long: " + l);
+        System.out.println("Float: " + f);
+        System.out.println("Double: " + d);
+        System.out.println("Char: " + c);
+        System.out.println("Boolean: " + bool);
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 7: What is a key concept in Java Syntax and Data Types?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -300,7 +482,33 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Java has several primitive data types that are used to define variables and constants. These include integer types (byte, short, int, long), floating-point types (float, double), character type (char), and boolean type. Each type has a specific size and range, which is important for memory management and performance.
+
+```java title="example2.java"
+public class Main {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+
+        System.out.println("Byte: " + b);
+        System.out.println("Short: " + s);
+        System.out.println("Int: " + i);
+        System.out.println("Long: " + l);
+        System.out.println("Float: " + f);
+        System.out.println("Double: " + d);
+        System.out.println("Char: " + c);
+        System.out.println("Boolean: " + bool);
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 8: What is a key concept in Java Syntax and Data Types?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -324,7 +532,33 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Java has several primitive data types that are used to define variables and constants. These include integer types (byte, short, int, long), floating-point types (float, double), character type (char), and boolean type. Each type has a specific size and range, which is important for memory management and performance.
+
+```java title="example2.java"
+public class Main {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+
+        System.out.println("Byte: " + b);
+        System.out.println("Short: " + s);
+        System.out.println("Int: " + i);
+        System.out.println("Long: " + l);
+        System.out.println("Float: " + f);
+        System.out.println("Double: " + d);
+        System.out.println("Char: " + c);
+        System.out.println("Boolean: " + bool);
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 9: What is a key concept in Java Syntax and Data Types?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -348,7 +582,33 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Java has several primitive data types that are used to define variables and constants. These include integer types (byte, short, int, long), floating-point types (float, double), character type (char), and boolean type. Each type has a specific size and range, which is important for memory management and performance.
+
+```java title="example2.java"
+public class Main {
+    public static void main(String[] args) {
+        byte b = 127;
+        short s = 32000;
+        int i = 2147483647;
+        long l = 9223372036854775807L;
+        float f = 3.14f;
+        double d = 3.141592653589793;
+        char c = 'A';
+        boolean bool = true;
+
+        System.out.println("Byte: " + b);
+        System.out.println("Short: " + s);
+        System.out.println("Int: " + i);
+        System.out.println("Long: " + l);
+        System.out.println("Float: " + f);
+        System.out.println("Double: " + d);
+        System.out.println("Char: " + c);
+        System.out.println("Boolean: " + bool);
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 10: What is a key concept in Java Syntax and Data Types?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

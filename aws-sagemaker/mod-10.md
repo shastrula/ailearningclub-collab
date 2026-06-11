@@ -240,7 +240,7 @@ print(f"Metrics: {response['Datapoints']}")
 
 ## Quiz
 
-<div class="quiz">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does Model Monitor detect?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

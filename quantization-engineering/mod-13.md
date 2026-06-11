@@ -110,7 +110,53 @@ for epoch in range(10):
 
 > **💡 Tip:** Ensure that your model is thoroughly trained before applying QAT, as the quantization process can introduce additional noise and affect the model's performance.
 
-<div class="quiz">
+To implement QAT, you need to prepare your model for quantization by setting a quantization configuration and inserting fake quantization nodes. During training, these nodes simulate the quantization effects, allowing the model to adapt. After training, you can convert the model to a fully quantized version for deployment.
+
+```python title="example2.py"
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torch.quantization
+
+# Define a simple neural network
+class SimpleNet(nn.Module):
+    def __init__(self):
+        super(SimpleNet, self).__init__()
+        self.fc1 = nn.Linear(10, 5)
+        self.fc2 = nn.Linear(5, 2)
+
+    def forward(self, x):
+        x = torch.relu(self.fc1(x))
+        x = self.fc2(x)
+        return x
+
+# Initialize the model
+model = SimpleNet()
+
+# Prepare the model for quantization-aware training
+model.qconfig = torch.quantization.get_default_qat_qconfig('fbgemm')
+torch.quantization.prepare_qat(model, inplace=True)
+
+# Define loss function and optimizer
+criterion = nn.MSELoss()
+optimizer = optim.SGD(model.parameters(), lr=0.01)
+
+# Example training loop
+for epoch in range(10):
+    input_tensor = torch.randn(1, 10)
+    target_tensor = torch.randn(1, 2)
+
+    optimizer.zero_grad()
+    output = model(input_tensor)
+    loss = criterion(output, target_tensor)
+    loss.backward()
+    optimizer.step()
+
+    print(f'Epoch {epoch+1}, Loss: {loss.item()}')
+
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of Quantization-Aware Training?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -134,7 +180,53 @@ for epoch in range(10):
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+To implement QAT, you need to prepare your model for quantization by setting a quantization configuration and inserting fake quantization nodes. During training, these nodes simulate the quantization effects, allowing the model to adapt. After training, you can convert the model to a fully quantized version for deployment.
+
+```python title="example2.py"
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torch.quantization
+
+# Define a simple neural network
+class SimpleNet(nn.Module):
+    def __init__(self):
+        super(SimpleNet, self).__init__()
+        self.fc1 = nn.Linear(10, 5)
+        self.fc2 = nn.Linear(5, 2)
+
+    def forward(self, x):
+        x = torch.relu(self.fc1(x))
+        x = self.fc2(x)
+        return x
+
+# Initialize the model
+model = SimpleNet()
+
+# Prepare the model for quantization-aware training
+model.qconfig = torch.quantization.get_default_qat_qconfig('fbgemm')
+torch.quantization.prepare_qat(model, inplace=True)
+
+# Define loss function and optimizer
+criterion = nn.MSELoss()
+optimizer = optim.SGD(model.parameters(), lr=0.01)
+
+# Example training loop
+for epoch in range(10):
+    input_tensor = torch.randn(1, 10)
+    target_tensor = torch.randn(1, 2)
+
+    optimizer.zero_grad()
+    output = model(input_tensor)
+    loss = criterion(output, target_tensor)
+    loss.backward()
+    optimizer.step()
+
+    print(f'Epoch {epoch+1}, Loss: {loss.item()}')
+
+```
+
+>
   <p class="font-semibold mb-3">❓ Which component is added during Quantization-Aware Training to simulate quantization effects?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

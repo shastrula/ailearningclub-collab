@@ -97,7 +97,42 @@ Add smooth animations and transformations:
 
 ---
 
-<div class="quiz">
+Add smooth animations and transformations:
+
+```css
+.button {
+  background-color: blue;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: darkblue;
+}
+
+.box {
+  transform: rotate(45deg);
+  transform: scale(1.2);
+  transform: translateX(50px);
+  transform: skew(10deg);
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.animated {
+  animation: slide 2s infinite;
+}
+```
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does CSS stand for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -123,7 +158,42 @@ Add smooth animations and transformations:
 
 ---
 
-<div class="quiz">
+Add smooth animations and transformations:
+
+```css
+.button {
+  background-color: blue;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: darkblue;
+}
+
+.box {
+  transform: rotate(45deg);
+  transform: scale(1.2);
+  transform: translateX(50px);
+  transform: skew(10deg);
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.animated {
+  animation: slide 2s infinite;
+}
+```
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which selector has the highest specificity?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -149,7 +219,42 @@ Add smooth animations and transformations:
 
 ---
 
-<div class="quiz">
+Add smooth animations and transformations:
+
+```css
+.button {
+  background-color: blue;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: darkblue;
+}
+
+.box {
+  transform: rotate(45deg);
+  transform: scale(1.2);
+  transform: translateX(50px);
+  transform: skew(10deg);
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.animated {
+  animation: slide 2s infinite;
+}
+```
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the correct order of the box model from inside to outside?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -175,7 +280,42 @@ Add smooth animations and transformations:
 
 ---
 
-<div class="quiz">
+Add smooth animations and transformations:
+
+```css
+.button {
+  background-color: blue;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: darkblue;
+}
+
+.box {
+  transform: rotate(45deg);
+  transform: scale(1.2);
+  transform: translateX(50px);
+  transform: skew(10deg);
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.animated {
+  animation: slide 2s infinite;
+}
+```
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which display value is best for creating a flexible one-dimensional layout?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -201,7 +341,42 @@ Add smooth animations and transformations:
 
 ---
 
-<div class="quiz">
+Add smooth animations and transformations:
+
+```css
+.button {
+  background-color: blue;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: darkblue;
+}
+
+.box {
+  transform: rotate(45deg);
+  transform: scale(1.2);
+  transform: translateX(50px);
+  transform: skew(10deg);
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.animated {
+  animation: slide 2s infinite;
+}
+```
+
+---
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does the position: fixed property do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

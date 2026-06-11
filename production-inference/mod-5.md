@@ -95,7 +95,38 @@ for server in servers:
 
 > **💡 Tip:** Ensure that the mechanism for tracking active connections is accurate and up-to-date to avoid incorrect load balancing decisions.
 
-<div class="quiz">
+Least Connections is a more sophisticated load balancing algorithm that directs traffic to the server with the fewest active connections. This helps in optimizing resource utilization by preventing overloading of any single server.
+
+```python title="least_connections.py"
+from collections import defaultdict
+
+# List of servers
+servers = ['server1','server2','server3']
+
+# Dictionary to track active connections
+connections = defaultdict(int)
+
+def get_server():
+    return min(servers, key=lambda server: connections[server])
+
+def increment_connection(server):
+    connections[server] += 1
+
+def decrement_connection(server):
+    connections[server] -= 1
+
+# Simulate requests
+for _ in range(10):
+    server = get_server()
+    print(f'Request routed to {server}')
+    increment_connection(server)
+
+# Simulate completion of requests
+for server in servers:
+    decrement_connection(server)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which load balancing algorithm distributes requests in a rotational manner?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -119,7 +150,38 @@ for server in servers:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Least Connections is a more sophisticated load balancing algorithm that directs traffic to the server with the fewest active connections. This helps in optimizing resource utilization by preventing overloading of any single server.
+
+```python title="least_connections.py"
+from collections import defaultdict
+
+# List of servers
+servers = ['server1','server2','server3']
+
+# Dictionary to track active connections
+connections = defaultdict(int)
+
+def get_server():
+    return min(servers, key=lambda server: connections[server])
+
+def increment_connection(server):
+    connections[server] += 1
+
+def decrement_connection(server):
+    connections[server] -= 1
+
+# Simulate requests
+for _ in range(10):
+    server = get_server()
+    print(f'Request routed to {server}')
+    increment_connection(server)
+
+# Simulate completion of requests
+for server in servers:
+    decrement_connection(server)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which load balancing algorithm directs traffic to the server with the fewest active connections?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

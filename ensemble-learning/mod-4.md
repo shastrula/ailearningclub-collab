@@ -88,7 +88,35 @@ print(f'Accuracy: {accuracy:.2f}')
 
 > **💡 Tip:** When using Gradient Boosting, tuning the learning rate and the number of estimators is crucial. A lower learning rate with more estimators often leads to better performance, but it may require more computational resources.
 
-<div class="quiz">
+Gradient Boosting is an extension of boosting that optimizes the model by minimizing a loss function. It builds trees in a stage-wise fashion, where each tree tries to correct the residual errors of the previous tree. This method is highly flexible and can handle various types of loss functions, making it suitable for both regression and classification tasks.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+
+# Generate a binary classification dataset
+X, y = make_classification(n_samples=1000, n_features=20, n_classes=2, random_state=42)
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Initialize the Gradient Boosting classifier
+gbc = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
+
+# Train the model
+gbc.fit(X_train, y_train)
+
+# Make predictions
+y_pred = gbc.predict(X_test)
+
+# Calculate the accuracy
+accuracy = np.mean(y_pred == y_test)
+print(f'Accuracy: {accuracy:.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of boosting in ensemble learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

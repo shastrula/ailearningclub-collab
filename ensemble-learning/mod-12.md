@@ -91,7 +91,38 @@ print('Model trained and predictions made.')
 
 > **💡 Tip:** When using CatBoost, ensure that categorical features are properly defined to leverage its full potential. Additionally, experiment with different hyperparameters to optimize model performance.
 
-<div class="quiz">
+CatBoost offers several advanced features such as handling of missing values, permutation feature importance, and support for various objective functions. It also provides tools for hyperparameter tuning and model interpretation, making it a versatile choice for complex machine learning tasks.
+
+```python title="example2.py"
+import pandas as pd
+from catboost import CatBoostRegressor, Pool
+
+# Load dataset
+df = pd.read_csv('house_prices.csv')
+
+# Separate features and target
+features = df.drop('price', axis=1)
+target = df['price']
+
+# Define categorical features
+cat_features = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Create CatBoost Pool
+data = Pool(data=features, label=target, cat_features=cat_features)
+
+# Initialize CatBoostRegressor
+model = CatBoostRegressor(iterations=200, learning_rate=0.1, depth=8, verbose=0)
+
+# Train the model
+model.fit(data)
+
+# Make predictions
+predictions = model.predict(features)
+
+print('Model trained and predictions made.')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a key feature of CatBoost that distinguishes it from other boosting algorithms?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -115,7 +146,38 @@ print('Model trained and predictions made.')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+CatBoost offers several advanced features such as handling of missing values, permutation feature importance, and support for various objective functions. It also provides tools for hyperparameter tuning and model interpretation, making it a versatile choice for complex machine learning tasks.
+
+```python title="example2.py"
+import pandas as pd
+from catboost import CatBoostRegressor, Pool
+
+# Load dataset
+df = pd.read_csv('house_prices.csv')
+
+# Separate features and target
+features = df.drop('price', axis=1)
+target = df['price']
+
+# Define categorical features
+cat_features = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Create CatBoost Pool
+data = Pool(data=features, label=target, cat_features=cat_features)
+
+# Initialize CatBoostRegressor
+model = CatBoostRegressor(iterations=200, learning_rate=0.1, depth=8, verbose=0)
+
+# Train the model
+model.fit(data)
+
+# Make predictions
+predictions = model.predict(features)
+
+print('Model trained and predictions made.')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which technique does CatBoost use to reduce overfitting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

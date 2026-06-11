@@ -86,7 +86,29 @@ public class Example2 {
 
 > **💡 Tip:** Always close your streams and readers to prevent resource leaks. Using try-with-resources is a good practice to ensure that resources are closed automatically.
 
-<div class="quiz">
+Stream I/O in Java involves handling data streams, which are sequences of data. The java.io package provides classes like InputStream and OutputStream for handling byte streams, and Reader and Writer for handling character streams. These classes are essential for tasks such as reading from and writing to network connections, databases, and other data sources.
+
+```java title="example2.java"
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Example2 {
+    public static void main(String[] args) {
+        String data = "Hello, Stream";
+        try (InputStream inputStream = new ByteArrayInputStream(data.getBytes())) {
+            int byteValue;
+            while ((byteValue = inputStream.read())!= -1) {
+                System.out.print((char) byteValue);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of the FileWriter class in Java I/O?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -110,7 +132,29 @@ public class Example2 {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Stream I/O in Java involves handling data streams, which are sequences of data. The java.io package provides classes like InputStream and OutputStream for handling byte streams, and Reader and Writer for handling character streams. These classes are essential for tasks such as reading from and writing to network connections, databases, and other data sources.
+
+```java title="example2.java"
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Example2 {
+    public static void main(String[] args) {
+        String data = "Hello, Stream";
+        try (InputStream inputStream = new ByteArrayInputStream(data.getBytes())) {
+            int byteValue;
+            while ((byteValue = inputStream.read())!= -1) {
+                System.out.print((char) byteValue);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Which class in Java I/O is used for reading data from a byte stream?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

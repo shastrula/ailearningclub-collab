@@ -79,7 +79,22 @@ accuracy
 
 > **💡 Tip:** When dealing with imbalanced datasets, consider using additional metrics like precision, recall, and F1-score alongside accuracy to get a comprehensive evaluation of your classification model.
 
-<div class="quiz">
+Accuracy is a straightforward metric for evaluating classification models. It represents the proportion of correct predictions out of the total predictions. While easy to interpret, accuracy can be misleading for imbalanced datasets, where the majority class dominates the metric.
+
+```python title="example2.py"
+from sklearn.metrics import accuracy_score
+
+# Actual labels
+y_true = [0, 1, 1, 0]
+# Predicted labels
+y_pred = [1, 1, 1, 0]
+
+# Calculate accuracy
+accuracy = accuracy_score(y_true, y_pred)
+accuracy
+```
+
+>
   <p class="font-semibold mb-3">❓ What does a lower Mean Squared Error (MSE) value indicate in regression models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -103,7 +118,22 @@ accuracy
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Accuracy is a straightforward metric for evaluating classification models. It represents the proportion of correct predictions out of the total predictions. While easy to interpret, accuracy can be misleading for imbalanced datasets, where the majority class dominates the metric.
+
+```python title="example2.py"
+from sklearn.metrics import accuracy_score
+
+# Actual labels
+y_true = [0, 1, 1, 0]
+# Predicted labels
+y_pred = [1, 1, 1, 0]
+
+# Calculate accuracy
+accuracy = accuracy_score(y_true, y_pred)
+accuracy
+```
+
+>
   <p class="font-semibold mb-3">❓ Why might accuracy be misleading for imbalanced classification datasets?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

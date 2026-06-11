@@ -81,7 +81,28 @@ print(result)
 
 > **💡 Tip:** Ensure that the API keys and credentials for external tools are securely managed and not hard-coded in the script to prevent security risks.
 
-<div class="quiz">
+AutoGen allows agents to use external tools to perform tasks more effectively. This feature enables agents to interact with APIs, databases, and other resources, enhancing their capabilities. By integrating tool use, agents can execute complex operations that go beyond their inherent functionalities.
+
+```python title="example2.py"
+from autogen import Agent, Tool
+
+# Create an agent instance
+agent = Agent(name="tool_user_agent")
+
+# Create a tool instance
+tool = Tool(name="weather_api", api_key="your_api_key")
+
+# Define a task for the agent
+task = "Check the weather in New York"
+
+# Use the tool to perform the task
+result = tool.execute(task)
+
+# Print the result
+print(result)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of the Planner component in AutoGen?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -105,7 +126,28 @@ print(result)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+AutoGen allows agents to use external tools to perform tasks more effectively. This feature enables agents to interact with APIs, databases, and other resources, enhancing their capabilities. By integrating tool use, agents can execute complex operations that go beyond their inherent functionalities.
+
+```python title="example2.py"
+from autogen import Agent, Tool
+
+# Create an agent instance
+agent = Agent(name="tool_user_agent")
+
+# Create a tool instance
+tool = Tool(name="weather_api", api_key="your_api_key")
+
+# Define a task for the agent
+task = "Check the weather in New York"
+
+# Use the tool to perform the task
+result = tool.execute(task)
+
+# Print the result
+print(result)
+```
+
+>
   <p class="font-semibold mb-3">❓ How does AutoGen enable agents to use external tools?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

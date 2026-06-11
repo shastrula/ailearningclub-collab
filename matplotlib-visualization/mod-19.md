@@ -79,7 +79,22 @@ fig.show()
 
 > **💡 Tip:** When creating dashboards, ensure that your visualizations are not only aesthetically pleasing but also intuitive and easy to interpret. Use consistent color schemes, clear labels, and appropriate chart types to convey your message effectively.
 
-<div class="quiz">
+Plotly is a powerful library for creating interactive plots, which are particularly useful in dashboards where users may want to explore data dynamically. Plotly allows you to create a variety of interactive charts, including scatter plots, line charts, and heatmaps, making it an excellent choice for building engaging and informative dashboards.
+
+```python title="example2.py"
+import plotly.express as px
+import pandas as pd
+
+# Sample data
+data = {'Category': ['A', 'B', 'C', 'D'], 'Values': [10, 24, 36, 40]}
+df = pd.DataFrame(data)
+
+# Creating an interactive bar plot using Plotly
+fig = px.bar(df, x='Category', y='Values', title='Interactive Bar Plot using Plotly', color='Values', color_continuous_scale='viridis')
+fig.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which library is built on top of Matplotlib and provides a high-level interface for drawing attractive statistical graphics?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -103,7 +118,22 @@ fig.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Plotly is a powerful library for creating interactive plots, which are particularly useful in dashboards where users may want to explore data dynamically. Plotly allows you to create a variety of interactive charts, including scatter plots, line charts, and heatmaps, making it an excellent choice for building engaging and informative dashboards.
+
+```python title="example2.py"
+import plotly.express as px
+import pandas as pd
+
+# Sample data
+data = {'Category': ['A', 'B', 'C', 'D'], 'Values': [10, 24, 36, 40]}
+df = pd.DataFrame(data)
+
+# Creating an interactive bar plot using Plotly
+fig = px.bar(df, x='Category', y='Values', title='Interactive Bar Plot using Plotly', color='Values', color_continuous_scale='viridis')
+fig.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using Plotly for creating dashboards?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

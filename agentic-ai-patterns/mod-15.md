@@ -83,7 +83,26 @@ print(result)
 
 > **💡 Tip:** When using external tools, always handle exceptions and errors gracefully to ensure your agent can recover from failures.
 
-<div class="quiz">
+Tool use in agentic AI refers to the ability of an agent to utilize external tools or services to perform tasks. This can include APIs, databases, or other software components. Effective tool use allows agents to leverage existing resources to enhance their capabilities and achieve goals more efficiently.
+
+```python title="example2.py"
+import requests
+
+# Define a function to use an external API
+def use_tool(api_url):
+    response = requests.get(api_url)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return 'Error: Unable to fetch data'
+
+# Use the tool
+api_url = 'https://api.example.com/data'
+result = use_tool(api_url)
+print(result)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of planning in agentic AI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -107,7 +126,26 @@ print(result)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Tool use in agentic AI refers to the ability of an agent to utilize external tools or services to perform tasks. This can include APIs, databases, or other software components. Effective tool use allows agents to leverage existing resources to enhance their capabilities and achieve goals more efficiently.
+
+```python title="example2.py"
+import requests
+
+# Define a function to use an external API
+def use_tool(api_url):
+    response = requests.get(api_url)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return 'Error: Unable to fetch data'
+
+# Use the tool
+api_url = 'https://api.example.com/data'
+result = use_tool(api_url)
+print(result)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is tool use in agentic AI primarily about?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

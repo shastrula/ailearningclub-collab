@@ -79,7 +79,22 @@ print(prompt)
 
 > **💡 Tip:** Always test your prompts with various inputs to ensure they produce consistent and accurate responses from the AI model.
 
-<div class="quiz">
+Effective prompts are critical for getting the best responses from your AI agents. You need to understand the context, the desired outcome, and how to phrase your queries to elicit the most useful information. This section covers best practices for prompt engineering.
+
+```python title="craft_prompt.py"
+def create_prompt(context, query):
+    """Create a prompt by combining context and query."""
+    prompt = f"Context: {context}. Query: {query}"
+    return prompt
+
+# Example usage
+context = "The user is inquiring about the weather."
+query = "What is the forecast for tomorrow?"
+prompt = create_prompt(context, query)
+print(prompt)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of setting up an MCP server environment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -103,7 +118,22 @@ print(prompt)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Effective prompts are critical for getting the best responses from your AI agents. You need to understand the context, the desired outcome, and how to phrase your queries to elicit the most useful information. This section covers best practices for prompt engineering.
+
+```python title="craft_prompt.py"
+def create_prompt(context, query):
+    """Create a prompt by combining context and query."""
+    prompt = f"Context: {context}. Query: {query}"
+    return prompt
+
+# Example usage
+context = "The user is inquiring about the weather."
+query = "What is the forecast for tomorrow?"
+prompt = create_prompt(context, query)
+print(prompt)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the key factor in crafting effective prompts for AI agents?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

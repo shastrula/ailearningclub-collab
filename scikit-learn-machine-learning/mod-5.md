@@ -87,7 +87,30 @@ print('Confusion Matrix:\n', conf_matrix)
 
 > **💡 Tip:** When working with Logistic Regression, ensure that your data is properly scaled, as the algorithm is sensitive to the scale of the input features. Also, check for multicollinearity among the features, as it can affect the model's performance.
 
-<div class="quiz">
+Evaluating the performance of a Logistic Regression model is crucial to ensure its effectiveness. Common evaluation metrics include accuracy, precision, recall, and the F1 score. Additionally, the confusion matrix provides a detailed breakdown of the model's predictions, helping to identify any biases or issues.
+
+```python title="example2.py"
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, confusion_matrix
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Train the model on the training set
+model.fit(X_train, y_train)
+
+# Make predictions on the testing set
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+accuracy = accuracy_score(y_test, y_pred)
+conf_matrix = confusion_matrix(y_test, y_pred)
+
+print('Accuracy:', accuracy)
+print('Confusion Matrix:\n', conf_matrix)
+```
+
+>
   <p class="font-semibold mb-3">❓ What type of problems is Logistic Regression best suited for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -111,7 +134,30 @@ print('Confusion Matrix:\n', conf_matrix)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Evaluating the performance of a Logistic Regression model is crucial to ensure its effectiveness. Common evaluation metrics include accuracy, precision, recall, and the F1 score. Additionally, the confusion matrix provides a detailed breakdown of the model's predictions, helping to identify any biases or issues.
+
+```python title="example2.py"
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, confusion_matrix
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Train the model on the training set
+model.fit(X_train, y_train)
+
+# Make predictions on the testing set
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+accuracy = accuracy_score(y_test, y_pred)
+conf_matrix = confusion_matrix(y_test, y_pred)
+
+print('Accuracy:', accuracy)
+print('Confusion Matrix:\n', conf_matrix)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which metric is commonly used to evaluate the performance of a Logistic Regression model?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

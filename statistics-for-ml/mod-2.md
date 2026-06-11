@@ -93,7 +93,36 @@ plt.show()
 
 > **💡 Tip:** When working with binomial distributions, ensure that the number of trials (n) is sufficiently large and the probability of success (p) is neither too close to 0 nor 1 to avoid skewed results.
 
-<div class="quiz">
+The binomial distribution is a discrete probability distribution that describes the number of successes in a fixed number of independent Bernoulli trials with the same probability of success. It is commonly used in scenarios where there are two possible outcomes, such as success/failure, yes/no, or win/lose. The parameters of the binomial distribution are n (number of trials) and p (probability of success on an individual trial).
+
+```python title="example2.py"
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import binom
+
+# Parameters for the binomial distribution
+n = 10  # number of trials
+p = 0.3  # probability of success
+
+# Generate random data from a binomial distribution
+data = np.random.binomial(n, p, 1000)
+
+# Plot the histogram of the data
+plt.hist(data, bins=range(12), align='left', density=True, alpha=0.6, color='b')
+
+# Plot the probability mass function of the binomial distribution
+x = np.arange(0, n + 1)
+pmf = binom.pmf(x, n, p)
+plt.stem(x, pmf, use_line_collection=True)
+
+plt.title('Binomial Distribution (n=10, p=0.3)')
+plt.xlabel('Number of Successes')
+plt.ylabel('Probability')
+
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the mean of a normal distribution with loc=0 and scale=1?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,7 +146,36 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+The binomial distribution is a discrete probability distribution that describes the number of successes in a fixed number of independent Bernoulli trials with the same probability of success. It is commonly used in scenarios where there are two possible outcomes, such as success/failure, yes/no, or win/lose. The parameters of the binomial distribution are n (number of trials) and p (probability of success on an individual trial).
+
+```python title="example2.py"
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import binom
+
+# Parameters for the binomial distribution
+n = 10  # number of trials
+p = 0.3  # probability of success
+
+# Generate random data from a binomial distribution
+data = np.random.binomial(n, p, 1000)
+
+# Plot the histogram of the data
+plt.hist(data, bins=range(12), align='left', density=True, alpha=0.6, color='b')
+
+# Plot the probability mass function of the binomial distribution
+x = np.arange(0, n + 1)
+pmf = binom.pmf(x, n, p)
+plt.stem(x, pmf, use_line_collection=True)
+
+plt.title('Binomial Distribution (n=10, p=0.3)')
+plt.xlabel('Number of Successes')
+plt.ylabel('Probability')
+
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ In a binomial distribution with n=10 and p=0.3, what is the expected number of successes?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

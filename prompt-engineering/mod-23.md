@@ -73,7 +73,23 @@ print(result[0]['generated_text'])
 
 > **💡 Tip:** When using CoT prompting, ensure that the intermediate steps are clear and logically lead to the final answer to improve the model's performance.
 
-<div class="quiz">
+Chain-of-Thought prompting encourages models to provide reasoning steps before arriving at an answer, enhancing their problem-solving capabilities. ReAct (Reason and Act) prompting involves the model reasoning about a task and then taking an action, simulating a more interactive and dynamic problem-solving process.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Text generation pipeline
+generator = pipeline('text-generation')
+
+# CoT prompt
+prompt = "Let's think step by step: What is the capital of France? The capital of France is Paris."
+
+# Generate text
+result = generator(prompt, max_length=50)
+print(result[0]['generated_text'])
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of zero-shot learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -97,7 +113,23 @@ print(result[0]['generated_text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Chain-of-Thought prompting encourages models to provide reasoning steps before arriving at an answer, enhancing their problem-solving capabilities. ReAct (Reason and Act) prompting involves the model reasoning about a task and then taking an action, simulating a more interactive and dynamic problem-solving process.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Text generation pipeline
+generator = pipeline('text-generation')
+
+# CoT prompt
+prompt = "Let's think step by step: What is the capital of France? The capital of France is Paris."
+
+# Generate text
+result = generator(prompt, max_length=50)
+print(result[0]['generated_text'])
+```
+
+>
   <p class="font-semibold mb-3">❓ What does CoT prompting aim to enhance in AI models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

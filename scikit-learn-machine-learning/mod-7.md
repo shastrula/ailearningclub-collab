@@ -95,7 +95,38 @@ print(f'Accuracy: {accuracy:.2f}')
 
 > **💡 Tip:** When using Decision Trees, be cautious of overfitting, especially with deep trees. Always consider pruning or using ensemble methods like Random Forests to improve model performance and generalization.
 
-<div class="quiz">
+Pruning is a technique used to reduce the complexity of a Decision Tree by removing sections of the tree that provide little power to classify instances. This helps to prevent overfitting and improve the model's generalization ability. Pruning can be done by setting parameters such as `max_depth`, `min_samples_split`, and `min_samples_leaf` during the tree construction.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+
+# Load the Iris dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create a Decision Tree classifier with pruning
+clf = DecisionTreeClassifier(random_state=42, max_depth=3)
+
+# Train the classifier
+clf.fit(X_train, y_train)
+
+# Make predictions
+y_pred = clf.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Accuracy: {accuracy:.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of a Decision Tree in machine learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -119,7 +150,38 @@ print(f'Accuracy: {accuracy:.2f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Pruning is a technique used to reduce the complexity of a Decision Tree by removing sections of the tree that provide little power to classify instances. This helps to prevent overfitting and improve the model's generalization ability. Pruning can be done by setting parameters such as `max_depth`, `min_samples_split`, and `min_samples_leaf` during the tree construction.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+
+# Load the Iris dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create a Decision Tree classifier with pruning
+clf = DecisionTreeClassifier(random_state=42, max_depth=3)
+
+# Train the classifier
+clf.fit(X_train, y_train)
+
+# Make predictions
+y_pred = clf.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Accuracy: {accuracy:.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which parameter is used to limit the depth of a Decision Tree to prevent overfitting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -80,7 +80,23 @@ divide(10, 0)
 
 > **💡 Tip:** When using pdb, remember to use commands like 'n' to execute the next line,'s' to step into a function, and 'q' to quit debugging.
 
-<div class="quiz">
+Debugging is the process of identifying and resolving bugs or defects within a computer program that prevent correct operation. Python provides several tools and techniques for debugging, including the use of the built-in pdb module, which allows for setting breakpoints, stepping through code, and inspecting variables at runtime.
+
+**example2.py**
+
+```
+import pdb
+
+def divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError as e:
+        pdb.post_mortem()
+
+divide(10, 0)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of unit testing?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -104,7 +120,23 @@ divide(10, 0)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Debugging is the process of identifying and resolving bugs or defects within a computer program that prevent correct operation. Python provides several tools and techniques for debugging, including the use of the built-in pdb module, which allows for setting breakpoints, stepping through code, and inspecting variables at runtime.
+
+**example2.py**
+
+```
+import pdb
+
+def divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError as e:
+        pdb.post_mortem()
+
+divide(10, 0)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which command in pdb allows you to step into a function during debugging?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

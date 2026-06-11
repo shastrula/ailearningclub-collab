@@ -79,7 +79,26 @@ public class Main {
 
 > **💡 Tip:** Always remember to initialize objects before using them to avoid NullPointerException.
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). OOP principles include encapsulation, inheritance, polymorphism, and abstraction.
+
+```java title="example2.java"
+class Animal {
+    String name;
+    void sound() {
+        System.out.println(name + " makes a sound");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        myAnimal.name = "Dog";
+        myAnimal.sound();
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the output of the following Java code?
 
 public class Test {
@@ -111,7 +130,26 @@ public class Test {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). OOP principles include encapsulation, inheritance, polymorphism, and abstraction.
+
+```java title="example2.java"
+class Animal {
+    String name;
+    void sound() {
+        System.out.println(name + " makes a sound");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        myAnimal.name = "Dog";
+        myAnimal.sound();
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Which of the following is a correct way to create an object in Java?
 
 A) Animal myAnimal = new Animal();
@@ -179,7 +217,26 @@ public class Example5 {
 Example 5
 ```
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). OOP principles include encapsulation, inheritance, polymorphism, and abstraction.
+
+```java title="example2.java"
+class Animal {
+    String name;
+    void sound() {
+        System.out.println(name + " makes a sound");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        myAnimal.name = "Dog";
+        myAnimal.sound();
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 3: What is a key concept in Introduction to Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -203,7 +260,26 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). OOP principles include encapsulation, inheritance, polymorphism, and abstraction.
+
+```java title="example2.java"
+class Animal {
+    String name;
+    void sound() {
+        System.out.println(name + " makes a sound");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        myAnimal.name = "Dog";
+        myAnimal.sound();
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 4: What is a key concept in Introduction to Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -227,7 +303,26 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). OOP principles include encapsulation, inheritance, polymorphism, and abstraction.
+
+```java title="example2.java"
+class Animal {
+    String name;
+    void sound() {
+        System.out.println(name + " makes a sound");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        myAnimal.name = "Dog";
+        myAnimal.sound();
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 5: What is a key concept in Introduction to Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -251,7 +346,26 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). OOP principles include encapsulation, inheritance, polymorphism, and abstraction.
+
+```java title="example2.java"
+class Animal {
+    String name;
+    void sound() {
+        System.out.println(name + " makes a sound");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        myAnimal.name = "Dog";
+        myAnimal.sound();
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 6: What is a key concept in Introduction to Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -275,7 +389,26 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). OOP principles include encapsulation, inheritance, polymorphism, and abstraction.
+
+```java title="example2.java"
+class Animal {
+    String name;
+    void sound() {
+        System.out.println(name + " makes a sound");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        myAnimal.name = "Dog";
+        myAnimal.sound();
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 7: What is a key concept in Introduction to Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -299,7 +432,26 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). OOP principles include encapsulation, inheritance, polymorphism, and abstraction.
+
+```java title="example2.java"
+class Animal {
+    String name;
+    void sound() {
+        System.out.println(name + " makes a sound");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        myAnimal.name = "Dog";
+        myAnimal.sound();
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 8: What is a key concept in Introduction to Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -323,7 +475,26 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). OOP principles include encapsulation, inheritance, polymorphism, and abstraction.
+
+```java title="example2.java"
+class Animal {
+    String name;
+    void sound() {
+        System.out.println(name + " makes a sound");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        myAnimal.name = "Dog";
+        myAnimal.sound();
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 9: What is a key concept in Introduction to Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -347,7 +518,26 @@ Example 5
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). OOP principles include encapsulation, inheritance, polymorphism, and abstraction.
+
+```java title="example2.java"
+class Animal {
+    String name;
+    void sound() {
+        System.out.println(name + " makes a sound");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        myAnimal.name = "Dog";
+        myAnimal.sound();
+    }
+}
+```
+
+>
   <p class="font-semibold mb-3">❓ Question 10: What is a key concept in Introduction to Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

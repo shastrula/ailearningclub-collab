@@ -80,7 +80,23 @@ print(response)
 
 > **💡 Tip:** When using Chain-of-Thought prompting, ensure that the intermediate steps are clear and logically lead to the final answer to improve the model's performance.
 
-<div class="quiz">
+Chain-of-Thought (CoT) prompting encourages the model to provide intermediate reasoning steps before arriving at a final answer. ReAct prompting combines reasoning and action, allowing the model to perform tasks that require external tools or APIs. These techniques enhance the model's problem-solving capabilities.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Chain-of-Thought prompting
+cot_pipeline = pipeline('text-generation', model='google/t5-v1_1-large')
+
+# Example input
+prompt = "What is the capital of France? Let's think step by step: France is a country in Europe. The capital of France is Paris."
+
+# Generate response using CoT
+response = cot_pipeline(prompt, max_length=50)[0]['generated_text']
+print(response)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which prompting technique relies solely on the model's pre-trained knowledge without any examples?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -104,7 +120,23 @@ print(response)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Chain-of-Thought (CoT) prompting encourages the model to provide intermediate reasoning steps before arriving at a final answer. ReAct prompting combines reasoning and action, allowing the model to perform tasks that require external tools or APIs. These techniques enhance the model's problem-solving capabilities.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Chain-of-Thought prompting
+cot_pipeline = pipeline('text-generation', model='google/t5-v1_1-large')
+
+# Example input
+prompt = "What is the capital of France? Let's think step by step: France is a country in Europe. The capital of France is Paris."
+
+# Generate response using CoT
+response = cot_pipeline(prompt, max_length=50)[0]['generated_text']
+print(response)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which prompting technique encourages the model to provide intermediate reasoning steps before arriving at a final answer?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -91,7 +91,7 @@ for reservation in instances['Reservations']:
 
 ## Quiz
 
-<div class="quiz">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which EC2 instance family is best for web servers?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

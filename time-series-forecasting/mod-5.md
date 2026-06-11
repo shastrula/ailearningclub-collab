@@ -77,7 +77,20 @@ plt.show()
 
 > **💡 Tip:** When working with SARIMA models, ensure that your data is stationary. Differencing (both regular and seasonal) is often required to achieve stationarity.
 
-<div class="quiz">
+After fitting a SARIMA model, it's crucial to evaluate its performance and diagnose any issues. Common evaluation metrics include Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE). Additionally, checking the residuals for autocorrelation can help identify if the model has captured all the information in the data.
+
+```python title="example2.py"
+import matplotlib.pyplot as plt
+from statsmodels.graphics.tsaplots import plot_acf
+
+# Plot residuals
+residuals = results.resid
+plt.figure(figsize=(10, 5))
+plot_acf(residuals, lags=40)
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What do the parameters (p,d,q) and (P,D,Q,s) in a SARIMA model represent?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +114,20 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+After fitting a SARIMA model, it's crucial to evaluate its performance and diagnose any issues. Common evaluation metrics include Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE). Additionally, checking the residuals for autocorrelation can help identify if the model has captured all the information in the data.
+
+```python title="example2.py"
+import matplotlib.pyplot as plt
+from statsmodels.graphics.tsaplots import plot_acf
+
+# Plot residuals
+residuals = results.resid
+plt.figure(figsize=(10, 5))
+plot_acf(residuals, lags=40)
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Why is it important to check the residuals of a SARIMA model?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

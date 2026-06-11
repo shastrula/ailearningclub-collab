@@ -76,7 +76,19 @@ conda.deactivate()
 
 > **💡 Tip:** Remember to always activate the correct environment before running your Python scripts to ensure that the right dependencies are used.
 
-<div class="quiz">
+Once an environment is created, you can activate it using the `conda activate` command followed by the environment name. To deactivate the current environment and return to the base environment, use the `conda deactivate` command. Activating an environment changes your shell’s PATH so that it uses the binaries from the specified environment.
+
+```python title="example2.py"
+import conda
+
+# Activate the environment named'myenv'
+conda.activate('myenv')
+
+# Deactivate the current environment
+conda.deactivate()
+```
+
+>
   <p class="font-semibold mb-3">❓ What command is used to create a new Conda environment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -100,7 +112,19 @@ conda.deactivate()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Once an environment is created, you can activate it using the `conda activate` command followed by the environment name. To deactivate the current environment and return to the base environment, use the `conda deactivate` command. Activating an environment changes your shell’s PATH so that it uses the binaries from the specified environment.
+
+```python title="example2.py"
+import conda
+
+# Activate the environment named'myenv'
+conda.activate('myenv')
+
+# Deactivate the current environment
+conda.deactivate()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which command activates a Conda environment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

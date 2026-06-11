@@ -64,7 +64,9 @@ Learning from others' experiences:
 
 Commit .kiro/specs/rate-limiting/ alongside the code. Six months later, when someone asks 'why does the rate limiter fail open?', the answer is in requirements.md. When you need to extend it, Kiro can read the original spec and design to understand the intent.
 
-<div class="quiz">
+Commit .kiro/specs/rate-limiting/ alongside the code. Six months later, when someone asks 'why does the rate limiter fail open?', the answer is in requirements.md. When you need to extend it, Kiro can read the original spec and design to understand the intent.
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Why should you commit .kiro/specs/ files to your git repository?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

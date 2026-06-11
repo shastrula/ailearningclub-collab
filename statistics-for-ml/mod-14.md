@@ -89,7 +89,32 @@ print(f'Z-score: {z_score}, P-value: {p_value}')
 
 > **💡 Tip:** Always ensure that your sample sizes are large enough to achieve statistical significance. Small sample sizes can lead to unreliable results and false conclusions.
 
-<div class="quiz">
+When designing an A/B test, it's crucial to choose the right metrics to measure. Common metrics include conversion rate, click-through rate, and user engagement. The choice of metric will depend on the specific goals of your test. It's also important to ensure that the metric is relevant and actionable, meaning that it can be used to make informed decisions about your machine learning model or algorithm.
+
+```python title="example2.py"
+import numpy as np
+from scipy.stats import norm
+
+# Assume we have conversion rates for two groups
+conversion_rate_a = 0.05
+conversion_rate_b = 0.07
+sample_size_a = 1000
+sample_size_b = 1000
+
+# Calculate the standard error
+std_err_a = np.sqrt(conversion_rate_a * (1 - conversion_rate_a) / sample_size_a)
+std_err_b = np.sqrt(conversion_rate_b * (1 - conversion_rate_b) / sample_size_b)
+
+# Calculate the z-score
+z_score = (conversion_rate_b - conversion_rate_a) / np.sqrt(std_err_a**2 + std_err_b**2)
+
+# Calculate the p-value
+p_value = 2 * (1 - norm.cdf(np.abs(z_score)))
+
+print(f'Z-score: {z_score}, P-value: {p_value}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of an A/B test in machine learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -113,7 +138,32 @@ print(f'Z-score: {z_score}, P-value: {p_value}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+When designing an A/B test, it's crucial to choose the right metrics to measure. Common metrics include conversion rate, click-through rate, and user engagement. The choice of metric will depend on the specific goals of your test. It's also important to ensure that the metric is relevant and actionable, meaning that it can be used to make informed decisions about your machine learning model or algorithm.
+
+```python title="example2.py"
+import numpy as np
+from scipy.stats import norm
+
+# Assume we have conversion rates for two groups
+conversion_rate_a = 0.05
+conversion_rate_b = 0.07
+sample_size_a = 1000
+sample_size_b = 1000
+
+# Calculate the standard error
+std_err_a = np.sqrt(conversion_rate_a * (1 - conversion_rate_a) / sample_size_a)
+std_err_b = np.sqrt(conversion_rate_b * (1 - conversion_rate_b) / sample_size_b)
+
+# Calculate the z-score
+z_score = (conversion_rate_b - conversion_rate_a) / np.sqrt(std_err_a**2 + std_err_b**2)
+
+# Calculate the p-value
+p_value = 2 * (1 - norm.cdf(np.abs(z_score)))
+
+print(f'Z-score: {z_score}, P-value: {p_value}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What metric is commonly used in A/B testing to measure performance?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

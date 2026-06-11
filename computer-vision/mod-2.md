@@ -82,7 +82,29 @@ print(f'Test accuracy: {test_acc}')
 
 > **💡 Tip:** When training CNNs, it's crucial to normalize your input data to ensure faster and more stable training. Additionally, using techniques like data augmentation can help improve the model's generalization ability.
 
-<div class="quiz">
+Training a CNN involves feeding it a large dataset of images along with their corresponding labels. The model learns to recognize patterns in the images that are associated with each label. After training, the model can be evaluated on a separate test dataset to assess its performance. It's important to monitor metrics such as accuracy and loss during both training and evaluation to ensure the model is learning effectively.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras.datasets import mnist
+from tensorflow.keras.utils import to_categorical
+
+# Load and preprocess the MNIST dataset
+(train_images, train_labels), (test_images, test_labels) = mnist.load_data()
+train_images = train_images.reshape((60000, 28, 28, 1)).astype('float32') / 255
+test_images = test_images.reshape((10000, 28, 28, 1)).astype('float32') / 255
+train_labels = to_categorical(train_labels)
+test_labels = to_categorical(test_labels)
+
+# Train the model
+history = model.fit(train_images, train_labels, epochs=5, batch_size=64, validation_split=0.2)
+
+# Evaluate the model
+test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
+print(f'Test accuracy: {test_acc}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary function of convolutional layers in a CNN?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +128,29 @@ print(f'Test accuracy: {test_acc}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Training a CNN involves feeding it a large dataset of images along with their corresponding labels. The model learns to recognize patterns in the images that are associated with each label. After training, the model can be evaluated on a separate test dataset to assess its performance. It's important to monitor metrics such as accuracy and loss during both training and evaluation to ensure the model is learning effectively.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras.datasets import mnist
+from tensorflow.keras.utils import to_categorical
+
+# Load and preprocess the MNIST dataset
+(train_images, train_labels), (test_images, test_labels) = mnist.load_data()
+train_images = train_images.reshape((60000, 28, 28, 1)).astype('float32') / 255
+test_images = test_images.reshape((10000, 28, 28, 1)).astype('float32') / 255
+train_labels = to_categorical(train_labels)
+test_labels = to_categorical(test_labels)
+
+# Train the model
+history = model.fit(train_images, train_labels, epochs=5, batch_size=64, validation_split=0.2)
+
+# Evaluate the model
+test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
+print(f'Test accuracy: {test_acc}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which layer is responsible for reducing the spatial dimensions of the input in a CNN?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

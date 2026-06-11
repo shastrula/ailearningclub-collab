@@ -72,7 +72,7 @@ Learning from others' experiences:
 - [Kaggle Learn](https://www.kaggle.com/learn) — Hands-on ML micro-courses
 
 
-<div class="quiz">
+>
   <p class="font-semibold mb-3">❓ What is the main concept introduced in this module?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

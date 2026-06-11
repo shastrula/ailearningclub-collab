@@ -97,7 +97,40 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 > **💡 Tip:** Ensure that the data type of the model and tensors match to avoid runtime errors during QLoRA application.
 
-<div class="quiz">
+QLoRA combines quantization techniques with LoRA to further reduce memory usage and computational cost during fine-tuning. This approach is particularly useful for deploying LLMs on resource-constrained environments.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Load pre-trained model and tokenizer
+model_name = 'EleutherAI/gpt-neo-125M'
+model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Define QLoRA adaptation
+lora_rank = 4
+lora_A = torch.nn.Parameter(torch.randn(model.config.hidden_size, lora_rank).half())
+lora_B = torch.nn.Parameter(torch.randn(lora_rank, model.config.hidden_size).half())
+
+# Apply QLoRA to the model
+def apply_qlora(model, lora_A, lora_B):
+    for layer in model.model.transformer.h:
+        layer.attn.c_attn.weight += torch.mm(lora_A, lora_B).half()
+        layer.attn.c_proj.weight += torch.mm(lora_B, lora_A).half()
+        layer.mlp.c_fc.weight += torch.mm(lora_A, lora_B).half()
+        layer.mlp.c_proj.weight += torch.mm(lora_B, lora_A).half()
+
+apply_qlora(model, lora_A, lora_B)
+
+# Generate text with the adapted model
+input_text = 'Once upon a time,' 
+input_ids = tokenizer.encode(input_text, return_tensors='pt').half()
+output = model.generate(input_ids, max_length=50, num_return_sequences=1)
+print(tokenizer.decode(output[0], skip_special_tokens=True))
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using LoRA for fine-tuning LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -121,7 +154,40 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+QLoRA combines quantization techniques with LoRA to further reduce memory usage and computational cost during fine-tuning. This approach is particularly useful for deploying LLMs on resource-constrained environments.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Load pre-trained model and tokenizer
+model_name = 'EleutherAI/gpt-neo-125M'
+model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Define QLoRA adaptation
+lora_rank = 4
+lora_A = torch.nn.Parameter(torch.randn(model.config.hidden_size, lora_rank).half())
+lora_B = torch.nn.Parameter(torch.randn(lora_rank, model.config.hidden_size).half())
+
+# Apply QLoRA to the model
+def apply_qlora(model, lora_A, lora_B):
+    for layer in model.model.transformer.h:
+        layer.attn.c_attn.weight += torch.mm(lora_A, lora_B).half()
+        layer.attn.c_proj.weight += torch.mm(lora_B, lora_A).half()
+        layer.mlp.c_fc.weight += torch.mm(lora_A, lora_B).half()
+        layer.mlp.c_proj.weight += torch.mm(lora_B, lora_A).half()
+
+apply_qlora(model, lora_A, lora_B)
+
+# Generate text with the adapted model
+input_text = 'Once upon a time,' 
+input_ids = tokenizer.encode(input_text, return_tensors='pt').half()
+output = model.generate(input_ids, max_length=50, num_return_sequences=1)
+print(tokenizer.decode(output[0], skip_special_tokens=True))
+```
+
+>
   <p class="font-semibold mb-3">❓ How does QLoRA differ from LoRA in terms of resource utilization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

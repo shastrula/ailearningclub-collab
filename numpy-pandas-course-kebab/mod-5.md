@@ -77,7 +77,20 @@ print(df)
 
 > **💡 Tip:** When working with DataFrames, always ensure that your data is clean and well-structured to avoid errors during analysis.
 
-<div class="quiz">
+A Pandas DataFrame is a two-dimensional, size-mutable, and heterogeneous tabular data structure with labeled axes (rows and columns). Arithmetic operations align on both row and column labels. It can be thought of as a dict-like container for Series objects.
+
+```python title="example2.py"
+import pandas as pd
+
+# Creating a DataFrame from a dictionary
+data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35]}
+df = pd.DataFrame(data)
+
+# Displaying the DataFrame
+print(df)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a Pandas Series?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,7 +114,20 @@ print(df)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+A Pandas DataFrame is a two-dimensional, size-mutable, and heterogeneous tabular data structure with labeled axes (rows and columns). Arithmetic operations align on both row and column labels. It can be thought of as a dict-like container for Series objects.
+
+```python title="example2.py"
+import pandas as pd
+
+# Creating a DataFrame from a dictionary
+data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35]}
+df = pd.DataFrame(data)
+
+# Displaying the DataFrame
+print(df)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a Pandas DataFrame?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

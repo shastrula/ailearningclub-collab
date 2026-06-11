@@ -78,7 +78,21 @@ plt.show()
 
 > **💡 Tip:** When creating pair plots, ensure that the dataset is not too large, as this can make the plot cluttered and difficult to interpret.
 
-<div class="quiz">
+Pair plots are a matrix of scatter plots used to visualize relationships between multiple variables. They are particularly useful in exploratory data analysis (EDA) for identifying correlations and patterns among different features in a dataset.
+
+```python title="example2.py"
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load the iris dataset
+iris = sns.load_dataset('iris')
+
+# Create a pair plot
+sns.pairplot(iris, hue='species')
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What type of plot is used to visualize the distribution of a single variable?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -102,7 +116,21 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Pair plots are a matrix of scatter plots used to visualize relationships between multiple variables. They are particularly useful in exploratory data analysis (EDA) for identifying correlations and patterns among different features in a dataset.
+
+```python title="example2.py"
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load the iris dataset
+iris = sns.load_dataset('iris')
+
+# Create a pair plot
+sns.pairplot(iris, hue='species')
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of a pair plot in data analysis?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

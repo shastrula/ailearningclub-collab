@@ -81,7 +81,24 @@ for review, result in zip(reviews, classifier(reviews)):
 
 > **💡 Tip:** The first time you run a pipeline, it downloads the model weights (~250MB for DistilBERT). They're cached locally so subsequent runs are instant.
 
-<div class="quiz">
+```python title="specific_model.py"
+from transformers import pipeline
+
+# Use a specific model from the Hub
+classifier = pipeline(
+    'text-classification',
+    model='distilbert-base-uncased-finetuned-sst-2-english'
+)
+reviews = [
+    'Great location, terrible neighbours.',
+    'Best investment I ever made.',
+    'Overpriced for what you get.'
+]
+for review, result in zip(reviews, classifier(reviews)):
+    print(f'{result["label"]:8} ({result["score"]:.2f}) — {review}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What does the HuggingFace pipeline() function do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

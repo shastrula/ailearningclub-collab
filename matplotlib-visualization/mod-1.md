@@ -81,7 +81,28 @@ plt.show()
 
 > **💡 Tip:** When using Seaborn, always ensure your dataset is clean and preprocessed, as Seaborn functions expect well-formatted data for optimal visualization.
 
-<div class="quiz">
+Seaborn is a statistical data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. Seaborn makes it easy to create complex visualizations with minimal code. It is particularly useful for exploratory data analysis (EDA) and for creating publication-quality plots.
+
+```python title="example2.py"
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load example dataset
+tips = sns.load_dataset('tips')
+
+# Create a scatter plot
+sns.scatterplot(x='total_bill', y='tip', data=tips)
+
+# Add title and labels
+plt.title('Total Bill vs Tip')
+plt.xlabel('Total Bill')
+plt.ylabel('Tip')
+
+# Display the plot
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which Python library is used to create static, animated, and interactive visualizations?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -105,7 +126,28 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Seaborn is a statistical data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. Seaborn makes it easy to create complex visualizations with minimal code. It is particularly useful for exploratory data analysis (EDA) and for creating publication-quality plots.
+
+```python title="example2.py"
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load example dataset
+tips = sns.load_dataset('tips')
+
+# Create a scatter plot
+sns.scatterplot(x='total_bill', y='tip', data=tips)
+
+# Add title and labels
+plt.title('Total Bill vs Tip')
+plt.xlabel('Total Bill')
+plt.ylabel('Tip')
+
+# Display the plot
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which library is based on Matplotlib and provides a high-level interface for drawing attractive statistical graphics?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

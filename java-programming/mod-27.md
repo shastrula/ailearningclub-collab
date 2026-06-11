@@ -98,7 +98,26 @@ public class SortingWithLambda {
 Sorted by age: [Bob (25), Alice (30), Charlie (35)]
 ```
 
-<div class="quiz">
+Lambda expressions simplify custom sorting logic.
+
+```java title="SortingWithLambda.java"
+import java.util.*;
+
+public class SortingWithLambda {
+    static class Person {
+        String name;
+        int age;
+        Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+        public String toString() {
+            return name + " (" + age + ")";
+        }
+    }
+    
+    public static void main(String[] args) {
+        List<Person>
   <p class="font-semibold mb-3">❓ What is the syntax for a lambda expression with no parameters?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -122,7 +141,26 @@ Sorted by age: [Bob (25), Alice (30), Charlie (35)]
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Lambda expressions simplify custom sorting logic.
+
+```java title="SortingWithLambda.java"
+import java.util.*;
+
+public class SortingWithLambda {
+    static class Person {
+        String name;
+        int age;
+        Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+        public String toString() {
+            return name + " (" + age + ")";
+        }
+    }
+    
+    public static void main(String[] args) {
+        List<Person>
   <p class="font-semibold mb-3">❓ Which functional interface takes one argument and returns a boolean?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -146,7 +184,26 @@ Sorted by age: [Bob (25), Alice (30), Charlie (35)]
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Lambda expressions simplify custom sorting logic.
+
+```java title="SortingWithLambda.java"
+import java.util.*;
+
+public class SortingWithLambda {
+    static class Person {
+        String name;
+        int age;
+        Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+        public String toString() {
+            return name + " (" + age + ")";
+        }
+    }
+    
+    public static void main(String[] args) {
+        List<Person>
   <p class="font-semibold mb-3">❓ What does a method reference use to reference a method?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -170,7 +227,26 @@ Sorted by age: [Bob (25), Alice (30), Charlie (35)]
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Lambda expressions simplify custom sorting logic.
+
+```java title="SortingWithLambda.java"
+import java.util.*;
+
+public class SortingWithLambda {
+    static class Person {
+        String name;
+        int age;
+        Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+        public String toString() {
+            return name + " (" + age + ")";
+        }
+    }
+    
+    public static void main(String[] args) {
+        List<Person>
   <p class="font-semibold mb-3">❓ What does the filter() method do in a stream?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -194,7 +270,26 @@ Sorted by age: [Bob (25), Alice (30), Charlie (35)]
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Lambda expressions simplify custom sorting logic.
+
+```java title="SortingWithLambda.java"
+import java.util.*;
+
+public class SortingWithLambda {
+    static class Person {
+        String name;
+        int age;
+        Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+        public String toString() {
+            return name + " (" + age + ")";
+        }
+    }
+    
+    public static void main(String[] args) {
+        List<Person>
   <p class="font-semibold mb-3">❓ Which functional interface takes no arguments and returns a value?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

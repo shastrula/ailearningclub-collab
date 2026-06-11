@@ -79,7 +79,16 @@ print(evaluate_plan(plan))
 
 > **💡 Tip:** When designing planning algorithms, consider incorporating mechanisms for dynamic re-planning to handle unexpected changes in the environment.
 
-<div class="quiz">
+Reflection and evaluation are critical components of the planning process. Reflection allows an agent to assess the outcomes of its actions and adjust its plans accordingly. Evaluation involves assessing the quality of a plan based on various criteria such as efficiency, feasibility, and alignment with goals. These processes ensure that the agent can learn from its experiences and improve its planning capabilities over time.
+
+```python title="example2.py"
+from typing import List, Tuple
+
+# Define a simple planning problem with evaluation
+states = ['start', 'intermediate', 'goal']
+actions = [('start', 'intermediate', 2), ('intermediate', 'goal', 3)]
+
+def evaluate_plan(plan: List[Tuple[str, str, int]]) ->
   <p class="font-semibold mb-3">❓ What is the primary goal of AI planning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -103,7 +112,16 @@ print(evaluate_plan(plan))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Reflection and evaluation are critical components of the planning process. Reflection allows an agent to assess the outcomes of its actions and adjust its plans accordingly. Evaluation involves assessing the quality of a plan based on various criteria such as efficiency, feasibility, and alignment with goals. These processes ensure that the agent can learn from its experiences and improve its planning capabilities over time.
+
+```python title="example2.py"
+from typing import List, Tuple
+
+# Define a simple planning problem with evaluation
+states = ['start', 'intermediate', 'goal']
+actions = [('start', 'intermediate', 2), ('intermediate', 'goal', 3)]
+
+def evaluate_plan(plan: List[Tuple[str, str, int]]) ->
   <p class="font-semibold mb-3">❓ What is the purpose of reflection in AI planning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -86,7 +86,29 @@ print(f'Best score: {grid_search.best_score_:.2f}')
 
 > **💡 Tip:** When using pipelines with grid search, ensure that the parameter names in the grid are prefixed with the step name and two underscores (e.g., 'scaler__with_mean'). This helps Scikit-Learn identify which step each parameter belongs to.
 
-<div class="quiz">
+Grid search is a technique for hyperparameter tuning that systematically tries every combination of specified parameter values. When used with pipelines, grid search can optimize the parameters of both the transformers and the final estimator. This allows you to find the best combination of preprocessing steps and model parameters.
+
+```python title="example2.py"
+from sklearn.model_selection import GridSearchCV
+
+# Define the parameter grid
+param_grid = {
+    'scaler__with_mean': [True, False],
+    'logistic__C': [0.1, 1, 10]
+}
+
+# Create a grid search object with the pipeline and parameter grid
+grid_search = GridSearchCV(pipeline, param_grid, cv=5)
+
+# Fit the grid search to the data
+grid_search.fit(X_train, y_train)
+
+# Print the best parameters and the corresponding score
+print(f'Best parameters: {grid_search.best_params_}')
+print(f'Best score: {grid_search.best_score_:.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using pipelines in Scikit-Learn?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -110,7 +132,29 @@ print(f'Best score: {grid_search.best_score_:.2f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Grid search is a technique for hyperparameter tuning that systematically tries every combination of specified parameter values. When used with pipelines, grid search can optimize the parameters of both the transformers and the final estimator. This allows you to find the best combination of preprocessing steps and model parameters.
+
+```python title="example2.py"
+from sklearn.model_selection import GridSearchCV
+
+# Define the parameter grid
+param_grid = {
+    'scaler__with_mean': [True, False],
+    'logistic__C': [0.1, 1, 10]
+}
+
+# Create a grid search object with the pipeline and parameter grid
+grid_search = GridSearchCV(pipeline, param_grid, cv=5)
+
+# Fit the grid search to the data
+grid_search.fit(X_train, y_train)
+
+# Print the best parameters and the corresponding score
+print(f'Best parameters: {grid_search.best_params_}')
+print(f'Best score: {grid_search.best_score_:.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which method is used to find the best parameters in a pipeline using grid search?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -92,7 +92,35 @@ print(f'Mean Squared Error: {mse}')
 
 > **💡 Tip:** When evaluating model performance, consider using multiple metrics to get a comprehensive understanding of its effectiveness and potential biases.
 
-<div class="quiz">
+Ensuring fairness and mitigating bias in forecasting models is critical to avoid discriminatory outcomes. Bias can arise from historical data that reflects systemic inequalities or from model assumptions that favor certain groups. It is important to regularly audit models for bias, use diverse datasets, and implement fairness constraints during model training.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+from fbprophet import Prophet
+
+# Load dataset
+data = pd.read_csv('time_series_data.csv')
+data = data.rename(columns={'date': 'ds', 'value': 'y'})
+
+# Split data into training and testing sets
+train, test = train_test_split(data, test_size=0.2, shuffle=False)
+
+# Fit Prophet model
+model = Prophet()
+model.fit(train)
+
+# Make predictions
+future = model.make_future_dataframe(periods=len(test))
+forecast = model.predict(future)
+
+# Evaluate model
+mse = mean_squared_error(test['y'], forecast[['yhat']].tail(len(test)))
+print(f'Mean Squared Error: {mse}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Why is transparency important in forecasting models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -116,7 +144,35 @@ print(f'Mean Squared Error: {mse}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Ensuring fairness and mitigating bias in forecasting models is critical to avoid discriminatory outcomes. Bias can arise from historical data that reflects systemic inequalities or from model assumptions that favor certain groups. It is important to regularly audit models for bias, use diverse datasets, and implement fairness constraints during model training.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+from fbprophet import Prophet
+
+# Load dataset
+data = pd.read_csv('time_series_data.csv')
+data = data.rename(columns={'date': 'ds', 'value': 'y'})
+
+# Split data into training and testing sets
+train, test = train_test_split(data, test_size=0.2, shuffle=False)
+
+# Fit Prophet model
+model = Prophet()
+model.fit(train)
+
+# Make predictions
+future = model.make_future_dataframe(periods=len(test))
+forecast = model.predict(future)
+
+# Evaluate model
+mse = mean_squared_error(test['y'], forecast[['yhat']].tail(len(test)))
+print(f'Mean Squared Error: {mse}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a critical step to ensure fairness in forecasting models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

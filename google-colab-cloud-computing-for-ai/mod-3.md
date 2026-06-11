@@ -78,7 +78,21 @@ print(data.head())
 
 > **💡 Tip:** Ensure that you have the necessary permissions to access shared files and directories, especially when working in a collaborative environment.
 
-<div class="quiz">
+Google Colab supports real-time collaboration, enabling multiple users to work on the same notebook simultaneously. This feature is particularly useful for team projects, peer reviews, and educational settings. You can share notebooks via a link and control access permissions.
+
+```python title="example2.py"
+# Sharing and collaboration example
+from google.colab import drive
+drive.mount('/content/drive')
+
+# Reading a file from Google Drive
+file_path = '/content/drive/My Drive/sample_data.csv'
+import pandas as pd
+data = pd.read_csv(file_path)
+print(data.head())
+```
+
+>
   <p class="font-semibold mb-3">❓ What are the primary components of a Google Colab notebook?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -102,7 +116,21 @@ print(data.head())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Google Colab supports real-time collaboration, enabling multiple users to work on the same notebook simultaneously. This feature is particularly useful for team projects, peer reviews, and educational settings. You can share notebooks via a link and control access permissions.
+
+```python title="example2.py"
+# Sharing and collaboration example
+from google.colab import drive
+drive.mount('/content/drive')
+
+# Reading a file from Google Drive
+file_path = '/content/drive/My Drive/sample_data.csv'
+import pandas as pd
+data = pd.read_csv(file_path)
+print(data.head())
+```
+
+>
   <p class="font-semibold mb-3">❓ How can you share a Google Colab notebook with others?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

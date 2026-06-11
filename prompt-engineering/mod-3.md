@@ -75,7 +75,25 @@ print(output)
 
 > **💡 Tip:** When using few-shot prompting, ensure that the examples are diverse and cover various aspects of the task to improve the model's generalization capabilities.
 
-<div class="quiz">
+To implement few-shot prompting effectively, it's important to carefully curate the examples provided to the model. The quality and relevance of these examples significantly influence the model's performance. Additionally, experimenting with different numbers of examples can help determine the optimal few-shot setting for a given task.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Initialize a text classification pipeline
+classifier = pipeline('sentiment-analysis', model='distilbert-base-uncased')
+
+# Few-shot example for sentiment analysis
+examples = ["I love this product! It's amazing.", "This is the worst service I've ever experienced."]
+prompt = "Based on the following examples, classify the sentiment of the text: 'The new update is fantastic!'"
+
+# Classify sentiment based on the prompt and examples
+output = classifier(prompt)
+
+print(output)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using few-shot prompting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -99,7 +117,25 @@ print(output)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+To implement few-shot prompting effectively, it's important to carefully curate the examples provided to the model. The quality and relevance of these examples significantly influence the model's performance. Additionally, experimenting with different numbers of examples can help determine the optimal few-shot setting for a given task.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Initialize a text classification pipeline
+classifier = pipeline('sentiment-analysis', model='distilbert-base-uncased')
+
+# Few-shot example for sentiment analysis
+examples = ["I love this product! It's amazing.", "This is the worst service I've ever experienced."]
+prompt = "Based on the following examples, classify the sentiment of the text: 'The new update is fantastic!'"
+
+# Classify sentiment based on the prompt and examples
+output = classifier(prompt)
+
+print(output)
+```
+
+>
   <p class="font-semibold mb-3">❓ How can the quality of examples affect few-shot prompting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -84,7 +84,27 @@ print(f'Quantized Weights: {quantized_weights}, Scale: {scale}, Zero Point: {zer
 
 > **💡 Tip:** When applying INT4 quantization, ensure that the model is thoroughly tested for accuracy loss. Consider using a combination of INT4 and INT8 quantization for different layers to optimize performance and size.
 
-<div class="quiz">
+INT4 quantization is more aggressive than INT8, using only 4 bits per weight. This can lead to more significant reductions in model size but may also result in greater accuracy loss. Careful calibration and testing are required to balance the trade-offs between model size and performance.
+
+```python title="example2.py"
+import numpy as np
+
+# Example of INT4 quantization
+def quantize_int4(weights):
+    min_val = np.min(weights)
+    max_val = np.max(weights)
+    scale = (max_val - min_val) / 15.0
+    zero_point = round(min_val / scale)
+    quantized_weights = np.round((weights - min_val) / scale).astype(np.int4)
+    return quantized_weights, scale, zero_point
+
+# Example weights
+weights = np.array([1.0, 2.0, 3.0, 4.0, 5.0])
+quantized_weights, scale, zero_point = quantize_int4(weights)
+print(f'Quantized Weights: {quantized_weights}, Scale: {scale}, Zero Point: {zero_point}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using INT8 quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -108,7 +128,27 @@ print(f'Quantized Weights: {quantized_weights}, Scale: {scale}, Zero Point: {zer
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+INT4 quantization is more aggressive than INT8, using only 4 bits per weight. This can lead to more significant reductions in model size but may also result in greater accuracy loss. Careful calibration and testing are required to balance the trade-offs between model size and performance.
+
+```python title="example2.py"
+import numpy as np
+
+# Example of INT4 quantization
+def quantize_int4(weights):
+    min_val = np.min(weights)
+    max_val = np.max(weights)
+    scale = (max_val - min_val) / 15.0
+    zero_point = round(min_val / scale)
+    quantized_weights = np.round((weights - min_val) / scale).astype(np.int4)
+    return quantized_weights, scale, zero_point
+
+# Example weights
+weights = np.array([1.0, 2.0, 3.0, 4.0, 5.0])
+quantized_weights, scale, zero_point = quantize_int4(weights)
+print(f'Quantized Weights: {quantized_weights}, Scale: {scale}, Zero Point: {zero_point}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which quantization technique is more aggressive in reducing model size?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -79,7 +79,22 @@ print(f'Mean value: {result}')
 
 > **💡 Tip:** When using distributed computing, ensure that your network bandwidth and storage I/O are not bottlenecks, as these can significantly impact performance.
 
-<div class="quiz">
+Distributed computing extends the concept of parallel computing to multiple computers, allowing for even greater scalability. Libraries such as Dask and Ray are designed to handle distributed computing tasks, enabling efficient processing of large datasets across clusters of machines.
+
+**example2.py**
+
+```
+import dask.dataframe as dd
+
+# Load a large dataset
+ddf = dd.read_csv('large_dataset.csv')
+
+# Perform a computation
+result = ddf['column_name'].mean().compute()
+print(f'Mean value: {result}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using parallel computing in AI development?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -103,7 +118,22 @@ print(f'Mean value: {result}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Distributed computing extends the concept of parallel computing to multiple computers, allowing for even greater scalability. Libraries such as Dask and Ray are designed to handle distributed computing tasks, enabling efficient processing of large datasets across clusters of machines.
+
+**example2.py**
+
+```
+import dask.dataframe as dd
+
+# Load a large dataset
+ddf = dd.read_csv('large_dataset.csv')
+
+# Perform a computation
+result = ddf['column_name'].mean().compute()
+print(f'Mean value: {result}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which library is commonly used for distributed computing in Python?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

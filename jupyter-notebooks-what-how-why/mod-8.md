@@ -76,7 +76,19 @@ print(now)
 
 > **💡 Tip:** Be mindful of naming conflicts when importing specific functions or classes. Always use unique names to avoid overwriting built-in functions or variables.
 
-<div class="quiz">
+Sometimes, you may only need specific functions or classes from a library. Python allows you to import only what you need, which can improve performance and reduce potential naming conflicts.
+
+```python title="example2.py"
+from datetime import datetime
+
+# Get the current date and time
+now = datetime.now()
+
+# Print the current date and time
+print(now)
+```
+
+>
   <p class="font-semibold mb-3">❓ What does the 'import' statement do in Python?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -100,7 +112,19 @@ print(now)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Sometimes, you may only need specific functions or classes from a library. Python allows you to import only what you need, which can improve performance and reduce potential naming conflicts.
+
+```python title="example2.py"
+from datetime import datetime
+
+# Get the current date and time
+now = datetime.now()
+
+# Print the current date and time
+print(now)
+```
+
+>
   <p class="font-semibold mb-3">❓ How can you import only specific functions or classes from a library?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -87,7 +87,30 @@ print(f'Evaluation result: {evaluation_result}')
 
 > **💡 Tip:** Regularly update ethical standards and evaluation criteria to adapt to new challenges and societal expectations.
 
-<div class="quiz">
+Agentic AI systems should incorporate mechanisms for reflection and continuous evaluation to ensure they remain aligned with ethical standards over time. This involves regularly assessing the AI's performance, identifying any deviations from ethical guidelines, and making necessary adjustments to maintain ethical integrity.
+
+```python title="example2.py"
+def evaluate_performance(ai_actions, ethical_standards):
+    '''
+    This function evaluates the performance of an AI against ethical standards.
+    :param ai_actions: List of actions taken by the AI
+    :param ethical_standards: Dictionary of ethical standards
+    :return: Evaluation result
+    '''
+    # Simplified evaluation logic
+    for action in ai_actions:
+        if action not in ethical_standards:
+            return 'Non-compliant'
+    return 'Compliant'
+
+# Example usage
+ai_actions = ['Action 1', 'Action 2']
+ethical_standards = {'Action 1': True, 'Action 2': True}
+evaluation_result = evaluate_performance(ai_actions, ethical_standards)
+print(f'Evaluation result: {evaluation_result}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is a critical aspect to consider during the planning phase of agentic AI systems?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -111,7 +134,30 @@ print(f'Evaluation result: {evaluation_result}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Agentic AI systems should incorporate mechanisms for reflection and continuous evaluation to ensure they remain aligned with ethical standards over time. This involves regularly assessing the AI's performance, identifying any deviations from ethical guidelines, and making necessary adjustments to maintain ethical integrity.
+
+```python title="example2.py"
+def evaluate_performance(ai_actions, ethical_standards):
+    '''
+    This function evaluates the performance of an AI against ethical standards.
+    :param ai_actions: List of actions taken by the AI
+    :param ethical_standards: Dictionary of ethical standards
+    :return: Evaluation result
+    '''
+    # Simplified evaluation logic
+    for action in ai_actions:
+        if action not in ethical_standards:
+            return 'Non-compliant'
+    return 'Compliant'
+
+# Example usage
+ai_actions = ['Action 1', 'Action 2']
+ethical_standards = {'Action 1': True, 'Action 2': True}
+evaluation_result = evaluate_performance(ai_actions, ethical_standards)
+print(f'Evaluation result: {evaluation_result}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Why is continuous evaluation important for agentic AI systems?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -86,7 +86,29 @@ fig.show()
 
 > **💡 Tip:** When customizing plots, use the Plotly documentation to explore all available options for each plot type. Experiment with different settings to find the best visualization for your data.
 
-<div class="quiz">
+Plotly allows extensive customization of plots to enhance their visual appeal and clarity. You can modify axes, add annotations, change colors, and adjust layout properties. Customization is crucial for creating professional-grade visualizations that effectively communicate your data insights.
+
+```python title="example2.py"
+import plotly.graph_objects as go
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y = [10, 11, 12, 13, 14]
+
+# Creating a customized line plot
+fig = go.Figure(data=go.Scatter(x=x, y=y, mode='lines+markers',
+                                line=dict(color='firebrick', width=4),
+                                marker=dict(symbol='circle', size=12, color='rgba(255, 0, 0,.8)')))
+
+# Updating layout
+fig.update_layout(title='Customized Line Plot', xaxis_title='X-axis', yaxis_title='Y-axis',
+                  plot_bgcolor='rgba(240, 240, 240, 0.8)', paper_bgcolor='rgba(240, 240, 240, 0.8)')
+
+# Displaying the plot
+fig.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using Plotly for data visualization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -110,7 +132,29 @@ fig.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Plotly allows extensive customization of plots to enhance their visual appeal and clarity. You can modify axes, add annotations, change colors, and adjust layout properties. Customization is crucial for creating professional-grade visualizations that effectively communicate your data insights.
+
+```python title="example2.py"
+import plotly.graph_objects as go
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y = [10, 11, 12, 13, 14]
+
+# Creating a customized line plot
+fig = go.Figure(data=go.Scatter(x=x, y=y, mode='lines+markers',
+                                line=dict(color='firebrick', width=4),
+                                marker=dict(symbol='circle', size=12, color='rgba(255, 0, 0,.8)')))
+
+# Updating layout
+fig.update_layout(title='Customized Line Plot', xaxis_title='X-axis', yaxis_title='Y-axis',
+                  plot_bgcolor='rgba(240, 240, 240, 0.8)', paper_bgcolor='rgba(240, 240, 240, 0.8)')
+
+# Displaying the plot
+fig.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which Plotly function is used to create a scatter plot with minimal code?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -120,7 +120,37 @@ cv2.destroyAllWindows()
 
 > **💡 Tip:** Ensure your YOLO model is trained on a dataset that closely matches the objects you intend to detect in real-world applications to achieve optimal performance.
 
-<div class="quiz">
+To enhance YOLO's performance, consider techniques like data augmentation, fine-tuning the model with specific datasets, and adjusting hyperparameters. Additionally, leveraging transfer learning by using pre-trained models can significantly boost detection accuracy and speed.
+
+```python title="example2.py"
+import cv2
+import numpy as np
+
+# Load YOLO
+net = cv2.dnn.readNet('yolov3.weights', 'yolov3.cfg')
+layer_names = net.getLayerNames()
+output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+
+# Load image
+img = cv2.imread('image.jpg')
+img = cv2.resize(img, None, fx=0.4, fy=0.4)
+height, width, channels = img.shape
+
+# Detecting objects
+blob = cv2.dnn.blobFromImage(img, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
+net.setInput(blob)
+outs = net.forward(output_layers)
+
+# Showing information on the screen
+class_ids = []
+confidences = []
+boxes = []
+for out in outs:
+    for detection in out:
+        scores = detection[5:]
+        class_id = np.argmax(scores)
+        confidence = scores[class_id]
+        if confidence >
   <p class="font-semibold mb-3">❓ What is the primary advantage of YOLO over other object detection algorithms?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -144,7 +174,37 @@ cv2.destroyAllWindows()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+To enhance YOLO's performance, consider techniques like data augmentation, fine-tuning the model with specific datasets, and adjusting hyperparameters. Additionally, leveraging transfer learning by using pre-trained models can significantly boost detection accuracy and speed.
+
+```python title="example2.py"
+import cv2
+import numpy as np
+
+# Load YOLO
+net = cv2.dnn.readNet('yolov3.weights', 'yolov3.cfg')
+layer_names = net.getLayerNames()
+output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+
+# Load image
+img = cv2.imread('image.jpg')
+img = cv2.resize(img, None, fx=0.4, fy=0.4)
+height, width, channels = img.shape
+
+# Detecting objects
+blob = cv2.dnn.blobFromImage(img, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
+net.setInput(blob)
+outs = net.forward(output_layers)
+
+# Showing information on the screen
+class_ids = []
+confidences = []
+boxes = []
+for out in outs:
+    for detection in out:
+        scores = detection[5:]
+        class_id = np.argmax(scores)
+        confidence = scores[class_id]
+        if confidence >
   <p class="font-semibold mb-3">❓ Which technique can be used to improve YOLO's detection accuracy?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

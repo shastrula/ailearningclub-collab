@@ -154,7 +154,14 @@ plt.show()
 5. **Provide context** with titles and legends
 6. **Consider your audience** - simplify for general viewers
 
-<div class="quiz">
+1. **Choose the right chart type** for your data
+2. **Label axes clearly** with units
+3. **Use colors meaningfully** (not just for aesthetics)
+4. **Avoid clutter** - remove unnecessary elements
+5. **Provide context** with titles and legends
+6. **Consider your audience** - simplify for general viewers
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of a scatter plot?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -178,7 +185,14 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+1. **Choose the right chart type** for your data
+2. **Label axes clearly** with units
+3. **Use colors meaningfully** (not just for aesthetics)
+4. **Avoid clutter** - remove unnecessary elements
+5. **Provide context** with titles and legends
+6. **Consider your audience** - simplify for general viewers
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which chart type is best for showing distribution?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -202,7 +216,14 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+1. **Choose the right chart type** for your data
+2. **Label axes clearly** with units
+3. **Use colors meaningfully** (not just for aesthetics)
+4. **Avoid clutter** - remove unnecessary elements
+5. **Provide context** with titles and legends
+6. **Consider your audience** - simplify for general viewers
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does a box plot show?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -226,7 +247,14 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+1. **Choose the right chart type** for your data
+2. **Label axes clearly** with units
+3. **Use colors meaningfully** (not just for aesthetics)
+4. **Avoid clutter** - remove unnecessary elements
+5. **Provide context** with titles and legends
+6. **Consider your audience** - simplify for general viewers
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which chart type is best for showing trends over time?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

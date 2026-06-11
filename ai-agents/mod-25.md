@@ -130,7 +130,75 @@ result = agent.run("Explain quantum entanglement in simple terms")
 print(result)
 ```
 
-<div class="quiz">
+Reflection enables agents to evaluate their outputs and correct mistakes. The pattern: $\text{Generate} \to \text{Evaluate} \to \text{Reflect} \to \text{Correct}$.
+
+```python title="example3.py"
+from langchain.llms import HuggingFacePipeline
+from langchain.prompts import PromptTemplate
+
+# Generation prompt
+generation_prompt = PromptTemplate(
+    input_variables=["task"],
+    template="Complete this task: {task}\nAnswer:"
+)
+
+# Evaluation prompt
+evaluation_prompt = PromptTemplate(
+    input_variables=["task", "answer"],
+    template="""Evaluate this answer for the task: {task}
+Answer: {answer}
+
+Is this answer correct? (Yes/No)
+What could be improved?
+"""
+)
+
+# Correction prompt
+correction_prompt = PromptTemplate(
+    input_variables=["task", "answer", "feedback"],
+    template="""Original task: {task}
+Previous answer: {answer}
+Feedback: {feedback}
+
+Provide a corrected answer:
+"""
+)
+
+class ReflectiveAgent:
+    def __init__(self, llm):
+        self.llm = llm
+    
+    def run(self, task: str, max_iterations: int = 3):
+        answer = self.llm(generation_prompt.format(task=task))
+        
+        for i in range(max_iterations):
+            # Evaluate
+            evaluation = self.llm(
+                evaluation_prompt.format(task=task, answer=answer)
+            )
+            
+            if "Yes" in evaluation or "correct" in evaluation.lower():
+                return answer
+            
+            # Reflect and correct
+            answer = self.llm(
+                correction_prompt.format(
+                    task=task,
+                    answer=answer,
+                    feedback=evaluation
+                )
+            )
+        
+        return answer
+
+# Use reflective agent
+llm = HuggingFacePipeline(model_name="gpt2")
+agent = ReflectiveAgent(llm)
+result = agent.run("Explain quantum entanglement in simple terms")
+print(result)
+```
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of tool use in AI agents?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -154,7 +222,75 @@ print(result)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Reflection enables agents to evaluate their outputs and correct mistakes. The pattern: $\text{Generate} \to \text{Evaluate} \to \text{Reflect} \to \text{Correct}$.
+
+```python title="example3.py"
+from langchain.llms import HuggingFacePipeline
+from langchain.prompts import PromptTemplate
+
+# Generation prompt
+generation_prompt = PromptTemplate(
+    input_variables=["task"],
+    template="Complete this task: {task}\nAnswer:"
+)
+
+# Evaluation prompt
+evaluation_prompt = PromptTemplate(
+    input_variables=["task", "answer"],
+    template="""Evaluate this answer for the task: {task}
+Answer: {answer}
+
+Is this answer correct? (Yes/No)
+What could be improved?
+"""
+)
+
+# Correction prompt
+correction_prompt = PromptTemplate(
+    input_variables=["task", "answer", "feedback"],
+    template="""Original task: {task}
+Previous answer: {answer}
+Feedback: {feedback}
+
+Provide a corrected answer:
+"""
+)
+
+class ReflectiveAgent:
+    def __init__(self, llm):
+        self.llm = llm
+    
+    def run(self, task: str, max_iterations: int = 3):
+        answer = self.llm(generation_prompt.format(task=task))
+        
+        for i in range(max_iterations):
+            # Evaluate
+            evaluation = self.llm(
+                evaluation_prompt.format(task=task, answer=answer)
+            )
+            
+            if "Yes" in evaluation or "correct" in evaluation.lower():
+                return answer
+            
+            # Reflect and correct
+            answer = self.llm(
+                correction_prompt.format(
+                    task=task,
+                    answer=answer,
+                    feedback=evaluation
+                )
+            )
+        
+        return answer
+
+# Use reflective agent
+llm = HuggingFacePipeline(model_name="gpt2")
+agent = ReflectiveAgent(llm)
+result = agent.run("Explain quantum entanglement in simple terms")
+print(result)
+```
+
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the benefit of planning in agentic systems?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

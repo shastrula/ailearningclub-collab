@@ -83,7 +83,26 @@ print(samples[:10])
 
 > **💡 Tip:** Ensure that the proposal distribution in Metropolis-Hastings and the conditional distributions in Gibbs sampling are well-tuned to the target distribution to achieve efficient convergence.
 
-<div class="quiz">
+Gibbs sampling is another MCMC method that is particularly useful when the target distribution is multivariate. It works by iteratively sampling each variable from its conditional distribution given the current values of all other variables. This method is efficient when the conditional distributions are easy to sample from.
+
+```python title="gibbs_sampling.py"
+import numpy as np
+
+def gibbs_sampling(num_samples):
+    samples = np.zeros((num_samples, 2))
+    x, y = 0, 0
+    for i in range(num_samples):
+        x = np.random.normal(y, 1)
+        y = np.random.normal(x, 1)
+        samples[i] = [x, y]
+    return samples
+
+# Example usage
+samples = gibbs_sampling(1000)
+print(samples[:10])
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of the Metropolis-Hastings algorithm?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -107,7 +126,26 @@ print(samples[:10])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Gibbs sampling is another MCMC method that is particularly useful when the target distribution is multivariate. It works by iteratively sampling each variable from its conditional distribution given the current values of all other variables. This method is efficient when the conditional distributions are easy to sample from.
+
+```python title="gibbs_sampling.py"
+import numpy as np
+
+def gibbs_sampling(num_samples):
+    samples = np.zeros((num_samples, 2))
+    x, y = 0, 0
+    for i in range(num_samples):
+        x = np.random.normal(y, 1)
+        y = np.random.normal(x, 1)
+        samples[i] = [x, y]
+    return samples
+
+# Example usage
+samples = gibbs_sampling(1000)
+print(samples[:10])
+```
+
+>
   <p class="font-semibold mb-3">❓ In Gibbs sampling, how are the variables updated?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -93,7 +93,36 @@ for batch in dataloader:
 
 > **💡 Tip:** When implementing batching, ensure that the batch size is optimized for your specific hardware and model to avoid underutilization or overloading.
 
-<div class="quiz">
+Batching and load balancing are essential techniques for achieving high-throughput in model serving. Batching involves processing multiple inference requests together, which can significantly reduce the overhead per request. Load balancing ensures that the incoming requests are distributed evenly across multiple servers or GPUs, preventing any single resource from becoming a bottleneck and ensuring consistent performance.
+
+```python title="example2.py"
+from torch.utils.data import DataLoader
+import torch
+
+# Define a simple dataset
+class RandomDataset(torch.utils.data.Dataset):
+    def __init__(self, size, num_features):
+        self.len = size
+        self.data = torch.randn(size, num_features)
+    def __getitem__(self, index):
+        return self.data[index]
+    def __len__(self):
+        return self.len
+
+# Create a dataset and dataloader with batching
+dataset = RandomDataset(1000, 10)
+dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
+
+# Simulate model inference
+model = torch.nn.Linear(10, 1)
+model.eval()
+
+for batch in dataloader:
+    outputs = model(batch)
+    print(outputs)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using vLLM and TensorRT for model serving?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

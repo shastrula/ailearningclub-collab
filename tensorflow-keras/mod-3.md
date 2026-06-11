@@ -83,7 +83,26 @@ print('Test accuracy:', test_acc)
 
 > **💡 Tip:** Always ensure your input data is properly preprocessed and normalized before training to improve model performance and convergence.
 
-<div class="quiz">
+Training a neural network involves feeding it input data, allowing it to make predictions, comparing these predictions to the actual outcomes, and adjusting the weights to minimize the difference. This process is repeated over multiple epochs until the model achieves satisfactory performance.
+
+```python title="example2.py"
+import numpy as np
+
+# Generate dummy data
+x_train = np.random.random((1000, 784))
+y_train = np.random.randint(10, size=(1000, 1))
+x_test = np.random.random((100, 784))
+y_test = np.random.randint(10, size=(100, 1))
+
+# Train the model
+model.fit(x_train, y_train, epochs=5, batch_size=32)
+
+# Evaluate the model
+test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
+print('Test accuracy:', test_acc)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the role of an activation function in a neural network?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -107,7 +126,26 @@ print('Test accuracy:', test_acc)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Training a neural network involves feeding it input data, allowing it to make predictions, comparing these predictions to the actual outcomes, and adjusting the weights to minimize the difference. This process is repeated over multiple epochs until the model achieves satisfactory performance.
+
+```python title="example2.py"
+import numpy as np
+
+# Generate dummy data
+x_train = np.random.random((1000, 784))
+y_train = np.random.randint(10, size=(1000, 1))
+x_test = np.random.random((100, 784))
+y_test = np.random.randint(10, size=(100, 1))
+
+# Train the model
+model.fit(x_train, y_train, epochs=5, batch_size=32)
+
+# Evaluate the model
+test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
+print('Test accuracy:', test_acc)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which method is used to adjust the weights of a neural network during training?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

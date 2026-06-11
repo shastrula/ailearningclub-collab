@@ -90,7 +90,33 @@ Validation failed: Data cannot be empty
 
 > **💡 Tip:** Use specific exception types to make error handling more precise and informative.
 
-<div class="quiz">
+Create specific exceptions for better error handling in AI pipelines.
+
+```python title="custom_exceptions.py"
+class DataValidationError(Exception):
+    """Raised when data validation fails"""
+    pass
+
+class ModelNotFoundError(Exception):
+    """Raised when model file doesn't exist"""
+    pass
+
+def validate_data(data):
+    if not data or len(data) == 0:
+        raise DataValidationError("Data cannot be empty")
+    return data
+
+try:
+    validate_data([])
+except DataValidationError as e:
+    print(f"Validation failed: {e}")
+```
+
+```
+Validation failed: Data cannot be empty
+```
+
+>
   <p class="font-semibold mb-3">❓ What does pdb.set_trace() do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

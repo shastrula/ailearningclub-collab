@@ -82,7 +82,25 @@ plt.show()
 
 > **💡 Tip:** Always check for stationarity in your time series data before fitting an ARIMA model. Non-stationary data can lead to misleading results.
 
-<div class="quiz">
+Selecting the right parameters (p, d, q) for an ARIMA model is critical for its performance. The parameter 'p' stands for the number of lag observations, 'd' for the number of times that the raw observations are differenced, and 'q' for the size of the moving average window. These parameters can be determined using methods like ACF (AutoCorrelation Function) and PACF (Partial AutoCorrelation Function) plots.
+
+```python title="example2.py"
+import matplotlib.pyplot as plt
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+
+# Sample data
+data = [x for x in range(1, 101)]
+
+# Plot ACF
+plot_acf(data, lags=10)
+plt.show()
+
+# Plot PACF
+plot_pacf(data, lags=10)
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What does the 'AR' in ARIMA stand for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +124,25 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Selecting the right parameters (p, d, q) for an ARIMA model is critical for its performance. The parameter 'p' stands for the number of lag observations, 'd' for the number of times that the raw observations are differenced, and 'q' for the size of the moving average window. These parameters can be determined using methods like ACF (AutoCorrelation Function) and PACF (Partial AutoCorrelation Function) plots.
+
+```python title="example2.py"
+import matplotlib.pyplot as plt
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+
+# Sample data
+data = [x for x in range(1, 101)]
+
+# Plot ACF
+plot_acf(data, lags=10)
+plt.show()
+
+# Plot PACF
+plot_pacf(data, lags=10)
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which plot is used to determine the 'p' parameter in ARIMA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

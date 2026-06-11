@@ -93,7 +93,36 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 > **💡 Tip:** Ensure that the quantization level is appropriate for your model and task to balance between performance and efficiency.
 
-<div class="quiz">
+QLoRA extends LoRA by incorporating quantization techniques to further reduce the memory footprint and computational cost of fine-tuning. This makes it feasible to fine-tune large models on resource-constrained environments.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Load pre-trained model and tokenizer
+model_name = 'distilgpt2'
+model = AutoModelForCausalLM.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Define QLoRA parameters
+lora_r = 8
+lora_alpha = 32
+lora_dropout = 0.1
+quantization_bits = 4
+
+# Apply QLoRA to the model
+for name, param in model.named_parameters():
+    if 'query' in name or 'key' in name or 'value' in name:
+        param.data += torch.round(torch.randn_like(param) * lora_r / quantization_bits)
+
+# Fine-tune the model
+input_text = 'Hello, how are you?'
+input_ids = tokenizer(input_text, return_tensors='pt').input_ids
+outputs = model.generate(input_ids, max_length=50)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using LoRA for fine-tuning large models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,7 +146,36 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+QLoRA extends LoRA by incorporating quantization techniques to further reduce the memory footprint and computational cost of fine-tuning. This makes it feasible to fine-tune large models on resource-constrained environments.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Load pre-trained model and tokenizer
+model_name = 'distilgpt2'
+model = AutoModelForCausalLM.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Define QLoRA parameters
+lora_r = 8
+lora_alpha = 32
+lora_dropout = 0.1
+quantization_bits = 4
+
+# Apply QLoRA to the model
+for name, param in model.named_parameters():
+    if 'query' in name or 'key' in name or 'value' in name:
+        param.data += torch.round(torch.randn_like(param) * lora_r / quantization_bits)
+
+# Fine-tune the model
+input_text = 'Hello, how are you?'
+input_ids = tokenizer(input_text, return_tensors='pt').input_ids
+outputs = model.generate(input_ids, max_length=50)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+>
   <p class="font-semibold mb-3">❓ How does QLoRA differ from LoRA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

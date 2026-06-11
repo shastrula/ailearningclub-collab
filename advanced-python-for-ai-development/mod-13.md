@@ -80,7 +80,23 @@ print(result)
 
 > **💡 Tip:** When using Dask, make sure to call the .compute() method to execute the computation and retrieve the result.
 
-<div class="quiz">
+Dask is a flexible library for parallel computing in Python that integrates well with Pandas. It allows you to work with larger-than-memory datasets by breaking them into smaller chunks and processing them in parallel. This section will demonstrate how to use Dask to handle big data efficiently.
+
+**example2.py**
+
+```
+import dask.dataframe as dd
+
+# Load a large dataset
+ddf = dd.read_csv('large_dataset.csv')
+
+# Perform operations on the Dask DataFrame
+result = ddf['existing_column'].mean().compute()
+print(result)
+
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using Pandas for data manipulation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -104,7 +120,23 @@ print(result)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Dask is a flexible library for parallel computing in Python that integrates well with Pandas. It allows you to work with larger-than-memory datasets by breaking them into smaller chunks and processing them in parallel. This section will demonstrate how to use Dask to handle big data efficiently.
+
+**example2.py**
+
+```
+import dask.dataframe as dd
+
+# Load a large dataset
+ddf = dd.read_csv('large_dataset.csv')
+
+# Perform operations on the Dask DataFrame
+result = ddf['existing_column'].mean().compute()
+print(result)
+
+```
+
+>
   <p class="font-semibold mb-3">❓ How does Dask improve the performance of data processing tasks?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -82,7 +82,25 @@ print(f'R-squared: {r2}')
 
 > **💡 Tip:** Always check the assumptions of Linear Regression, such as linearity, independence, homoscedasticity, and normality of residuals, to ensure the model's validity.
 
-<div class="quiz">
+Evaluating the performance of a Linear Regression model is essential to ensure its effectiveness. Common metrics include the coefficient of determination (R-squared), Mean Squared Error (MSE), and Mean Absolute Error (MAE). These metrics help in understanding how well the model predicts the dependent variable.
+
+```python title="example2.py"
+from sklearn.metrics import mean_squared_error, r2_score
+
+# True values
+y_true = np.array([1, 3, 2, 3, 5])
+# Predicted values from the model
+y_pred = model.predict(x)
+
+# Calculate metrics
+mse = mean_squared_error(y_true, y_pred)
+r2 = r2_score(y_true, y_pred)
+
+print(f'Mean Squared Error: {mse}')
+print(f'R-squared: {r2}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of Linear Regression?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +124,25 @@ print(f'R-squared: {r2}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Evaluating the performance of a Linear Regression model is essential to ensure its effectiveness. Common metrics include the coefficient of determination (R-squared), Mean Squared Error (MSE), and Mean Absolute Error (MAE). These metrics help in understanding how well the model predicts the dependent variable.
+
+```python title="example2.py"
+from sklearn.metrics import mean_squared_error, r2_score
+
+# True values
+y_true = np.array([1, 3, 2, 3, 5])
+# Predicted values from the model
+y_pred = model.predict(x)
+
+# Calculate metrics
+mse = mean_squared_error(y_true, y_pred)
+r2 = r2_score(y_true, y_pred)
+
+print(f'Mean Squared Error: {mse}')
+print(f'R-squared: {r2}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which metric is used to evaluate how well the Linear Regression model predicts the dependent variable?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

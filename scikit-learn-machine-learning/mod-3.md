@@ -91,7 +91,38 @@ print(f'Accuracy: {accuracy:.2f}')
 
 > **💡 Tip:** When using SVM, it's important to scale your features to ensure that the algorithm performs optimally. Use StandardScaler or MinMaxScaler from Scikit-Learn to preprocess your data.
 
-<div class="quiz">
+Support Vector Machines (SVM) are a set of supervised learning methods used for classification and regression. SVM works by finding the optimal hyperplane that separates the data points of different classes with the maximum margin. Scikit-Learn provides the SVC class for SVM classification.
+
+```python title="example2.py"
+from sklearn import svm, datasets
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load the iris dataset
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create an SVM classifier
+clf = svm.SVC(kernel='linear')
+
+# Train the model
+clf.fit(X_train, y_train)
+
+# Make predictions
+y_pred = clf.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+
+# Print the accuracy
+print(f'Accuracy: {accuracy:.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which Scikit-Learn class is used for linear regression?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -115,7 +146,38 @@ print(f'Accuracy: {accuracy:.2f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Support Vector Machines (SVM) are a set of supervised learning methods used for classification and regression. SVM works by finding the optimal hyperplane that separates the data points of different classes with the maximum margin. Scikit-Learn provides the SVC class for SVM classification.
+
+```python title="example2.py"
+from sklearn import svm, datasets
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load the iris dataset
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create an SVM classifier
+clf = svm.SVC(kernel='linear')
+
+# Train the model
+clf.fit(X_train, y_train)
+
+# Make predictions
+y_pred = clf.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+
+# Print the accuracy
+print(f'Accuracy: {accuracy:.2f}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What kernel type is used in the SVM example provided?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

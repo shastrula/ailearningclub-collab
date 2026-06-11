@@ -85,7 +85,28 @@ if __name__ == '__main__':
 
 > **💡 Tip:** When scaling AI agent solutions, ensure that your MCP server is stateless to facilitate easy horizontal scaling. Use environment variables for configuration management to avoid hardcoding values.
 
-<div class="quiz">
+To build scalable AI agent integrations, it's essential to utilize tools and resources that support horizontal scaling, load balancing, and efficient resource management. This involves setting up microservices, using containerization technologies like Docker, and orchestrating with Kubernetes.
+
+```python title="example2.py"
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+# Mock AI model prediction function
+def predict(text):
+    return 'Greeting detected.' if 'Hello' in text else 'No greeting detected.'
+
+@app.route('/predict', methods=['POST'])
+def handle_prediction():
+    data = request.json
+    prediction = predict(data['text'])
+    return jsonify({'prediction': prediction})
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of Model Context Protocol (MCP)?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -109,7 +130,28 @@ if __name__ == '__main__':
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+To build scalable AI agent integrations, it's essential to utilize tools and resources that support horizontal scaling, load balancing, and efficient resource management. This involves setting up microservices, using containerization technologies like Docker, and orchestrating with Kubernetes.
+
+```python title="example2.py"
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+# Mock AI model prediction function
+def predict(text):
+    return 'Greeting detected.' if 'Hello' in text else 'No greeting detected.'
+
+@app.route('/predict', methods=['POST'])
+def handle_prediction():
+    data = request.json
+    prediction = predict(data['text'])
+    return jsonify({'prediction': prediction})
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which technology is recommended for containerizing AI agent services?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

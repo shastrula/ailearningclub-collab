@@ -75,7 +75,25 @@ print(use_tool(query))
 
 > **💡 Tip:** When using external tools, ensure that the agent can handle errors gracefully and has fallback mechanisms in case the tool is unavailable.
 
-<div class="quiz">
+Tool use in agentic AI refers to the capability of an agent to utilize external tools or services to accomplish tasks. This can include anything from using APIs to fetch data, to employing machine learning models for predictions. Effective tool use allows agents to leverage external resources, enhancing their functionality and efficiency.
+
+```python title="example2.py"
+import requests
+
+# Define a function to use an external API
+def use_tool(query):
+    response = requests.get(f'https://api.example.com/search?q={query}')
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return 'Error'
+
+# Example usage
+query = 'agentic AI'
+print(use_tool(query))
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of planning in agentic AI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -99,7 +117,25 @@ print(use_tool(query))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Tool use in agentic AI refers to the capability of an agent to utilize external tools or services to accomplish tasks. This can include anything from using APIs to fetch data, to employing machine learning models for predictions. Effective tool use allows agents to leverage external resources, enhancing their functionality and efficiency.
+
+```python title="example2.py"
+import requests
+
+# Define a function to use an external API
+def use_tool(query):
+    response = requests.get(f'https://api.example.com/search?q={query}')
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return 'Error'
+
+# Example usage
+query = 'agentic AI'
+print(use_tool(query))
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the benefit of tool use in agentic AI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

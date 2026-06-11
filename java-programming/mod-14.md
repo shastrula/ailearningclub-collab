@@ -96,7 +96,19 @@ public class CountDownLatchExample {
 
 > **💡 Tip:** When using CountDownLatch, ensure that the count is set correctly to avoid deadlocks. If the count is not decremented properly, the latch will never be released, causing threads to wait indefinitely.
 
-<div class="quiz">
+CountDownLatch is a utility that allows one or more threads to wait until a set of operations being performed in other threads completes. It is particularly useful for synchronizing threads, ensuring that a thread does not proceed until all threads have finished their tasks.
+
+```java title="example2.java"
+import java.util.concurrent.CountDownLatch;
+
+public class CountDownLatchExample {
+    public static void main(String[] args) throws InterruptedException {
+        // Create a CountDownLatch initialized with a count of 3
+        final CountDownLatch latch = new CountDownLatch(3);
+
+        // Create and start three threads
+        for (int i = 0; i < 3; i++) {
+            new Thread(() ->
   <p class="font-semibold mb-3">❓ What is the primary purpose of ExecutorService in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,7 +132,19 @@ public class CountDownLatchExample {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+CountDownLatch is a utility that allows one or more threads to wait until a set of operations being performed in other threads completes. It is particularly useful for synchronizing threads, ensuring that a thread does not proceed until all threads have finished their tasks.
+
+```java title="example2.java"
+import java.util.concurrent.CountDownLatch;
+
+public class CountDownLatchExample {
+    public static void main(String[] args) throws InterruptedException {
+        // Create a CountDownLatch initialized with a count of 3
+        final CountDownLatch latch = new CountDownLatch(3);
+
+        // Create and start three threads
+        for (int i = 0; i < 3; i++) {
+            new Thread(() ->
   <p class="font-semibold mb-3">❓ What will happen if the count of CountDownLatch is not decremented properly?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

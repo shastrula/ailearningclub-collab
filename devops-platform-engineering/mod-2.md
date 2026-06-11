@@ -89,7 +89,20 @@ log_info "Deployment completed"
 
 ---
 
-<div class="quiz">
+DevOps scripts should produce clear logs for troubleshooting.
+
+```bash
+#!/bin/bash
+
+LOG_FILE="/var/log/deployment.log"
+ERROR_LOG="/var/log/deployment-errors.log"
+
+log_info() {
+  echo "[INFO] $(date '+%Y-%m-%d %H:%M:%S') - $*" | tee -a "$LOG_FILE"
+}
+
+log_error() {
+  echo "[ERROR] $(date '+%Y-%m-%d %H:%M:%S') - $*" | tee -a "$ERROR_LOG" >
   <p class="font-semibold mb-3">❓ What does `set -euo pipefail` do in a bash script?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -113,7 +126,20 @@ log_info "Deployment completed"
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+DevOps scripts should produce clear logs for troubleshooting.
+
+```bash
+#!/bin/bash
+
+LOG_FILE="/var/log/deployment.log"
+ERROR_LOG="/var/log/deployment-errors.log"
+
+log_info() {
+  echo "[INFO] $(date '+%Y-%m-%d %H:%M:%S') - $*" | tee -a "$LOG_FILE"
+}
+
+log_error() {
+  echo "[ERROR] $(date '+%Y-%m-%d %H:%M:%S') - $*" | tee -a "$ERROR_LOG" >
   <p class="font-semibold mb-3">❓ What cron expression runs a job every 30 minutes?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -137,7 +163,20 @@ log_info "Deployment completed"
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+DevOps scripts should produce clear logs for troubleshooting.
+
+```bash
+#!/bin/bash
+
+LOG_FILE="/var/log/deployment.log"
+ERROR_LOG="/var/log/deployment-errors.log"
+
+log_info() {
+  echo "[INFO] $(date '+%Y-%m-%d %H:%M:%S') - $*" | tee -a "$LOG_FILE"
+}
+
+log_error() {
+  echo "[ERROR] $(date '+%Y-%m-%d %H:%M:%S') - $*" | tee -a "$ERROR_LOG" >
   <p class="font-semibold mb-3">❓ How do you enable a systemd service to start on boot?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -161,7 +200,20 @@ log_info "Deployment completed"
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+DevOps scripts should produce clear logs for troubleshooting.
+
+```bash
+#!/bin/bash
+
+LOG_FILE="/var/log/deployment.log"
+ERROR_LOG="/var/log/deployment-errors.log"
+
+log_info() {
+  echo "[INFO] $(date '+%Y-%m-%d %H:%M:%S') - $*" | tee -a "$LOG_FILE"
+}
+
+log_error() {
+  echo "[ERROR] $(date '+%Y-%m-%d %H:%M:%S') - $*" | tee -a "$ERROR_LOG" >
   <p class="font-semibold mb-3">❓ What does the `grep -c` command do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -185,7 +237,20 @@ log_info "Deployment completed"
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+DevOps scripts should produce clear logs for troubleshooting.
+
+```bash
+#!/bin/bash
+
+LOG_FILE="/var/log/deployment.log"
+ERROR_LOG="/var/log/deployment-errors.log"
+
+log_info() {
+  echo "[INFO] $(date '+%Y-%m-%d %H:%M:%S') - $*" | tee -a "$LOG_FILE"
+}
+
+log_error() {
+  echo "[ERROR] $(date '+%Y-%m-%d %H:%M:%S') - $*" | tee -a "$ERROR_LOG" >
   <p class="font-semibold mb-3">❓ Which AWS CLI command lists EC2 instances?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

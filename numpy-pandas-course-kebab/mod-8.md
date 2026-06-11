@@ -78,7 +78,21 @@ print(df_imputed)
 
 > **💡 Tip:** When imputing missing values, consider the nature of your data and the potential impact on your analysis. Simple imputation methods like mean or median may not always be appropriate, especially for categorical data or datasets with significant missingness.
 
-<div class="quiz">
+Once missing data is identified, you can choose from several strategies to handle it, including removing rows or columns with missing values, imputing missing values with statistical measures (mean, median, mode), or using more advanced techniques like interpolation or machine learning models for imputation.
+
+```python title="example2.py"
+import pandas as pd
+import numpy as np
+
+# Sample DataFrame with missing values
+df = pd.DataFrame({'A': [1, 2, np.nan], 'B': [4, np.nan, 6], 'C': [7, 8, 9]})
+
+# Impute missing values with the mean of the column
+df_imputed = df.fillna(df.mean())
+print(df_imputed)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which method is used to identify missing values in a Pandas DataFrame?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -102,7 +116,21 @@ print(df_imputed)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Once missing data is identified, you can choose from several strategies to handle it, including removing rows or columns with missing values, imputing missing values with statistical measures (mean, median, mode), or using more advanced techniques like interpolation or machine learning models for imputation.
+
+```python title="example2.py"
+import pandas as pd
+import numpy as np
+
+# Sample DataFrame with missing values
+df = pd.DataFrame({'A': [1, 2, np.nan], 'B': [4, np.nan, 6], 'C': [7, 8, 9]})
+
+# Impute missing values with the mean of the column
+df_imputed = df.fillna(df.mean())
+print(df_imputed)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which method is used to impute missing values with the mean of the column in a Pandas DataFrame?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -88,7 +88,31 @@ print(f'Effect Size: {effect_size}')
 
 > **💡 Tip:** Always consider both statistical significance and practical significance when interpreting A/B test results. A statistically significant result may not always be practically significant, especially if the effect size is very small.
 
-<div class="quiz">
+Interpreting the results of an A/B test involves looking at the p-value obtained from the statistical test. A low p-value (typically < 0.05) indicates that the observed difference in conversion rates is statistically significant, suggesting that the variant version is indeed better than the control. However, it's also important to consider the practical significance of the results, such as the effect size and business context.
+
+```python title="example2.py"
+import numpy as np
+import scipy.stats as stats
+
+# Example data
+control_conversions = 50
+control_visitors = 500
+variant_conversions = 60
+variant_visitors = 500
+
+# Calculate conversion rates
+control_conversion_rate = control_conversions / control_visitors
+variant_conversion_rate = variant_conversions / variant_visitors
+
+# Calculate effect size (difference in conversion rates)
+effect_size = variant_conversion_rate - control_conversion_rate
+
+print(f'Control Conversion Rate: {control_conversion_rate}')
+print(f'Variant Conversion Rate: {variant_conversion_rate}')
+print(f'Effect Size: {effect_size}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What does a low p-value in an A/B test indicate?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -112,7 +136,31 @@ print(f'Effect Size: {effect_size}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Interpreting the results of an A/B test involves looking at the p-value obtained from the statistical test. A low p-value (typically < 0.05) indicates that the observed difference in conversion rates is statistically significant, suggesting that the variant version is indeed better than the control. However, it's also important to consider the practical significance of the results, such as the effect size and business context.
+
+```python title="example2.py"
+import numpy as np
+import scipy.stats as stats
+
+# Example data
+control_conversions = 50
+control_visitors = 500
+variant_conversions = 60
+variant_visitors = 500
+
+# Calculate conversion rates
+control_conversion_rate = control_conversions / control_visitors
+variant_conversion_rate = variant_conversions / variant_visitors
+
+# Calculate effect size (difference in conversion rates)
+effect_size = variant_conversion_rate - control_conversion_rate
+
+print(f'Control Conversion Rate: {control_conversion_rate}')
+print(f'Variant Conversion Rate: {variant_conversion_rate}')
+print(f'Effect Size: {effect_size}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Why is it important to consider practical significance in addition to statistical significance?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

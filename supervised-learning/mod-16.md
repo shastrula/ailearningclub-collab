@@ -101,7 +101,44 @@ print(f'Best Score: {best_score}')
 
 > **💡 Tip:** When using Grid Search, ensure that the parameter grid is not too large to avoid excessive computation time. For high-dimensional parameter spaces, consider using Random Search or more advanced techniques like Bayesian Optimization.
 
-<div class="quiz">
+Random Search is an alternative to Grid Search that samples a fixed number of hyperparameter combinations from specified distributions. It is often more efficient than Grid Search, especially when dealing with a large number of hyperparameters, as it does not evaluate all possible combinations but rather a random subset.
+
+```python title="example2.py"
+from sklearn.datasets import load_iris
+from sklearn.model_selection import RandomizedSearchCV
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+import numpy as np
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Define the model
+rf = RandomForestClassifier()
+
+# Define the parameter distributions
+param_dist = {
+    'n_estimators': np.arange(50, 201, 50),
+   'max_depth': [None] + list(np.arange(10, 40, 10)),
+   'min_samples_split': np.arange(2, 11, 2)
+}
+
+# Setup the RandomizedSearchCV
+random_search = RandomizedSearchCV(estimator=rf, param_distributions=param_dist, n_iter=10, cv=5, scoring='accuracy', random_state=42)
+
+# Fit the random search to the data
+random_search.fit(X, y)
+
+# Get the best parameters and best score
+best_params = random_search.best_params_
+best_score = random_search.best_score_
+
+print(f'Best Parameters: {best_params}')
+print(f'Best Score: {best_score}')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary advantage of using Grid Search for hyperparameter tuning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -125,7 +162,44 @@ print(f'Best Score: {best_score}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Random Search is an alternative to Grid Search that samples a fixed number of hyperparameter combinations from specified distributions. It is often more efficient than Grid Search, especially when dealing with a large number of hyperparameters, as it does not evaluate all possible combinations but rather a random subset.
+
+```python title="example2.py"
+from sklearn.datasets import load_iris
+from sklearn.model_selection import RandomizedSearchCV
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+import numpy as np
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Define the model
+rf = RandomForestClassifier()
+
+# Define the parameter distributions
+param_dist = {
+    'n_estimators': np.arange(50, 201, 50),
+   'max_depth': [None] + list(np.arange(10, 40, 10)),
+   'min_samples_split': np.arange(2, 11, 2)
+}
+
+# Setup the RandomizedSearchCV
+random_search = RandomizedSearchCV(estimator=rf, param_distributions=param_dist, n_iter=10, cv=5, scoring='accuracy', random_state=42)
+
+# Fit the random search to the data
+random_search.fit(X, y)
+
+# Get the best parameters and best score
+best_params = random_search.best_params_
+best_score = random_search.best_score_
+
+print(f'Best Parameters: {best_params}')
+print(f'Best Score: {best_score}')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which of the following is a key benefit of Random Search over Grid Search?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

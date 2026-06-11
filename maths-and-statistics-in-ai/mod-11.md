@@ -89,7 +89,32 @@ print(selected_features)
 
 > **💡 Tip:** When performing feature selection, always ensure that the selected features are relevant to the target variable to avoid discarding important information.
 
-<div class="quiz">
+Feature selection is the process of selecting a subset of relevant features for model construction. This can help reduce overfitting, improve model interpretability, and decrease training time. Techniques such as recursive feature elimination (RFE) and feature importance from tree-based models are commonly used to identify and select the most important features.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.feature_selection import SelectFromModel
+
+# Load sample dataset
+data = pd.read_csv('sample_data.csv')
+X = data.drop('target', axis=1)
+y = data['target']
+
+# Train a Random Forest model
+model = RandomForestClassifier(n_estimators=100)
+model.fit(X, y)
+
+# Select features with importance greater than the mean
+sfm = SelectFromModel(model, threshold=model.feature_importance_.mean())
+sfm.fit(X, y)
+
+# Display the selected features
+selected_features = X.columns[sfm.get_support()]
+print(selected_features)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of feature engineering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -113,7 +138,32 @@ print(selected_features)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Feature selection is the process of selecting a subset of relevant features for model construction. This can help reduce overfitting, improve model interpretability, and decrease training time. Techniques such as recursive feature elimination (RFE) and feature importance from tree-based models are commonly used to identify and select the most important features.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.feature_selection import SelectFromModel
+
+# Load sample dataset
+data = pd.read_csv('sample_data.csv')
+X = data.drop('target', axis=1)
+y = data['target']
+
+# Train a Random Forest model
+model = RandomForestClassifier(n_estimators=100)
+model.fit(X, y)
+
+# Select features with importance greater than the mean
+sfm = SelectFromModel(model, threshold=model.feature_importance_.mean())
+sfm.fit(X, y)
+
+# Display the selected features
+selected_features = X.columns[sfm.get_support()]
+print(selected_features)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which technique is commonly used for feature selection in tree-based models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

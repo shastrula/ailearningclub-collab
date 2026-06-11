@@ -258,7 +258,13 @@ i=2, j=1
 
 Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
 
-<div class="quiz">
+Control flow determines the order in which statements execute. Java provides if/else for conditionals and for/while loops for repetition. Mastering control flow is essential for writing programs that respond to different conditions and process data efficiently. Understanding how to structure your code with proper control flow makes it more readable and maintainable.
+
+```java title="IfElse.java"
+public class IfElse {
+    public static void main(String[] args) {
+        int age = 20;
+        if (age >
   <p class="font-semibold mb-3">❓ What does the if statement do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -282,7 +288,13 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Control flow determines the order in which statements execute. Java provides if/else for conditionals and for/while loops for repetition. Mastering control flow is essential for writing programs that respond to different conditions and process data efficiently. Understanding how to structure your code with proper control flow makes it more readable and maintainable.
+
+```java title="IfElse.java"
+public class IfElse {
+    public static void main(String[] args) {
+        int age = 20;
+        if (age >
   <p class="font-semibold mb-3">❓ Which keyword is used to exit a loop?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -306,7 +318,13 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Control flow determines the order in which statements execute. Java provides if/else for conditionals and for/while loops for repetition. Mastering control flow is essential for writing programs that respond to different conditions and process data efficiently. Understanding how to structure your code with proper control flow makes it more readable and maintainable.
+
+```java title="IfElse.java"
+public class IfElse {
+    public static void main(String[] args) {
+        int age = 20;
+        if (age >
   <p class="font-semibold mb-3">❓ What is the difference between while and do-while?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -330,7 +348,13 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Control flow determines the order in which statements execute. Java provides if/else for conditionals and for/while loops for repetition. Mastering control flow is essential for writing programs that respond to different conditions and process data efficiently. Understanding how to structure your code with proper control flow makes it more readable and maintainable.
+
+```java title="IfElse.java"
+public class IfElse {
+    public static void main(String[] args) {
+        int age = 20;
+        if (age >
   <p class="font-semibold mb-3">❓ What does continue do in a loop?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -354,7 +378,13 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Control flow determines the order in which statements execute. Java provides if/else for conditionals and for/while loops for repetition. Mastering control flow is essential for writing programs that respond to different conditions and process data efficiently. Understanding how to structure your code with proper control flow makes it more readable and maintainable.
+
+```java title="IfElse.java"
+public class IfElse {
+    public static void main(String[] args) {
+        int age = 20;
+        if (age >
   <p class="font-semibold mb-3">❓ Which statement is used for multiple conditions?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -378,7 +408,13 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Control flow determines the order in which statements execute. Java provides if/else for conditionals and for/while loops for repetition. Mastering control flow is essential for writing programs that respond to different conditions and process data efficiently. Understanding how to structure your code with proper control flow makes it more readable and maintainable.
+
+```java title="IfElse.java"
+public class IfElse {
+    public static void main(String[] args) {
+        int age = 20;
+        if (age >
   <p class="font-semibold mb-3">❓ What is the output of the ternary operator (true ? "yes" : "no")?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -402,7 +438,13 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Control flow determines the order in which statements execute. Java provides if/else for conditionals and for/while loops for repetition. Mastering control flow is essential for writing programs that respond to different conditions and process data efficiently. Understanding how to structure your code with proper control flow makes it more readable and maintainable.
+
+```java title="IfElse.java"
+public class IfElse {
+    public static void main(String[] args) {
+        int age = 20;
+        if (age >
   <p class="font-semibold mb-3">❓ How many times does this loop execute: for(int i=0; i<5; i++)?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -426,7 +468,13 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Control flow determines the order in which statements execute. Java provides if/else for conditionals and for/while loops for repetition. Mastering control flow is essential for writing programs that respond to different conditions and process data efficiently. Understanding how to structure your code with proper control flow makes it more readable and maintainable.
+
+```java title="IfElse.java"
+public class IfElse {
+    public static void main(String[] args) {
+        int age = 20;
+        if (age >
   <p class="font-semibold mb-3">❓ What is a nested loop?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -450,7 +498,13 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Control flow determines the order in which statements execute. Java provides if/else for conditionals and for/while loops for repetition. Mastering control flow is essential for writing programs that respond to different conditions and process data efficiently. Understanding how to structure your code with proper control flow makes it more readable and maintainable.
+
+```java title="IfElse.java"
+public class IfElse {
+    public static void main(String[] args) {
+        int age = 20;
+        if (age >
   <p class="font-semibold mb-3">❓ Which loop is best for iterating a fixed number of times?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -474,7 +528,13 @@ Learn more: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Control flow determines the order in which statements execute. Java provides if/else for conditionals and for/while loops for repetition. Mastering control flow is essential for writing programs that respond to different conditions and process data efficiently. Understanding how to structure your code with proper control flow makes it more readable and maintainable.
+
+```java title="IfElse.java"
+public class IfElse {
+    public static void main(String[] args) {
+        int age = 20;
+        if (age >
   <p class="font-semibold mb-3">❓ What happens if you forget break in a switch case?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

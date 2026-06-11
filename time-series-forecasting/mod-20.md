@@ -84,7 +84,27 @@ print(forecast)
 
 > **💡 Tip:** Ensure that the external variables are stationary or make them stationary through differencing or other transformations to avoid issues with model fitting.
 
-<div class="quiz">
+Seasonal ARIMA (SARIMA) models can also be enhanced with external variables. This is particularly useful for time series data that exhibit seasonal patterns. By incorporating external variables, the SARIMA model can better capture the underlying dynamics of the data, resulting in improved forecast accuracy.
+
+```python title="example2.py"
+import pandas as pd
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+
+# Sample data
+data = pd.DataFrame({'sales': [150, 160, 170, 180, 190, 200, 210, 220], 'advertising_spend': [10, 15, 20, 25, 30, 35, 40, 45]})
+
+# Define the model
+model = SARIMAX(data['sales'], exog=data['advertising_spend'], order=(1, 1, 1), seasonal_order=(1, 1, 1, 4))
+
+# Fit the model
+model_fit = model.fit()
+
+# Forecast
+forecast = model_fit.forecast(exog=[50])
+print(forecast)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary benefit of using external variables in ARIMA models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -108,7 +128,27 @@ print(forecast)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Seasonal ARIMA (SARIMA) models can also be enhanced with external variables. This is particularly useful for time series data that exhibit seasonal patterns. By incorporating external variables, the SARIMA model can better capture the underlying dynamics of the data, resulting in improved forecast accuracy.
+
+```python title="example2.py"
+import pandas as pd
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+
+# Sample data
+data = pd.DataFrame({'sales': [150, 160, 170, 180, 190, 200, 210, 220], 'advertising_spend': [10, 15, 20, 25, 30, 35, 40, 45]})
+
+# Define the model
+model = SARIMAX(data['sales'], exog=data['advertising_spend'], order=(1, 1, 1), seasonal_order=(1, 1, 1, 4))
+
+# Fit the model
+model_fit = model.fit()
+
+# Forecast
+forecast = model_fit.forecast(exog=[50])
+print(forecast)
+```
+
+>
   <p class="font-semibold mb-3">❓ Which method is used to include external variables in SARIMA models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

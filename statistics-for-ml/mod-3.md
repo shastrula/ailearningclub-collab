@@ -81,7 +81,24 @@ print('Variance:', variance)
 
 > **💡 Tip:** When calculating variance, ensure that the probabilities sum to 1 to avoid incorrect results.
 
-<div class="quiz">
+Variance measures the spread of a random variable's possible values. It quantifies how much the values deviate from the expected value. For a random variable X with expectation E(X), the variance Var(X) is defined as E[(X - E(X))^2]. A higher variance indicates that the data points are more spread out from the mean.
+
+```python title="example2.py"
+import numpy as np
+
+# Define the values and probabilities
+values = np.array([1, 2, 3, 4, 5])
+probabilities = np.array([0.1, 0.2, 0.3, 0.2, 0.2])
+
+# Calculate the expectation
+expectation = np.sum(values * probabilities)
+
+# Calculate the variance
+variance = np.sum(probabilities * (values - expectation)**2)
+print('Variance:', variance)
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the expectation of a random variable with values [1, 2, 3] and probabilities [0.2, 0.5, 0.3]?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -105,7 +122,24 @@ print('Variance:', variance)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Variance measures the spread of a random variable's possible values. It quantifies how much the values deviate from the expected value. For a random variable X with expectation E(X), the variance Var(X) is defined as E[(X - E(X))^2]. A higher variance indicates that the data points are more spread out from the mean.
+
+```python title="example2.py"
+import numpy as np
+
+# Define the values and probabilities
+values = np.array([1, 2, 3, 4, 5])
+probabilities = np.array([0.1, 0.2, 0.3, 0.2, 0.2])
+
+# Calculate the expectation
+expectation = np.sum(values * probabilities)
+
+# Calculate the variance
+variance = np.sum(probabilities * (values - expectation)**2)
+print('Variance:', variance)
+```
+
+>
   <p class="font-semibold mb-3">❓ If the expectation of a random variable is 3 and the variance is 4, what is the standard deviation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

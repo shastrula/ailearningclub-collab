@@ -93,7 +93,36 @@ agent.reflect()
 
 > **💡 Tip:** Ensure that the reflection process includes both successful and unsuccessful actions to provide a comprehensive learning experience for the agent.
 
-<div class="quiz">
+Reflection in agentic AI refers to the agent's ability to evaluate its own actions and outcomes, learn from its experiences, and adjust its behavior accordingly. This self-assessment capability is critical for continuous improvement and adaptation in dynamic environments.
+
+```python title="example2.py"
+class ReflectiveAgent:
+    def __init__(self):
+        self.actions = []
+        self.outcomes = {}
+
+    def perform_action(self, action):
+        self.actions.append(action)
+        outcome = self.evaluate_outcome(action)
+        self.outcomes[action] = outcome
+        print(f'Performed action: {action}, Outcome: {outcome}')
+
+    def evaluate_outcome(self, action):
+        # Simplified evaluation
+        return 'success' if action == 'execute' else 'failure'
+
+    def reflect(self):
+        for action, outcome in self.outcomes.items():
+            print(f'Reflecting on action: {action}, Outcome was: {outcome}')
+
+# Example usage
+agent = ReflectiveAgent()
+agent.perform_action('search')
+agent.perform_action('execute')
+agent.reflect()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of planning in agentic AI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,7 +146,36 @@ agent.reflect()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Reflection in agentic AI refers to the agent's ability to evaluate its own actions and outcomes, learn from its experiences, and adjust its behavior accordingly. This self-assessment capability is critical for continuous improvement and adaptation in dynamic environments.
+
+```python title="example2.py"
+class ReflectiveAgent:
+    def __init__(self):
+        self.actions = []
+        self.outcomes = {}
+
+    def perform_action(self, action):
+        self.actions.append(action)
+        outcome = self.evaluate_outcome(action)
+        self.outcomes[action] = outcome
+        print(f'Performed action: {action}, Outcome: {outcome}')
+
+    def evaluate_outcome(self, action):
+        # Simplified evaluation
+        return 'success' if action == 'execute' else 'failure'
+
+    def reflect(self):
+        for action, outcome in self.outcomes.items():
+            print(f'Reflecting on action: {action}, Outcome was: {outcome}')
+
+# Example usage
+agent = ReflectiveAgent()
+agent.perform_action('search')
+agent.perform_action('execute')
+agent.reflect()
+```
+
+>
   <p class="font-semibold mb-3">❓ What does reflection in agentic AI involve?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -80,7 +80,27 @@ else:
 
 > **💡 Tip:** Ensure that the sample sizes for both groups are sufficiently large to achieve statistical power. Small sample sizes may lead to inconclusive results.
 
-<div class="quiz">
+After performing an A/B test, the results are interpreted based on the p-value. A common threshold for statistical significance is 0.05. If the p-value is less than 0.05, we reject the null hypothesis and conclude that there is a significant difference between the control and treatment groups.
+
+```python title="example2.py"
+import numpy as np
+import scipy.stats as stats
+
+# Generate random data for control and treatment groups
+control_group = np.random.normal(loc=50, scale=10, size=100)
+treatment_group = np.random.normal(loc=50, scale=10, size=100)
+
+# Perform a two-sample t-test
+t_stat, p_value = stats.ttest_ind(control_group, treatment_group)
+
+# Interpret the results
+if p_value < 0.05:
+    print('The difference is statistically significant.')
+else:
+    print('The difference is not statistically significant.')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of A/B testing?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -104,7 +124,27 @@ else:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+After performing an A/B test, the results are interpreted based on the p-value. A common threshold for statistical significance is 0.05. If the p-value is less than 0.05, we reject the null hypothesis and conclude that there is a significant difference between the control and treatment groups.
+
+```python title="example2.py"
+import numpy as np
+import scipy.stats as stats
+
+# Generate random data for control and treatment groups
+control_group = np.random.normal(loc=50, scale=10, size=100)
+treatment_group = np.random.normal(loc=50, scale=10, size=100)
+
+# Perform a two-sample t-test
+t_stat, p_value = stats.ttest_ind(control_group, treatment_group)
+
+# Interpret the results
+if p_value < 0.05:
+    print('The difference is statistically significant.')
+else:
+    print('The difference is not statistically significant.')
+```
+
+>
   <p class="font-semibold mb-3">❓ What does a p-value less than 0.05 indicate in A/B testing?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

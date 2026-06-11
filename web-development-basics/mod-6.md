@@ -90,7 +90,35 @@ Choose the right tool:
 
 ---
 
-<div class="quiz">
+Choose the right tool:
+
+```css
+/* Flexbox: one-dimensional, flexible */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grid: two-dimensional, structured */
+.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr 300px;
+  grid-template-rows: 60px 1fr 40px;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+```
+
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does the viewport meta tag do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -116,7 +144,35 @@ Choose the right tool:
 
 ---
 
-<div class="quiz">
+Choose the right tool:
+
+```css
+/* Flexbox: one-dimensional, flexible */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grid: two-dimensional, structured */
+.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr 300px;
+  grid-template-rows: 60px 1fr 40px;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+```
+
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the mobile-first approach?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -142,7 +198,35 @@ Choose the right tool:
 
 ---
 
-<div class="quiz">
+Choose the right tool:
+
+```css
+/* Flexbox: one-dimensional, flexible */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grid: two-dimensional, structured */
+.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr 300px;
+  grid-template-rows: 60px 1fr 40px;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+```
+
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does justify-content do in flexbox?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -168,7 +252,35 @@ Choose the right tool:
 
 ---
 
-<div class="quiz">
+Choose the right tool:
+
+```css
+/* Flexbox: one-dimensional, flexible */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grid: two-dimensional, structured */
+.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr 300px;
+  grid-template-rows: 60px 1fr 40px;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+```
+
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Which media query targets tablets?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -194,7 +306,35 @@ Choose the right tool:
 
 ---
 
-<div class="quiz">
+Choose the right tool:
+
+```css
+/* Flexbox: one-dimensional, flexible */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grid: two-dimensional, structured */
+.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr 300px;
+  grid-template-rows: 60px 1fr 40px;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+```
+
+---
+
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ How do you make an image responsive?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

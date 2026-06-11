@@ -80,7 +80,23 @@ crew.execute('Analyze market trends')
 
 > **💡 Tip:** When using CrewAI, ensure that each agent's role and goal are clearly defined to avoid conflicts and enhance collaboration.
 
-<div class="quiz">
+CrewAI and AutoGen are frameworks that facilitate the development and orchestration of AI agents. CrewAI allows for the creation of agent crews that work collaboratively, while AutoGen automates the generation of agent behaviors and interactions.
+
+```python title="example2.py"
+from crewai import Agent, Crew
+
+# Define agents
+agent1 = Agent(role='Researcher', goal='Find relevant data')
+agent2 = Agent(role='Analyst', goal='Analyze data')
+
+# Create a crew
+crew = Crew(agents=[agent1, agent2])
+
+# Execute task
+crew.execute('Analyze market trends')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of planning in Agentic AI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -104,7 +120,23 @@ crew.execute('Analyze market trends')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+CrewAI and AutoGen are frameworks that facilitate the development and orchestration of AI agents. CrewAI allows for the creation of agent crews that work collaboratively, while AutoGen automates the generation of agent behaviors and interactions.
+
+```python title="example2.py"
+from crewai import Agent, Crew
+
+# Define agents
+agent1 = Agent(role='Researcher', goal='Find relevant data')
+agent2 = Agent(role='Analyst', goal='Analyze data')
+
+# Create a crew
+crew = Crew(agents=[agent1, agent2])
+
+# Execute task
+crew.execute('Analyze market trends')
+```
+
+>
   <p class="font-semibold mb-3">❓ How does CrewAI enhance AI agent collaboration?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

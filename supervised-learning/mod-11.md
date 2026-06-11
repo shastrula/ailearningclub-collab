@@ -81,7 +81,31 @@ print("Accuracy:", accuracy_score(y_test, y_pred))
 
 > **💡 Tip:** When tuning SVM parameters, be cautious of overfitting. Use cross-validation to ensure that the model generalizes well to unseen data.
 
-<div class="quiz">
+Parameter tuning is essential to optimize SVM performance. Key parameters include C (regularization parameter), gamma (kernel coefficient for RBF), and degree (for polynomial kernel). Grid search and cross-validation are commonly used techniques to find the best parameters.
+
+```python title="example2.py"
+from sklearn.model_selection import GridSearchCV
+
+# Define parameter range
+param_grid = {'C': [0.1, 1, 10, 100], 'gamma': [1, 0.1, 0.01, 0.001], 'kernel': ['rbf', 'linear']}
+
+# Create a SVM classifier
+grid = GridSearchCV(svm.SVC(), param_grid, refit=True, verbose=2)
+
+# Fit the model
+grid.fit(X_train, y_train)
+
+# Print best parameters
+print(grid.best_params_)
+
+# Predict the response for test dataset
+y_pred = grid.predict(X_test)
+
+# Model Accuracy
+print("Accuracy:", accuracy_score(y_test, y_pred))
+```
+
+>
   <p class="font-semibold mb-3">❓ Which kernel is commonly used for non-linear problems in SVM?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -105,7 +129,31 @@ print("Accuracy:", accuracy_score(y_test, y_pred))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Parameter tuning is essential to optimize SVM performance. Key parameters include C (regularization parameter), gamma (kernel coefficient for RBF), and degree (for polynomial kernel). Grid search and cross-validation are commonly used techniques to find the best parameters.
+
+```python title="example2.py"
+from sklearn.model_selection import GridSearchCV
+
+# Define parameter range
+param_grid = {'C': [0.1, 1, 10, 100], 'gamma': [1, 0.1, 0.01, 0.001], 'kernel': ['rbf', 'linear']}
+
+# Create a SVM classifier
+grid = GridSearchCV(svm.SVC(), param_grid, refit=True, verbose=2)
+
+# Fit the model
+grid.fit(X_train, y_train)
+
+# Print best parameters
+print(grid.best_params_)
+
+# Predict the response for test dataset
+y_pred = grid.predict(X_test)
+
+# Model Accuracy
+print("Accuracy:", accuracy_score(y_test, y_pred))
+```
+
+>
   <p class="font-semibold mb-3">❓ What technique is used to find the best parameters for an SVM?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

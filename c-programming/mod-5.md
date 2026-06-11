@@ -62,7 +62,7 @@ Learning from others' experiences:
 
 ## Quiz
 
-<div class="quiz">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ How many times will this loop execute? for (int i = 0; i < 5; i++)</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -87,7 +87,30 @@ joblib.dump(model,'model.pkl')
 
 > **💡 Tip:** Ensure that your retraining pipeline is robust and can handle data drift and other issues that may affect model performance.
 
-<div class="quiz">
+Automated retraining involves setting up a pipeline that periodically retrains the model with new data. This can be achieved using tools like Apache Airflow or Kubeflow.
+
+```python title="retrain_pipeline.py"
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+import pandas as pd
+
+# Load new data
+data = pd.read_csv('new_data.csv')
+X = data.drop('target', axis=1)
+y = data['target']
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+# Train the model
+model = RandomForestClassifier()
+model.fit(X_train, y_train)
+
+# Save the model
+joblib.dump(model,'model.pkl')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which of the following is a common strategy for deploying machine learning models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

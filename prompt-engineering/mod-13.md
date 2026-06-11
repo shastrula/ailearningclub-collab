@@ -80,7 +80,23 @@ print(result[0]['generated_text'])
 
 > **💡 Tip:** When using CoT prompting, ensure that the intermediate steps are logically coherent and relevant to the final answer to improve the model's reasoning accuracy.
 
-<div class="quiz">
+Chain-of-Thought prompting encourages models to generate intermediate reasoning steps before arriving at a final answer, enhancing problem-solving capabilities. ReAct (Reason and Act) prompting involves the model reasoning about a task and then taking appropriate actions, which is particularly useful in dynamic environments.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Text generation pipeline
+generator = pipeline('text-generation', model='gpt2')
+
+# CoT prompting example
+prompt = "What is the capital of France? Let's think step by step: France is a country in Europe. The capital city of France is well-known for its culture and history. Therefore, the capital of France is "
+
+# Generate text
+result = generator(prompt, max_length=50, num_return_sequences=1)
+print(result[0]['generated_text'])
+```
+
+>
   <p class="font-semibold mb-3">❓ Which technique allows a model to make predictions on tasks it has not been explicitly trained on?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -104,7 +120,23 @@ print(result[0]['generated_text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Chain-of-Thought prompting encourages models to generate intermediate reasoning steps before arriving at a final answer, enhancing problem-solving capabilities. ReAct (Reason and Act) prompting involves the model reasoning about a task and then taking appropriate actions, which is particularly useful in dynamic environments.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Text generation pipeline
+generator = pipeline('text-generation', model='gpt2')
+
+# CoT prompting example
+prompt = "What is the capital of France? Let's think step by step: France is a country in Europe. The capital city of France is well-known for its culture and history. Therefore, the capital of France is "
+
+# Generate text
+result = generator(prompt, max_length=50, num_return_sequences=1)
+print(result[0]['generated_text'])
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of Chain-of-Thought prompting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

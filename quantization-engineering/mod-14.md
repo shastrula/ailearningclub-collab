@@ -94,7 +94,37 @@ print(f'Quantized model inference time: {quantized_time:.4f} seconds')
 
 > **💡 Tip:** Ensure that the input data for the quantized model is pre-processed correctly, as quantization can be sensitive to input scaling and zero-point values.
 
-<div class="quiz">
+Benchmarking is essential to evaluate the performance and efficiency gains of quantized models. It involves comparing the inference speed, memory usage, and accuracy of the quantized model against the original floating-point model to ensure that the quantization process has not adversely affected the model's performance.
+
+```python title="example2.py"
+import torch
+import time
+
+# Load original and quantized models
+original_model = torch.hub.load('pytorch/vision:v0.10.0','mobilenet_v2', pretrained=True)
+original_model.eval()
+quantized_model = torch.quantization.quantize_dynamic(original_model, {torch.nn.Linear}, dtype=torch.qint8)
+
+# Prepare input tensor
+input_tensor = torch.rand((1, 3, 224, 224))
+
+# Benchmark original model
+start_time = time.time()
+with torch.no_grad():
+    original_output = original_model(input_tensor)
+original_time = time.time() - start_time
+
+# Benchmark quantized model
+start_time = time.time()
+with torch.no_grad():
+    quantized_output = quantized_model(input_tensor)
+quantized_time = time.time() - start_time
+
+print(f'Original model inference time: {original_time:.4f} seconds')
+print(f'Quantized model inference time: {quantized_time:.4f} seconds')
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary goal of Post-Training Quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,7 +148,37 @@ print(f'Quantized model inference time: {quantized_time:.4f} seconds')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Benchmarking is essential to evaluate the performance and efficiency gains of quantized models. It involves comparing the inference speed, memory usage, and accuracy of the quantized model against the original floating-point model to ensure that the quantization process has not adversely affected the model's performance.
+
+```python title="example2.py"
+import torch
+import time
+
+# Load original and quantized models
+original_model = torch.hub.load('pytorch/vision:v0.10.0','mobilenet_v2', pretrained=True)
+original_model.eval()
+quantized_model = torch.quantization.quantize_dynamic(original_model, {torch.nn.Linear}, dtype=torch.qint8)
+
+# Prepare input tensor
+input_tensor = torch.rand((1, 3, 224, 224))
+
+# Benchmark original model
+start_time = time.time()
+with torch.no_grad():
+    original_output = original_model(input_tensor)
+original_time = time.time() - start_time
+
+# Benchmark quantized model
+start_time = time.time()
+with torch.no_grad():
+    quantized_output = quantized_model(input_tensor)
+quantized_time = time.time() - start_time
+
+print(f'Original model inference time: {original_time:.4f} seconds')
+print(f'Quantized model inference time: {quantized_time:.4f} seconds')
+```
+
+>
   <p class="font-semibold mb-3">❓ Which precision format is commonly used in Post-Training Quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

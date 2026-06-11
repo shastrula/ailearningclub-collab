@@ -86,7 +86,29 @@ plt.show()
 
 > **💡 Tip:** When creating visualizations, always consider the audience and the message you want to convey. Choose the right type of plot to effectively communicate your findings.
 
-<div class="quiz">
+Data visualization is a key part of data analysis, as it allows you to present data in a way that is easily understandable. Matplotlib and Seaborn are two of the most popular libraries for creating static, animated, and interactive visualizations in Python. They provide a wide range of plotting functions to help you create almost any type of graph.
+
+**example2.py**
+
+```
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load the dataset
+data = pd.read_csv('sample_data.csv')
+
+# Create a simple line plot
+sns.lineplot(x='column_x', y='column_y', data=data)
+plt.title('Line Plot Example')
+plt.show()
+
+# Create a histogram
+sns.histplot(data['column_name'], bins=30)
+plt.title('Histogram Example')
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary function of the Pandas library in data science?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -110,7 +132,29 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Data visualization is a key part of data analysis, as it allows you to present data in a way that is easily understandable. Matplotlib and Seaborn are two of the most popular libraries for creating static, animated, and interactive visualizations in Python. They provide a wide range of plotting functions to help you create almost any type of graph.
+
+**example2.py**
+
+```
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load the dataset
+data = pd.read_csv('sample_data.csv')
+
+# Create a simple line plot
+sns.lineplot(x='column_x', y='column_y', data=data)
+plt.title('Line Plot Example')
+plt.show()
+
+# Create a histogram
+sns.histplot(data['column_name'], bins=30)
+plt.title('Histogram Example')
+plt.show()
+```
+
+>
   <p class="font-semibold mb-3">❓ Which library is commonly used alongside Matplotlib for creating more complex visualizations in Python?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

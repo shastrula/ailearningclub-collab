@@ -81,7 +81,24 @@ print(generate_contextual_response('Describe the climate of the Amazon rainfores
 
 > **💡 Tip:** When designing system prompts, ensure they are specific to the task and provide enough context to guide the model. Avoid overly complex sentences that might confuse the model.
 
-<div class="quiz">
+Clear and contextual prompts provide specific instructions and relevant background information to the AI model. This helps in generating more accurate and contextually appropriate responses. It is essential to avoid vague or ambiguous language and to include necessary details that guide the model's understanding.
+
+```python title="example2.py"
+def generate_contextual_response(prompt):
+    """Generate a response based on a contextually rich system prompt."""
+    # Example contextual system prompt
+    system_prompt = 'You are an expert in geography. Provide detailed and accurate information.'
+    # Combine system prompt with user input
+    full_prompt = f'{system_prompt} {prompt}'
+    # Simulate model response generation
+    response = full_prompt.replace('Provide', 'Here is the information')
+    return response
+
+# Test the function
+print(generate_contextual_response('Describe the climate of the Amazon rainforest.'))
+```
+
+>
   <p class="font-semibold mb-3">❓ What is the primary purpose of a system prompt?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -105,7 +122,24 @@ print(generate_contextual_response('Describe the climate of the Amazon rainfores
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-<div class="quiz">
+Clear and contextual prompts provide specific instructions and relevant background information to the AI model. This helps in generating more accurate and contextually appropriate responses. It is essential to avoid vague or ambiguous language and to include necessary details that guide the model's understanding.
+
+```python title="example2.py"
+def generate_contextual_response(prompt):
+    """Generate a response based on a contextually rich system prompt."""
+    # Example contextual system prompt
+    system_prompt = 'You are an expert in geography. Provide detailed and accurate information.'
+    # Combine system prompt with user input
+    full_prompt = f'{system_prompt} {prompt}'
+    # Simulate model response generation
+    response = full_prompt.replace('Provide', 'Here is the information')
+    return response
+
+# Test the function
+print(generate_contextual_response('Describe the climate of the Amazon rainforest.'))
+```
+
+>
   <p class="font-semibold mb-3">❓ Why is it important to include context in system prompts?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
