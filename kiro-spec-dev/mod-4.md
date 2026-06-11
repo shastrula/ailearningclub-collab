@@ -61,5 +61,5 @@ Learning from others' experiences:
 
 ## Practice in Notebook
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ailearningclub/ailearningclub-courses/blob/main/kiro-spec-dev/mod-4.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/kiro-spec-dev/mod-4.ipynb)
 

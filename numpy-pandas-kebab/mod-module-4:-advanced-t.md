@@ -54,5 +54,5 @@ True mastery comes from implementing Module 4: Advanced Topics and Applications 
 
 ## Practice in Notebook
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ailearningclub/ailearningclub-courses/blob/main/numpy-pandas-kebab/mod-module-4:-advanced-t.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-kebab/mod-module-4:-advanced-t.ipynb)
 

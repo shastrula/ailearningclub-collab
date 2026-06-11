@@ -54,5 +54,5 @@ True mastery comes from implementing Advanced Tips and Tricks in realistic scena
 
 ## Practice in Notebook
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ailearningclub/ailearningclub-courses/blob/main/jupyter-notebooks-what-how-why/mod-12.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/jupyter-notebooks-what-how-why/mod-12.ipynb)
 

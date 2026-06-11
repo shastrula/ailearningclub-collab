@@ -54,5 +54,5 @@ True mastery comes from implementing Advanced Plots with Matplotlib in realistic
 
 ## Practice in Notebook
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ailearningclub/ailearningclub-courses/blob/main/matplotlib-visualization/mod-4.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/matplotlib-visualization/mod-4.ipynb)
 

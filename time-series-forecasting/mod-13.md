@@ -54,5 +54,5 @@ True mastery comes from implementing Advanced Transformers Techniques in realist
 
 ## Practice in Notebook
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ailearningclub/ailearningclub-courses/blob/main/time-series-forecasting/mod-13.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/time-series-forecasting/mod-13.ipynb)
 
