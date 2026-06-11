@@ -1,0 +1,2769 @@
+{
+  "courses": [
+    {
+      "id": "advanced-python-for-ai-development",
+      "title": "advanced-python-for-ai-development",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        }
+      ]
+    },
+    {
+      "id": "agentic-ai-patterns",
+      "title": "agentic-ai-patterns",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        }
+      ]
+    },
+    {
+      "id": "ai-agents",
+      "title": "ai-agents",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        }
+      ]
+    },
+    {
+      "id": "ai-fundamentals",
+      "title": "ai-fundamentals",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        }
+      ]
+    },
+    {
+      "id": "ai-projects-advanced",
+      "title": "ai-projects-advanced",
+      "description": "",
+      "modules": []
+    },
+    {
+      "id": "ai-projects-beginner",
+      "title": "ai-projects-beginner",
+      "description": "",
+      "modules": []
+    },
+    {
+      "id": "ai-projects-intermediate",
+      "title": "ai-projects-intermediate",
+      "description": "",
+      "modules": []
+    },
+    {
+      "id": "applied-maths-numpy",
+      "title": "applied-maths-numpy",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        }
+      ]
+    },
+    {
+      "id": "aws-bedrock",
+      "title": "AWS Bedrock \u2014 Build with Foundation Models",
+      "description": "Learn to build AI applications with AWS Bedrock. From API basics to production-grade systems with guardrails, fine-tuning, and cost optimization.",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        }
+      ]
+    },
+    {
+      "id": "aws-fundamentals",
+      "title": "AWS Fundamentals",
+      "description": "Learn the essential AWS services, from compute and storage to networking and databases. Hands-on labs with CLI commands, boto3, and Terraform.",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        }
+      ]
+    },
+    {
+      "id": "aws-sagemaker",
+      "title": "AWS SageMaker \u2014 End-to-End ML Platform",
+      "description": "Complete guide to AWS SageMaker: build, train, and deploy ML models at scale. Learn Studio, processing jobs, training, hyperparameter tuning, endpoints, pipelines, feature store, and monitoring.",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        }
+      ]
+    },
+    {
+      "id": "c-programming",
+      "title": "C Programming Fundamentals",
+      "description": "Learn C from scratch with practical examples and hands-on exercises. Cover variables, control flow, functions, pointers, memory management, and file I/O.",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        }
+      ]
+    },
+    {
+      "id": "computer-vision",
+      "title": "computer-vision",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        }
+      ]
+    },
+    {
+      "id": "conda-package-management-and-environments",
+      "title": "conda-package-management-and-environments",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        }
+      ]
+    },
+    {
+      "id": "data-and-models",
+      "title": "data-and-models",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        }
+      ]
+    },
+    {
+      "id": "deep-learning",
+      "title": "deep-learning",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        },
+        {
+          "id": "mod-26"
+        },
+        {
+          "id": "mod-27"
+        }
+      ]
+    },
+    {
+      "id": "devops-platform-engineering",
+      "title": "DevOps & Platform Engineering",
+      "description": "Learn DevOps culture, containerization, Kubernetes, CI/CD, Infrastructure as Code, AWS services, observability, security, and platform engineering patterns. Practical AWS-focused course with real-world examples.",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        }
+      ]
+    },
+    {
+      "id": "ensemble-learning",
+      "title": "ensemble-learning",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        }
+      ]
+    },
+    {
+      "id": "getting-started",
+      "title": "getting-started",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        }
+      ]
+    },
+    {
+      "id": "google-colab-cloud-computing-for-ai",
+      "title": "google-colab-cloud-computing-for-ai",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        }
+      ]
+    },
+    {
+      "id": "java-comprehensive",
+      "title": "java-comprehensive",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        }
+      ]
+    },
+    {
+      "id": "java-fundamentals",
+      "title": "java-fundamentals",
+      "description": "",
+      "modules": []
+    },
+    {
+      "id": "java-fundamentals-part2",
+      "title": "java-fundamentals-part2",
+      "description": "",
+      "modules": []
+    },
+    {
+      "id": "java-oop-fundamentals",
+      "title": "java-oop-fundamentals",
+      "description": "",
+      "modules": []
+    },
+    {
+      "id": "java-programming",
+      "title": "java-programming",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        },
+        {
+          "id": "mod-26"
+        },
+        {
+          "id": "mod-27"
+        },
+        {
+          "id": "mod-28"
+        },
+        {
+          "id": "mod-29"
+        },
+        {
+          "id": "mod-30"
+        }
+      ]
+    },
+    {
+      "id": "jupyter-notebooks-what-how-why",
+      "title": "jupyter-notebooks-what-how-why",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        }
+      ]
+    },
+    {
+      "id": "kiro-spec-dev",
+      "title": "kiro-spec-dev",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        }
+      ]
+    },
+    {
+      "id": "llm-fine-tuning",
+      "title": "llm-fine-tuning",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        }
+      ]
+    },
+    {
+      "id": "local-llm-architecture",
+      "title": "local-llm-architecture",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        }
+      ]
+    },
+    {
+      "id": "maths-and-statistics-in-ai",
+      "title": "maths-and-statistics-in-ai",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        }
+      ]
+    },
+    {
+      "id": "matplotlib-visualization",
+      "title": "matplotlib-visualization",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        }
+      ]
+    },
+    {
+      "id": "mcp-servers",
+      "title": "mcp-servers",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        }
+      ]
+    },
+    {
+      "id": "mlops",
+      "title": "mlops",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        }
+      ]
+    },
+    {
+      "id": "mlops-real-world",
+      "title": "mlops-real-world",
+      "description": "",
+      "modules": []
+    },
+    {
+      "id": "nlp-transformers",
+      "title": "nlp-transformers",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        },
+        {
+          "id": "mod-26"
+        }
+      ]
+    },
+    {
+      "id": "numpy-pandas-course-kebab",
+      "title": "numpy-pandas-course-kebab",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        }
+      ]
+    },
+    {
+      "id": "numpy-pandas-kebab",
+      "title": "numpy-pandas-kebab",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        }
+      ]
+    },
+    {
+      "id": "production-inference",
+      "title": "production-inference",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        }
+      ]
+    },
+    {
+      "id": "prompt-engineering",
+      "title": "prompt-engineering",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        }
+      ]
+    },
+    {
+      "id": "python-comprehensive",
+      "title": "python-comprehensive",
+      "description": "",
+      "modules": []
+    },
+    {
+      "id": "python-fundamentals",
+      "title": "python-fundamentals",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        }
+      ]
+    },
+    {
+      "id": "python-fundamentals-part2",
+      "title": "python-fundamentals-part2",
+      "description": "",
+      "modules": []
+    },
+    {
+      "id": "pytorch-apple-silicon",
+      "title": "PyTorch on Apple Silicon",
+      "description": "Master PyTorch optimization for Apple Silicon. Learn MPS backend, GPU acceleration, memory optimization, and build production-ready models on your local machine without cloud costs.",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        }
+      ]
+    },
+    {
+      "id": "quantization-engineering",
+      "title": "quantization-engineering",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        }
+      ]
+    },
+    {
+      "id": "rag-systems",
+      "title": "rag-systems",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        },
+        {
+          "id": "mod-26"
+        }
+      ]
+    },
+    {
+      "id": "scikit-learn-machine-learning",
+      "title": "scikit-learn-machine-learning",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        },
+        {
+          "id": "mod-26"
+        },
+        {
+          "id": "mod-27"
+        },
+        {
+          "id": "mod-28"
+        }
+      ]
+    },
+    {
+      "id": "statistics-for-ml",
+      "title": "statistics-for-ml",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        },
+        {
+          "id": "mod-26"
+        }
+      ]
+    },
+    {
+      "id": "supervised-learning",
+      "title": "supervised-learning",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        },
+        {
+          "id": "mod-26"
+        },
+        {
+          "id": "mod-27"
+        },
+        {
+          "id": "mod-28"
+        }
+      ]
+    },
+    {
+      "id": "supervised-learning-course-outline",
+      "title": "supervised-learning-course-outline",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        }
+      ]
+    },
+    {
+      "id": "tensorflow-keras",
+      "title": "tensorflow-keras",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        }
+      ]
+    },
+    {
+      "id": "time-series-forecasting",
+      "title": "time-series-forecasting",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        }
+      ]
+    },
+    {
+      "id": "unsupervised-learning",
+      "title": "unsupervised-learning",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        },
+        {
+          "id": "mod-9"
+        },
+        {
+          "id": "mod-10"
+        },
+        {
+          "id": "mod-11"
+        },
+        {
+          "id": "mod-12"
+        },
+        {
+          "id": "mod-13"
+        },
+        {
+          "id": "mod-14"
+        },
+        {
+          "id": "mod-15"
+        },
+        {
+          "id": "mod-16"
+        },
+        {
+          "id": "mod-17"
+        },
+        {
+          "id": "mod-18"
+        },
+        {
+          "id": "mod-19"
+        },
+        {
+          "id": "mod-20"
+        },
+        {
+          "id": "mod-21"
+        },
+        {
+          "id": "mod-22"
+        },
+        {
+          "id": "mod-23"
+        },
+        {
+          "id": "mod-24"
+        },
+        {
+          "id": "mod-25"
+        }
+      ]
+    },
+    {
+      "id": "web-development-basics",
+      "title": "Web Development Basics",
+      "description": "",
+      "modules": [
+        {
+          "id": "mod-1"
+        },
+        {
+          "id": "mod-2"
+        },
+        {
+          "id": "mod-3"
+        },
+        {
+          "id": "mod-4"
+        },
+        {
+          "id": "mod-5"
+        },
+        {
+          "id": "mod-6"
+        },
+        {
+          "id": "mod-7"
+        },
+        {
+          "id": "mod-8"
+        }
+      ]
+    }
+  ]
+}
