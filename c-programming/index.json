@@ -1,0 +1,531 @@
+{
+  "id": "c-programming",
+  "title": "C Programming Fundamentals",
+  "subtitle": "Master the essentials of C programming",
+  "description": "Learn C from scratch with practical examples and hands-on exercises. Cover variables, control flow, functions, pointers, memory management, and file I/O.",
+  "path": "beginner",
+  "difficulty": "Beginner",
+  "duration": "12 hours",
+  "icon": "\ud83d\udd24",
+  "color": "blue",
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to C & Setup",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Introduction to C & Setup"
+        },
+        {
+          "type": "text",
+          "content": "This module covers introduction to c & setup. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Introduction to C & Setup')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of introduction to c & setup before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Introduction to C & Setup?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-2",
+      "title": "Variables, Data Types & Constants",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Variables, Data Types & Constants"
+        },
+        {
+          "type": "text",
+          "content": "This module covers variables, data types & constants. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Variables, Data Types & Constants')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of variables, data types & constants before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Variables, Data Types & Constants?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-3",
+      "title": "Operators & Expressions",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Operators & Expressions"
+        },
+        {
+          "type": "text",
+          "content": "This module covers operators & expressions. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Operators & Expressions')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of operators & expressions before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Operators & Expressions?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-4",
+      "title": "Control Flow",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Control Flow"
+        },
+        {
+          "type": "text",
+          "content": "This module covers control flow. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Control Flow')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of control flow before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Control Flow?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-5",
+      "title": "Loops",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Loops"
+        },
+        {
+          "type": "text",
+          "content": "This module covers loops. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Loops')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of loops before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Loops?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-6",
+      "title": "Functions",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Functions"
+        },
+        {
+          "type": "text",
+          "content": "This module covers functions. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Functions')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of functions before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Functions?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-7",
+      "title": "Arrays & Strings",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Arrays & Strings"
+        },
+        {
+          "type": "text",
+          "content": "This module covers arrays & strings. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Arrays & Strings')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of arrays & strings before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Arrays & Strings?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-8",
+      "title": "Pointers",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Pointers"
+        },
+        {
+          "type": "text",
+          "content": "This module covers pointers. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Pointers')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of pointers before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Pointers?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-9",
+      "title": "Structures & Unions",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Structures & Unions"
+        },
+        {
+          "type": "text",
+          "content": "This module covers structures & unions. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Structures & Unions')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of structures & unions before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Structures & Unions?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-10",
+      "title": "Dynamic Memory",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Dynamic Memory"
+        },
+        {
+          "type": "text",
+          "content": "This module covers dynamic memory. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Dynamic Memory')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of dynamic memory before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Dynamic Memory?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-11",
+      "title": "File I/O",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "File I/O"
+        },
+        {
+          "type": "text",
+          "content": "This module covers file i/o. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'File I/O')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of file i/o before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of File I/O?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-12",
+      "title": "Preprocessor & Build",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Preprocessor & Build"
+        },
+        {
+          "type": "text",
+          "content": "This module covers preprocessor & build. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Preprocessor & Build')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of preprocessor & build before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Preprocessor & Build?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-13",
+      "title": "Resources & References",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "text",
+          "content": "Curated resources and references for this course."
+        }
+      ]
+    }
+  ],
+  "resources": [],
+  "references": []
+}

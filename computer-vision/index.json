@@ -1,0 +1,109 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to Computer Vision",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Fundamentals of Convolutional Neural Networks (CNNs)",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Advanced CNN Architectures",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Object Detection Basics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "YOLO: You Only Look Once",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Faster R-CNN: Region-based Convolutional Neural Networks",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Segmentation Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "U-Net for Biomedical Image Segmentation",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Mask R-CNN: Instance Segmentation",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Transfer Learning in Computer Vision",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Data Augmentation Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Evaluation Metrics for Computer Vision",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Challenges and Solutions in Real-world Applications",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Deep Learning Frameworks for Computer Vision",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-15",
+      "title": "Project: Building a Custom Object Detector",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-16",
+      "title": "Project: Implementing Semantic Segmentation",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-17",
+      "title": "Project: Training a Mask R-CNN Model",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-18",
+      "title": "Ethical Considerations in Computer Vision",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-19",
+      "title": "Future Trends in Computer Vision",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-20",
+      "title": "Capstone Project: Comprehensive Computer Vision Application",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-21",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

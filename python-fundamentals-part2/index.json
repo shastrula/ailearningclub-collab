@@ -1,0 +1,29 @@
+{
+  "modules": [
+    {
+      "id": "mod-7-oop",
+      "title": "Object-Oriented Programming Basics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8-exceptions",
+      "title": "Exception Handling",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9-files",
+      "title": "Working with Files",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10-modules",
+      "title": "Modules and Packages",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "modules": [
+    {
+      "id": "bp-intro",
+      "title": "How Live Projects Work",
+      "duration": "15 min"
+    },
+    {
+      "id": "bp-project1-setup",
+      "title": "Project 1 \u2014 Titanic: Problem & Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "bp-project1-eda",
+      "title": "Project 1 \u2014 Titanic: EDA & Feature Engineering",
+      "duration": "15 min"
+    },
+    {
+      "id": "bp-project1-model",
+      "title": "Project 1 \u2014 Titanic: Train & Evaluate",
+      "duration": "15 min"
+    },
+    {
+      "id": "bp-project2-setup",
+      "title": "Project 2 \u2014 House Prices: Problem & Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "bp-project2-build",
+      "title": "Project 2 \u2014 House Prices: Build & Evaluate",
+      "duration": "15 min"
+    },
+    {
+      "id": "bp-project3-setup",
+      "title": "Project 3 \u2014 Iris Classifier: Problem & Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "bp-project3-build",
+      "title": "Project 3 \u2014 Iris Classifier: Build & Compare",
+      "duration": "15 min"
+    },
+    {
+      "id": "resources-references",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

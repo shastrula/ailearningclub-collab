@@ -1,0 +1,49 @@
+{
+  "modules": [
+    {
+      "id": "mlops-overview",
+      "title": "Project Overview & Stack",
+      "duration": "15 min"
+    },
+    {
+      "id": "mlops-dev-train",
+      "title": "DEV \u2014 Train & Track with MLflow",
+      "duration": "15 min"
+    },
+    {
+      "id": "mlops-dev-api",
+      "title": "DEV \u2014 FastAPI Serving Endpoint",
+      "duration": "15 min"
+    },
+    {
+      "id": "mlops-qa-docker",
+      "title": "QA \u2014 Dockerize the Service",
+      "duration": "15 min"
+    },
+    {
+      "id": "mlops-qa-cicd",
+      "title": "QA \u2014 CI/CD with GitHub Actions",
+      "duration": "15 min"
+    },
+    {
+      "id": "mlops-prod-deploy",
+      "title": "PROD \u2014 Deploy to AWS",
+      "duration": "15 min"
+    },
+    {
+      "id": "mlops-prod-monitor",
+      "title": "PROD \u2014 Monitor & Detect Drift",
+      "duration": "15 min"
+    },
+    {
+      "id": "mlops-retrain",
+      "title": "PROD \u2014 Automated Retraining Pipeline",
+      "duration": "15 min"
+    },
+    {
+      "id": "resources-references",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

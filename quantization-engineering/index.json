@@ -1,0 +1,1025 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to Quantization Engineering",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Introduction to Quantization Engineering"
+        },
+        {
+          "type": "text",
+          "content": "This module covers introduction to quantization engineering. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Introduction to Quantization Engineering')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of introduction to quantization engineering before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Introduction to Quantization Engineering?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-2",
+      "title": "Fundamentals of Model Compression",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Fundamentals of Model Compression"
+        },
+        {
+          "type": "text",
+          "content": "This module covers fundamentals of model compression. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Fundamentals of Model Compression')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of fundamentals of model compression before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Fundamentals of Model Compression?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-3",
+      "title": "GGUF: Grouped Quantization Techniques",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "GGUF: Grouped Quantization Techniques"
+        },
+        {
+          "type": "text",
+          "content": "This module covers gguf: grouped quantization techniques. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'GGUF: Grouped Quantization Techniques')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of gguf: grouped quantization techniques before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of GGUF: Grouped Quantization Techniques?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-4",
+      "title": "GPTQ: Gradient-based Quantization",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "GPTQ: Gradient-based Quantization"
+        },
+        {
+          "type": "text",
+          "content": "This module covers gptq: gradient-based quantization. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'GPTQ: Gradient-based Quantization')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of gptq: gradient-based quantization before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of GPTQ: Gradient-based Quantization?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-5",
+      "title": "AWQ: Adaptive Weight Quantization",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "AWQ: Adaptive Weight Quantization"
+        },
+        {
+          "type": "text",
+          "content": "This module covers awq: adaptive weight quantization. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'AWQ: Adaptive Weight Quantization')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of awq: adaptive weight quantization before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of AWQ: Adaptive Weight Quantization?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-6",
+      "title": "INT4 and INT8 Quantization",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "INT4 and INT8 Quantization"
+        },
+        {
+          "type": "text",
+          "content": "This module covers int4 and int8 quantization. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'INT4 and INT8 Quantization')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of int4 and int8 quantization before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of INT4 and INT8 Quantization?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-7",
+      "title": "bitsandbytes Library Overview",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "bitsandbytes Library Overview"
+        },
+        {
+          "type": "text",
+          "content": "This module covers bitsandbytes library overview. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'bitsandbytes Library Overview')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of bitsandbytes library overview before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of bitsandbytes Library Overview?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-8",
+      "title": "Practical Implementation of GGUF",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Practical Implementation of GGUF"
+        },
+        {
+          "type": "text",
+          "content": "This module covers practical implementation of gguf. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Practical Implementation of GGUF')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of practical implementation of gguf before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Practical Implementation of GGUF?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-9",
+      "title": "Practical Implementation of GPTQ",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Practical Implementation of GPTQ"
+        },
+        {
+          "type": "text",
+          "content": "This module covers practical implementation of gptq. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Practical Implementation of GPTQ')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of practical implementation of gptq before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Practical Implementation of GPTQ?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-10",
+      "title": "Practical Implementation of AWQ",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Practical Implementation of AWQ"
+        },
+        {
+          "type": "text",
+          "content": "This module covers practical implementation of awq. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Practical Implementation of AWQ')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of practical implementation of awq before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Practical Implementation of AWQ?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-11",
+      "title": "INT4 and INT8 in Practice",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "INT4 and INT8 in Practice"
+        },
+        {
+          "type": "text",
+          "content": "This module covers int4 and int8 in practice. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'INT4 and INT8 in Practice')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of int4 and int8 in practice before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of INT4 and INT8 in Practice?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-12",
+      "title": "Using bitsandbytes for Quantization",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Using bitsandbytes for Quantization"
+        },
+        {
+          "type": "text",
+          "content": "This module covers using bitsandbytes for quantization. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Using bitsandbytes for Quantization')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of using bitsandbytes for quantization before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Using bitsandbytes for Quantization?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-13",
+      "title": "Quantization-Aware Training",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Quantization-Aware Training"
+        },
+        {
+          "type": "text",
+          "content": "This module covers quantization-aware training. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Quantization-Aware Training')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of quantization-aware training before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Quantization-Aware Training?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-14",
+      "title": "Post-Training Quantization",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Post-Training Quantization"
+        },
+        {
+          "type": "text",
+          "content": "This module covers post-training quantization. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Post-Training Quantization')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of post-training quantization before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Post-Training Quantization?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-15",
+      "title": "Quantization for Different Model Architectures",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Quantization for Different Model Architectures"
+        },
+        {
+          "type": "text",
+          "content": "This module covers quantization for different model architectures. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Quantization for Different Model Architectures')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of quantization for different model architectures before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Quantization for Different Model Architectures?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-16",
+      "title": "Benchmarking Quantized Models",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Benchmarking Quantized Models"
+        },
+        {
+          "type": "text",
+          "content": "This module covers benchmarking quantized models. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Benchmarking Quantized Models')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of benchmarking quantized models before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Benchmarking Quantized Models?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-17",
+      "title": "Performance Metrics for Quantized Models",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Performance Metrics for Quantized Models"
+        },
+        {
+          "type": "text",
+          "content": "This module covers performance metrics for quantized models. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Performance Metrics for Quantized Models')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of performance metrics for quantized models before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Performance Metrics for Quantized Models?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-18",
+      "title": "Trade-offs in Quantization",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Trade-offs in Quantization"
+        },
+        {
+          "type": "text",
+          "content": "This module covers trade-offs in quantization. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Trade-offs in Quantization')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of trade-offs in quantization before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Trade-offs in Quantization?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-19",
+      "title": "Advanced Topics in Model Compression",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Advanced Topics in Model Compression"
+        },
+        {
+          "type": "text",
+          "content": "This module covers advanced topics in model compression. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Advanced Topics in Model Compression')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of advanced topics in model compression before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Advanced Topics in Model Compression?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-20",
+      "title": "Case Studies in Quantization Engineering",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Case Studies in Quantization Engineering"
+        },
+        {
+          "type": "text",
+          "content": "This module covers case studies in quantization engineering. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Case Studies in Quantization Engineering')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of case studies in quantization engineering before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Case Studies in Quantization Engineering?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-21",
+      "title": "Quantization for Edge Devices",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Quantization for Edge Devices"
+        },
+        {
+          "type": "text",
+          "content": "This module covers quantization for edge devices. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Quantization for Edge Devices')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of quantization for edge devices before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Quantization for Edge Devices?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-22",
+      "title": "Quantization and Model Interpretability",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Quantization and Model Interpretability"
+        },
+        {
+          "type": "text",
+          "content": "This module covers quantization and model interpretability. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Quantization and Model Interpretability')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of quantization and model interpretability before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Quantization and Model Interpretability?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-23",
+      "title": "Future Directions in Quantization",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Future Directions in Quantization"
+        },
+        {
+          "type": "text",
+          "content": "This module covers future directions in quantization. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Future Directions in Quantization')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of future directions in quantization before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Future Directions in Quantization?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-24",
+      "title": "Project: End-to-End Quantization Pipeline",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Project: End-to-End Quantization Pipeline"
+        },
+        {
+          "type": "text",
+          "content": "This module covers project: end-to-end quantization pipeline. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Project: End-to-End Quantization Pipeline')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of project: end-to-end quantization pipeline before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Project: End-to-End Quantization Pipeline?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-25",
+      "title": "Resources & References",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "text",
+          "content": "Curated resources and references for this course."
+        }
+      ]
+    }
+  ],
+  "resources": [],
+  "references": []
+}

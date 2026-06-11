@@ -1,0 +1,447 @@
+{
+  "id": "aws-bedrock",
+  "title": "AWS Bedrock \u2014 Build with Foundation Models",
+  "subtitle": "Master foundation models, RAG, agents, and production patterns",
+  "description": "Learn to build AI applications with AWS Bedrock. From API basics to production-grade systems with guardrails, fine-tuning, and cost optimization.",
+  "path": "advanced",
+  "difficulty": "Advanced",
+  "duration": "8 hours",
+  "icon": "\ud83e\udde0",
+  "color": "orange",
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to AWS Bedrock",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Introduction to AWS Bedrock"
+        },
+        {
+          "type": "text",
+          "content": "This module covers introduction to aws bedrock. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Introduction to AWS Bedrock')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of introduction to aws bedrock before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Introduction to AWS Bedrock?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-2",
+      "title": "Available Models & Selection",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Available Models & Selection"
+        },
+        {
+          "type": "text",
+          "content": "This module covers available models & selection. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Available Models & Selection')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of available models & selection before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Available Models & Selection?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-3",
+      "title": "Bedrock API & boto3",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Bedrock API & boto3"
+        },
+        {
+          "type": "text",
+          "content": "This module covers bedrock api & boto3. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Bedrock API & boto3')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of bedrock api & boto3 before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Bedrock API & boto3?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-4",
+      "title": "Prompt Engineering for Bedrock",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Prompt Engineering for Bedrock"
+        },
+        {
+          "type": "text",
+          "content": "This module covers prompt engineering for bedrock. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Prompt Engineering for Bedrock')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of prompt engineering for bedrock before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Prompt Engineering for Bedrock?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-5",
+      "title": "Knowledge Bases & RAG",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Knowledge Bases & RAG"
+        },
+        {
+          "type": "text",
+          "content": "This module covers knowledge bases & rag. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Knowledge Bases & RAG')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of knowledge bases & rag before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Knowledge Bases & RAG?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-6",
+      "title": "Agents for Bedrock",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Agents for Bedrock"
+        },
+        {
+          "type": "text",
+          "content": "This module covers agents for bedrock. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Agents for Bedrock')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of agents for bedrock before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Agents for Bedrock?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-7",
+      "title": "Guardrails & Safety",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Guardrails & Safety"
+        },
+        {
+          "type": "text",
+          "content": "This module covers guardrails & safety. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Guardrails & Safety')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of guardrails & safety before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Guardrails & Safety?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-8",
+      "title": "Fine-tuning & Custom Models",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Fine-tuning & Custom Models"
+        },
+        {
+          "type": "text",
+          "content": "This module covers fine-tuning & custom models. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Fine-tuning & Custom Models')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of fine-tuning & custom models before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Fine-tuning & Custom Models?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-9",
+      "title": "Bedrock with LangChain",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Bedrock with LangChain"
+        },
+        {
+          "type": "text",
+          "content": "This module covers bedrock with langchain. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Bedrock with LangChain')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of bedrock with langchain before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Bedrock with LangChain?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-10",
+      "title": "Production Patterns",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Production Patterns"
+        },
+        {
+          "type": "text",
+          "content": "This module covers production patterns. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Production Patterns')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of production patterns before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Production Patterns?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-11",
+      "title": "Resources & References",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "text",
+          "content": "Curated resources and references for this course."
+        }
+      ]
+    }
+  ],
+  "resources": [],
+  "references": []
+}

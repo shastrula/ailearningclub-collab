@@ -1,0 +1,24 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Java Fundamentals & Syntax",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Control Flow: Conditionals & Loops",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Object-Oriented Programming",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

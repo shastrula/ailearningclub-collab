@@ -1,0 +1,45 @@
+{
+  "title": "Web Development Basics",
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "How the Web Works",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "HTML Fundamentals",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "CSS Styling & Layout",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "JavaScript Basics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "DOM Manipulation & Events",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Responsive Design & Flexbox",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "APIs, Fetch & JSON",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

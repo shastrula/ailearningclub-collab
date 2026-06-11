@@ -1,0 +1,69 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to Jupyter Notebooks",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Setting Up Your Environment",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Basic Notebook Features",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Creating and Saving Notebooks",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Markdown and Text Formatting",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Running Code Cells",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Magic Commands Overview",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Importing Libraries",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Data Visualization Basics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Working with Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Sharing and Exporting Notebooks",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Advanced Tips and Tricks",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

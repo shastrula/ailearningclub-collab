@@ -1,0 +1,69 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to AI Development",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Installing Git and Python",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Git Basics: Initialize and Commit",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Git Remotes: GitHub and GitLab",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Merging and Rebasing",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Pull Requests and Code Review",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Collaborating with Teams",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Python Fundamentals",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Installing Python Libraries",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Your First Machine Learning Model",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Committing Your ML Project",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Next Steps in Your AI Journey",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

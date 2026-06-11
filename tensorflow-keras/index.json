@@ -1,0 +1,129 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to TensorFlow and Keras",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Setting Up Your Environment",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Basic Neural Networks",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Convolutional Neural Networks (CNNs)",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Recurrent Neural Networks (RNNs)",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Advanced Neural Network Architectures",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Data Preprocessing and Augmentation",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Model Training and Evaluation",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Hyperparameter Tuning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Transfer Learning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Model Optimization Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Deploying Models",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Working with Text Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Working with Image Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-15",
+      "title": "Working with Time Series Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-16",
+      "title": "Generative Adversarial Networks (GANs)",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-17",
+      "title": "Autoencoders",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-18",
+      "title": "Reinforcement Learning Basics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-19",
+      "title": "Capstone Project: Image Classification",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-20",
+      "title": "Capstone Project: Sentiment Analysis",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-21",
+      "title": "Capstone Project: Time Series Forecasting",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-22",
+      "title": "Model Interpretability",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-23",
+      "title": "Ethics in Machine Learning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-24",
+      "title": "Final Project and Review",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-25",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

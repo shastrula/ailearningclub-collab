@@ -1,0 +1,129 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to Prompt Engineering",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Understanding Zero-shot Prompting",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Deep Dive into Few-shot Prompting",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Exploring Chain-of-Thought Prompting",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "ReAct: Reasoning and Acting with Prompts",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Designing Effective System Prompts",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Advanced Techniques in Prompt Engineering",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Ethical Considerations in Prompt Design",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Prompt Injection: Risks and Mitigations",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Case Studies in Prompt Engineering",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Iterative Prompt Refinement",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Evaluating Prompt Effectiveness",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Scaling Prompt Engineering Practices",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Collaborative Prompt Design",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-15",
+      "title": "Future Trends in Prompt Engineering",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-16",
+      "title": "Practical Applications of Advanced Prompting",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-17",
+      "title": "Workshop: Building a Zero-shot Prompt",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-18",
+      "title": "Workshop: Creating a Few-shot Prompt",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-19",
+      "title": "Workshop: Implementing Chain-of-Thought",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-20",
+      "title": "Workshop: Designing a System Prompt",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-21",
+      "title": "Final Project: Comprehensive Prompt Engineering",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-22",
+      "title": "Peer Review and Feedback Session",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-23",
+      "title": "Advanced Topics and Research in Prompt Engineering",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-24",
+      "title": "Course Recap and Next Steps",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-25",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

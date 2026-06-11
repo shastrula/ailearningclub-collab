@@ -1,0 +1,79 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Python Fundamentals & Syntax",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Variables, Data Types & Type System",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Control Flow & Conditionals",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3b",
+      "title": "Jupyter Notebooks, Conda, and Cloud Environments",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Python Basics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Data Structures",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Control Flow",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Functions: Reusable Code",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Object-Oriented Programming (OOP)",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "File Handling and I/O",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Error Handling and Exceptions",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Modules, Packages, and Libraries",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Working with NumPy and Pandas",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Your First Machine Learning Model",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

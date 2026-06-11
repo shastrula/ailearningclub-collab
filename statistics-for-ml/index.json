@@ -1,0 +1,134 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to Probability",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Common Probability Distributions",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Expectation and Variance",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Joint, Marginal, and Conditional Distributions",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Introduction to Hypothesis Testing",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Parametric vs Non-parametric Tests",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "P-values and Confidence Intervals",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Multiple Hypothesis Testing",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Introduction to Bayesian Inference",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Bayes' Theorem",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Conjugate Priors",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Markov Chain Monte Carlo Methods",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Introduction to A/B Testing",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Designing A/B Tests",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-15",
+      "title": "Analyzing A/B Test Results",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-16",
+      "title": "Common Pitfalls in A/B Testing",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-17",
+      "title": "Resampling Methods: Bootstrap and Permutation Tests",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-18",
+      "title": "Time Series Analysis Basics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-19",
+      "title": "Advanced Topics in Probability",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-20",
+      "title": "Copulas and Dependence Structures",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-21",
+      "title": "Information Theory Basics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-22",
+      "title": "Entropy and Mutual Information",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-23",
+      "title": "Advanced Bayesian Methods",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-24",
+      "title": "Hierarchical Models",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-25",
+      "title": "Case Studies and Applications",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-26",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

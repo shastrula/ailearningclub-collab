@@ -1,0 +1,44 @@
+{
+  "modules": [
+    {
+      "id": "ap-intro",
+      "title": "Advanced Projects Overview",
+      "duration": "15 min"
+    },
+    {
+      "id": "ap-project1-setup",
+      "title": "Project 1 \u2014 RAG Pipeline: Problem & Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "ap-project1-build",
+      "title": "Project 1 \u2014 RAG Pipeline: Build",
+      "duration": "15 min"
+    },
+    {
+      "id": "ap-project2-setup",
+      "title": "Project 2 \u2014 LLM Fine-tuning: Problem & Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "ap-project2-build",
+      "title": "Project 2 \u2014 LLM Fine-tuning: QLoRA Training",
+      "duration": "15 min"
+    },
+    {
+      "id": "ap-project3-setup",
+      "title": "Project 3 \u2014 Fraud Detection: Problem & Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "ap-project3-build",
+      "title": "Project 3 \u2014 Fraud Detection: Build & Serve",
+      "duration": "15 min"
+    },
+    {
+      "id": "resources-references",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

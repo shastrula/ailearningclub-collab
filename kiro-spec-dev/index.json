@@ -1,0 +1,353 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "What is Spec-Driven Development?",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "What is Spec-Driven Development?"
+        },
+        {
+          "type": "text",
+          "content": "This module covers what is spec-driven development?. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'What is Spec-Driven Development?')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of what is spec-driven development? before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of What is Spec-Driven Development??",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-2",
+      "title": "Starting a Spec with Kiro",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Starting a Spec with Kiro"
+        },
+        {
+          "type": "text",
+          "content": "This module covers starting a spec with kiro. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Starting a Spec with Kiro')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of starting a spec with kiro before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Starting a Spec with Kiro?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-3",
+      "title": "Writing the Design Document",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Writing the Design Document"
+        },
+        {
+          "type": "text",
+          "content": "This module covers writing the design document. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Writing the Design Document')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of writing the design document before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Writing the Design Document?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-4",
+      "title": "Generating and Executing Tasks",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Generating and Executing Tasks"
+        },
+        {
+          "type": "text",
+          "content": "This module covers generating and executing tasks. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Generating and Executing Tasks')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of generating and executing tasks before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Generating and Executing Tasks?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-5",
+      "title": "Hooks: Automating Your Workflow",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Hooks: Automating Your Workflow"
+        },
+        {
+          "type": "text",
+          "content": "This module covers hooks: automating your workflow. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Hooks: Automating Your Workflow')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of hooks: automating your workflow before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Hooks: Automating Your Workflow?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-6",
+      "title": "Steering Kiro with .kiro/steering",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Steering Kiro with .kiro/steering"
+        },
+        {
+          "type": "text",
+          "content": "This module covers steering kiro with .kiro/steering. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Steering Kiro with .kiro/steering')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of steering kiro with .kiro/steering before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Steering Kiro with .kiro/steering?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-7",
+      "title": "A Complete Spec-Driven Workflow",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "A Complete Spec-Driven Workflow"
+        },
+        {
+          "type": "text",
+          "content": "This module covers a complete spec-driven workflow. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'A Complete Spec-Driven Workflow')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of a complete spec-driven workflow before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of A Complete Spec-Driven Workflow?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-8",
+      "title": "Best Practices and Common Pitfalls",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Best Practices and Common Pitfalls"
+        },
+        {
+          "type": "text",
+          "content": "This module covers best practices and common pitfalls. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Best Practices and Common Pitfalls')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of best practices and common pitfalls before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Best Practices and Common Pitfalls?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-9",
+      "title": "Resources & References",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "text",
+          "content": "Curated resources and references for this course."
+        }
+      ]
+    }
+  ],
+  "resources": [],
+  "references": []
+}

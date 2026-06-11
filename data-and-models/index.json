@@ -1,0 +1,49 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Where to Find Real Datasets",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Loading the California Housing Dataset",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Cleaning and Preparing Real Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Introduction to HuggingFace",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Using HuggingFace Pipelines",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Loading HuggingFace Datasets",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Loading Pre-trained Models Directly",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Putting It Together: Analyse Real Estate Reviews",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

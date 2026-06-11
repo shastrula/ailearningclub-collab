@@ -1,0 +1,29 @@
+{
+  "modules": [
+    {
+      "id": "mod-5-control-flow",
+      "title": "Control Flow: Making Decisions",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6-loops",
+      "title": "Loops: Repeating Code",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7-arrays",
+      "title": "Arrays: Working with Collections",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8-strings",
+      "title": "Strings: Working with Text",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

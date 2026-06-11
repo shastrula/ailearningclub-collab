@@ -1,0 +1,34 @@
+{
+  "modules": [
+    {
+      "id": "mod-9-classes-objects",
+      "title": "Classes and Objects: The Foundation of OOP",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10-constructors",
+      "title": "Constructors and Initialization",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11-inheritance",
+      "title": "Inheritance: Code Reuse",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12-polymorphism",
+      "title": "Polymorphism: One Interface, Many Forms",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13-encapsulation",
+      "title": "Encapsulation: Data Protection",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

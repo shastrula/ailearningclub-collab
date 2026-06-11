@@ -1,0 +1,531 @@
+{
+  "id": "devops-platform-engineering",
+  "title": "DevOps & Platform Engineering",
+  "subtitle": "Master modern infrastructure, automation, and platform practices",
+  "description": "Learn DevOps culture, containerization, Kubernetes, CI/CD, Infrastructure as Code, AWS services, observability, security, and platform engineering patterns. Practical AWS-focused course with real-world examples.",
+  "path": "advanced",
+  "difficulty": "Advanced",
+  "duration": "24 hours",
+  "icon": "\ud83d\ude80",
+  "color": "purple",
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to DevOps & Platform Engineering",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Introduction to DevOps & Platform Engineering"
+        },
+        {
+          "type": "text",
+          "content": "This module covers introduction to devops & platform engineering. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Introduction to DevOps & Platform Engineering')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of introduction to devops & platform engineering before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Introduction to DevOps & Platform Engineering?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-2",
+      "title": "Linux & Shell Scripting for DevOps",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Linux & Shell Scripting for DevOps"
+        },
+        {
+          "type": "text",
+          "content": "This module covers linux & shell scripting for devops. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Linux & Shell Scripting for DevOps')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of linux & shell scripting for devops before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Linux & Shell Scripting for DevOps?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-3",
+      "title": "Git & GitOps",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Git & GitOps"
+        },
+        {
+          "type": "text",
+          "content": "This module covers git & gitops. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Git & GitOps')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of git & gitops before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Git & GitOps?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-4",
+      "title": "Docker & Containerization",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Docker & Containerization"
+        },
+        {
+          "type": "text",
+          "content": "This module covers docker & containerization. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Docker & Containerization')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of docker & containerization before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Docker & Containerization?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-5",
+      "title": "Kubernetes Fundamentals",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Kubernetes Fundamentals"
+        },
+        {
+          "type": "text",
+          "content": "This module covers kubernetes fundamentals. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Kubernetes Fundamentals')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of kubernetes fundamentals before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Kubernetes Fundamentals?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-6",
+      "title": "CI/CD Pipelines",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "CI/CD Pipelines"
+        },
+        {
+          "type": "text",
+          "content": "This module covers ci/cd pipelines. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'CI/CD Pipelines')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of ci/cd pipelines before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of CI/CD Pipelines?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-7",
+      "title": "Infrastructure as Code with Terraform",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Infrastructure as Code with Terraform"
+        },
+        {
+          "type": "text",
+          "content": "This module covers infrastructure as code with terraform. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Infrastructure as Code with Terraform')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of infrastructure as code with terraform before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Infrastructure as Code with Terraform?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-8",
+      "title": "AWS ECS & Fargate",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "AWS ECS & Fargate"
+        },
+        {
+          "type": "text",
+          "content": "This module covers aws ecs & fargate. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'AWS ECS & Fargate')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of aws ecs & fargate before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of AWS ECS & Fargate?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-9",
+      "title": "Observability & Monitoring",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Observability & Monitoring"
+        },
+        {
+          "type": "text",
+          "content": "This module covers observability & monitoring. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Observability & Monitoring')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of observability & monitoring before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Observability & Monitoring?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-10",
+      "title": "Security & Compliance",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Security & Compliance"
+        },
+        {
+          "type": "text",
+          "content": "This module covers security & compliance. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Security & Compliance')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of security & compliance before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Security & Compliance?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-11",
+      "title": "Platform Engineering Patterns",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Platform Engineering Patterns"
+        },
+        {
+          "type": "text",
+          "content": "This module covers platform engineering patterns. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Platform Engineering Patterns')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of platform engineering patterns before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Platform Engineering Patterns?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-12",
+      "title": "Site Reliability Engineering",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Site Reliability Engineering"
+        },
+        {
+          "type": "text",
+          "content": "This module covers site reliability engineering. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Site Reliability Engineering')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of site reliability engineering before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Site Reliability Engineering?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-13",
+      "title": "Resources & References",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "text",
+          "content": "Curated resources and references for this course."
+        }
+      ]
+    }
+  ],
+  "resources": [],
+  "references": []
+}

@@ -1,0 +1,857 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to Data Visualization",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Introduction to Data Visualization"
+        },
+        {
+          "type": "text",
+          "content": "This module covers introduction to data visualization. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Introduction to Data Visualization')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of introduction to data visualization before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Introduction to Data Visualization?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-2",
+      "title": "Setting Up Your Environment",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Setting Up Your Environment"
+        },
+        {
+          "type": "text",
+          "content": "This module covers setting up your environment. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Setting Up Your Environment')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of setting up your environment before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Setting Up Your Environment?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-3",
+      "title": "Basic Plots with Matplotlib",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Basic Plots with Matplotlib"
+        },
+        {
+          "type": "text",
+          "content": "This module covers basic plots with matplotlib. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Basic Plots with Matplotlib')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of basic plots with matplotlib before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Basic Plots with Matplotlib?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-4",
+      "title": "Advanced Plots with Matplotlib",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Advanced Plots with Matplotlib"
+        },
+        {
+          "type": "text",
+          "content": "This module covers advanced plots with matplotlib. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Advanced Plots with Matplotlib')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of advanced plots with matplotlib before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Advanced Plots with Matplotlib?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-5",
+      "title": "Introduction to Seaborn",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Introduction to Seaborn"
+        },
+        {
+          "type": "text",
+          "content": "This module covers introduction to seaborn. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Introduction to Seaborn')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of introduction to seaborn before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Introduction to Seaborn?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-6",
+      "title": "Statistical Plots with Seaborn",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Statistical Plots with Seaborn"
+        },
+        {
+          "type": "text",
+          "content": "This module covers statistical plots with seaborn. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Statistical Plots with Seaborn')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of statistical plots with seaborn before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Statistical Plots with Seaborn?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-7",
+      "title": "Customizing Plots in Seaborn",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Customizing Plots in Seaborn"
+        },
+        {
+          "type": "text",
+          "content": "This module covers customizing plots in seaborn. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Customizing Plots in Seaborn')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of customizing plots in seaborn before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Customizing Plots in Seaborn?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-8",
+      "title": "Introduction to Plotly",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Introduction to Plotly"
+        },
+        {
+          "type": "text",
+          "content": "This module covers introduction to plotly. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Introduction to Plotly')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of introduction to plotly before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Introduction to Plotly?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-9",
+      "title": "Interactive Plots with Plotly",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Interactive Plots with Plotly"
+        },
+        {
+          "type": "text",
+          "content": "This module covers interactive plots with plotly. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Interactive Plots with Plotly')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of interactive plots with plotly before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Interactive Plots with Plotly?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-10",
+      "title": "Creating Dashboards with Plotly Dash",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Creating Dashboards with Plotly Dash"
+        },
+        {
+          "type": "text",
+          "content": "This module covers creating dashboards with plotly dash. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Creating Dashboards with Plotly Dash')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of creating dashboards with plotly dash before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Creating Dashboards with Plotly Dash?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-11",
+      "title": "Exploratory Data Analysis (EDA) Techniques",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Exploratory Data Analysis (EDA) Techniques"
+        },
+        {
+          "type": "text",
+          "content": "This module covers exploratory data analysis (eda) techniques. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Exploratory Data Analysis (EDA) Techniques')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of exploratory data analysis (eda) techniques before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Exploratory Data Analysis (EDA) Techniques?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-12",
+      "title": "Visualizing EDA Results",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Visualizing EDA Results"
+        },
+        {
+          "type": "text",
+          "content": "This module covers visualizing eda results. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Visualizing EDA Results')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of visualizing eda results before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Visualizing EDA Results?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-13",
+      "title": "Time Series Visualization",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Time Series Visualization"
+        },
+        {
+          "type": "text",
+          "content": "This module covers time series visualization. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Time Series Visualization')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of time series visualization before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Time Series Visualization?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-14",
+      "title": "Geographic Data Visualization",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Geographic Data Visualization"
+        },
+        {
+          "type": "text",
+          "content": "This module covers geographic data visualization. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Geographic Data Visualization')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of geographic data visualization before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Geographic Data Visualization?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-15",
+      "title": "3D Plots and Surface Plots",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "3D Plots and Surface Plots"
+        },
+        {
+          "type": "text",
+          "content": "This module covers 3d plots and surface plots. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', '3D Plots and Surface Plots')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of 3d plots and surface plots before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of 3D Plots and Surface Plots?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-16",
+      "title": "Animations in Data Visualization",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Animations in Data Visualization"
+        },
+        {
+          "type": "text",
+          "content": "This module covers animations in data visualization. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Animations in Data Visualization')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of animations in data visualization before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Animations in Data Visualization?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-17",
+      "title": "Best Practices for Data Visualization",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Best Practices for Data Visualization"
+        },
+        {
+          "type": "text",
+          "content": "This module covers best practices for data visualization. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Best Practices for Data Visualization')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of best practices for data visualization before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Best Practices for Data Visualization?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-18",
+      "title": "Case Study: Visualizing Real-World Data",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Case Study: Visualizing Real-World Data"
+        },
+        {
+          "type": "text",
+          "content": "This module covers case study: visualizing real-world data. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Case Study: Visualizing Real-World Data')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of case study: visualizing real-world data before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Case Study: Visualizing Real-World Data?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-19",
+      "title": "Project: Building a Comprehensive Dashboard",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Project: Building a Comprehensive Dashboard"
+        },
+        {
+          "type": "text",
+          "content": "This module covers project: building a comprehensive dashboard. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Project: Building a Comprehensive Dashboard')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of project: building a comprehensive dashboard before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Project: Building a Comprehensive Dashboard?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-20",
+      "title": "Advanced Topics and Future Trends",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Advanced Topics and Future Trends"
+        },
+        {
+          "type": "text",
+          "content": "This module covers advanced topics and future trends. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Advanced Topics and Future Trends')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of advanced topics and future trends before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Advanced Topics and Future Trends?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-21",
+      "title": "Resources & References",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "text",
+          "content": "Curated resources and references for this course."
+        }
+      ]
+    }
+  ],
+  "resources": [],
+  "references": []
+}

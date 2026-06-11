@@ -1,0 +1,185 @@
+{
+  "modules": [
+    {
+      "id": "mod-1-intro",
+      "title": "What is Java and How It Works",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "What is Java and How It Works"
+        },
+        {
+          "type": "text",
+          "content": "This module covers what is java and how it works. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'What is Java and How It Works')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of what is java and how it works before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of What is Java and How It Works?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-2-syntax",
+      "title": "Java Syntax and Your First Program",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Java Syntax and Your First Program"
+        },
+        {
+          "type": "text",
+          "content": "This module covers java syntax and your first program. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Java Syntax and Your First Program')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of java syntax and your first program before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Java Syntax and Your First Program?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-3-datatypes",
+      "title": "Data Types and Variables",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Data Types and Variables"
+        },
+        {
+          "type": "text",
+          "content": "This module covers data types and variables. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Data Types and Variables')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of data types and variables before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Data Types and Variables?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-4-operators",
+      "title": "Operators and Expressions",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Operators and Expressions"
+        },
+        {
+          "type": "text",
+          "content": "This module covers operators and expressions. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Operators and Expressions')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of operators and expressions before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Operators and Expressions?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-5",
+      "title": "Resources & References",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "text",
+          "content": "Curated resources and references for this course."
+        }
+      ]
+    }
+  ],
+  "resources": [],
+  "references": []
+}

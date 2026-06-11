@@ -1,0 +1,129 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to MLOps",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "CI/CD Pipelines for Machine Learning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Version Control for ML Models",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Feature Engineering and Feature Stores",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Model Training and Hyperparameter Tuning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Model Registry and Model Serving",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Monitoring Model Performance",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Drift Detection in ML Models",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "A/B Testing for Machine Learning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Introduction to Kubeflow",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Kubeflow Pipelines",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Kubeflow for Model Training and Serving",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Introduction to Amazon SageMaker",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "SageMaker for Model Training",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-15",
+      "title": "SageMaker for Model Deployment",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-16",
+      "title": "SageMaker Experiments and Hyperparameter Tuning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-17",
+      "title": "SageMaker Feature Store",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-18",
+      "title": "SageMaker Model Monitoring",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-19",
+      "title": "SageMaker Endpoints and Inference",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-20",
+      "title": "Advanced Topics in MLOps",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-21",
+      "title": "Case Studies in MLOps",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-22",
+      "title": "Best Practices for MLOps",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-23",
+      "title": "MLOps in Production",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-24",
+      "title": "Future Trends in MLOps",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-25",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

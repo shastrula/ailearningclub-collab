@@ -1,0 +1,29 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to Numpy",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Data Manipulation with Pandas",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Advanced Data Analysis using Numpy & Pandas",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Exploratory Data Visualization",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

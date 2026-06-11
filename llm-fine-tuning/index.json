@@ -1,0 +1,114 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to LLM Fine-Tuning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Understanding LoRA",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Implementing LoRA in Practice",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Introduction to QLoRA",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Applying QLoRA Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Overview of PEFT",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Hands-On with PEFT",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Fundamentals of Instruction Tuning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Advanced Instruction Tuning Strategies",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Introduction to RLHF",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Implementing RLHF",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Deep Dive into DPO",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Practical Applications of DPO",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Evaluation Metrics for Fine-Tuned LLMs",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-15",
+      "title": "Benchmarking Fine-Tuned Models",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-16",
+      "title": "Case Studies in LLM Fine-Tuning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-17",
+      "title": "Ethical Considerations in Fine-Tuning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-18",
+      "title": "Future Directions in LLM Fine-Tuning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-19",
+      "title": "Project: Fine-Tuning a Small LLM",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-20",
+      "title": "Project: Evaluating a Fine-Tuned Model",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-21",
+      "title": "Capstone Project: Comprehensive LLM Fine-Tuning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-22",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

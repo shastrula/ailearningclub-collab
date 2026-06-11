@@ -1,0 +1,129 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to NumPy",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Array Operations in NumPy",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Advanced NumPy Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Introduction to Pandas",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Data Structures in Pandas",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Data Selection and Filtering",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Data Manipulation and Transformation",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Handling Missing Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Merging and Joining DataFrames",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Grouping and Aggregation",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Time Series Data Analysis",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Exploratory Data Analysis with Pandas",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Data Visualization Basics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Advanced Data Visualization Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-15",
+      "title": "Introduction to Matplotlib",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-16",
+      "title": "Customizing Plots in Matplotlib",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-17",
+      "title": "Introduction to Seaborn",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-18",
+      "title": "Statistical Plots in Seaborn",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-19",
+      "title": "Data Cleaning Best Practices",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-20",
+      "title": "Feature Engineering",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-21",
+      "title": "Introduction to Machine Learning with Pandas",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-22",
+      "title": "Case Study: Data Analysis Project",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-23",
+      "title": "Project: End-to-End Data Analysis",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-24",
+      "title": "Review and Best Practices",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-25",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

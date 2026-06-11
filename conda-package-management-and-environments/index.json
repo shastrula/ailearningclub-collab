@@ -1,0 +1,59 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to Conda",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Installing Conda",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Creating and Managing Environments",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Package Management Basics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Installing Packages",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Updating Packages",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Removing Packages",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Environment Configuration",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Advanced Environment Management",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Best Practices and Tips",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

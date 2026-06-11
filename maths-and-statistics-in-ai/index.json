@@ -1,0 +1,84 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Basic Mathematics for AI",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Linear Algebra Fundamentals",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Calculus for AI",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Probability Theory Basics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Statistics for Data Analysis",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Data Visualization Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Neural Networks Fundamentals",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Optimization Techniques in AI",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Model Evaluation and Validation",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Bias and Variance in Machine Learning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Feature Engineering and Selection",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Time Series Analysis",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Distributions and Hypothesis Testing",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-15",
+      "title": "Regression Analysis",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-16",
+      "title": "Bayes' Theorem and Bayesian Statistics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

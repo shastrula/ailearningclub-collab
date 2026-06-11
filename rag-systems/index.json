@@ -1,0 +1,129 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to RAG Systems",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Fundamentals of Vector Databases",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Embedding Techniques for RAG",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Chunking Strategies in RAG",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Advanced Chunking Methods",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Introduction to Reranking Algorithms",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Implementing Reranking in RAG",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "LangChain Basics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Advanced LangChain Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Hybrid Search Fundamentals",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Combining Vector and Keyword Search",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Optimizing Hybrid Search Performance",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Case Studies in RAG Applications",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Evaluating RAG System Performance",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-15",
+      "title": "Scaling RAG Systems",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-16",
+      "title": "Security and Privacy in RAG",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-17",
+      "title": "Ethical Considerations in RAG",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-18",
+      "title": "Future Trends in RAG Technology",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-19",
+      "title": "Project: Building a Simple RAG System",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-20",
+      "title": "Project: Advanced RAG System with LangChain",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-21",
+      "title": "Capstone Project: Comprehensive RAG Application",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-22",
+      "title": "Review and Best Practices",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-23",
+      "title": "Review & Common Questions",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-24",
+      "title": "Course Wrap-Up and Next Steps",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-25",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

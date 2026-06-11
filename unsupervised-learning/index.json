@@ -1,0 +1,129 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to Unsupervised Learning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "K-Means Clustering Fundamentals",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Advanced K-Means Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "DBSCAN Clustering Fundamentals",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Advanced DBSCAN Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Hierarchical Clustering Fundamentals",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Advanced Hierarchical Clustering Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Principal Component Analysis (PCA) Fundamentals",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Advanced PCA Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "t-Distributed Stochastic Neighbor Embedding (t-SNE) Fundamentals",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Advanced t-SNE Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Autoencoders Fundamentals",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Advanced Autoencoder Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Comparing Clustering Algorithms",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-15",
+      "title": "Evaluating Unsupervised Learning Models",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-16",
+      "title": "Feature Selection and Dimensionality Reduction",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-17",
+      "title": "Unsupervised Learning in Practice: Case Studies",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-18",
+      "title": "Unsupervised Learning for Anomaly Detection",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-19",
+      "title": "Unsupervised Learning for Data Preprocessing",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-20",
+      "title": "Unsupervised Learning for Recommender Systems",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-21",
+      "title": "Unsupervised Learning for Image and Text Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-22",
+      "title": "Unsupervised Learning for Time Series Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-23",
+      "title": "Advanced Topics in Unsupervised Learning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-24",
+      "title": "Project: Applying Unsupervised Learning to a Real-World Dataset",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-25",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

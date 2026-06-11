@@ -1,0 +1,531 @@
+{
+  "id": "aws-fundamentals",
+  "title": "AWS Fundamentals",
+  "subtitle": "Master core AWS services and cloud architecture",
+  "description": "Learn the essential AWS services, from compute and storage to networking and databases. Hands-on labs with CLI commands, boto3, and Terraform.",
+  "path": "beginner",
+  "difficulty": "Beginner",
+  "duration": "12 hours",
+  "icon": "\u2601\ufe0f",
+  "color": "orange",
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to Cloud & AWS",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Introduction to Cloud & AWS"
+        },
+        {
+          "type": "text",
+          "content": "This module covers introduction to cloud & aws. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Introduction to Cloud & AWS')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of introduction to cloud & aws before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of Introduction to Cloud & AWS?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-2",
+      "title": "IAM & Security",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "IAM & Security"
+        },
+        {
+          "type": "text",
+          "content": "This module covers iam & security. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'IAM & Security')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of iam & security before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of IAM & Security?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-3",
+      "title": "EC2 & Compute",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "EC2 & Compute"
+        },
+        {
+          "type": "text",
+          "content": "This module covers ec2 & compute. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'EC2 & Compute')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of ec2 & compute before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of EC2 & Compute?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-4",
+      "title": "S3 & Storage",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "S3 & Storage"
+        },
+        {
+          "type": "text",
+          "content": "This module covers s3 & storage. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'S3 & Storage')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of s3 & storage before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of S3 & Storage?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-5",
+      "title": "VPC & Networking",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "VPC & Networking"
+        },
+        {
+          "type": "text",
+          "content": "This module covers vpc & networking. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'VPC & Networking')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of vpc & networking before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of VPC & Networking?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-6",
+      "title": "RDS & Databases",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "RDS & Databases"
+        },
+        {
+          "type": "text",
+          "content": "This module covers rds & databases. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'RDS & Databases')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of rds & databases before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of RDS & Databases?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-7",
+      "title": "Lambda & Serverless",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Lambda & Serverless"
+        },
+        {
+          "type": "text",
+          "content": "This module covers lambda & serverless. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Lambda & Serverless')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of lambda & serverless before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Lambda & Serverless?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-8",
+      "title": "CloudFormation & IaC",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "CloudFormation & IaC"
+        },
+        {
+          "type": "text",
+          "content": "This module covers cloudformation & iac. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "comparison",
+          "content": "[COMPARISON - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'CloudFormation & IaC')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of cloudformation & iac before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of CloudFormation & IaC?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-9",
+      "title": "CloudWatch & Monitoring",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "CloudWatch & Monitoring"
+        },
+        {
+          "type": "text",
+          "content": "This module covers cloudwatch & monitoring. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "timeline",
+          "content": "[TIMELINE - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'CloudWatch & Monitoring')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of cloudwatch & monitoring before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "single-choice",
+          "question": "What is the primary focus of CloudWatch & Monitoring?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-10",
+      "title": "Route 53 & DNS",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Route 53 & DNS"
+        },
+        {
+          "type": "text",
+          "content": "This module covers route 53 & dns. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "infographic",
+          "content": "[INFOGRAPHIC - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Route 53 & DNS')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of route 53 & dns before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "multi-choice",
+          "question": "What is the primary focus of Route 53 & DNS?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-11",
+      "title": "Cost Management",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Cost Management"
+        },
+        {
+          "type": "text",
+          "content": "This module covers cost management. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "diagram",
+          "content": "[DIAGRAM - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Cost Management')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of cost management before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "code-challenge",
+          "question": "What is the primary focus of Cost Management?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-12",
+      "title": "Well-Architected Framework",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "Well-Architected Framework"
+        },
+        {
+          "type": "text",
+          "content": "This module covers well-architected framework. You will learn key concepts, practical applications, and best practices."
+        },
+        {
+          "type": "visual",
+          "format": "flowchart",
+          "content": "[FLOWCHART - Key concepts visualization]"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "label": "example.py",
+          "content": "# Example code for this module\nprint('Learning:', 'Well-Architected Framework')"
+        },
+        {
+          "type": "tip",
+          "content": "Key takeaway: Master the fundamentals of well-architected framework before moving to advanced topics."
+        },
+        {
+          "type": "quiz",
+          "format": "true-false",
+          "question": "What is the primary focus of Well-Architected Framework?",
+          "options": [
+            "Foundational concepts",
+            "Advanced techniques",
+            "Practical applications",
+            "Best practices"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mod-13",
+      "title": "Resources & References",
+      "duration": "15 min",
+      "sections": [
+        {
+          "type": "text",
+          "content": "Curated resources and references for this course."
+        }
+      ]
+    }
+  ],
+  "resources": [],
+  "references": []
+}

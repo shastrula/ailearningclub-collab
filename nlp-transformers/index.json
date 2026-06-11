@@ -1,0 +1,134 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to NLP",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Overview of Transformers",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Understanding BERT",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Introduction to HuggingFace",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Setting Up the Environment",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Basics of Tokenization",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Training a Simple Transformer Model",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Fine-tuning BERT for a Specific Task",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Advanced Tokenization Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Optimizing Transformer Models",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Handling Large Datasets",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Deploying Transformer Models",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Evaluating Model Performance",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Common Challenges in NLP",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-15",
+      "title": "Ethics in NLP",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-16",
+      "title": "Case Studies in NLP Applications",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-17",
+      "title": "Future Trends in NLP",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-18",
+      "title": "Building Custom NLP Pipelines",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-19",
+      "title": "Debugging and Troubleshooting",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-20",
+      "title": "Collaborative NLP Projects",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-21",
+      "title": "NLP in Industry Applications",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-22",
+      "title": "Advanced Fine-tuning Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-23",
+      "title": "Scaling Up Transformer Models",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-24",
+      "title": "Performance Optimization Strategies",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-25",
+      "title": "Capstone Project",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-26",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

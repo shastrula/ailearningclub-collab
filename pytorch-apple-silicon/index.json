@@ -1,0 +1,48 @@
+{
+  "id": "pytorch-apple-silicon",
+  "title": "PyTorch on Apple Silicon",
+  "subtitle": "Train models locally on M1/M2/M3 chips with Metal Performance Shaders",
+  "description": "Master PyTorch optimization for Apple Silicon. Learn MPS backend, GPU acceleration, memory optimization, and build production-ready models on your local machine without cloud costs.",
+  "difficulty": "Intermediate",
+  "duration": "2 hr 15 min",
+  "icon": "\ud83c\udf4e",
+  "color": "slate",
+  "path": "local-first",
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Apple Silicon & Metal Performance Shaders",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Setting Up PyTorch with MPS",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Tensors and GPU Operations",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Training CNNs on Apple Silicon",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Memory Optimization & Benchmarking",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Production Deployment & Best Practices",
+      "duration": "15 min"
+    },
+    {
+      "id": "resources-references",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "modules": [
+    {
+      "id": "ip-intro",
+      "title": "Intermediate Projects Overview",
+      "duration": "15 min"
+    },
+    {
+      "id": "ip-project1-setup",
+      "title": "Project 1 \u2014 Sentiment Analysis: Problem & Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "ip-project1-build",
+      "title": "Project 1 \u2014 Sentiment Analysis: Fine-tune BERT",
+      "duration": "15 min"
+    },
+    {
+      "id": "ip-project2-setup",
+      "title": "Project 2 \u2014 Image Classifier: Problem & Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "ip-project2-build",
+      "title": "Project 2 \u2014 Image Classifier: Build CNN",
+      "duration": "15 min"
+    },
+    {
+      "id": "ip-project3-setup",
+      "title": "Project 3 \u2014 Movie Recommender: Problem & Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "ip-project3-build",
+      "title": "Project 3 \u2014 Movie Recommender: Build & Evaluate",
+      "duration": "15 min"
+    },
+    {
+      "id": "resources-references",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

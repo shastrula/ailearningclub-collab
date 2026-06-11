@@ -1,0 +1,129 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to Time Series Data",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Exploratory Data Analysis for Time Series",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Stationarity and Differencing",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "ARIMA Models",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Seasonal ARIMA (SARIMA) Models",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Model Diagnostics and Evaluation",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Feature Engineering for Time Series",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Introduction to Prophet",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Advanced Techniques in Prophet",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Time Series Forecasting with LSTM",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Building LSTM Models for Time Series",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Transformers for Time Series Forecasting",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Advanced Transformers Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Ensemble Methods for Time Series",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-15",
+      "title": "Case Studies in Time Series Forecasting",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-16",
+      "title": "Time Series Forecasting in Practice",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-17",
+      "title": "Handling Missing Data in Time Series",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-18",
+      "title": "Multivariate Time Series Forecasting",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-19",
+      "title": "Time Series Anomaly Detection",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-20",
+      "title": "Forecasting with External Variables",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-21",
+      "title": "Time Series Forecasting in Business",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-22",
+      "title": "Deploying Time Series Models",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-23",
+      "title": "Ethical Considerations in Forecasting",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-24",
+      "title": "Future Trends in Time Series Forecasting",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-25",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

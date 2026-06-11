@@ -1,0 +1,129 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to AI Agents",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Understanding ReAct Framework",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "LangGraph Basics",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Advanced LangGraph Techniques",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Tool Calling Mechanisms",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Memory Integration in AI Agents",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Designing Multi-Agent Systems",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-8",
+      "title": "Coordination Strategies for Multi-Agent Systems",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-9",
+      "title": "Autonomous Workflows Overview",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-10",
+      "title": "Building Autonomous Agents",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-11",
+      "title": "Case Studies in AI Agents",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-12",
+      "title": "Ethical Considerations in AI Agent Development",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-13",
+      "title": "Performance Metrics for AI Agents",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-14",
+      "title": "Optimizing AI Agent Performance",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-15",
+      "title": "Deploying AI Agents in Real-World Scenarios",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-16",
+      "title": "Monitoring and Maintenance of AI Agents",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-17",
+      "title": "Future Trends in AI Agent Technologies",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-18",
+      "title": "Capstone Project: Developing a Multi-Agent System",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-19",
+      "title": "Capstone Project: Creating an Autonomous Workflow",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-20",
+      "title": "Review and Best Practices",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-21",
+      "title": "Community and Resources for AI Agents",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-22",
+      "title": "Advanced Topics in AI Agent Research",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-23",
+      "title": "Panel Discussion with AI Agent Experts",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-24",
+      "title": "Course Wrap-Up and Next Steps",
+      "duration": "15 min"
+    },
+    {
+      "id": "resources-references",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}

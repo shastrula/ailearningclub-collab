@@ -1,0 +1,39 @@
+{
+  "modules": [
+    {
+      "id": "mod-1",
+      "title": "Introduction to Supervised Learning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-2",
+      "title": "Data Preparation and Preprocessing",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-3",
+      "title": "Model Selection and Training",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-4",
+      "title": "Evaluation and Optimization",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-5",
+      "title": "Deployment and Monitoring",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-6",
+      "title": "Advanced Topics in Supervised Learning",
+      "duration": "15 min"
+    },
+    {
+      "id": "mod-7",
+      "title": "Resources & References",
+      "duration": "15 min"
+    }
+  ]
+}
