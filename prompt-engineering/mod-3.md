@@ -52,6 +52,76 @@ Recent advances in Deep Dive into Few-shot Prompting:
 
 True mastery comes from implementing Deep Dive into Few-shot Prompting in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+To implement few-shot prompting effectively, it's important to carefully curate the examples provided to the model. The quality and relevance of these examples significantly influence the model's performance. Additionally, experimenting with different numbers of examples can help determine the optimal few-shot setting for a given task.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Initialize a text classification pipeline
+classifier = pipeline('sentiment-analysis', model='distilbert-base-uncased')
+
+# Few-shot example for sentiment analysis
+examples = ["I love this product! It's amazing.", "This is the worst service I've ever experienced."]
+prompt = "Based on the following examples, classify the sentiment of the text: 'The new update is fantastic!'"
+
+# Classify sentiment based on the prompt and examples
+output = classifier(prompt)
+
+print(output)
+```
+
+> **💡 Tip:** When using few-shot prompting, ensure that the examples are diverse and cover various aspects of the task to improve the model's generalization capabilities.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of using few-shot prompting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387124608" value="0">
+      <span>It requires a large dataset</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387124608" value="1">
+      <span>It allows models to generalize from limited data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387124608" value="2">
+      <span>It is only useful for simple tasks</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387124608" value="3">
+      <span>It decreases model accuracy</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How can the quality of examples affect few-shot prompting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387124992" value="0">
+      <span>It has no impact</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387124992" value="1">
+      <span>It can significantly influence model performance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387124992" value="2">
+      <span>It only affects the training time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387124992" value="3">
+      <span>It is irrelevant for few-shot prompting</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/prompt-engineering/mod-3.ipynb)

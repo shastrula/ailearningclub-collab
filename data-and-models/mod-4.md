@@ -55,6 +55,42 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Go to huggingface.co/models and filter by:
+- Task — text classification, translation, image classification, etc.
+- Language — English, multilingual, etc.
+- Library — PyTorch, TensorFlow, etc.
+- Downloads — sort by most downloaded to find battle-tested models
+
+Each model page shows: what it does, how to use it, training data, and performance benchmarks.
+
+> **💡 Tip:** For any new task, search HuggingFace first. There's almost certainly a model already trained for it. Only train from scratch when you have domain-specific data that doesn't exist publicly.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the HuggingFace Hub?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908864" value="0">
+      <span>A paid cloud training service</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908864" value="1">
+      <span>A platform hosting pre-trained models, datasets, and live demos</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908864" value="2">
+      <span>A Python package for data cleaning</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908864" value="3">
+      <span>A competitor to Kaggle for competitions</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/data-and-models/mod-4.ipynb)

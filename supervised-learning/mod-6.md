@@ -55,6 +55,88 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Decision Trees have several parameters that can be tuned to improve performance and avoid overfitting. Key parameters include `max_depth`, `min_samples_split`, and `min_samples_leaf`. Overfitting occurs when the tree becomes too complex and captures noise in the data rather than the underlying pattern. Regularization techniques and pruning are used to combat overfitting.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
+df['target'] = iris.target
+
+# Split dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(df.drop('target', axis=1), df['target'], test_size=0.3, random_state=42)
+
+# Create Decision Tree classifier object with parameters to avoid overfitting
+clf = DecisionTreeClassifier(max_depth=3, min_samples_split=10, min_samples_leaf=5)
+
+# Train Decision Tree Classifier
+clf = clf.fit(X_train,y_train)
+
+# Predict the response for test dataset
+y_pred = clf.predict(X_test)
+
+# Model Accuracy
+print("Accuracy:", accuracy_score(y_test, y_pred))
+```
+
+> **💡 Tip:** Always validate your Decision Tree model using a separate test set to ensure it generalizes well to unseen data. Regularly monitor for overfitting by adjusting parameters like `max_depth` and `min_samples_split`.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of a Decision Tree in machine learning?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957120" value="0">
+      <span>To perform unsupervised clustering</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957120" value="1">
+      <span>To make predictions based on a series of decisions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957120" value="2">
+      <span>To reduce dimensionality</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957120" value="3">
+      <span>To perform time-series forecasting</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which parameter in a Decision Tree helps prevent overfitting by limiting the depth of the tree?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904000" value="0">
+      <span>min_samples_split</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904000" value="1">
+      <span>max_features</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904000" value="2">
+      <span>max_depth</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904000" value="3">
+      <span>min_samples_leaf</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning/mod-6.ipynb)

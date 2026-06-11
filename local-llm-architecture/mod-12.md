@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Training LLMs locally demands significant computational resources. Key hardware requirements include a high-performance CPU, ample RAM (at least 32GB), and a powerful GPU with at least 16GB of VRAM. Ensuring your system meets these requirements is essential for efficient and effective model training.
+
+```python title="check_hardware.py"
+import psutil
+
+# Check CPU and RAM
+cpu_count = psutil.cpu_count(logical=False)
+ram = psutil.virtual_memory().total / (1024 ** 3)
+
+print(f'CPU Cores: {cpu_count}')
+print(f'RAM: {ram} GB')
+
+# Check GPU (example using NVIDIA-SMI)
+import subprocess
+gpu_info = subprocess.run(['nvidia-smi', '--query-gpu=memory.total', '--format=csv,noheader'], capture_output=True, text=True).stdout.strip()
+print(f'GPU Memory: {gpu_info}')
+```
+
+> **💡 Tip:** Ensure your system is up-to-date with the latest drivers and software to avoid compatibility issues during model training.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary use of Ollama in local LLM training?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056704" value="0">
+      <span>Data preprocessing</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056704" value="1">
+      <span>Model deployment</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056704" value="2">
+      <span>Model training and management</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056704" value="3">
+      <span>Cloud storage</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the minimum recommended RAM for efficient local LLM training?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046336" value="0">
+      <span>8GB</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046336" value="1">
+      <span>16GB</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046336" value="2">
+      <span>32GB</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046336" value="3">
+      <span>64GB</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-12.ipynb)

@@ -59,6 +59,75 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+One of the advantages of Random Forests is their ability to provide insights into feature importance. Feature importance scores can be calculated for each feature in the dataset by measuring the total reduction of the criterion brought by that feature. It is also known as the Gini importance. This can be particularly useful for feature selection and understanding which features contribute most to the predictions of the model.
+
+```python title="example2.py"
+import matplotlib.pyplot as plt
+
+# Get the feature importances
+importances = clf.feature_importances_
+
+# Plot the feature importances of the forest
+plt.figure()
+plt.title('Feature Importances')
+plt.bar(range(X.shape[1]), importances, color='r', align='center')
+plt.xticks(range(X.shape[1]), range(X.shape[1]))
+plt.xlim([-1, X.shape[1]])
+plt.show()
+```
+
+> **💡 Tip:** When tuning a Random Forest, consider adjusting the number of trees (n_estimators) and the maximum depth of the trees (max_depth). Increasing the number of trees will generally increase the accuracy of the model but will also increase the training time. Adjusting the maximum depth can help prevent overfitting.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using Random Forests over a single decision tree?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123840" value="0">
+      <span>Lower computational cost</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123840" value="1">
+      <span>Less prone to overfitting</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123840" value="2">
+      <span>Requires less data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123840" value="3">
+      <span>Simpler to interpret</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How does Random Forest determine the importance of features?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387053760" value="0">
+      <span>By the frequency of their appearance in the trees</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387053760" value="1">
+      <span>By the total reduction of the criterion brought by that feature</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387053760" value="2">
+      <span>By the depth of the tree they are used in</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387053760" value="3">
+      <span>By the number of trees they appear in</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/scikit-learn-machine-learning/mod-8.ipynb)

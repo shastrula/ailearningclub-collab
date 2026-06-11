@@ -59,6 +59,73 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Duplicate records can skew analysis and lead to incorrect conclusions. Identifying and removing duplicates is a vital step in data cleaning. This can be done by checking for identical rows across all columns or specific columns that should uniquely identify records.
+
+```python title="example2.py"
+import pandas as pd
+
+# Sample DataFrame with duplicate rows
+data = {'A': [1, 2, 2, 4], 'B': [2, 2, 2, 4]}
+df = pd.DataFrame(data)
+
+# Remove duplicate rows
+df.drop_duplicates(inplace=True)
+
+print(df)
+```
+
+> **💡 Tip:** Always make a copy of your original dataset before performing any cleaning operations to preserve the original data.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a common method for handling missing values in a dataset?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081600" value="0">
+      <span>Deleting the entire dataset</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081600" value="1">
+      <span>Replacing with a constant value</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081600" value="2">
+      <span>Using machine learning for imputation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081600" value="3">
+      <span>All of the above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method is used to remove duplicate rows in a DataFrame?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081920" value="0">
+      <span>df.remove_duplicates()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081920" value="1">
+      <span>df.delete_duplicates()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081920" value="2">
+      <span>df.drop_duplicates()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081920" value="3">
+      <span>df.clean_duplicates()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-19.ipynb)

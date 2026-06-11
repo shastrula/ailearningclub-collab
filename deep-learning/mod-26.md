@@ -59,6 +59,62 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+- [Deep Learning Book (Goodfellow)](https://www.deeplearningbook.org/) — Free online textbook
+- [3Blue1Brown Neural Networks](https://www.3blue1brown.com/topics/neural-networks) — Visual explanations
+- [PyTorch Tutorials](https://pytorch.org/tutorials/) — Official PyTorch learning resources
+- [TensorFlow Tutorials](https://www.tensorflow.org/tutorials) — Official TensorFlow guides
+- [Distill.pub](https://distill.pub/) — Clear explanations of ML concepts
+
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What are the trade-offs of this approach?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_0" value="0">
+      <span>Speed vs Accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_1" value="1">
+      <span>Complexity vs Performance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_2" value="2">
+      <span>Memory vs Speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_3" value="3">
+      <span>All of above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How would you optimize this for production?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_0" value="0">
+      <span>Caching</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_1" value="1">
+      <span>Parallelization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_2" value="2">
+      <span>Algorithm selection</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_3" value="3">
+      <span>All of above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-26.ipynb)

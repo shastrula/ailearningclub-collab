@@ -59,6 +59,86 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Boosting is another ensemble technique where models are built sequentially, each trying to correct the errors of the previous one. Gradient Boosting is a popular boosting method that builds models in a stage-wise fashion, optimizing a differentiable loss function. It is highly effective for both regression and classification tasks.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+
+# Generate a random binary classification dataset
+X, y = make_classification(n_samples=1000, n_features=20, n_classes=2, random_state=42)
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Initialize the GradientBoostingClassifier
+gbc = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
+
+# Train the model
+gbc.fit(X_train, y_train)
+
+# Make predictions
+y_pred = gbc.predict(X_test)
+
+# Print the accuracy
+accuracy = np.mean(y_pred == y_test)
+print(f'Accuracy: {accuracy:.2f}')
+```
+
+> **💡 Tip:** When using Gradient Boosting, be cautious with the learning rate and the number of estimators. A lower learning rate with more estimators often yields better results but requires more computational resources.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using Random Forests over a single decision tree?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080128" value="0">
+      <span>Lower computational cost</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080128" value="1">
+      <span>Higher bias</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080128" value="2">
+      <span>Reduced overfitting</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080128" value="3">
+      <span>Simpler model interpretation</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which parameter in Gradient Boosting controls the contribution of each tree to the final model?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387082432" value="0">
+      <span>n_estimators</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387082432" value="1">
+      <span>max_depth</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387082432" value="2">
+      <span>learning_rate</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387082432" value="3">
+      <span>subsample</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning/mod-19.ipynb)

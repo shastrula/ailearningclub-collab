@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Implementing robust access control and authentication mechanisms is essential to ensure that only authorized users and systems can interact with the AI. This involves using techniques like OAuth for secure authentication and role-based access control (RBAC) to limit permissions.
+
+```python title="example2.py"
+import requests
+
+# OAuth token acquisition
+auth_response = requests.post('https://example.com/oauth/token', data={'grant_type': 'client_credentials'})
+access_token = auth_response.json().get('access_token')
+
+# Use the token for authenticated API request
+headers = {'Authorization': f'Bearer {access_token}'}
+response = requests.get('https://example.com/api/data', headers=headers)
+
+print(response.json())
+```
+
+> **💡 Tip:** Always use environment variables to store sensitive information like API keys and encryption keys to avoid hardcoding them in your scripts.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which protocol should be used for secure data transmission?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048128" value="0">
+      <span>FTP</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048128" value="1">
+      <span>HTTP</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048128" value="2">
+      <span>HTTPS</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048128" value="3">
+      <span>SMTP</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of using OAuth in AI integrations?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048704" value="0">
+      <span>Data encryption</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048704" value="1">
+      <span>User authentication</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048704" value="2">
+      <span>Data compression</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048704" value="3">
+      <span>Error handling</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-11.ipynb)

@@ -59,6 +59,80 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Reflection in AutoGen involves evaluating the outcomes of executed tasks and using this information to improve future planning. AutoGen can analyze task performance metrics, such as completion time and resource usage, to identify bottlenecks and optimize task sequences. This continuous improvement loop ensures that the system becomes more efficient over time.
+
+```python title="example2.py"
+import autogen
+
+# Initialize AutoGen reflector
+reflector = autogen.Reflector()
+
+# Simulate task execution
+executed_tasks = [
+    {"name": "Task1", "actual_duration": 12},
+    {"name": "Task2", "actual_duration": 4},
+    {"name": "Task3", "actual_duration": 7}
+]
+
+# Reflect on task performance
+reflection = reflector.reflect(executed_tasks)
+
+# Print reflection results
+print(reflection)
+```
+
+> **💡 Tip:** Ensure that task durations and priorities are accurately estimated to maximize the effectiveness of AutoGen's planning and reflection capabilities.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary function of AutoGen's planning capability?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386952704" value="0">
+      <span>To manage user authentication</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386952704" value="1">
+      <span>To create and manage task schedules dynamically</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386952704" value="2">
+      <span>To handle database queries</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386952704" value="3">
+      <span>To design user interfaces</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does AutoGen's reflection process involve?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960896" value="0">
+      <span>Analyzing user feedback</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960896" value="1">
+      <span>Evaluating the outcomes of executed tasks</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960896" value="2">
+      <span>Managing file systems</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960896" value="3">
+      <span>Designing network protocols</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/agentic-ai-patterns/mod-8.ipynb)

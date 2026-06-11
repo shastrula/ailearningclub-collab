@@ -52,6 +52,65 @@ Recent advances in Advanced Notebook Features:
 
 True mastery comes from implementing Advanced Notebook Features in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+Colab's collaborative features enable multiple users to work on the same notebook simultaneously. This is achieved through real-time updates and shared editing capabilities. These features are essential for team projects, peer reviews, and educational settings where collaboration is key.
+
+```python title="example2.py"
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+> **💡 Tip:** Ensure you authorize the connection to your Google Drive by following the link provided in the notebook output and copying the authorization code back into the notebook.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of using custom widgets in Google Colab?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181952" value="0">
+      <span>They allow for real-time updates</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181952" value="1">
+      <span>They enable interactive elements</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181952" value="2">
+      <span>They provide shared editing capabilities</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181952" value="3">
+      <span>They allow for offline work</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How do collaborative features in Google Colab enhance team projects?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387183424" value="0">
+      <span>By enabling real-time updates</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387183424" value="1">
+      <span>By providing shared editing capabilities</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387183424" value="2">
+      <span>By allowing offline work</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387183424" value="3">
+      <span>By mounting Google Drive</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/google-colab-cloud-computing-for-ai/mod-8.ipynb)

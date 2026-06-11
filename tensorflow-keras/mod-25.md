@@ -59,6 +59,64 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+> **Visual Guide:** This module includes diagrams and flowcharts. Check the course materials for detailed visualizations.
+
+
+- [TensorFlow Documentation](https://www.tensorflow.org/api_docs) — Official API docs
+- [Keras Documentation](https://keras.io/) — High-level API
+- [TensorFlow Tutorials](https://www.tensorflow.org/tutorials) — Guided examples
+- [TF Hub](https://tfhub.dev/) — Pre-trained models
+
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How would you apply this concept in practice?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q25_0" value="0">
+      <span>Approach 1</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q25_1" value="1">
+      <span>Approach 2</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q25_2" value="2">
+      <span>Approach 3</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q25_3" value="3">
+      <span>Approach 4</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the relationship between this and previous concepts?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q25_0" value="0">
+      <span>Direct</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q25_1" value="1">
+      <span>Indirect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q25_2" value="2">
+      <span>No relation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q25_3" value="3">
+      <span>Depends on context</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/tensorflow-keras/mod-25.ipynb)

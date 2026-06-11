@@ -59,6 +59,87 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Advanced techniques for handling missing data include interpolation, regression imputation, and model-based approaches. Interpolation fills missing values based on the trend of the data, while regression imputation uses a regression model to predict missing values. Model-based approaches use algorithms like K-Nearest Neighbors (KNN) or machine learning models to estimate missing values.
+
+```python title="example2.py"
+from sklearn.impute import KNNImputer
+import pandas as pd
+import numpy as np
+
+# Create a sample time series with missing values
+data = {'date': pd.date_range(start='1/1/2020', periods=10),
+         'value': [1, 2, np.nan, 4, 5, np.nan, 7, 8, np.nan, 10]}
+df = pd.DataFrame(data)
+
+# Separate date and value columns
+dates = df['date']
+values = df[['value']]
+
+# Apply KNNImputer to fill missing values
+imputer = KNNImputer(n_neighbors=2)
+values_filled = imputer.fit_transform(values)
+
+# Create a new DataFrame with filled values
+df_filled = pd.DataFrame(values_filled, columns=['value'])
+df_filled['date'] = dates
+
+# Print the DataFrame after filling missing values
+print('DataFrame after filling missing values using KNNImputer:')
+print(df_filled)
+```
+
+> **💡 Tip:** When using KNNImputer, carefully choose the number of neighbors (n_neighbors) to balance between overfitting and underfitting. A common practice is to start with a small number and increase it if necessary.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What are the three types of missing data in time series?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958464" value="0">
+      <span>MCAR, MAR, MNAR</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958464" value="1">
+      <span>MCAR, MAD, MNAR</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958464" value="2">
+      <span>MCAR, MAR, MCAR</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958464" value="3">
+      <span>MCAR, MAR, MRAD</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method is used in the second code example to handle missing data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956800" value="0">
+      <span>Forward fill</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956800" value="1">
+      <span>Backward fill</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956800" value="2">
+      <span>KNNImputer</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956800" value="3">
+      <span>Linear interpolation</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/time-series-forecasting/mod-17.ipynb)

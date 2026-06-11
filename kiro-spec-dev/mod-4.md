@@ -59,6 +59,42 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Because tasks.md tracks completion with checkboxes, you can stop and resume at any time — even in a new session. Kiro reads the file, sees which tasks are done, and picks up where you left off. This is one of the biggest advantages over freeform prompting.
+
+```bash title="resuming a spec"
+# In a new Kiro session:
+"Continue implementing the tasks in .kiro/specs/user-auth/tasks.md"
+
+# Kiro reads tasks.md, sees tasks 1-3 are checked off,
+# and starts from task 4.
+```
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How does Kiro know where to resume work after you close and reopen a session?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958528" value="0">
+      <span>It stores session state in a cloud database</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958528" value="1">
+      <span>It re-reads the entire codebase from scratch</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958528" value="2">
+      <span>It reads tasks.md and checks which tasks are already marked complete</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958528" value="3">
+      <span>It asks you to describe the feature again</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/kiro-spec-dev/mod-4.ipynb)

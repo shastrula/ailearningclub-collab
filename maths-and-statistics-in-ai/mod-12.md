@@ -59,6 +59,73 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Stationarity is a fundamental concept in time series analysis, indicating that the statistical properties of the series, such as mean and variance, remain constant over time. A stationary time series is easier to model and predict. Techniques like differencing can be used to transform non-stationary data into stationary data.
+
+```python title="example2.py"
+from statsmodels.tsa.stattools import adfuller
+
+# Perform the Dickey-Fuller test for stationarity
+result = adfuller(data['value'])
+
+# Print the test result
+print(f'ADF Statistic: {result[0]}')
+print(f'p-value: {result[1]}')
+
+# If p-value < 0.05, the series is stationary
+```
+
+> **💡 Tip:** Always check for stationarity before applying time series models, as non-stationary data can lead to misleading results.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What are the four components of a time series?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178816" value="0">
+      <span>Trend, Seasonality, Cyclicity, Noise</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178816" value="1">
+      <span>Mean, Variance, Skewness, Kurtosis</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178816" value="2">
+      <span>Autocorrelation, Partial Autocorrelation, Cross-correlation, Covariance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178816" value="3">
+      <span>Linearity, Periodicity, Randomness, Exponentiality</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the Dickey-Fuller test determine?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387190464" value="0">
+      <span>Stationarity of the time series</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387190464" value="1">
+      <span>Correlation between two series</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387190464" value="2">
+      <span>Trend in the time series</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387190464" value="3">
+      <span>Seasonality in the time series</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/maths-and-statistics-in-ai/mod-12.ipynb)

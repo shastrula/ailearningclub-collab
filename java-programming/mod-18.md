@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+JSP (JavaServer Pages) is a technology that helps software developers create dynamically generated web pages based on HTML, XML, or other document types. JSP files are easier to maintain than Servlets because they separate the application logic from the presentation layer.
+
+```java title="example2.jsp"
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JSP Example</title>
+</head>
+<body>
+    <h1>Hello, <%= request.getParameter("name") %>!</h1>
+</body>
+</html>
+```
+
+> **💡 Tip:** Always ensure that your JSP files are compiled before deployment to avoid runtime errors.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of a Java Servlet?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188416" value="0">
+      <span>To create static web pages</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188416" value="1">
+      <span>To handle HTTP requests and responses</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188416" value="2">
+      <span>To manage client-side JavaScript</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188416" value="3">
+      <span>To store data in a database</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does JSP stand for and what is its main advantage?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188928" value="0">
+      <span>Java Server Pages, separates application logic from presentation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188928" value="1">
+      <span>Java Script Pages, integrates JavaScript with Java</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188928" value="2">
+      <span>Java Server Programming, simplifies server-side programming</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188928" value="3">
+      <span>Java Server Pages, handles database connections</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-18.ipynb)

@@ -55,6 +55,79 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Once the TensorRT engine is built, it can be optimized and serialized for deployment. Optimization involves techniques like layer fusion and precision adjustments. Serialization converts the engine into a format that can be easily stored and loaded for inference.
+
+```python title="example2.py"
+import tensorrt as trt
+import pycuda.driver as cuda
+import pycuda.autoinit
+
+# Serialize the engine
+with open('model.engine', 'wb') as f:
+    f.write(engine.serialize())
+
+print('Engine serialized and saved to model.engine')
+
+# Load the engine for inference
+with open('model.engine', 'rb') as f, trt.Runtime(trt.Logger(trt.Logger.WARNING)) as runtime:
+    engine = runtime.deserialize_cuda_engine(f.read())
+    context = engine.create_execution_context()
+
+print('Engine loaded successfully for inference')
+```
+
+> **💡 Tip:** Always ensure that the input tensor dimensions match the model's expected input shape to avoid runtime errors during inference.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary function of TensorRT?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079360" value="0">
+      <span>Training deep learning models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079360" value="1">
+      <span>Optimizing deep learning inference</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079360" value="2">
+      <span>Data preprocessing</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079360" value="3">
+      <span>Model quantization</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which step is crucial after building a TensorRT engine for deployment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079424" value="0">
+      <span>Model retraining</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079424" value="1">
+      <span>Engine serialization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079424" value="2">
+      <span>Data augmentation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079424" value="3">
+      <span>Hyperparameter tuning</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/production-inference/mod-3.ipynb)

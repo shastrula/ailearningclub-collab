@@ -52,6 +52,47 @@ Recent advances in Advanced Functions and Decorators:
 
 True mastery comes from implementing Advanced Functions and Decorators in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+Lambda functions are anonymous functions useful for short operations in data processing pipelines.
+
+```python title="lambda_functions.py"
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, numbers))
+print(f"Squared: {squared}")
+
+# Filter even numbers
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+print(f"Evens: {evens}")
+```
+
+```
+Squared: [1, 4, 9, 16, 25]
+Evens: [2, 4]
+```
+
+> **💡 Tip:** Use decorators to add logging, caching, or validation to your AI model functions without modifying the core logic.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does a decorator do?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="0">
+      <span>Adds visual styling to functions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="1">
+      <span>Modifies or enhances function behavior without changing source code</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="2">
+      <span>Creates new variables in a function</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/advanced-python-for-ai-development/mod-3.ipynb)

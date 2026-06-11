@@ -55,6 +55,75 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Data cleaning is a critical step in the data preprocessing pipeline. It involves handling missing values, removing duplicates, and correcting errors in the dataset. Pandas provides various methods to facilitate these tasks, ensuring that the data is in a suitable format for machine learning algorithms.
+
+```python title="example2.py"
+import pandas as pd
+import numpy as np
+
+# Creating a DataFrame with missing values
+data = {'A': [1, 2, np.nan], 'B': [4, np.nan, np.nan], 'C': [7, 8, 9]}
+df = pd.DataFrame(data)
+
+# Filling missing values with the mean of the column
+df_filled = df.fillna(df.mean())
+
+# Displaying the cleaned DataFrame
+print(df_filled)
+```
+
+> **💡 Tip:** Always check for and handle missing values before proceeding with any machine learning tasks to avoid skewed results.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a Pandas DataFrame?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079680" value="0">
+      <span>A one-dimensional array</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079680" value="1">
+      <span>A two-dimensional, size-mutable, potentially heterogeneous tabular data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079680" value="2">
+      <span>A database management system</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079680" value="3">
+      <span>A machine learning algorithm</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method is used to fill missing values in a Pandas DataFrame?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081088" value="0">
+      <span>df.impute()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081088" value="1">
+      <span>df.fillna()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081088" value="2">
+      <span>df.replace()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081088" value="3">
+      <span>df.clean()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-21.ipynb)

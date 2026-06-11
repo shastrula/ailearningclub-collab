@@ -59,6 +59,84 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Part-of-Speech (POS) tagging is the process of assigning a part of speech (such as noun, verb, adjective, etc.) to each word in a text. This is crucial for understanding the syntactic structure of sentences and is often used in tasks like parsing and information extraction. POS tagging helps in identifying the roles of words in a sentence, which is fundamental for deeper linguistic analysis.
+
+**example2.py**
+
+```
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk import pos_tag
+
+# Sample text
+text = "Natural Language Processing is fascinating!"
+
+# Tokenize the text
+tokens = word_tokenize(text)
+
+# POS tagging
+pos_tags = pos_tag(tokens)
+
+# Print the POS tags
+print(pos_tags)
+```
+
+```
+[('Natural', 'NNP'), ('Language', 'NNP'), ('Processing', 'NNP'), ('is', 'VBZ'), ('fascinating', 'JJ'), ('!', '.')]
+```
+
+> **💡 Tip:** Ensure you have the necessary NLTK data files downloaded by running `nltk.download('punkt') and `nltk.download('averaged_perceptron_tagger') before attempting tokenization and POS tagging.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of tokenization in NLP?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184000" value="0">
+      <span>To translate text into another language</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184000" value="1">
+      <span>To break down text into smaller units</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184000" value="2">
+      <span>To generate new text</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184000" value="3">
+      <span>To encrypt text</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does POS tagging help identify in a sentence?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387185792" value="0">
+      <span>Syntactic structure</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387185792" value="1">
+      <span>Sentiment of the text</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387185792" value="2">
+      <span>Part of speech of each word</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387185792" value="3">
+      <span>Frequency of words</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/advanced-python-for-ai-development/mod-9.ipynb)

@@ -59,6 +59,81 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Bayes' Theorem is extensively used in machine learning for tasks such as classification, where it helps in predicting the class of an instance by calculating the probability of a class given the evidence. It is the cornerstone of Naive Bayes classifiers, which are popular for their simplicity and effectiveness in text classification tasks.
+
+```python title="example2.py"
+from sklearn.naive_bayes import GaussianNB
+import numpy as np
+
+# Sample data
+X = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
+Y = np.array([1, 1, 1, 2, 2, 2])
+
+# Create a Gaussian Classifier
+gnb = GaussianNB()
+
+# Train the model using the training sets
+gnb.fit(X, Y)
+
+# Predict the output for a new instance
+new_instance = np.array([[-0.8, -1]])
+prediction = gnb.predict(new_instance)
+
+print(f'Predicted class: {prediction[0]}')
+```
+
+> **💡 Tip:** When applying Bayes' Theorem, ensure that the prior probabilities and conditional probabilities are accurately estimated, as incorrect values can lead to misleading results.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does P(A|B) represent in Bayes' Theorem?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089088" value="0">
+      <span>The probability of A and B occurring together</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089088" value="1">
+      <span>The probability of A occurring given that B is true</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089088" value="2">
+      <span>The probability of B occurring given that A is true</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089088" value="3">
+      <span>The probability of A or B occurring</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which machine learning algorithm is based on Bayes' Theorem?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387078848" value="0">
+      <span>K-Nearest Neighbors</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387078848" value="1">
+      <span>Decision Trees</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387078848" value="2">
+      <span>Naive Bayes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387078848" value="3">
+      <span>Support Vector Machines</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-10.ipynb)

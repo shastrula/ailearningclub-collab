@@ -59,6 +59,72 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+0 = Saturday, 1 = Sunday, 2 = Monday,..., 6 = Friday
+
+The answer is [calculated day of the week]."""
+
+# Generate the response
+response = openai.Completion.create(
+  engine="text-davinci-003",
+  prompt=prompt,
+  max_tokens=100
+)
+
+print(response.choices[0].text.strip())
+```
+
+> **💡 Tip:** Ensure that your reasoning steps are clear and logically ordered to help the model understand and follow the process effectively.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of using the ReAct framework?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121664" value="0">
+      <span>Improved model training speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121664" value="1">
+      <span>Enhanced interpretability and reliability</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121664" value="2">
+      <span>Reduced computational cost</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121664" value="3">
+      <span>Simplified prompt creation</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which step in the ReAct framework involves breaking down the problem into smaller parts?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114816" value="0">
+      <span>Identify the problem</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114816" value="1">
+      <span>Recall the method</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114816" value="2">
+      <span>Apply the method</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114816" value="3">
+      <span>Interpret the result</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/prompt-engineering/mod-5.ipynb)

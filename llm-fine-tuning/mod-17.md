@@ -59,6 +59,84 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Fine-tuned models may generate misleading or false information, especially if the fine-tuning data contains inaccuracies. Implementing robust fact-checking mechanisms and continuously updating the model with verified data is vital to combat misinformation.
+
+```python title="example2.py"
+import requests
+
+# Sample fact-checking API
+def fact_check(statement):
+    url = 'https://api.factchecktools.com/v1/claims'
+    params = {'query': statement}
+    response = requests.get(url, params=params)
+    if response.status_code == 200:
+        data = response.json()
+        if data['claims']:
+            return data['claims'][0]['text'], data['claims'][0]['claimReview'][0]['textReview']
+        else:
+            return statement, 'No fact-check available'
+    else:
+        return statement, 'Failed to retrieve fact-check'
+
+# Example usage
+statement = 'The Earth is flat.'
+checked_statement, review = fact_check(statement)
+print(f'Checked Statement: {checked_statement}')
+print(f'Review: {review}')
+```
+
+> **💡 Tip:** Always use multiple fact-checking sources and cross-verify information to ensure accuracy.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a critical step to mitigate bias in fine-tuned models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387186944" value="0">
+      <span>Increasing model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387186944" value="1">
+      <span>Using more training data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387186944" value="2">
+      <span>Evaluating for fairness across demographic groups</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387186944" value="3">
+      <span>Reducing the learning rate</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is fact-checking important in fine-tuning LLMs?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188736" value="0">
+      <span>To increase model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188736" value="1">
+      <span>To ensure the model generates accurate information</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188736" value="2">
+      <span>To reduce training time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188736" value="3">
+      <span>To enhance model interpretability</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/llm-fine-tuning/mod-17.ipynb)

@@ -59,6 +59,82 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Effective agentic AI systems often utilize external tools and orchestrate multiple agents to accomplish complex tasks. Tool use involves integrating specialized software or services, while orchestration coordinates the actions of multiple agents to achieve a common goal.
+
+```python title="example2.py"
+import random
+
+# Example of tool use and orchestration
+
+def use_tool(tool):
+    return f'Used {tool}'
+
+def orchestrate_agents(agents):
+    results = {}
+    for agent in agents:
+        tool = random.choice(['toolA', 'toolB'])
+        result = use_tool(tool)
+        results[agent] = result
+        print(f'Agent {agent} {result}')
+    return results
+
+# Define agents and run orchestration
+agents = ['agent1', 'agent2']
+orchestration_results = orchestrate_agents(agents)
+```
+
+> **💡 Tip:** Ensure that the tools used by agentic AI are reliable and up-to-date to maintain performance and security standards.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of reflection in agentic AI?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181056" value="0">
+      <span>To plan future actions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181056" value="1">
+      <span>To assess past actions and learn from them</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181056" value="2">
+      <span>To coordinate multiple agents</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181056" value="3">
+      <span>To use external tools</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does orchestration in agentic AI involve?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178176" value="0">
+      <span>Using external tools</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178176" value="1">
+      <span>Assessing past actions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178176" value="2">
+      <span>Coordinating multiple agents</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178176" value="3">
+      <span>Planning future actions</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/agentic-ai-patterns/mod-11.ipynb)

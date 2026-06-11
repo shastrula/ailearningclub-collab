@@ -59,6 +59,72 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+t-SNE (t-Distributed Stochastic Neighbor Embedding) is excellent for visualizing high-dimensional data in 2D/3D, but not suitable for feature extraction (non-deterministic, computationally expensive).
+
+```python title="example4.py"
+from sklearn.manifold import TSNE
+
+# t-SNE: reduce to 2D for visualization
+tsne = TSNE(n_components=2, random_state=42, perplexity=30)
+X_tsne = tsne.fit_transform(X)
+
+plt.figure(figsize=(8, 6))
+scatter = plt.scatter(X_tsne[:, 0], X_tsne[:, 1], c=y, cmap='viridis', alpha=0.6)
+plt.title('t-SNE Visualization')
+plt.colorbar(scatter)
+plt.show()
+```
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the main advantage of wrapper methods over filter methods?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387800001" value="0">
+      <span>They are faster</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387800001" value="1">
+      <span>They capture feature interactions and model-specific performance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387800001" value="2">
+      <span>They work with any data type</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387800001" value="3">
+      <span>They reduce overfitting</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ When should you use t-SNE?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387800002" value="0">
+      <span>For feature extraction in production models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387800002" value="1">
+      <span>For reducing computational cost</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387800002" value="2">
+      <span>For visualizing high-dimensional data in 2D/3D</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387800002" value="3">
+      <span>For handling missing values</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/scikit-learn-machine-learning/mod-28.ipynb)

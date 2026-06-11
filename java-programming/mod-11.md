@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Writing to a file can be done using FileWriter and BufferedWriter classes. The BufferedWriter class is used to provide a convenient way to write text to a character output stream, buffering characters so as to provide for the efficient writing of single characters, arrays, and strings.
+
+```java title="example2.java"
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileWriteExample {
+    public static void main(String[] args) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("example.txt"))) {
+            bw.write("Hello");
+            bw.newLine();
+            bw.write("World");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+> **💡 Tip:** Always use try-with-resources to ensure that file resources are closed automatically, preventing resource leaks.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What class is typically used for reading text from a file efficiently in Java?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387124608" value="0">
+      <span>FileReader</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387124608" value="1">
+      <span>BufferedReader</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387124608" value="2">
+      <span>Scanner</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387124608" value="3">
+      <span>FileWriter</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which class is used for writing text to a file in Java?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387125248" value="0">
+      <span>FileReader</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387125248" value="1">
+      <span>BufferedReader</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387125248" value="2">
+      <span>BufferedWriter</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387125248" value="3">
+      <span>Scanner</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-11.ipynb)

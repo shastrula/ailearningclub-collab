@@ -59,6 +59,87 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+GGUF can be applied to various layers of a neural network, including convolutional and linear layers. By quantizing these layers, we can significantly reduce the model size and inference time. This is particularly beneficial for deploying models on mobile devices or IoT applications where efficiency is paramount.
+
+```python title="example2.py"
+import torch
+import torch.nn as nn
+
+# Define a convolutional neural network
+class ConvNet(nn.Module):
+    def __init__(self):
+        super(ConvNet, self).__init__()
+        self.conv1 = nn.Conv2d(1, 10, kernel_size=5)
+        self.fc = nn.Linear(320, 10)
+
+    def forward(self, x):
+        x = nn.functional.relu(nn.functional.max_pool2d(self.conv1(x), 2))
+        x = x.view(-1, 320)
+        x = self.fc(x)
+        return x
+
+# Initialize the model
+model = ConvNet()
+
+# Apply GGUF quantization
+quantized_model = torch.quantization.quantize_dynamic(model, {nn.Conv2d, nn.Linear}, dtype=torch.qint8)
+
+# Print the quantized model
+print(quantized_model)
+```
+
+> **💡 Tip:** When applying GGUF, ensure that the model's accuracy is evaluated post-quantization to confirm that the performance degradation is within acceptable limits.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of GGUF?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858752" value="0">
+      <span>To increase model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858752" value="1">
+      <span>To reduce model size and computational requirements</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858752" value="2">
+      <span>To enhance model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858752" value="3">
+      <span>To simplify model architecture</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which layers can be quantized using GGUF?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386854400" value="0">
+      <span>Only linear layers</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386854400" value="1">
+      <span>Only convolutional layers</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386854400" value="2">
+      <span>Both linear and convolutional layers</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386854400" value="3">
+      <span>Only recurrent layers</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-3.ipynb)

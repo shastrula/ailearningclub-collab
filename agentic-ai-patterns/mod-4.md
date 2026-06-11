@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Effective tool integration involves selecting the appropriate tools based on the task requirements, ensuring compatibility with the agent's architecture, and implementing robust error handling. It is also important to monitor tool performance and update integrations as needed to maintain optimal functionality.
+
+```python title="example2.py"
+import subprocess
+
+# Define a function to use a local tool (e.g., a script or command-line tool)
+def run_local_tool(command):
+    try:
+        result = subprocess.run(command, shell=True, capture_output=True, text=True)
+        return result.stdout
+    except Exception as e:
+        return str(e)
+
+# Example usage
+output = run_local_tool('echo Hello, World!')
+print(output)
+```
+
+> **💡 Tip:** When integrating tools, always test for compatibility and performance under various conditions to ensure reliability and efficiency.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of tool use in Agentic AI?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114176" value="0">
+      <span>To increase computational power</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114176" value="1">
+      <span>To enhance problem-solving capabilities</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114176" value="2">
+      <span>To reduce human intervention</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114176" value="3">
+      <span>To improve data storage</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What should be considered when integrating a new tool with an Agentic AI system?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118016" value="0">
+      <span>The tool's color scheme</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118016" value="1">
+      <span>The tool's compatibility and performance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118016" value="2">
+      <span>The tool's brand reputation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118016" value="3">
+      <span>The tool's price</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/agentic-ai-patterns/mod-4.ipynb)

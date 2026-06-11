@@ -55,6 +55,74 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Chain-of-Thought (CoT) prompting encourages the model to provide intermediate reasoning steps before arriving at a final answer. ReAct (Reason + Act) prompting combines reasoning with actionable steps, allowing the model to perform tasks that require both understanding and execution.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Text generation with CoT
+generator = pipeline("text-generation", model="google/t5-v1_1-base")
+
+# Example input
+prompt = "What is the capital of France? Let's think step by step: France is a country in Europe. The capital of France is Paris."
+
+# Generate text
+result = generator(prompt, max_length=50)
+print(result[0]['generated_text'])
+```
+
+> **💡 Tip:** When using CoT prompting, ensure that the intermediate steps are clear and logically lead to the final answer to improve the model's performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary difference between zero-shot and few-shot learning?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179200" value="0">
+      <span>Zero-shot learning uses no examples, while few-shot learning uses a few examples.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179200" value="1">
+      <span>Zero-shot learning uses a few examples, while few-shot learning uses no examples.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179200" value="2">
+      <span>Both use the same number of examples.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179200" value="3">
+      <span>Zero-shot learning is not used in prompt engineering.</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of Chain-of-Thought (CoT) prompting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179648" value="0">
+      <span>To make the model faster.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179648" value="1">
+      <span>To provide intermediate reasoning steps before the final answer.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179648" value="2">
+      <span>To reduce the model's vocabulary.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179648" value="3">
+      <span>To limit the model's output length.</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/prompt-engineering/mod-1.ipynb)

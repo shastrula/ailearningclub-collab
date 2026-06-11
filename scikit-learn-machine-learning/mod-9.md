@@ -59,6 +59,88 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Tuning the parameters of a Gradient Boosting model is essential for achieving optimal performance. Key parameters include `n_estimators` (number of boosting stages), `learning_rate` (shrinkage rate), and `max_depth` (maximum depth of individual trees). Proper tuning can significantly enhance the model's accuracy and generalization capability.
+
+```python title="example2.py"
+from sklearn.model_selection import GridSearchCV
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.datasets import make_classification
+
+# Generate a binary classification dataset
+X, y = make_classification(n_samples=100, n_features=4,
+                           n_informative=2, n_redundant=0,
+                           random_state=0, shuffle=False)
+
+# Define the model
+gbm = GradientBoostingClassifier()
+
+# Define the parameter grid
+param_grid = {
+    'n_estimators': [50, 100, 200],
+    'learning_rate': [0.01, 0.1, 0.2],
+    'max_depth': [1, 3, 5]
+}
+
+# Perform Grid Search
+grid_search = GridSearchCV(estimator=gbm, param_grid=param_grid, cv=3, n_jobs=-1)
+grid_search.fit(X, y)
+
+# Best parameters
+print(grid_search.best_params_)
+```
+
+> **💡 Tip:** Always perform cross-validation when tuning hyperparameters to avoid overfitting and ensure the model generalizes well to unseen data.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of each new model in Gradient Boosting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060160" value="0">
+      <span>To replicate the previous model</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060160" value="1">
+      <span>To correct the errors of the previous model</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060160" value="2">
+      <span>To ignore the previous model</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060160" value="3">
+      <span>To double the complexity of the previous model</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which parameter controls the number of boosting stages in Gradient Boosting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387053824" value="0">
+      <span>learning_rate</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387053824" value="1">
+      <span>max_depth</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387053824" value="2">
+      <span>n_estimators</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387053824" value="3">
+      <span>subsample</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/scikit-learn-machine-learning/mod-9.ipynb)

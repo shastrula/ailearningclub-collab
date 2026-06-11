@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Asynchronous processing allows AI agents to handle multiple requests concurrently, reducing overall response time. By using Python's asyncio library, we can create non-blocking code that efficiently manages I/O-bound and high-level structured network code.
+
+```python title="example2.py"
+import asyncio
+
+async def ai_agent_async_task():
+    # Simulate an asynchronous task with a sleep
+    await asyncio.sleep(1)
+    return 'Async task completed'
+
+async def main():
+    tasks = [ai_agent_async_task() for _ in range(3)]
+    results = await asyncio.gather(*tasks)
+    print(results)
+
+asyncio.run(main())
+```
+
+> **💡 Tip:** When implementing asynchronous processing, ensure that all I/O-bound operations are awaited properly to avoid blocking the event loop. Also, be mindful of the Global Interpreter Lock (GIL) in Python, which can limit the effectiveness of asynchronous code in CPU-bound tasks.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary cause of high latency in AI agents?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387061056" value="0">
+      <span>Insufficient memory</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387061056" value="1">
+      <span>High CPU usage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387061056" value="2">
+      <span>Network congestion</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387061056" value="3">
+      <span>Long execution times</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Python library is used for implementing asynchronous processing?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387045952" value="0">
+      <span>threading</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387045952" value="1">
+      <span>multiprocessing</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387045952" value="2">
+      <span>asyncio</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387045952" value="3">
+      <span>concurrent.futures</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-10.ipynb)

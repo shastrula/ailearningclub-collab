@@ -59,6 +59,96 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Hyperparameter tuning is critical for achieving good performance with neural networks. Common hyperparameters include the number of hidden layers, the number of neurons in each layer, the activation function, the solver (optimization algorithm), and the learning rate. Cross-validation is a technique used to evaluate the model's performance on different subsets of the data, ensuring that the model generalizes well. Scikit-Learn provides tools like GridSearchCV to automate the process of hyperparameter tuning with cross-validation.
+
+```python title="example2.py"
+from sklearn.neural_network import MLPClassifier
+from sklearn.datasets import make_classification
+from sklearn.model_selection import GridSearchCV, train_test_split
+
+# Generate a random n-class classification problem
+X, y = make_classification(n_samples=100, n_features=20, n_informative=2, n_redundant=10, n_classes=2, random_state=1)
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
+
+# Define the parameter grid
+param_grid = {
+    'hidden_layer_sizes': [(50,), (100,), (50, 50)],
+    'activation': ['relu', 'tanh', 'logistic'],
+   'solver': ['adam','sgd']
+}
+
+# Create an MLPClassifier
+mlp = MLPClassifier(max_iter=300, random_state=1)
+
+# Set up the grid search
+grid_search = GridSearchCV(mlp, param_grid, cv=5, scoring='accuracy')
+
+# Perform the grid search
+grid_search.fit(X_train, y_train)
+
+# Print the best parameters and the best score
+print(f'Best parameters: {grid_search.best_params_}')
+print(f'Best score: {grid_search.best_score_:.2f}')
+
+# Evaluate the best model on the test set
+best_mlp = grid_search.best_estimator_
+print(f'Test set score: {best_mlp.score(X_test, y_test):.2f}')
+```
+
+> **💡 Tip:** When tuning hyperparameters, start with a coarse grid to identify promising regions of the parameter space, then refine your search in those regions. This approach is more efficient than performing a fine-grained search over the entire parameter space from the start.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary function of the MLPClassifier in Scikit-Learn?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950592" value="0">
+      <span>To perform linear regression</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950592" value="1">
+      <span>To implement a multi-layer perceptron for classification</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950592" value="2">
+      <span>To cluster data points</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950592" value="3">
+      <span>To perform dimensionality reduction</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Scikit-Learn tool is used for hyperparameter tuning with cross-validation?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386952064" value="0">
+      <span>RandomizedSearchCV</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386952064" value="1">
+      <span>KFold</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386952064" value="2">
+      <span>GridSearchCV</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386952064" value="3">
+      <span>StratifiedKFold</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/scikit-learn-machine-learning/mod-23.ipynb)

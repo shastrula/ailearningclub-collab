@@ -59,6 +59,34 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Commit .kiro/specs/rate-limiting/ alongside the code. Six months later, when someone asks 'why does the rate limiter fail open?', the answer is in requirements.md. When you need to extend it, Kiro can read the original spec and design to understand the intent.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why should you commit .kiro/specs/ files to your git repository?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903808" value="0">
+      <span>Kiro requires them to be in git to function</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903808" value="1">
+      <span>They serve as living documentation of intent and allow future AI sessions to understand the original design decisions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903808" value="2">
+      <span>They are required for deployment</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903808" value="3">
+      <span>They replace unit tests</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/kiro-spec-dev/mod-7.ipynb)

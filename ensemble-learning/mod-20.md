@@ -59,6 +59,85 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Boosting is an ensemble technique that reduces bias by sequentially training models, where each new model attempts to correct the errors of the previous one. Popular boosting algorithms include XGBoost, LightGBM, and CatBoost. These methods are effective for both classification and regression tasks and often yield high performance.
+
+```python title="example2.py"
+import xgboost as xgb
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Split dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create an XGBoost classifier
+xgb_clf = xgb.XGBClassifier(use_label_encoder=False, eval_metric='logloss')
+
+# Train the model
+xgb_clf.fit(X_train, y_train)
+
+# Make predictions
+y_pred = xgb_clf.predict(X_test)
+
+# Print the accuracy
+print('Accuracy:', xgb_clf.score(X_test, y_test))
+```
+
+> **💡 Tip:** When using ensemble methods, ensure that the base models are diverse to maximize the benefits of ensemble learning.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of Bagging?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180928" value="0">
+      <span>To reduce bias</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180928" value="1">
+      <span>To reduce variance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180928" value="2">
+      <span>To increase model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180928" value="3">
+      <span>To improve interpretability</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which ensemble method focuses on sequentially training models to correct errors?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181056" value="0">
+      <span>Bagging</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181056" value="1">
+      <span>Stacking</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181056" value="2">
+      <span>Voting</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181056" value="3">
+      <span>Boosting</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ensemble-learning/mod-20.ipynb)

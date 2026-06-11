@@ -59,6 +59,86 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+A marginal distribution is the probability distribution of a subset of random variables, obtained by summing or integrating out the other variables from the joint distribution. It provides insights into the individual behavior of a variable, irrespective of the others.
+
+```python title="example2.py"
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import multivariate_normal
+
+# Define mean vector and covariance matrix
+mean = [0, 0]
+cov = [[1, 0.5], [0.5, 1]]
+
+# Create a multivariate normal distribution
+mv_normal = multivariate_normal(mean, cov)
+
+# Generate samples from the distribution
+samples = mv_normal.rvs(1000)
+
+# Calculate the marginal distribution for X
+marginal_x = np.histogram(samples[:, 0], bins=30, density=True)
+
+# Plot the marginal distribution
+plt.plot(marginal_x[1][:-1], marginal_x[0])
+plt.title('Marginal Distribution of X')
+plt.xlabel('X')
+plt.ylabel('Probability Density')
+plt.show()
+```
+
+> **💡 Tip:** When working with high-dimensional data, visualizing joint and marginal distributions can help in understanding the underlying structure and relationships between variables.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does a joint distribution represent?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118720" value="0">
+      <span>The probability of a single variable</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118720" value="1">
+      <span>The probability distribution of two or more random variables</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118720" value="2">
+      <span>The sum of probabilities of all variables</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118720" value="3">
+      <span>The difference between two distributions</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How is a marginal distribution obtained from a joint distribution?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112128" value="0">
+      <span>By multiplying the probabilities</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112128" value="1">
+      <span>By summing or integrating out the other variables</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112128" value="2">
+      <span>By subtracting the probabilities</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112128" value="3">
+      <span>By dividing the probabilities</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-4.ipynb)

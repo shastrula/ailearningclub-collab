@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Data cleaning and preprocessing are critical steps to ensure the accuracy and reliability of your analysis. This involves handling missing values, removing duplicates, and transforming data into a suitable format. Clean data is essential for accurate and meaningful insights.
+
+```python title="example2.py"
+import pandas as pd
+
+# Load data from a CSV file
+data = pd.read_csv('data.csv')
+
+# Handle missing values by filling them with the mean of the column
+data['Age'].fillna(data['Age'].mean(), inplace=True)
+
+# Remove duplicate rows
+data.drop_duplicates(inplace=True)
+
+# Display the cleaned data
+print(data.head())
+```
+
+> **💡 Tip:** Always make a backup of your original data before performing any cleaning operations to avoid accidental data loss.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of loading and exploring data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907904" value="0">
+      <span>To transform data into a suitable format</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907904" value="1">
+      <span>To understand the structure and content of the data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907904" value="2">
+      <span>To remove duplicates from the data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907904" value="3">
+      <span>To fill missing values</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method is used to handle missing values in a Pandas DataFrame?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907392" value="0">
+      <span>fillna()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907392" value="1">
+      <span>dropna()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907392" value="2">
+      <span>clean()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907392" value="3">
+      <span>preprocess()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/jupyter-notebooks-what-how-why/mod-10.ipynb)

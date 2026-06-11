@@ -55,6 +55,160 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Images are embedded with the `<img>` tag. Always include an `alt` attribute for accessibility:
+
+```html
+<img src="photo.jpg" alt="A beautiful sunset" width="400" height="300">
+
+<picture>
+  <source media="(max-width: 600px)" srcset="small.jpg">
+  <source media="(min-width: 601px)" srcset="large.jpg">
+  <img src="default.jpg" alt="Responsive image">
+</picture>
+
+<video width="400" controls>
+  <source src="video.mp4" type="video/mp4">
+  Your browser doesn't support HTML5 video.
+</video>
+
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+  Your browser doesn't support HTML5 audio.
+</audio>
+```
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does HTML stand for?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2847561" value="0">
+      <span>HyperText Markup Language</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2847561" value="1">
+      <span>High Tech Markup Language</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2847561" value="2">
+      <span>Home Tool Markup Language</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2847561" value="3">
+      <span>Hyperlinks and Text Markup Language</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which tag is used for the main content of a page?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6392847" value="0">
+      <span>&lt;body&gt;</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6392847" value="1">
+      <span>&lt;section&gt;</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6392847" value="2">
+      <span>&lt;main&gt;</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6392847" value="3">
+      <span>&lt;article&gt;</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of the alt attribute in images?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7561294" value="0">
+      <span>To set the image size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7561294" value="1">
+      <span>To provide alternative text for accessibility</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7561294" value="2">
+      <span>To add a border around the image</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7561294" value="3">
+      <span>To link to another page</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which attribute specifies where a form should send its data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4829371" value="0">
+      <span>action</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4829371" value="1">
+      <span>method</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4829371" value="2">
+      <span>target</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4829371" value="3">
+      <span>submit</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is semantic HTML?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9284756" value="0">
+      <span>HTML that uses only div tags</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9284756" value="1">
+      <span>HTML that is minified for performance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9284756" value="2">
+      <span>HTML that uses inline styles</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9284756" value="3">
+      <span>HTML that uses tags describing their meaning</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/web-development-basics/mod-2.ipynb)

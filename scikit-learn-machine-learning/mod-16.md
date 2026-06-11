@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Precision and recall are essential metrics for evaluating the performance of classification models, especially in imbalanced datasets. Precision measures the proportion of true positive predictions among all positive predictions, while recall measures the proportion of true positive predictions among all actual positives.
+
+```python title="example2.py"
+from sklearn.metrics import precision_score, recall_score
+
+y_true = [0, 1, 2, 2, 2]
+y_pred = [0, 0, 2, 2, 1]
+
+# Calculate precision and recall
+precision = precision_score(y_true, y_pred, average='macro')
+recall = recall_score(y_true, y_pred, average='macro')
+
+print(f'Precision: {precision}')
+print(f'Recall: {recall}')
+```
+
+> **💡 Tip:** When dealing with imbalanced datasets, consider using metrics like precision, recall, and the F1 score instead of accuracy to get a more comprehensive understanding of your model's performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the accuracy metric measure?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049920" value="0">
+      <span>The proportion of incorrect predictions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049920" value="1">
+      <span>The proportion of correct predictions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049920" value="2">
+      <span>The proportion of true positives</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049920" value="3">
+      <span>The proportion of false negatives</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which metric is better suited for imbalanced datasets?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387051008" value="0">
+      <span>Accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387051008" value="1">
+      <span>Precision</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387051008" value="2">
+      <span>Recall</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387051008" value="3">
+      <span>None of the above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/scikit-learn-machine-learning/mod-16.ipynb)

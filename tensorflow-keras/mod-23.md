@@ -59,6 +59,85 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Transparency in machine learning involves making the decision-making process of models understandable to stakeholders. Accountability ensures that there are mechanisms in place to address any adverse effects caused by the models. This can be achieved through documentation, clear communication of model limitations, and establishing protocols for model audits and reviews.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# Sample dataset
+data = pd.DataFrame({
+    'feature': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    'label': [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
+})
+
+# Splitting the data
+X_train, X_test, y_train, y_test = train_test_split(data[['feature']], data['label'], test_size=0.2, random_state=42)
+
+# Training a logistic regression model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Predicting and evaluating
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Model Accuracy: {accuracy:.2f}')
+```
+
+> **💡 Tip:** Always document the data sources, preprocessing steps, and model choices to ensure transparency. Regularly review and update models to adapt to new data and changing contexts.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is bias in machine learning?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907328" value="0">
+      <span>A random error in the model</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907328" value="1">
+      <span>A systematic error introduced by the data or algorithms</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907328" value="2">
+      <span>A model's inability to generalize</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907328" value="3">
+      <span>A model's high accuracy on training data</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the importance of transparency in machine learning?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386914112" value="0">
+      <span>To hide the model's decision-making process</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386914112" value="1">
+      <span>To make the decision-making process understandable to stakeholders</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386914112" value="2">
+      <span>To increase model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386914112" value="3">
+      <span>To reduce model accuracy</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/tensorflow-keras/mod-23.ipynb)

@@ -55,6 +55,84 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Divisive hierarchical clustering is a top-down approach where all data points start in one cluster, and clusters are recursively split into smaller clusters. This method is less common than agglomerative clustering but can be useful in certain applications where a top-down approach is more intuitive.
+
+```python title="example2.py"
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.cluster.hierarchy import dendrogram, linkage, cut_tree
+from sklearn.datasets import make_blobs
+
+# Generate sample data
+X, _ = make_blobs(n_samples=50, n_features=2, centers=4, cluster_std=0.60, random_state=0)
+
+# Perform divisive hierarchical clustering
+linked = linkage(X, 'ward')
+
+# Cut the dendrogram to form 4 clusters
+clusters = cut_tree(linked, n_clusters=4).reshape(-1,)
+
+# Plot the clusters
+plt.figure(figsize=(10, 7))
+plt.scatter(X[:, 0], X[:, 1], c=clusters, cmap='viridis')
+plt.title('Divisive Hierarchical Clustering')
+plt.xlabel('Feature 1')
+plt.ylabel('Feature 2')
+plt.show()
+```
+
+> **💡 Tip:** When choosing the number of clusters in hierarchical clustering, consider using domain knowledge or techniques like the elbow method to determine the optimal number of clusters.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary difference between agglomerative and divisive hierarchical clustering?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387262976" value="0">
+      <span>Agglomerative starts with all points in one cluster, divisive starts with each point in its own cluster</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387262976" value="1">
+      <span>Agglomerative starts with each point in its own cluster, divisive starts with all points in one cluster</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387262976" value="2">
+      <span>Agglomerative uses a top-down approach, divisive uses a bottom-up approach</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387262976" value="3">
+      <span>Agglomerative is more complex than divisive</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which linkage method is used in the provided code examples for hierarchical clustering?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387263040" value="0">
+      <span>Single linkage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387263040" value="1">
+      <span>Complete linkage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387263040" value="2">
+      <span>Average linkage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387263040" value="3">
+      <span>Ward's method</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/unsupervised-learning/mod-6.ipynb)

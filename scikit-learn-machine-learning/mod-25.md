@@ -59,6 +59,75 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+After preprocessing, the next step is to train and evaluate machine learning models. This involves selecting appropriate models, tuning hyperparameters, and using cross-validation to assess performance. Ensemble methods like Random Forests and Gradient Boosting often provide better results than individual models due to their ability to reduce variance and bias.
+
+```python title="model_training.py"
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import cross_val_score
+
+# Assuming X_preprocessed and y are defined
+y = [0, 1, 0]
+
+# Initialize the model
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Perform cross-validation
+scores = cross_val_score(model, X_preprocessed, y, cv=5)
+print('Cross-validated scores:', scores)
+```
+
+> **💡 Tip:** Always use cross-validation to get a robust estimate of your model's performance. It helps prevent overfitting and provides a more reliable metric for model evaluation.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of data preprocessing in machine learning?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959936" value="0">
+      <span>To reduce model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959936" value="1">
+      <span>To improve model performance by cleaning and transforming data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959936" value="2">
+      <span>To increase dataset size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959936" value="3">
+      <span>To select features</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method is commonly used to evaluate the performance of a machine learning model?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957248" value="0">
+      <span>Grid Search</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957248" value="1">
+      <span>Cross-Validation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957248" value="2">
+      <span>Feature Scaling</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957248" value="3">
+      <span>One-Hot Encoding</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/scikit-learn-machine-learning/mod-25.ipynb)

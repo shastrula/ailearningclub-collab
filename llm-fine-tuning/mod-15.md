@@ -59,6 +59,80 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Common evaluation metrics for fine-tuned language models include accuracy, precision, recall, F1 score, and perplexity. These metrics provide a comprehensive view of the model's performance. Additionally, latency and throughput are critical for assessing the model's efficiency in real-time applications. Proper selection and interpretation of these metrics are vital for effective benchmarking.
+
+```python title="example2.py"
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+# Simulated ground truth and predictions
+ground_truth = [1, 0, 1, 0]
+predictions = [1, 1, 1, 0]
+
+# Calculate metrics
+accuracy = accuracy_score(ground_truth, predictions)
+precision = precision_score(ground_truth, predictions)
+recall = recall_score(ground_truth, predictions)
+f1 = f1_score(ground_truth, predictions)
+
+# Print results
+print(f'Accuracy: {accuracy}')
+print(f'Precision: {precision}')
+print(f'Recall: {recall}')
+print(f'F1 Score: {f1}')
+```
+
+> **💡 Tip:** When benchmarking, ensure that the evaluation dataset is representative of the real-world data the model will encounter. This helps in obtaining more reliable and generalizable performance metrics.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of benchmarking fine-tuned models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188288" value="0">
+      <span>To enhance model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188288" value="1">
+      <span>To evaluate model performance and efficiency</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188288" value="2">
+      <span>To reduce model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188288" value="3">
+      <span>To increase model training time</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which metric is NOT typically used for evaluating language models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192384" value="0">
+      <span>Accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192384" value="1">
+      <span>Precision</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192384" value="2">
+      <span>Throughput</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192384" value="3">
+      <span>Model size</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/llm-fine-tuning/mod-15.ipynb)

@@ -59,6 +59,84 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Reflection in Agentic AI refers to the ability of an agent to evaluate its own actions and decisions, learn from past experiences, and adapt its behavior accordingly. This self-assessment mechanism enhances the agent's performance over time by identifying successful strategies and avoiding repeated mistakes.
+
+```python title="example2.py"
+class ReflectiveAgent:
+    def __init__(self):
+        self.actions = []
+        self.results = {}
+
+    def perform_action(self, action):
+        self.actions.append(action)
+        # Simulate an outcome
+        outcome = random.choice([True, False])
+        self.results[action] = outcome
+        return outcome
+
+    def reflect(self):
+        successful_actions = [action for action, result in self.results.items() if result]
+        print(f"Successful actions: {successful_actions}")
+
+# Example usage
+agent = ReflectiveAgent()
+agent.perform_action('action1')
+agent.perform_action('action2')
+agent.reflect()
+```
+
+> **💡 Tip:** Ensure that the reflection mechanism is regularly updated with new actions and outcomes to maintain its effectiveness.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of planning in Agentic AI?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180032" value="0">
+      <span>To create random actions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180032" value="1">
+      <span>To determine efficient paths to goals</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180032" value="2">
+      <span>To store past actions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180032" value="3">
+      <span>To evaluate agent performance</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does reflection in Agentic AI involve?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181376" value="0">
+      <span>Creating new actions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181376" value="1">
+      <span>Evaluating past actions and learning from them</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181376" value="2">
+      <span>Storing outcomes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181376" value="3">
+      <span>Randomly selecting actions</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/agentic-ai-patterns/mod-14.ipynb)

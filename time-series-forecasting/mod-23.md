@@ -59,6 +59,86 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Ensuring fairness and mitigating bias in forecasting models is critical to avoid discriminatory outcomes. Bias can arise from historical data that reflects systemic inequalities or from model assumptions that favor certain groups. It is important to regularly audit models for bias, use diverse datasets, and implement fairness constraints during model training.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+from fbprophet import Prophet
+
+# Load dataset
+data = pd.read_csv('time_series_data.csv')
+data = data.rename(columns={'date': 'ds', 'value': 'y'})
+
+# Split data into training and testing sets
+train, test = train_test_split(data, test_size=0.2, shuffle=False)
+
+# Fit Prophet model
+model = Prophet()
+model.fit(train)
+
+# Make predictions
+future = model.make_future_dataframe(periods=len(test))
+forecast = model.predict(future)
+
+# Evaluate model
+mse = mean_squared_error(test['y'], forecast[['yhat']].tail(len(test)))
+print(f'Mean Squared Error: {mse}')
+```
+
+> **💡 Tip:** When evaluating model performance, consider using multiple metrics to get a comprehensive understanding of its effectiveness and potential biases.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is transparency important in forecasting models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121600" value="0">
+      <span>It hides model assumptions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121600" value="1">
+      <span>It builds trust and accountability</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121600" value="2">
+      <span>It complicates model interpretation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121600" value="3">
+      <span>It increases computational cost</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a critical step to ensure fairness in forecasting models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122752" value="0">
+      <span>Ignoring historical data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122752" value="1">
+      <span>Using a single metric for evaluation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122752" value="2">
+      <span>Regularly auditing for bias</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122752" value="3">
+      <span>Increasing model complexity</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/time-series-forecasting/mod-23.ipynb)

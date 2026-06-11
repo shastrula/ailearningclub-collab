@@ -55,6 +55,75 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Conda makes it easy to install, upgrade, and remove packages. You can install packages using the `conda install` command, and manage them within your environments to avoid conflicts.
+
+```python title="example2.py"
+import conda
+from conda import api
+
+# Install 'numpy' package in the active environment
+api.install(name='numpy', channel='conda-forge')
+
+# Upgrade 'numpy' to the latest version
+api.upgrade(name='numpy')
+
+# List the installed version of 'numpy'
+installed_version = conda.cli.main.run_command(['list', 'numpy'])
+print(installed_version)
+```
+
+> **💡 Tip:** Always specify the channel when installing packages to ensure you are getting the latest and most secure versions.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of using Conda environments?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956928" value="0">
+      <span>To manage global Python packages</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956928" value="1">
+      <span>To create isolated spaces for projects</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956928" value="2">
+      <span>To manage system-wide settings</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956928" value="3">
+      <span>To install packages from the internet</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which command is used to install a package in a Conda environment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962944" value="0">
+      <span>conda install</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962944" value="1">
+      <span>pip install</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962944" value="2">
+      <span>conda activate</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962944" value="3">
+      <span>conda upgrade</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/conda-package-management-and-environments/mod-4.ipynb)

@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Quantization is a technique used to reduce the precision of model weights and activations, leading to smaller model sizes and faster computations. The bitsandbytes library provides tools to quantize models to 8-bit and 4-bit precision. This can be particularly beneficial for deploying models on edge devices or in environments with limited computational resources.
+
+```python title="example2.py"
+import torch
+import bitsandbytes as bnb
+
+# Load a pre-trained model
+model = torch.load('pretrained_model.pth')
+
+# Quantize the model to 8-bit
+quantized_model = bnb.nn.quantize(model, bits=8)
+
+# Save the quantized model
+torch.save(quantized_model, 'quantized_model.pth')
+```
+
+> **💡 Tip:** When quantizing models, it's important to evaluate the quantized model's performance to ensure it meets your accuracy requirements. Sometimes, fine-tuning the quantized model can help recover any lost accuracy.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of the bitsandbytes library?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112640" value="0">
+      <span>To increase model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112640" value="1">
+      <span>To reduce memory footprint and computational cost</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112640" value="2">
+      <span>To enhance model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112640" value="3">
+      <span>To simplify model deployment</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which precision levels does bitsandbytes support for quantization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112960" value="0">
+      <span>16-bit and 32-bit</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112960" value="1">
+      <span>8-bit and 16-bit</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112960" value="2">
+      <span>4-bit and 8-bit</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112960" value="3">
+      <span>32-bit and 64-bit</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-7.ipynb)

@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Pandas DataFrames are powerful for data manipulation and cleaning. Best practices involve using methods like `dropna()` for handling missing values, `fillna()` for imputation, and `apply()` for custom transformations. Additionally, leveraging `groupby()` for aggregation and `merge()` for combining datasets efficiently are critical skills. These practices ensure data integrity and prepare datasets for analysis.
+
+```python title="example2.py"
+import pandas as pd
+
+# Create a sample DataFrame
+data = {'A': [1, 2, np.nan], 'B': [4, np.nan, 6]}
+df = pd.DataFrame(data)
+
+# Fill missing values with the mean of the column
+df['A'].fillna(df['A'].mean(), inplace=True)
+df['B'].fillna(df['B'].mean(), inplace=True)
+
+print(df)
+```
+
+> **💡 Tip:** Always check for and handle missing values before performing any analysis to avoid skewed results.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using NumPy arrays over Python lists for data science tasks?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387087680" value="0">
+      <span>Easier syntax</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387087680" value="1">
+      <span>Better memory management</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387087680" value="2">
+      <span>Faster execution</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387087680" value="3">
+      <span>More built-in functions</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Pandas method is best for combining two DataFrames based on a common column?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088320" value="0">
+      <span>concat()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088320" value="1">
+      <span>merge()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088320" value="2">
+      <span>join()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088320" value="3">
+      <span>append()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-24.ipynb)

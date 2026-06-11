@@ -59,6 +59,72 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Plotly is a powerful library for creating interactive plots and dashboards. It allows you to build dynamic visualizations that can be embedded in web applications, making it easier to share insights with stakeholders. Plotly's flexibility and interactivity make it an excellent choice for EDA, especially when dealing with large datasets.
+
+```python title="example2.py"
+import plotly.express as px
+import pandas as pd
+
+# Load a sample dataset
+data = px.data.iris()
+
+# Create an interactive scatter plot
+fig = px.scatter(data, x='sepal_length', y='sepal_width', color='species', title='Interactive Scatter Plot of Sepal Length vs Sepal Width')
+fig.show()
+```
+
+> **💡 Tip:** When creating dashboards with Plotly, make use of the `update_layout` method to customize the appearance of your plots, such as adding annotations, modifying axis labels, and adjusting the legend.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Python library is used for creating static, animated, and interactive visualizations in Python?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907584" value="0">
+      <span>Seaborn</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907584" value="1">
+      <span>Matplotlib</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907584" value="2">
+      <span>Plotly</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907584" value="3">
+      <span>Pandas</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What function from Seaborn is used to create a matrix of scatterplots showing pairwise relationships in a dataset?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908160" value="0">
+      <span>sns.scatterplot()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908160" value="1">
+      <span>sns.pairplot()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908160" value="2">
+      <span>sns.heatmap()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908160" value="3">
+      <span>sns.boxplot()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/matplotlib-visualization/mod-11.ipynb)

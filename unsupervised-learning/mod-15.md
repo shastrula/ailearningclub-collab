@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) groups together points that are packed closely together, marking as outliers points that lie alone in low-density regions. Evaluating DBSCAN involves assessing the number of clusters formed and the number of noise points, as well as using metrics like the Silhouette Score for the formed clusters.
+
+```python title="example2.py"
+from sklearn.cluster import DBSCAN
+from sklearn.metrics import silhouette_score
+
+# Apply DBSCAN clustering
+dbscan = DBSCAN(eps=0.5, min_samples=5)
+dbscan.fit(X)
+
+# Evaluate the model
+clusters = len(set(dbscan.labels_)) - (1 if -1 in dbscan.labels_ else 0)
+noise = list(dbscan.labels_).count(-1)
+silhouette = silhouette_score(X, dbscan.labels_[dbscan.labels_!= -1])
+
+print(f'Number of Clusters: {clusters}')
+print(f'Number of Noise Points: {noise}')
+print(f'Silhouette Score: {silhouette}')
+```
+
+> **💡 Tip:** When evaluating DBSCAN, ensure that the parameters eps and min_samples are tuned appropriately for your dataset to avoid misclassification of noise points as clusters.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What metric is commonly used to evaluate the compactness of clusters in K-Means?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088064" value="0">
+      <span>Confusion Matrix</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088064" value="1">
+      <span>Within-Cluster Sum of Squares</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088064" value="2">
+      <span>ROC Curve</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088064" value="3">
+      <span>Precision Score</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which parameter in DBSCAN controls the maximum distance between two samples for them to be considered as in the same neighborhood?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080320" value="0">
+      <span>min_samples</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080320" value="1">
+      <span>eps</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080320" value="2">
+      <span>metric</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080320" value="3">
+      <span>algorithm</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/unsupervised-learning/mod-15.ipynb)

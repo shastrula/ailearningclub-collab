@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+AI agent integrations involve embedding intelligent agents within applications to perform specific tasks. These agents can range from simple rule-based systems to complex machine learning models. Effective integration requires understanding the agent's capabilities, the application's requirements, and the communication protocols like MCP.
+
+```python title="example2.py"
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+# Endpoint to receive MCP requests
+@app.route('/mcp', methods=['POST'])
+def receive_mcp_request():
+    data = request.json
+    model = data.get('model')
+    context = data.get('context')
+    # Process the request (example: simple echo)
+    response = {'status':'success','model': model, 'context': context}
+    return jsonify(response)
+
+if __name__ == '__main__':
+    app.run(port=5000)
+```
+
+> **💡 Tip:** When integrating AI agents, ensure that the communication protocol (like MCP) is well-documented and consistently implemented across all components to avoid compatibility issues.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of Model Context Protocol (MCP)?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862144" value="0">
+      <span>To manage database connections</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862144" value="1">
+      <span>To facilitate communication between AI models and their contexts</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862144" value="2">
+      <span>To handle user authentication</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862144" value="3">
+      <span>To optimize server hardware</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a key consideration when integrating AI agents into applications?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862784" value="0">
+      <span>The color scheme of the application</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862784" value="1">
+      <span>The agent's communication protocol compatibility</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862784" value="2">
+      <span>The application's graphical user interface</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862784" value="3">
+      <span>The server's physical location</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-20.ipynb)

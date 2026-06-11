@@ -59,6 +59,75 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+TensorRT is a high-performance deep learning inference optimizer and runtime. It provides significant speedups by optimizing the inference graph and leveraging the GPU's parallel processing capabilities. This makes it ideal for deploying models that require low-latency responses.
+
+```python title="example2.py"
+import tensorrt as trt
+
+# Initialize the TensorRT engine
+engine = trt.Builder(trt.BuilderFlags.FP16).build_engine_from_onnx('model.onnx')
+
+# Define a sample input
+input_data = [1.0, 2.0, 3.0, 4.0]
+
+# Perform inference
+output = engine.execute(input_data)
+
+print(output)
+```
+
+> **💡 Tip:** When using TensorRT, ensure that your model is compatible with the FP16 precision to take full advantage of the speedups offered by the framework.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using vLLM for inference?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957952" value="0">
+      <span>Reduced model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957952" value="1">
+      <span>Increased inference speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957952" value="2">
+      <span>Lower memory usage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957952" value="3">
+      <span>Better accuracy</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which precision mode is recommended for optimal performance in TensorRT?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960256" value="0">
+      <span>FP32</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960256" value="1">
+      <span>INT8</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960256" value="2">
+      <span>FP16</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960256" value="3">
+      <span>BF16</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/production-inference/mod-9.ipynb)

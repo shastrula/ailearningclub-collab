@@ -55,6 +55,75 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+The p-value is a crucial metric in hypothesis testing. It represents the probability of observing the test statistic (or something more extreme) if the null hypothesis is true. A low p-value (typically < 0.05) suggests that the observed data is unlikely under the null hypothesis, leading us to reject H0 in favor of H1. Conversely, a high p-value indicates insufficient evidence to reject H0.
+
+```python title="example2.py"
+import scipy.stats as stats
+
+# Example: Comparing means of two groups
+# Null hypothesis: The means of the two groups are equal
+# Alternative hypothesis: The means of the two groups are not equal
+
+# Sample data for two groups
+group1 = [12, 14, 16, 18, 20]
+group2 = [10, 13, 15, 17, 19]
+
+t_stat, p_value = stats.ttest_ind(group1, group2)
+print(f'T-statistic: {t_stat}, P-value: {p_value}')
+```
+
+> **💡 Tip:** Always ensure that your sample data meets the assumptions of the statistical test you are using, such as normality and equal variances for t-tests.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does a low p-value indicate in hypothesis testing?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114880" value="0">
+      <span>The null hypothesis is likely true</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114880" value="1">
+      <span>The alternative hypothesis is likely true</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114880" value="2">
+      <span>The test is invalid</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114880" value="3">
+      <span>There is no significant difference</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ When should you reject the null hypothesis?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121408" value="0">
+      <span>When the p-value is high</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121408" value="1">
+      <span>When the p-value is low (typically < 0.05)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121408" value="2">
+      <span>When the t-statistic is zero</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121408" value="3">
+      <span>When the sample size is small</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-5.ipynb)

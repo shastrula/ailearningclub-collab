@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Once a model is saved, it can be loaded back into memory using the `joblib.load` function. This is particularly useful in production environments where models need to be deployed and used without retraining. Loading a model is straightforward and allows you to continue using the model for predictions or further analysis.
+
+```python title="example2.py"
+import joblib
+from sklearn.linear_model import LinearRegression
+
+# Load the saved model
+loaded_model = joblib.load('linear_regression_model.joblib')
+
+# Use the loaded model to make a prediction
+prediction = loaded_model.predict([[3]])
+print(f'Prediction: {prediction[0]}')
+```
+
+```
+Prediction: 3.0
+```
+
+> **💡 Tip:** Ensure that the environment where you load the model has the same versions of Scikit-Learn and other dependencies as the environment where the model was trained to avoid compatibility issues.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which library is primarily used for saving and loading Scikit-Learn models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056256" value="0">
+      <span>Pickle</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056256" value="1">
+      <span>Pandas</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056256" value="2">
+      <span>Joblib</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056256" value="3">
+      <span>Numpy</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What function is used to load a saved model using Joblib?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054976" value="0">
+      <span>joblib.save</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054976" value="1">
+      <span>joblib.load</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054976" value="2">
+      <span>joblib.dump</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054976" value="3">
+      <span>joblib.restore</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/scikit-learn-machine-learning/mod-18.ipynb)

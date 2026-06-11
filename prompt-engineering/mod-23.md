@@ -52,6 +52,74 @@ Recent advances in Advanced Topics and Research in Prompt Engineering:
 
 True mastery comes from implementing Advanced Topics and Research in Prompt Engineering in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+Chain-of-Thought prompting encourages models to provide reasoning steps before arriving at an answer, enhancing their problem-solving capabilities. ReAct (Reason and Act) prompting involves the model reasoning about a task and then taking an action, simulating a more interactive and dynamic problem-solving process.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Text generation pipeline
+generator = pipeline('text-generation')
+
+# CoT prompt
+prompt = "Let's think step by step: What is the capital of France? The capital of France is Paris."
+
+# Generate text
+result = generator(prompt, max_length=50)
+print(result[0]['generated_text'])
+```
+
+> **💡 Tip:** When using CoT prompting, ensure that the intermediate steps are clear and logically lead to the final answer to improve the model's performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of zero-shot learning?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387094272" value="0">
+      <span>Requires large datasets</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387094272" value="1">
+      <span>Allows model to perform unseen tasks</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387094272" value="2">
+      <span>Needs extensive training</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387094272" value="3">
+      <span>Limits model flexibility</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does CoT prompting aim to enhance in AI models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387090624" value="0">
+      <span>Memory capacity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387090624" value="1">
+      <span>Problem-solving capabilities</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387090624" value="2">
+      <span>Data processing speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387090624" value="3">
+      <span>User interface design</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/prompt-engineering/mod-23.ipynb)

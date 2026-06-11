@@ -59,6 +59,85 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Callbacks in Dash allow you to create interactive elements in your dashboard. By defining a callback function, you can update parts of your dashboard in response to user actions, such as clicking a button or selecting a dropdown. Callbacks use the @app.callback decorator to specify input and output components.
+
+```python title="example2.py"
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output
+
+app = dash.Dash(__name__)
+
+app.layout = html.Div([
+    dcc.Input(id='input-box', type='text', value=''),
+    html.Button('Submit', id='button', n_clicks=0),
+    html.H1(id='output-text')
+])
+
+@app.callback(
+    Output('output-text', 'children'), 
+    [Input('input-box', 'value'), Input('button', 'n_clicks')]
+)
+def update_output(value, n_clicks):
+    return f'Input: {value}, Number of clicks: {n_clicks}'
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
+```
+
+> **💡 Tip:** Ensure that the component IDs in your callback match the IDs defined in your layout to avoid errors.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of initializing a Dash app in Plotly Dash?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908544" value="0">
+      <span>To create a database connection</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908544" value="1">
+      <span>To set up the Dash application framework</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908544" value="2">
+      <span>To define the data visualization components</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908544" value="3">
+      <span>To run the server</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What decorator is used to define callbacks in Dash?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386910400" value="0">
+      <span>@app.route</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386910400" value="1">
+      <span>@app.callback</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386910400" value="2">
+      <span>@app.interact</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386910400" value="3">
+      <span>@app.update</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/matplotlib-visualization/mod-10.ipynb)

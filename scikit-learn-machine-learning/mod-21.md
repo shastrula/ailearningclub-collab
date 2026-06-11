@@ -59,6 +59,86 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Hierarchical clustering creates a tree of clusters. It can be agglomerative (bottom-up) or divisive (top-down). Agglomerative clustering starts with each data point as a separate cluster and merges them until a stopping criterion is met. It is useful for visualizing the structure of the data through dendrograms.
+
+```python title="example2.py"
+from sklearn.cluster import AgglomerativeClustering
+import numpy as np
+from scipy.cluster.hierarchy import dendrogram, linkage
+import matplotlib.pyplot as plt
+
+# Generate sample data
+X = np.array([[1, 2], [1, 4], [1, 0],
+              [4, 2], [4, 4], [4, 0]])
+
+# Apply Agglomerative Clustering
+clustering = AgglomerativeClustering(n_clusters=2).fit(X)
+
+# Get cluster labels
+labels = clustering.labels_
+
+# Plot dendrogram
+linked = linkage(X,'single')
+plt.figure(figsize=(10, 7))
+dendrogram(linked)
+plt.title('Dendrogram')
+plt.show()
+
+print('Cluster labels:', labels)
+```
+
+> **💡 Tip:** When choosing the number of clusters for K-Means, use the Elbow Method to find the optimal K by plotting the sum of squared distances from each point to its assigned center.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of K-Means clustering?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954112" value="0">
+      <span>To maximize variance within clusters</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954112" value="1">
+      <span>To minimize variance within clusters</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954112" value="2">
+      <span>To maximize the distance between clusters</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954112" value="3">
+      <span>To minimize the distance between clusters</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which type of clustering builds a tree of clusters?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954880" value="0">
+      <span>K-Means</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954880" value="1">
+      <span>DBSCAN</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954880" value="2">
+      <span>Hierarchical</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954880" value="3">
+      <span>Spectral</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/scikit-learn-machine-learning/mod-21.ipynb)

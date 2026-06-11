@@ -55,6 +55,83 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+TensorRT is a high-performance deep learning inference optimizer and runtime. It accelerates neural network inference by optimizing models for deployment on NVIDIA GPUs, resulting in significant speedups and reduced latency.
+
+```python title="example2.py"
+import tensorrt as trt
+
+# Initialize the TensorRT logger and builder
+TRT_LOGGER = trt.Logger(trt.Logger.WARNING)
+builder = trt.Builder(TRT_LOGGER)
+
+# Create a network and configure the builder
+network = builder.create_network(1 << int(trt.NetworkDefinitionCreationFlag.EXPLICIT_BATCH))
+config = builder.create_builder_config()
+
+# Load a pre-trained model and build the engine
+with trt.Builder(TRT_LOGGER) as builder, builder.create_network() as network, builder.create_builder_config() as config:
+    # Add layers and operations to the network
+    #... (code to add layers)
+    # Build the engine
+    engine = builder.build_engine(network, config)
+
+    # Save the engine to a file
+    with open('model.engine', 'wb') as f:
+        f.write(engine.serialize())
+```
+
+> **💡 Tip:** When using TensorRT, ensure that your model is compatible with the supported layer types and operations. Additionally, profile your model to identify bottlenecks and optimize accordingly.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of vLLM?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860992" value="0">
+      <span>To train large language models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860992" value="1">
+      <span>To optimize serving of large language models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860992" value="2">
+      <span>To preprocess text data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860992" value="3">
+      <span>To visualize model architectures</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which of the following is a key feature of TensorRT?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863168" value="0">
+      <span>Model training acceleration</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863168" value="1">
+      <span>CPU-based inference optimization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863168" value="2">
+      <span>GPU-based inference optimization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863168" value="3">
+      <span>Data preprocessing</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/production-inference/mod-1.ipynb)

@@ -55,6 +55,39 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+✗ Real-time systems requiring extreme performance (use C/C++)
+✗ Mobile apps (use Swift for iOS, Kotlin for Android)
+✗ Systems programming (use C/Rust)
+✗ Games (use C# with Unity or C++ with Unreal)
+
+> **💡 Tip:** In production AI systems, you often use Python for training and prototyping, then convert to C++/Java for deployment if performance is critical.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is Python good for AI despite being slow?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902528" value="0">
+      <span>It's actually faster than C++</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902528" value="1">
+      <span>Libraries use C/C++ under the hood for performance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902528" value="2">
+      <span>Speed doesn't matter for AI</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902528" value="3">
+      <span>Python is only used for prototyping</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/python-fundamentals/mod-1.ipynb)

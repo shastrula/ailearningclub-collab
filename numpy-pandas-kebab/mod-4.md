@@ -59,6 +59,59 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Histograms and box plots are essential for understanding the distribution and spread of data. We will explore how to create these plots using Pandas and Matplotlib.
+
+> **💡 Tip:** Use histograms to understand the distribution of a single variable, and box plots to visualize the spread and detect outliers.
+
+```python title="example.py"
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Create a simple dataset
+data = pd.Series(np.random.randn(100))
+
+# Histogram
+data.plot(kind='hist', bins=20)
+plt.title('Histogram')
+plt.show()
+
+# Box Plot
+data.plot(kind='box')
+plt.title('Box Plot')
+plt.show()
+```
+
+```
+A histogram showing the distribution of data values and a box plot showing the spread and outliers.
+```
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which plot is best for understanding the distribution of a dataset?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375011584" value="0">
+      <span>A) Scatter plot</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375011584" value="1">
+      <span>B) Histogram</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375011584" value="2">
+      <span>C) Line plot</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375011584" value="3">
+      <span>D) Bar plot</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-kebab/mod-4.ipynb)

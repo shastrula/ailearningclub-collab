@@ -59,6 +59,72 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Pair plots are a matrix of scatter plots used to visualize relationships between multiple variables. They are particularly useful in exploratory data analysis (EDA) for identifying correlations and patterns among different features in a dataset.
+
+```python title="example2.py"
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load the iris dataset
+iris = sns.load_dataset('iris')
+
+# Create a pair plot
+sns.pairplot(iris, hue='species')
+plt.show()
+```
+
+> **💡 Tip:** When creating pair plots, ensure that the dataset is not too large, as this can make the plot cluttered and difficult to interpret.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What type of plot is used to visualize the distribution of a single variable?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079296" value="0">
+      <span>Bar plot</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079296" value="1">
+      <span>Box plot</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079296" value="2">
+      <span>Histogram</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079296" value="3">
+      <span>Scatter plot</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of a pair plot in data analysis?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080448" value="0">
+      <span>To show the distribution of a single variable</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080448" value="1">
+      <span>To compare two variables</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080448" value="2">
+      <span>To visualize relationships between multiple variables</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080448" value="3">
+      <span>To display time-series data</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-18.ipynb)

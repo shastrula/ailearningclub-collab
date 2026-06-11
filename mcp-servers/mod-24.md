@@ -59,6 +59,81 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Building AI agent integrations involves creating systems where multiple AI models work together to achieve a common goal. This requires understanding how to interface different models, handle data flow, and manage context transitions. Effective integrations can lead to more powerful and versatile AI applications.
+
+```python title="example2.py"
+import requests
+
+# Example of integrating two AI models
+def integrate_models():
+    model1_url = 'https://api.example.com/model1'
+    model2_url = 'https://api.example.com/model2'
+    
+    # Send a request to Model 1
+    response1 = requests.post(model1_url, json={'prompt': 'Summarize this text:'})
+    summary = response1.json().get('summary')
+    
+    # Send the summary to Model 2
+    response2 = requests.post(model2_url, json={'text': summary})
+    final_output = response2.json().get('output')
+    
+    print(f'Final integrated output: {final_output}')
+
+integrate_models()
+```
+
+> **💡 Tip:** When building AI agent integrations, ensure that the data formats between models are compatible and that error handling is robust to manage any discrepancies or failures in communication.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of Model Context Protocol (MCP)?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386953024" value="0">
+      <span>To secure data transmission</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386953024" value="1">
+      <span>To standardize interactions between models and contexts</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386953024" value="2">
+      <span>To train machine learning models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386953024" value="3">
+      <span>To store model data</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a key consideration when building AI agent integrations?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948416" value="0">
+      <span>The computational power of individual models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948416" value="1">
+      <span>The compatibility of data formats between models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948416" value="2">
+      <span>The number of models integrated</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948416" value="3">
+      <span>The cost of API calls</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-24.ipynb)

@@ -59,6 +59,73 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Local LLMs can inherit biases present in their training data, leading to unfair outcomes. It is crucial to regularly audit models for bias and implement mitigation strategies. This includes diverse dataset curation and ongoing model evaluation to ensure equitable performance across different user groups.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.metrics import confusion_matrix
+
+# Example dataset
+data = {'predicted': [0, 1, 0, 1], 'actual': [0, 0, 1, 1]}
+df = pd.DataFrame(data)
+
+# Calculate confusion matrix
+cm = confusion_matrix(df['actual'], df['predicted'])
+print(cm)
+```
+
+> **💡 Tip:** Regularly update and retrain your local LLMs with new, diverse datasets to minimize bias and improve fairness over time.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a critical practice for ensuring data privacy in local LLMs?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052096" value="0">
+      <span>Storing data in plain text</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052096" value="1">
+      <span>Encrypting data at rest and in transit</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052096" value="2">
+      <span>Sharing data openly</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052096" value="3">
+      <span>Ignoring access controls</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is an effective strategy to mitigate bias in local LLMs?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054784" value="0">
+      <span>Using a single, homogeneous dataset</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054784" value="1">
+      <span>Ignoring model performance across different groups</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054784" value="2">
+      <span>Regularly auditing models for bias</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054784" value="3">
+      <span>Not updating the model</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-18.ipynb)

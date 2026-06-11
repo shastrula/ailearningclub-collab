@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+For regression, common metrics are:
+- **MAE** (Mean Absolute Error) — Average absolute difference
+- **RMSE** (Root Mean Squared Error) — Penalizes large errors more
+- **R²** (Coefficient of Determination) — Proportion of variance explained (0-1)
+
+```python title="example3.py"
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+
+# Predictions
+y_pred_reg = model.predict(X_test)
+
+mae = mean_absolute_error(y_test, y_pred_reg)
+rmse = np.sqrt(mean_squared_error(y_test, y_pred_reg))
+r2 = r2_score(y_test, y_pred_reg)
+
+print(f"MAE: {mae:.3f}")
+print(f"RMSE: {rmse:.3f}")
+print(f"R²: {r2:.3f}")
+```
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ When should you use Recall over Precision?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387700001" value="0">
+      <span>When false positives are costly (spam detection)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387700001" value="1">
+      <span>When the dataset is balanced</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387700001" value="2">
+      <span>When false negatives are costly (disease detection)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387700001" value="3">
+      <span>When training time is limited</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does ROC-AUC = 0.5 indicate?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387700002" value="0">
+      <span>Perfect classification</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387700002" value="1">
+      <span>Random guessing (no discriminative power)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387700002" value="2">
+      <span>50% accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387700002" value="3">
+      <span>Balanced precision and recall</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/scikit-learn-machine-learning/mod-27.ipynb)

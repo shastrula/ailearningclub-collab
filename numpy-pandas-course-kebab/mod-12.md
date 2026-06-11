@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Missing data is a common issue in real-world datasets. Pandas offers several methods to handle missing values, such as `dropna` to remove them and `fillna` to replace them with specified values or methods like forward fill or backward fill.
+
+```python title="example2.py"
+import pandas as pd
+import numpy as np
+
+# Create a DataFrame with missing values
+df = pd.DataFrame({'A': [1, 2, np.nan], 'B': [4, np.nan, 6], 'C': [7, 8, 9]})
+
+# Remove rows with any missing values
+df_cleaned = df.dropna()
+print(df_cleaned)
+
+# Fill missing values with a specified value
+df_filled = df.fillna(0)
+print(df_filled)
+```
+
+> **💡 Tip:** When handling missing data, consider the nature of your dataset and the implications of each method. Removing data might lead to loss of information, while filling might introduce bias.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which function is used to get a concise summary of a DataFrame in Pandas?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959168" value="0">
+      <span>head</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959168" value="1">
+      <span>info</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959168" value="2">
+      <span>describe</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959168" value="3">
+      <span>summary</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What method can be used to fill missing values in a DataFrame with a specified value?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955648" value="0">
+      <span>removena</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955648" value="1">
+      <span>impute</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955648" value="2">
+      <span>fillna</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955648" value="3">
+      <span>replacena</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-12.ipynb)

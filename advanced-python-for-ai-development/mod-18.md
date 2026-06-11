@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+CI/CD pipelines automate the process of testing and deploying code changes. By integrating CI/CD into the development workflow, teams can rapidly and reliably deploy AI models, ensuring that updates are consistently delivered to production.
+
+**example2.py**
+
+```
+import subprocess
+
+# Define the command to run the CI/CD pipeline
+ci_command = 'bash <(curl -s https://example.com/cicd-pipeline)'
+
+# Execute the CI/CD pipeline
+process = subprocess.Popen(ci_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+stdout, stderr = process.communicate()
+
+# Print the output of the CI/CD pipeline
+print(stdout.decode('utf-8'))
+```
+
+> **💡 Tip:** Ensure that your CI/CD pipeline includes thorough testing steps to catch any issues early in the deployment process.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of using Docker for deploying AI models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905024" value="0">
+      <span>It simplifies the deployment process.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905024" value="1">
+      <span>It reduces the size of the model.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905024" value="2">
+      <span>It increases the model's performance.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905024" value="3">
+      <span>It eliminates the need for testing.</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a key feature of CI/CD pipelines in AI development?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="0">
+      <span>They automate the deployment process.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="1">
+      <span>They reduce the need for version control.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="2">
+      <span>They eliminate the need for testing.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="3">
+      <span>They increase the complexity of the deployment process.</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/advanced-python-for-ai-development/mod-18.ipynb)

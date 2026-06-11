@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Data augmentation involves creating modified copies of the data to increase the dataset's size and variability. Common techniques include rotation, scaling, flipping, and adding noise. These methods help prevent overfitting and improve the model's ability to generalize to new data.
+
+```python title="example2.py"
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
+# Sample image
+image = np.array([[[1], [2]], [[3], [4]]]).reshape((1, 2, 2, 1))
+
+# Data augmentation
+datagen = ImageDataGenerator(rotation_range=45, width_shift_range=0.2, height_shift_range=0.2, horizontal_flip=True)
+
+# Generating augmented images
+augmented_images = [image for image in datagen.flow(image, batch_size=1)]
+
+print('Original Image:', image)
+print('Augmented Image:', augmented_images[0][0])
+```
+
+> **💡 Tip:** When applying data augmentation, ensure that the transformations are realistic and relevant to the problem domain to avoid introducing noise that could degrade model performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of data normalization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862144" value="0">
+      <span>To increase the dataset size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862144" value="1">
+      <span>To scale data to a range of [0, 1]</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862144" value="2">
+      <span>To shuffle the dataset</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862144" value="3">
+      <span>To add noise to the data</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which technique is used to prevent overfitting by creating modified copies of data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852032" value="0">
+      <span>Data normalization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852032" value="1">
+      <span>Data standardization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852032" value="2">
+      <span>Data augmentation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852032" value="3">
+      <span>Data shuffling</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/tensorflow-keras/mod-7.ipynb)

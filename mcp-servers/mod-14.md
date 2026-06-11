@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+The landscape of tools and resources for AI agent development is expanding. Future trends highlight the integration of advanced machine learning frameworks, enhanced development environments, and collaborative platforms that facilitate the creation and deployment of sophisticated AI agents.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Example of using a pre-trained model from Hugging Face
+def analyze_sentiment(text):
+    """Analyzes the sentiment of the given text using a pre-trained model."""
+    sentiment_analysis = pipeline('sentiment-analysis')
+    result = sentiment_analysis(text)
+    return result
+
+# Usage
+text = 'I love using AI agents for my tasks!'
+sentiment_result = analyze_sentiment(text)
+print(sentiment_result)
+```
+
+> **💡 Tip:** When integrating AI agents, ensure that you are using the latest versions of libraries and frameworks to benefit from the most recent advancements and security patches.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a key trend in the evolution of MCP servers?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054976" value="0">
+      <span>Decreased scalability</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054976" value="1">
+      <span>Increased security</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054976" value="2">
+      <span>Reduced efficiency</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054976" value="3">
+      <span>Lower cost</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which tool is commonly used for AI agent development?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852288" value="0">
+      <span>Microsoft Word</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852288" value="1">
+      <span>Hugging Face Transformers</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852288" value="2">
+      <span>Adobe Photoshop</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852288" value="3">
+      <span>Google Chrome</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-14.ipynb)

@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is a density-based clustering algorithm. Unlike K-Means, DBSCAN does not require specifying the number of clusters beforehand. It forms clusters based on the density of data points, identifying core points, border points, and noise points.
+
+```python title="example2.py"
+from sklearn.cluster import DBSCAN
+from sklearn.datasets import make_moons
+
+# Generate sample data
+X, _ = make_moons(n_samples=300, noise=0.05, random_state=0)
+
+# Apply DBSCAN clustering
+dbsc = DBSCAN(eps=0.3, min_samples=5).fit(X)
+
+# Get cluster labels
+labels = dbsc.labels_
+
+print('Cluster labels:', labels)
+```
+
+> **💡 Tip:** When using DBSCAN, carefully choose the `eps` (epsilon) and `min_samples` parameters to ensure meaningful clusters. Too large an `eps` can merge distinct clusters, while too small a value can create too many clusters.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary difference between K-Means and DBSCAN clustering?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086528" value="0">
+      <span>Both require the number of clusters to be specified</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086528" value="1">
+      <span>K-Means requires the number of clusters, DBSCAN does not</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086528" value="2">
+      <span>DBSCAN requires the number of clusters, K-Means does not</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086528" value="3">
+      <span>Both are density-based clustering algorithms</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ In DBSCAN, what does the parameter `eps` control?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088448" value="0">
+      <span>The maximum distance between two samples for them to be considered as in the same neighborhood</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088448" value="1">
+      <span>The number of samples in a neighborhood for a point to be considered as a core point</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088448" value="2">
+      <span>The learning rate of the algorithm</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088448" value="3">
+      <span>The random state for reproducibility</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/unsupervised-learning/mod-17.ipynb)

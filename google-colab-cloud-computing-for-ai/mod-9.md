@@ -59,6 +59,72 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Monitoring resource usage helps in understanding how your code is performing and where potential bottlenecks might be. Google Colab provides built-in tools to monitor CPU and memory usage, which can be accessed through the 'Runtime' menu.
+
+```python title="example2.py"
+# Import necessary libraries
+import psutil
+
+# Get CPU and memory usage
+cpu_usage = psutil.cpu_percent(interval=1)
+memory_usage = psutil.virtual_memory().percent
+
+print(f'CPU Usage: {cpu_usage}%')
+print(f'Memory Usage: {memory_usage}%')
+```
+
+> **💡 Tip:** Regularly monitor your resource usage to avoid unexpected runtime terminations due to resource exhaustion.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which runtime is best suited for deep learning tasks?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387176896" value="0">
+      <span>CPU runtime</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387176896" value="1">
+      <span>GPU runtime</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387176896" value="2">
+      <span>TPU runtime</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387176896" value="3">
+      <span>None of the above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the psutil library help you monitor in Google Colab?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180480" value="0">
+      <span>Disk usage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180480" value="1">
+      <span>CPU and memory usage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180480" value="2">
+      <span>Network speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180480" value="3">
+      <span>GPU temperature</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/google-colab-cloud-computing-for-ai/mod-9.ipynb)

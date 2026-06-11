@@ -55,6 +55,79 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+AutoGen allows agents to use external tools to perform tasks more effectively. This feature enables agents to interact with APIs, databases, and other resources, enhancing their capabilities. By integrating tool use, agents can execute complex operations that go beyond their inherent functionalities.
+
+```python title="example2.py"
+from autogen import Agent, Tool
+
+# Create an agent instance
+agent = Agent(name="tool_user_agent")
+
+# Create a tool instance
+tool = Tool(name="weather_api", api_key="your_api_key")
+
+# Define a task for the agent
+task = "Check the weather in New York"
+
+# Use the tool to perform the task
+result = tool.execute(task)
+
+# Print the result
+print(result)
+```
+
+> **💡 Tip:** Ensure that the API keys and credentials for external tools are securely managed and not hard-coded in the script to prevent security risks.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of the Planner component in AutoGen?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948672" value="0">
+      <span>To manage agent communication</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948672" value="1">
+      <span>To generate task plans</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948672" value="2">
+      <span>To execute external tools</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948672" value="3">
+      <span>To handle agent reflection</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How does AutoGen enable agents to use external tools?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386949504" value="0">
+      <span>By integrating directly with the operating system</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386949504" value="1">
+      <span>By using pre-defined APIs</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386949504" value="2">
+      <span>Through the Tool component</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386949504" value="3">
+      <span>By modifying the agent's core code</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/agentic-ai-patterns/mod-7.ipynb)

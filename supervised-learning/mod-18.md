@@ -59,6 +59,88 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Underfitting occurs when a model is too simple to capture the underlying pattern in the data, resulting in poor performance on both the training and testing sets. This is often due to insufficient model complexity or lack of features. To address underfitting, one can increase model complexity, add more features, or reduce regularization.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+
+# Generate synthetic data
+np.random.seed(0)
+x = 2 - 3 * np.random.normal(0, 1, 100)[:, np.newaxis]
+y = x**3 + 0.5 * np.random.normal(size=x.shape)
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+
+# Fit a simple linear regression model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Predict and evaluate
+y_train_pred = model.predict(X_train)
+y_test_pred = model.predict(X_test)
+train_error = mean_squared_error(y_train, y_train_pred)
+test_error = mean_squared_error(y_test, y_test_pred)
+
+print(f'Training Error: {train_error}')
+print(f'Testing Error: {test_error}')
+```
+
+> **💡 Tip:** Always use cross-validation to evaluate model performance and avoid relying solely on training or testing error metrics.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a common cause of overfitting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861440" value="0">
+      <span>High bias</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861440" value="1">
+      <span>High variance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861440" value="2">
+      <span>Insufficient data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861440" value="3">
+      <span>Low complexity</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a common cause of underfitting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088960" value="0">
+      <span>High variance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088960" value="1">
+      <span>High bias</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088960" value="2">
+      <span>Excessive data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088960" value="3">
+      <span>Complex model</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning/mod-18.ipynb)

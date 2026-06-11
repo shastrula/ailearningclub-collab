@@ -59,6 +59,69 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+To update all packages in a Conda environment, you can use the `conda update --all` command. This command updates all packages in the current environment to their latest versions, ensuring that your environment is up-to-date and consistent.
+
+```python title="example2.py"
+import conda
+from conda import api
+
+# Update all packages in the current environment
+api.update(None, all=True)
+print('All packages have been updated to the latest versions.')
+```
+
+> **💡 Tip:** Always review the changelogs or release notes of major packages before updating, as some updates may introduce breaking changes.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which command updates a specific package to its latest version?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902784" value="0">
+      <span>conda update --all</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902784" value="1">
+      <span>conda update <package></span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902784" value="2">
+      <span>conda install <package></span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902784" value="3">
+      <span>conda upgrade <package></span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the `conda update --all` command do?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908992" value="0">
+      <span>Updates a specific package</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908992" value="1">
+      <span>Updates all packages in the environment</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908992" value="2">
+      <span>Removes outdated packages</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908992" value="3">
+      <span>Lists all outdated packages</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/conda-package-management-and-environments/mod-6.ipynb)

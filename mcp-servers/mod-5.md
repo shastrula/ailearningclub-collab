@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Incorporating context and specificity into prompts ensures that the AI understands the nuances of the request. This involves providing background information, specifying the desired format of the response, and highlighting any particular aspects that need to be addressed.
+
+```python title="example2.py"
+def craft_contextual_prompt(task, context, format='paragraph'):
+    """Craft a contextually rich prompt based on a given task and context."""
+    # Define a template for the prompt
+    prompt_template = 'Given the context of {context}, please provide a {format} explanation of the following topic: {task}'
+    
+    # Fill in the template with the task, context, and format
+    prompt = prompt_template.format(context=context, task=task, format=format)
+    
+    return prompt
+
+# Example usage
+task = 'quantum computing'
+context = 'its applications in cryptography'
+format = 'bullet points'
+prompt = craft_contextual_prompt(task, context, format)
+print(prompt)
+```
+
+> **💡 Tip:** Always test your prompts with the AI to ensure they produce the desired output. Iterate and refine based on the responses you receive.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of an effective prompt?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060608" value="0">
+      <span>To be vague and open-ended</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060608" value="1">
+      <span>To be clear, concise, and specific</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060608" value="2">
+      <span>To be as long as possible</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060608" value="3">
+      <span>To include as much jargon as possible</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is it important to incorporate context into a prompt?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060800" value="0">
+      <span>To make the prompt longer</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060800" value="1">
+      <span>To ensure the AI understands the nuances of the request</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060800" value="2">
+      <span>To avoid using any specific terms</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060800" value="3">
+      <span>To make the prompt more complex</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-5.ipynb)

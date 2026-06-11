@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Generics provide compile-time type safety by allowing you to specify the type of objects that a collection can hold. This prevents the need for type casting and reduces the risk of runtime errors. Generics are specified within angle brackets (<>) following the class name.
+
+```java title="example2.java"
+import java.util.LinkedList;
+
+public class Example2 {
+    public static void main(String[] args) {
+        // Create a LinkedList of Integers
+        LinkedList<Integer> numbers = new LinkedList<>();
+
+        // Add elements to the list
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+
+        // Print the list
+        System.out.println("LinkedList: " + numbers);
+    }
+}
+```
+
+> **💡 Tip:** When using generics, always specify the type to avoid ClassCastException at runtime.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the List interface allow in Java Collections Framework?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950016" value="0">
+      <span>Unordered collections of unique elements</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950016" value="1">
+      <span>Ordered collections</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950016" value="2">
+      <span>Key-value pairs</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950016" value="3">
+      <span>None of the above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How do you specify generics in a Java collection?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114304" value="0">
+      <span>Within angle brackets <></span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114304" value="1">
+      <span>Within square brackets []</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114304" value="2">
+      <span>Within curly braces {}</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387114304" value="3">
+      <span>Within parentheses ()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-8.ipynb)

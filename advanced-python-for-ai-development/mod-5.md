@@ -59,6 +59,87 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Many APIs require authentication to access their data. Common methods include API keys, OAuth tokens, and Bearer tokens. This section will demonstrate how to include these authentication methods in your API requests. Properly handling authentication is crucial to avoid access issues and ensure secure data retrieval.
+
+**example2.py**
+
+```
+import requests
+
+# Define the API endpoint and your API key
+url = 'https://api.example.com/secure-data'
+api_key = 'your_api_key_here'
+
+# Define headers for the request
+headers = {
+    'Authorization': f'Bearer {api_key}',
+    'Content-Type': 'application/json'
+}
+
+# Make a GET request to the API with authentication
+response = requests.get(url, headers=headers)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the JSON response
+    data = response.json()
+    print(data)
+else:
+    print(f'Request failed with status code: {response.status_code}')
+```
+
+> **💡 Tip:** Always keep your API keys and tokens secure. Avoid hardcoding them in your scripts; instead, use environment variables or a configuration file.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of using the `requests` library in Python?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386855936" value="0">
+      <span>To handle database queries</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386855936" value="1">
+      <span>To interact with APIs</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386855936" value="2">
+      <span>To manage file I/O operations</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386855936" value="3">
+      <span>To perform mathematical calculations</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How do you typically handle API authentication in Python?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386854976" value="0">
+      <span>By using the `os` module</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386854976" value="1">
+      <span>By including headers in the request</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386854976" value="2">
+      <span>By modifying the URL</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386854976" value="3">
+      <span>By using the `json` module</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/advanced-python-for-ai-development/mod-5.ipynb)

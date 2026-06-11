@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+A Persistence Context in JPA is a set of entity instances managed by the JPA provider. Transactions are used to group a set of operations into a single atomic unit of work. The @Transactional annotation is used to mark methods that should be executed within a transaction. JPA provides mechanisms to handle transactions declaratively or programmatically.
+
+```java title="example2.java"
+@Service
+public class EmployeeService {
+
+    @PersistenceContext
+    private EntityManager entityManager;
+
+    @Transactional
+    public void saveEmployee(Employee employee) {
+        entityManager.persist(employee);
+    }
+
+    @Transactional
+    public Employee findEmployee(Long id) {
+        return entityManager.find(Employee.class, id);
+    }
+}
+```
+
+> **💡 Tip:** Always ensure that transactions are properly managed to avoid data inconsistencies and to maintain database integrity.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the @Entity annotation do in JPA?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187008" value="0">
+      <span>It marks the class as a transient object</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187008" value="1">
+      <span>It marks the class as a JPA entity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187008" value="2">
+      <span>It specifies the database table name</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187008" value="3">
+      <span>It denotes the primary key field</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How do you mark a method to be executed within a transaction in JPA?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187456" value="0">
+      <span>@Transactional</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187456" value="1">
+      <span>@Transaction</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187456" value="2">
+      <span>@Tx</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187456" value="3">
+      <span>@TransactionManagement</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-17.ipynb)

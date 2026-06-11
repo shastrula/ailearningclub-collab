@@ -59,6 +59,164 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Choose the right tool:
+
+```css
+/* Flexbox: one-dimensional, flexible */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grid: two-dimensional, structured */
+.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr 300px;
+  grid-template-rows: 60px 1fr 40px;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+```
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the viewport meta tag do?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7483920" value="0">
+      <span>Tells browsers how to render the page on different devices</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7483920" value="1">
+      <span>Sets the page background color</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7483920" value="2">
+      <span>Defines the page title</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7483920" value="3">
+      <span>Links to external stylesheets</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the mobile-first approach?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9384756" value="0">
+      <span>Designing only for mobile devices</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9384756" value="1">
+      <span>Using mobile-specific frameworks</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9384756" value="2">
+      <span>Starting with mobile styles, then adding styles for larger screens</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9384756" value="3">
+      <span>Hiding content on mobile devices</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does justify-content do in flexbox?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5729384" value="0">
+      <span>Aligns items vertically</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5729384" value="1">
+      <span>Aligns items along the main axis</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5729384" value="2">
+      <span>Sets the flex direction</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5729384" value="3">
+      <span>Wraps flex items</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which media query targets tablets?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374920" value="0">
+      <span>@media (min-width: 768px) and (max-width: 1023px)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374920" value="1">
+      <span>@media (max-width: 768px)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374920" value="2">
+      <span>@media (min-width: 1024px)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374920" value="3">
+      <span>@media tablet</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How do you make an image responsive?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6294857" value="0">
+      <span>Set a fixed width and height</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6294857" value="1">
+      <span>Use JavaScript to resize it</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6294857" value="2">
+      <span>Use the picture element only</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6294857" value="3">
+      <span>Set max-width: 100% and height: auto</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/web-development-basics/mod-6.ipynb)

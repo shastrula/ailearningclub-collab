@@ -59,6 +59,34 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Things that apply to every feature — error handling patterns, logging conventions, security rules — belong in steering files, not repeated in every spec. Keep specs focused on the specific feature; let steering handle the universal rules.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the right granularity for a Kiro spec?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904448" value="0">
+      <span>One spec for the entire project</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904448" value="1">
+      <span>One spec per file you plan to create</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904448" value="2">
+      <span>One spec per feature — large enough to be meaningful, small enough to review in one sitting</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904448" value="3">
+      <span>One spec per developer on the team</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/kiro-spec-dev/mod-8.ipynb)

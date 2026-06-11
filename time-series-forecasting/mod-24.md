@@ -59,6 +59,81 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Modern forecasting techniques like Facebook's Prophet and neural network-based models such as LSTM (Long Short-Term Memory) and Transformers are gaining traction. These models can handle complex patterns and seasonality more effectively, offering higher accuracy for non-linear and irregular time series data.
+
+```python title="example2.py"
+from fbprophet import Prophet
+import pandas as pd
+
+# Load time series data
+data = pd.read_csv('time_series_data.csv', parse_dates=['date'], index_col='date')
+data.reset_index(inplace=True)
+data.rename(columns={'date': 'ds', 'value': 'y'}, inplace=True)
+
+# Fit Prophet model
+model = Prophet()
+model.fit(data)
+
+# Create future dataframe
+future = model.make_future_dataframe(periods=12)
+
+# Forecast
+forecast = model.predict(future)
+print(forecast[['ds', 'yhat']][-12:])
+```
+
+> **💡 Tip:** When using Prophet, ensure your data is in the correct format with 'ds' for dates and 'y' for values to avoid common errors.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using SARIMA over ARIMA?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112448" value="0">
+      <span>SARIMA cannot handle seasonality</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112448" value="1">
+      <span>SARIMA handles seasonality better</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112448" value="2">
+      <span>SARIMA is simpler to implement</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387112448" value="3">
+      <span>SARIMA requires less data</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which model is specifically designed to handle non-linear time series data effectively?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387113984" value="0">
+      <span>ARIMA</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387113984" value="1">
+      <span>SARIMA</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387113984" value="2">
+      <span>Prophet</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387113984" value="3">
+      <span>LSTM</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/time-series-forecasting/mod-24.ipynb)

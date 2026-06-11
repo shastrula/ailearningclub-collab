@@ -52,6 +52,87 @@ Recent advances in LightGBM: Advanced Features:
 
 True mastery comes from implementing LightGBM: Advanced Features in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+LightGBM grows trees leaf-wise, as opposed to level-wise growth in traditional gradient boosting. This means that LightGBM adds a new leaf to the split that provides the most gain, which can lead to faster convergence and better performance. However, to avoid overfitting, a maximum depth limit is often set.
+
+```python title="example2.py"
+import lightgbm as lgb
+
+# Create a synthetic dataset
+from sklearn.datasets import make_classification
+X, y = make_classification(n_samples=10000, n_features=20, random_state=42)
+
+# Create a LightGBM dataset
+train_data = lgb.Dataset(X, label=y)
+
+# Set parameters for the model
+params = {
+    'objective': 'binary',
+    'metric': 'binary_logloss',
+    'num_leaves': 31,
+    'learning_rate': 0.05,
+   'max_depth': -1,  # No limit on max depth for leaf-wise tree growth
+    'min_data_in_leaf': 20
+}
+
+# Train the model
+model = lgb.train(params, train_data, num_boost_round=100)
+
+# Print the first few feature importances
+print(list(zip(model.feature_name(), model.feature_importance())))
+```
+
+> **💡 Tip:** When using leaf-wise growth, it's important to set a minimum number of data points in a leaf ('min_data_in_leaf') to prevent overfitting.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of histogram-based learning in LightGBM?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863296" value="0">
+      <span>Reduced computational complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863296" value="1">
+      <span>Increased memory usage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863296" value="2">
+      <span>Slower training times</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863296" value="3">
+      <span>Higher model variance</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the default growth strategy for trees in LightGBM?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852608" value="0">
+      <span>Level-wise</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852608" value="1">
+      <span>Depth-wise</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852608" value="2">
+      <span>Leaf-wise</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852608" value="3">
+      <span>Random</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ensemble-learning/mod-11.ipynb)

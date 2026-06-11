@@ -214,6 +214,148 @@ for event in response['stream']:
         print(event['contentBlockDelta']['delta']['text'], end='', flush=True)
 ```
 
+
+## Quiz
+
+```json
+{
+  "claude_response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Response text here"
+      }
+    ],
+    "usage": {
+      "input_tokens": 10,
+      "output_tokens": 50
+    },
+    "stop_reason": "end_turn"
+  },
+  "llama_response": {
+    "generation": "Response text here",
+    "prompt_token_count": 10,
+    "generation_token_count": 50,
+    "stop_reason": "length"
+  },
+  "converse_response": {
+    "output": {
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Response text here"
+          }
+        ]
+      }
+    },
+    "usage": {
+      "inputTokens": 10,
+      "outputTokens": 50
+    },
+    "stopReason": "end_turn"
+  }
+}
+```
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the main advantage of the Converse API over InvokeModel?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7382946" value="0">
+      <span>It's faster</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7382946" value="1">
+      <span>It handles message formatting automatically for multi-turn conversations</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7382946" value="2">
+      <span>It supports more models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7382946" value="3">
+      <span>It's cheaper</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method should you use for long-running responses to improve user experience?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8294756" value="0">
+      <span>InvokeModel with polling</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8294756" value="1">
+      <span>Converse API</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8294756" value="2">
+      <span>Streaming with invoke_model_with_response_stream or converse_stream</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8294756" value="3">
+      <span>Multiple sequential InvokeModel calls</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What error indicates that a model hasn't been enabled in your AWS account?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6384729" value="0">
+      <span>AccessDeniedException</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6384729" value="1">
+      <span>ThrottlingException</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6384729" value="2">
+      <span>ValidationException</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6384729" value="3">
+      <span>ModelNotFoundException</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How can you estimate the cost of an API call before invoking?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9374628" value="0">
+      <span>Use the AWS pricing calculator</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9374628" value="1">
+      <span>Count tokens in the response's usage field</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9374628" value="2">
+      <span>Call the GetTokenCount API</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9374628" value="3">
+      <span>Tokens cannot be counted in advance</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-bedrock/mod-3.ipynb)

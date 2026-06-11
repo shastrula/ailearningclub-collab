@@ -55,6 +55,74 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Conditional probability is the probability of an event occurring given that another event has already occurred. It is denoted as P(A|B), which reads as 'the probability of A given B.' This concept is vital in machine learning for understanding dependencies between variables and for algorithms like Naive Bayes.
+
+```python title="example2.py"
+def conditional_probability(event_a, event_b, sample_space):
+    # Calculates the conditional probability P(A|B)
+    intersection = len(set(event_a) & set(event_b))
+    probability_b = len(event_b) / len(sample_space)
+    return intersection / len(event_b) if probability_b!= 0 else 0
+
+# Example usage
+sample_space = [1, 2, 3, 4, 5, 6]
+event_a = [1, 2, 3]
+event_b = [1, 3, 5]
+print(f'Conditional Probability P(A|B): {conditional_probability(event_a, event_b, sample_space)}')# This function calculates the conditional probability of event A given event B.
+```
+
+> **💡 Tip:** When calculating conditional probabilities, ensure that the events are correctly defined and that the sample space is comprehensive to avoid incorrect results.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the probability of rolling a 6 on a fair six-sided die?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387093824" value="0">
+      <span>0.2</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387093824" value="1">
+      <span>0.1667</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387093824" value="2">
+      <span>0.3333</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387093824" value="3">
+      <span>0.1</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ If event A is rolling an even number and event B is rolling a number greater than 2 on a six-sided die, what is the conditional probability P(A|B)?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387094144" value="0">
+      <span>0.6</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387094144" value="1">
+      <span>0.5</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387094144" value="2">
+      <span>0.75</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387094144" value="3">
+      <span>1.0</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-1.ipynb)

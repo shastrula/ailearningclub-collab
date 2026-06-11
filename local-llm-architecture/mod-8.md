@@ -59,6 +59,71 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Running LLMs locally demands significant computational resources. Enterprises must ensure they have adequate CPU and GPU capabilities, sufficient RAM, and fast storage solutions. Additionally, optimizing model parameters and utilizing quantization techniques can help manage resource usage effectively, making it feasible to deploy LLMs in resource-constrained environments.
+
+```python title="example2.py"
+import psutil
+
+# Check system resources
+cpu_percent = psutil.cpu_percent(interval=1)
+memory_info = psutil.virtual_memory()
+
+print(f'CPU Usage: {cpu_percent}%)')
+print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
+```
+
+> **💡 Tip:** Regularly monitor system resource usage to ensure optimal performance and avoid bottlenecks when running LLMs.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary function of Ollama in LLM deployment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386951744" value="0">
+      <span>Data storage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386951744" value="1">
+      <span>Model training</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386951744" value="2">
+      <span>Model deployment and management</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386951744" value="3">
+      <span>User authentication</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which component is crucial for efficient LLM inference in resource-constrained environments?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959680" value="0">
+      <span>High-speed internet</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959680" value="1">
+      <span>Advanced cooling systems</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959680" value="2">
+      <span>Quantization techniques</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959680" value="3">
+      <span>Larger physical servers</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-8.ipynb)

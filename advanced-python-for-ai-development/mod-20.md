@@ -59,6 +59,56 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Create specific exceptions for better error handling in AI pipelines.
+
+```python title="custom_exceptions.py"
+class DataValidationError(Exception):
+    """Raised when data validation fails"""
+    pass
+
+class ModelNotFoundError(Exception):
+    """Raised when model file doesn't exist"""
+    pass
+
+def validate_data(data):
+    if not data or len(data) == 0:
+        raise DataValidationError("Data cannot be empty")
+    return data
+
+try:
+    validate_data([])
+except DataValidationError as e:
+    print(f"Validation failed: {e}")
+```
+
+```
+Validation failed: Data cannot be empty
+```
+
+> **💡 Tip:** Use specific exception types to make error handling more precise and informative.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does pdb.set_trace() do?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="0">
+      <span>Pauses execution and opens the debugger</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="1">
+      <span>Traces all function calls</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="2">
+      <span>Logs errors to a file</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/advanced-python-for-ai-development/mod-20.ipynb)

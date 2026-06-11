@@ -59,6 +59,39 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+> **Visual Guide:** This module includes diagrams and flowcharts. Check the course materials for detailed visualizations.
+
+
+Ensemble learning techniques such as bagging, boosting, and stacking are widely used in production to enhance model performance. These methods leverage the strengths of multiple models to achieve higher accuracy and stability. Proper implementation and monitoring of ensemble models are essential to ensure they perform well in production settings.
+
+> **💡 Tip:** When deploying ensemble models in production, always monitor their performance and retrain them periodically to adapt to new data.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which ensemble learning technique is best suited for handling imbalanced datasets in production?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180288" value="0">
+      <span>option A</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180288" value="1">
+      <span>correct answer</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180288" value="2">
+      <span>option C</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180288" value="3">
+      <span>option D</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ensemble-learning/mod-19.ipynb)

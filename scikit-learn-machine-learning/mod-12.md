@@ -59,6 +59,92 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Stratified K-Fold Cross-Validation is a variation of K-Fold where the folds are made by preserving the percentage of samples for each class. This is particularly useful for classification problems where the target variable is imbalanced. By maintaining the same class distribution in each fold, this method ensures that each fold is a good representative of the whole.
+
+```python title="example2.py"
+from sklearn.model_selection import StratifiedKFold
+from sklearn.datasets import load_iris
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Initialize StratifiedKFold
+skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=1)
+
+# Initialize model
+model = LogisticRegression(max_iter=200)
+
+# List to store scores
+scores = []
+
+# Perform Stratified K-Fold Cross-Validation
+for train_index, test_index in skf.split(X, y):
+    X_train, X_test = X[train_index], X[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+    model.fit(X_train, y_train)
+    predictions = model.predict(X_test)
+    score = accuracy_score(y_test, predictions)
+    scores.append(score)
+
+# Print average score
+print(f'Average accuracy: {sum(scores)/len(scores):.2f}')
+```
+
+> **💡 Tip:** Always use Stratified K-Fold for classification problems with imbalanced datasets to ensure each fold is representative of the class distribution.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of K-Fold Cross-Validation?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387055744" value="0">
+      <span>To increase model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387055744" value="1">
+      <span>To evaluate model performance on different subsets of the data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387055744" value="2">
+      <span>To reduce training time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387055744" value="3">
+      <span>To select the best hyperparameters</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is Stratified K-Fold Cross-Validation preferred for imbalanced datasets?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387051456" value="0">
+      <span>It reduces computational cost</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387051456" value="1">
+      <span>It maintains the same class distribution in each fold</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387051456" value="2">
+      <span>It increases model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387051456" value="3">
+      <span>It simplifies the model</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/scikit-learn-machine-learning/mod-12.ipynb)

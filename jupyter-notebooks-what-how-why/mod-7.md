@@ -59,6 +59,71 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Cell magics allow you to write multi-line commands and scripts within a single cell. They are particularly useful for tasks such as running shell commands, writing tests, or configuring notebook settings. One of the most commonly used cell magics is '%%time', which can be used to measure the execution time of a cell.
+
+```python title="example2.py"
+%%time
+
+import time
+
+# Simulate a time-consuming task
+time.sleep(2)
+
+print('Task completed')
+```
+
+> **💡 Tip:** When using cell magics, ensure that the magic command is on the first line of the cell to avoid unexpected behavior.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of line magics in Jupyter Notebooks?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955072" value="0">
+      <span>To execute multi-line commands</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955072" value="1">
+      <span>To operate on a single line of input</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955072" value="2">
+      <span>To run shell commands</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955072" value="3">
+      <span>To measure execution time</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which cell magic is used to measure the execution time of a cell?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961856" value="0">
+      <span>%time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961856" value="1">
+      <span>%timeit</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961856" value="2">
+      <span>%matplotlib</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961856" value="3">
+      <span>%run</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/jupyter-notebooks-what-how-why/mod-7.ipynb)

@@ -55,6 +55,72 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Conda makes it easy to install, upgrade, and remove packages. It can handle both Python packages and non-Python packages, ensuring that all dependencies are resolved automatically.
+
+```python title="example2.py"
+import conda
+from conda.cli import main
+
+# Install a package within the active Conda environment
+def install_package():
+    main.main(args=['install', '--yes', 'numpy'])
+
+if __name__ == '__main__':
+    install_package()
+```
+
+> **💡 Tip:** Always ensure your Conda environment is activated before installing or updating packages to avoid conflicts.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of using Conda environments?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386947776" value="0">
+      <span>To manage global Python packages</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386947776" value="1">
+      <span>To create isolated spaces for different projects</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386947776" value="2">
+      <span>To compile C code</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386947776" value="3">
+      <span>To manage virtual machines</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which command is used to install a package in a Conda environment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954048" value="0">
+      <span>conda update</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954048" value="1">
+      <span>conda remove</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954048" value="2">
+      <span>conda install</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954048" value="3">
+      <span>conda activate</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/conda-package-management-and-environments/mod-1.ipynb)

@@ -59,6 +59,52 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Missing data can skew the results of a machine learning model. Common techniques to handle missing data include removing rows with missing values or imputing missing values with statistical measures like mean, median, or mode.
+
+```python title="handle_missing_data.py"
+import pandas as pd
+from sklearn.impute import SimpleImputer
+
+# Load dataset
+data = pd.read_csv('data.csv')
+
+# Impute missing values with mean
+imputer = SimpleImputer(strategy='mean')
+data_imputed = pd.DataFrame(imputer.fit_transform(data), columns=data.columns)
+print(data_imputed)
+```
+
+> **Try it in Google Colab:** [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-courses/blob/main/supervised-learning-course-outline/mod-2.ipynb)
+
+
+> **💡 Tip:** Always check for missing values before training your model and decide on an appropriate strategy to handle them.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method is best for imputing missing values in a dataset with a mix of numerical and categorical data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4374077888" value="0">
+      <span>Mean</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4374077888" value="1">
+      <span>Median</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4374077888" value="2">
+      <span>Mode</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4374077888" value="3">
+      <span>K-Nearest Neighbors</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning-course-outline/mod-2.ipynb)

@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Data encryption is essential for protecting sensitive information during transmission and storage. When serving machine learning models, encrypting data in transit (using protocols like HTTPS) and at rest (using encryption algorithms) helps safeguard against interception and unauthorized access. Encryption ensures that even if data is compromised, it remains unintelligible to unauthorized parties.
+
+```python title="example2.py"
+from cryptography.fernet import Fernet
+
+# Generate a key for encryption
+key = Fernet.generate_key()
+cipher_suite = Fernet(key)
+
+# Encrypt data
+data = b'Sensitive information'
+encrypted_data = cipher_suite.encrypt(data)
+
+print(encrypted_data)
+
+# Decrypt data
+decrypted_data = cipher_suite.decrypt(encrypted_data)
+
+print(decrypted_data)
+```
+
+> **💡 Tip:** Always use strong, unique encryption keys and regularly rotate them to enhance security.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of authentication in model serving?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054848" value="0">
+      <span>To encrypt data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054848" value="1">
+      <span>To verify user identity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054848" value="2">
+      <span>To authorize actions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054848" value="3">
+      <span>To store data securely</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is data encryption important in model serving?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387055552" value="0">
+      <span>To increase model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387055552" value="1">
+      <span>To verify user identity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387055552" value="2">
+      <span>To protect sensitive information</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387055552" value="3">
+      <span>To optimize model performance</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/production-inference/mod-12.ipynb)

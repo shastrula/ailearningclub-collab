@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Data cleaning is a critical step in any data analysis project. This section will cover techniques for handling missing values, removing duplicates, and transforming data to prepare it for analysis.
+
+```python title="example2.py"
+import pandas as pd
+
+# Load the dataset
+data = pd.read_csv('data.csv')
+
+# Handle missing values by filling them with the mean
+data.fillna(data.mean(), inplace=True)
+
+# Remove duplicate rows
+data.drop_duplicates(inplace=True)
+
+# Convert a column to datetime
+data['date_column'] = pd.to_datetime(data['date_column'])
+
+# Display the cleaned dataset
+print(data.head())
+```
+
+> **💡 Tip:** Always make a copy of your original dataset before performing any cleaning operations. This allows you to revert to the original data if needed.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What function is used to load a CSV file into a Pandas DataFrame?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084032" value="0">
+      <span>pd.load_csv()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084032" value="1">
+      <span>pd.import_csv()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084032" value="2">
+      <span>pd.read_csv()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084032" value="3">
+      <span>pd.csv_read()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method is used to remove duplicate rows in a DataFrame?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387085696" value="0">
+      <span>data.remove_duplicates()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387085696" value="1">
+      <span>data.delete_duplicates()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387085696" value="2">
+      <span>data.drop_duplicates()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387085696" value="3">
+      <span>data.exclude_duplicates()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-22.ipynb)

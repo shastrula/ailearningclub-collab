@@ -59,6 +59,80 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+The integration of computer vision with Internet of Things (IoT) and edge computing is a significant trend. This allows for real-time processing and decision-making at the edge, reducing latency and bandwidth usage. Technologies like TinyML are enabling the deployment of machine learning models on microcontrollers, making vision-enabled IoT devices more feasible.
+
+```python title="example2.py"
+import cv2
+
+# Initialize the camera
+cap = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+    # Display the resulting frame
+    cv2.imshow('Frame', frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# Release the capture
+cap.release()
+cv2.destroyAllWindows()
+```
+
+> **💡 Tip:** When deploying computer vision models on edge devices, consider the computational constraints and optimize your models for lower power consumption and faster inference times.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which neural network architecture is known for its compound scaling method?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962112" value="0">
+      <span>ResNet</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962112" value="1">
+      <span>VGG</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962112" value="2">
+      <span>EfficientNet</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962112" value="3">
+      <span>Inception</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What technology enables machine learning models to be deployed on microcontrollers?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386949888" value="0">
+      <span>TensorFlow</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386949888" value="1">
+      <span>PyTorch</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386949888" value="2">
+      <span>TinyML</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386949888" value="3">
+      <span>Scikit-learn</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/computer-vision/mod-19.ipynb)

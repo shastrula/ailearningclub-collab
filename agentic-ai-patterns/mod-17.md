@@ -59,6 +59,81 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Agentic AI systems should incorporate mechanisms for reflection and continuous evaluation to ensure they remain aligned with ethical standards over time. This involves regularly assessing the AI's performance, identifying any deviations from ethical guidelines, and making necessary adjustments to maintain ethical integrity.
+
+```python title="example2.py"
+def evaluate_performance(ai_actions, ethical_standards):
+    '''
+    This function evaluates the performance of an AI against ethical standards.
+    :param ai_actions: List of actions taken by the AI
+    :param ethical_standards: Dictionary of ethical standards
+    :return: Evaluation result
+    '''
+    # Simplified evaluation logic
+    for action in ai_actions:
+        if action not in ethical_standards:
+            return 'Non-compliant'
+    return 'Compliant'
+
+# Example usage
+ai_actions = ['Action 1', 'Action 2']
+ethical_standards = {'Action 1': True, 'Action 2': True}
+evaluation_result = evaluate_performance(ai_actions, ethical_standards)
+print(f'Evaluation result: {evaluation_result}')
+```
+
+> **💡 Tip:** Regularly update ethical standards and evaluation criteria to adapt to new challenges and societal expectations.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a critical aspect to consider during the planning phase of agentic AI systems?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386898176" value="0">
+      <span>Performance optimization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386898176" value="1">
+      <span>User interface design</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386898176" value="2">
+      <span>Ethical considerations</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386898176" value="3">
+      <span>Data storage solutions</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is continuous evaluation important for agentic AI systems?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906432" value="0">
+      <span>To enhance user experience</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906432" value="1">
+      <span>To ensure compliance with ethical standards</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906432" value="2">
+      <span>To reduce computational costs</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906432" value="3">
+      <span>To increase data processing speed</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/agentic-ai-patterns/mod-17.ipynb)

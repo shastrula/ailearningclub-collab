@@ -59,6 +59,49 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+### US-1: Upload a profile photo
+As a logged-in user, I want to upload a profile photo
+so that other users can recognise me.
+
+**Acceptance Criteria:**
+- WHEN a user POSTs a valid image to /api/profile/photo
+  THEN the system SHALL resize it to 200x200 pixels
+- WHEN the upload succeeds
+  THEN the system SHALL return the public S3 URL
+- IF the file exceeds 5MB
+  THEN the system SHALL return HTTP 413 with an error message
+- IF the file is not jpeg, png, or webp
+  THEN the system SHALL return HTTP 415
+```
+
+> **💡 Tip:** Edit requirements.md directly before moving to design. Add missing edge cases, remove things you don't need. Kiro will use the final version as ground truth.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ In Kiro's spec workflow, what happens BEFORE any code is generated?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956416" value="0">
+      <span>Kiro runs existing tests to understand the codebase</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956416" value="1">
+      <span>Kiro asks clarifying questions and generates spec documents for you to review</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956416" value="2">
+      <span>Kiro creates a git branch automatically</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956416" value="3">
+      <span>Kiro installs required dependencies</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/kiro-spec-dev/mod-2.ipynb)

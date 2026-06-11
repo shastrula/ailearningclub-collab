@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Integration testing involves testing the interactions between different components or modules of an application. It ensures that the integrated parts of the application work together as expected. This is often done using frameworks like JUnit in conjunction with other tools like Mockito for mocking dependencies.
+
+```java title="example2.java"
+@Test
+public void testIntegration() {
+    Service service = new Service(new Repository());
+    String result = service.process();
+    assertEquals("Processed Data", result);
+}
+
+class Repository {
+    public String getData() { return "Data"; }
+}
+
+class Service {
+    private Repository repo;
+    public Service(Repository repo) { this.repo = repo; }
+    public String process() { return "Processed " + repo.getData(); }
+}
+```
+
+> **💡 Tip:** Always mock external dependencies in integration tests to isolate the component under test and avoid flakiness.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of unit testing?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387260288" value="0">
+      <span>To test the entire application</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387260288" value="1">
+      <span>To test individual components in isolation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387260288" value="2">
+      <span>To test the integration of multiple components</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387260288" value="3">
+      <span>To test the deployment process</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which framework is commonly used for unit testing in Java?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387260800" value="0">
+      <span>Selenium</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387260800" value="1">
+      <span>JUnit</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387260800" value="2">
+      <span>TestNG</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387260800" value="3">
+      <span>Mockito</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-23.ipynb)

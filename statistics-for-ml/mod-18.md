@@ -55,6 +55,78 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Decomposition is a technique used to break down a time series into its constituent components: trend, seasonality, and residuals (noise). This helps in understanding the underlying patterns and making forecasts. The statsmodels library in Python provides tools for time series decomposition.
+
+```python title="example2.py"
+import pandas as pd
+import matplotlib.pyplot as plt
+from statsmodels.tsa.seasonal import seasonal_decompose
+
+# Sample time series data with seasonality
+data = {'date': pd.date_range(start='2020-01-01', periods=24, freq='M'),
+         'value': [10, 12, 15, 18, 20, 22, 25, 28, 30, 32, 35, 38,
+                    40, 42, 45, 48, 50, 52, 55, 58, 60, 62, 65, 68]}
+df = pd.DataFrame(data)
+df.set_index('date', inplace=True)
+
+# Decompose the time series
+decomposition = seasonal_decompose(df['value'], model='additive')
+decomposition.plot()
+plt.show()
+```
+
+> **💡 Tip:** Ensure your time series data is stationary before applying certain models. Non-stationary data can lead to misleading results.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What are the three main components of time series data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902848" value="0">
+      <span>Trend, seasonality, and noise</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902848" value="1">
+      <span>Mean, variance, and skewness</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902848" value="2">
+      <span>Correlation, causation, and regression</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902848" value="3">
+      <span>Frequency, amplitude, and phase</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Python library is commonly used for time series decomposition?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904704" value="0">
+      <span>numpy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904704" value="1">
+      <span>scipy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904704" value="2">
+      <span>statsmodels</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904704" value="3">
+      <span>scikit-learn</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-18.ipynb)

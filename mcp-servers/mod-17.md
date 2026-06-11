@@ -59,6 +59,75 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Bias in AI can lead to discriminatory outcomes, undermining the trust and effectiveness of AI systems. Developers must implement strategies to detect and mitigate biases in training data and algorithms. This involves regularly auditing AI systems for bias and applying techniques such as re-sampling, re-weighting, or algorithmic fairness constraints.
+
+```python title="example2.py"
+import numpy as np
+
+def detect_bias(data, sensitive_attribute):
+    """Detects bias in data based on a sensitive attribute."""
+    groups = data.groupby(sensitive_attribute)
+    bias_scores = groups.apply(lambda x: np.mean(x['outcome']))
+    return bias_scores
+
+# Example usage
+data = {'sensitive_attribute': ['A', 'B', 'A', 'B'], 'outcome': [1, 0, 1, 0]}
+data = pd.DataFrame(data)
+print(detect_bias(data, 'sensitive_attribute'))
+```
+
+> **💡 Tip:** Regularly update and re-evaluate your bias detection methods as new data and insights become available to ensure ongoing fairness and equity in AI systems.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of ethical frameworks in AI development?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386859712" value="0">
+      <span>To increase computational efficiency</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386859712" value="1">
+      <span>To guide responsible and fair AI development</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386859712" value="2">
+      <span>To enhance algorithmic complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386859712" value="3">
+      <span>To reduce development costs</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which technique is commonly used to mitigate bias in AI systems?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862080" value="0">
+      <span>Increasing model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862080" value="1">
+      <span>Applying algorithmic fairness constraints</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862080" value="2">
+      <span>Reducing dataset size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862080" value="3">
+      <span>Ignoring sensitive attributes</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-17.ipynb)

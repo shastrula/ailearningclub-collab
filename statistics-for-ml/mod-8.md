@@ -59,6 +59,75 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+The False Discovery Rate (FDR) is the expected proportion of false positives among the total number of positive results. Unlike FWER, which controls the probability of making any false discoveries, FDR allows for some false positives but aims to keep their proportion low. The Benjamini-Hochberg procedure is a popular method for controlling the FDR.
+
+```python title="example2.py"
+import numpy as np
+from statsmodels.stats.multitest import multipletests
+
+# Generate some p-values
+p_values = np.random.rand(10)
+
+# Apply Benjamini-Hochberg correction
+reject, corrected_p_values, alpha_corrected, _ = multipletests(p_values, method='fdr_bh')
+
+print('Original p-values:', p_values)
+print('Reject null hypothesis:', reject)
+print('Corrected p-values:', corrected_p_values)
+```
+
+> **💡 Tip:** When performing multiple hypothesis tests, always consider the trade-off between FWER and FDR. Use FWER methods like Bonferroni for stringent control of type I errors and FDR methods like Benjamini-Hochberg when you can tolerate some false positives to increase power.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does FWER stand for?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853504" value="0">
+      <span>False Discovery Rate</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853504" value="1">
+      <span>Family-Wise Error Rate</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853504" value="2">
+      <span>False Negative Rate</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853504" value="3">
+      <span>Family-Wise False Rate</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method is commonly used to control the FDR?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853376" value="0">
+      <span>Bonferroni correction</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853376" value="1">
+      <span>Holm's method</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853376" value="2">
+      <span>Benjamini-Hochberg procedure</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853376" value="3">
+      <span>Sidak correction</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-8.ipynb)

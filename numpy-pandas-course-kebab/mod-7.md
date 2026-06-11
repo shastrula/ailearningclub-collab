@@ -59,6 +59,72 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Pandas DataFrames are a powerful data structure for data manipulation and analysis. They provide a flexible and intuitive way to work with tabular data, allowing you to perform operations such as filtering, grouping, merging, and reshaping data. DataFrames also integrate seamlessly with other data analysis libraries, making them a essential tool for data scientists.
+
+```python title="example2.py"
+import pandas as pd
+
+# Create a Pandas DataFrame
+data = {'name': ['Alice', 'Bob', 'Charlie'], 'age': [25, 30, 35]}
+df = pd.DataFrame(data)
+
+# Filter the DataFrame
+filtered_df = df[df['age'] > 28]
+print(filtered_df)
+```
+
+> **💡 Tip:** When working with Pandas DataFrames, be mindful of the data types of your columns. Converting columns to the appropriate data type can significantly improve performance and avoid errors.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using NumPy arrays for data manipulation?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056000" value="0">
+      <span>They are slower than Python lists</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056000" value="1">
+      <span>They provide efficient element-wise operations</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056000" value="2">
+      <span>They cannot handle large datasets</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056000" value="3">
+      <span>They are not compatible with other data analysis libraries</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Pandas method is used to filter a DataFrame based on a condition?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056704" value="0">
+      <span>filter()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056704" value="1">
+      <span>select()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056704" value="2">
+      <span>query()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056704" value="3">
+      <span>loc[]</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-7.ipynb)

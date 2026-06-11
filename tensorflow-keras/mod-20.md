@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Once the text data is preprocessed, you can build a neural network to classify the sentiment. This involves creating layers, compiling the model, and training it on your dataset. A simple neural network for sentiment analysis might include an embedding layer, followed by a dense layer.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Embedding, Dense, GlobalAveragePooling1D
+
+# Define the model
+model = Sequential()
+model.add(Embedding(input_dim=1000, output_dim=64))
+model.add(GlobalAveragePooling1D())
+model.add(Dense(1, activation='sigmoid'))
+
+# Compile the model
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Summary of the model
+model.summary()
+```
+
+> **💡 Tip:** Ensure that your input data is properly padded and that the vocabulary size in the Embedding layer matches the number of unique words in your Tokenizer.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of the Tokenizer in text preprocessing?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386951488" value="0">
+      <span>To convert text to audio</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386951488" value="1">
+      <span>To split text into words and convert them into numerical vectors</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386951488" value="2">
+      <span>To translate text into another language</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386951488" value="3">
+      <span>To generate text summaries</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which layer is used to reduce the dimensionality of the embedded text before passing it to the dense layer?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958080" value="0">
+      <span>Flatten</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958080" value="1">
+      <span>GlobalAveragePooling1D</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958080" value="2">
+      <span>Dense</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958080" value="3">
+      <span>Dropout</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/tensorflow-keras/mod-20.ipynb)

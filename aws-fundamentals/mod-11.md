@@ -92,6 +92,32 @@ for result in response['ResultsByTime']:
         print(f"  {service}: ${cost}")
 ```
 
+
+## Quiz
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the AWS Free Tier?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7384629" value="0">
+      <span>A permanent free service tier</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7384629" value="1">
+      <span>Free access to services for 12 months after account creation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7384629" value="2">
+      <span>A discount on all services</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7384629" value="3">
+      <span>A trial period for new users</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-fundamentals/mod-11.ipynb)

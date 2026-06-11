@@ -59,6 +59,70 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Exporting your environment allows you to share it with others or replicate it on another machine. This is particularly useful for ensuring that your project runs the same way on different systems.
+
+```python title="example2.py"
+import conda
+
+# Export the current environment to a YAML file
+conda.cli.main.export(name='myenv', filename='myenv.yaml')
+
+# Create a new environment from the YAML file
+conda.cli.main.create(name='newenv', yaml_file='myenv.yaml')
+```
+
+> **💡 Tip:** Always ensure that the YAML file is up-to-date with the current environment's packages and versions to avoid discrepancies.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is it important to create a new Conda environment for each project?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192192" value="0">
+      <span>To avoid dependency conflicts</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192192" value="1">
+      <span>To save disk space</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192192" value="2">
+      <span>To make debugging easier</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192192" value="3">
+      <span>All of the above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of exporting an environment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188416" value="0">
+      <span>To save disk space</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188416" value="1">
+      <span>To share the environment with others</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188416" value="2">
+      <span>To update packages</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188416" value="3">
+      <span>To backup the environment</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/conda-package-management-and-environments/mod-10.ipynb)

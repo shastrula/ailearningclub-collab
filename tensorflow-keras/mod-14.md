@@ -59,6 +59,88 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+CNNs are the go-to architecture for image classification tasks. They automatically detect important features without any feature engineering. TensorFlow and Keras make it straightforward to build and train CNNs.
+
+```python title="example2.py"
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+# Build a CNN model
+model = models.Sequential()
+model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(150, 150, 3)))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(128, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Flatten())
+model.add(layers.Dense(512, activation='relu'))
+model.add(layers.Dense(1, activation='sigmoid'))
+
+# Compile the model
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Train the model
+history = model.fit(
+    generator,
+    steps_per_epoch=100,  # Number of batches per epoch
+    epochs=10,
+    validation_data=val_generator,  # Validation data generator
+    validation_steps=50)  # Number of validation batches
+```
+
+> **💡 Tip:** Always ensure your input shape matches the expected input shape of your CNN model. Mismatches can lead to errors during training.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of normalizing pixel values in image preprocessing?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122112" value="0">
+      <span>To increase image resolution</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122112" value="1">
+      <span>To scale pixel values between 0 and 1</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122112" value="2">
+      <span>To convert images to grayscale</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122112" value="3">
+      <span>To add noise to the images</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which layer is typically used after a Conv2D layer in a CNN to reduce spatial dimensions?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122816" value="0">
+      <span>Dense</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122816" value="1">
+      <span>Flatten</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122816" value="2">
+      <span>MaxPooling2D</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122816" value="3">
+      <span>Dropout</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/tensorflow-keras/mod-14.ipynb)

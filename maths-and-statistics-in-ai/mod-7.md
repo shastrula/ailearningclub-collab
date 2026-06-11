@@ -75,6 +75,116 @@ for x1, x2 in test_cases:
     print(f"({x1}, {x2}) → {output}")
 ```
 
+
+## Quiz
+
+| Concept | Purpose |
+|---------|---------|
+| Neuron | Basic processing unit |
+| Weight | Strength of connection |
+| Bias | Shift activation threshold |
+| Activation | Introduce non-linearity |
+| Layer | Group of neurons |
+| Forward Pass | Compute output |
+| Backprop | Calculate gradients |
+| Loss | Measure error |
+| Gradient Descent | Optimize weights |
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary function of a perceptron?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1111111111" value="0">
+      <span>Data preprocessing</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1111111111" value="1">
+      <span>Binary classification</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1111111111" value="2">
+      <span>Feature extraction</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1111111111" value="3">
+      <span>Data visualization</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why do we need activation functions?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2222222222" value="0">
+      <span>To reduce computation time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2222222222" value="1">
+      <span>To normalize inputs</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2222222222" value="2">
+      <span>To introduce non-linearity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2222222222" value="3">
+      <span>To prevent overfitting</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the output range of sigmoid function?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q3333333333" value="0">
+      <span>(0, 1)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q3333333333" value="1">
+      <span>(-1, 1)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q3333333333" value="2">
+      <span>[0, ∞)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q3333333333" value="3">
+      <span>(-∞, ∞)</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does backpropagation do?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4444444444" value="0">
+      <span>Computes forward pass predictions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4444444444" value="1">
+      <span>Calculates gradients to update weights</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4444444444" value="2">
+      <span>Normalizes input data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4444444444" value="3">
+      <span>Selects activation functions</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/maths-and-statistics-in-ai/mod-7.ipynb)

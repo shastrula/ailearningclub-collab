@@ -59,6 +59,47 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Optimization techniques such as Gradient Descent and Stochastic Gradient Descent (SGD) are used to minimize the cost function and find the best model parameters. These techniques iteratively adjust the parameters to achieve the lowest possible error.
+
+```python title="optimization.py"
+from sklearn.linear_model import SGDClassifier
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+X, y = iris.data, iris.target
+
+model = SGDClassifier(max_iter=1000)
+model.fit(X, y)
+
+print(f'Optimized Model Parameters: {model.coef_}')
+```
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which metric is most suitable for imbalanced datasets?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372650816" value="0">
+      <span>Accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372650816" value="1">
+      <span>Precision</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372650816" value="2">
+      <span>Recall</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372650816" value="3">
+      <span>F1-Score</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning-course-outline/mod-4.ipynb)

@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Integrating AI agents involves creating a seamless connection between the agent and the MCP Server. This requires defining clear APIs, handling authentication, and ensuring that the agent can interpret and act upon the data it receives. Effective integration allows AI agents to provide real-time insights and automate decision-making processes.
+
+```python title="example2.py"
+import requests
+
+def send_mcp_request(data):
+    url = 'http://localhost:5000/api/mcp'
+    response = requests.post(url, json=data)
+    return response.json()
+
+if __name__ == '__main__':
+    data = {"key": "value"}
+    result = send_mcp_request(data)
+    print(result)
+```
+
+> **💡 Tip:** Ensure that your MCP Server and AI agent are running on the same network to avoid connectivity issues. Additionally, always validate the data sent and received to maintain data integrity.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary role of an MCP Server?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052352" value="0">
+      <span>To store data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052352" value="1">
+      <span>To facilitate communication between AI agents and system components</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052352" value="2">
+      <span>To process data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052352" value="3">
+      <span>To authenticate users</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What method is used to send data to an MCP Server in the provided example?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387058752" value="0">
+      <span>GET</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387058752" value="1">
+      <span>PUT</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387058752" value="2">
+      <span>POST</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387058752" value="3">
+      <span>DELETE</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-8.ipynb)

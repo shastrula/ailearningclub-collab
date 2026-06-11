@@ -59,6 +59,81 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+NumPy provides a wide range of operations that can be performed on arrays, including arithmetic operations, aggregation functions, and element-wise operations. These operations are highly optimized and allow for efficient computation on large datasets.
+
+```python title="example2.py"
+import numpy as np
+
+# Creating two arrays
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+# Element-wise addition
+addition = arr1 + arr2
+
+# Element-wise multiplication
+multiplication = arr1 * arr2
+
+# Aggregation: sum of elements
+sum_arr1 = np.sum(arr1)
+
+print(addition)
+print(multiplication)
+print(sum_arr1)
+```
+
+> **💡 Tip:** When performing operations on arrays, ensure that the arrays have compatible shapes to avoid broadcasting errors.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which function is used to create an array of zeros in NumPy?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860416" value="0">
+      <span>numpy.empty</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860416" value="1">
+      <span>numpy.zeros</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860416" value="2">
+      <span>numpy.ones</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860416" value="3">
+      <span>numpy.full</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the result of element-wise addition of arrays [1, 2, 3] and [4, 5, 6]?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387051584" value="0">
+      <span>[5, 7, 9]</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387051584" value="1">
+      <span>[4, 6, 8]</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387051584" value="2">
+      <span>[6, 8, 10]</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387051584" value="3">
+      <span>[7, 9, 11]</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-2.ipynb)

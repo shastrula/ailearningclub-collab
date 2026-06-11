@@ -59,6 +59,164 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Enums are excellent for implementing state machines. Each enum constant represents a state, and methods define transitions.
+
+```java title="OrderStatus.java"
+public enum OrderStatus {
+    PENDING("Order received"),
+    PROCESSING("Processing order"),
+    SHIPPED("Order shipped"),
+    DELIVERED("Order delivered"),
+    CANCELLED("Order cancelled");
+    
+    private String description;
+    
+    OrderStatus(String description) {
+        this.description = description;
+    }
+    
+    public OrderStatus nextStatus() {
+        switch(this) {
+            case PENDING: return PROCESSING;
+            case PROCESSING: return SHIPPED;
+            case SHIPPED: return DELIVERED;
+            default: return this;
+        }
+    }
+    
+    public String getDescription() {
+        return description;
+    }
+}
+```
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the output of the following code?
+
+DayOfWeek day = DayOfWeek.FRIDAY;
+System.out.println(day.ordinal());</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7284561" value="0">
+      <span>4</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7284561" value="1">
+      <span>5</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7284561" value="2">
+      <span>FRIDAY</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7284561" value="3">
+      <span>Error</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which collection is optimized for storing enum constants?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8392847" value="0">
+      <span>ArrayList</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8392847" value="1">
+      <span>HashMap</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8392847" value="2">
+      <span>EnumSet</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8392847" value="3">
+      <span>TreeSet</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Can an enum have a constructor?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9473625" value="0">
+      <span>No, enums cannot have constructors</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9473625" value="1">
+      <span>Yes, enums can have private constructors</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9473625" value="2">
+      <span>Yes, enums can have public constructors</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9473625" value="3">
+      <span>Only if they extend a class</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the values() method return for an enum?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6521847" value="0">
+      <span>An array of all enum constants</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6521847" value="1">
+      <span>A list of enum constant names</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6521847" value="2">
+      <span>The number of constants</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6521847" value="3">
+      <span>A map of constants to values</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which pattern uses enums to represent different states and transitions?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7834921" value="0">
+      <span>Factory Pattern</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7834921" value="1">
+      <span>Singleton Pattern</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7834921" value="2">
+      <span>Strategy Pattern</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7834921" value="3">
+      <span>State Machine Pattern</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+Learn more: https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-26.ipynb)

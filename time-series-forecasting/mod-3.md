@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Differencing is a method of transforming a time series dataset to make it stationary. This is often done by subtracting the previous value from the current value. The order of differencing (number of times the process is repeated) is chosen based on the nature of the time series data.
+
+```python title="example2.py"
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Sample non-stationary time series data
+data = pd.Series([2, 4, 6, 8, 10, 12, 14, 16, 18, 20])
+
+# First order differencing
+diff_data = data.diff().dropna()
+
+# Plot original and differenced data
+plt.figure(figsize=(12, 6))
+plt.plot(data, label='Original')
+plt.plot(diff_data, label='Differenced')
+plt.legend()
+plt.show()
+```
+
+> **💡 Tip:** When applying differencing, be cautious of over-differencing, which can introduce unnecessary noise into the data and complicate the forecasting process.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does stationarity in a time series imply?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184128" value="0">
+      <span>Changing mean and variance over time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184128" value="1">
+      <span>Constant mean and variance over time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184128" value="2">
+      <span>Increasing trend over time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184128" value="3">
+      <span>Decreasing trend over time</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of differencing in time series analysis?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184192" value="0">
+      <span>To increase the trend</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184192" value="1">
+      <span>To make the series non-stationary</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184192" value="2">
+      <span>To remove seasonality</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184192" value="3">
+      <span>To achieve stationarity</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/time-series-forecasting/mod-3.ipynb)

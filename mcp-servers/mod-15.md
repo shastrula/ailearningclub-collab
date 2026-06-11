@@ -59,6 +59,73 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Effective prompts are critical for getting the best responses from your AI agents. You need to understand the context, the desired outcome, and how to phrase your queries to elicit the most useful information. This section covers best practices for prompt engineering.
+
+```python title="craft_prompt.py"
+def create_prompt(context, query):
+    """Create a prompt by combining context and query."""
+    prompt = f"Context: {context}. Query: {query}"
+    return prompt
+
+# Example usage
+context = "The user is inquiring about the weather."
+query = "What is the forecast for tomorrow?"
+prompt = create_prompt(context, query)
+print(prompt)
+```
+
+> **💡 Tip:** Always test your prompts with various inputs to ensure they produce consistent and accurate responses from the AI model.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of setting up an MCP server environment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858432" value="0">
+      <span>To create a database</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858432" value="1">
+      <span>To facilitate communication between AI models and applications</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858432" value="2">
+      <span>To design user interfaces</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858432" value="3">
+      <span>To manage server hardware</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the key factor in crafting effective prompts for AI agents?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860544" value="0">
+      <span>The length of the prompt</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860544" value="1">
+      <span>The complexity of the language used</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860544" value="2">
+      <span>Understanding the context and desired outcome</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860544" value="3">
+      <span>Using technical jargon</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-15.ipynb)

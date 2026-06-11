@@ -59,6 +59,80 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Plotly allows extensive customization of plots to enhance their visual appeal and clarity. You can modify axes, add annotations, change colors, and adjust layout properties. Customization is crucial for creating professional-grade visualizations that effectively communicate your data insights.
+
+```python title="example2.py"
+import plotly.graph_objects as go
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y = [10, 11, 12, 13, 14]
+
+# Creating a customized line plot
+fig = go.Figure(data=go.Scatter(x=x, y=y, mode='lines+markers',
+                                line=dict(color='firebrick', width=4),
+                                marker=dict(symbol='circle', size=12, color='rgba(255, 0, 0,.8)')))
+
+# Updating layout
+fig.update_layout(title='Customized Line Plot', xaxis_title='X-axis', yaxis_title='Y-axis',
+                  plot_bgcolor='rgba(240, 240, 240, 0.8)', paper_bgcolor='rgba(240, 240, 240, 0.8)')
+
+# Displaying the plot
+fig.show()
+```
+
+> **💡 Tip:** When customizing plots, use the Plotly documentation to explore all available options for each plot type. Experiment with different settings to find the best visualization for your data.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using Plotly for data visualization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="0">
+      <span>It creates static images</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="1">
+      <span>It allows for interactive plots</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="2">
+      <span>It is only for 3D plots</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="3">
+      <span>It requires no coding</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Plotly function is used to create a scatter plot with minimal code?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386910464" value="0">
+      <span>go.Scatter()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386910464" value="1">
+      <span>px.scatter()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386910464" value="2">
+      <span>fig.add_trace()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386910464" value="3">
+      <span>plotly.create_scatter()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/matplotlib-visualization/mod-9.ipynb)

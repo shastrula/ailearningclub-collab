@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Garbage collection in Java is an automatic memory management process that reclaims memory occupied by objects that are no longer in use. The JVM's garbage collector periodically identifies and frees up memory, reducing the risk of memory leaks. Developers can influence garbage collection by using specific object references and patterns.
+
+```java title="example2.java"
+public class GarbageCollectionExample {
+    public static void main(String[] args) {
+        // Create objects that will be garbage collected
+        Object obj1 = new Object();
+        Object obj2 = new Object();
+        obj1 = null;
+        obj2 = null;
+        System.gc(); // Request the garbage collector to run
+        System.out.println("Garbage collection requested");
+    }
+}
+```
+
+> **💡 Tip:** Avoid calling System.gc() frequently as it can negatively impact performance. Instead, rely on the JVM's automatic garbage collection process.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of the Java Virtual Machine's garbage collector?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184000" value="0">
+      <span>To compile Java code to bytecode</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184000" value="1">
+      <span>To manage memory allocation and deallocation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184000" value="2">
+      <span>To execute Java applications</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184000" value="3">
+      <span>To optimize CPU usage</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which memory region in Java stores class structures and method bytecodes?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184576" value="0">
+      <span>Heap</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184576" value="1">
+      <span>Stack</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184576" value="2">
+      <span>Method Area</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184576" value="3">
+      <span>Code Cache</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-15.ipynb)

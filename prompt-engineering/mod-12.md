@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Chain-of-Thought (CoT) and ReAct prompting techniques enhance model reasoning by breaking down complex problems into simpler, step-by-step thoughts. Evaluating their effectiveness requires analyzing the logical flow and correctness of the model's reasoning process.
+
+```python title="example2.py"
+import openai
+
+openai.api_key = 'your_api_key'
+
+# CoT prompting example
+response = openai.Completion.create(
+  engine="text-davinci-003",
+  prompt="What is the capital of France? Think step-by-step.",
+  max_tokens=100
+)
+print(response.choices[0].text.strip())
+```
+
+> **💡 Tip:** When evaluating CoT and ReAct prompts, ensure that each step in the chain is logically sound and contributes to the final answer.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of zero-shot prompting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955264" value="0">
+      <span>To train the model on new data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955264" value="1">
+      <span>To leverage the model's inherent understanding without additional training</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955264" value="2">
+      <span>To provide a large number of examples</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955264" value="3">
+      <span>To fine-tune the model for specific tasks</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What should be analyzed when evaluating the effectiveness of CoT prompts?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386949248" value="0">
+      <span>The model's training data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386949248" value="1">
+      <span>The logical flow and correctness of the reasoning process</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386949248" value="2">
+      <span>The number of tokens used</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386949248" value="3">
+      <span>The model's response time</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/prompt-engineering/mod-12.ipynb)

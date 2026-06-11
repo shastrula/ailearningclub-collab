@@ -55,6 +55,96 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Q-Learning is a model-free reinforcement learning algorithm. It learns the value of taking an action in a particular state by updating a Q-table. The Q-table stores the expected rewards for each state-action pair. The agent uses the Q-table to choose actions that maximize the expected reward.
+
+```python title="example2.py"
+import numpy as np
+import gym
+
+# Create the environment
+env = gym.make('FrozenLake-v1')
+
+# Initialize the Q-table
+Q = np.zeros([env.observation_space.n, env.action_space.n])
+
+# Set learning parameters
+learning_rate = 0.8
+discount_factor = 0.95
+num_episodes = 2000
+
+# Q-Learning algorithm
+for i in range(num_episodes):
+    state = env.reset()
+    done = False
+
+    while not done:
+        # Choose the action with highest Q-value or random action for exploration
+        action = np.argmax(Q[state, :] + np.random.randn(1, env.action_space.n) * (1. / (i + 1)))
+
+        # Take the action and observe the outcome
+        next_state, reward, done, info = env.step(action)
+
+        # Update Q-value
+        Q[state, action] = Q[state, action] + learning_rate * (reward + discount_factor * np.max(Q[next_state, :]) - Q[state, action])
+
+        state = next_state
+
+print('Q-Table:')
+print(Q)
+```
+
+> **💡 Tip:** Ensure the learning rate and discount factor are appropriately tuned to balance exploration and exploitation.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the agent observe in an RL environment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387125376" value="0">
+      <span>Actions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387125376" value="1">
+      <span>Rewards</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387125376" value="2">
+      <span>States</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387125376" value="3">
+      <span>Policies</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of Q-Learning?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052288" value="0">
+      <span>To minimize the cumulative reward</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052288" value="1">
+      <span>To maximize the cumulative reward</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052288" value="2">
+      <span>To maintain a constant reward</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052288" value="3">
+      <span>To ignore rewards</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/tensorflow-keras/mod-18.ipynb)

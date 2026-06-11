@@ -52,6 +52,90 @@ Recent advances in Random Forests Advanced Techniques:
 
 True mastery comes from implementing Random Forests Advanced Techniques in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+Feature importance helps identify which features contribute most to the predictive power of the model. Random Forests provide a built-in method to compute feature importances. Additionally, ensemble methods like Bagging and Boosting can be combined with Random Forests to further enhance performance. These techniques help in reducing overfitting and improving generalization.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier, BaggingClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Split the data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Define the base Random Forest model
+rf = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Apply Bagging
+bagging = BaggingClassifier(base_estimator=rf, n_estimators=10, random_state=42)
+bagging.fit(X_train, y_train)
+
+# Predict and evaluate
+y_pred = bagging.predict(X_test)
+print(f'Accuracy: {accuracy_score(y_test, y_pred)}')
+
+# Feature importance
+importances = rf.feature_importances_
+print(f'Feature Importances: {importances}')
+```
+
+> **💡 Tip:** When using ensemble methods like Bagging with Random Forests, ensure that the base estimator is well-tuned to avoid redundant complexity and potential overfitting.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which hyperparameter is crucial for controlling the depth of individual trees in a Random Forest?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908544" value="0">
+      <span>learning_rate</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908544" value="1">
+      <span>n_estimators</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908544" value="2">
+      <span>max_depth</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908544" value="3">
+      <span>min_samples_split</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of using Bagging with Random Forests?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909824" value="0">
+      <span>Increased model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909824" value="1">
+      <span>Reduced overfitting</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909824" value="2">
+      <span>Faster training times</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909824" value="3">
+      <span>Improved interpretability</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning/mod-9.ipynb)

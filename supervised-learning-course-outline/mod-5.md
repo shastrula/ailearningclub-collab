@@ -59,6 +59,57 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Automated retraining involves setting up a pipeline that periodically retrains the model with new data. This can be achieved using tools like Apache Airflow or Kubeflow.
+
+```python title="retrain_pipeline.py"
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+import pandas as pd
+
+# Load new data
+data = pd.read_csv('new_data.csv')
+X = data.drop('target', axis=1)
+y = data['target']
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+# Train the model
+model = RandomForestClassifier()
+model.fit(X_train, y_train)
+
+# Save the model
+joblib.dump(model,'model.pkl')
+```
+
+> **💡 Tip:** Ensure that your retraining pipeline is robust and can handle data drift and other issues that may affect model performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which of the following is a common strategy for deploying machine learning models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372737280" value="0">
+      <span>Batch processing</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372737280" value="1">
+      <span>Real-time processing</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372737280" value="2">
+      <span>Serverless deployment</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372737280" value="3">
+      <span>All of the above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning-course-outline/mod-5.ipynb)

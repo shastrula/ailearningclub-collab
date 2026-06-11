@@ -59,6 +59,67 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Collaborative editing in Google Colab allows multiple users to work on the same notebook at the same time. Changes made by one user are instantly visible to others, promoting real-time collaboration. To start a collaborative session, ensure that the notebook is shared and that all collaborators have the shareable link.
+
+```python title="example2.py"
+# This code demonstrates collaborative editing in Google Colab
+# Ensure the notebook is shared and all collaborators have the link
+# Open the shared notebook and start editing
+# Changes will be visible to all collaborators in real-time
+```
+
+> **💡 Tip:** When collaborating, it's important to communicate with your team to avoid conflicts when editing the same cells simultaneously.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How do you share a Google Colab notebook with collaborators?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962560" value="0">
+      <span>By emailing the notebook file</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962560" value="1">
+      <span>By clicking the 'Share' button and entering email addresses</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962560" value="2">
+      <span>By saving the notebook to Google Drive</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962560" value="3">
+      <span>By publishing the notebook publicly</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a key feature of collaborative editing in Google Colab?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188928" value="0">
+      <span>Changes are only visible after saving</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188928" value="1">
+      <span>Changes are visible to all collaborators in real-time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188928" value="2">
+      <span>Collaborators need to refresh the page to see changes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188928" value="3">
+      <span>Collaborative editing is not possible in Google Colab</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/google-colab-cloud-computing-for-ai/mod-7.ipynb)

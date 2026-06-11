@@ -59,6 +59,36 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+- Clear cell outputs before sharing (Cell → All Output → Clear)
+- Add markdown cells explaining your analysis
+- Use descriptive variable names
+- Include comments in code cells
+- Test the notebook from top to bottom before sharing
+
+> **💡 Tip:** Always test your notebook by restarting the kernel and running all cells to ensure it works for others.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What format is best for sharing a notebook with non-technical stakeholders?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="0">
+      <span>HTML or PDF</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="1">
+      <span>Python script</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="2">
+      <span>Raw .ipynb file</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/jupyter-notebooks-what-how-why/mod-11.ipynb)

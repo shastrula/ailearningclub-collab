@@ -59,6 +59,58 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+PCA is a dimensionality reduction technique that transforms data into a lower-dimensional space by capturing the most significant variance in the data. It achieves this by computing the eigenvectors and eigenvalues of the data covariance matrix, which represent the principal components. PCA is commonly used for visualizing high-dimensional data, speeding up machine learning algorithms, and reducing overfitting.
+
+```python title="example2.py"
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
+import numpy as np
+
+# Sample data
+data = np.array([[2, 3], [4, 5], [6, 7], [8, 9], [10, 11]])
+
+# Standardize the data
+scaler = StandardScaler()
+data_scaled = scaler.fit_transform(data)
+
+# Initialize PCA
+pca = PCA(n_components=1)
+
+# Fit and transform the data
+data_pca = pca.fit_transform(data_scaled)
+
+# Print the transformed data
+print(data_pca)
+```
+
+> **💡 Tip:** When applying PCA, always standardize your data first to ensure that each feature contributes equally to the analysis.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of K-Means clustering?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387093632" value="0">
+      <span>To classify data into predefined categories</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387093632" value="1">
+      <span>To partition data into K distinct, non-overlapping subsets</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387093632" value="2">
+      <span>To reduce the dimensionality of the data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387093632" value="3">
+      <span>To identify the most important features in the dataset</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/unsupervised-learning/mod-19.ipynb)

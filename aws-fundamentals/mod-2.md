@@ -81,6 +81,32 @@ iam.attach_user_policy(
 )
 ```
 
+
+## Quiz
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the principle of least privilege?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2847591" value="0">
+      <span>Grant all permissions to all users</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2847591" value="1">
+      <span>Grant permissions only to administrators</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2847591" value="2">
+      <span>Grant only minimum permissions needed for the job</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2847591" value="3">
+      <span>Never grant any permissions</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-fundamentals/mod-2.ipynb)

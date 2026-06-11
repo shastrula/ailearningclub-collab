@@ -55,6 +55,77 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Reflection and evaluation are critical components of the planning process. Reflection allows an agent to assess the outcomes of its actions and adjust its plans accordingly. Evaluation involves assessing the quality of a plan based on various criteria such as efficiency, feasibility, and alignment with goals. These processes ensure that the agent can learn from its experiences and improve its planning capabilities over time.
+
+```python title="example2.py"
+from typing import List, Tuple
+
+# Define a simple planning problem with evaluation
+states = ['start', 'intermediate', 'goal']
+actions = [('start', 'intermediate', 2), ('intermediate', 'goal', 3)]
+
+def evaluate_plan(plan: List[Tuple[str, str, int]]) -> int:
+    """Evaluate the cost of a plan."""
+    total_cost = sum(action[2] for action in plan)
+    return total_cost
+
+# Example usage
+plan = [('start', 'intermediate', 2), ('intermediate', 'goal', 3)]
+print(evaluate_plan(plan))
+```
+
+> **💡 Tip:** When designing planning algorithms, consider incorporating mechanisms for dynamic re-planning to handle unexpected changes in the environment.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of AI planning?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386963328" value="0">
+      <span>To generate random actions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386963328" value="1">
+      <span>To create a sequence of actions to achieve a goal</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386963328" value="2">
+      <span>To ignore the current state</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386963328" value="3">
+      <span>To avoid any form of reasoning</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of reflection in AI planning?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909824" value="0">
+      <span>To ignore past actions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909824" value="1">
+      <span>To assess outcomes and adjust plans</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909824" value="2">
+      <span>To increase the number of actions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909824" value="3">
+      <span>To complicate the planning process</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/agentic-ai-patterns/mod-2.ipynb)

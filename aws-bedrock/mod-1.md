@@ -81,6 +81,114 @@ result = json.loads(response['body'].read())
 print(result['content'][0]['text'])
 ```
 
+
+## Quiz
+
+| Feature | Bedrock | OpenAI API | Self-hosted |
+|---------|---------|-----------|-------------|
+| Model choice | Multiple providers | GPT only | Any model |
+| Data privacy | Stays in AWS | Sent to OpenAI | Full control |
+| Setup time | Minutes | Minutes | Hours/days |
+| Cost predictability | On-demand or reserved | On-demand only | Infrastructure costs |
+| Compliance | AWS compliance | Limited | Full control |
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of AWS Bedrock?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7284561" value="0">
+      <span>It trains custom models faster than competitors</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7284561" value="1">
+      <span>Fully managed access to multiple foundation models without infrastructure management</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7284561" value="2">
+      <span>It's the cheapest AI service on AWS</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7284561" value="3">
+      <span>It only works with Claude models</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which pricing model offers up to 40% savings?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9156283" value="0">
+      <span>On-demand pricing</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9156283" value="1">
+      <span>Free tier</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9156283" value="2">
+      <span>Provisioned throughput with 1 or 6 month commitment</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9156283" value="3">
+      <span>Spot instances</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What must you do before using a model in Bedrock?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4821937" value="0">
+      <span>Request access to the model in the AWS Console</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4821937" value="1">
+      <span>Download the model weights locally</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4821937" value="2">
+      <span>Fine-tune it on your data first</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4821937" value="3">
+      <span>Create an IAM role with specific permissions</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which use case is NOT mentioned as a Bedrock strength?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5739284" value="0">
+      <span>Customer support chatbots</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5739284" value="1">
+      <span>Content generation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5739284" value="2">
+      <span>Code assistance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5739284" value="3">
+      <span>Real-time video processing</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-bedrock/mod-1.ipynb)

@@ -59,6 +59,81 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Evaluating the performance of a Logistic Regression model is crucial to ensure its effectiveness. Common evaluation metrics include accuracy, precision, recall, and the F1 score. Additionally, the confusion matrix provides a detailed breakdown of the model's predictions, helping to identify any biases or issues.
+
+```python title="example2.py"
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, confusion_matrix
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Train the model on the training set
+model.fit(X_train, y_train)
+
+# Make predictions on the testing set
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+accuracy = accuracy_score(y_test, y_pred)
+conf_matrix = confusion_matrix(y_test, y_pred)
+
+print('Accuracy:', accuracy)
+print('Confusion Matrix:\n', conf_matrix)
+```
+
+> **💡 Tip:** When working with Logistic Regression, ensure that your data is properly scaled, as the algorithm is sensitive to the scale of the input features. Also, check for multicollinearity among the features, as it can affect the model's performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What type of problems is Logistic Regression best suited for?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086400" value="0">
+      <span>Regression problems</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086400" value="1">
+      <span>Multi-class classification problems</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086400" value="2">
+      <span>Binary classification problems</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086400" value="3">
+      <span>Time series forecasting</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which metric is commonly used to evaluate the performance of a Logistic Regression model?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086464" value="0">
+      <span>Mean Squared Error</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086464" value="1">
+      <span>R-squared</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086464" value="2">
+      <span>Accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086464" value="3">
+      <span>Pearson Correlation Coefficient</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/scikit-learn-machine-learning/mod-5.ipynb)

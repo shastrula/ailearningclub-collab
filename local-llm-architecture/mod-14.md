@@ -59,6 +59,75 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+llama.cpp is a port of Facebook's LLaMA model in C/C++. It allows for efficient inference of LLMs on local hardware. By leveraging C++ optimizations, llama.cpp can achieve significant performance improvements compared to pure Python implementations. This makes it ideal for resource-constrained environments.
+
+```python title="llama_cpp_inference.py"
+import ctypes
+
+# Load the llama.cpp shared library
+lib = ctypes.CDLL('./libllama.so')
+
+# Set up the input and output buffers
+input_text = b'What is the capital of France?'
+output_buffer = ctypes.create_string_buffer(1024)
+
+# Call the inference function
+lib.inference(input_text, output_buffer, 1024)
+print(output_buffer.value.decode())
+```
+
+> **💡 Tip:** Ensure that the llama.cpp library is compiled with the appropriate optimization flags to maximize performance. Additionally, verify that your system has sufficient RAM and CPU resources to handle the model's requirements.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of using Ollama for LLM deployment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049024" value="0">
+      <span>Reduced model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049024" value="1">
+      <span>Isolated environments for security</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049024" value="2">
+      <span>Faster training times</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049024" value="3">
+      <span>Lower hardware requirements</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which language is primarily used for optimizations in llama.cpp?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046016" value="0">
+      <span>Python</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046016" value="1">
+      <span>Java</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046016" value="2">
+      <span>C++</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046016" value="3">
+      <span>Go</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-14.ipynb)

@@ -59,6 +59,51 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+```python title="specific_model.py"
+from transformers import pipeline
+
+# Use a specific model from the Hub
+classifier = pipeline(
+    'text-classification',
+    model='distilbert-base-uncased-finetuned-sst-2-english'
+)
+reviews = [
+    'Great location, terrible neighbours.',
+    'Best investment I ever made.',
+    'Overpriced for what you get.'
+]
+for review, result in zip(reviews, classifier(reviews)):
+    print(f'{result["label"]:8} ({result["score"]:.2f}) — {review}')
+```
+
+> **💡 Tip:** The first time you run a pipeline, it downloads the model weights (~250MB for DistilBERT). They're cached locally so subsequent runs are instant.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the HuggingFace pipeline() function do?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909696" value="0">
+      <span>Trains a new model from scratch</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909696" value="1">
+      <span>Downloads and runs a pre-trained model for a given task in one line</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909696" value="2">
+      <span>Cleans and preprocesses your dataset</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909696" value="3">
+      <span>Uploads your model to the Hub</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/data-and-models/mod-5.ipynb)

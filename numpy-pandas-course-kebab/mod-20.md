@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Categorical features often need to be encoded into numerical values for machine learning models to process them. Common techniques include one-hot encoding and label encoding. One-hot encoding creates binary columns for each category, while label encoding assigns a unique integer to each category.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.preprocessing import OneHotEncoder
+
+# Sample DataFrame with categorical data
+data = {'color': ['red', 'blue', 'green','red']}
+df = pd.DataFrame(data)
+
+# One-hot encoding
+enc = OneHotEncoder()
+enc_data = enc.fit_transform(df[['color']]).toarray()
+enc_df = pd.DataFrame(enc_data, columns=enc.get_feature_names_out(['color']))
+
+# Concatenate original DataFrame with encoded DataFrame
+df = pd.concat([df, enc_df], axis=1)
+
+print(df)
+```
+
+> **💡 Tip:** When using one-hot encoding, be mindful of the dimensionality it adds to your dataset. Too many categories can lead to a sparse matrix, which might affect model performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of feature engineering in data science?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084992" value="0">
+      <span>To reduce the size of the dataset</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084992" value="1">
+      <span>To improve model performance by creating or modifying features</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084992" value="2">
+      <span>To visualize data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084992" value="3">
+      <span>To clean the data</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which encoding technique creates binary columns for each category?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084736" value="0">
+      <span>Label encoding</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084736" value="1">
+      <span>One-hot encoding</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084736" value="2">
+      <span>Ordinal encoding</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084736" value="3">
+      <span>Binary encoding</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-20.ipynb)

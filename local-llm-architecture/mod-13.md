@@ -59,6 +59,80 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Deploying LLMs on edge devices requires careful consideration of hardware capabilities. Edge devices often have limited CPU, GPU, and memory resources compared to cloud servers. It is essential to choose models that are optimized for low-resource environments and to utilize hardware accelerators like TPUs or NPUs where available. Efficient model quantization and pruning techniques can also help reduce the resource footprint.
+
+```python title="example2.py"
+import torch
+
+# Load a quantized model
+model = torch.load('quantized_model.pth')
+model.eval()
+
+# Define a function to run inference
+def run_inference(input_text):
+    input_ids = torch.tensor([1, 2, 3])  # Placeholder for actual tokenization
+    with torch.no_grad():
+        output = model(input_ids)
+    return output
+
+# Example usage
+input_text = 'Hello, world!'
+output = run_inference(input_text)
+print(output)
+```
+
+> **💡 Tip:** Ensure that your edge device has sufficient memory and processing power to handle the model's requirements. Consider using model quantization and pruning to reduce the model size and improve inference speed.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary function of Ollama in deploying LLMs on edge devices?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047680" value="0">
+      <span>Data preprocessing</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047680" value="1">
+      <span>Model training</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047680" value="2">
+      <span>Model deployment and inference</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047680" value="3">
+      <span>Data storage</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which technique is commonly used to reduce the resource footprint of LLMs on edge devices?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387045632" value="0">
+      <span>Model expansion</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387045632" value="1">
+      <span>Model duplication</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387045632" value="2">
+      <span>Model quantization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387045632" value="3">
+      <span>Model replication</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-13.ipynb)

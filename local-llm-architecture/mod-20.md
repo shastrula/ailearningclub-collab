@@ -59,6 +59,71 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Running LLMs locally requires significant computational resources. Key hardware components include a powerful CPU, ample RAM, and preferably a GPU for accelerated processing. Ensuring your system meets these requirements is essential for efficient model inference and training.
+
+```python title="example2.py"
+import psutil
+
+# Check CPU and memory usage
+cpu_percent = psutil.cpu_percent(interval=1)
+memory_info = psutil.virtual_memory()
+
+print(f'CPU Usage: {cpu_percent}%)')
+print(f'Available Memory: {memory_info.available / (1024 ** 3):.2f} GB')
+```
+
+> **💡 Tip:** Always monitor your system's resource usage when running LLMs to avoid performance bottlenecks and ensure smooth operation.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary function of Ollama in LLM deployment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056576" value="0">
+      <span>Data preprocessing</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056576" value="1">
+      <span>Model training</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056576" value="2">
+      <span>Containerized deployment</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056576" value="3">
+      <span>Result visualization</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which hardware component is crucial for accelerated LLM processing?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387078272" value="0">
+      <span>RAM</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387078272" value="1">
+      <span>Hard Drive</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387078272" value="2">
+      <span>GPU</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387078272" value="3">
+      <span>Network Card</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-20.ipynb)

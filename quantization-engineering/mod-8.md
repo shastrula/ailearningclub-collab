@@ -59,6 +59,81 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Once the model is quantized using GGUF, it can be loaded and used for inference. This process involves loading the quantized model weights and performing inference with the same tokenizer used during quantization. The quantized model will run faster and consume less memory compared to the original model.
+
+```python title="example2.py"
+import torch
+from transformers import AutoTokenizer
+
+# Load the tokenizer
+model_name = 'bert-base-uncased'
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Load the quantized model
+gguf_model = torch.quantization.QuantizedDynamicModel(torch.device('cpu'),
+                                                       torch.jit.script(AutoModel.from_pretrained(model_name)),
+                                                       'gguf_model.pth')
+
+# Prepare input
+inputs = tokenizer('Hello, world!', return_tensors='pt')
+
+# Perform inference
+outputs = gguf_model(**inputs)
+print(outputs)
+```
+
+> **💡 Tip:** Ensure that the device used for inference matches the device on which the model was quantized. Mismatches can lead to errors or suboptimal performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of using GGUF for model quantization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387117440" value="0">
+      <span>Increased model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387117440" value="1">
+      <span>Reduced inference time and model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387117440" value="2">
+      <span>Higher precision of model weights</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387117440" value="3">
+      <span>Increased computational requirements</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which function is used to convert a PyTorch model to GGUF format?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387126784" value="0">
+      <span>torch.quantization.quantize_static</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387126784" value="1">
+      <span>torch.quantization.quantize_dynamic</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387126784" value="2">
+      <span>torch.quantization.quantize_gguf</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387126784" value="3">
+      <span>torch.quantization.quantize_model</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-8.ipynb)

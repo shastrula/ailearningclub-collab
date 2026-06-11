@@ -59,6 +59,72 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Aggregation functions are used to perform calculations on grouped data. Common aggregation functions include sum, mean, count, min, max, and standard deviation. These functions help in summarizing the data within each group, providing valuable insights.
+
+```python title="example2.py"
+import pandas as pd
+
+# Sample DataFrame
+data = {'Category': ['A', 'B', 'A', 'B', 'A', 'B'], 'Values': [10, 20, 30, 40, 50, 60]}
+df = pd.DataFrame(data)
+
+# Grouping by 'Category' and applying multiple aggregation functions
+aggregations = df.groupby('Category')['Values'].agg(['sum','mean', 'count'])
+print(aggregations)
+```
+
+> **💡 Tip:** When using the `agg` method, ensure that the aggregation functions you choose are appropriate for the type of data you are working with to avoid incorrect results.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the `groupby` function in Pandas allow you to do?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904192" value="0">
+      <span>Sort data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904192" value="1">
+      <span>Filter data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904192" value="2">
+      <span>Split data into groups based on some criteria</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904192" value="3">
+      <span>Merge datasets</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which aggregation function calculates the average value within each group?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="0">
+      <span>sum</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="1">
+      <span>mean</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="2">
+      <span>count</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="3">
+      <span>max</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-10.ipynb)

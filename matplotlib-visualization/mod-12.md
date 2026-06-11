@@ -59,6 +59,72 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Plotly is a powerful library for creating interactive, web-based visualizations. It allows users to create dashboards that can be shared and explored by others. This is particularly useful for presenting EDA results in a dynamic and engaging manner.
+
+```python title="example2.py"
+import plotly.express as px
+import pandas as pd
+
+# Load dataset
+data = pd.read_csv('data.csv')
+
+# Create an interactive scatter plot
+fig = px.scatter(data, x='column1', y='column2', color='category', title='Interactive Scatter Plot')
+fig.show()
+```
+
+> **💡 Tip:** When creating dashboards with Plotly, ensure that you use meaningful titles and labels for your plots to enhance clarity and understanding.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Python library is primarily used for creating static, animated, and interactive visualizations?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860736" value="0">
+      <span>Seaborn</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860736" value="1">
+      <span>Plotly</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860736" value="2">
+      <span>Matplotlib</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386860736" value="3">
+      <span>Pandas</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using Plotly for data visualization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853056" value="0">
+      <span>It provides static plots</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853056" value="1">
+      <span>It offers high-level API for statistical plots</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853056" value="2">
+      <span>It creates interactive, web-based visualizations</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853056" value="3">
+      <span>It is used for data cleaning</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/matplotlib-visualization/mod-12.ipynb)

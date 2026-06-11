@@ -59,6 +59,72 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Once missing data is identified, you can choose from several strategies to handle it, including removing rows or columns with missing values, imputing missing values with statistical measures (mean, median, mode), or using more advanced techniques like interpolation or machine learning models for imputation.
+
+```python title="example2.py"
+import pandas as pd
+import numpy as np
+
+# Sample DataFrame with missing values
+df = pd.DataFrame({'A': [1, 2, np.nan], 'B': [4, np.nan, 6], 'C': [7, 8, 9]})
+
+# Impute missing values with the mean of the column
+df_imputed = df.fillna(df.mean())
+print(df_imputed)
+```
+
+> **💡 Tip:** When imputing missing values, consider the nature of your data and the potential impact on your analysis. Simple imputation methods like mean or median may not always be appropriate, especially for categorical data or datasets with significant missingness.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method is used to identify missing values in a Pandas DataFrame?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047104" value="0">
+      <span>dropna()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047104" value="1">
+      <span>fillna()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047104" value="2">
+      <span>isnull()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047104" value="3">
+      <span>interpolate()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method is used to impute missing values with the mean of the column in a Pandas DataFrame?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387059712" value="0">
+      <span>dropna()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387059712" value="1">
+      <span>fillna(df.mean())</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387059712" value="2">
+      <span>isnull()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387059712" value="3">
+      <span>interpolate()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-8.ipynb)

@@ -59,6 +59,36 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Troubleshooting involves identifying, diagnosing, and resolving issues that can disrupt the normal operation of MCP Servers. It requires a systematic approach to ensure that problems are addressed promptly and effectively, minimizing downtime and maintaining system integrity.
+
+> **💡 Tip:** Always start by checking the most common issues first, such as connectivity problems or configuration errors, before diving into more complex diagnostics.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the first step you should take when troubleshooting a connectivity issue with an MCP Server?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386856896" value="0">
+      <span>Check the server logs</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386856896" value="1">
+      <span>Restart the server</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386856896" value="2">
+      <span>Verify network settings</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386856896" value="3">
+      <span>Update the server software</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-22.ipynb)

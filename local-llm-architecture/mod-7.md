@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Securing LLM deployments also involves meeting specific hardware requirements to ensure optimal performance and security. This includes using trusted execution environments (TEEs), secure processors, and proper memory management. This section will guide you through selecting and configuring the appropriate hardware to enhance the security of your LLM deployments.
+
+```python title="example2.py"
+import llama_cpp
+
+# Example of setting up secure hardware requirements for llama.cpp
+hardware_config = {
+    'use_tee': True,
+   'secure_processor': 'Intel SGX',
+   'memory_limit': '16GB'
+}
+
+llama_cpp.setup(hardware_config)
+
+# Print hardware configuration to verify settings
+print(llama_cpp.get_hardware_config())
+```
+
+> **💡 Tip:** Ensure that your hardware configurations are regularly updated and audited to adapt to new security threats and vulnerabilities.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which security feature is crucial for protecting data integrity in Ollama?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950784" value="0">
+      <span>Data compression</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950784" value="1">
+      <span>Data encryption</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950784" value="2">
+      <span>Data replication</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950784" value="3">
+      <span>Data caching</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What hardware feature is essential for securing LLM deployments using llama.cpp?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386963008" value="0">
+      <span>High-speed network interface</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386963008" value="1">
+      <span>Trusted Execution Environment (TEE)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386963008" value="2">
+      <span>Large disk storage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386963008" value="3">
+      <span>Advanced cooling system</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-7.ipynb)

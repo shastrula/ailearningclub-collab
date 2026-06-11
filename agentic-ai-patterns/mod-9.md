@@ -59,6 +59,93 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Evaluating agent performance is essential for ensuring that orchestration strategies are effective. This involves monitoring the outcomes of agent tasks, assessing their efficiency, and making adjustments to improve overall system performance.
+
+```python title="example2.py"
+import random
+
+# Define a simple agent class
+class Agent:
+    def __init__(self, name):
+        self.name = name
+        self.success_rate = 0
+
+    def perform_task(self):
+        # Simulate task performance
+        result = random.choice([True, False])
+        if result:
+            self.success_rate += 1
+        return result
+
+# Orchestration function to coordinate and evaluate agents
+def orchestrate_and_evaluate(agents, num_tasks):
+    for _ in range(num_tasks):
+        for agent in agents:
+            agent.perform_task()
+    results = {agent.name: agent.success_rate for agent in agents}
+    return results
+
+# Create agents
+agent1 = Agent('Agent1')
+agent2 = Agent('Agent2')
+
+# Orchestrate and evaluate agents
+results = orchestrate_and_evaluate([agent1, agent2], 10)
+print(results)
+```
+
+> **💡 Tip:** Ensure that agents have clear, well-defined tasks and goals to prevent confusion and improve coordination efficiency.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of agent coordination in orchestration?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386953536" value="0">
+      <span>To create new agents</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386953536" value="1">
+      <span>To manage interactions between agents</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386953536" value="2">
+      <span>To delete agents</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386953536" value="3">
+      <span>To ignore agent interactions</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is evaluating agent performance important in orchestration?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957568" value="0">
+      <span>To ignore agent outcomes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957568" value="1">
+      <span>To ensure orchestration strategies are effective</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957568" value="2">
+      <span>To reduce the number of agents</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957568" value="3">
+      <span>To complicate agent tasks</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/agentic-ai-patterns/mod-9.ipynb)

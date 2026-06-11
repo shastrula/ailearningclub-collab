@@ -59,6 +59,86 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Batching multiple inference requests together can significantly improve throughput by utilizing the GPU more efficiently. Load balancing ensures that the inference workload is distributed evenly across multiple servers, preventing any single server from becoming a bottleneck.
+
+```python title="example2.py"
+import torch
+from torch.utils.data import DataLoader
+
+# Example of batching for inference
+def batch_inference(model, inputs, batch_size):
+    dataloader = DataLoader(inputs, batch_size=batch_size)
+    results = []
+    with torch.no_grad():
+        for batch in dataloader:
+            output = model(batch)
+            results.append(output)
+    return results
+
+# Dummy model and inputs for demonstration
+class DummyModel(torch.nn.Module):
+    def forward(self, x):
+        return x * 2
+
+model = DummyModel()
+inputs = [torch.randn(1) for _ in range(10)]
+batch_size = 2
+outputs = batch_inference(model, inputs, batch_size)
+print(outputs)
+```
+
+> **💡 Tip:** Ensure that batch sizes are optimized for your specific hardware and model to avoid underutilization of resources.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which technology is used for efficient handling of very large language models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047168" value="0">
+      <span>TensorFlow</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047168" value="1">
+      <span>PyTorch</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047168" value="2">
+      <span>vLLM</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047168" value="3">
+      <span>Keras</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of batching inference requests?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047936" value="0">
+      <span>Increased model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047936" value="1">
+      <span>Reduced memory usage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047936" value="2">
+      <span>Improved throughput</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047936" value="3">
+      <span>Simplified model training</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/production-inference/mod-17.ipynb)

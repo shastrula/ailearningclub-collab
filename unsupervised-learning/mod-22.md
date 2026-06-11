@@ -59,6 +59,71 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is another unsupervised learning algorithm that can identify clusters of varying shapes and sizes in time series data. Unlike K-Means, DBSCAN does not require specifying the number of clusters beforehand and can detect outliers effectively.
+
+```python title="example2.py"
+from sklearn.cluster import DBSCAN
+
+# Apply DBSCAN clustering
+dbscan = DBSCAN(eps=0.3, min_samples=5).fit(data_scaled)
+
+# Get cluster labels
+labels_dbscan = dbscan.labels_
+print(labels_dbscan)
+```
+
+> **💡 Tip:** When using DBSCAN, carefully choose the 'eps' and'min_samples' parameters to ensure meaningful clusters are formed.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using K-Means clustering for time series data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387185280" value="0">
+      <span>It requires labeled data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387185280" value="1">
+      <span>It can identify clusters of varying shapes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387185280" value="2">
+      <span>It is sensitive to the initial placement of centroids</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387185280" value="3">
+      <span>It can handle noise and outliers effectively</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which parameter in DBSCAN controls the maximum distance between two samples for them to be considered as in the same neighborhood?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387185728" value="0">
+      <span>min_samples</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387185728" value="1">
+      <span>eps</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387185728" value="2">
+      <span>metric</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387185728" value="3">
+      <span>algorithm</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/unsupervised-learning/mod-22.ipynb)

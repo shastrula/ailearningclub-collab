@@ -59,6 +59,71 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Magic commands in Jupyter Notebooks are special commands that start with a '%' or '%%' and provide additional functionality beyond standard Python code. They can be used for tasks like timing code execution, running shell commands, or customizing notebook behavior.
+
+```python title="example2.py"
+# This is a code cell demonstrating a magic command
+# The '%time' magic command times the execution of the following code
+%time
+
+# Example of a simple loop
+sum = 0
+for i in range(1000000):
+    sum += i
+```
+
+> **💡 Tip:** Be cautious when using magic commands, as they can sometimes lead to unexpected behavior if not used correctly. Always refer to the official documentation for guidance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What are the two primary types of cells in a Jupyter Notebook?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181312" value="0">
+      <span>Code and Markdown</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181312" value="1">
+      <span>Text and Image</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181312" value="2">
+      <span>Data and Function</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181312" value="3">
+      <span>Input and Output</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the '%time' magic command do?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181440" value="0">
+      <span>It times the execution of the following code</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181440" value="1">
+      <span>It executes the code in parallel</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181440" value="2">
+      <span>It converts the code to a function</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181440" value="3">
+      <span>It formats the output of the code</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/jupyter-notebooks-what-how-why/mod-3.ipynb)

@@ -59,6 +59,73 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Plotly is a powerful library for creating interactive plots, which are particularly useful in dashboards where users may want to explore data dynamically. Plotly allows you to create a variety of interactive charts, including scatter plots, line charts, and heatmaps, making it an excellent choice for building engaging and informative dashboards.
+
+```python title="example2.py"
+import plotly.express as px
+import pandas as pd
+
+# Sample data
+data = {'Category': ['A', 'B', 'C', 'D'], 'Values': [10, 24, 36, 40]}
+df = pd.DataFrame(data)
+
+# Creating an interactive bar plot using Plotly
+fig = px.bar(df, x='Category', y='Values', title='Interactive Bar Plot using Plotly', color='Values', color_continuous_scale='viridis')
+fig.show()
+```
+
+> **💡 Tip:** When creating dashboards, ensure that your visualizations are not only aesthetically pleasing but also intuitive and easy to interpret. Use consistent color schemes, clear labels, and appropriate chart types to convey your message effectively.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which library is built on top of Matplotlib and provides a high-level interface for drawing attractive statistical graphics?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386854336" value="0">
+      <span>Plotly</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386854336" value="1">
+      <span>Seaborn</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386854336" value="2">
+      <span>Bokeh</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386854336" value="3">
+      <span>Altair</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using Plotly for creating dashboards?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861440" value="0">
+      <span>Static plots</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861440" value="1">
+      <span>High-level interface</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861440" value="2">
+      <span>Interactive plots</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861440" value="3">
+      <span>Simple syntax</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/matplotlib-visualization/mod-19.ipynb)

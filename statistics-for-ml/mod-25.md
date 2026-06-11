@@ -59,6 +59,83 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Bayesian inference is a method of statistical inference in which Bayes' theorem is used to update the probability for a hypothesis as more evidence or information becomes available. In machine learning, Bayesian inference can be used for parameter estimation, where we aim to determine the most likely values of the parameters of a model given the observed data.
+
+```python title="example2.py"
+import numpy as np
+from scipy.stats import norm
+
+# Prior distribution
+prior_mean = 0
+prior_std = 1
+
+# Observed data
+data = np.random.normal(1, 0.5, 100)
+
+# Likelihood
+likelihood_mean = np.mean(data)
+likelihood_std = np.std(data, ddof=1) / np.sqrt(len(data))
+
+# Posterior distribution
+posterior_mean = (prior_std**2 * likelihood_mean + likelihood_std**2 * prior_mean) / (prior_std**2 + likelihood_std**2)
+posterior_std = np.sqrt(1 / (1/prior_std**2 + 1/likelihood_std**2))
+
+print(f'Posterior Mean: {posterior_mean}')
+print(f'Posterior Standard Deviation: {posterior_std}')
+```
+
+> **💡 Tip:** When performing Bayesian inference, ensure that your prior distribution accurately reflects your initial beliefs about the parameter values. An improperly chosen prior can lead to misleading results.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of hypothesis testing in A/B testing?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387116800" value="0">
+      <span>To determine the best version of a product</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387116800" value="1">
+      <span>To evaluate if there is a significant difference between two versions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387116800" value="2">
+      <span>To calculate the conversion rate</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387116800" value="3">
+      <span>To predict future sales</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the role of the prior distribution in Bayesian inference?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387126976" value="0">
+      <span>To determine the sample size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387126976" value="1">
+      <span>To reflect initial beliefs about parameter values</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387126976" value="2">
+      <span>To calculate the likelihood</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387126976" value="3">
+      <span>To predict future outcomes</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-25.ipynb)

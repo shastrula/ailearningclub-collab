@@ -59,6 +59,83 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Annotating plots with text, labels, and annotations can provide additional context and insights to your visualizations. Seaborn allows you to add annotations to your plots using Matplotlib's text and annotation functions. By strategically placing annotations, you can highlight key data points, trends, or insights, making your plots more informative and engaging for your audience.
+
+```python title="example2.py"
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load example dataset
+tips = sns.load_dataset('tips')
+
+# Create a scatter plot
+sns.scatterplot(data=tips, x='total_bill', y='tip', hue='day')
+
+# Annotate specific data points
+plt.annotate('High tip amount', xy=(23, 5.94), xytext=(25, 6.5),
+             arrowprops=dict(facecolor='black', shrink=0.05))
+
+# Set plot title and axis labels
+plt.title('Total Bill vs Tip by Day')
+plt.xlabel('Total Bill')
+plt.ylabel('Tip')
+
+# Show plot
+plt.show()
+```
+
+> **💡 Tip:** When customizing plots in Seaborn, experiment with different color palettes, themes, and annotation styles to find the combination that best conveys your data insights and resonates with your audience.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Seaborn function is used to create a scatter plot?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913984" value="0">
+      <span>sns.lineplot()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913984" value="1">
+      <span>sns.scatterplot()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913984" value="2">
+      <span>sns.barplot()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913984" value="3">
+      <span>sns.histplot()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How can you add annotations to a Seaborn plot?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902656" value="0">
+      <span>Using Matplotlib's text function</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902656" value="1">
+      <span>Using Seaborn's annotate function</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902656" value="2">
+      <span>Using Seaborn's text function</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902656" value="3">
+      <span>Using Matplotlib's annotate function</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/matplotlib-visualization/mod-7.ipynb)

@@ -59,6 +59,72 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Monitoring and logging tools are essential for tracking server performance, diagnosing issues, and ensuring security. These tools provide real-time data and historical logs, enabling administrators to make informed decisions and maintain server health.
+
+```python title="monitor_logs.py"
+import logging
+
+# Configure logging
+logging.basicConfig(filename='server.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Log messages
+logging.info('Server started')
+logging.warning('Resource usage is high')
+logging.error('Connection failed')
+```
+
+> **💡 Tip:** Always ensure your logging level is set appropriately to balance between verbosity and essential information. Overly verbose logs can be as problematic as insufficient logging.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of MCP Server Configuration Tools?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054208" value="0">
+      <span>To manage user accounts</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054208" value="1">
+      <span>To set up and customize server environment</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054208" value="2">
+      <span>To monitor server performance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054208" value="3">
+      <span>To deploy applications</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which logging level should you use for general information about server operations?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054656" value="0">
+      <span>DEBUG</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054656" value="1">
+      <span>INFO</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054656" value="2">
+      <span>WARNING</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054656" value="3">
+      <span>ERROR</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-3.ipynb)

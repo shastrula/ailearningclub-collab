@@ -154,6 +154,130 @@ with open('generated_image.png', 'wb') as f:
     f.write(image_data)
 ```
 
+
+## Quiz
+
+```json
+{
+  "claude": {
+    "opus": "anthropic.claude-3-opus-20240229-v1:0",
+    "sonnet": "anthropic.claude-3-sonnet-20240229-v1:0",
+    "haiku": "anthropic.claude-3-haiku-20240307-v1:0"
+  },
+  "llama": {
+    "llama3_70b": "meta.llama3-70b-instruct-v1:0",
+    "llama3_8b": "meta.llama3-8b-instruct-v1:0",
+    "llama2_70b": "meta.llama2-70b-chat-v1:0"
+  },
+  "mistral": {
+    "large": "mistral.mistral-large-2402-v1:0",
+    "7b": "mistral.mistral-7b-instruct-v0:2"
+  },
+  "titan": {
+    "text_premier": "amazon.titan-text-premier-v1:0",
+    "text_express": "amazon.titan-text-express-v1:0",
+    "embeddings": "amazon.titan-embed-text-v2:0"
+  }
+}
+```
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Claude 3 model offers the best balance of speed and capability?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374629" value="0">
+      <span>Claude 3 Opus</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374629" value="1">
+      <span>Claude 3 Sonnet</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374629" value="2">
+      <span>Claude 3 Haiku</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374629" value="3">
+      <span>All are equally balanced</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which model family is best for cost-sensitive, high-volume tasks?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6291847" value="0">
+      <span>Claude 3 Opus</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6291847" value="1">
+      <span>Mistral Large</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6291847" value="2">
+      <span>Llama 3 8B or Mistral 7B</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6291847" value="3">
+      <span>Stable Diffusion 3</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is Titan Embeddings used for?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7465382" value="0">
+      <span>Generating vector embeddings for RAG systems</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7465382" value="1">
+      <span>Image generation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7465382" value="2">
+      <span>Code generation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7465382" value="3">
+      <span>Fine-tuning other models</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which model would you choose for complex multi-step reasoning?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9284756" value="0">
+      <span>Llama 3 8B</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9284756" value="1">
+      <span>Mistral 7B</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9284756" value="2">
+      <span>Claude 3 Haiku</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9284756" value="3">
+      <span>Claude 3 Opus</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-bedrock/mod-2.ipynb)

@@ -52,6 +52,36 @@ Recent advances in Advanced Topics in Supervised Learning:
 
 True mastery comes from implementing Advanced Topics in Supervised Learning in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+Ensemble methods combine the predictions of several base estimators to improve generalizability and robustness over a single estimator. Common ensemble techniques include Bagging, Boosting, and Stacking.
+
+> **💡 Tip:** When using ensemble methods, be mindful of overfitting. Techniques like cross-validation and regularization can help mitigate this risk.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which of the following is NOT an ensemble method?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372726976" value="0">
+      <span>Bagging</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372726976" value="1">
+      <span>Boosting</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372726976" value="2">
+      <span>Support Vector Machines</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372726976" value="3">
+      <span>Stacking</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning-course-outline/mod-6.ipynb)

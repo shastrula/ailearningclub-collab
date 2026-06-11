@@ -59,6 +59,77 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+INT4 and INT8 quantization techniques reduce the bit-width of model parameters to 4 or 8 bits, respectively. The bitsandbytes library provides efficient implementations for low-bit quantization, enabling significant reductions in model size and memory usage. However, these techniques require careful handling to avoid precision loss and maintain model performance.
+
+```python title="example2.py"
+import bitsandbytes as bnb
+
+# Example of INT8 quantization using bitsandbytes
+model = torch.nn.Linear(10, 10)
+int8_model = bnb.nn.Linear8bit(10, 10)
+int8_model.weight.data = model.weight.data
+int8_model.bias.data = model.bias.data
+
+# Example input
+input_tensor = torch.randn(1, 10)
+
+# Forward pass through INT8 quantized model
+output = int8_model(input_tensor)
+print(output)
+```
+
+> **💡 Tip:** When applying INT4/INT8 quantization, ensure to calibrate the quantization parameters to minimize accuracy loss. Additionally, use mixed-precision training to maintain numerical stability.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of GGUF and GPTQ quantization techniques?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386857216" value="0">
+      <span>To increase model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386857216" value="1">
+      <span>To reduce model size and inference time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386857216" value="2">
+      <span>To enhance model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386857216" value="3">
+      <span>To increase memory usage</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a key consideration when applying INT4/INT8 quantization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858176" value="0">
+      <span>Increasing the bit-width</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858176" value="1">
+      <span>Calibrating quantization parameters</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858176" value="2">
+      <span>Using floating-point precision</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858176" value="3">
+      <span>Ignoring numerical stability</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-18.ipynb)

@@ -55,6 +55,87 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Datagram sockets are used for sending and receiving UDP packets, which are connectionless and do not guarantee delivery, order, or duplication protection. This method is useful for applications like online games or live broadcasts where speed is more critical than reliability. Understanding datagram sockets is essential for handling real-time data transmission.
+
+```java title="example2.java"
+import java.io.*;
+import java.net.*;
+
+public class UDPServer {
+    public static void main(String[] args) throws IOException {
+        DatagramSocket socket = new DatagramSocket(9876);
+        byte[] buffer = new byte[1024];
+
+        DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+        System.out.println("Waiting for packets");
+
+        socket.receive(packet);
+        String message = new String(packet.getData(), 0, packet.getLength());
+        System.out.println("Received: " + message);
+
+        InetAddress address = packet.getAddress();
+        int port = packet.getPort();
+        String response = "Hello from UDP Server";
+        DatagramPacket responsePacket = new DatagramPacket(response.getBytes(), response.length(), address, port);
+        socket.send(responsePacket);
+
+        socket.close();
+    }
+}
+```
+
+> **💡 Tip:** When using datagram sockets, always handle exceptions properly to avoid socket leaks, which can lead to resource exhaustion.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary use of socket programming in Java?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122432" value="0">
+      <span>To create GUI applications</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122432" value="1">
+      <span>To enable communication between systems over a network</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122432" value="2">
+      <span>To perform file I/O operations</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122432" value="3">
+      <span>To manage database connections</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which type of socket is used for UDP communication in Java?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123968" value="0">
+      <span>ServerSocket</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123968" value="1">
+      <span>DatagramSocket</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123968" value="2">
+      <span>Socket</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123968" value="3">
+      <span>ObjectOutputStream</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-12.ipynb)

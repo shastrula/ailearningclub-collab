@@ -59,6 +59,87 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Reflection in agentic AI refers to the agent's ability to evaluate its own actions and outcomes, learn from its experiences, and adjust its behavior accordingly. This self-assessment capability is critical for continuous improvement and adaptation in dynamic environments.
+
+```python title="example2.py"
+class ReflectiveAgent:
+    def __init__(self):
+        self.actions = []
+        self.outcomes = {}
+
+    def perform_action(self, action):
+        self.actions.append(action)
+        outcome = self.evaluate_outcome(action)
+        self.outcomes[action] = outcome
+        print(f'Performed action: {action}, Outcome: {outcome}')
+
+    def evaluate_outcome(self, action):
+        # Simplified evaluation
+        return 'success' if action == 'execute' else 'failure'
+
+    def reflect(self):
+        for action, outcome in self.outcomes.items():
+            print(f'Reflecting on action: {action}, Outcome was: {outcome}')
+
+# Example usage
+agent = ReflectiveAgent()
+agent.perform_action('search')
+agent.perform_action('execute')
+agent.reflect()
+```
+
+> **💡 Tip:** Ensure that the reflection process includes both successful and unsuccessful actions to provide a comprehensive learning experience for the agent.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of planning in agentic AI?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387189696" value="0">
+      <span>To randomize actions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387189696" value="1">
+      <span>To create a sequence of actions to achieve a goal</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387189696" value="2">
+      <span>To ignore the environment</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387189696" value="3">
+      <span>To avoid any form of reasoning</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does reflection in agentic AI involve?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387190848" value="0">
+      <span>Ignoring past actions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387190848" value="1">
+      <span>Evaluating own actions and outcomes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387190848" value="2">
+      <span>Only focusing on successful actions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387190848" value="3">
+      <span>Avoiding any form of learning</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/agentic-ai-patterns/mod-12.ipynb)

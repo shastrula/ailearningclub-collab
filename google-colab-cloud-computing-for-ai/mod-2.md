@@ -59,6 +59,73 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Google Colab allows you to manage your project's dependencies using pip or by uploading a requirements.txt file. This ensures that all necessary libraries are installed and available for your project.
+
+```python title="example2.py"
+# Install a package using pip
+# pip install numpy
+
+# Verify the installation
+import numpy as np
+print(f'Numpy version: {np.__version__}')
+```
+
+```
+Numpy version: 1.21.2
+```
+
+> **💡 Tip:** Always restart the runtime after installing new packages to ensure they are properly loaded.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of setting up a working directory in Google Colab?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948032" value="0">
+      <span>To save your project permanently</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948032" value="1">
+      <span>To manage dependencies</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948032" value="2">
+      <span>To organize your files and notebooks</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948032" value="3">
+      <span>To increase computational speed</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How can you verify that a package has been successfully installed in Google Colab?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950976" value="0">
+      <span>By checking the terminal output</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950976" value="1">
+      <span>By importing the package and checking its version</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950976" value="2">
+      <span>By looking at the list of installed packages</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950976" value="3">
+      <span>By restarting the runtime</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/google-colab-cloud-computing-for-ai/mod-2.ipynb)

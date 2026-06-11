@@ -52,6 +52,77 @@ Recent advances in Logistic Regression Advanced Techniques:
 
 True mastery comes from implementing Logistic Regression Advanced Techniques in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+Imbalanced datasets, where one class significantly outnumbers the other, can lead to biased models. Techniques like class weighting and over/under-sampling can be used to address this issue. Class weighting assigns higher penalties to misclassifications of the minority class, while over/under-sampling adjusts the dataset to balance the classes.
+
+```python title="example2.py"
+from imblearn.over_sampling import SMOTE
+from sklearn.metrics import classification_report
+
+# Apply SMOTE to balance the dataset
+smote = SMOTE(random_state=42)
+X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
+
+# Train logistic regression on the resampled dataset
+log_reg_balanced = LogisticRegression(solver='lbfgs', random_state=42)
+log_reg_balanced.fit(X_resampled, y_resampled)
+
+# Predict and evaluate
+y_pred_balanced = log_reg_balanced.predict(X_test)
+print(classification_report(y_test, y_pred_balanced))
+```
+
+> **💡 Tip:** When dealing with imbalanced datasets, always evaluate model performance using metrics like precision, recall, and F1-score, in addition to accuracy, to get a comprehensive understanding of model performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of L2 regularization in logistic regression?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912192" value="0">
+      <span>To increase model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912192" value="1">
+      <span>To prevent overfitting by adding a penalty term</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912192" value="2">
+      <span>To handle imbalanced datasets</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912192" value="3">
+      <span>To improve computational efficiency</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which technique is used to handle imbalanced datasets in logistic regression?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902848" value="0">
+      <span>L2 regularization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902848" value="1">
+      <span>Feature scaling</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902848" value="2">
+      <span>SMOTE</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902848" value="3">
+      <span>Grid search</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning/mod-5.ipynb)

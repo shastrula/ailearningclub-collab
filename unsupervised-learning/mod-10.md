@@ -55,6 +55,36 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+t-SNE has several important parameters that can significantly affect the results, including perplexity, learning rate, and number of iterations. Perplexity can be thought of as a guess about the number of close neighbors each point has. The learning rate controls how much the points are allowed to move in each iteration.
+
+> **💡 Tip:** Choosing the right value for perplexity is crucial. A too-small value can lead to a fragmented visualization, while a too-large value can lead to overlapping points.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the perplexity parameter in t-SNE represent?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960704" value="0">
+      <span>The number of clusters in the data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960704" value="1">
+      <span>A guess about the number of close neighbors each point has</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960704" value="2">
+      <span>The learning rate of the algorithm</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960704" value="3">
+      <span>The number of iterations for the algorithm</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/unsupervised-learning/mod-10.ipynb)

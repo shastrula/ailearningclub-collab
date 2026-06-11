@@ -59,6 +59,73 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Color space augmentations involve altering the color properties of images. Techniques such as changing brightness, contrast, saturation, and hue can help the model become more robust to variations in lighting and color conditions. These augmentations are particularly useful for outdoor scenes where lighting conditions can vary significantly.
+
+```python title="example2.py"
+import cv2
+
+# Load an image
+image = cv2.imread('example.jpg')
+
+# Increase brightness
+brighter_image = cv2.convertScaleAbs(image, beta=50)
+
+# Save the brighter image
+cv2.imwrite('brighter_example.jpg', brighter_image)
+```
+
+> **💡 Tip:** When applying multiple augmentations, be cautious not to over-augment the data, as this can lead to unrealistic images that may confuse the model.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which transformation helps the model learn invariant features?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904448" value="0">
+      <span>Scaling</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904448" value="1">
+      <span>Rotation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904448" value="2">
+      <span>Flipping</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904448" value="3">
+      <span>All of the above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which color space augmentation increases the lightness of an image?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905152" value="0">
+      <span>Change saturation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905152" value="1">
+      <span>Change hue</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905152" value="2">
+      <span>Increase brightness</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905152" value="3">
+      <span>Decrease contrast</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/computer-vision/mod-11.ipynb)

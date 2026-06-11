@@ -55,6 +55,68 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+NumPy provides a large, multi-dimensional array object and an assortment of routines for operations on arrays. It offers great performance due to the fact that it is built upon C and Fortran.
+
+```python title="example.py"
+import numpy as np
+arr = np.array([1, 2, 3, 4, 5])
+```
+
+> **Try it in Google Colab:** [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-courses/blob/main/numpy-pandas-kebab/mod-1.ipynb)
+
+
+> **💡 Tip:** Remember to always import numpy as np to make it easier to distinguish between NumPy and Python built-in functions.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the function np.array() create in Python?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375007680" value="0">
+      <span>A list</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375007680" value="1">
+      <span>A NumPy array</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375007680" value="2">
+      <span>A dictionary</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375007680" value="3">
+      <span>None of the above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which statement about the shape attribute of a numpy array is true?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375007872" value="0">
+      <span>It returns the number of elements in the array</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375007872" value="1">
+      <span>It returns the dimensions of the array</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375007872" value="2">
+      <span>It returns both the number of elements and dimensions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375007872" value="3">
+      <span>It returns the index of the last dimension</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-kebab/mod-1.ipynb)

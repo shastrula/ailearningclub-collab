@@ -59,6 +59,90 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Benchmarking quantized models involves comparing their performance metrics against their full-precision counterparts. This process helps identify any degradation in accuracy and measures improvements in latency and model size. This section will guide you through setting up a benchmarking pipeline using Python.
+
+```python title="example2.py"
+import time
+import torch
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+# Load models
+fp_model = AutoModelForSequenceClassification.from_pretrained('distilbert-base-uncased')
+quantized_model = bnb.nn.quantize(fp_model, bits=4)
+tokenizer = AutoTokenizer.from_pretrained('distilbert-base-uncased')
+
+# Prepare input data
+inputs = tokenizer('Hello, world!', return_tensors='pt')
+
+# Benchmark full-precision model
+start_time = time.time()
+with torch.no_grad():
+    fp_outputs = fp_model(**inputs)
+fp_duration = time.time() - start_time
+
+# Benchmark quantized model
+start_time = time.time()
+with torch.no_grad():
+    quant_outputs = quantized_model(**inputs)
+quant_duration = time.time() - start_time
+
+# Print results
+print(f'Full-precision model duration: {fp_duration:.4f} seconds')
+print(f'Quantized model duration: {quant_duration:.4f} seconds')
+```
+
+> **💡 Tip:** When benchmarking quantized models, ensure that the input data is consistent across both the full-precision and quantized models to obtain accurate comparisons.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which metric is crucial for evaluating the performance of quantized models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386856640" value="0">
+      <span>Model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386856640" value="1">
+      <span>Accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386856640" value="2">
+      <span>Number of parameters</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386856640" value="3">
+      <span>Training time</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of benchmarking quantized models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852160" value="0">
+      <span>To increase model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852160" value="1">
+      <span>To reduce training time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852160" value="2">
+      <span>To compare performance metrics against full-precision models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852160" value="3">
+      <span>To enhance model complexity</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-16.ipynb)

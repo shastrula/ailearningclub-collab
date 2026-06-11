@@ -59,6 +59,71 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Decomposition is a technique used to separate the time series into its individual components. This helps in understanding the underlying structure of the data and can be crucial for preprocessing before applying forecasting models.
+
+```python title="example2.py"
+from statsmodels.tsa.seasonal import seasonal_decompose
+
+# Decomposing the time series
+decomposition = seasonal_decompose(df['value'], model='additive', period=10)
+
+# Plotting the decomposed components
+decomposition.plot()
+plt.show()
+```
+
+> **💡 Tip:** Always check the stationarity of your time series data before applying certain models like ARIMA. Non-stationary data can lead to misleading results.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What are the three main components of a time series?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386857472" value="0">
+      <span>Trend, seasonality, and noise</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386857472" value="1">
+      <span>Mean, variance, and covariance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386857472" value="2">
+      <span>Autocorrelation, partial autocorrelation, and lag</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386857472" value="3">
+      <span>Frequency, amplitude, and phase</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method is used to separate a time series into its individual components?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387182592" value="0">
+      <span>Fourier Transform</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387182592" value="1">
+      <span>Seasonal Decomposition</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387182592" value="2">
+      <span>Wavelet Transform</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387182592" value="3">
+      <span>Principal Component Analysis</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/time-series-forecasting/mod-2.ipynb)

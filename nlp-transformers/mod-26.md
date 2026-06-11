@@ -59,6 +59,62 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+- [Hugging Face Documentation](https://huggingface.co/docs) — Transformers library reference
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) — Visual explanation
+- [CS224N (Stanford)](https://web.stanford.edu/class/cs224n/) — NLP with Deep Learning
+- [Attention Is All You Need (paper)](https://arxiv.org/abs/1706.03762) — Original transformer paper
+- [NLP Course (Hugging Face)](https://huggingface.co/learn/nlp-course) — Free NLP course
+
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What are the trade-offs of this approach?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_0" value="0">
+      <span>Speed vs Accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_1" value="1">
+      <span>Complexity vs Performance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_2" value="2">
+      <span>Memory vs Speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_3" value="3">
+      <span>All of above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How would you optimize this for production?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_0" value="0">
+      <span>Caching</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_1" value="1">
+      <span>Parallelization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_2" value="2">
+      <span>Algorithm selection</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q26_3" value="3">
+      <span>All of above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-26.ipynb)

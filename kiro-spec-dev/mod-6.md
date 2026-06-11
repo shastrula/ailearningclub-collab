@@ -59,6 +59,34 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Steering files can be scoped to specific file patterns. A steering file with a glob of src/api/** only applies when Kiro is working on API files, keeping context focused and relevant.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the main benefit of using .kiro/steering files?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954304" value="0">
+      <span>They speed up Kiro's response time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954304" value="1">
+      <span>They let you encode project conventions once so Kiro applies them automatically to everything it generates</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954304" value="2">
+      <span>They replace the need for a design document</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954304" value="3">
+      <span>They configure Kiro's UI theme</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/kiro-spec-dev/mod-6.ipynb)

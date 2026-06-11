@@ -59,6 +59,81 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Logging is the process of recording events that occur within a system. Logs provide a historical record of system behavior, which is invaluable for debugging, auditing, and performance analysis. Structured logging, where logs are formatted in a consistent manner (e.g., JSON), enhances readability and facilitates automated analysis.
+
+```python title="example2.py"
+import logging
+import json
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def log_event(event_type, details):
+    """Log an event with structured data."""
+    log_entry = {
+        'event_type': event_type,
+        'timestamp': time.time(),
+        'details': details
+    }
+    logging.info(json.dumps(log_entry))
+
+# Simulate logging events
+log_event('request', {'user_id': 123, 'endpoint': '/api/data'})
+log_event('error', {'code': 500,'message': 'Internal Server Error'})
+```
+
+> **💡 Tip:** Ensure logs are timestamped and include relevant context (e.g., user ID, request ID) to facilitate tracing and correlation of events.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of monitoring in a production environment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956928" value="0">
+      <span>To enhance user interface</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956928" value="1">
+      <span>To ensure system reliability and performance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956928" value="2">
+      <span>To manage database schemas</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956928" value="3">
+      <span>To optimize front-end code</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is structured logging important in production systems?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387050880" value="0">
+      <span>It improves the visual appeal of logs</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387050880" value="1">
+      <span>It makes logs easier to read and analyze</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387050880" value="2">
+      <span>It reduces the size of log files</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387050880" value="3">
+      <span>It speeds up the logging process</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/production-inference/mod-10.ipynb)

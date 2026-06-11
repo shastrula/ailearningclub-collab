@@ -52,6 +52,52 @@ Recent advances in Advanced Data Analysis using Numpy & Pandas:
 
 True mastery comes from implementing Advanced Data Analysis using Numpy & Pandas in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+Numpy is a powerful library for handling numerical data in Python. It provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these data structures.
+
+```python title="example.py"
+import numpy as np
+# Perform various array operations such as reshaping, slicing, broadcasting etc.
+```
+
+> **Try it in Google Colab:** [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-courses/blob/main/numpy-pandas-kebab/mod-3.ipynb)
+
+
+> **💡 Tip:** Pandas is an essential tool for data manipulation and analysis in Python. It offers DataFrames, which are similar to SQL tables, along with powerful functions for data cleaning, merging, aggregating and visualization.
+
+```python title="data_analysis.py"
+import pandas as pd
+# Read data from CSV file, clean it and perform analysis using various Pandas functions like groupby, merge, pivot etc.
+```
+
+> **💡 Tip:** Don't forget to handle missing values when working with real-world datasets using methods like fillna(), dropna() or interpolate().
+
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which function from Pandas can be used for data aggregation?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375010496" value="0">
+      <span>numpy_aggregate</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375010496" value="1">
+      <span>dataframe_agg</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375010496" value="2">
+      <span>pandas_agg</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375010496" value="3">
+      <span>aggregate_data</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-kebab/mod-3.ipynb)

@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+After installation, it's important to verify that Conda was installed correctly. You can do this by opening a new terminal or command prompt and running the command `conda --version`. This will print the version of Conda installed.
+
+```python title="verify_conda_installation.py"
+import subprocess
+
+# Run the command to check Conda version
+result = subprocess.run(["conda", "--version"], capture_output=True, text=True)
+
+# Print the output
+print(result.stdout)
+```
+
+```
+Expected output:
+conda 4.10.1
+
+```
+
+> **💡 Tip:** Ensure you close and reopen your terminal or command prompt after installation to update the environment variables.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What command do you use to verify the installation of Conda?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955200" value="0">
+      <span>conda install --version</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955200" value="1">
+      <span>conda --version</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955200" value="2">
+      <span>conda version</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955200" value="3">
+      <span>conda info --version</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of running the installer script with the `./` prefix?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386953408" value="0">
+      <span>To specify the full path to the script</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386953408" value="1">
+      <span>To make the script executable</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386953408" value="2">
+      <span>To run the script in the current directory</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386953408" value="3">
+      <span>To download the script</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/conda-package-management-and-environments/mod-2.ipynb)

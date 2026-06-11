@@ -59,6 +59,77 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Deploying LLMs in an enterprise requires significant hardware resources. GPUs are essential for accelerating model training and inference. Enterprises should consider using multi-GPU setups and high-memory servers to handle large models efficiently. Additionally, robust network infrastructure is necessary to support data transfer and model serving.
+
+```python title="example2.py"
+import psutil
+
+# Function to check system resources
+def check_system_resources():
+    cpu_percent = psutil.cpu_percent(interval=1)
+    memory = psutil.virtual_memory()
+    disk = psutil.disk_usage('/')
+    
+    print(f'CPU Usage: {cpu_percent}% ')
+    print(f'Memory Usage: {memory.percent}% ')
+    print(f'Disk Usage: {disk.percent}% ')
+
+# Call the function
+check_system_resources()
+```
+
+> **💡 Tip:** Ensure that your enterprise network can handle the bandwidth requirements for data transfer when deploying LLMs, especially if you are using distributed training or inference setups.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of using Ollama for local LLM deployment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079232" value="0">
+      <span>Reduced model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079232" value="1">
+      <span>Enhanced data privacy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079232" value="2">
+      <span>Faster internet connection</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079232" value="3">
+      <span>Lower computational cost</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which hardware component is crucial for accelerating LLM inference in an enterprise setting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079808" value="0">
+      <span>RAM</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079808" value="1">
+      <span>CPU</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079808" value="2">
+      <span>GPU</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079808" value="3">
+      <span>Network Interface Card</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-21.ipynb)

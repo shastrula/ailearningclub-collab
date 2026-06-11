@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Dependence structures can be modeled using various types of copulas, such as Gaussian, Student's t, and Clayton copulas. Each copula type has its own characteristics and is suitable for different kinds of dependencies. Understanding these structures helps in capturing the true relationships in the data.
+
+```python title="example2.py"
+import numpy as np
+from scipy.stats import norm, t, clayton
+
+# Generate data
+data1 = norm.rvs(size=1000)
+data2 = t.rvs(df=4, size=1000)
+
+# Fit a Clayton copula
+def clayton_copula(u1, u2, theta):
+    return (u1**(-theta) + u2**(-theta) - 1)**(-1/theta)
+
+# Calculate dependence
+def dependence(u1, u2):
+    return np.mean(clayton_copula(u1, u2, 2))
+
+print(dependence(data1, data2))
+```
+
+> **💡 Tip:** When selecting a copula, consider the tail dependence of your data. Gaussian copulas assume no tail dependence, whereas Student's t and Clayton copulas can model tail dependence.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of using copulas in statistical modeling?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902784" value="0">
+      <span>To reduce dimensionality</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902784" value="1">
+      <span>To model dependence structures</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902784" value="2">
+      <span>To perform feature scaling</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902784" value="3">
+      <span>To handle missing values</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which copula type is suitable for modeling tail dependence?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908992" value="0">
+      <span>Gaussian copula</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908992" value="1">
+      <span>Student's t copula</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908992" value="2">
+      <span>Independence copula</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908992" value="3">
+      <span>Frank copula</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-20.ipynb)

@@ -59,6 +59,83 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Static batching involves predefining a fixed batch size and waiting until the batch is full before processing. This strategy ensures consistent batch sizes but may introduce latency if the batch is not filled quickly.
+
+```python title="example2.py"
+import time
+
+# Simulate inference requests
+requests = [1, 2, 3, 4, 5]
+batch_size = 3
+
+# Static batching function
+def static_batching(requests, batch_size):
+    batch = []
+    for request in requests:
+        batch.append(request)
+        if len(batch) == batch_size:
+            print(f"Processing batch: {batch}")
+            batch = []
+            time.sleep(1)  # Simulate inference time
+    if batch:  # Process remaining requests
+        print(f"Processing batch: {batch}")
+        time.sleep(1)  # Simulate inference time
+
+static_batching(requests, batch_size)
+```
+
+> **💡 Tip:** When implementing batching strategies, consider the trade-offs between latency and resource utilization. Dynamic batching is generally more flexible and can handle varying request rates, while static batching offers more predictable performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of dynamic batching?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080640" value="0">
+      <span>Reduced latency</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080640" value="1">
+      <span>Consistent batch sizes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080640" value="2">
+      <span>Flexibility in handling varying request rates</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080640" value="3">
+      <span>Simplified implementation</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a potential drawback of static batching?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080704" value="0">
+      <span>Increased resource utilization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080704" value="1">
+      <span>Reduced latency</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080704" value="2">
+      <span>Inconsistent batch sizes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080704" value="3">
+      <span>Introduced latency if the batch is not filled quickly</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/production-inference/mod-4.ipynb)

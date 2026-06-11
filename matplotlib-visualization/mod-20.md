@@ -52,6 +52,75 @@ Recent advances in Advanced Topics and Future Trends:
 
 True mastery comes from implementing Advanced Topics and Future Trends in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+Seaborn is a powerful library for creating advanced EDA charts. It builds on Matplotlib and provides a high-level interface for drawing attractive and informative statistical graphics. Advanced EDA charts such as pair plots, heatmaps, and violin plots help in uncovering deeper insights from the data.
+
+```python title="example2.py"
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Load example dataset
+data = sns.load_dataset('iris')
+
+# Create a pair plot
+sns.pairplot(data, hue='species')
+
+# Show the plot
+plt.show()
+```
+
+> **💡 Tip:** When creating pair plots with Seaborn, ensure that the 'hue' parameter is used to differentiate categories, making the plot more informative and easier to interpret.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which library is used for creating interactive visualizations?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080448" value="0">
+      <span>Matplotlib</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080448" value="1">
+      <span>Seaborn</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080448" value="2">
+      <span>Plotly</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080448" value="3">
+      <span>Pandas</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What type of plot is created using the 'pairplot' function in Seaborn?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089216" value="0">
+      <span>Bar plot</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089216" value="1">
+      <span>Line plot</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089216" value="2">
+      <span>Scatter plot</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089216" value="3">
+      <span>Pair plot</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/matplotlib-visualization/mod-20.ipynb)

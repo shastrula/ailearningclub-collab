@@ -59,6 +59,75 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Feature transformation involves applying mathematical functions to existing features to make them more suitable for the model. Common transformations include log transformation for skewed data, polynomial features for capturing non-linear relationships, and scaling features to have a mean of zero and a standard deviation of one. These transformations can help stabilize variance, reduce skewness, and improve the model's performance.
+
+```python title="example2.py"
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+
+# Sample dataset
+data = {'feature1': [1, 2, 3, 4], 'feature2': [5, 6, 7, 8]}
+df = pd.DataFrame(data)
+
+# Standardizing features
+scaler = StandardScaler()
+df[['feature1', 'feature2']] = scaler.fit_transform(df[['feature1', 'feature2']])
+
+print(df)
+```
+
+> **💡 Tip:** Always check the distribution of your features before and after transformation to ensure that the transformation has the desired effect.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of creating new features in feature engineering?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852416" value="0">
+      <span>To reduce the number of features</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852416" value="1">
+      <span>To improve model performance by providing more informative features</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852416" value="2">
+      <span>To simplify the model</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852416" value="3">
+      <span>To increase the computational cost</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which transformation is commonly used to handle skewed data in feature engineering?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862656" value="0">
+      <span>Polynomial transformation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862656" value="1">
+      <span>Log transformation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862656" value="2">
+      <span>Square root transformation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862656" value="3">
+      <span>Exponential transformation</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning/mod-15.ipynb)

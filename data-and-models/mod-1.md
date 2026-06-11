@@ -59,6 +59,40 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+- California Housing — predict house prices from location, rooms, income. Great for regression.
+- Titanic — predict survival. The classic classification starter.
+- MNIST — 70,000 handwritten digits. The 'Hello World' of image classification.
+- IMDB Reviews — 50,000 movie reviews for sentiment analysis.
+- Iris — 150 flower measurements. Tiny but perfect for learning clustering and classification.
+
+> **💡 Tip:** Start with a dataset that has a clear target variable (what you're predicting) and under 100,000 rows. You can iterate fast and see results quickly.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which platform hosts the largest community of ML datasets and competitions?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060480" value="0">
+      <span>UCI Repository</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060480" value="1">
+      <span>Google Dataset Search</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060480" value="2">
+      <span>Kaggle</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387060480" value="3">
+      <span>HuggingFace</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/data-and-models/mod-1.ipynb)

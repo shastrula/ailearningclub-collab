@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Zero-shot prompting is particularly beneficial in scenarios where labeled data is scarce or expensive to obtain. It allows models to be deployed in new domains or for new tasks without requiring additional training. This flexibility makes zero-shot prompting a powerful tool for rapid prototyping and deployment of NLP applications.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Load a pre-trained model for text generation
+generator = pipeline("text-generation")
+
+# Define a zero-shot prompt
+prompt = "Once upon a time, in a land far away, there lived a"
+
+# Generate text based on the prompt
+generated_text = generator(prompt, max_length=100)
+
+# Print the generated text
+print(generated_text[0]['generated_text'])
+```
+
+> **💡 Tip:** When using zero-shot prompting, ensure that the prompts are clear and contextually rich to help the model generate more accurate and relevant responses.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of zero-shot prompting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181760" value="0">
+      <span>Requires extensive training data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181760" value="1">
+      <span>Allows models to generalize to new tasks without additional training</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181760" value="2">
+      <span>Needs fine-tuning for each new task</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181760" value="3">
+      <span>Limited to pre-defined tasks</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ In which scenario is zero-shot prompting particularly useful?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181568" value="0">
+      <span>When labeled data is abundant</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181568" value="1">
+      <span>When deploying models in new domains without additional training</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181568" value="2">
+      <span>When performing tasks the model was specifically trained for</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181568" value="3">
+      <span>When fine-tuning is mandatory for every new task</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/prompt-engineering/mod-2.ipynb)

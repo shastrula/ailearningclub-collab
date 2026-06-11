@@ -59,6 +59,82 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Mean Average Precision (mAP) is a comprehensive metric used to evaluate object detection models. It considers both the precision and recall of the model across different Intersection over Union (IoU) thresholds. mAP provides a single scalar value that summarizes the model's performance, making it easier to compare different models.
+
+```python title="example2.py"
+from sklearn.metrics import average_precision_score
+
+def calculate_map(gt, pred):
+    # Flatten the ground truth and predictions
+    gt_flat = [item for sublist in gt for item in sublist]
+    pred_flat = [item for sublist in pred for item in sublist]
+
+    # Calculate average precision for each class
+    aps = [average_precision_score(gt_flat, pred_flat) for gt, pred in zip(gt, pred)]
+
+    # Calculate mean average precision
+    map_score = sum(aps) / len(aps)
+
+    return map_score
+
+# Example usage
+ground_truth = [[1, 0, 1], [0, 1, 0]]
+predictions = [[0.9, 0.1, 0.8], [0.2, 0.9, 0.3]]
+print(calculate_map(ground_truth, predictions))
+```
+
+> **💡 Tip:** When evaluating object detection models, ensure that the IoU threshold is appropriately set to match the specific requirements of your application.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does a higher IoU value indicate in object detection?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905920" value="0">
+      <span>Lower alignment between predicted and actual bounding boxes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905920" value="1">
+      <span>Higher alignment between predicted and actual bounding boxes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905920" value="2">
+      <span>No change in alignment</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905920" value="3">
+      <span>Irrelevant for object detection</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does mAP summarize in object detection model evaluation?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906560" value="0">
+      <span>Only precision</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906560" value="1">
+      <span>Only recall</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906560" value="2">
+      <span>Both precision and recall</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906560" value="3">
+      <span>Neither precision nor recall</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/computer-vision/mod-12.ipynb)

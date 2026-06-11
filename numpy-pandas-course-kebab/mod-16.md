@@ -59,6 +59,83 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Matplotlib provides various styling options to change the appearance of your plots, including line styles, colors, markers, and grid settings. These styling choices allow you to create visually distinct plots that effectively convey your data's message.
+
+```python title="example2.py"
+import matplotlib.pyplot as plt
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y1 = [2, 3, 5, 7, 11]
+y2 = [1, 4, 6, 8, 10]
+
+# Create a plot with multiple lines
+plt.plot(x, y1, linestyle='--', color='r', marker='s', label='Series 1')
+plt.plot(x, y2, linestyle='-.', color='b', marker='^', label='Series 2')
+
+# Add grid and customize plot
+plt.grid(True, linestyle='--', linewidth=0.5)
+plt.title('Styling Plots with Matplotlib', fontsize=16, fontweight='bold')
+plt.xlabel('X-axis Label', fontsize=12)
+plt.ylabel('Y-axis Label', fontsize=12)
+plt.legend()
+
+# Display the plot
+plt.show()
+```
+
+> **💡 Tip:** When customizing plots, consider the audience and context to choose appropriate styles and elements that enhance understanding and engagement.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which function is used to set the title of a plot in Matplotlib?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959808" value="0">
+      <span>plt.xlabel()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959808" value="1">
+      <span>plt.ylabel()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959808" value="2">
+      <span>plt.title()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959808" value="3">
+      <span>plt.legend()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How can you change the line style of a plot in Matplotlib?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386855040" value="0">
+      <span>Using the 'linestyle' parameter</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386855040" value="1">
+      <span>Using the 'color' parameter</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386855040" value="2">
+      <span>Using the'marker' parameter</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386855040" value="3">
+      <span>Using the 'label' parameter</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-16.ipynb)

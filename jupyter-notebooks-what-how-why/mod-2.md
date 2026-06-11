@@ -59,6 +59,73 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Creating a virtual environment is essential to manage dependencies and isolate your project. This ensures that different projects do not interfere with each other's dependencies.
+
+```python title="create_venv.py"
+import os
+import venv
+
+# Create a virtual environment in the specified directory
+venv.create('myenv', with_pip=True)
+print('Virtual environment created successfully')
+```
+
+```
+Virtual environment created successfully
+```
+
+> **💡 Tip:** Always activate your virtual environment before starting your Jupyter Notebook to ensure you are using the correct Python interpreter and dependencies.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of installing Jupyter Notebook?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955968" value="0">
+      <span>To edit text files</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955968" value="1">
+      <span>To run Python code interactively</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955968" value="2">
+      <span>To manage system files</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955968" value="3">
+      <span>To compile C++ code</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is it important to create a virtual environment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387177344" value="0">
+      <span>To increase system memory usage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387177344" value="1">
+      <span>To manage project-specific dependencies</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387177344" value="2">
+      <span>To speed up internet connection</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387177344" value="3">
+      <span>To limit access to Python packages</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/jupyter-notebooks-what-how-why/mod-2.ipynb)

@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+A confidence interval provides a range of values which is likely to contain the population parameter with a certain level of confidence. It is calculated from the observed data and gives an estimated range within which the true parameter lies. For example, a 95% confidence interval means that if we were to take 100 different samples and compute a 95% confidence interval for each sample, then approximately 95 of the 100 confidence intervals will contain the true mean value.
+
+```python title="example2.py"
+import numpy as np
+from scipy import stats
+
+# Example: Calculating a 95% confidence interval for the mean
+sample_data = np.random.normal(loc=100, scale=15, size=30)
+
+# Calculate the mean and standard deviation
+sample_mean = np.mean(sample_data)
+sample_std_dev = np.std(sample_data, ddof=1)
+
+# Calculate the standard error
+standard_error = sample_std_dev / np.sqrt(len(sample_data))
+
+# Calculate the confidence interval
+confidence_interval = stats.t.interval(0.95, len(sample_data)-1, loc=sample_mean, scale=standard_error)
+print(f'95% Confidence Interval: {confidence_interval}')
+```
+
+> **💡 Tip:** When interpreting confidence intervals, remember that they provide a range of plausible values for the parameter, not a probability that the parameter lies within the interval.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does a P-value less than 0.05 typically indicate?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386851968" value="0">
+      <span>Strong evidence in favor of the null hypothesis</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386851968" value="1">
+      <span>Weak evidence against the null hypothesis</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386851968" value="2">
+      <span>Strong evidence against the null hypothesis</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386851968" value="3">
+      <span>No evidence against the null hypothesis</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does a 95% confidence interval represent?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853696" value="0">
+      <span>The probability that the true parameter lies within the interval</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853696" value="1">
+      <span>The range within which 95% of the sample data lies</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853696" value="2">
+      <span>The range within which we are 95% confident that the true parameter lies</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386853696" value="3">
+      <span>The range within which 95% of all possible sample means lie</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-7.ipynb)

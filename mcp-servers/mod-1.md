@@ -55,6 +55,80 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+To set up an MCP Server, you need to define the server's address and port, create a socket, bind it to the address and port, and then listen for incoming connections. Once a connection is established, the server can receive and send data to the client. This setup allows multiple AI agents to communicate efficiently within a distributed system.
+
+```python title="example2.py"
+import socket
+
+# Create a socket object
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Connect to the server
+client_socket.connect(('localhost', 65432))
+
+# Send data to the server
+client_socket.sendall(b'Hello, MCP Server!')
+
+# Receive data from the server
+data = client_socket.recv(1024)
+print('Received', repr(data))
+
+# Close the socket
+client_socket.close()
+```
+
+> **💡 Tip:** Ensure that the port number used for the MCP Server is not already in use by another application to avoid connection errors.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does MCP stand for in MCP Servers?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909696" value="0">
+      <span>Message Context Protocol</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909696" value="1">
+      <span>Model Communication Protocol</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909696" value="2">
+      <span>Model Context Protocol</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909696" value="3">
+      <span>Machine Communication Protocol</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What method is used to accept incoming connections on an MCP Server?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909760" value="0">
+      <span>connect()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909760" value="1">
+      <span>accept()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909760" value="2">
+      <span>recv()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386909760" value="3">
+      <span>sendall()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-1.ipynb)

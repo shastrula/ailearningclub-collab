@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Model accuracy post-quantization is another vital metric. It measures how well the quantized model performs on a validation dataset compared to the original model. This metric helps determine if the quantization process has significantly degraded the model's ability to make correct predictions.
+
+```python title="example2.py"
+from sklearn.metrics import accuracy_score
+
+# Original model predictions
+original_labels = [0, 1, 1, 0]
+original_predictions = [0, 1, 1, 0]
+
+# Quantized model predictions
+quantized_predictions = [0, 1, 0, 0]
+
+# Calculate accuracy
+original_accuracy = accuracy_score(original_labels, original_predictions)
+quantized_accuracy = accuracy_score(original_labels, quantized_predictions)
+
+print(f'Original Model Accuracy: {original_accuracy}')
+print(f'Quantized Model Accuracy: {quantized_accuracy}')
+```
+
+> **💡 Tip:** Always compare the quantized model's performance metrics with those of the original model to understand the impact of quantization.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does quantization error measure?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861696" value="0">
+      <span>The time taken to quantize the model</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861696" value="1">
+      <span>The difference between original and quantized model predictions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861696" value="2">
+      <span>The size of the quantized model</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861696" value="3">
+      <span>The number of parameters reduced</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which metric helps determine if quantization has degraded model performance?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861632" value="0">
+      <span>Model size reduction</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861632" value="1">
+      <span>Quantization error</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861632" value="2">
+      <span>Inference speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861632" value="3">
+      <span>Model accuracy post-quantization</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-17.ipynb)

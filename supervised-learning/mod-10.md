@@ -55,6 +55,88 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+The kernel trick is a technique used in SVMs to transform data into a higher-dimensional space where it becomes easier to find a linear separating hyperplane. Common kernels include linear, polynomial, and radial basis function (RBF). The choice of kernel can significantly impact the performance of the SVM.
+
+```python title="example2.py"
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
+
+# Load the iris dataset
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create an SVM classifier with RBF kernel
+svm_classifier = SVC(kernel='rbf')
+
+# Train the classifier
+svm_classifier.fit(X_train, y_train)
+
+# Make predictions
+y_pred = svm_classifier.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Accuracy: {accuracy:.2f}')
+```
+
+> **💡 Tip:** When using SVMs, it's important to scale your data before training, as SVMs are sensitive to the scale of the data. Use StandardScaler from sklearn.preprocessing to standardize features.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of an SVM classifier?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906944" value="0">
+      <span>To minimize the margin between classes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906944" value="1">
+      <span>To maximize the margin between classes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906944" value="2">
+      <span>To find the smallest hyperplane</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906944" value="3">
+      <span>To ignore support vectors</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which kernel is commonly used in SVMs to handle non-linear data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907904" value="0">
+      <span>Linear kernel</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907904" value="1">
+      <span>Polynomial kernel</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907904" value="2">
+      <span>RBF kernel</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907904" value="3">
+      <span>Sigmoid kernel</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning/mod-10.ipynb)

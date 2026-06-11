@@ -59,6 +59,36 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+- Range of values likely to contain true parameter
+- 95% CI: 95% confident true value is in range
+- Wider interval = less precision, higher confidence
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does a p-value < 0.05 typically indicate?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7777777777" value="0">
+      <span>The result is definitely true</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7777777777" value="1">
+      <span>Statistically significant evidence against H₀</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7777777777" value="2">
+      <span>The sample size is too small</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7777777777" value="3">
+      <span>No relationship exists</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/maths-and-statistics-in-ai/mod-14.ipynb)

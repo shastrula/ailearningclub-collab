@@ -59,6 +59,77 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Tool use in agentic AI refers to the ability of an agent to utilize external tools or services to perform tasks. This can include APIs, databases, or other software components. Effective tool use allows agents to leverage existing resources to enhance their capabilities and achieve goals more efficiently.
+
+```python title="example2.py"
+import requests
+
+# Define a function to use an external API
+def use_tool(api_url):
+    response = requests.get(api_url)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return 'Error: Unable to fetch data'
+
+# Use the tool
+api_url = 'https://api.example.com/data'
+result = use_tool(api_url)
+print(result)
+```
+
+> **💡 Tip:** When using external tools, always handle exceptions and errors gracefully to ensure your agent can recover from failures.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of planning in agentic AI?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178880" value="0">
+      <span>To create a user interface</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178880" value="1">
+      <span>To determine a sequence of actions to achieve a goal</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178880" value="2">
+      <span>To train machine learning models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178880" value="3">
+      <span>To store data in a database</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is tool use in agentic AI primarily about?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908224" value="0">
+      <span>Creating new APIs</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908224" value="1">
+      <span>Utilizing external tools or services to perform tasks</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908224" value="2">
+      <span>Designing user interfaces</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908224" value="3">
+      <span>Storing data in databases</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/agentic-ai-patterns/mod-15.ipynb)

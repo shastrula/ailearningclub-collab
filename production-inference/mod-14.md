@@ -59,6 +59,80 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Batching is a technique where multiple inference requests are grouped together and processed in a single forward pass through the model. This reduces the overhead associated with each inference call and improves overall throughput. Proper implementation of batching is critical for high-performance serving of machine learning models.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+# Load the model and tokenizer
+model = AutoModelForSequenceClassification.from_pretrained('bert-base-uncased')
+tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
+
+# Define a batch of input sentences
+sentences = ['This is the first sentence.', 'This is the second sentence.']
+
+# Tokenize the sentences
+inputs = tokenizer(sentences, return_tensors='pt', padding=True, truncation=True)
+
+# Perform batch inference
+outputs = model(**inputs)
+
+print(outputs.logits)
+```
+
+> **💡 Tip:** When implementing batching, ensure that the batch size is optimized for your specific hardware and model to avoid underutilization or overloading the system.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of using vLLM for inference?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046528" value="0">
+      <span>Increased model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046528" value="1">
+      <span>Reduced inference latency</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046528" value="2">
+      <span>Higher training accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046528" value="3">
+      <span>Lower data storage requirements</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the main advantage of batching during inference?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047040" value="0">
+      <span>Reduced model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047040" value="1">
+      <span>Improved throughput</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047040" value="2">
+      <span>Lower training loss</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387047040" value="3">
+      <span>Increased data privacy</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/production-inference/mod-14.ipynb)

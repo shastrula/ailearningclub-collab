@@ -59,6 +59,88 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Benchmarking is essential to evaluate the performance and efficiency gains of quantized models. It involves comparing the inference speed, memory usage, and accuracy of the quantized model against the original floating-point model to ensure that the quantization process has not adversely affected the model's performance.
+
+```python title="example2.py"
+import torch
+import time
+
+# Load original and quantized models
+original_model = torch.hub.load('pytorch/vision:v0.10.0','mobilenet_v2', pretrained=True)
+original_model.eval()
+quantized_model = torch.quantization.quantize_dynamic(original_model, {torch.nn.Linear}, dtype=torch.qint8)
+
+# Prepare input tensor
+input_tensor = torch.rand((1, 3, 224, 224))
+
+# Benchmark original model
+start_time = time.time()
+with torch.no_grad():
+    original_output = original_model(input_tensor)
+original_time = time.time() - start_time
+
+# Benchmark quantized model
+start_time = time.time()
+with torch.no_grad():
+    quantized_output = quantized_model(input_tensor)
+quantized_time = time.time() - start_time
+
+print(f'Original model inference time: {original_time:.4f} seconds')
+print(f'Quantized model inference time: {quantized_time:.4f} seconds')
+```
+
+> **💡 Tip:** Ensure that the input data for the quantized model is pre-processed correctly, as quantization can be sensitive to input scaling and zero-point values.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of Post-Training Quantization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119488" value="0">
+      <span>To increase model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119488" value="1">
+      <span>To reduce model size and computational requirements</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119488" value="2">
+      <span>To improve training speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119488" value="3">
+      <span>To enhance data privacy</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which precision format is commonly used in Post-Training Quantization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119744" value="0">
+      <span>FP32</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119744" value="1">
+      <span>FP16</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119744" value="2">
+      <span>INT8</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119744" value="3">
+      <span>INT16</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-14.ipynb)

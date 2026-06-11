@@ -55,6 +55,82 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+To implement QLoRA, you need to apply quantization to the LoRA layers. This involves converting the floating-point weights to lower precision, such as int8, which significantly reduces memory footprint and speeds up computation. The quantized LoRA layers are then used to fine-tune the model.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from bitsandbytes import quantize_model
+
+# Load pre-trained model and tokenizer
+model_name = 'facebook/opt-1.3b'
+model = AutoModelForCausalLM.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Quantize the model using QLoRA
+quantized_model = quantize_model(model, bits=8)
+
+# Example input
+input_text = 'Hello, how are you?'
+inputs = tokenizer(input_text, return_tensors='pt')
+
+# Generate output
+outputs = quantized_model.generate(**inputs, max_length=50)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+> **💡 Tip:** Ensure that the quantization level (e.g., int8) is compatible with your hardware to avoid runtime errors.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does QLoRA stand for?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089536" value="0">
+      <span>Quantized Language Model Adaptation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089536" value="1">
+      <span>Quantized Low-Rank Adaptation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089536" value="2">
+      <span>Quick Language Optimization and Reduction Algorithm</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089536" value="3">
+      <span>Quantized Learning Rate Adjustment</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which precision level is commonly used in QLoRA for quantization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089664" value="0">
+      <span>fp32</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089664" value="1">
+      <span>fp16</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089664" value="2">
+      <span>int16</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387089664" value="3">
+      <span>int8</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/llm-fine-tuning/mod-4.ipynb)

@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Once files are uploaded, they can be read and written using standard Python file I/O operations. Google Colab supports various file formats, including CSV, JSON, and text files. This flexibility allows for easy manipulation of data in different formats, which is essential for data preprocessing and model training.
+
+```python title="example2.py"
+import json
+
+# Writing to a JSON file
+data = {'name': 'John', 'age': 30}
+with open('data.json', 'w') as f:
+  json.dump(data, f)
+
+# Reading from the JSON file
+with open('data.json', 'r') as f:
+  data_loaded = json.load(f)
+print(data_loaded)
+```
+
+```
+{'name': 'John', 'age': 30}
+```
+
+> **💡 Tip:** Always ensure that the file paths are correctly specified, especially when working with files stored in Google Drive. Use the full path to avoid any file access issues.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How do you upload a file to Google Colab?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908032" value="0">
+      <span>Using the 'import' statement</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908032" value="1">
+      <span>Using the 'files.upload()' function</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908032" value="2">
+      <span>Using the 'open()' function</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908032" value="3">
+      <span>Using the 'print()' function</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which function is used to read a JSON file in Google Colab?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905472" value="0">
+      <span>json.dump()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905472" value="1">
+      <span>json.load()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905472" value="2">
+      <span>json.save()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905472" value="3">
+      <span>json.open()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/google-colab-cloud-computing-for-ai/mod-5.ipynb)

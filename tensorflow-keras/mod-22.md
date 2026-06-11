@@ -59,6 +59,87 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+SHAP (SHapley Additive exPlanations) values provide a unified measure of feature importance. They are based on game theory and offer a way to explain the output of any machine learning model. SHAP values can be used to understand the impact of each feature on the model's predictions, making them a powerful tool for interpretability.
+
+```python title="example2.py"
+import shap
+import xgboost as xgb
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+
+# Generate a binary classification dataset.
+X, y = make_classification(n_samples=1000, n_features=10,
+                            n_informative=5, n_redundant=0,
+                            random_state=42)
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train an XGBoost model
+model = xgb.XGBClassifier().
+fit(X_train, y_train)
+
+# Create a SHAP explainer object
+explainer = shap.Explainer(model)
+
+shap_values = explainer(X_test)
+
+# Plot SHAP summary plot
+shap.summary_plot(shap_values, X_test, plot_type="bar")
+```
+
+> **💡 Tip:** When using SHAP values, ensure that the dataset is representative and unbiased to avoid misleading interpretations.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of model interpretability?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908480" value="0">
+      <span>To increase model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908480" value="1">
+      <span>To understand and explain model predictions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908480" value="2">
+      <span>To reduce model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908480" value="3">
+      <span>To improve model training speed</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which technique is used to measure the impact of each feature on model predictions using game theory?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912256" value="0">
+      <span>LIME</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912256" value="1">
+      <span>SHAP</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912256" value="2">
+      <span>Permutation Importance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912256" value="3">
+      <span>Partial Dependence Plots</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/tensorflow-keras/mod-22.ipynb)

@@ -59,6 +59,75 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+After completing this course, the next steps involve selecting the appropriate hardware based on your specific needs, configuring your environment for private AI deployment, and planning for enterprise-level rollout. This includes setting up necessary infrastructure, conducting thorough testing, and ensuring compliance with organizational policies and data regulations.
+
+```python title="example2.py"
+import llama_cpp
+
+# Initialize llama.cpp with a specific model
+model = llama_cpp.initialize('path/to/model')
+
+# Load a dataset for testing
+dataset = ["The quick brown fox jumps over the lazy dog.", "To be or not to be, that is the question."]
+
+# Process each text in the dataset
+for text in dataset:
+    output = model.process(text)
+    print(f'Input: {text} -> Output: {output}')
+```
+
+> **💡 Tip:** Ensure that your hardware meets the minimum requirements for running LLMs to avoid performance issues. Regularly update your models and dependencies to benefit from the latest improvements and security patches.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of using Ollama for local LLM deployment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083264" value="0">
+      <span>Reduced internet bandwidth usage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083264" value="1">
+      <span>Increased model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083264" value="2">
+      <span>Lower computational costs</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083264" value="3">
+      <span>Enhanced data privacy</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which factor is crucial for the successful enterprise deployment of LLMs?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083776" value="0">
+      <span>Model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083776" value="1">
+      <span>Internet connectivity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083776" value="2">
+      <span>Data compliance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083776" value="3">
+      <span>User interface design</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-24.ipynb)

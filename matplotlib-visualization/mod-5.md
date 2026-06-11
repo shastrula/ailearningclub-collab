@@ -55,6 +55,73 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Seaborn allows for the creation of more advanced plots such as pair plots and joint plots, which are useful for understanding relationships between multiple variables. These plots can reveal patterns, correlations, and distributions that might not be apparent from individual plots.
+
+```python title="example2.py"
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load an example dataset
+tips = sns.load_dataset('tips')
+
+# Create a pair plot
+sns.pairplot(tips, hue='day')
+plt.suptitle('Pair Plot of Tips Dataset', y=1.02)
+plt.show()
+```
+
+> **💡 Tip:** When creating pair plots, be mindful of the number of variables you include to avoid overly complex and cluttered visualizations.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the `kde=True` parameter do in `sns.histplot()`?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178752" value="0">
+      <span>It removes the KDE line</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178752" value="1">
+      <span>It adds a KDE line to the histogram</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178752" value="2">
+      <span>It changes the color of the histogram</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178752" value="3">
+      <span>It adds a vertical line at the mean</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of the `hue` parameter in `sns.pairplot()`?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178816" value="0">
+      <span>It changes the plot size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178816" value="1">
+      <span>It adds a color dimension based on a categorical variable</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178816" value="2">
+      <span>It removes certain variables from the plot</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387178816" value="3">
+      <span>It adds a title to the plot</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/matplotlib-visualization/mod-5.ipynb)

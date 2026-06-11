@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Benchmarking is essential to evaluate the performance of quantized models. It involves measuring metrics like inference time, memory usage, and accuracy. Tools like bitsandbytes library can be used to efficiently handle large models with reduced precision. Model compression techniques further optimize the model size without significant loss in performance.
+
+```python title="example2.py"
+import time
+import bitsandbytes as bnb
+
+# Load the quantized model
+quantized_model = bnb.nn.QuantizedLinear.from_float(torch.load('quantized_model.pth'))
+
+# Benchmark inference time
+input_tensor = torch.randn(1, 1000)
+start_time = time.time()
+output = quantized_model(input_tensor)
+end_time = time.time()
+
+print(f'Inference time: {end_time - start_time} seconds')
+```
+
+> **💡 Tip:** When quantizing models, ensure to validate the quantized model's performance against the original model to maintain accuracy and reliability.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which quantization technique dynamically adjusts quantization levels?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862656" value="0">
+      <span>GGUF</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862656" value="1">
+      <span>GPTQ</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862656" value="2">
+      <span>AWQ</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862656" value="3">
+      <span>INT4</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of benchmarking quantized models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863360" value="0">
+      <span>To increase model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863360" value="1">
+      <span>To reduce inference time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863360" value="2">
+      <span>To enhance model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863360" value="3">
+      <span>To complicate model deployment</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-21.ipynb)

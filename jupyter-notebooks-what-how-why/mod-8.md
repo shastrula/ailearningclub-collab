@@ -59,6 +59,70 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Sometimes, you may only need specific functions or classes from a library. Python allows you to import only what you need, which can improve performance and reduce potential naming conflicts.
+
+```python title="example2.py"
+from datetime import datetime
+
+# Get the current date and time
+now = datetime.now()
+
+# Print the current date and time
+print(now)
+```
+
+> **💡 Tip:** Be mindful of naming conflicts when importing specific functions or classes. Always use unique names to avoid overwriting built-in functions or variables.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the 'import' statement do in Python?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386898368" value="0">
+      <span>It creates a new Python file</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386898368" value="1">
+      <span>It brings external code into your script</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386898368" value="2">
+      <span>It deletes a variable</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386898368" value="3">
+      <span>It prints a message to the console</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How can you import only specific functions or classes from a library?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904640" value="0">
+      <span>Use the 'import' statement with the library name</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904640" value="1">
+      <span>Use the 'from' keyword followed by the library name and the specific function or class</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904640" value="2">
+      <span>Use the 'as' keyword to rename the library</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904640" value="3">
+      <span>Use the 'export' statement</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/jupyter-notebooks-what-how-why/mod-8.ipynb)

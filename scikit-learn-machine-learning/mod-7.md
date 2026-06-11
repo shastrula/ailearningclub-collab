@@ -59,6 +59,89 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Pruning is a technique used to reduce the complexity of a Decision Tree by removing sections of the tree that provide little power to classify instances. This helps to prevent overfitting and improve the model's generalization ability. Pruning can be done by setting parameters such as `max_depth`, `min_samples_split`, and `min_samples_leaf` during the tree construction.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+
+# Load the Iris dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create a Decision Tree classifier with pruning
+clf = DecisionTreeClassifier(random_state=42, max_depth=3)
+
+# Train the classifier
+clf.fit(X_train, y_train)
+
+# Make predictions
+y_pred = clf.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Accuracy: {accuracy:.2f}')
+```
+
+> **💡 Tip:** When using Decision Trees, be cautious of overfitting, especially with deep trees. Always consider pruning or using ensemble methods like Random Forests to improve model performance and generalization.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of a Decision Tree in machine learning?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118528" value="0">
+      <span>To cluster data points</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118528" value="1">
+      <span>To predict the value of a target variable by learning decision rules</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118528" value="2">
+      <span>To reduce dimensionality</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118528" value="3">
+      <span>To perform feature selection</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which parameter is used to limit the depth of a Decision Tree to prevent overfitting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118592" value="0">
+      <span>min_samples_split</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118592" value="1">
+      <span>max_features</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118592" value="2">
+      <span>max_depth</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387118592" value="3">
+      <span>criterion</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/scikit-learn-machine-learning/mod-7.ipynb)

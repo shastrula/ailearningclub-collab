@@ -55,6 +55,79 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Once you have a DataFrame, you can perform various operations such as selecting columns, filtering rows, and aggregating data. These operations are essential for data cleaning and preparation, which are critical steps in any data science workflow.
+
+```python title="example2.py"
+import pandas as pd
+
+# Creating a DataFrame from a dictionary
+data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35], 'Score': [88, 92, 85]}
+df = pd.DataFrame(data)
+
+# Selecting a column
+print(df['Name'])
+
+# Filtering rows
+filtered_df = df[df['Age'] > 28]
+print(filtered_df)
+
+# Aggregating data
+average_score = df['Score'].mean()
+print('Average Score:', average_score)
+```
+
+> **💡 Tip:** Always check for missing values in your DataFrame before performing any operations. Use df.isnull().sum() to get a summary of missing values in each column.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a Pandas DataFrame?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387050240" value="0">
+      <span>A one-dimensional labeled array</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387050240" value="1">
+      <span>A two-dimensional, size-mutable, heterogeneous tabular data structure</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387050240" value="2">
+      <span>A plotting library</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387050240" value="3">
+      <span>A machine learning library</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How do you select a column in a DataFrame?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387050304" value="0">
+      <span>df.column_name</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387050304" value="1">
+      <span>df['column_name']</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387050304" value="2">
+      <span>df.select('column_name')</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387050304" value="3">
+      <span>df.get('column_name')</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-4.ipynb)

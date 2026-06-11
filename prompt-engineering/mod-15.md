@@ -59,6 +59,36 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Adaptive learning prompts are a cutting-edge trend that allows models to learn from user interactions and improve over time. This approach tailors the prompts based on the user's previous inputs and responses, leading to more personalized and effective interactions. By dynamically adjusting to the user's needs, adaptive learning prompts can significantly enhance the user experience and model performance.
+
+> **💡 Tip:** To implement adaptive learning prompts, start by collecting data on user interactions and feedback, then use this data to refine and personalize the prompts.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a key feature of adaptive learning prompts?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957824" value="0">
+      <span>Static prompts that do not change</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957824" value="1">
+      <span>Prompts that learn from user interactions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957824" value="2">
+      <span>Fixed prompts based on initial settings</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957824" value="3">
+      <span>Prompts that ignore user feedback</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/prompt-engineering/mod-15.ipynb)

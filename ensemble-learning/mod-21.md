@@ -59,6 +59,77 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+XGBoost, LightGBM, and CatBoost are advanced ensemble learning libraries that offer significant improvements over traditional methods. XGBoost is known for its speed and performance, especially in handling sparse data. LightGBM is designed for efficient training on large datasets, using a histogram-based algorithm. CatBoost excels in handling categorical features without the need for preprocessing. These libraries not only provide high accuracy but also come with built-in mechanisms to handle overfitting and other common challenges.
+
+```python title="example2.py"
+import xgboost as xgb
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split
+
+# Load dataset
+cancer = load_breast_cancer()
+X_train, X_test, y_train, y_test = train_test_split(cancer.data, cancer.target, test_size=0.3, random_state=42)
+
+# XGBoost example
+xgb_model = xgb.XGBClassifier(use_label_encoder=False, eval_metric='logloss')
+xgb_model.fit(X_train, y_train)
+xgb_score = xgb_model.score(X_test, y_test)
+
+print(f'XGBoost Score: {xgb_score}')
+```
+
+> **💡 Tip:** When using advanced ensemble techniques like XGBoost, LightGBM, or CatBoost, always experiment with hyperparameter tuning to achieve the best performance. These libraries offer a wide range of parameters that can significantly impact model accuracy and efficiency.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary difference between bagging and boosting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387177792" value="0">
+      <span>Bagging reduces bias, boosting reduces variance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387177792" value="1">
+      <span>Bagging reduces variance, boosting reduces bias</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387177792" value="2">
+      <span>Both reduce variance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387177792" value="3">
+      <span>Both reduce bias</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which ensemble technique is best suited for handling large datasets efficiently?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179136" value="0">
+      <span>XGBoost</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179136" value="1">
+      <span>LightGBM</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179136" value="2">
+      <span>CatBoost</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179136" value="3">
+      <span>All are equally efficient</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ensemble-learning/mod-21.ipynb)

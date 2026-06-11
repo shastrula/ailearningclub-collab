@@ -59,6 +59,92 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Polymorphism allows objects to be treated as instances of their parent class. It is of two types: compile-time (or static) and runtime (or dynamic). Compile-time polymorphism is achieved through method overloading, while runtime polymorphism is achieved through method overriding. This enables a single action to behave differently based on the object that it is acting upon.
+
+```java title="example2.java"
+class Animal {
+    void makeSound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Meow");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Woof");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal a;
+        a = new Cat();
+        a.makeSound();
+        a = new Dog();
+        a.makeSound(};
+    }
+}
+```
+
+> **💡 Tip:** When overriding methods, always use the @Override annotation to avoid accidental method signature changes in the superclass.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the 'extends' keyword do in Java?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386947520" value="0">
+      <span>Creates a new class</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386947520" value="1">
+      <span>Inherits attributes and methods from a superclass</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386947520" value="2">
+      <span>Defines a new interface</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386947520" value="3">
+      <span>Creates a new package</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which type of polymorphism is achieved through method overriding?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960192" value="0">
+      <span>Compile-time polymorphism</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960192" value="1">
+      <span>Runtime polymorphism</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960192" value="2">
+      <span>Both A and B</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960192" value="3">
+      <span>Neither A nor B</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-6.ipynb)

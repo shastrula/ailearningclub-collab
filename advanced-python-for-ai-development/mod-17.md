@@ -59,6 +59,40 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+mypy validates type hints without running code, catching bugs early.
+
+```bash title="check_types.sh"
+# Install mypy
+pip install mypy
+
+# Check types in your file
+mypy your_script.py
+```
+
+> **💡 Tip:** Add type hints to all functions in production AI code for better maintainability and fewer runtime errors.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the benefit of type hints?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="0">
+      <span>They make code run faster</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="1">
+      <span>They document expected types and enable static analysis</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="2">
+      <span>They are required for all Python code</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/advanced-python-for-ai-development/mod-17.ipynb)

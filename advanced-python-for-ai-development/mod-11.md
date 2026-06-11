@@ -52,6 +52,83 @@ Recent advances in Deep Learning Frameworks:
 
 True mastery comes from implementing Deep Learning Frameworks in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+PyTorch, developed by Facebook's AI Research lab, is another powerful deep learning framework. It is known for its dynamic computation graph and ease of use, making it particularly popular among researchers. PyTorch uses the torch library as its core, providing tensor computation with strong GPU acceleration and a deep integration with the Python ecosystem.
+
+**example2.py**
+
+```
+import torch
+
+# Define a simple tensor
+x = torch.tensor([5.0, 3.0])
+
+# Perform an operation on the tensor
+y = torch.tensor([2.0, 2.0])
+z = x + y
+
+print('Tensor x:', x)
+print('Tensor y:', y)
+print('Result of x + y:', z)
+```
+
+```
+Tensor x: tensor([5., 3.])
+Tensor y: tensor([2., 2.])
+Result of x + y: tensor([ 7.,  5.])
+```
+
+> **💡 Tip:** When working with large datasets, always ensure that your data is properly normalized and preprocessed to avoid issues during training.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using TensorFlow's data flow graphs?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961216" value="0">
+      <span>It allows for dynamic changes to the graph at runtime.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961216" value="1">
+      <span>It provides a clear visualization of the computation process.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961216" value="2">
+      <span>It enables efficient computation on large datasets.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961216" value="3">
+      <span>It simplifies the debugging process.</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which of the following statements is true about PyTorch?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957952" value="0">
+      <span>It uses a static computation graph.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957952" value="1">
+      <span>It is primarily used for production applications.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957952" value="2">
+      <span>It provides strong GPU acceleration.</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957952" value="3">
+      <span>It is difficult to integrate with other Python libraries.</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/advanced-python-for-ai-development/mod-11.ipynb)

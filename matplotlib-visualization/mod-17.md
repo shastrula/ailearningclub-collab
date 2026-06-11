@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Enhancing the readability and aesthetics of your visualizations can significantly improve their effectiveness. This includes using appropriate color schemes, adding labels and annotations, and ensuring that the chart is not overcrowded with information. Aesthetically pleasing charts are more likely to engage viewers and convey the intended message clearly.
+
+```python title="example2.py"
+import plotly.express as px
+import pandas as pd
+
+# Sample data
+data = {'Fruit': ['Apples', 'Oranges', 'Bananas', 'Cherries'], 'Amount': [4, 1, 2, 3], 'City': ['SF', 'SF', 'Montreal', 'Montreal']}
+df = pd.DataFrame(data)
+
+# Enhanced scatter plot
+fig = px.scatter(df, x='Fruit', y='Amount', color='City', title='Fruit Amounts by City', labels={'Amount': 'Amount of fruit'}, height=400)
+fig.update_layout(showlegend=True)
+fig.show()
+```
+
+> **💡 Tip:** Avoid using too many colors in a single chart, as it can confuse the viewer. Stick to a consistent color palette and use color to highlight important data points or categories.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which chart type is best for comparing quantities across different categories?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852416" value="0">
+      <span>Line chart</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852416" value="1">
+      <span>Pie chart</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852416" value="2">
+      <span>Bar chart</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386852416" value="3">
+      <span>Scatter plot</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a key practice for enhancing the readability of a chart?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861824" value="0">
+      <span>Using as many colors as possible</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861824" value="1">
+      <span>Avoiding labels and annotations</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861824" value="2">
+      <span>Ensuring the chart is not overcrowded</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861824" value="3">
+      <span>Making the chart as complex as possible</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/matplotlib-visualization/mod-17.ipynb)

@@ -55,6 +55,72 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+llama.cpp is a C++ library that allows for the efficient running of LLMs on local machines. It provides a lightweight and fast interface for inference, making it suitable for resource-constrained environments. Using llama.cpp, developers can deploy models without relying on cloud services.
+
+```python title="example2.py"
+import llama_cpp
+
+# Initialize llama.cpp model
+model = llama_cpp.Model('path/to/model')
+
+# Generate text using the model
+output = model.generate('In the beginning', max_tokens=50)
+
+print(output)
+```
+
+> **💡 Tip:** Ensure that your hardware meets the minimum requirements for running LLMs locally, including sufficient RAM and a compatible CPU or GPU.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary function of Ollama?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863808" value="0">
+      <span>Data storage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863808" value="1">
+      <span>Model training</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863808" value="2">
+      <span>Model deployment and management</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386863808" value="3">
+      <span>Cloud service integration</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which library allows for efficient running of LLMs on local machines?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386864768" value="0">
+      <span>TensorFlow</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386864768" value="1">
+      <span>PyTorch</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386864768" value="2">
+      <span>llama.cpp</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386864768" value="3">
+      <span>Keras</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-1.ipynb)

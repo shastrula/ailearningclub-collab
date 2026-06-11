@@ -59,6 +59,52 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+```python title="streaming.py"
+from datasets import load_dataset
+
+# Stream a huge dataset without downloading it all
+# Common Crawl is terabytes — streaming makes it usable
+dataset = load_dataset('wikipedia', '20220301.en', streaming=True)
+
+# Iterate over batches
+for i, example in enumerate(dataset['train']):
+    print(example['title'])
+    if i >= 4: break
+# Algebra
+# Anthropology
+# Arithmetic
+# Art
+# Astronomy
+```
+
+> **💡 Tip:** Use streaming=True for any dataset over a few GB. You process it in batches without ever downloading the full thing.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ When should you use streaming=True with load_dataset()?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386914112" value="0">
+      <span>Always, it's faster</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386914112" value="1">
+      <span>When the dataset is too large to download and store locally</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386914112" value="2">
+      <span>Only when using PyTorch</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386914112" value="3">
+      <span>When you need the data sorted</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/data-and-models/mod-6.ipynb)

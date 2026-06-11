@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+To implement Chain-of-Thought in Python, you need to create a function that constructs a CoT prompt and uses a language model to generate a response. The function should take a question as input, format it into a CoT prompt, and then use the model to generate an answer. This approach helps ensure that the model provides a step-by-step reasoning process in its response.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Load a pre-trained language model
+model = pipeline('text-generation', model='distilgpt2')
+
+def cot_prompt(question):
+    prompt = f"Let's think step by step: {question} What is the answer?"
+    return model(prompt, max_length=50, num_return_sequences=1)[0]['generated_text']
+
+# Example usage
+question = "What is 2 + 2?"
+answer = cot_prompt(question)
+print(answer)
+```
+
+> **💡 Tip:** When implementing Chain-of-Thought, ensure that your prompts are clear and explicitly guide the model through each step of the reasoning process. This will help the model generate more accurate and logical responses.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of Chain-of-Thought prompting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387087680" value="0">
+      <span>To make the model respond faster</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387087680" value="1">
+      <span>To guide the model through step-by-step reasoning</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387087680" value="2">
+      <span>To reduce the model's vocabulary</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387087680" value="3">
+      <span>To increase the model's complexity</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Python library is used in the example to generate text using a language model?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083840" value="0">
+      <span>nltk</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083840" value="1">
+      <span>spacy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083840" value="2">
+      <span>transformers</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083840" value="3">
+      <span>scikit-learn</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/prompt-engineering/mod-19.ipynb)

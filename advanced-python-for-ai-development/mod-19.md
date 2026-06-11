@@ -59,6 +59,54 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Replace loops with NumPy operations for 100x speedups.
+
+```python title="vectorization.py"
+import numpy as np
+import time
+
+# Slow: Python loop
+data = list(range(1000000))
+start = time.time()
+result = [x * 2 for x in data]
+print(f"Loop time: {time.time() - start:.4f}s")
+
+# Fast: NumPy vectorization
+data_np = np.arange(1000000)
+start = time.time()
+result_np = data_np * 2
+print(f"NumPy time: {time.time() - start:.4f}s")
+```
+
+```
+Loop time: 0.0523s
+NumPy time: 0.0008s
+```
+
+> **💡 Tip:** Always profile before optimizing. Focus on the slowest parts first for maximum impact.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What's the first step in optimization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="0">
+      <span>Rewrite everything in C</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="1">
+      <span>Profile to identify bottlenecks</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="2">
+      <span>Add more servers</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/advanced-python-for-ai-development/mod-19.ipynb)

@@ -59,6 +59,83 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Conjugate priors are particularly useful in machine learning for parameter estimation in probabilistic models. They allow for analytical solutions to the posterior distribution, which can significantly speed up computations. For example, in natural language processing, conjugate priors can be used to model the probability of word occurrences in a document, facilitating faster and more efficient Bayesian updates.
+
+```python title="example2.py"
+import numpy as np
+from scipy.stats import gamma, poisson
+
+# Prior parameters
+alpha_prior = 2
+beta_prior = 1
+
+# Observed data
+data = [3, 5, 2, 4, 3]
+
+# Posterior parameters
+alpha_posterior = alpha_prior + np.sum(data)
+beta_posterior = beta_prior + len(data)
+
+# Posterior distribution
+posterior_dist = gamma(alpha_posterior, scale=1/beta_posterior)
+
+# Sample from the posterior
+samples = posterior_dist.rvs(1000)
+print('Mean of the posterior distribution:', np.mean(samples))
+```
+
+> **💡 Tip:** When choosing a conjugate prior, ensure it aligns well with the likelihood function of your data to maximize the benefits of computational efficiency and interpretability.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a conjugate prior?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387093376" value="0">
+      <span>A prior that is not related to the likelihood</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387093376" value="1">
+      <span>A prior that, when combined with a likelihood, yields a posterior of the same family</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387093376" value="2">
+      <span>A prior that is always uniform</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387093376" value="3">
+      <span>A prior that is always normal</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which distribution is a conjugate prior for the Poisson likelihood?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387094400" value="0">
+      <span>Beta</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387094400" value="1">
+      <span>Gamma</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387094400" value="2">
+      <span>Normal</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387094400" value="3">
+      <span>Uniform</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-11.ipynb)

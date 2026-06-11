@@ -55,6 +55,75 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Bayesian updating is the process of revising the probability of a hypothesis as new data is observed. This is done by applying Bayes' Theorem iteratively, using the posterior probability from one update as the prior for the next.
+
+```python title="example2.py"
+import numpy as np
+
+# Initial prior
+prior = np.array([0.1, 0.2, 0.3, 0.4])
+
+# Likelihood of observing data given each hypothesis
+likelihood = np.array([0.1, 0.2, 0.5, 0.2])
+
+# Normalize to get the posterior
+posterior = (prior * likelihood) / np.sum(prior * likelihood)
+
+print(f'Posterior probabilities: {posterior}')
+```
+
+> **💡 Tip:** When performing Bayesian updating, ensure that the likelihoods are correctly calculated and that the priors are reasonable to avoid skewed results.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does P(H|E) represent in Bayes' Theorem?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387090880" value="0">
+      <span>The prior probability</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387090880" value="1">
+      <span>The posterior probability</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387090880" value="2">
+      <span>The likelihood</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387090880" value="3">
+      <span>The marginal likelihood</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of Bayesian updating?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079296" value="0">
+      <span>To calculate the marginal likelihood</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079296" value="1">
+      <span>To revise the probability of a hypothesis as new data is observed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079296" value="2">
+      <span>To determine the prior probability</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387079296" value="3">
+      <span>To calculate the likelihood</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-9.ipynb)

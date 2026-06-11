@@ -59,6 +59,73 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Once an environment is created, you can activate it using the `conda activate` command. This will switch your shell session to the specified environment, allowing you to install and use packages within that environment. To deactivate the environment and return to the base environment, use the `conda deactivate` command.
+
+```python title="example2.py"
+import conda
+
+# Activate the 'myenv' environment
+conda.activate('myenv')
+
+# Install a package within the activated environment
+conda.install('numpy')
+
+# Deactivate the current environment
+conda.deactivate()
+```
+
+> **💡 Tip:** Always remember to deactivate your environment when you are done working in it to avoid accidentally installing packages in the wrong environment.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What command is used to create a new environment in Conda?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386951232" value="0">
+      <span>conda create</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386951232" value="1">
+      <span>conda new</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386951232" value="2">
+      <span>conda init</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386951232" value="3">
+      <span>conda setup</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How do you deactivate an active environment in Conda?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956672" value="0">
+      <span>conda deactivate</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956672" value="1">
+      <span>conda quit</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956672" value="2">
+      <span>conda exit</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956672" value="3">
+      <span>conda close</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/conda-package-management-and-environments/mod-3.ipynb)

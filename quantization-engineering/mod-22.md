@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+INT4 and INT8 quantization techniques reduce the bit-width of model parameters to 4 or 8 bits, respectively, to save memory and computational resources. The bitsandbytes library provides efficient implementations for these quantization methods, enabling faster inference and reduced model size without significant loss in accuracy.
+
+```python title="example2.py"
+import torch
+import bitsandbytes as bnb
+
+# Example of quantizing a simple linear layer using INT8 quantization
+
+# Initialize a linear layer
+linear_layer = torch.nn.Linear(10, 5)
+
+# Quantize the weights using INT8
+quantized_weights = bnb.nn.int8_quantize(linear_layer.weight)
+
+# Replace the original weights with quantized weights
+linear_layer.weight.data = quantized_weights
+
+print(quantized_weights)
+```
+
+> **💡 Tip:** When quantizing models, ensure that the quantization level (e.g., INT4, INT8) is appropriate for the specific application to balance between performance and accuracy.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of GGUF quantization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903040" value="0">
+      <span>To increase model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903040" value="1">
+      <span>To maintain model accuracy while reducing precision</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903040" value="2">
+      <span>To eliminate the need for gradients</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903040" value="3">
+      <span>To increase computational complexity</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which library provides efficient implementations for INT4/INT8 quantization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386910720" value="0">
+      <span>PyTorch</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386910720" value="1">
+      <span>TensorFlow</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386910720" value="2">
+      <span>bitsandbytes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386910720" value="3">
+      <span>Keras</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-22.ipynb)

@@ -59,6 +59,71 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Linear Discriminant Analysis (LDA) is a generalization of Fisher's linear discriminant, a method used in statistics, pattern recognition, and machine learning to find a linear combination of features that characterizes or separates two or more classes of objects or events. The resulting combination may be used as a linear classifier, or, more commonly, for dimensionality reduction before later classification.
+
+```python title="example2.py"
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
+
+# Initialize LDA and fit the data
+lda = LDA(n_components=2)
+X_lda = lda.fit(X, y).transform(X)
+
+# Print the transformed data
+print(X_lda)
+```
+
+> **💡 Tip:** When applying PCA or LDA, ensure that the data is properly scaled (e.g., using StandardScaler) to avoid features with larger scales dominating the principal components.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of PCA?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948032" value="0">
+      <span>To increase the number of features</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948032" value="1">
+      <span>To reduce the number of features while preserving variance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948032" value="2">
+      <span>To classify data into categories</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948032" value="3">
+      <span>To perform clustering</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the main difference between PCA and LDA?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958336" value="0">
+      <span>PCA is supervised, LDA is unsupervised</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958336" value="1">
+      <span>PCA is unsupervised, LDA is supervised</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958336" value="2">
+      <span>Both are supervised</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958336" value="3">
+      <span>Both are unsupervised</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/scikit-learn-machine-learning/mod-22.ipynb)

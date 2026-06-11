@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Data cleaning is a critical step in the data analysis process. In this section, you will learn how to handle missing values, remove duplicates, and correct inconsistencies in your data to ensure its quality.
+
+```python title="example2.py"
+import pandas as pd
+
+# Load the dataset
+data = pd.read_csv('data.csv')
+
+# Handling missing values
+data.fillna(method='ffill', inplace=True)
+
+# Removing duplicates
+data.drop_duplicates(inplace=True)
+
+# Correcting data types
+data['age'] = data['age'].astype(int)
+
+# Display the cleaned DataFrame
+print(data.info())
+```
+
+> **💡 Tip:** Always make a copy of your original dataset before performing any cleaning operations. This allows you to revert to the original data if needed.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What method is used to display the first 5 rows of a DataFrame in Pandas?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086272" value="0">
+      <span>data.first(5)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086272" value="1">
+      <span>data.head(5)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086272" value="2">
+      <span>data.top(5)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086272" value="3">
+      <span>data.start(5)</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method is used to handle missing values by forward filling in Pandas?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086912" value="0">
+      <span>data.interpolate()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086912" value="1">
+      <span>data.bfill()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086912" value="2">
+      <span>data.ffill()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387086912" value="3">
+      <span>data.dropna()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-23.ipynb)

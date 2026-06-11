@@ -59,6 +59,84 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Boosting is an ensemble technique where models are built sequentially, each trying to correct the mistakes of the previous one. This technique focuses on reducing bias and improving the overall performance of the model. Gradient Boosting is a popular boosting algorithm.
+
+```python title="example2.py"
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+
+# Generate a binary classification dataset
+X, y = make_classification(n_samples=1000, n_features=20, n_classes=2, random_state=42)
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Initialize the Gradient Boosting classifier
+gbc = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=1, random_state=42)
+
+# Train the model
+gbc.fit(X_train, y_train)
+
+# Make predictions
+y_pred = gbc.predict(X_test)
+
+# Print the accuracy
+print(f'Accuracy: {gbc.score(X_test, y_test):.2f}')
+```
+
+> **💡 Tip:** When using Boosting, be cautious of overfitting. Use techniques like early stopping and regularization to mitigate this.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which ensemble technique is used in Random Forest?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387116096" value="0">
+      <span>Boosting</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387116096" value="1">
+      <span>Bagging</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387116096" value="2">
+      <span>Stacking</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387116096" value="3">
+      <span>Voting</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of Boosting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387116736" value="0">
+      <span>Reducing variance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387116736" value="1">
+      <span>Reducing bias</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387116736" value="2">
+      <span>Increasing model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387116736" value="3">
+      <span>Decreasing model interpretability</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ensemble-learning/mod-23.ipynb)

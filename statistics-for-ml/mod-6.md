@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Non-parametric tests do not assume a specific distribution for the data. They are useful when the data does not meet the assumptions of parametric tests, such as normality. Examples include the Mann-Whitney U test and the Kruskal-Wallis test.
+
+```python title="example2.py"
+import scipy.stats as stats
+
+# Sample data
+data1 = [5, 7, 8, 6, 7]
+data2 = [6, 8, 9, 7, 8]
+
+# Perform Mann-Whitney U test
+u_stat, p_value = stats.mannwhitneyu(data1, data2)
+
+print(f'U-statistic: {u_stat}')
+print(f'P-value: {p_value}')
+```
+
+> **💡 Tip:** Always check the assumptions of your data before choosing between parametric and non-parametric tests. Misapplying these tests can lead to incorrect conclusions.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which test assumes the data follows a specific distribution?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121152" value="0">
+      <span>Mann-Whitney U test</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121152" value="1">
+      <span>Kruskal-Wallis test</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121152" value="2">
+      <span>t-test</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121152" value="3">
+      <span>Chi-square test</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which test does not assume a specific distribution for the data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387120896" value="0">
+      <span>t-test</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387120896" value="1">
+      <span>ANOVA</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387120896" value="2">
+      <span>Mann-Whitney U test</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387120896" value="3">
+      <span>Pearson's correlation</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-6.ipynb)

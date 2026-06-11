@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+To implement Chain-of-Thought prompting in Python, you can create functions that break down problems into smaller, manageable steps. Each step should be clearly defined and logically connected to the next. This structured approach not only improves the model's performance but also makes the reasoning process transparent and easier to follow.
+
+```python title="example2.py"
+def chain_of_thought(problem):
+    """Generic Chain-of-Thought function for any problem."""
+    thoughts = [
+        f'Step 1: Identify the key components of the problem: {problem}.',
+        'Step 2: Break down the problem into smaller parts.',
+        'Step 3: Solve each part individually.',
+        'Step 4: Combine the solutions to form the final answer.'
+    ]
+    solution = 'Final solution based on the thought process.'
+    return thoughts, solution
+
+problem = 'Calculate the area of a rectangle with length 10 and width 5.'
+thoughts, solution = chain_of_thought(problem)
+print('Thought Process:', thoughts)
+print('Solution:', solution)
+```
+
+> **💡 Tip:** When designing Chain-of-Thought prompts, ensure each step is clear and logically connected to avoid confusion. Additionally, validate the intermediate steps to confirm they lead to the correct final answer.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of Chain-of-Thought prompting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121088" value="0">
+      <span>To make the model respond faster</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121088" value="1">
+      <span>To improve the model's reasoning capabilities</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121088" value="2">
+      <span>To reduce the model's training time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387121088" value="3">
+      <span>To simplify the input prompts</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which of the following is a key component of implementing Chain-of-Thought in Python?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119744" value="0">
+      <span>Using complex mathematical formulas</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119744" value="1">
+      <span>Breaking down problems into smaller steps</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119744" value="2">
+      <span>Increasing the model's parameters</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119744" value="3">
+      <span>Using advanced natural language processing techniques</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/prompt-engineering/mod-4.ipynb)

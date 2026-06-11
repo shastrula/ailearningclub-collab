@@ -59,6 +59,82 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+To ensure optimal performance when running LLMs with llama.cpp, it is essential to configure your hardware correctly. This includes utilizing GPUs for accelerated computation and ensuring sufficient RAM to handle large model sizes. Proper hardware configuration can significantly reduce inference times and improve overall efficiency.
+
+```python title="example2.py"
+import llama_cpp
+
+# Set hardware configuration
+config = {
+    'use_gpu': True,
+    'gpu_id': 0,
+    'batch_size': 8,
+   'max_seq_len': 256
+}
+
+# Initialize the model with configuration
+model_path = 'path/to/your/model.bin'
+model = llama_cpp.Model(model_path, config)
+
+# Generate text using the configured model
+prompt = 'The quick brown fox'
+output = model.generate(prompt, max_length=50)
+
+print(output)
+```
+
+> **💡 Tip:** Ensure your GPU drivers are up to date and compatible with CUDA or ROCm to avoid performance issues when using GPU acceleration with llama.cpp.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of llama.cpp?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954176" value="0">
+      <span>To train new LLMs</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954176" value="1">
+      <span>To run LLMs efficiently on local hardware</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954176" value="2">
+      <span>To deploy LLMs in the cloud</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954176" value="3">
+      <span>To visualize LLM architectures</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which hardware component is crucial for optimal performance when using llama.cpp?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954304" value="0">
+      <span>CPU</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954304" value="1">
+      <span>RAM</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954304" value="2">
+      <span>GPU</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954304" value="3">
+      <span>Network Interface</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-3.ipynb)

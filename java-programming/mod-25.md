@@ -59,6 +59,83 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+The data access layer (DAL) is responsible for interacting with the database. It abstracts the database operations and provides a clean interface for the business logic layer to access data. Using a DAL helps in maintaining data integrity and separation of concerns, making the application more modular and easier to manage.
+
+```java title="example2.java"
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class DataAccessLayer {
+    public String getData(String query) {
+        String result = "";
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb", "user", "password")) {
+            PreparedStatement stmt = conn.prepareStatement(query);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                result += rs.getString("column_name") + " ";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+}
+```
+
+> **💡 Tip:** Always ensure that database connections are properly closed to avoid resource leaks. Using try-with-resources is a good practice to automatically close resources.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of the Service Layer in an enterprise application?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387262848" value="0">
+      <span>To handle database connections</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387262848" value="1">
+      <span>To process business logic</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387262848" value="2">
+      <span>To manage user interface</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387262848" value="3">
+      <span>To handle network requests</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which of the following is a benefit of using a Data Access Layer?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387263296" value="0">
+      <span>It simplifies database operations</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387263296" value="1">
+      <span>It handles user authentication</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387263296" value="2">
+      <span>It manages application memory</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387263296" value="3">
+      <span>It processes business logic</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-25.ipynb)

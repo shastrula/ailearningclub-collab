@@ -59,6 +59,77 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Error handling involves using try-except blocks to catch and handle exceptions that may occur during the execution of your code. This ensures that your program can gracefully handle errors and continue running, or provide meaningful feedback to the user. In Google Colab, proper error handling can prevent your notebooks from crashing and help you maintain a smooth workflow.
+
+```python title="example2.py"
+def divide_numbers(a, b):
+    try:
+        # Attempt to divide two numbers
+        result = a / b
+        print(f'Result: {result}')
+    except ZeroDivisionError:
+        # Handle division by zero error
+        print('Error: Division by zero is not allowed')
+    except Exception as e:
+        # Handle any other exceptions
+        print(f'An error occurred: {e}')
+
+# Example usage
+divide_numbers(10, 0)
+```
+
+> **💡 Tip:** Always use specific exceptions in your except blocks to handle different types of errors appropriately, rather than catching all exceptions with a general except clause.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of using print statements in debugging?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386864704" value="0">
+      <span>To execute code</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386864704" value="1">
+      <span>To add functionality</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386864704" value="2">
+      <span>To trace the execution and understand where things go wrong</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386864704" value="3">
+      <span>To handle exceptions</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which block is used to handle exceptions in Python?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386864832" value="0">
+      <span>if</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386864832" value="1">
+      <span>try</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386864832" value="2">
+      <span>except</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386864832" value="3">
+      <span>handle</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/google-colab-cloud-computing-for-ai/mod-11.ipynb)

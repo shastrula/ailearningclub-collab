@@ -59,6 +59,36 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+When providing feedback, focus on specific aspects of the work rather than making general comments. Highlight both strengths and areas for improvement, and suggest actionable steps for improvement.
+
+> **💡 Tip:** Use the 'sandwich' method for feedback: start with positive feedback, provide constructive criticism, and end with another positive comment.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the most effective way to structure your feedback?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088000" value="0">
+      <span>A. General comments</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088000" value="1">
+      <span>B. Specific feedback with actionable steps</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088000" value="2">
+      <span>C. Only positive feedback</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088000" value="3">
+      <span>D. Only negative feedback</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/prompt-engineering/mod-22.ipynb)

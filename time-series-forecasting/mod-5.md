@@ -59,6 +59,71 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+After fitting a SARIMA model, it's crucial to evaluate its performance and diagnose any issues. Common evaluation metrics include Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE). Additionally, checking the residuals for autocorrelation can help identify if the model has captured all the information in the data.
+
+```python title="example2.py"
+import matplotlib.pyplot as plt
+from statsmodels.graphics.tsaplots import plot_acf
+
+# Plot residuals
+residuals = results.resid
+plt.figure(figsize=(10, 5))
+plot_acf(residuals, lags=40)
+plt.show()
+```
+
+> **💡 Tip:** When working with SARIMA models, ensure that your data is stationary. Differencing (both regular and seasonal) is often required to achieve stationarity.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What do the parameters (p,d,q) and (P,D,Q,s) in a SARIMA model represent?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387186816" value="0">
+      <span>Auto-regressive, differencing, and moving average components only</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387186816" value="1">
+      <span>Seasonal auto-regressive, differencing, and moving average components only</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387186816" value="2">
+      <span>Both auto-regressive and seasonal auto-regressive components</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387186816" value="3">
+      <span>Both auto-regressive and seasonal auto-regressive components along with their differencing and moving average counterparts</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is it important to check the residuals of a SARIMA model?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387186880" value="0">
+      <span>To ensure the model has the highest possible parameters</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387186880" value="1">
+      <span>To confirm that the model has captured all the information in the data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387186880" value="2">
+      <span>To make the model more complex</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387186880" value="3">
+      <span>To increase the forecast horizon</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/time-series-forecasting/mod-5.ipynb)

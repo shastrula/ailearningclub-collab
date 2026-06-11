@@ -112,6 +112,32 @@ print(a[1:4])     # [20, 30, 40] - elements 1 to 3
 print(a[::2])     # [10, 30, 50] - every 2nd element
 ```
 
+
+## Quiz
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does np.array([1, 2, 3]).shape return?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2222222222" value="0">
+      <span>3</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2222222222" value="1">
+      <span>(3,)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2222222222" value="2">
+      <span>[1, 2, 3]</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q2222222222" value="3">
+      <span>1D</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/applied-maths-numpy/mod-1.ipynb)

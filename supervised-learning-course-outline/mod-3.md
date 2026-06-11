@@ -59,6 +59,45 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Hyperparameters are settings that affect the model's performance. Techniques like Grid Search and Random Search can be used to find the optimal hyperparameters.
+
+```python title="hyperparameter_tuning.py"
+from sklearn.model_selection import GridSearchCV
+
+param_grid = {'n_estimators': [50, 100, 150],'max_depth': [None, 10, 20, 30]}
+grid_search = GridSearchCV(estimator=model, param_grid=param_grid, cv=5)
+grid_search.fit(x_train, y_train)
+print(f'Best parameters: {grid_search.best_params_}')
+```
+
+> **💡 Tip:** Use cross-validation to avoid overfitting during hyperparameter tuning.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of splitting data into training and testing sets?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372654720" value="0">
+      <span>To evaluate model performance on unseen data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372654720" value="1">
+      <span>To increase training time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372654720" value="2">
+      <span>To reduce model complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4372654720" value="3">
+      <span>To improve model accuracy</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning-course-outline/mod-3.ipynb)

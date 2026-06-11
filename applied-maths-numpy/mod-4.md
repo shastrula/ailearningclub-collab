@@ -147,6 +147,32 @@ pi_estimate = 4 * inside_circle / n_samples
 print(f"π ≈ {pi_estimate}")  # ≈ 3.14159
 ```
 
+
+## Quiz
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does np.random.randn() generate?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5555555555" value="0">
+      <span>Random integers</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5555555555" value="1">
+      <span>Samples from standard normal distribution</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5555555555" value="2">
+      <span>Uniform random numbers</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5555555555" value="3">
+      <span>Random boolean values</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/applied-maths-numpy/mod-4.ipynb)

@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is a density-based clustering algorithm. It groups together points that are packed closely together, marking as outliers points that lie alone in low-density regions. DBSCAN is useful for identifying clusters of various shapes and sizes and detecting noise in the data.
+
+```python title="example2.py"
+from sklearn.cluster import DBSCAN
+import matplotlib.pyplot as plt
+
+# Generate synthetic data
+X = np.array([[1, 2], [2, 2], [2, 3],
+              [8, 7], [8, 8], [25, 80]])
+
+# Apply DBSCAN clustering
+dbscan = DBSCAN(eps=3, min_samples=2).fit(X)
+
+# Plot the results
+plt.scatter(X[:, 0], X[:, 1], c=dbscan.labels_, cmap='viridis')
+plt.show()
+```
+
+> **💡 Tip:** When using DBSCAN, carefully choose the eps (maximum distance between two samples) and min_samples (minimum number of samples in a neighborhood for a point to be considered as a core point) parameters to achieve the desired clustering results.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of K-Means clustering?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188032" value="0">
+      <span>To reduce dimensionality</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188032" value="1">
+      <span>To partition data into distinct clusters</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188032" value="2">
+      <span>To perform regression analysis</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188032" value="3">
+      <span>To detect anomalies</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which parameter in DBSCAN determines the maximum distance between two samples for them to be considered as in the same neighborhood?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188608" value="0">
+      <span>min_samples</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188608" value="1">
+      <span>eps</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188608" value="2">
+      <span>n_clusters</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188608" value="3">
+      <span>random_state</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/unsupervised-learning/mod-24.ipynb)

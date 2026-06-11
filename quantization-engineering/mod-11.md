@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+INT4 quantization is more aggressive than INT8, using only 4 bits per weight. This can lead to more significant reductions in model size but may also result in greater accuracy loss. Careful calibration and testing are required to balance the trade-offs between model size and performance.
+
+```python title="example2.py"
+import numpy as np
+
+# Example of INT4 quantization
+def quantize_int4(weights):
+    min_val = np.min(weights)
+    max_val = np.max(weights)
+    scale = (max_val - min_val) / 15.0
+    zero_point = round(min_val / scale)
+    quantized_weights = np.round((weights - min_val) / scale).astype(np.int4)
+    return quantized_weights, scale, zero_point
+
+# Example weights
+weights = np.array([1.0, 2.0, 3.0, 4.0, 5.0])
+quantized_weights, scale, zero_point = quantize_int4(weights)
+print(f'Quantized Weights: {quantized_weights}, Scale: {scale}, Zero Point: {zero_point}')
+```
+
+> **💡 Tip:** When applying INT4 quantization, ensure that the model is thoroughly tested for accuracy loss. Consider using a combination of INT4 and INT8 quantization for different layers to optimize performance and size.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of using INT8 quantization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387115520" value="0">
+      <span>Increased model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387115520" value="1">
+      <span>Reduced model size and inference speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387115520" value="2">
+      <span>Higher precision weights</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387115520" value="3">
+      <span>Increased computational requirements</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which quantization technique is more aggressive in reducing model size?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122496" value="0">
+      <span>INT8</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122496" value="1">
+      <span>INT4</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122496" value="2">
+      <span>FP16</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387122496" value="3">
+      <span>FP32</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-11.ipynb)

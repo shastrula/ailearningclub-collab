@@ -52,6 +52,78 @@ Recent advances in Advanced t-SNE Techniques:
 
 True mastery comes from implementing Advanced t-SNE Techniques in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+Beyond basic scatter plots, advanced visualization techniques can provide deeper insights. Interactive plots, 3D visualizations, and overlaying additional information (like cluster labels) can enhance the interpretability of t-SNE results. We will explore how to create these advanced visualizations using Python libraries.
+
+```python title="example2.py"
+import plotly.express as px
+from sklearn.cluster import KMeans
+
+# Apply t-SNE
+tsne = TSNE(n_components=3, perplexity=30, random_state=42)
+t_sne_results_3d = tsne.fit_transform(data)
+
+# Cluster the data
+kmeans = KMeans(n_clusters=10, random_state=42)
+clusters = kmeans.fit_predict(data)
+
+# Create 3D Plot
+fig = px.scatter_3d(x=t_sne_results_3d[:, 0], y=t_sne_results_3d[:, 1], z=t_sne_results_3d[:, 2], color=clusters,
+                    title='3D t-SNE Visualization with Clusters', labels={'color': 'Cluster'})
+fig.show()
+```
+
+> **💡 Tip:** When choosing perplexity, consider the number of nearest neighbors that best represent the local structure of your data. A common rule of thumb is to set perplexity between 5 and 50.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which hyperparameter in t-SNE balances the local and global aspects of the data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962240" value="0">
+      <span>learning_rate</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962240" value="1">
+      <span>n_components</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962240" value="2">
+      <span>perplexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962240" value="3">
+      <span>n_iter</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a recommended range for the perplexity parameter in t-SNE?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961856" value="0">
+      <span>1-10</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961856" value="1">
+      <span>5-50</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961856" value="2">
+      <span>100-200</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961856" value="3">
+      <span>500-1000</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/unsupervised-learning/mod-11.ipynb)

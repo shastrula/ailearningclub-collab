@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Conda environments allow you to create isolated spaces for different projects, each with its own set of dependencies. This is particularly useful when working on multiple projects that require different versions of the same package. To create a new environment, you use the `conda create` command followed by the environment name and the packages you want to include.
+
+```python title="example2.py"
+import conda
+
+# Create a new environment named'myenv' with Python 3.8 and numpy
+conda.cli.main.create(['--name','myenv', 'python=3.8', 'numpy'])
+
+# Activate the new environment
+conda.cli.main.activate(['myenv'])
+
+# Verify the environment and installed packages
+import sys
+import numpy as np
+print(sys.executable)
+print(np.__version__)
+```
+
+> **💡 Tip:** Always remember to activate the environment you are working in to ensure that you are using the correct set of packages and dependencies.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What command is used to install a package in Conda?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903744" value="0">
+      <span>conda install</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903744" value="1">
+      <span>pip install</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903744" value="2">
+      <span>conda create</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903744" value="3">
+      <span>conda activate</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How do you create a new Conda environment with specific packages?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904320" value="0">
+      <span>conda install --name env_name pkg1 pkg2</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904320" value="1">
+      <span>conda create --name env_name pkg1 pkg2</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904320" value="2">
+      <span>conda activate --name env_name pkg1 pkg2</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904320" value="3">
+      <span>conda config --name env_name pkg1 pkg2</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/conda-package-management-and-environments/mod-5.ipynb)

@@ -59,6 +59,71 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Training U-Net involves using a dataset of labeled biomedical images. The model is typically trained using a loss function like binary cross-entropy. Evaluation metrics such as Dice coefficient or IoU (Intersection over Union) are used to assess the model's performance in segmenting images accurately.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.model_selection import train_test_split
+
+# Assuming X is your input images and y is your segmentation masks
+X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
+
+unet_model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+history = unet_model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=10, batch_size=32)
+```
+
+> **💡 Tip:** Ensure your dataset is properly preprocessed and augmented to avoid overfitting. Use techniques like data augmentation to increase the diversity of your training data.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary function of the encoder in U-Net?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123904" value="0">
+      <span>Upsampling the image</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123904" value="1">
+      <span>Downsampling the image</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123904" value="2">
+      <span>Classifying the image</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123904" value="3">
+      <span>Segmenting the image</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which metric is commonly used to evaluate the performance of U-Net in segmentation tasks?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908352" value="0">
+      <span>Accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908352" value="1">
+      <span>Precision</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908352" value="2">
+      <span>Dice coefficient</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908352" value="3">
+      <span>Recall</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/computer-vision/mod-8.ipynb)

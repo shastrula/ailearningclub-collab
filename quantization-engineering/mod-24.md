@@ -59,6 +59,77 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Benchmarking is essential to evaluate the performance of quantized models. This involves measuring metrics such as inference time, model size, and accuracy. Tools like PyTorch’s `torch.utils.benchmark` can be used to conduct these evaluations efficiently.
+
+```python title="benchmark_example.py"
+import torch
+from torch.utils.benchmark import Timer
+
+# Load a quantized model
+quantized_model = torch.jit.load('quantized_model.pt')
+
+# Prepare input tensor
+input_tensor = torch.randn(1, 3, 224, 224)
+
+# Benchmark inference time
+timer = Timer(stmt='quantized_model(input_tensor)', globals=globals())
+result = timer.timeit(100)
+
+print(f'Inference time: {result.mean:.4f} seconds')
+```
+
+> **💡 Tip:** Ensure that the input tensor dimensions match the expected input size of the model to avoid runtime errors.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of quantization in machine learning models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906816" value="0">
+      <span>To increase model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906816" value="1">
+      <span>To reduce model size and computational requirements</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906816" value="2">
+      <span>To enhance model interpretability</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906816" value="3">
+      <span>To improve training speed</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which tool can be used to benchmark the performance of a quantized model in PyTorch?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907968" value="0">
+      <span>torch.profiler</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907968" value="1">
+      <span>torch.utils.benchmark</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907968" value="2">
+      <span>torch.jit.trace</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907968" value="3">
+      <span>torch.optim</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-24.ipynb)

@@ -55,6 +55,72 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+To use Jupyter Notebooks, you need to install Jupyter via pip or conda. Once installed, you can start a new notebook by running `jupyter notebook` in your terminal. This opens a web interface where you can create new notebooks, open existing ones, and interact with the code. Cells within a notebook can be either Markdown for text or Code for executable Python code.
+
+```python title="example2.py"
+# Importing pandas library
+import pandas as pd
+
+# Creating a simple DataFrame
+data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35]}
+df = pd.DataFrame(data)
+
+# Displaying the DataFrame
+df
+```
+
+> **💡 Tip:** Remember to save your notebook regularly to avoid losing your work. You can do this by clicking the save icon or pressing `Ctrl+S`.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary use of Jupyter Notebooks?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188288" value="0">
+      <span>Running standalone applications</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188288" value="1">
+      <span>Creating and sharing documents with live code</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188288" value="2">
+      <span>Writing and compiling C++ code</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387188288" value="3">
+      <span>Developing mobile applications</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which library is used for plotting in the first example?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192384" value="0">
+      <span>numpy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192384" value="1">
+      <span>matplotlib</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192384" value="2">
+      <span>pandas</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192384" value="3">
+      <span>seaborn</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/jupyter-notebooks-what-how-why/mod-1.ipynb)

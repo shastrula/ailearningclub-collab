@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Pandas is a powerful data manipulation library in Python that provides flexible data structures for efficient handling of tabular data. It's particularly useful for data cleaning, transformation, and analysis.
+
+```python title="example.py"
+```
+
+> **Try it in Google Colab:** [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-courses/blob/main/numpy-pandas-kebab/mod-2.ipynb)
+
+
+import pandas as pd
+# Load a CSV file into a DataFrame
+df = pd.read_csv('data.csv')
+
+# Select rows where a condition is true
+sales_over_50k = df[df['Sales'] > 50000]
+
+# Group data by a column and get summary statistics
+grouped_data = df.groupby('Region').agg({'Sales': ['mean', 'count']})
+```
+```
+
+> **💡 Tip:** Remember to install the pandas library using pip: `pip install pandas`
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of `pd.read_csv('data.csv')` in the code example?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375008704" value="0">
+      <span>It initializes a new DataFrame object</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375008704" value="1">
+      <span>It loads a CSV file into the DataFrame</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375008704" value="2">
+      <span>It saves the DataFrame to a CSV file</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375008704" value="3">
+      <span>It cleans the data in the DataFrame</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does `df.groupby('Region').agg({'Sales': ['mean', 'count']})` do?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375008896" value="0">
+      <span>It calculates the mean and count of sales for each region</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375008896" value="1">
+      <span>It sorts the data by the Sales column</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375008896" value="2">
+      <span>It selects rows where the Region column is equal to 'Europe'</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4375008896" value="3">
+      <span>It drops any duplicate rows in the DataFrame</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-kebab/mod-2.ipynb)

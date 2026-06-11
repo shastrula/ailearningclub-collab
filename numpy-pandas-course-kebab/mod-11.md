@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Resampling is a common operation in time series analysis that involves changing the frequency of the time series data. This can be useful for aggregating data over different time periods or interpolating missing values. Rolling window operations, on the other hand, involve applying a function to a moving window of data points. This can be used for calculating moving averages, detecting trends, or smoothing out noise in the data.
+
+```python title="example2.py"
+import pandas as pd
+import numpy as np
+
+# Create a sample time series data
+dates = pd.date_range('20230101', periods=100, freq='D')
+tseries_data = pd.Series(np.random.randn(100), index=dates)
+
+# Resample to weekly frequency and calculate the mean
+weekly_data = tseries_data.resample('W').mean()
+
+# Apply a rolling window operation to calculate the moving average
+rolling_mean = tseries_data.rolling(window=7).mean()
+
+# Display the resampled data and rolling mean
+print(weekly_data.head())
+print(rolling_mean.head())
+```
+
+> **💡 Tip:** When resampling time series data, be mindful of the method used for aggregation (e.g., mean, sum, max) as it can significantly affect the resulting data. Additionally, when applying rolling window operations, choose an appropriate window size based on the characteristics of your data to avoid oversmoothing or undersmoothing.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary characteristic of time series data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959040" value="0">
+      <span>Spatial distribution</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959040" value="1">
+      <span>Temporal nature</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959040" value="2">
+      <span>Categorical labels</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959040" value="3">
+      <span>Image recognition</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Pandas method is used to change the frequency of time series data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959424" value="0">
+      <span>resample()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959424" value="1">
+      <span>interpolate()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959424" value="2">
+      <span>rolling()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959424" value="3">
+      <span>diff()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-11.ipynb)

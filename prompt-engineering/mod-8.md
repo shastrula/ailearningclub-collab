@@ -59,6 +59,71 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Chain-of-Thought and ReAct prompting encourage models to provide reasoning steps before arriving at an answer. Ethically, this can enhance transparency but must be carefully designed to avoid misleading users or providing incorrect information.
+
+```python title="example2.py"
+from transformers import pipeline
+
+# Initialize a text generation pipeline
+generator = pipeline('text-generation')
+
+# CoT example: Generate text with reasoning steps
+output = generator('Why is the sky blue? Because...', max_length=100, num_return_sequences=1)
+print(output)
+```
+
+> **💡 Tip:** When using CoT or ReAct, ensure the generated reasoning is accurate and verifiable to maintain user trust.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a key ethical consideration when using zero-shot learning?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387183616" value="0">
+      <span>Ensuring model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387183616" value="1">
+      <span>Avoiding bias and misinformation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387183616" value="2">
+      <span>Increasing computational efficiency</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387183616" value="3">
+      <span>Reducing model complexity</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is it important to verify the reasoning steps in Chain-of-Thought prompting?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184256" value="0">
+      <span>To improve model performance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184256" value="1">
+      <span>To maintain user trust and avoid misinformation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184256" value="2">
+      <span>To reduce computational cost</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387184256" value="3">
+      <span>To simplify the model architecture</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/prompt-engineering/mod-8.ipynb)

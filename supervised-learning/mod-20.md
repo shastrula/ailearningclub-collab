@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Logistic Regression is another supervised learning algorithm, primarily used for classification problems. Despite its name, it is a classification algorithm, not a regression algorithm. It is used to predict the likelihood of a binary outcome based on one or more independent variables.
+
+```python title="example2.py"
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+
+# Sample data
+x = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])
+y = np.array([0, 0, 1, 1, 1])
+
+# Create and train the model
+model = LogisticRegression()
+model.fit(x, y)
+
+# Predict
+x_new = np.array([[6, 7]])
+prediction = model.predict(x_new)
+
+print(f'Prediction for x=[6, 7]: {prediction[0]}')
+```
+
+> **💡 Tip:** When using Logistic Regression, ensure your data is properly scaled and preprocessed to improve model performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What type of problems is Linear Regression best suited for?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080768" value="0">
+      <span>Classification problems</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080768" value="1">
+      <span>Regression problems</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080768" value="2">
+      <span>Clustering problems</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387080768" value="3">
+      <span>Dimensionality reduction problems</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary use of Logistic Regression?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387085568" value="0">
+      <span>Predicting continuous values</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387085568" value="1">
+      <span>Predicting categorical outcomes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387085568" value="2">
+      <span>Reducing the number of features</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387085568" value="3">
+      <span>Grouping similar data points</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning/mod-20.ipynb)

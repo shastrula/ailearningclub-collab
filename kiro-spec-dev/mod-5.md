@@ -59,6 +59,50 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+- Auto-generate tests when source files change
+- Update API documentation when route files are modified
+- Run a linter prompt when a PR is opened
+- Sync design.md when the database schema changes
+- Notify in chat when a task is marked complete
+
+```yaml title=".kiro/hooks/sync-docs.yaml"
+name: Sync API docs on route change
+trigger:
+  type: file_change
+  glob: "src/routes/**/*.ts"
+action:
+  prompt: |
+    The file {{changed_file} was modified.
+    Update docs/api.md to reflect any new or changed
+    endpoints, request shapes, or response formats.
+```
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a Kiro hook?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959616" value="0">
+      <span>A Git pre-commit script</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959616" value="1">
+      <span>An event-driven automation that triggers a Kiro action when something in your project changes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959616" value="2">
+      <span>A way to install Kiro plugins</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386959616" value="3">
+      <span>A keyboard shortcut for common Kiro commands</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/kiro-spec-dev/mod-5.ipynb)

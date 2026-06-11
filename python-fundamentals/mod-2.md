@@ -59,6 +59,67 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Python uses dynamic typing, meaning you don't declare variable types explicitly. The type is inferred from the value assigned. This is different from statically-typed languages like Java where you must declare types upfront.
+
+Learn more: https://docs.python.org/3/tutorial/
+
+```python title="dynamic_typing.py"
+# Dynamic typing - type is inferred
+x = 42              # x is an int
+print(type(x))      # <class 'int'>
+
+x = "Hello"         # x is now a string
+print(type(x))      # <class 'str'>
+
+x = 3.14            # x is now a float
+print(type(x))      # <class 'float'>
+
+# Type checking
+if isinstance(x, float):
+    print("x is a float")
+
+# Type conversion
+num_str = "123"
+num_int = int(num_str)  # Convert string to int
+print(f"Converted: {num_int}, type: {type(num_int)}")
+```
+
+```
+<class 'int'>
+<class 'str'>
+<class 'float'>
+x is a float
+Converted: 123, type: <class 'int'>
+```
+
+> **💡 Tip:** Use type() to check a variable's type, or isinstance() for more flexible type checking. Type conversion functions like int(), str(), float() are commonly used.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a best practice when working with Variables, Data Types & Type System?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906176" value="0">
+      <span>Follow Python conventions and PEP 8 style guide</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906176" value="1">
+      <span>Write code as quickly as possible</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906176" value="2">
+      <span>Avoid using built-in functions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906176" value="3">
+      <span>Use unclear variable names</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/python-fundamentals/mod-2.ipynb)

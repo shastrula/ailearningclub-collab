@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+JAX-RS (Java API for RESTful Web Services) is a Java programming framework that facilitates the development of RESTful web services in Java. It provides a set of annotations to map Java classes and methods to HTTP requests. This section will cover how to set up a simple RESTful service using JAX-RS.
+
+```java title="example2.java"
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/hello/{name}")
+public class HelloWorldService {
+
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String sayHello(@PathParam("name") String name) {
+        return "Hello, " + name + "!";
+    }
+}
+```
+
+> **💡 Tip:** Ensure that your JAX-RS application is correctly configured in your web.xml or use a JAX-RS application class to bootstrap your application.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the @Path annotation do in a JAX-RS service?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387259072" value="0">
+      <span>It defines the HTTP method type</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387259072" value="1">
+      <span>It maps the class to a URL path</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387259072" value="2">
+      <span>It specifies the media type</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387259072" value="3">
+      <span>It defines the service name</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which HTTP method is typically used to create a new resource in a RESTful service?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387259520" value="0">
+      <span>GET</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387259520" value="1">
+      <span>POST</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387259520" value="2">
+      <span>PUT</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387259520" value="3">
+      <span>DELETE</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-22.ipynb)

@@ -59,6 +59,75 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+PCA is a dimensionality reduction technique that transforms data into a set of orthogonal components that explain the maximum variance. It helps in reducing the number of features while preserving as much information as possible. PCA is widely used for visualization, noise reduction, and feature extraction.
+
+```python title="example2.py"
+from sklearn.decomposition import PCA
+import numpy as np
+
+# Generate sample data
+X = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
+
+# Apply PCA
+pca = PCA(n_components=1)
+X_pca = pca.fit_transform(X)
+
+# Print transformed data
+print(X_pca)
+```
+
+> **💡 Tip:** When applying PCA, ensure that your data is centered and scaled to achieve optimal results.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of K-Means clustering?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084672" value="0">
+      <span>To perform regression</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084672" value="1">
+      <span>To partition data into clusters</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084672" value="2">
+      <span>To reduce dimensionality</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387084672" value="3">
+      <span>To perform classification</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does PCA primarily aim to achieve?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081280" value="0">
+      <span>To increase the number of features</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081280" value="1">
+      <span>To perform classification</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081280" value="2">
+      <span>To reduce dimensionality while preserving variance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387081280" value="3">
+      <span>To cluster data points</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/unsupervised-learning/mod-16.ipynb)

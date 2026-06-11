@@ -55,6 +55,79 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Creating effective visualizations involves choosing the right type of chart for your data and ensuring that the visual is clear and easy to understand. This section will cover various types of plots and when to use them, along with best practices for design and aesthetics.
+
+```python title="example2.py"
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load example dataset
+tips = sns.load_dataset('tips')
+
+# Create a bar plot
+sns.barplot(x='day', y='total_bill', data=tips)
+
+# Add title and labels
+plt.title('Average Total Bill by Day')
+plt.xlabel('Day')
+plt.ylabel('Average Total Bill')
+
+# Display the plot
+plt.show()
+```
+
+> **💡 Tip:** When creating visualizations, always consider your audience and the message you want to convey. Avoid cluttering your plots with too much information, and ensure that your color choices and labels are clear and accessible.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of data visualization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906432" value="0">
+      <span>To store data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906432" value="1">
+      <span>To analyze data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906432" value="2">
+      <span>To present data visually</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906432" value="3">
+      <span>To clean data</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Python library is commonly used for creating static, animated, and interactive visualizations?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904384" value="0">
+      <span>NumPy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904384" value="1">
+      <span>Pandas</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904384" value="2">
+      <span>Matplotlib</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386904384" value="3">
+      <span>SciPy</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/jupyter-notebooks-what-how-why/mod-9.ipynb)

@@ -59,6 +59,51 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Most ML algorithms perform better when features are on the same scale. Income ranges from 0.5 to 15, while Population ranges from 3 to 35,000 — without scaling, population dominates.
+
+```python title="scaling.py"
+from sklearn.preprocessing import StandardScaler
+import pandas as pd
+from sklearn.datasets import fetch_california_housing
+
+df = fetch_california_housing(as_frame=True).frame
+X = df.drop('MedHouseVal', axis=1)
+y = df['MedHouseVal']
+
+scaler = StandardScaler()
+X_scaled = pd.DataFrame(scaler.fit_transform(X), columns=X.columns)
+print(X_scaled.describe().round(2))
+# All columns now have mean≈0 and std≈1
+```
+
+> **💡 Tip:** Always fit the scaler on training data only, then transform both train and test. Fitting on the full dataset leaks information about the test set.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why should you fit a StandardScaler only on training data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962944" value="0">
+      <span>It runs faster on smaller data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962944" value="1">
+      <span>Fitting on all data leaks test set statistics into training, giving falsely optimistic results</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962944" value="2">
+      <span>The scaler doesn't work on test data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962944" value="3">
+      <span>Test data doesn't need scaling</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/data-and-models/mod-3.ipynb)

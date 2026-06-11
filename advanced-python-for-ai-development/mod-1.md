@@ -55,6 +55,75 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Generators and iterators are powerful tools for managing large datasets in AI applications. They allow for memory-efficient iteration over data, which is crucial when dealing with large datasets that cannot fit into memory. Generators, in particular, yield items one at a time and are defined using a function with the 'yield' keyword.
+
+**example2.py**
+
+```
+def simple_generator():
+    yield 1
+    yield 2
+    yield 3
+
+# Use the generator
+g = simple_generator()
+print(next(g))  # Output: 1
+print(next(g))  # Output: 2
+print(next(g))  # Output: 3
+```
+
+> **💡 Tip:** Remember to handle the 'StopIteration' exception when working with generators to avoid runtime errors.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using a deque over a list?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912960" value="0">
+      <span>Faster appends and pops from both ends</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912960" value="1">
+      <span>Better memory usage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912960" value="2">
+      <span>Easier to implement</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912960" value="3">
+      <span>Faster random access</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the 'yield' keyword do in a Python function?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387183040" value="0">
+      <span>Returns a value and terminates the function</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387183040" value="1">
+      <span>Returns a value and allows the function to resume later</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387183040" value="2">
+      <span>Declares a variable</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387183040" value="3">
+      <span>Imports a module</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/advanced-python-for-ai-development/mod-1.ipynb)

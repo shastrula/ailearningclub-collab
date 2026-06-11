@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+CrewAI and AutoGen are frameworks that facilitate the development and orchestration of AI agents. CrewAI allows for the creation of agent crews that work collaboratively, while AutoGen automates the generation of agent behaviors and interactions.
+
+```python title="example2.py"
+from crewai import Agent, Crew
+
+# Define agents
+agent1 = Agent(role='Researcher', goal='Find relevant data')
+agent2 = Agent(role='Analyst', goal='Analyze data')
+
+# Create a crew
+crew = Crew(agents=[agent1, agent2])
+
+# Execute task
+crew.execute('Analyze market trends')
+```
+
+> **💡 Tip:** When using CrewAI, ensure that each agent's role and goal are clearly defined to avoid conflicts and enhance collaboration.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of planning in Agentic AI?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912704" value="0">
+      <span>To randomly select tasks</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912704" value="1">
+      <span>To make informed decisions for task execution</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912704" value="2">
+      <span>To avoid using external tools</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912704" value="3">
+      <span>To limit agent interactions</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How does CrewAI enhance AI agent collaboration?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386901632" value="0">
+      <span>By limiting agent interactions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386901632" value="1">
+      <span>By automating agent behavior generation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386901632" value="2">
+      <span>By defining clear roles and goals for agents</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386901632" value="3">
+      <span>By avoiding the use of external tools</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/agentic-ai-patterns/mod-18.ipynb)

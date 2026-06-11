@@ -55,6 +55,321 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Inheritance is a mechanism where one class inherits the fields and methods of another class. This allows for code reusability and the creation of a hierarchical class structure. The class that is inherited from is called the superclass, and the class that inherits is called the subclass.
+
+```java title="example2.java"
+class Animal {
+    void eat() {
+        System.out.println("eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();
+        myDog.bark();
+    }
+}
+```
+
+```
+eating
+barking
+
+```
+
+> **💡 Tip:** Remember to use the 'super' keyword to call the superclass constructor from the subclass constructor when you need to initialize inherited fields.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of a class in Java?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054784" value="0">
+      <span>To create objects</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054784" value="1">
+      <span>To define data and methods</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054784" value="2">
+      <span>To compile Java code</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054784" value="3">
+      <span>To execute Java applications</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does inheritance allow in Java?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046208" value="0">
+      <span>Code reusability</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046208" value="1">
+      <span>Multiple inheritance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046208" value="2">
+      <span>Polymorphism</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046208" value="3">
+      <span>All of the above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+```java title="example_3.java"
+// Example 3
+public class Example3 {
+    public static void main(String[] args) {
+        System.out.println("Example 3");
+    }
+}
+```
+
+```
+Example 3
+```
+
+```java title="example_4.java"
+// Example 4
+public class Example4 {
+    public static void main(String[] args) {
+        System.out.println("Example 4");
+    }
+}
+```
+
+```
+Example 4
+```
+
+```java title="example_5.java"
+// Example 5
+public class Example5 {
+    public static void main(String[] args) {
+        System.out.println("Example 5");
+    }
+}
+```
+
+```
+Example 5
+```
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Question 3: What is a key concept in Object-Oriented Programming Basics?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387058304" value="0">
+      <span>Option A - Correct answer</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387058304" value="1">
+      <span>Option B - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387058304" value="2">
+      <span>Option C - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387058304" value="3">
+      <span>Option D - Incorrect</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Question 4: What is a key concept in Object-Oriented Programming Basics?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048768" value="0">
+      <span>Option A - Correct answer</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048768" value="1">
+      <span>Option B - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048768" value="2">
+      <span>Option C - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048768" value="3">
+      <span>Option D - Incorrect</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Question 5: What is a key concept in Object-Oriented Programming Basics?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387059648" value="0">
+      <span>Option A - Correct answer</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387059648" value="1">
+      <span>Option B - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387059648" value="2">
+      <span>Option C - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387059648" value="3">
+      <span>Option D - Incorrect</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Question 6: What is a key concept in Object-Oriented Programming Basics?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387061184" value="0">
+      <span>Option A - Correct answer</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387061184" value="1">
+      <span>Option B - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387061184" value="2">
+      <span>Option C - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387061184" value="3">
+      <span>Option D - Incorrect</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Question 7: What is a key concept in Object-Oriented Programming Basics?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048000" value="0">
+      <span>Option A - Correct answer</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048000" value="1">
+      <span>Option B - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048000" value="2">
+      <span>Option C - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048000" value="3">
+      <span>Option D - Incorrect</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Question 8: What is a key concept in Object-Oriented Programming Basics?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048704" value="0">
+      <span>Option A - Correct answer</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048704" value="1">
+      <span>Option B - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048704" value="2">
+      <span>Option C - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387048704" value="3">
+      <span>Option D - Incorrect</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Question 9: What is a key concept in Object-Oriented Programming Basics?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049408" value="0">
+      <span>Option A - Correct answer</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049408" value="1">
+      <span>Option B - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049408" value="2">
+      <span>Option C - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049408" value="3">
+      <span>Option D - Incorrect</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Question 10: What is a key concept in Object-Oriented Programming Basics?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049536" value="0">
+      <span>Option A - Correct answer</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049536" value="1">
+      <span>Option B - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049536" value="2">
+      <span>Option C - Incorrect</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387049536" value="3">
+      <span>Option D - Incorrect</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+Learn more: https://docs.oracle.com/javase/tutorial/
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-4.ipynb)

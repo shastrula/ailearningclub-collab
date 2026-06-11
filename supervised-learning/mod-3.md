@@ -52,6 +52,81 @@ Recent advances in Linear Regression Advanced Techniques:
 
 True mastery comes from implementing Linear Regression Advanced Techniques in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+Regularization techniques like Ridge (L2) and Lasso (L1) regression help in reducing overfitting by adding a penalty to the loss function. Ridge regression adds the squared magnitude of coefficients as a penalty term, while Lasso adds the absolute value of magnitudes.
+
+```python title="example2.py"
+from sklearn.datasets import make_regression
+from sklearn.linear_model import Ridge, Lasso
+from sklearn.model_selection import train_test_split
+import numpy as np
+
+# Generate sample data
+X, y = make_regression(n_samples=100, n_features=5, noise=0.1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Ridge Regression
+ridge = Ridge(alpha=1.0)
+ridge.fit(X_train, y_train)
+print('Ridge coefficients:', ridge.coef_)
+
+# Lasso Regression
+lasso = Lasso(alpha=0.1)
+lasso.fit(X_train, y_train)
+print('Lasso coefficients:', lasso.coef_)
+```
+
+> **💡 Tip:** When using Lasso regression, be mindful that it can shrink some coefficients to zero, effectively performing feature selection. This can be useful for models with many features.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of calculating VIF in linear regression?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908480" value="0">
+      <span>To measure model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908480" value="1">
+      <span>To identify multicollinearity among features</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908480" value="2">
+      <span>To select the best features</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908480" value="3">
+      <span>To normalize the data</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which regularization technique can shrink coefficients to zero?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912256" value="0">
+      <span>Ridge Regression</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912256" value="1">
+      <span>Lasso Regression</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912256" value="2">
+      <span>Elastic Net</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912256" value="3">
+      <span>None of the above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/supervised-learning/mod-3.ipynb)

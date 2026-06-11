@@ -59,6 +59,67 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+If you need to remove multiple packages, you can list them all in a single `conda remove` command. This is efficient for cleaning up environments by removing several unnecessary packages at once.
+
+```python title="example2.py"
+import subprocess
+
+# Remove 'numpy' and 'pandas' packages from the current environment
+subprocess.run(["conda", "remove", "numpy", "pandas"], check=True)
+```
+
+> **💡 Tip:** Be cautious when removing packages, as this can break dependencies for other installed packages. Always ensure that removing a package won't disrupt your workflow.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What command is used to remove a single package from a Conda environment?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179840" value="0">
+      <span>conda uninstall</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179840" value="1">
+      <span>conda remove</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179840" value="2">
+      <span>conda delete</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179840" value="3">
+      <span>conda purge</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How can you remove multiple packages in a single command?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187200" value="0">
+      <span>List each package separately</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187200" value="1">
+      <span>Use a wildcard character</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187200" value="2">
+      <span>List all package names in a single command</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187200" value="3">
+      <span>Use a script to iterate over packages</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/conda-package-management-and-environments/mod-7.ipynb)

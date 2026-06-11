@@ -59,6 +59,212 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Fetch data and update the page:
+
+```javascript
+// Fetch and display user list
+async function displayUsers() {
+  try {
+    let response = await fetch("https://api.example.com/users");
+    let users = await response.json();
+    
+    let list = document.querySelector("#user-list");
+    list.innerHTML = "";
+    
+    users.forEach(user => {
+      let item = document.createElement("li");
+      item.textContent = `${user.name} (${user.email})`;
+      list.appendChild(item);
+    });
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
+// Call on page load
+document.addEventListener("DOMContentLoaded", displayUsers);
+
+// Search functionality
+let searchInput = document.querySelector("#search");
+searchInput.addEventListener("keyup", async (e) => {
+  let query = e.target.value;
+  
+  try {
+    let response = await fetch(`https://api.example.com/users?search=${query}`);
+    let results = await response.json();
+    
+    let list = document.querySelector("#results");
+    list.innerHTML = "";
+    
+    results.forEach(user => {
+      let item = document.createElement("div");
+      item.innerHTML = `<h3>${user.name}</h3><p>${user.email}</p>`;
+      list.appendChild(item);
+    });
+  } catch (error) {
+    console.error("Error:", error);
+  }
+});
+
+// Form submission with API
+let form = document.querySelector("form");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  
+  let formData = new FormData(form);
+  let userData = Object.fromEntries(formData);
+  
+  try {
+    let response = await fetch("https://api.example.com/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(userData)
+    });
+    
+    if (response.ok) {
+      alert("User created successfully!");
+      form.reset();
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  }
+});
+```
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does REST API stand for?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7392847" value="0">
+      <span>Representational State Transfer API</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7392847" value="1">
+      <span>Remote Execution Service Transfer API</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7392847" value="2">
+      <span>Real-time Event Streaming API</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7392847" value="3">
+      <span>Rapid Exchange Service Transfer API</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does JSON stand for?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8294756" value="0">
+      <span>Java Script Object Notation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8294756" value="1">
+      <span>JavaScript Object Notation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8294756" value="2">
+      <span>JavaScript Online Notation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8294756" value="3">
+      <span>Java Serialized Object Notation</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which HTTP method is used to create new data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6729384" value="0">
+      <span>GET</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6729384" value="1">
+      <span>PUT</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6729384" value="2">
+      <span>POST</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6729384" value="3">
+      <span>DELETE</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does response.json() do?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5847291" value="0">
+      <span>Converts JSON to a string</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5847291" value="1">
+      <span>Parses the response body as JSON</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5847291" value="2">
+      <span>Checks if the response is valid</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5847291" value="3">
+      <span>Sends JSON data to the server</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is async/await used for?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4829374" value="0">
+      <span>Handling asynchronous operations with cleaner syntax</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4829374" value="1">
+      <span>Making synchronous code run faster</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4829374" value="2">
+      <span>Preventing errors in JavaScript</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4829374" value="3">
+      <span>Creating new API endpoints</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/web-development-basics/mod-7.ipynb)

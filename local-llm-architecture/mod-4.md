@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+GPUs are indispensable for accelerating the training and inference of LLMs. They offer parallel processing capabilities that can significantly reduce computation time. For local deployments, having a GPU with at least 8GB of VRAM is recommended. Libraries like PyTorch and TensorFlow can leverage GPU resources to enhance performance.
+
+```python title="example2.py"
+import torch
+
+# Check if CUDA (GPU support) is available
+if torch.cuda.is_available():
+    device = torch.device('cuda')
+    print('Running on GPU')
+else:
+    device = torch.device('cpu')
+    print('Running on CPU')
+
+# Create a tensor and move it to the appropriate device
+tensor = torch.tensor([[1.0, 2.0], [3.0, 4.0]]).to(device)
+print(f'Tensor: {tensor}')
+```
+
+> **💡 Tip:** Always ensure your GPU drivers and CUDA toolkit are up-to-date to avoid compatibility issues with deep learning frameworks.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the minimum amount of RAM recommended for running large LLMs like LLaMA?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902528" value="0">
+      <span>16GB</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902528" value="1">
+      <span>32GB</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902528" value="2">
+      <span>8GB</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386902528" value="3">
+      <span>64GB</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Python library can be used to check GPU availability for deep learning tasks?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903616" value="0">
+      <span>NumPy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903616" value="1">
+      <span>Pandas</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903616" value="2">
+      <span>PyTorch</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386903616" value="3">
+      <span>Scikit-learn</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-4.ipynb)

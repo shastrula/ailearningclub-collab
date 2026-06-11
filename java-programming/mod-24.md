@@ -59,6 +59,68 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+CI/CD pipelines automate the process of integrating code changes, testing, and deploying applications. This approach minimizes manual intervention, reduces errors, and speeds up the release cycle. Tools like Jenkins, GitLab CI, and GitHub Actions are commonly used to implement CI/CD pipelines.
+
+```java title="example2.java"
+public class CICDExample {
+    public static void main(String[] args) {
+        System.out.println("CI/CD Pipeline Executing");
+    }
+}
+```
+
+> **💡 Tip:** Ensure your CI/CD pipeline includes thorough testing stages to catch issues early in the development cycle.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of deployment in Java?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387261568" value="0">
+      <span>To write code</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387261568" value="1">
+      <span>To package and deliver the application to production</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387261568" value="2">
+      <span>To debug the application</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387261568" value="3">
+      <span>To design the application architecture</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which tool is commonly used to implement CI/CD pipelines?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387262080" value="0">
+      <span>Eclipse</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387262080" value="1">
+      <span>Jenkins</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387262080" value="2">
+      <span>IntelliJ IDEA</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387262080" value="3">
+      <span>NetBeans</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-24.ipynb)

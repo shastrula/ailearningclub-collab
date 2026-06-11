@@ -55,6 +55,72 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Kullback-Leibler (KL) Divergence measures how one probability distribution diverges from a second, expected probability distribution. It is a non-symmetric measure of the difference between two probability distributions P and Q. KL Divergence is particularly useful in machine learning for comparing the predicted distribution with the true distribution.
+
+```python title="example2.py"
+import math
+
+# Define two probability distributions
+P = [0.2, 0.3, 0.5]
+Q = [0.3, 0.4, 0.3]
+
+# Calculate KL Divergence
+kl_divergence = sum(p * math.log2(p/q) for p, q in zip(P, Q) if p > 0 and q > 0)
+print(f'KL Divergence: {kl_divergence}')
+```
+
+> **💡 Tip:** When calculating KL Divergence, ensure that both distributions P and Q are properly normalized and that none of the probabilities are zero to avoid undefined or infinite results.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does higher entropy indicate in a random variable?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905856" value="0">
+      <span>Lower uncertainty</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905856" value="1">
+      <span>Higher uncertainty</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905856" value="2">
+      <span>No change in uncertainty</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386905856" value="3">
+      <span>Deterministic variable</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does KL Divergence measure between two probability distributions?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908544" value="0">
+      <span>Exact match</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908544" value="1">
+      <span>Symmetric difference</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908544" value="2">
+      <span>Non-symmetric difference</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386908544" value="3">
+      <span>Total variation distance</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-21.ipynb)

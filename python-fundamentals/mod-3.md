@@ -59,6 +59,51 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+```text title="ide-comparison.txt"
+Feature              | VSCode | PyCharm | IntelliJ
+---------------------|--------|---------|----------
+Price                | Free   | Free*   | Free*
+Setup Time           | 5 min  | 2 min   | 10 min
+Memory Usage         | Low    | High    | High
+Debugging            | Good   | Excellent | Good
+Code Completion      | Good   | Excellent | Excellent
+Best For             | Beginners | Professionals | Multi-language
+Learning Curve       | Easy   | Medium  | Medium
+
+*Community Edition is free
+```
+
+> **Try it in Google Colab:** [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-courses/blob/main/python-fundamentals/mod-3.ipynb)
+
+
+**Recommendation**: Start with VSCode if you're new to programming. It's simple and won't overwhelm you. Switch to PyCharm when you need advanced features.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which IDE is best for beginners?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907328" value="0">
+      <span>PyCharm</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907328" value="1">
+      <span>VSCode</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907328" value="2">
+      <span>IntelliJ</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907328" value="3">
+      <span>Vim</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/python-fundamentals/mod-3.ipynb)

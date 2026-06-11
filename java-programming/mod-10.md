@@ -59,6 +59,80 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Stream I/O in Java involves handling data streams, which are sequences of data. The java.io package provides classes like InputStream and OutputStream for handling byte streams, and Reader and Writer for handling character streams. These classes are essential for tasks such as reading from and writing to network connections, databases, and other data sources.
+
+```java title="example2.java"
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Example2 {
+    public static void main(String[] args) {
+        String data = "Hello, Stream";
+        try (InputStream inputStream = new ByteArrayInputStream(data.getBytes())) {
+            int byteValue;
+            while ((byteValue = inputStream.read())!= -1) {
+                System.out.print((char) byteValue);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+> **💡 Tip:** Always close your streams and readers to prevent resource leaks. Using try-with-resources is a good practice to ensure that resources are closed automatically.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of the FileWriter class in Java I/O?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387115392" value="0">
+      <span>To read data from a file</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387115392" value="1">
+      <span>To write data to a file</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387115392" value="2">
+      <span>To manipulate strings</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387115392" value="3">
+      <span>To handle network connections</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which class in Java I/O is used for reading data from a byte stream?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123328" value="0">
+      <span>Reader</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123328" value="1">
+      <span>Writer</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123328" value="2">
+      <span>InputStream</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123328" value="3">
+      <span>OutputStream</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-10.ipynb)

@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Maintaining LLM health involves regular updates, retraining, and security checks. It is important to periodically retrain the model with new data to keep it up-to-date and relevant. Additionally, conducting security audits and applying patches can help protect the LLM from vulnerabilities and threats.
+
+```python title="example2.py"
+import random
+
+def check_health():
+    """Simulate checking LLM health."""
+    health_status = ['Good', 'Warning', 'Critical']
+    for _ in range(5):
+        status = random.choice(health_status)
+        print(f'Health Status: {status}')
+        time.sleep(1)  # Simulate delay
+
+check_health()
+```
+
+> **💡 Tip:** Regularly review and update monitoring thresholds to adapt to changing performance expectations and new data patterns.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a key metric for monitoring LLM performance?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052544" value="0">
+      <span>Number of users</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052544" value="1">
+      <span>Server uptime</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052544" value="2">
+      <span>Response time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052544" value="3">
+      <span>Database size</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which practice is essential for maintaining LLM health?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054464" value="0">
+      <span>Increasing model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054464" value="1">
+      <span>Regular retraining</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054464" value="2">
+      <span>Reducing dataset size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387054464" value="3">
+      <span>Ignoring security updates</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-10.ipynb)

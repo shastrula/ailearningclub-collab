@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Python's built-in functions and libraries are optimized for performance and should be utilized wherever possible. Libraries like NumPy and Pandas offer efficient data structures and operations that can drastically reduce execution time compared to standard Python code.
+
+**example2.py**
+
+```
+# Using NumPy for efficient array operations
+import numpy as np
+
+# Create a NumPy array
+numbers = np.array([1, 2, 3, 4])
+
+# Efficiently compute the sum of pairs
+sum_pairs = numbers[:, None] + numbers
+print(sum_pairs.flatten()[np.triu_indices_from(sum_pairs, k=1)])
+```
+
+> **💡 Tip:** Always prefer using built-in functions and libraries for operations on large datasets, as they are often optimized for performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the time complexity of the 'find_sum_of_pairs' function?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958528" value="0">
+      <span>O(1)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958528" value="1">
+      <span>O(n)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958528" value="2">
+      <span>O(n^2)</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958528" value="3">
+      <span>O(n log n)</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which library is recommended for efficient array operations in Python?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960192" value="0">
+      <span>Pandas</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960192" value="1">
+      <span>NumPy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960192" value="2">
+      <span>SciPy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386960192" value="3">
+      <span>Matplotlib</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/advanced-python-for-ai-development/mod-15.ipynb)

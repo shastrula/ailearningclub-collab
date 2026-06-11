@@ -59,6 +59,60 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Use threading for I/O-bound operations like API calls or file processing.
+
+```python title="threading_example.py"
+import threading
+import time
+
+def process_batch(batch_id):
+    print(f"Processing batch {batch_id}")
+    time.sleep(1)
+    print(f"Batch {batch_id} complete")
+
+threads = []
+for i in range(3):
+    t = threading.Thread(target=process_batch, args=(i,))
+    threads.append(t)
+    t.start()
+
+for t in threads:
+    t.join()
+```
+
+```
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Batch 0 complete
+Batch 1 complete
+Batch 2 complete
+```
+
+> **💡 Tip:** Use async/await for I/O-bound operations and threading for CPU-bound tasks in your AI pipelines.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ When should you use async/await?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="0">
+      <span>For I/O-bound operations like API calls</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="1">
+      <span>For CPU-intensive computations</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q1" value="2">
+      <span>For simple sequential operations</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/advanced-python-for-ai-development/mod-12.ipynb)

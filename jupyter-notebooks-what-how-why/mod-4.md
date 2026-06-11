@@ -59,6 +59,71 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Jupyter Notebooks are auto-saved at regular intervals, but it's good practice to manually save your work frequently. You can save the notebook by clicking the 'Save and Checkpoint' icon in the toolbar or by pressing `Ctrl+S` (or `Cmd+S` on Mac). Additionally, you can use the keyboard shortcut `Ctrl+S` (or `Cmd+S` on Mac) to save the notebook without creating a new checkpoint.
+
+```python title="save_notebook.py"
+from IPython.display import display, HTML
+
+# Display a message indicating the notebook has been saved
+display(HTML('<script>Jupyter.notebook.save_checkpoint(); alert("Notebook saved successfully.");</script>'))
+```
+
+```
+<Alert>Notebook saved successfully.</Alert>
+```
+
+> **💡 Tip:** Remember to save your notebook frequently to avoid losing any work due to unexpected interruptions.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How do you create a new Jupyter Notebook using the command line?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179904" value="0">
+      <span>jupyter notebook create new_notebook.ipynb</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179904" value="1">
+      <span>jupyter notebook new_notebook.ipynb</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179904" value="2">
+      <span>jupyter new_notebook.ipynb</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387179904" value="3">
+      <span>notebook new_notebook.ipynb</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which keyboard shortcut is used to save a Jupyter Notebook?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180416" value="0">
+      <span>Ctrl+S</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180416" value="1">
+      <span>Cmd+S</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180416" value="2">
+      <span>Alt+S</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180416" value="3">
+      <span>Shift+S</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/jupyter-notebooks-what-how-why/mod-4.ipynb)

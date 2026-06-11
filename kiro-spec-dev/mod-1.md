@@ -59,6 +59,34 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Vibe coding means prompting an AI and iterating until something works. It's fast for throwaway scripts but breaks down on anything with multiple components, edge cases, or future maintainers. Spec-driven development trades a small upfront investment in writing for dramatically better output quality and a codebase you can actually understand later.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the main advantage of writing a spec before asking Kiro to generate code?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052224" value="0">
+      <span>It makes Kiro run faster</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052224" value="1">
+      <span>It gives the agent context to make decisions aligned with your intent</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052224" value="2">
+      <span>It automatically tests the generated code</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387052224" value="3">
+      <span>It reduces the number of files created</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/kiro-spec-dev/mod-1.ipynb)

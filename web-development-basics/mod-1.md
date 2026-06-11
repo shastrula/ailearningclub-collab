@@ -59,6 +59,145 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Browsers cache resources locally to avoid re-downloading them. When you revisit a site, the browser checks if cached resources are still valid before requesting them again from the server.
+
+```
+First visit: Download all resources
+Second visit: Use cached resources (if not expired)
+```
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does DNS do?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7392841" value="0">
+      <span>Encrypts data between client and server</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7392841" value="1">
+      <span>Translates domain names to IP addresses</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7392841" value="2">
+      <span>Stores website files on the server</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7392841" value="3">
+      <span>Renders HTML in the browser</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which HTTP method is used to retrieve data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5128764" value="0">
+      <span>GET</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5128764" value="1">
+      <span>POST</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5128764" value="2">
+      <span>PUT</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q5128764" value="3">
+      <span>DELETE</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does a 404 status code mean?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9461523" value="0">
+      <span>Server error</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9461523" value="1">
+      <span>Unauthorized access</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9461523" value="2">
+      <span>Resource not found</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9461523" value="3">
+      <span>Successful request</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the correct order of the request-response cycle?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6847291" value="0">
+      <span>Rendering → DNS Lookup → HTTP Request → Server Processing</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6847291" value="1">
+      <span>HTTP Request → DNS Lookup → Server Processing → Rendering</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6847291" value="2">
+      <span>Server Processing → HTTP Request → DNS Lookup → Rendering</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q6847291" value="3">
+      <span>DNS Lookup → TCP Connection → HTTP Request → Server Processing → Rendering</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+---
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why do browsers cache resources?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q3759482" value="0">
+      <span>To encrypt sensitive data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q3759482" value="1">
+      <span>To improve performance by avoiding re-downloads</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q3759482" value="2">
+      <span>To prevent unauthorized access</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q3759482" value="3">
+      <span>To translate domain names</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/web-development-basics/mod-1.ipynb)

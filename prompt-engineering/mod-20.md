@@ -59,6 +59,71 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Chain-of-Thought (CoT) prompting encourages the model to provide intermediate reasoning steps before arriving at a final answer, enhancing transparency and reliability. ReAct prompting combines reasoning and action, allowing the model to perform tasks that require external information or actions.
+
+```python title="example2.py"
+def chain_of_thought_example():
+    """Demonstrates Chain-of-Thought prompting."""
+    prompt = 'What is the capital of France? First, consider the country. Then, think about its capital.'
+    response = 'The capital of France is Paris.'  # Simulated model response
+    return response
+
+# Example usage
+print(chain_of_thought_example())
+```
+
+> **💡 Tip:** When designing system prompts, ensure they are clear, concise, and specific to the task at hand. Ambiguous prompts can lead to incorrect or irrelevant responses.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which type of prompting relies on the model's pre-trained knowledge without any examples?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387082944" value="0">
+      <span>Few-shot prompting</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387082944" value="1">
+      <span>Zero-shot prompting</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387082944" value="2">
+      <span>Chain-of-Thought prompting</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387082944" value="3">
+      <span>ReAct prompting</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does Chain-of-Thought prompting aim to enhance in model responses?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083392" value="0">
+      <span>Speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083392" value="1">
+      <span>Clarity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083392" value="2">
+      <span>Transparency</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387083392" value="3">
+      <span>Complexity</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/prompt-engineering/mod-20.ipynb)

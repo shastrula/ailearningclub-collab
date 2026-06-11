@@ -59,6 +59,91 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Training a Mask R-CNN model involves preparing a dataset, defining the model architecture, setting up the training loop, and optimizing the model parameters. The dataset should contain images with corresponding bounding boxes and segmentation masks. The training loop includes forward and backward passes, updating the model weights based on the loss function.
+
+```python title="example2.py"
+import torch
+import torchvision
+from torchvision.models.detection.mask_rcnn import MaskRCNN_ResNet50_FPN_Weights
+
+# Load a pre-trained Mask R-CNN model
+model = torchvision.models.detection.maskrcnn_resnet50_fpn(weights=MaskRCNN_ResNet50_FPN_Weights.DEFAULT)
+model.train()
+
+# Define the optimizer
+optimizer = torch.optim.SGD(model.parameters(), lr=0.005, momentum=0.9, weight_decay=0.0005)
+
+# Define the loss function
+def criterion(inputs, targets):
+    loss = 0
+    for input, target in zip(inputs, targets):
+        loss += F.cross_entropy(input['class_logits'], target['labels'])
+        loss += F.cross_entropy(input['bbox_reg'], target['boxes'])
+        loss += F.cross_entropy(input['mask'], target['masks'])
+    return loss
+
+# Training loop
+for epoch in range(num_epochs):
+    for images, targets in data_loader:
+        optimizer.zero_grad()
+        outputs = model(images)
+        loss = criterion(outputs, targets)
+        loss.backward()
+        optimizer.step()
+```
+
+> **💡 Tip:** Ensure your dataset is well-annotated with accurate bounding boxes and segmentation masks to achieve good performance. Also, monitor the loss during training to avoid overfitting.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary function of Mask R-CNN?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912000" value="0">
+      <span>Object detection only</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912000" value="1">
+      <span>Instance segmentation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912000" value="2">
+      <span>Image classification</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912000" value="3">
+      <span>Object tracking</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which component of Mask R-CNN is responsible for predicting segmentation masks?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="0">
+      <span>RPN</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="1">
+      <span>ROI Align</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="2">
+      <span>FCN</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386913088" value="3">
+      <span>Mask Head</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/computer-vision/mod-17.ipynb)

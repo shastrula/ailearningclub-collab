@@ -59,6 +59,77 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Gibbs sampling is another MCMC method that is particularly useful when the target distribution is multivariate. It works by iteratively sampling each variable from its conditional distribution given the current values of all other variables. This method is efficient when the conditional distributions are easy to sample from.
+
+```python title="gibbs_sampling.py"
+import numpy as np
+
+def gibbs_sampling(num_samples):
+    samples = np.zeros((num_samples, 2))
+    x, y = 0, 0
+    for i in range(num_samples):
+        x = np.random.normal(y, 1)
+        y = np.random.normal(x, 1)
+        samples[i] = [x, y]
+    return samples
+
+# Example usage
+samples = gibbs_sampling(1000)
+print(samples[:10])
+```
+
+> **💡 Tip:** Ensure that the proposal distribution in Metropolis-Hastings and the conditional distributions in Gibbs sampling are well-tuned to the target distribution to achieve efficient convergence.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of the Metropolis-Hastings algorithm?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088576" value="0">
+      <span>To optimize neural network parameters</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088576" value="1">
+      <span>To generate samples from a target distribution</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088576" value="2">
+      <span>To perform linear regression</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387088576" value="3">
+      <span>To cluster data points</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ In Gibbs sampling, how are the variables updated?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956160" value="0">
+      <span>Simultaneously</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956160" value="1">
+      <span>Randomly</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956160" value="2">
+      <span>One at a time from their conditional distributions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386956160" value="3">
+      <span>Using gradient descent</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-12.ipynb)

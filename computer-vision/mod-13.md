@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Optimizing model performance involves fine-tuning hyperparameters, using ensemble methods, and leveraging transfer learning. Techniques like grid search, random search, or Bayesian optimization can be employed to find the optimal hyperparameters.
+
+```python title="example2.py"
+from sklearn.model_selection import GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+
+# Example dataset
+X = np.array([[0], [1], [1], [1], [1]])
+y = np.array([0, 1, 1, 1, 1])
+
+# Define parameter grid
+param_grid = {'n_estimators': [50, 100, 200], 'max_depth': [None, 10, 20, 30]}
+
+# Perform grid search
+grid_search = GridSearchCV(RandomForestClassifier(), param_grid, cv=3)
+grid_search.fit(X, y)
+
+print('Best parameters:', grid_search.best_params_)
+```
+
+> **💡 Tip:** When dealing with real-world datasets, always perform thorough data preprocessing and cleaning to ensure the quality of your model's predictions.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What technique can be used to handle imbalanced datasets?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906816" value="0">
+      <span>Undersampling the minority class</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906816" value="1">
+      <span>Oversampling the majority class</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906816" value="2">
+      <span>Using synthetic data generation methods</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906816" value="3">
+      <span>All of the above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method can be used to find the optimal hyperparameters for a model?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907712" value="0">
+      <span>Random search</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907712" value="1">
+      <span>Grid search</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907712" value="2">
+      <span>Bayesian optimization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386907712" value="3">
+      <span>All of the above</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/computer-vision/mod-13.ipynb)

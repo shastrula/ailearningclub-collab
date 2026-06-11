@@ -59,6 +59,73 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+The BLEU (Bilingual Evaluation Understudy) score is a metric used to evaluate the quality of text which has been machine-translated from one natural language to another. It compares a candidate translation against one or more reference translations. Higher BLEU scores indicate better translation quality.
+
+```python title="example2.py"
+from nltk.translate.bleu_score import sentence_bleu
+
+# Define reference and candidate translations
+reference = [['the', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']]
+candidate = ['the', 'quick', 'brown', 'fox', 'jumped', 'over', 'the', 'lazy', 'dog']
+
+# Calculate BLEU score
+bleuscore = sentence_bleu(reference, candidate)
+
+print(f'BLEU Score: {bleuscore:.4f}')
+```
+
+> **💡 Tip:** When evaluating fine-tuned LLMs, it's important to use a diverse set of metrics to get a comprehensive understanding of the model's performance. Relying solely on one metric can lead to an incomplete assessment.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does a lower perplexity indicate in the context of language models?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180096" value="0">
+      <span>Higher uncertainty</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180096" value="1">
+      <span>Lower quality</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180096" value="2">
+      <span>Better predictions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387180096" value="3">
+      <span>Irrelevant metric</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does a higher BLEU score signify in machine translation?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181568" value="0">
+      <span>Poor translation quality</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181568" value="1">
+      <span>Average translation quality</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181568" value="2">
+      <span>Excellent translation quality</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387181568" value="3">
+      <span>Inapplicable metric</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/llm-fine-tuning/mod-14.ipynb)

@@ -59,6 +59,63 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+```python title="explore.py"
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.datasets import fetch_california_housing
+
+df = fetch_california_housing(as_frame=True).frame
+
+# Distribution of house values
+df['MedHouseVal'].hist(bins=50)
+plt.xlabel('Median House Value ($100k)')
+plt.title('California Housing Price Distribution')
+plt.show()
+
+# Correlation with target
+print(df.corr()['MedHouseVal'].sort_values(ascending=False))
+```
+
+```
+MedHouseVal    1.000000
+MedInc         0.688075
+AveRooms       0.151948
+HouseAge       0.105623
+AveOccup      -0.023737
+Population    -0.024650
+AveBedrms     -0.046701
+Longitude     -0.045967
+Latitude      -0.142724
+```
+
+> **💡 Tip:** MedInc (median income) has the strongest correlation with house value at 0.69. This is the most important feature — a good sign before you even train a model.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does df.isnull().sum() tell you?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387061696" value="0">
+      <span>The total number of rows in the dataframe</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387061696" value="1">
+      <span>The number of missing values in each column</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387061696" value="2">
+      <span>The sum of all numeric values</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387061696" value="3">
+      <span>Whether the dataframe is empty</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/data-and-models/mod-2.ipynb)

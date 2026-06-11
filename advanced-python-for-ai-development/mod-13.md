@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Dask is a flexible library for parallel computing in Python that integrates well with Pandas. It allows you to work with larger-than-memory datasets by breaking them into smaller chunks and processing them in parallel. This section will demonstrate how to use Dask to handle big data efficiently.
+
+**example2.py**
+
+```
+import dask.dataframe as dd
+
+# Load a large dataset
+ddf = dd.read_csv('large_dataset.csv')
+
+# Perform operations on the Dask DataFrame
+result = ddf['existing_column'].mean().compute()
+print(result)
+
+```
+
+> **💡 Tip:** When using Dask, make sure to call the .compute() method to execute the computation and retrieve the result.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using Pandas for data manipulation?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954624" value="0">
+      <span>Speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954624" value="1">
+      <span>Memory efficiency</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954624" value="2">
+      <span>Ease of use</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386954624" value="3">
+      <span>Scalability</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How does Dask improve the performance of data processing tasks?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957376" value="0">
+      <span>By using multi-threading</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957376" value="1">
+      <span>By breaking data into smaller chunks</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957376" value="2">
+      <span>By reducing memory usage</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957376" value="3">
+      <span>By integrating with Pandas</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/advanced-python-for-ai-development/mod-13.ipynb)

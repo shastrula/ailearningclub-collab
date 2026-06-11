@@ -59,6 +59,77 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Training a neural network involves feeding it input data, allowing it to make predictions, comparing these predictions to the actual outcomes, and adjusting the weights to minimize the difference. This process is repeated over multiple epochs until the model achieves satisfactory performance.
+
+```python title="example2.py"
+import numpy as np
+
+# Generate dummy data
+x_train = np.random.random((1000, 784))
+y_train = np.random.randint(10, size=(1000, 1))
+x_test = np.random.random((100, 784))
+y_test = np.random.randint(10, size=(100, 1))
+
+# Train the model
+model.fit(x_train, y_train, epochs=5, batch_size=32)
+
+# Evaluate the model
+test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
+print('Test accuracy:', test_acc)
+```
+
+> **💡 Tip:** Always ensure your input data is properly preprocessed and normalized before training to improve model performance and convergence.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the role of an activation function in a neural network?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386857856" value="0">
+      <span>It initializes the weights</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386857856" value="1">
+      <span>It introduces non-linearity to the model</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386857856" value="2">
+      <span>It defines the output shape</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386857856" value="3">
+      <span>It compiles the model</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which method is used to adjust the weights of a neural network during training?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861504" value="0">
+      <span>fit()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861504" value="1">
+      <span>compile()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861504" value="2">
+      <span>evaluate()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861504" value="3">
+      <span>predict()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/tensorflow-keras/mod-3.ipynb)

@@ -59,6 +59,34 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+After implementation, design.md stays in your repo as documentation. Future developers (and future AI agents) can read it to understand why the code is structured the way it is — not just what it does.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of design.md in Kiro's spec workflow?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957568" value="0">
+      <span>To list all the bugs found during testing</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957568" value="1">
+      <span>To capture the technical blueprint: architecture, data models, and API contracts</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957568" value="2">
+      <span>To store environment variables</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386957568" value="3">
+      <span>To configure Kiro's behaviour</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/kiro-spec-dev/mod-3.ipynb)

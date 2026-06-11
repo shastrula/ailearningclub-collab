@@ -59,6 +59,77 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Plotly allows for the creation of interactive animations that can be embedded in web applications. Using the `px.scatter` function with the `animation_frame` parameter, you can animate scatter plots to show changes over time.
+
+```python title="example2.py"
+import plotly.express as px
+import pandas as pd
+
+# Create a DataFrame with sample data
+data = {
+    'frame': [1, 1, 1, 2, 2, 2, 3, 3, 3],
+    'x': [1, 2, 3, 1, 2, 3, 1, 2, 3],
+    'y': [1, 2, 3, 2, 3, 4, 3, 4, 5]
+}
+df = pd.DataFrame(data)
+
+# Create an animated scatter plot
+fig = px.scatter(df, x='x', y='y', animation_frame='frame', animation_group='x')
+fig.show()
+```
+
+> **💡 Tip:** When creating animations, ensure that the data is properly formatted and that the frame intervals are set correctly to avoid choppy or overly slow animations.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Matplotlib class is used to create animations?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386856320" value="0">
+      <span>Figure</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386856320" value="1">
+      <span>FuncAnimation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386856320" value="2">
+      <span>Axes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386856320" value="3">
+      <span>Animation</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Plotly parameter is used to specify the animation frames?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862080" value="0">
+      <span>animation_data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862080" value="1">
+      <span>frame</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862080" value="2">
+      <span>animation_frame</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386862080" value="3">
+      <span>animate</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/matplotlib-visualization/mod-16.ipynb)

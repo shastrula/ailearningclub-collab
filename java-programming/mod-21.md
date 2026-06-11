@@ -59,6 +59,88 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Sessions in Hibernate are the primary interface for interacting with the database. They represent a single unit of work and provide methods to save, update, delete, and retrieve objects. Managing sessions effectively is key to optimizing performance and ensuring data integrity.
+
+```java title="example2.java"
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+public class HibernateExample {
+    public static void main(String[] args) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            // Example: Saving an object
+            Employee employee = new Employee("John Doe", "Developer");
+            session.save(employee);
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction!= null) transaction.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
+}
+```
+
+```
+No output for this code, but it demonstrates how to open a session, begin a transaction, save an object, and commit the transaction.
+```
+
+> **💡 Tip:** Always ensure that sessions are properly closed to avoid resource leaks and performance issues.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of the Hibernate configuration file?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192576" value="0">
+      <span>To define database connection properties</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192576" value="1">
+      <span>To map Java objects to database tables</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192576" value="2">
+      <span>To handle session management</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192576" value="3">
+      <span>To perform CRUD operations</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does the SessionFactory do in Hibernate?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192704" value="0">
+      <span>It manages database transactions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192704" value="1">
+      <span>It provides a factory for creating sessions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192704" value="2">
+      <span>It handles object-relational mapping</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387192704" value="3">
+      <span>It performs database queries</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-21.ipynb)

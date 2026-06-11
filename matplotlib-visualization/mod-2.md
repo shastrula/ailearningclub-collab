@@ -59,6 +59,70 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+After installing the required libraries, it's important to verify that they are correctly installed and can be imported without issues. This step ensures that your environment is ready for data visualization tasks.
+
+```python title="verify_installation.py"
+import matplotlib
+import seaborn as sns
+import plotly.express as px
+
+print(f'Matplotlib version: {matplotlib.__version__}')
+print(f'Seaborn version: {sns.__version__}')
+print(f'Plotly version: {px.__version__}')
+```
+
+> **💡 Tip:** Ensure that you are using a virtual environment to manage your Python packages. This practice helps avoid conflicts between different projects and ensures a clean setup.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which command is used to install Python libraries using pip?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955392" value="0">
+      <span>pip get</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955392" value="1">
+      <span>pip install</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955392" value="2">
+      <span>pip download</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955392" value="3">
+      <span>pip add</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the purpose of verifying the installation of libraries?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955712" value="0">
+      <span>To check the version of Python</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955712" value="1">
+      <span>To ensure the libraries are correctly installed and importable</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955712" value="2">
+      <span>To update the libraries</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386955712" value="3">
+      <span>To remove the libraries</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/matplotlib-visualization/mod-2.ipynb)

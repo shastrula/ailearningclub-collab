@@ -59,6 +59,93 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Boosting algorithms like XGBoost, LightGBM, and CatBoost have revolutionized the field of ensemble learning by providing faster training times and better performance. Future trends include the development of more efficient algorithms, better handling of categorical data, and integration with deep learning frameworks.
+
+```python title="example2.py"
+import xgboost as xgb
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+data = load_breast_cancer()
+X, y = data.data, data.target
+
+# Split dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create DMatrix for XGBoost
+dtrain = xgb.DMatrix(X_train, label=y_train)
+dtest = xgb.DMatrix(X_test, label=y_test)
+
+# Set parameters for XGBoost
+params = {"objective": "binary:logistic", "max_depth": 3}
+
+# Train the XGBoost model
+num_round = 20
+bst = xgb.train(params, dtrain, num_round)
+
+# Make predictions
+preds = bst.predict(dtest)
+preds = [1 if p > 0.5 else 0 for p in preds]
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, preds)
+print('Accuracy:', accuracy)
+```
+
+> **💡 Tip:** When using advanced boosting algorithms like XGBoost, always experiment with different parameters such as learning rate, max depth, and number of rounds to find the optimal configuration for your specific dataset.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary advantage of using bagging techniques in ensemble learning?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119680" value="0">
+      <span>Increased bias</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119680" value="1">
+      <span>Decreased variance</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119680" value="2">
+      <span>Increased computational cost</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387119680" value="3">
+      <span>Decreased model interpretability</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which boosting algorithm is known for its efficiency in handling large datasets with high-dimensional features?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123840" value="0">
+      <span>AdaBoost</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123840" value="1">
+      <span>Gradient Boosting</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123840" value="2">
+      <span>XGBoost</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387123840" value="3">
+      <span>LightGBM</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ensemble-learning/mod-22.ipynb)

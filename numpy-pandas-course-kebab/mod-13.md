@@ -55,6 +55,81 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Seaborn is a statistical data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. Seaborn builds on Matplotlib and integrates closely with Pandas data structures. It is particularly useful for creating complex visualizations with minimal code.
+
+```python title="example2.py"
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Sample data
+data = {'category': ['A', 'B', 'C', 'D'], 'values': [10, 20, 15, 25]}
+df = pd.DataFrame(data)
+
+# Create a bar plot
+sns.barplot(x='category', y='values', data=df)
+
+# Add title and labels
+plt.title('Bar Plot with Seaborn')
+plt.xlabel('Category')
+plt.ylabel('Values')
+
+# Show the plot
+plt.show()
+```
+
+> **💡 Tip:** When using Seaborn, ensure that your data is in a Pandas DataFrame for seamless integration and easier plotting.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What function is used to display a plot in Matplotlib?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962176" value="0">
+      <span>plt.display()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962176" value="1">
+      <span>plt.show()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962176" value="2">
+      <span>plt.plot()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386962176" value="3">
+      <span>plt.figure()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which library is Seaborn built on top of?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961728" value="0">
+      <span>Plotly</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961728" value="1">
+      <span>Matplotlib</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961728" value="2">
+      <span>Bokeh</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386961728" value="3">
+      <span>Altair</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/numpy-pandas-course-kebab/mod-13.ipynb)

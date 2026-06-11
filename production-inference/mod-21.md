@@ -59,6 +59,66 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Batching and load balancing are critical for optimizing the performance of an inference system. Batching allows multiple inference requests to be processed together, reducing overhead and improving throughput. Load balancing ensures that incoming requests are distributed evenly across available resources, preventing any single resource from becoming a bottleneck. Together, these techniques help achieve high-throughput serving and efficient resource utilization.
+
+```python title="example2.py"
+from transformers import pipeline
+import threading
+
+# Initialize the pipeline
+pipe = pipeline('translation', model='Helsinki-NLP/opus-mt-en-fr')
+
+# Function to handle inference requests
+def handle_request(request):
+    return pipe(request)[0]['translation_text']
+
+# Batching function
+def batch_requests(requests):
+    results = [handle_request(req) for req in requests]
+    return results
+
+# Load balancing function
+def load_balance(requests, num_workers):
+    batches = [requests[i::num_workers] for i in range(num_workers)]
+    threads = [threading.Thread(target=batch_requests, args=(batch,)) for batch in batches]
+    for thread in threads:
+        thread.start()
+    for thread in threads:
+        thread.join()
+
+# Example usage
+requests = ['Hello, how are you?', 'Good morning!', 'See you later.']
+load_balance(requests, num_workers=3)
+```
+
+> **💡 Tip:** When implementing batching, ensure that the batch size is optimized for your specific use case. Too large a batch may lead to increased latency, while too small a batch may not provide sufficient throughput gains.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary benefit of using vLLM for inference?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912640" value="0">
+      <span>Reduced model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912640" value="1">
+      <span>Increased training speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912640" value="2">
+      <span>Lower inference latency</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386912640" value="3">
+      <span>Higher data accuracy</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/production-inference/mod-21.ipynb)

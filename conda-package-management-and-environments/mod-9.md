@@ -52,6 +52,75 @@ Recent advances in Advanced Environment Management:
 
 True mastery comes from implementing Advanced Environment Management in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Quiz
+
+Cloning environments allows you to create a copy of an existing environment, which can be useful for creating development, testing, or production environments. This ensures that all environments are identical, reducing the chances of environment-specific bugs. Additionally, managing environments through Conda's environment.yml files allows for easy sharing and replication of environments.
+
+```python title="example2.py"
+import conda
+import os
+
+# Create and activate a new environment
+conda.create(name='myenv_clone', clone='myenv')
+conda.activate('myenv_clone')
+
+# Export the environment to a YAML file
+conda.export(filename='myenv_clone.yml')
+
+# Remove the environment
+os.system('conda env remove --name myenv_clone --yes')
+```
+
+> **💡 Tip:** Always ensure that the environment you are cloning from is up-to-date with all necessary packages to avoid missing dependencies in the cloned environment.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What command is used to create a new environment in Conda?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387189568" value="0">
+      <span>conda.create()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387189568" value="1">
+      <span>conda.install()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387189568" value="2">
+      <span>conda.activate()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387189568" value="3">
+      <span>conda.deactivate()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ How do you clone an existing environment in Conda?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187648" value="0">
+      <span>conda.clone()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187648" value="1">
+      <span>conda.copy()</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187648" value="2">
+      <span>conda.create(clone='env_name')</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387187648" value="3">
+      <span>conda.duplicate()</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/conda-package-management-and-environments/mod-9.ipynb)

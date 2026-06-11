@@ -59,6 +59,82 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Algorithmic transparency and accountability are critical for building trust in AI systems. Regulations often require that AI decisions be explainable and that there are mechanisms in place for users to contest automated decisions.
+
+```python title="example2.py"
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import make_classification
+import lime
+import lime.lime_tabular
+
+# Generate a synthetic dataset
+X, y = make_classification(n_samples=100, n_features=4,
+                            n_informative=2, n_redundant=0,
+                            random_state=42)
+
+# Train a RandomForestClassifier
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(X, y)
+
+# Explain predictions using LIME
+explainer = lime.lime_tabular.LimeTabularExplainer(X, feature_names=['feature1', 'feature2', 'feature3', 'feature4'],
+                                                    class_names=['class0', 'class1'], mode='classification')
+exp = explainer.explain_instance(X[0], model.predict_proba, num_features=4)
+print(exp.as_list())
+```
+
+> **💡 Tip:** When deploying AI models, always keep documentation of the model's training data, hyperparameters, and performance metrics to ensure accountability and facilitate audits.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which regulation specifically addresses data privacy in the European Union?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046144" value="0">
+      <span>CCPA</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046144" value="1">
+      <span>HIPAA</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046144" value="2">
+      <span>GDPR</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387046144" value="3">
+      <span>SOX</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is a common method for ensuring algorithmic transparency?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387059136" value="0">
+      <span>Using complex neural networks</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387059136" value="1">
+      <span>Keeping the model's source code secret</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387059136" value="2">
+      <span>Using explainability tools like LIME</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387059136" value="3">
+      <span>Increasing the model's complexity</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/local-llm-architecture/mod-19.ipynb)

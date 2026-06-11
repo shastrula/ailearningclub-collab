@@ -59,6 +59,96 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+GPTQ is a post-training quantization technique that quantizes model weights to low precision (typically INT4) while minimizing accuracy loss. It uses second-order information (Hessian) to identify which weights are most important, then quantizes layer-by-layer using calibration data. The key insight: $\text{minimize} \|Wq - W\|^2$ subject to quantization constraints, where $Wq$ is the quantized weight matrix.
+
+```python title="example2.py"
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from auto_gptq import AutoGPTQForCausalLM
+
+# Load model and tokenizer
+model_name = "EleutherAI/gpt-neo-125M"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Quantize to INT4 using GPTQ
+model = AutoGPTQForCausalLM.from_pretrained(
+    model_name,
+    use_safetensors=True,
+    device_map="auto",
+    quantize_config={
+        "bits": 4,
+        "group_size": 128,
+        "desc_act": False,
+        "damp_percent": 0.1
+    }
+)
+
+# Calibrate on sample data
+calibration_data = [
+    "The quick brown fox jumps over the lazy dog.",
+    "Machine learning is a subset of artificial intelligence."
+]
+
+# Quantize (in practice, use calibration_data for better results)
+model.quantize(calibration_data)
+
+# Save quantized model
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of GGUF?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906176" value="0">
+      <span>To increase model size</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906176" value="1">
+      <span>To generalize quantization across architectures</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906176" value="2">
+      <span>To reduce inference time</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906176" value="3">
+      <span>To increase model accuracy</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ When does GPTQ apply quantization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906752" value="0">
+      <span>During inference</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906752" value="1">
+      <span>During fine-tuning</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906752" value="2">
+      <span>During pre-training</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386906752" value="3">
+      <span>After training (post-training)</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+model.save_pretrained("./gpt-neo-125M-gptq")
+print("Model quantized and saved.")
+```
+
+> **💡 Tip:** GPTQ works best with calibration data representative of your use case. Larger group sizes (128-256) preserve more accuracy but use more memory during quantization.
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-23.ipynb)

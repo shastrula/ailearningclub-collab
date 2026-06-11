@@ -59,6 +59,78 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+INT8 quantization is a widely-used technique that converts floating-point weights and activations to 8-bit integers. This method strikes a balance between model size reduction and performance, making it suitable for various deployment scenarios. The quantization process involves determining a scale factor and zero-point for each tensor to maintain accuracy.
+
+```python title="example2.py"
+import numpy as np
+
+# Example weights
+weights_fp32 = np.array([1.2, -0.5, 0.8, -1.1], dtype=np.float32)
+
+# Scaling factor
+scale = np.max(np.abs(weights_fp32))
+
+# Quantization to INT8
+weights_int8 = np.round(weights_fp32 / scale * 127).astype(np.int8)
+
+# Clipping to ensure values are within INT8 range
+weights_int8 = np.clip(weights_int8, -128, 127)
+
+print(weights_int8)
+```
+
+> **💡 Tip:** When performing quantization, ensure that the scale factor is chosen carefully to avoid overflow and underflow issues. Additionally, always test the quantized model to verify that it maintains acceptable performance levels.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of INT4 quantization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948288" value="0">
+      <span>To increase model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948288" value="1">
+      <span>To reduce model size and computational cost</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948288" value="2">
+      <span>To improve training speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386948288" value="3">
+      <span>To enhance model interpretability</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which range does INT8 quantization clip values to ensure they fit within the INT8 format?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386947264" value="0">
+      <span>-128 to 127</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386947264" value="1">
+      <span>-256 to 255</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386947264" value="2">
+      <span>0 to 255</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386947264" value="3">
+      <span>-32 to 31</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-6.ipynb)

@@ -55,6 +55,75 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+GPTQ is a quantization technique that uses a teacher-student framework to quantize models. It applies gradient penalties to ensure that the quantized model maintains performance close to the original model.
+
+```python title="example2.py"
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+import GPTQ
+
+# Load a pre-trained model and tokenizer
+model = AutoModelForSequenceClassification.from_pretrained('bert-base-uncased')
+tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
+
+# Apply GPTQ quantization
+quantized_model = GPTQ.quantize(model, tokenizer, bits=4)
+
+# Save the quantized model
+quantized_model.save_pretrained('gptq_model')
+```
+
+> **💡 Tip:** When applying GPTQ, ensure that the calibration dataset is representative of the data the model will encounter during inference to maintain accuracy.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of GGUF?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958080" value="0">
+      <span>To increase model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958080" value="1">
+      <span>To unify and compress generative models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958080" value="2">
+      <span>To enhance model training speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386958080" value="3">
+      <span>To visualize model architectures</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does GPTQ stand for?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858432" value="0">
+      <span>Gradient-based Performance Tuning Quantization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858432" value="1">
+      <span>Generalized Pre-trained Transformer Quantization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858432" value="2">
+      <span>Gradient Penalty Teacher-Student Quantization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858432" value="3">
+      <span>Generative Pre-trained Transformer Quantization</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/quantization-engineering/mod-2.ipynb)

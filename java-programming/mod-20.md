@@ -59,6 +59,73 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+A RESTful service is a key component of microservices architecture. It allows different services to communicate over HTTP, using standard methods like GET, POST, PUT, and DELETE. Spring Boot makes it easy to create these services with minimal boilerplate code.
+
+```java title="example2.java"
+@RestController
+@RequestMapping("/api/greeting")
+public class GreetingController {
+
+    @GetMapping
+    public String greeting() {
+        return "Hello, this is a Spring Boot Microservice";
+    }
+}
+
+```
+
+> **💡 Tip:** Always ensure your microservices are stateless to facilitate scaling and load balancing.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of using Spring Boot in microservices?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191040" value="0">
+      <span>To simplify the creation of microservices</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191040" value="1">
+      <span>To replace the need for databases</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191040" value="2">
+      <span>To handle all the networking in a microservices architecture</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191040" value="3">
+      <span>To provide a GUI for microservices</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which HTTP method is typically used to retrieve data from a RESTful service?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191488" value="0">
+      <span>POST</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191488" value="1">
+      <span>PUT</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191488" value="2">
+      <span>DELETE</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191488" value="3">
+      <span>GET</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/java-programming/mod-20.ipynb)

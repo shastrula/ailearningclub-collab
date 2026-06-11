@@ -59,6 +59,42 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+> **Visual Guide:** This module includes diagrams and flowcharts. Check the course materials for detailed visualizations.
+
+
+- [Google AI Education](https://ai.google/education/) — Free AI/ML courses from Google
+- [Stanford CS229](https://cs229.stanford.edu/) — Machine Learning course materials
+- [fast.ai](https://www.fast.ai/) — Practical deep learning for coders
+- [Papers With Code](https://paperswithcode.com/) — ML papers with implementations
+- [Kaggle Learn](https://www.kaggle.com/learn) — Hands-on ML micro-courses
+
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the main concept introduced in this module?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q25_0" value="0">
+      <span>Option A</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q25_1" value="1">
+      <span>Option B</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q25_2" value="2">
+      <span>Option C</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q25_3" value="3">
+      <span>Option D</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-25.ipynb)

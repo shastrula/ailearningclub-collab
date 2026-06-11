@@ -59,6 +59,82 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Effective data handling and storage are essential for managing large datasets in AI projects. This includes using appropriate data structures, implementing efficient I/O operations, and utilizing cloud storage solutions. Proper data management ensures that data is readily accessible and can be processed quickly, enhancing the overall performance of AI applications.
+
+```python title="example2.py"
+import pandas as pd
+
+# Example of efficient data loading and processing using Pandas
+
+def load_and_process_data(file_path):
+    # Load data into a DataFrame
+    df = pd.read_csv(file_path)
+    
+    # Perform some data processing
+    df['processed_column'] = df['original_column'].apply(lambda x: x * 2)
+    
+    return df
+
+# Sample CSV file path
+file_path = 'data.csv'
+
+# Load and process data
+processed_data = load_and_process_data(file_path)
+print(processed_data.head())
+```
+
+> **💡 Tip:** When handling large datasets, consider using data chunking to process data in smaller, manageable pieces, which can significantly reduce memory usage and improve performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which library is used for efficient matrix multiplication in the first code example?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056128" value="0">
+      <span>TensorFlow</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056128" value="1">
+      <span>NumPy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056128" value="2">
+      <span>Pandas</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056128" value="3">
+      <span>Scikit-learn</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What method is used to load data into a DataFrame in the second code example?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056320" value="0">
+      <span>read_excel</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056320" value="1">
+      <span>read_json</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056320" value="2">
+      <span>read_csv</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387056320" value="3">
+      <span>read_html</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-4.ipynb)

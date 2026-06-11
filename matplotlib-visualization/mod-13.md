@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Plotly is a powerful library for creating interactive plots. It allows for more dynamic and engaging visualizations, which can be particularly useful for exploring time series data. With Plotly, you can create plots that respond to user interactions, such as zooming and panning, making it easier to identify patterns and anomalies in your data.
+
+```python title="example2.py"
+import plotly.express as px
+import pandas as pd
+
+# Sample time series data
+data = {'date': ['2023-01-01', '2023-02-01', '2023-03-01', '2023-04-01', '2023-05-01'],
+        'value': [10, 15, 14, 18, 20]}
+df = pd.DataFrame(data)
+df['date'] = pd.to_datetime(df['date'])
+df.set_index('date', inplace=True)
+
+# Creating an interactive plot with Plotly
+fig = px.line(df, x=df.index, y='value', title='Interactive Time Series Data')
+fig.show()
+```
+
+> **💡 Tip:** When working with time series data, always ensure your date column is correctly formatted as a datetime object. This will enable you to utilize various time-based functions and make your visualizations more accurate and meaningful.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary purpose of visualizing time series data?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861760" value="0">
+      <span>To create aesthetically pleasing charts</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861760" value="1">
+      <span>To identify patterns, trends, and seasonality</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861760" value="2">
+      <span>To store data efficiently</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861760" value="3">
+      <span>To perform complex mathematical calculations</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which Python library is known for creating interactive plots?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858688" value="0">
+      <span>Matplotlib</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858688" value="1">
+      <span>Seaborn</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858688" value="2">
+      <span>Plotly</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858688" value="3">
+      <span>Pandas</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/matplotlib-visualization/mod-13.ipynb)

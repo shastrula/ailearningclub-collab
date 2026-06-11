@@ -59,6 +59,105 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Quantization-aware training (QAT) is a technique where the model is trained with quantization effects simulated during the training process. This helps the model learn to be more robust to the quantization errors that will be introduced during inference. QAT typically involves modifying the training loop to include fake quantization operations, which mimic the effects of quantization without actually quantizing the weights and activations.
+
+```python title="example2.py"
+import torch
+import torch.nn as nn
+
+# Define a simple neural network
+class SimpleNN(nn.Module):
+    def __init__(self):
+        super(SimpleNN, self).__init__()
+        self.fc1 = nn.Linear(10, 5)
+        self.fc2 = nn.Linear(5, 2)
+
+    def forward(self, x):
+        x = torch.relu(self.fc1(x))
+        x = torch.relu(self.fc2(x))
+        return x
+
+# Initialize the model
+model = SimpleNN()
+
+# Prepare the model for quantization-aware training
+model.qconfig = torch.quantization.get_default_qat_qconfig('fbgemm')
+torch.quantization.prepare_qat(model, inplace=True)
+
+# Define a simple training loop
+optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+criterion = nn.CrossEntropyLoss()
+
+# Dummy input and target
+input = torch.randn(1, 10)
+target = torch.tensor([1])
+
+# Training step
+optimizer.zero_grad()
+output = model(input)
+loss = criterion(output, target)
+loss.backward()
+optimizer.step()
+
+# Convert the model to quantized version
+torch.quantization.convert(model, inplace=True)
+
+# Print the model
+print(model)
+```
+
+> **💡 Tip:** When performing quantization-aware training, ensure that the calibration dataset is representative of the data distribution the model will encounter during inference to achieve optimal performance.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary goal of model quantization?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950784" value="0">
+      <span>To increase model accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950784" value="1">
+      <span>To reduce model size and computational requirements</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950784" value="2">
+      <span>To improve training speed</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386950784" value="3">
+      <span>To enhance model interpretability</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Which technique is used to train a model to be robust to quantization errors?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386963328" value="0">
+      <span>Post-training quantization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386963328" value="1">
+      <span>Quantization-aware training</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386963328" value="2">
+      <span>Dynamic quantization</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386963328" value="3">
+      <span>Static quantization</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/production-inference/mod-8.ipynb)

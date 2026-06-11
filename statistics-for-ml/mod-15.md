@@ -59,6 +59,82 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Interpreting the results of an A/B test involves looking at the p-value obtained from the statistical test. A low p-value (typically < 0.05) indicates that the observed difference in conversion rates is statistically significant, suggesting that the variant version is indeed better than the control. However, it's also important to consider the practical significance of the results, such as the effect size and business context.
+
+```python title="example2.py"
+import numpy as np
+import scipy.stats as stats
+
+# Example data
+control_conversions = 50
+control_visitors = 500
+variant_conversions = 60
+variant_visitors = 500
+
+# Calculate conversion rates
+control_conversion_rate = control_conversions / control_visitors
+variant_conversion_rate = variant_conversions / variant_visitors
+
+# Calculate effect size (difference in conversion rates)
+effect_size = variant_conversion_rate - control_conversion_rate
+
+print(f'Control Conversion Rate: {control_conversion_rate}')
+print(f'Variant Conversion Rate: {variant_conversion_rate}')
+print(f'Effect Size: {effect_size}')
+```
+
+> **💡 Tip:** Always consider both statistical significance and practical significance when interpreting A/B test results. A statistically significant result may not always be practically significant, especially if the effect size is very small.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What does a low p-value in an A/B test indicate?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191232" value="0">
+      <span>The test is invalid</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191232" value="1">
+      <span>The variant is worse than the control</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191232" value="2">
+      <span>The observed difference is statistically significant</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191232" value="3">
+      <span>The control is always better</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ Why is it important to consider practical significance in addition to statistical significance?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191936" value="0">
+      <span>It is not important</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191936" value="1">
+      <span>It helps determine if the result is meaningful in a real-world context</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191936" value="2">
+      <span>It makes the test more complex</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4387191936" value="3">
+      <span>It is only relevant for large sample sizes</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/statistics-for-ml/mod-15.ipynb)

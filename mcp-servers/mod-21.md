@@ -59,6 +59,77 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+Building AI agent integrations involves creating workflows where AI agents interact with various services and APIs to perform tasks. This can include natural language processing, data analysis, and automated decision-making. Effective integrations require careful planning, robust error handling, and continuous monitoring to ensure optimal performance.
+
+```python title="example2.py"
+import requests
+
+# Define the MCP server endpoint for sentiment analysis
+mcp_endpoint = 'http://localhost:5000/api/sentiment'
+
+# Prepare the input data
+input_data = {'text': 'I love this product!'}
+
+# Send a POST request to the MCP server
+response = requests.post(mcp_endpoint, json=input_data)
+
+# Extract and print the sentiment
+sentiment = response.json().get('sentiment')
+print(sentiment)
+```
+
+> **💡 Tip:** When building AI agent integrations, ensure that you handle potential errors gracefully by implementing retry mechanisms and logging. This will help in maintaining the reliability and robustness of your AI solutions.
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What is the primary function of an MCP server?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858176" value="0">
+      <span>To store data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858176" value="1">
+      <span>To facilitate communication between AI agents and models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858176" value="2">
+      <span>To train machine learning models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386858176" value="3">
+      <span>To deploy AI applications</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz">
+  <p class="font-semibold mb-3">❓ What should you implement to handle potential errors in AI agent integrations?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861376" value="0">
+      <span>Additional training data</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861376" value="1">
+      <span>Retry mechanisms and logging</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861376" value="2">
+      <span>More complex models</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q4386861376" value="3">
+      <span>Frequent model retraining</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mcp-servers/mod-21.ipynb)
