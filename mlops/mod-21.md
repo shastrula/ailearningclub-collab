@@ -109,6 +109,26 @@ features = feature_group.select_all()
 print(features.head())
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of CI/CD in Machine Learning?
+- [ ] To manually deploy models
+- [✓] To automate the integration and deployment of ML models
+- [ ] To store features
+- [ ] To conduct A/B testing
+
+### Quiz 2: What is a Feature Store used for in MLOps?
+- [ ] Storing raw data
+- [ ] Automating model training
+- [✓] Centralizing and versioning machine learning features
+- [ ] Deploying models to production
+
+### Quiz 3: Which company uses a Feature Store to manage features for its ride-hailing platform?
+- [ ] Netflix
+- [ ] Amazon
+- [✓] Uber
+- [ ] Google
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-21.ipynb)

@@ -122,6 +122,28 @@ loss = criterion(output, target)
 print(f'Loss after one step: {loss.item()}')
 ```
 
+
+## Quiz
+
+### **Quiz 1: What is the primary function of the forget gate in an LSTM cell?**
+- [ ] To decide what information to keep
+- [✓] To decide what information to discard
+- [ ] To decide what information to update
+- [ ] To decide what information to ignore
+
+### **Quiz 2: Which of the following is a common issue that LSTMs help mitigate?**
+- [ ] Overfitting
+- [✓] Vanishing gradients
+- [ ] Exploding gradients
+- [ ] Underfitting
+
+### **Quiz 3: In the context of LSTM networks, what does the cell state carry throughout the chain of LSTM cells?**
+- [ ] Only the latest hidden state
+- [✓] Relevant information throughout the sequence
+- [ ] Random noise
+- [ ] Unimportant data
+
+By understanding the architecture and functionality of LSTM networks, you can apply them to various sequential data problems, enhancing the performance and accuracy of your deep learning models.
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-12.ipynb)

@@ -106,6 +106,26 @@ input_ids = tokenizer.convert_tokens_to_ids(tokens)
 print(input_ids)
 ```
 
+
+## Quiz
+
+### Quiz 1: What does the token '[CLS]' represent in BERT tokenization?
+- [ ] Start of the sentence
+- [✓] Special token for classification tasks
+- [ ] End of the sentence
+- [ ] Padding token
+
+### Quiz 2: What is the purpose of the token '[SEP]' in tokenization?
+- [ ] To indicate the beginning of a sentence
+- [✓] To separate different sentences or inputs
+- [ ] To mask certain tokens during training
+- [ ] To represent padding in the input
+
+### Quiz 3: Which type of tokenization is used to handle out-of-vocabulary words more effectively?
+- [ ] Word Tokenization
+- [✓] Subword Tokenization
+- [ ] Character Tokenization
+- [ ] Sentence Tokenization
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-6.ipynb)

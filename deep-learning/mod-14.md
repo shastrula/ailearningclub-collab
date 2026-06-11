@@ -120,6 +120,26 @@ for epoch in range(num_epochs):
     print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What are the two main components of an autoencoder?
+- [ ] Input and Output
+- [✓] Encoder and Decoder
+- [ ] Hidden and Visible
+- [ ] Generator and Discriminator
+
+### Quiz 2: Which loss function is commonly used to train autoencoders?
+- [ ] Cross-Entropy Loss
+- [✓] Mean Squared Error
+- [ ] Hinge Loss
+- [ ] Kullback-Leibler Divergence
+
+### Quiz 3: What is a common application of autoencoders in image processing?
+- [ ] Classifying images
+- [✓] Dimensionality reduction
+- [ ] Generating new images
+- [ ] Detecting objects in images
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-14.ipynb)

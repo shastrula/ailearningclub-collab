@@ -96,6 +96,28 @@ print("\n--- Final Output ---")
 print(result)
 ```
 
+
+## Quiz
+
+Test your understanding of the core concepts of AI Agents.
+
+### Quiz 1: What is the defining characteristic that separates an AI Agent from a standard, passive LLM?
+- [ ] An agent uses a much larger neural network than a standard LLM.
+- [ ] An agent can generate images as well as text.
+- [✓] An agent can actively perceive its environment, formulate a plan, use tools, and take actions to achieve a goal.
+- [ ] An agent requires a human to manually execute all of its planned steps.
+
+### Quiz 2: In the ReAct framework, what does the agent do immediately after executing an action (like calling an API)?
+- [ ] It formulates a final answer and stops.
+- [✓] It makes an "Observation" of the result from the tool to decide its next "Thought" or step.
+- [ ] It automatically calls a secondary tool to verify the first tool's result.
+- [ ] It asks the user for permission to continue.
+
+### Quiz 3: Why might you equip an AI agent with a "Calculator" tool instead of just relying on the LLM's internal knowledge to do math?
+- [ ] LLMs are incapable of generating numbers in their output.
+- [ ] A calculator tool makes the LLM run faster.
+- [✓] LLMs are text prediction engines and often hallucinate or make errors on complex mathematical calculations; a specialized tool ensures accuracy.
+- [ ] It is a strict requirement of the LangChain framework to include a calculator in every agent.
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-1.ipynb)

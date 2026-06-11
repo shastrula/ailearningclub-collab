@@ -101,6 +101,30 @@ torch.save(model.state_dict(), 'model_checkpoint.pth')
 model.load_state_dict(torch.load('model_checkpoint.pth'))
 ```
 
+
+## Quiz
+
+In production environments, especially in companies like Google and Facebook, model checkpoints are crucial. These companies often train models on massive datasets that can take weeks to process. By saving checkpoints, they can resume training if there are any interruptions, ensuring that valuable computation time is not wasted.
+
+### Interactive Quizzes
+
+### Quiz 1: What is the primary purpose of defining a custom loss function in PyTorch?
+- [ ] To perform data preprocessing
+- [✓] To define specific loss metrics tailored to your problem
+- [ ] To visualize the training process
+- [ ] To load pre-trained models
+
+### Quiz 2: Which function is used to save a PyTorch model checkpoint?
+- [ ] torch.train
+- [✓] torch.save
+- [ ] model.save
+- [ ] torch.load
+
+### Quiz 3: Why is it important to ensure the model architecture remains the same when loading a saved model checkpoint?
+- [ ] To improve model accuracy
+- [✓] To avoid dimension mismatches
+- [ ] To speed up the loading process
+- [ ] To reduce memory usage
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-17.ipynb)

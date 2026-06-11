@@ -133,6 +133,26 @@ results = hybrid_search(query, documents)
 print(results)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of using embeddings in LangChain?
+- [ ] To increase computational speed
+- [✓] To capture semantic meaning of text
+- [ ] To reduce memory usage
+- [ ] To enhance graphical user interfaces
+
+### Quiz 2: What is the main goal of reranking in text processing?
+- [ ] To increase the length of text
+- [✓] To reorder search results based on relevance
+- [ ] To convert text into numerical form
+- [ ] To improve the graphical representation of text
+
+### Quiz 3: What does hybrid search combine to provide more accurate results?
+- [✓] Keyword-based search and semantic search
+- [ ] Only keyword-based search
+- [ ] Only semantic search
+- [ ] Graphical and numerical search methods
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-8.ipynb)

@@ -59,6 +59,26 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+### Quiz 1: What does merging do?
+- [ ] Deletes the old branch
+- [✓] Combines changes from one branch into another
+- [ ] Creates a new branch
+- [ ] Undoes all changes
+
+### Quiz 2: What is the primary difference between merging and rebasing?
+- [ ] Merging is safer, rebasing is faster
+- [✓] Merging preserves history, rebasing creates a linear history
+- [ ] Merging is used for local branches, rebasing for shared branches
+- [ ] Merging rewrites history, rebasing preserves it
+
+### Quiz 3: When should you use rebasing?
+- [ ] When collaborating with a team on a shared branch
+- [✓] Before pushing local changes to a remote repository
+- [ ] When you want to preserve a complex merge history
+- [ ] When you need to delete a branch
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-11.ipynb)

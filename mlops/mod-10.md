@@ -55,6 +55,26 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of Kubeflow?
+- [ ] To manage Kubernetes clusters
+- [✓] To simplify ML workflows on Kubernetes
+- [ ] To deploy microservices
+- [ ] To monitor network traffic
+
+### Quiz 2: Which command is used to compile a Kubeflow pipeline?
+- [ ] kfp.run_pipeline()
+- [ ] kfp.compile_pipeline()
+- [✓] kfp.compiler.Compiler().compile()
+- [ ] kfp.deploy_pipeline()
+
+### Quiz 3: What is Kubeflow Fairing used for?
+- [ ] Managing Kubernetes clusters
+- [✓] Running local Python code on Kubernetes
+- [ ] Deploying microservices
+- [ ] Monitoring network traffic
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-10.ipynb)

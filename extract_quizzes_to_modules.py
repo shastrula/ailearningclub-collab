@@ -24,7 +24,7 @@ def remove_answer_from_quiz(quiz_html):
     return re.sub(r' data-correct="\d+"', '', quiz_html)
 
 def insert_quiz_to_module(md_path, quiz_html):
-    """Insert quiz into markdown module before ## Practice in Notebook section."""
+    """Insert quiz into markdown module before ## Practice in Notebook or at end."""
     with open(md_path) as f:
         content = f.read()
     
@@ -32,13 +32,15 @@ def insert_quiz_to_module(md_path, quiz_html):
     if '## Quiz' in content or '<div class="quiz"' in content:
         return False
     
-    # Find insertion point
-    match = re.search(r'(## Practice in Notebook|## Next Steps|$)', content)
-    if not match:
-        return False
+    # Find insertion point: before Practice section or at end
+    match = re.search(r'(## Practice in Notebook|## Next Steps)', content)
+    if match:
+        insert_pos = match.start()
+    else:
+        insert_pos = len(content)
     
     quiz_section = f"\n## Quiz\n\n{quiz_html}\n"
-    new_content = content[:match.start()] + quiz_section + content[match.start():]
+    new_content = content[:insert_pos] + quiz_section + content[insert_pos:]
     
     with open(md_path, 'w') as f:
         f.write(new_content)

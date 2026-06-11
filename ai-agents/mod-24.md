@@ -113,6 +113,26 @@ actions = graph.run(state)
 print(f'Actions taken: {actions}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of the ReAct framework?
+- [ ] Data visualization
+- [ ] Symbolic reasoning
+- [ ] Sub-symbolic reasoning
+- [✓] Both symbolic and sub-symbolic reasoning
+
+### Quiz 2: What does LangGraph primarily facilitate?
+- [ ] Single-agent decision-making
+- [ ] Data storage
+- [✓] Multi-agent interactions
+- [ ] Network security
+
+### Quiz 3: Which real-world application uses the ReAct framework?
+- [ ] Social media analytics
+- [✓] Autonomous vehicles
+- [ ] Financial forecasting
+- [ ] Weather prediction
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-24.ipynb)

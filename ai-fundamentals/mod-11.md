@@ -153,6 +153,26 @@ output, _ = model(X.unsqueeze(0), hidden)
 print(output)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of using Recurrent Neural Networks over traditional neural networks?
+- [ ] They require less computational power
+- [✓] They can process sequences of inputs
+- [ ] They are easier to train
+- [ ] They have fewer parameters
+
+### Quiz 2: Which type of RNN is specifically designed to handle long-term dependencies effectively?
+- [ ] Simple RNN
+- [ ] Gated Recurrent Unit (GRU)
+- [✓] Long Short-Term Memory (LSTM)
+- [ ] Convolutional RNN
+
+### Quiz 3: What mechanism do LSTMs use to regulate the flow of information?
+- [ ] Backpropagation
+- [✓] Gating mechanism
+- [ ] Dropout
+- [ ] Batch normalization
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-11.ipynb)

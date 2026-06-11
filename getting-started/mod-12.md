@@ -59,6 +59,26 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of a Pull Request?
+- [ ] To merge changes without review
+- [✓] To propose and review changes before merging
+- [ ] To delete branches
+- [ ] To create new repositories
+
+### Quiz 2: Why is it recommended to keep Pull Requests small?
+- [ ] To make them easier to ignore
+- [✓] To make them easier to review and provide faster feedback
+- [ ] To complicate the review process
+- [ ] To increase the number of Pull Requests
+
+### Quiz 3: What should you do after making changes in response to a review comment?
+- [ ] Delete the branch
+- [✓] Commit and push the changes to the same branch
+- [ ] Create a new Pull Request
+- [ ] Ignore the comments
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-12.ipynb)

@@ -143,6 +143,26 @@ plt.title('Feature Importances')
 plt.show()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is bias in AI?
+- [ ] A random error in predictions
+- [✓] A systematic error in predictions
+- [ ] A method to improve model accuracy
+- [ ] A technique for data preprocessing
+
+### Quiz 2: What does transparency in AI involve?
+- [✓] Making the decision-making processes understandable
+- [ ] Increasing model complexity
+- [ ] Reducing model accuracy
+- [ ] Hiding the decision-making processes
+
+### Quiz 3: Which regulation mandates transparency in AI decision-making processes?
+- [ ] HIPAA
+- [✓] GDPR
+- [ ] CCPA
+- [ ] COPPA
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-22.ipynb)

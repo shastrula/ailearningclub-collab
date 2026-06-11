@@ -141,6 +141,41 @@ print(f'Recall: {recall}')
 print(f'F1 Score: {f1}')
 ```
 
+
+## Quiz
+
+Evaluating the performance of a deep learning model is essential to ensure it generalizes well to unseen data.
+
+### Metrics for Evaluation
+
+- **Accuracy:** The proportion of correct predictions out of the total number of predictions.
+- **Precision and Recall:** Precision is the ratio of true positive predictions to the total predicted positives. Recall is the ratio of true positive predictions to the total actual positives.
+- **F1 Score:** The harmonic mean of precision and recall, providing a balance between the two.
+
+### PyTorch Implementation
+
+
+
+**Real-World Case Study:** 
+In medical diagnosis, models are evaluated using precision and recall to ensure they accurately identify diseases while minimizing false positives and negatives.
+
+### Quiz 1: Which loss function is commonly used for regression tasks in PyTorch?
+- [ ] Cross-Entropy Loss
+- [✓] Mean Squared Error
+- [ ] Binary Cross-Entropy Loss
+- [ ] Hinge Loss
+
+### Quiz 2: Which optimizer is known for its adaptive learning rates in PyTorch?
+- [ ] SGD
+- [✓] Adam
+- [ ] RMSprop
+- [ ] Adagrad
+
+### Quiz 3: What metric is used to evaluate the proportion of correct predictions out of the total number of predictions?
+- [✓] Accuracy
+- [ ] Precision
+- [ ] Recall
+- [ ] F1 Score
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-6.ipynb)

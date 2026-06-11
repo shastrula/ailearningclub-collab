@@ -117,6 +117,26 @@ plt.title('Customer Segments')
 plt.show()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary goal of predictive maintenance in manufacturing?
+- [ ] To increase production speed
+- [✓] To predict equipment failures before they occur
+- [ ] To reduce the cost of raw materials
+- [ ] To enhance product quality
+
+### Quiz 2: Which machine learning algorithm is commonly used for customer segmentation?
+- [ ] Linear Regression
+- [✓] K-Means Clustering
+- [ ] Decision Trees
+- [ ] Naive Bayes
+
+### Quiz 3: Why is customer segmentation important in retail?
+- [ ] To reduce inventory costs
+- [✓] To enable targeted marketing and personalized services
+- [ ] To increase the number of customers
+- [ ] To reduce customer complaints
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-21.ipynb)

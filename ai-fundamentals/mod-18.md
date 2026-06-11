@@ -98,6 +98,28 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the purpose of model serialization in deploying a machine learning application?
+- [ ] To improve model accuracy
+- [✓] To save the trained model for later use
+- [ ] To visualize the model
+- [ ] To retrain the model with new data
+
+### Quiz 2: Which Python library is used in the example to create a web API for the machine learning model?
+- [ ] Django
+- [ ] TensorFlow
+- [✓] Flask
+- [ ] Keras
+
+### Quiz 3: Why is it important to reshape the input data in the Flask API example?
+- [✓] To match the model’s input requirements
+- [ ] To improve model accuracy
+- [ ] To save memory
+- [ ] To visualize the data
+
+By following these steps and considerations, you can effectively deploy your machine learning models into production, making them accessible and usable for various applications.
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-18.ipynb)

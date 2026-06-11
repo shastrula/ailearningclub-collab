@@ -108,6 +108,26 @@ cm = confusion_matrix(data['target'], predictions)
 print(cm)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is a critical step in model deployment?
+- [ ] Data preprocessing
+- [✓] Saving the model
+- [ ] Model training
+- [ ] Feature engineering
+
+### Quiz 2: Which ethical consideration involves making AI decisions understandable?
+- [ ] Fairness
+- [✓] Transparency
+- [ ] Accountability
+- [ ] Privacy
+
+### Quiz 3: Why is continuous monitoring important in model deployment?
+- [ ] To ensure the model is trained on new data
+- [✓] To ensure the model remains accurate and relevant
+- [ ] To improve the model's complexity
+- [ ] To reduce the model's size
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-14.ipynb)

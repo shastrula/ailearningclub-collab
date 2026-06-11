@@ -130,6 +130,26 @@ print(f"Original data point: {data_point}")
 print(f"Noisy data point: {noisy_data_point}")
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of encrypting data in a vector database?
+- [ ] To improve query performance
+- [✓] To protect sensitive data
+- [ ] To reduce storage space
+- [ ] To enhance data visualization
+
+### Quiz 2: Which authentication method adds an extra layer of security by requiring multiple forms of verification?
+- [ ] Single-factor authentication
+- [✓] Two-factor authentication
+- [ ] Password-only authentication
+- [ ] Biometric authentication
+
+### Quiz 3: What is the main goal of applying differential privacy in a RAG system?
+- [ ] To improve model accuracy
+- [✓] To protect individual data points from being inferred
+- [ ] To reduce computational cost
+- [ ] To enhance user experience
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-16.ipynb)

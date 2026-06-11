@@ -93,6 +93,26 @@ filtered_tokens = [word for word in tokens if word.lower() not in stop_words]
 print(filtered_tokens)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of tokenization in NLP?
+- [ ] To translate text
+- [✓] To break text into smaller units
+- [ ] To generate text
+- [ ] To correct spelling errors
+
+### Quiz 2: Why are stop words typically removed from text data in NLP?
+- [ ] To increase text length
+- [✓] To focus on meaningful words
+- [ ] To improve text readability
+- [ ] To add context to the text
+
+### Quiz 3: Which library is commonly used for tokenization and stop words removal in Python?
+- [ ] Pandas
+- [✓] NLTK
+- [ ] Scikit-learn
+- [ ] TensorFlow
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-12.ipynb)

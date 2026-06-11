@@ -103,6 +103,26 @@ trainer = Trainer(
 trainer.train()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of using transformers over traditional RNNs?
+- [ ] They are simpler to implement
+- [✓] They can process input data in parallel
+- [ ] They require less computational resources
+- [ ] They can only handle short sequences
+
+### Quiz 2: What is the purpose of fine-tuning a pre-trained model?
+- [ ] To reduce the amount of training data required
+- [✓] To adapt the model to a new task
+- [ ] To improve the model's accuracy on the original task
+- [ ] To make the model more complex
+
+### Quiz 3: Which of the following is a real-world application of transformer models?
+- [ ] Image classification
+- [✓] Sentiment analysis
+- [ ] Object detection
+- [ ] Speech recognition
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-7.ipynb)

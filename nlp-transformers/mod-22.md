@@ -145,6 +145,26 @@ trainer = Trainer(
 trainer.train()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is one common technique to mitigate overfitting during fine-tuning?
+- [ ] Increasing the learning rate
+- [✓] Using early stopping
+- [ ] Increasing the number of epochs indefinitely
+- [ ] Reducing the batch size
+
+### Quiz 2: Which argument in the TrainingArguments class is used to load the best model at the end of training?
+- [ ] best_model_at_end
+- [✓] load_best_model_at_end
+- [ ] load_model_at_end
+- [ ] save_best_model
+
+### Quiz 3: Why is fine-tuning BERT for domain-specific tasks important?
+- [ ] To increase the model size
+- [✓] To improve performance on specialized tasks
+- [ ] To reduce training time
+- [ ] To use less memory
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-22.ipynb)

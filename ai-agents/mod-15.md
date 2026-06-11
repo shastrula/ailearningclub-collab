@@ -114,6 +114,26 @@ result = graph.run('initial_input')
 print(result)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of the ReAct framework?
+- [ ] Data storage
+- [✓] Complex task automation
+- [ ] User interface design
+- [ ] Network security
+
+### Quiz 2: What does LangGraph primarily facilitate in AI systems?
+- [ ] Single-agent decision making
+- [ ] Data encryption
+- [✓] Multi-agent collaboration
+- [ ] Graphical user interfaces
+
+### Quiz 3: Which of the following is a benefit of using the ReAct framework?
+- [ ] Enhanced graphical capabilities
+- [✓] Adaptability to changing conditions
+- [ ] Improved network security
+- [ ] Increased data storage capacity
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-15.ipynb)

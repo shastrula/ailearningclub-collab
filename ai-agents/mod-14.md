@@ -164,6 +164,26 @@ output = graph.run()
 print(output)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of the ReAct framework?
+- [ ] To enhance graphical user interfaces
+- [✓] To enable AI agents to reason and act
+- [ ] To manage database transactions
+- [ ] To perform network security tasks
+
+### Quiz 2: What does LangGraph primarily facilitate in AI systems?
+- [ ] Single-agent decision making
+- [✓] Multi-agent interactions and collaborations
+- [ ] Data encryption
+- [ ] User authentication
+
+### Quiz 3: How do memory mechanisms benefit AI agents?
+- [ ] By enhancing graphical user interfaces
+- [✓] By allowing agents to retain information about past interactions and decisions
+- [ ] By managing database transactions
+- [ ] By performing network security tasks
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-14.ipynb)

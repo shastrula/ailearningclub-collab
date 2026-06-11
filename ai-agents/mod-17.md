@@ -159,6 +159,26 @@ result = graph.run({'input': 'Initial data'})
 print(result)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of the ReAct framework?
+- [ ] To perform random actions
+- [✓] To reason before acting
+- [ ] To store data
+- [ ] To visualize data
+
+### Quiz 2: What does LangGraph enable in multi-agent systems?
+- [ ] Single-agent decision making
+- [ ] Data storage
+- [✓] Complex workflows and interactions
+- [ ] Data visualization
+
+### Quiz 3: How does memory in AI agents improve their performance?
+- [ ] By storing random data
+- [✓] By retaining information from past interactions to inform future decisions
+- [ ] By visualizing data
+- [ ] By performing random actions
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-17.ipynb)

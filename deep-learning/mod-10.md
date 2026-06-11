@@ -144,6 +144,26 @@ for epoch in range(2):  # loop over the dataset multiple times
         print(f'Epoch {epoch+1}, Batch {i+1}, Loss: {loss.item()}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of using transfer learning?
+- [ ] It requires no pre-trained models.
+- [✓] It leverages knowledge from pre-trained models.
+- [ ] It always results in faster training.
+- [ ] It does not require any fine-tuning.
+
+### Quiz 2: Which layers are typically unfrozen during fine-tuning?
+- [ ] All layers.
+- [ ] Only the input layers.
+- [ ] Only the output layer.
+- [✓] The last few layers and the output layer.
+
+### Quiz 3: Why might you choose to freeze some layers during transfer learning?
+- [ ] To increase the model's complexity.
+- [✓] To prevent overfitting and leverage pre-trained features.
+- [ ] To make the training process faster.
+- [ ] To avoid any form of adaptation to new data.
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-10.ipynb)

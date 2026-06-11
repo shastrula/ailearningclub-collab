@@ -179,6 +179,26 @@ for epoch in range(5):  # loop over the dataset multiple times
         optimizer.step()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of using CNNs for image classification?
+- [ ] They require less computational power
+- [✓] They can automatically learn spatial hierarchies of features
+- [ ] They are easier to implement than other models
+- [ ] They can handle sequential data efficiently
+
+### Quiz 2: Which of the following is a key feature of RNNs that makes them suitable for sequential data?
+- [ ] They use convolutional layers
+- [✓] They maintain memory through hidden states
+- [ ] They are faster to train than CNNs
+- [ ] They require less data to achieve good performance
+
+### Quiz 3: Which application is a prominent use case for CNNs?
+- [✓] Facial recognition
+- [ ] Sentiment analysis
+- [ ] Time-series prediction
+- [ ] Language translation
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-22.ipynb)

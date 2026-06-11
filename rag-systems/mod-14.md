@@ -101,6 +101,86 @@ f1 = f1_score(ground_truth, predictions)
 print(f"F1 Score: {f1}")
 ```
 
+
+## Quiz
+
+### 1. Introduction to RAG Systems
+
+**Retrieval-Augmented Generation (RAG)** systems combine retrieval-based and generative approaches to provide more accurate and contextually relevant responses. These systems first retrieve relevant documents or passages from a corpus and then use this information to generate a response.
+
+### 2. Evaluation Metrics
+
+#### a. **Accuracy**
+
+**Why it matters:** Measures how often the RAG system provides correct answers.
+
+**How to calculate:** 
+\[ \text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}} \]
+
+#### b. **Precision and Recall**
+
+**Why they matter:** Precision measures the proportion of relevant instances among the retrieved instances, while recall measures the proportion of relevant instances that were retrieved.
+
+**How to calculate:**
+\[ \text{Precision} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}} \]
+\[ \text{Recall} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}} \]
+
+#### c. **F1 Score**
+
+**Why it matters:** Harmonic mean of precision and recall, providing a single metric that balances both.
+
+**How to calculate:**
+\[ \text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} \]
+
+#### d. **BLEU Score**
+
+**Why it matters:** Specifically used for evaluating the quality of text which has been machine-translated from one language to another.
+
+**How to calculate:** Compares n-grams between the candidate translation and the reference translation.
+
+### 3. Real-World Case Studies
+
+#### a. **Amazon Alexa**
+
+Amazon Alexa uses RAG systems to provide accurate and contextually relevant answers to user queries. By retrieving relevant information from a vast corpus and generating coherent responses, Alexa enhances user experience.
+
+#### b. **Microsoft Bing**
+
+Microsoft Bing employs RAG systems to improve search query responses. The system retrieves relevant web pages and generates summaries or answers, making the search experience more efficient and accurate.
+
+### 4. Hands-On Code Examples
+
+#### a. Calculating Accuracy
+
+
+
+#### b. Calculating Precision and Recall
+
+
+
+#### c. Calculating F1 Score
+
+
+
+### Check Your Understanding
+
+### Quiz 1: What is the primary purpose of using accuracy as an evaluation metric in RAG systems?
+- [ ] To measure the system's ability to handle large datasets
+- [✓] To determine how often the system provides correct answers
+- [ ] To evaluate the system's response time
+- [ ] To assess the system's ability to retrieve relevant documents
+
+### Quiz 2: Which metric is a harmonic mean of precision and recall?
+- [ ] BLEU Score
+- [✓] F1 Score
+- [ ] Accuracy
+- [ ] Precision
+
+### Quiz 3: In which real-world application is a RAG system used to enhance user experience by providing accurate and contextually relevant answers?
+- [✓] Amazon Alexa
+- [ ] Google Translate
+- [ ] Facebook Messenger
+- [ ] Twitter
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-14.ipynb)

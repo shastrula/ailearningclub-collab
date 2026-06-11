@@ -138,6 +138,26 @@ class Net(nn.Module):
 net = Net().to(device)
 ```
 
+
+## Quiz
+
+### Quiz 1: How do you check if CUDA is available in PyTorch?
+- [ ] torch.is_cuda_available()
+- [✓] torch.cuda.is_available()
+- [ ] torch.cuda.available()
+- [ ] torch.is_available_cuda()
+
+### Quiz 2: What method do you use to move a tensor to the GPU in PyTorch?
+- [ ] .to_gpu()
+- [ ].cuda()
+- [✓] .to(device)
+- [ ].move_to_gpu()
+
+### Quiz 3: Why is it important to move both your model and data to the same device (CPU or GPU)?
+- [ ] It improves model accuracy.
+- [✓] It avoids errors during computation.
+- [ ] It reduces memory usage.
+- [ ] It speeds up data loading.
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-18.ipynb)

@@ -113,6 +113,48 @@ trainer = Trainer(
 trainer.train()
 ```
 
+
+## Quiz
+
+### Why Fine-tune?
+
+Fine-tuning large language models (LLMs) on specific tasks allows for the customization of models to better suit particular industry needs. This process involves training a pre-existing model on a new dataset to adapt it to a specific task, such as sentiment analysis for product reviews or intent recognition for customer service queries.
+
+### Real-World Case Study: Fine-tuning for Sentiment Analysis
+
+A retail company might fine-tune a BERT model to analyze customer reviews. By training the model on a dataset of product reviews, the company can automatically classify each review as positive, negative, or neutral. This helps them quickly gauge customer sentiment and make data-driven decisions.
+
+### Hands-On Example: Fine-tuning BERT for Sentiment Analysis
+
+Below is a Python code example that demonstrates how to fine-tune a BERT model for sentiment analysis using the HuggingFace `transformers` library.
+
+
+
+**Explanation:**
+- **Line 1-2:** Import necessary modules from the `transformers` and `datasets` libraries.
+- **Line 5:** Load the IMDb dataset for sentiment analysis.
+- **Line 8:** Load a pre-trained BERT model for sequence classification.
+- **Line 11-19:** Define the training arguments, including the output directory, number of training epochs, batch sizes, and logging directory.
+- **Line 22-26:** Initialize the `Trainer` with the model, training arguments, and datasets.
+- **Line 29:** Start the training process.
+
+### Quiz 1: What is the primary advantage of using BERT in NLP tasks?
+- [ ] It uses unidirectional context
+- [✓] It can understand the entire context of a word
+- [ ] It requires less computational power
+- [ ] It is faster to train
+
+### Quiz 2: What does the HuggingFace Transformers library facilitate?
+- [ ] Data collection
+- [ ] Model deployment
+- [✓] Fine-tuning of LLMs
+- [ ] Real-time NLP processing
+
+### Quiz 3: Which industry application can benefit from fine-tuning BERT for sentiment analysis?
+- [✓] Retail
+- [ ] Manufacturing
+- [ ] Construction
+- [ ] Agriculture
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-21.ipynb)

@@ -110,6 +110,26 @@ ranked_chunks = [chunk for _, chunk in sorted(
 print("Top chunk:", ranked_chunks[0])
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of using embeddings in a RAG system?
+- [ ] To store data in a relational format
+- [✓] To capture semantic meaning for similarity searches
+- [ ] To encrypt data for security
+- [ ] To compress data for storage
+
+### Quiz 2: Why is reranking important in a RAG system?
+- [ ] To increase the storage capacity
+- [✓] To ensure the most relevant chunks are presented first
+- [ ] To reduce computational overhead
+- [ ] To enhance the visual appeal of the output
+
+### Quiz 3: How does chunking help in managing large documents?
+- [✓] By breaking them down into smaller, manageable pieces
+- [ ] By increasing the document's complexity
+- [ ] By encrypting the document
+- [ ] By reducing the document's relevance
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-20.ipynb)

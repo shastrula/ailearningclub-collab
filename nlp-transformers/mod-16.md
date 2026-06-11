@@ -119,6 +119,26 @@ trainer = Trainer(
 trainer.train()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of using BERT for NLP tasks?
+- [ ] It uses unidirectional context
+- [✓] It understands bidirectional context
+- [ ] It requires less computational power
+- [ ] It is easier to implement from scratch
+
+### Quiz 2: What is the purpose of fine-tuning a pre-trained BERT model?
+- [ ] To reduce computational requirements
+- [✓] To adapt the model to a specific task
+- [ ] To increase the model's size
+- [ ] To make the model more generic
+
+### Quiz 3: Which dataset is used in the fine-tuning example provided?
+- [✓] IMDB
+- [ ] Twitter
+- [ ] Amazon Reviews
+- [ ] Yelp
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-16.ipynb)

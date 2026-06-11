@@ -105,6 +105,71 @@ ranked_chunks = sorted(zip(chunks, similarities), key=lambda x: x[1], reverse=Tr
 print('Reranked chunks:', ranked_chunks)
 ```
 
+
+## Quiz
+
+This module delves into the intricacies of Retrieval-Augmented Generation (RAG) systems, focusing on vector databases, embeddings, chunking, reranking, LangChain, and hybrid search. Understanding these concepts is crucial for developing advanced Q&A systems that can retrieve and generate relevant information effectively.
+
+### Vector Databases and Embeddings
+
+**Vector Databases:** Vector databases store data in a vectorized form, allowing for efficient similarity searches. Unlike traditional databases that store data in tabular forms, vector databases use multi-dimensional vectors to represent data. This allows for quick and efficient retrieval of similar items based on their vector representations.
+
+**Embeddings:** Embeddings are vector representations of data, typically text, that capture semantic meaning. By converting text into embeddings, we can perform semantic searches, enabling more accurate retrieval of relevant information. 
+
+**Why Use Embeddings?** Embeddings allow us to capture the semantic meaning of text in a dense vector space. This means that semantically similar texts will have similar vector representations, enabling efficient similarity searches.
+
+**How to Create Embeddings:** We use pre-trained models like SentenceTransformers to convert text into embeddings. These models are trained on large corpora and can capture complex semantic relationships between words and phrases.
+
+
+
+**Real-World Case Study:** 
+Netflix uses vector databases and embeddings to recommend movies and TV shows to users. By embedding user reviews and movie descriptions, Netflix can find semantically similar content, improving the accuracy of its recommendations.
+
+### Chunking and Reranking
+
+**Chunking:** Chunking involves breaking down large documents into smaller, manageable pieces called chunks. This makes the retrieval process more efficient and allows for better management of large datasets.
+
+**Why Chunking?** Chunking helps in managing large documents by breaking them into smaller, semantically coherent pieces. This improves the efficiency of the retrieval process and allows for more accurate matching of queries to document segments.
+
+**How to Implement Chunking:** We can use simple text splitting methods or more advanced techniques like NLP-based chunking to ensure semantic coherence.
+
+**Reranking:** Reranking is the process of reordering the retrieved chunks based on their relevance to the query. This is often done using machine learning models to improve the accuracy of the results.
+
+**Why Reranking?** Initial retrieval methods might not always return the most relevant results. Reranking helps in fine-tuning the results by considering the context and relevance of each chunk to the query.
+
+**How to Implement Reranking:** We can use TF-IDF vectorization and cosine similarity to rerank chunks based on their relevance to the query.
+
+
+
+**Real-World Case Study:** 
+Amazon uses chunking and reranking to improve its product search results. By breaking down product descriptions into chunks and reranking them based on user queries, Amazon can provide more relevant search results, enhancing the user experience.
+
+### Key Concepts
+
+- **Vector Databases:** Store data in vectorized form for efficient similarity searches.
+- **Embeddings:** Vector representations of text that capture semantic meaning.
+- **Chunking:** Breaking down large documents into smaller, manageable pieces.
+- **Reranking:** Reordering retrieved chunks based on their relevance to the query.
+
+### Check Your Understanding
+
+### Quiz 1: What is the primary purpose of using embeddings in a vector database?
+- [ ] To store data in a human-readable format
+- [✓] To enable efficient similarity searches
+- [ ] To compress data for storage
+- [ ] To encrypt data for security
+
+### Quiz 2: What is the goal of reranking in the context of RAG systems?
+- [ ] To increase the size of retrieved chunks
+- [✓] To reorder retrieved chunks based on relevance
+- [ ] To remove chunks that are too short
+- [ ] To convert chunks into embeddings
+
+### Quiz 3: Why is chunking important in RAG systems?
+- [ ] To increase the complexity of the retrieval process
+- [✓] To break down large documents into smaller, manageable pieces
+- [ ] To reduce the accuracy of the results
+- [ ] To store data in a non-vectorized form
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-23.ipynb)

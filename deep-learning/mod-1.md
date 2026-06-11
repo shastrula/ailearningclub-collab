@@ -55,6 +55,28 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+Test your understanding of the core concepts.
+
+### Quiz 1: What is the primary function of an activation function in a neural network?
+- [ ] To compute the weighted sum of inputs and scale them to zero.
+- [✓] To introduce non-linearity, allowing the network to learn complex, non-linear patterns.
+- [ ] To update the weights during the backpropagation step.
+- [ ] To normalize the input data before it enters the first layer.
+
+### Quiz 2: During the training process, what is the specific role of Backpropagation?
+- [ ] It calculates the final prediction of the neural network.
+- [✓] It computes the gradients of the loss function with respect to the network's weights, indicating how they should be updated.
+- [ ] It randomly initializes the weights and biases of the hidden layers.
+- [ ] It measures the total error between the prediction and the ground truth.
+
+### Quiz 3: Why do Deep Learning models often outperform traditional Machine Learning models on complex tasks like image recognition?
+- [ ] Deep learning models require significantly less data to train.
+- [✓] Deep learning models can automatically discover and learn complex features from raw data, bypassing manual feature engineering.
+- [ ] Deep learning models only use linear equations, making them mathematically simpler.
+- [ ] Deep learning models do not require an optimization algorithm.
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-1.ipynb)

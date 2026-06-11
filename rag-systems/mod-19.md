@@ -107,6 +107,26 @@ ranked_chunks = rerank_chunks(chunks)
 print(ranked_chunks)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of using embeddings in a RAG system?
+- [ ] To store data in a relational database
+- [✓] To capture semantic meaning and perform semantic search
+- [ ] To encrypt data for security
+- [ ] To compress data for storage
+
+### Quiz 2: What is the goal of reranking in a RAG system?
+- [ ] To increase the size of retrieved chunks
+- [✓] To reorder retrieved chunks based on relevance
+- [ ] To delete irrelevant chunks
+- [ ] To merge chunks into a single document
+
+### Quiz 3: Which of the following is a benefit of using LangChain in a RAG system?
+- [ ] It provides a graphical user interface
+- [✓] It offers tools for text generation, summarization, and question answering
+- [ ] It reduces the need for vector databases
+- [ ] It simplifies database management
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-19.ipynb)

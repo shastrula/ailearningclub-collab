@@ -143,6 +143,26 @@ sorted_results = sorted(combined_scores.items(), key=lambda x: x[1], reverse=Tru
 print(sorted_results)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of using vector search over keyword search?
+- [ ] It requires less computational resources
+- [✓] It understands context and relationships between words
+- [ ] It is faster for large datasets
+- [ ] It does not require any preprocessing
+
+### Quiz 2: Which method is better suited for retrieving documents containing specific terms?
+- [ ] Vector search
+- [✓] Keyword search
+- [ ] Hybrid search
+- [ ] LangChain
+
+### Quiz 3: How can you combine vector and keyword search effectively?
+- [ ] Use vector search alone
+- [ ] Use keyword search alone
+- [✓] Use a hybrid approach by filtering with keyword search and ranking with vector search
+- [ ] Ignore both methods
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-11.ipynb)

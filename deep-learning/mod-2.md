@@ -92,6 +92,17 @@ import torch.optim as optim
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is a PyTorch tensor?
+
+- [ ] A weight matrix
+- [✓] A multi-dimensional array
+- [ ] A loss function
+- [ ] An optimizer
+
+###
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-2.ipynb)

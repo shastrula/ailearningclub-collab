@@ -111,6 +111,26 @@ print("One-hot encoded categories:\n", encoded_categories)
 print("Polynomial features:\n", poly_features)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of handling missing values in data preprocessing?
+- [ ] To increase the size of the dataset
+- [✓] To ensure data consistency and accuracy
+- [ ] To reduce model complexity
+- [ ] To enhance feature importance
+
+### Quiz 2: Which of the following is a common technique for feature scaling?
+- [ ] One-hot encoding
+- [ ] Label encoding
+- [✓] Standardization
+- [ ] Feature selection
+
+### Quiz 3: What is the purpose of feature engineering?
+- [ ] To reduce the number of features
+- [✓] To create new features or transform existing ones to improve model performance
+- [ ] To encode target variables
+- [ ] To split the dataset into training and testing sets
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-3.ipynb)

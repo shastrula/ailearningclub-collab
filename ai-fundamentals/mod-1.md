@@ -98,6 +98,14 @@ print("Original Data:\n", df)
 print("\nScaled Data (Mean=0, Variance=1):\n", scaled_features)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary difference between AI and ML?
+- [ ] AI requires data, while ML requires explicit programming rules.
+- [ ] AI is only used in robotics, while ML is used in software.
+- [✓] AI is the broad concept of machine intelligence, while ML is a specific approach where models learn patterns from data without explicit programming.
+- [ ] There is no difference;
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-1.ipynb)

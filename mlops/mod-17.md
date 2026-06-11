@@ -132,6 +132,26 @@ results = query.as_dataframe()
 print(results.head())
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of Amazon SageMaker Feature Store?
+- [ ] To store raw data
+- [✓] To manage and serve ML features
+- [ ] To train ML models
+- [ ] To deploy ML models
+
+### Quiz 2: Which service is used to query features from SageMaker Feature Store?
+- [ ] Redshift
+- [✓] Athena
+- [ ] Glue
+- [ ] DynamoDB
+
+### Quiz 3: Why is it important to use event time in feature definitions?
+- [ ] To store user IDs
+- [✓] To handle time-series data and ensure features are up-to-date
+- [ ] To calculate user age
+- [ ] To deploy ML models
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-17.ipynb)

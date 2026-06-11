@@ -154,6 +154,26 @@ for epoch in range(num_epochs):
     print(f'Epoch [{epoch+1}/{num_epochs}] Loss D: {loss_D.item():.4f}, Loss G: {loss_G.item():.4f}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary role of the discriminator in a GAN?
+- [ ] To generate new data
+- [✓] To evaluate the authenticity of data
+- [ ] To optimize the generator
+- [ ] To combine generator and discriminator
+
+### Quiz 2: Which loss function is commonly used for training the discriminator in a GAN?
+- [ ] Mean Squared Error
+- [✓] Cross-Entropy Loss
+- [ ] Hinge Loss
+- [ ] L2 Loss
+
+### Quiz 3: What is the purpose of detaching the fake data when training the discriminator?
+- [ ] To increase the batch size
+- [✓] To avoid training the generator on these labels
+- [ ] To normalize the data
+- [ ] To reduce computational cost
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-13.ipynb)

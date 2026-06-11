@@ -114,6 +114,26 @@ trainer = Trainer(
 trainer.train()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of BERT over traditional NLP models?
+- [ ] It reads text in one direction
+- [✓] It reads text in both directions simultaneously
+- [ ] It uses a unidirectional approach
+- [ ] It relies on simple word embeddings
+
+### Quiz 2: Which library is commonly used for fine-tuning LLMs?
+- [ ] TensorFlow
+- [ ] PyTorch
+- [✓] HuggingFace Transformers
+- [ ] Keras
+
+### Quiz 3: What task does BERT use to understand the relationship between sentences?
+- [✓] Next Sentence Prediction
+- [ ] Masked Language Model
+- [ ] Sentiment Analysis
+- [ ] Named Entity Recognition
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-17.ipynb)

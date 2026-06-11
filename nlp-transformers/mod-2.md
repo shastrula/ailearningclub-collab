@@ -111,6 +111,26 @@ trainer = Trainer(
 trainer.train()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of using Transformers over RNNs?
+- [ ] They can process data sequentially
+- [✓] They can process entire sequences simultaneously
+- [ ] They are simpler to implement
+- [ ] They require less computational power
+
+### Quiz 2: What is the purpose of fine-tuning a pre-trained model?
+- [ ] To train a model from scratch
+- [✓] To adapt a pre-trained model to a specific task
+- [ ] To evaluate the performance of the model
+- [ ] To reduce the size of the model
+
+### Quiz 3: Which mechanism is at the core of the Transformer architecture?
+- [ ] Recurrent connections
+- [✓] Self-attention mechanism
+- [ ] Convolutional layers
+- [ ] Fully connected layers
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-2.ipynb)

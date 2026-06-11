@@ -102,6 +102,26 @@ complexity, time, throughput = langgraph_efficiency(G)
 print(f'Complexity: {complexity}, Total Time: {time}s, Throughput: {throughput} nodes/s')
 ```
 
+
+## Quiz
+
+### Quiz 1: Which metric is NOT typically used to evaluate a ReAct agent?
+- [ ] Accuracy
+- [ ] Response Time
+- [✓] Memory Usage
+- [ ] Reasoning Steps
+
+### Quiz 2: What does higher throughput in a LangGraph indicate?
+- [ ] Lower efficiency
+- [ ] Higher complexity
+- [ ] Faster node execution
+- [✓] Better scalability
+
+### Quiz 3: Why is response time an important metric for ReAct agents?
+- [✓] It indicates how quickly the agent can complete tasks
+- [ ] It measures the agent's memory usage
+- [ ] It counts the number of reasoning steps
+- [ ] It evaluates the graph complexity
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-13.ipynb)

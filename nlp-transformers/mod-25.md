@@ -141,6 +141,47 @@ trainer = Trainer(
 trainer.train()
 ```
 
+
+## Quiz
+
+### In-depth Explanation
+
+**Why fine-tune BERT?**
+Fine-tuning allows a pre-trained model to adapt to specific tasks by training it on a relevant dataset. This process leverages the model’s pre-existing knowledge while tailoring it to new contexts, thereby improving performance on the target task.
+
+**How to fine-tune BERT?**
+Fine-tuning involves adjusting the model’s parameters using a dataset specific to the task at hand. This is typically done by adding a classification layer on top of the BERT model and training it on labeled data.
+
+### Real-World Case Study
+
+**Twitter Sentiment Analysis**
+Companies use fine-tuned BERT models to analyze customer sentiment from tweets. This helps in understanding public opinion, improving customer service, and making data-driven decisions.
+
+### Hands-On Code Example
+
+Below is a detailed example of fine-tuning BERT for a sentiment analysis task using the HuggingFace library.
+
+
+
+### Interactive Quizzes
+
+### Quiz 1: What is the purpose of the `Trainer` class in the HuggingFace library?
+- [ ] To load pre-trained models
+- [✓] To handle the training and evaluation loop
+- [ ] To preprocess the dataset
+- [ ] To fine-tune the model
+
+### Quiz 2: Which argument in the `TrainingArguments` class controls the number of training epochs?
+- [✓] num_train_epochs
+- [ ] num_epochs
+- [ ] epochs
+- [ ] train_epochs
+
+### Quiz 3: What does fine-tuning a pre-trained BERT model involve?
+- [ ] Loading the model and making predictions
+- [✓] Training the model on a specific dataset for a particular task
+- [ ] Only changing the last layer of the model
+- [ ] Using the model as-is without any modifications
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-25.ipynb)

@@ -171,6 +171,26 @@ for epoch in range(1, 4):  # Let's train for 3 epochs
             print(f'Train Epoch: {epoch} [{batch_idx * len(data)}/{len(train_loader.dataset)} ({100. * batch_idx / len(train_loader):.0f}%)]\tLoss: {loss.item():.6f}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of a loss function in deep learning?
+- [ ] To predict the output
+- [✓] To measure the error between predictions and actual values
+- [ ] To initialize the model parameters
+- [ ] To update the model parameters
+
+### Quiz 2: Which optimization technique adapts the learning rate during training?
+- [ ] Stochastic Gradient Descent
+- [✓] Adam
+- [✓] RMSprop
+- [ ] Both A and B
+
+### Quiz 3: Why are optimization techniques important in deep learning?
+- [ ] They help in data preprocessing
+- [✓] They determine how quickly and accurately the model converges to the optimal solution
+- [ ] They are used for feature extraction
+- [ ] They help in model deployment
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-5.ipynb)

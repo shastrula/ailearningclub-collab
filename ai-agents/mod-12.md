@@ -123,6 +123,26 @@ bias = y_test[sensitive_attr == 0].mean() - y_test[sensitive_attr == 1].mean()
 print(f'Bias: {bias}')
 ```
 
+
+## Quiz
+
+### Quiz 1: Why is transparency important in AI agent development?
+- [ ] It hides the decision-making process
+- [✓] It ensures decisions are understandable and justifiable
+- [ ] It complicates the model
+- [ ] It is not necessary for AI systems
+
+### Quiz 2: What is the primary goal of bias mitigation in AI?
+- [ ] To increase model complexity
+- [✓] To ensure equitable outcomes and prevent discrimination
+- [ ] To reduce the number of features
+- [ ] To speed up model training
+
+### Quiz 3: What is a potential societal impact of AI in autonomous vehicles?
+- [ ] It reduces the need for human drivers
+- [✓] It raises ethical questions about decision-making in critical scenarios
+- [ ] It eliminates all traffic accidents
+- [ ] It increases fuel efficiency
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-12.ipynb)

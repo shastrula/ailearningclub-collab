@@ -93,6 +93,26 @@ output_tensor = pool_layer(input_tensor)
 print("Output Tensor:", output_tensor)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of a convolutional layer in a CNN?
+- [ ] To reduce the spatial dimensions of the input
+- [✓] To learn spatial hierarchies of features from input images
+- [ ] To increase the depth of the feature maps
+- [ ] To apply non-linear transformations to the input
+
+### Quiz 2: Which of the following is a common type of pooling operation?
+- [ ] Average pooling
+- [✓] Max pooling
+- [ ] Min pooling
+- [ ] Standard deviation pooling
+
+### Quiz 3: What is the purpose of using pooling layers in CNNs?
+- [ ] To increase the number of parameters
+- [✓] To reduce computational load and introduce translation invariance
+- [ ] To perform element-wise multiplication
+- [ ] To initialize the weights of the convolutional layers
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-9.ipynb)

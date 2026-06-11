@@ -109,6 +109,26 @@ output = graph.run()
 print(output)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of the ReAct framework?
+- [ ] To perform static tasks
+- [✓] To reason and act in dynamic environments
+- [ ] To store data
+- [ ] To analyze text
+
+### Quiz 2: In which scenario is the LangGraph framework particularly useful?
+- [ ] Single-agent tasks
+- [✓] Multi-agent collaboration in complex environments
+- [ ] Data storage
+- [ ] Text analysis
+
+### Quiz 3: Which of the following is a real-world application of multi-agent systems?
+- [ ] Weather forecasting
+- [✓] Supply chain management
+- [ ] Image recognition
+- [ ] Natural language processing
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-11.ipynb)

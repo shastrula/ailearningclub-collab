@@ -140,6 +140,26 @@ if __name__ == '__main__':
     print('Pipeline submitted for execution.')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of Kubeflow Pipelines?
+- [ ] To manage Kubernetes clusters
+- [✓] To orchestrate ML workflows
+- [ ] To deploy machine learning models
+- [ ] To monitor system performance
+
+### Quiz 2: How are components chained together in a Kubeflow Pipeline?
+- [ ] Using a linear sequence
+- [✓] By defining dependencies with `.after()`
+- [ ] Through a random order
+- [ ] By using a loop construct
+
+### Quiz 3: What is the benefit of using Kubeflow Pipelines for ML workflows?
+- [ ] It reduces the need for version control
+- [✓] It ensures reproducibility and scalability of ML workflows
+- [ ] It eliminates the need for data preprocessing
+- [ ] It automatically tunes hyperparameters
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-11.ipynb)

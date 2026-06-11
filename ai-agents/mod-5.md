@@ -114,6 +114,26 @@ if llm_output["type"] == "tool_call":
     print(f"API Result: {result}")
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of tool calling in AI agents?
+- [ ] To reduce the computational load on the AI agent
+- [✓] To enable AI agents to leverage external tools and APIs for specific tasks
+- [ ] To simplify the codebase of the AI agent
+- [ ] To enhance the graphical user interface of the AI agent
+
+### Quiz 2: Which of the following is a real-world application of tool calling?
+- [ ] Social media content generation
+- [✓] E-commerce recommendation systems
+- [ ] Video game development
+- [ ] Weather forecasting models
+
+### Quiz 3: What step follows the execution of a tool in the tool calling mechanism?
+- [ ] Updating the LLM model
+- [✓] Returning the result to the LLM
+- [ ] Storing the result in a database
+- [ ] Displaying the result to the user
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-5.ipynb)

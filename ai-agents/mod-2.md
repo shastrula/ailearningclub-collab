@@ -92,6 +92,26 @@ final_answer = agent.observe(final_action)  # Final Answer: Summarized news
 print(f"Final Answer: {final_answer}")
 ```
 
+
+## Quiz
+
+### Quiz 1: What are the two primary components of the ReAct framework?
+- [ ] [Plan + Execute]
+- [✓] [Reason + Act]
+- [ ] [Think + Do]
+- [ ] [Decide + Implement]
+
+### Quiz 2: In which type of environment is the ReAct framework particularly useful?
+- [ ] [Static environments]
+- [✓] [Dynamic and uncertain environments]
+- [ ] [Simple task environments]
+- [ ] [Predictable environments]
+
+### Quiz 3: What is the final step in the ReAct cycle?
+- [ ] [Form a new thought]
+- [ ] [Execute an action]
+- [✓] [Observe the result and provide a final answer]
+- [ ] [Repeat the cycle indefinitely]
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-2.ipynb)

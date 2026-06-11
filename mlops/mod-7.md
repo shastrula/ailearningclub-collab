@@ -97,6 +97,26 @@ drift_detected = detect_drift(old_data, new_data)
 print(f'Drift Detected: {drift_detected}')
 ```
 
+
+## Quiz
+
+### Quiz 1: Which metric is commonly used to evaluate the overall correctness of a classification model?
+- [ ] Precision
+- [ ] Recall
+- [✓] Accuracy
+- [ ] F1 Score
+
+### Quiz 2: What is the primary purpose of drift detection in MLOps?
+- [ ] To improve model accuracy
+- [✓] To detect changes in data distribution
+- [ ] To enhance feature engineering
+- [ ] To optimize hyperparameters
+
+### Quiz 3: Which statistical test can be used to detect data drift?
+- [ ] Chi-squared test
+- [✓] T-test
+- [ ] ANOVA
+- [ ] Mann-Whitney U test
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-7.ipynb)

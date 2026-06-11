@@ -79,6 +79,26 @@ print(f'AWS Region: {region}')
 print(f'SageMaker Session: {sagemaker_session}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the first step in setting up a SageMaker environment?
+- [ ] Deploying a model
+- [✓] Configuring the AWS CLI
+- [ ] Creating an S3 bucket
+- [ ] Setting up a Lambda function
+
+### Quiz 2: Which SageMaker method is used to deploy a model?
+- [ ] sagemaker_model.create()
+- [✓] sagemaker_model.deploy()
+- [ ] sagemaker_model.start()
+- [ ] sagemaker_model.run()
+
+### Quiz 3: What is the purpose of IAM roles in SageMaker?
+- [ ] To store model artifacts
+- [✓] To grant necessary permissions to access AWS resources
+- [ ] To deploy models to endpoints
+- [ ] To configure the AWS CLI
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-15.ipynb)

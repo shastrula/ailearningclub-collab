@@ -196,6 +196,26 @@ final_state = workflow.run(initial_state)
 print(final_state)  # Output: {'action': 'buy'}
 ```
 
+
+## Quiz
+
+### Quiz 1: What does the ReAct pattern in LangGraph primarily focus on?
+- [ ] Data storage
+- [ ] User interface design
+- [✓] Reasoning and acting
+- [ ] Network communication
+
+### Quiz 2: How does LangGraph support tool calling?
+- [ ] By built-in APIs
+- [ ] By external libraries
+- [✓] By defining custom functions
+- [ ] By using pre-defined templates
+
+### Quiz 3: Which of the following is a benefit of using memory mechanisms in LangGraph?
+- [ ] Increased computational speed
+- [✓] Contextually aware responses
+- [ ] Reduced code complexity
+- [ ] Enhanced network security
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-4.ipynb)

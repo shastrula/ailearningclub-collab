@@ -55,6 +55,29 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Quiz
+
+### Quiz 1: What is the correct order for making a commit?
+
+- [ ] commit → add → status
+- [✓] status → add → commit
+- [ ] add → status → commit
+- [ ] commit → status → add
+
+### Quiz 2: What command is used to initialize a Git repository?
+
+- [ ] git create
+- [✓] git init
+- [ ] git start
+- [ ] git begin
+
+### Quiz 3: Why is it important to configure your Git identity?
+
+- [ ] To make your commits faster
+- [✓] To attribute commits to the correct developer
+- [ ] To encrypt your commits
+- [ ] To make your commits private
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-3.ipynb)

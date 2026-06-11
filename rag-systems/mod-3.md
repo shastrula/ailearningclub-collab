@@ -114,6 +114,26 @@ for chunk in chunks:
 print(chunk_embeddings)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of embeddings in RAG systems?
+- [ ] To store text as plain strings
+- [✓] To convert text into vector representations capturing semantic meaning
+- [ ] To perform keyword matching
+- [ ] To generate random numbers
+
+### Quiz 2: Why is chunking important in the context of document embedding?
+- [ ] To increase the length of documents
+- [✓] To break down large documents into smaller, manageable pieces for more granular retrieval
+- [ ] To remove stop words from documents
+- [ ] To convert text to audio
+
+### Quiz 3: What determines the quality of embeddings for RAG?
+- [ ] Vector dimension size alone
+- [✓] The training data and architecture of the embedding model
+- [ ] The speed of encoding
+- [ ] The database used
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-3.ipynb)

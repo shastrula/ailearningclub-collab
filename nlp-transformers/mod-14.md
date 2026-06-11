@@ -99,6 +99,26 @@ token_ids = tokenizer.convert_tokens_to_ids(tokens)
 print("Token IDs:", token_ids)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is a common technique to address data imbalance in NLP?
+- [ ] Using a different model
+- [✓] Oversampling, undersampling, and using class weights
+- [ ] Increasing the size of the dataset
+- [ ] Ignoring the imbalance
+
+### Quiz 2: How can the issue of Out-of-Vocabulary (OOV) words be mitigated?
+- [ ] By increasing the vocabulary size
+- [✓] By using subword tokenization and dynamic vocabulary expansion
+- [ ] By ignoring OOV words
+- [ ] By retraining the model with new words
+
+### Quiz 3: Which technique is used to balance the dataset by duplicating instances from the minority class?
+- [✓] Oversampling
+- [ ] Undersampling
+- [ ] Class Weights
+- [ ] Data Augmentation
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-14.ipynb)

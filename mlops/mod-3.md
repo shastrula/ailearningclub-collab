@@ -122,6 +122,26 @@ model_version = client.create_model_version(model_uri, 'example_model', 'champio
 print(f"Model version {model_version.version} registered.")
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of using DVC in ML projects?
+- [ ] To manage cloud storage
+- [✓] To version control data and models
+- [ ] To deploy models
+- [ ] To visualize data
+
+### Quiz 2: Which MLflow component is used to log and version machine learning models?
+- [ ] MLflow Projects
+- [ ] MLflow Experiments
+- [✓] MLflow Model Registry
+- [ ] MLflow Tracking
+
+### Quiz 3: Why is version control important for ML models?
+- [ ] To speed up training
+- [✓] To ensure reproducibility, collaboration, and auditability
+- [ ] To reduce model size
+- [ ] To enhance model performance
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-3.ipynb)

@@ -129,6 +129,26 @@ y_pred = pipeline.predict(X)
 print(y_pred)
 ```
 
+
+## Quiz
+
+### Quiz 1: Which algorithm is used in the first code example for classification?
+- [ ] Decision Tree
+- [✓] Logistic Regression
+- [ ] K-Nearest Neighbors
+- [ ] Support Vector Machine
+
+### Quiz 2: What is the purpose of feature engineering in classification?
+- [ ] To reduce model complexity
+- [✓] To improve model accuracy
+- [ ] To decrease training time
+- [ ] To visualize data
+
+### Quiz 3: Which metric should you use in addition to accuracy for a comprehensive evaluation of a classification model?
+- [ ] Mean Squared Error
+- [✓] Precision, Recall, and F1-Score
+- [ ] R-squared
+- [ ] Mean Absolute Error
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-5.ipynb)

@@ -179,6 +179,26 @@ def simple_pipeline():
 kfp.compiler.Compiler().compile(simple_pipeline, 'simple_pipeline.yaml')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of CI/CD in machine learning?
+- [ ] To manually deploy models
+- [✓] To automate the process of integrating code changes, running tests, and deploying models
+- [ ] To store machine learning models
+- [ ] To perform feature engineering
+
+### Quiz 2: What is the role of a feature store in MLOps?
+- [ ] To version machine learning models
+- [✓] To centralize and manage machine learning features
+- [ ] To deploy machine learning models
+- [ ] To monitor model performance
+
+### Quiz 3: What is the main goal of drift detection in MLOps?
+- [ ] To store machine learning models
+- [ ] To centralize and manage machine learning features
+- [✓] To monitor changes in the input data that may affect model performance
+- [ ] To perform A/B testing
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-24.ipynb)

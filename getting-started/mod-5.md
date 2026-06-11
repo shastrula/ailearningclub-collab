@@ -94,6 +94,26 @@ person = {'name': 'Alice', 'age': 25, 'city': 'NYC'}
 print(person['name'])
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the correct way to create a list in Python?
+- [ ] list = (1, 2, 3)
+- [✓] list = [1, 2, 3]
+- [ ] list = {1, 2, 3}
+- [ ] list = 1, 2, 3
+
+### Quiz 2: How do you define a function in Python?
+- [ ] function greet(name):
+- [✓] def greet(name):
+- [ ] define greet(name):
+- [ ] func greet(name):
+
+### Quiz 3: Which data type is used for key-value pairs in Python?
+- [ ] List
+- [ ] Tuple
+- [✓] Dictionary
+- [ ] Set
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-5.ipynb)

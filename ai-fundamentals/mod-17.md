@@ -117,6 +117,26 @@ accuracy = accuracy_score(y_test, y_pred)
 accuracy
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of data preprocessing in machine learning?
+- [ ] To make the data look pretty
+- [✓] To prepare the data for effective model training
+- [ ] To reduce the size of the dataset
+- [ ] To add more features to the dataset
+
+### Quiz 2: Which of the following is a common method for handling missing values in numeric data?
+- [ ] Deleting the row
+- [ ] Using the mean value
+- [ ] Using the mode value
+- [✓] All of the above
+
+### Quiz 3: Why is model selection important in machine learning?
+- [ ] It doesn’t matter which model you choose
+- [✓] Different algorithms excel at different types of problems and data sizes
+- [ ] All models perform the same
+- [ ] Model selection only affects training time
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-17.ipynb)

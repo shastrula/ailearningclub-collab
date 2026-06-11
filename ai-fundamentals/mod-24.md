@@ -111,6 +111,26 @@ for i in range(X.shape[1]):
 print(f'Selected features: {rfe.support_}')
 ```
 
+
+## Quiz
+
+### Quiz 1: Which metric is best for imbalanced datasets?
+- [ ] Accuracy
+- [✓] F1 Score
+- [ ] Precision
+- [ ] Recall
+
+### Quiz 2: What is the primary goal of Recursive Feature Elimination (RFE)?
+- [ ] Increase model complexity
+- [✓] Select the most relevant features
+- [ ] Reduce overfitting
+- [ ] Improve computational speed
+
+### Quiz 3: Why is AUC-ROC a comprehensive metric for model evaluation?
+- [ ] It only considers true positives
+- [✓] It provides a view of model performance across different thresholds
+- [ ] It is easy to calculate
+- [ ] It is not affected by class imbalance
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-24.ipynb)

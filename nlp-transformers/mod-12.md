@@ -113,6 +113,26 @@ trainer = Trainer(
 trainer.train()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of using a pre-trained BERT model?
+- [ ] To create a new model from scratch
+- [✓] To leverage existing knowledge for specific tasks
+- [ ] To train a model on a completely new dataset
+- [ ] To avoid using any pre-trained models
+
+### Quiz 2: What is a common step in fine-tuning a pre-trained BERT model?
+- [ ] Ignoring the pre-trained weights
+- [ ] Training the model on a new, unrelated task
+- [✓] Setting up a training loop and optimizing the model's parameters
+- [ ] Using a different pre-trained model entirely
+
+### Quiz 3: Which library is commonly used to load and fine-tune BERT models?
+- [ ] TensorFlow
+- [✓] HuggingFace Transformers
+- [ ] Scikit-learn
+- [ ] PyTorch (without HuggingFace)
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-12.ipynb)

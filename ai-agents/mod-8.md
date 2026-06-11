@@ -112,6 +112,26 @@ nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
 plt.show()
 ```
 
+
+## Quiz
+
+### Quiz 1: What does the ReAct framework primarily help agents with?
+- [ ] Planning future actions
+- [✓] Making reactive decisions
+- [ ] Avoiding obstacles
+- [ ] Communicating with other agents
+
+### Quiz 2: What is the primary purpose of LangGraph in multi-agent systems?
+- [ ] Visualizing agent states
+- [✓] Representing agent interactions
+- [ ] Managing agent resources
+- [ ] Defining agent actions
+
+### Quiz 3: Which of the following is a real-world application of the ReAct framework?
+- [✓] Autonomous vehicles
+- [ ] Social media analytics
+- [ ] Weather forecasting
+- [ ] Stock market prediction
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-8.ipynb)

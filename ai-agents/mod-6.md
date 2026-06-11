@@ -120,6 +120,26 @@ def interact(input_text):
 print(interact('Hello, how are you?'))  # Output will be a generated response from the model
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of memory in AI agents?
+- [ ] To store user credentials
+- [✓] To retain and utilize past interactions
+- [ ] To enhance graphical user interfaces
+- [ ] To manage network connections
+
+### Quiz 2: Which library allows for the creation of language models with integrated memory capabilities?
+- [ ] TensorFlow
+- [ ] PyTorch
+- [✓] LangGraph
+- [ ] Scikit-learn
+
+### Quiz 3: Why is memory integration crucial for AI agents?
+- [ ] To increase computational speed
+- [✓] To provide context awareness and personalization
+- [ ] To reduce memory usage
+- [ ] To enhance graphical capabilities
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-6.ipynb)

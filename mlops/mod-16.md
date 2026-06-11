@@ -123,6 +123,26 @@ tuner = HyperparameterTuner(
 tuner.fit('s3://input-data-bucket/')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of SageMaker Experiments?
+- [ ] To train models
+- [✓] To track and compare experiments
+- [ ] To deploy models
+- [ ] To store data
+
+### Quiz 2: Which optimization technique can SageMaker's Hyperparameter Tuner use?
+- [ ] Gradient Descent
+- [✓] Random Search
+- [ ] K-means Clustering
+- [ ] Decision Trees
+
+### Quiz 3: What is a benefit of using SageMaker Experiments in a team environment?
+- [ ] Faster model training
+- [✓] Improved collaboration and reproducibility of experiments
+- [ ] Reduced storage costs
+- [ ] Enhanced model deployment
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-16.ipynb)

@@ -107,6 +107,26 @@ trainer = Trainer(
 trainer.train()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of using HuggingFace's Transformers library?
+- [ ] To create new deep learning models from scratch
+- [✓] To simplify the use of pre-trained NLP models
+- [ ] To develop custom neural network architectures
+- [ ] To perform data preprocessing
+
+### Quiz 2: What does the Trainer API in HuggingFace facilitate?
+- [ ] Data preprocessing
+- [ ] Model evaluation
+- [✓] Training loop simplification
+- [ ] Model deployment
+
+### Quiz 3: Which of the following is a common application of fine-tuning pre-trained models?
+- [ ] Image classification
+- [✓] Sentiment analysis
+- [ ] Object detection
+- [ ] Speech recognition
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-4.ipynb)

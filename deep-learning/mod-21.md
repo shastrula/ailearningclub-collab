@@ -158,6 +158,26 @@ for epoch in range(10):
     print(f'Epoch {epoch+1}, Loss: {loss.item()}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary use of the SimpleCNN model in the healthcare example?
+- [ ] Natural language processing
+- [✓] Image classification
+- [ ] Time series analysis
+- [ ] Reinforcement learning
+
+### Quiz 2: Which of the following is the primary task of the SentimentAnalysisModel in the finance example?
+- [ ] Image classification
+- [✓] Sentiment analysis
+- [ ] Object detection
+- [ ] Speech recognition
+
+### Quiz 3: Which industry benefits from deep learning for object detection and path planning?
+- [✓] Autonomous vehicles
+- [ ] Healthcare
+- [ ] Finance
+- [ ] Retail
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-21.ipynb)

@@ -113,6 +113,26 @@ agent = ExampleAgent()
 maintain_agent(agent)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of monitoring AI agents?
+- [ ] To enhance agent intelligence
+- [✓] To track performance metrics and detect anomalies
+- [ ] To increase agent speed
+- [ ] To reduce computational costs
+
+### Quiz 2: What is a key aspect of maintaining AI agents?
+- [ ] Increasing agent complexity
+- [✓] Regular updates and retraining
+- [ ] Reducing agent memory usage
+- [ ] Decreasing agent responsiveness
+
+### Quiz 3: Which Python module is used for logging in the examples provided?
+- [✓] logging
+- [ ] time
+- [ ] pandas
+- [ ] numpy
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-16.ipynb)

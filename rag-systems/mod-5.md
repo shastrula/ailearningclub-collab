@@ -113,6 +113,26 @@ chunks = sentence_boundary_chunking(text)
 print(chunks)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of using the sliding window method for chunking?
+- [ ] It reduces the number of chunks
+- [✓] It preserves context across chunks
+- [ ] It ensures each chunk is a complete sentence
+- [ ] It simplifies the chunking process
+
+### Quiz 2: Which chunking method ensures that each chunk is a complete sentence?
+- [ ] Sliding window chunking
+- [ ] Fixed-size chunking
+- [✓] Sentence boundary chunking
+- [ ] Random chunking
+
+### Quiz 3: What is the advantage of semantic chunking over fixed-size chunking?
+- [ ] Faster processing
+- [✓] Chunks align with natural topic boundaries
+- [ ] Smaller file sizes
+- [ ] Simpler implementation
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-5.ipynb)

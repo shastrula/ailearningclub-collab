@@ -95,6 +95,26 @@ net = Net()
 print(net)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is a critical step to ensure fairness in deep learning models?
+- [ ] Increasing model complexity
+- [ ] Regularizing the loss function
+- [✓] Conducting bias audits
+- [ ] Using more data
+
+### Quiz 2: Which practice helps in making deep learning models more transparent?
+- [ ] Increasing model parameters
+- [ ] Using complex activation functions
+- [✓] Documenting the model architecture and decision process
+- [ ] Increasing the learning rate
+
+### Quiz 3: Why is accountability important in deep learning?
+- [ ] It increases model accuracy
+- [✓] It ensures mechanisms are in place to address negative impacts
+- [ ] It reduces the need for model explanations
+- [ ] It simplifies the model architecture
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-23.ipynb)

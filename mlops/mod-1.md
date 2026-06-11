@@ -113,6 +113,28 @@ def check_data_drift(train_df, prod_df, feature):
 check_data_drift(train_data, prod_data, 'age')
 ```
 
+
+## Quiz
+
+Test your understanding of the core MLOps concepts.
+
+### Quiz 1: What is the primary goal of MLOps?
+- [ ] To write machine learning algorithms in Python.
+- [✓] To automate and improve the lifecycle of building, deploying, and maintaining machine learning models in production.
+- [ ] To create a centralized database for storing raw, unprocessed data.
+- [ ] To design more complex neural network architectures.
+
+### Quiz 2: How does CI/CD for machine learning differ from traditional software CI/CD?
+- [ ] It only focuses on automating code deployment and ignores testing.
+- [ ] It is a completely manual process managed by data scientists.
+- [✓] It extends beyond just code to automate the validation and deployment of data and models as well.
+- [ ] It is only applicable to models written in Java, not Python.
+
+### Quiz 3: A model predicting customer churn was performing well, but its accuracy has suddenly dropped over the last month. The distribution of input data (age, location, etc.) has not changed. What is the most likely cause?
+- [ ] Data Drift
+- [✓] Concept Drift
+- [ ] A bug in the Feature Store
+- [ ] A network outage in the production environment
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-1.ipynb)

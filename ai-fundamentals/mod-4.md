@@ -132,6 +132,26 @@ mse = mean_squared_error(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary goal of linear regression?
+- [ ] To classify data into categories
+- [✓] To predict a continuous target variable
+- [ ] To reduce dimensionality
+- [ ] To cluster similar data points
+
+### Quiz 2: What is a common issue with high-degree polynomial regression?
+- [ ] Underfitting
+- [✓] Overfitting
+- [ ] Increased bias
+- [ ] Decreased variance
+
+### Quiz 3: Which of the following is a real-world application of polynomial regression?
+- [ ] Predicting email spam
+- [✓] Predicting stock prices
+- [ ] Classifying images
+- [ ] Detecting fraud in transactions
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-4.ipynb)

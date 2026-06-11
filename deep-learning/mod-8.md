@@ -100,6 +100,26 @@ preprocessed_image = transform(image)
 print(preprocessed_image)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of a DataLoader in PyTorch?
+- [ ] To train the model
+- [✓] To load data in batches
+- [ ] To evaluate the model
+- [ ] To save the model
+
+### Quiz 2: Which of the following is a common data preprocessing technique?
+- [✓] Data augmentation
+- [ ] Data deletion
+- [ ] Data masking
+- [ ] Data encryption
+
+### Quiz 3: Why is shuffling data important in DataLoaders?
+- [ ] To save memory
+- [✓] To improve model generalization
+- [ ] To speed up training
+- [ ] To reduce data size
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-8.ipynb)

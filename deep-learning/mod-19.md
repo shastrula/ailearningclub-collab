@@ -130,6 +130,26 @@ for epoch in range(3):
     print(f'Epoch {epoch+1}, Loss: {loss.item()}, LR: {scheduler.get_last_lr()[0]}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is a common technique to prevent the model from overfitting during training?
+- [ ] Increasing the learning rate
+- [✓] Decreasing the learning rate
+- [ ] Increasing the batch size
+- [ ] Using more complex models
+
+### Quiz 2: Which of the following is a benefit of using a learning rate scheduler?
+- [ ] It increases the training speed
+- [✓] It helps in finding a good learning rate
+- [ ] It reduces the number of epochs needed
+- [ ] All of the above
+
+### Quiz 3: What does gradient clipping help prevent?
+- [ ] Underfitting
+- [✓] Gradients from becoming too large
+- [ ] Increasing the batch size
+- [ ] Using more complex models
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-19.ipynb)

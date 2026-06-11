@@ -103,6 +103,26 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of a Model Registry?
+- [ ] To store raw data
+- [✓] To version and manage machine learning models
+- [ ] To train machine learning models
+- [ ] To deploy models directly to production
+
+### Quiz 2: Which Python framework is used in the example for model serving?
+- [ ] Django
+- [ ] FastAPI
+- [✓] Flask
+- [ ] Tornado
+
+### Quiz 3: Why is it important to version machine learning models?
+- [ ] To increase model complexity
+- [✓] To track changes, compare performance, and roll back if necessary
+- [ ] To reduce training time
+- [ ] To simplify data preprocessing
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-6.ipynb)

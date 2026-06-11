@@ -104,6 +104,26 @@ ranked_chunks = [chunk for _, chunk in sorted(zip(scores, chunks), key=lambda pa
 print(ranked_chunks)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of a vector database in a RAG system?
+- [ ] Storing raw text data
+- [✓] Performing similarity search
+- [ ] Generating text embeddings
+- [ ] Classifying text documents
+
+### Quiz 2: Which step in the RAG pipeline involves refining the initial set of retrieved documents?
+- [ ] Chunking
+- [ ] Embedding
+- [✓] Reranking
+- [ ] Generation
+
+### Quiz 3: In which domain is RAG commonly used to enhance customer support?
+- [✓] Customer Support
+- [ ] Financial Analysis
+- [ ] Image Recognition
+- [ ] Social Media Monitoring
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-13.ipynb)

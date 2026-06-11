@@ -111,6 +111,26 @@ plt.title('Hierarchical Clustering Dendrogram')
 plt.show()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary goal of K-Means clustering?
+- [ ] To maximize variance within clusters
+- [✓] To minimize variance within clusters
+- [ ] To maximize the distance between clusters
+- [ ] To minimize the distance between clusters
+
+### Quiz 2: Which type of hierarchical clustering starts with each data point as a separate cluster and merges them iteratively?
+- [ ] Divisive clustering
+- [✓] Agglomerative clustering
+- [ ] Spectral clustering
+- [ ] DBSCAN
+
+### Quiz 3: Which clustering algorithm requires the number of clusters to be specified beforehand?
+- [✓] K-Means
+- [ ] Agglomerative Clustering
+- [ ] DBSCAN
+- [ ] Spectral Clustering
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-7.ipynb)

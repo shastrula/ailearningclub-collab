@@ -149,6 +149,26 @@ state = {'task': 'fetch_data'}
 workflow.run(state)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of the ReAct framework in AI agents?
+- [ ] To handle user input
+- [✓] To reason about actions and make decisions
+- [ ] To store data
+- [ ] To visualize workflows
+
+### Quiz 2: How does memory enhance the capabilities of an AI agent?
+- [ ] By storing user preferences
+- [✓] By retaining information across different states
+- [ ] By improving graphical performance
+- [ ] By enhancing network connectivity
+
+### Quiz 3: In which industry might an autonomous workflow be used to manage inventory, process orders, and handle customer inquiries?
+- [ ] Healthcare
+- [ ] Finance
+- [✓] E-commerce
+- [ ] Education
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-19.ipynb)

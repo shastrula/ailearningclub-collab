@@ -94,6 +94,28 @@ plt.imshow(img, cmap='gray')
 plt.show()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the purpose of the `transform` in the code example?
+- [ ] To download the dataset
+- [✓] To normalize the data
+- [ ] To shuffle the data
+- [ ] To load the dataset
+
+### Quiz 2: What does the `transform=transform` argument do in the `datasets.MNIST` function?
+- [ ] It shuffles the data
+- [✓] It normalizes the data
+- [ ] It resizes the images
+- [ ] It downloads the data
+
+### Quiz 3: Why is data normalization important in deep learning?
+- [ ] It makes the code run faster
+- [✓] It helps in faster and more stable convergence during training
+- [ ] It reduces the size of the dataset
+- [ ] It increases the accuracy of the model by 50%
+
+By understanding and applying these data handling techniques, you'll be well-prepared to tackle more complex deep learning projects. Happy learning!
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-7.ipynb)

@@ -123,6 +123,26 @@ trainer = Trainer(
 trainer.train()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of using BERT in NLP projects?
+- [ ] To generate random text
+- [✓] To understand context in text
+- [ ] To perform arithmetic operations
+- [ ] To create visual graphics
+
+### Quiz 2: What does the `num_labels` parameter in `BertForSequenceClassification` represent?
+- [ ] The number of training epochs
+- [✓] The number of different classes in the classification task
+- [ ] The batch size for training
+- [ ] The learning rate for the model
+
+### Quiz 3: Which library provides an accessible interface to leverage BERT and other LLMs?
+- [ ] TensorFlow
+- [ ] PyTorch
+- [✓] HuggingFace Transformers
+- [ ] Scikit-learn
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-20.ipynb)

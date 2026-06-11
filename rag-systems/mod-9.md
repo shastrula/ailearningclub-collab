@@ -126,6 +126,26 @@ for score, doc in sorted(zip(hybrid_scores, documents), reverse=True):
     print(f"Score: {score:.4f}, Document: {doc}")
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of using embeddings in a vector database?
+- [ ] To store data in a relational format
+- [✓] To enable semantic searches
+- [ ] To compress data for storage
+- [ ] To encrypt data for security
+
+### Quiz 2: What is the main goal of reranking in information retrieval?
+- [ ] To increase the number of retrieved documents
+- [✓] To improve the relevance of retrieved documents
+- [ ] To reduce the computational cost of retrieval
+- [ ] To enhance the security of retrieved documents
+
+### Quiz 3: Which technique combines multiple search methods to improve accuracy and relevance?
+- [ ] Keyword-based search
+- [ ] Semantic search
+- [✓] Hybrid search
+- [ ] Machine learning models
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-9.ipynb)

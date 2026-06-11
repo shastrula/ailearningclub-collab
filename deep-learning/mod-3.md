@@ -98,6 +98,29 @@ out.backward(torch.tensor([1.0, 1.0, 1.0]))
 print('Gradient of x:', x.grad)
 ```
 
+
+## Quiz
+
+### Quiz 1: What does `requires_grad=True` do?
+
+- [ ] Speeds up computation
+- [✓] Enables gradient tracking
+- [ ] Reduces memory
+- [ ] Normalizes data
+
+### Quiz 2: What is a computational graph?
+
+- [ ] A neural network
+- [✓] History of operations for gradient computation
+- [ ] A loss function
+- [ ] A data structure
+
+### Quiz 3: When do you use `.detach()`?
+
+- [ ] Training
+- [✓] During inference/evaluation
+- [ ] Computing loss
+- [ ] Updating weights
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-3.ipynb)

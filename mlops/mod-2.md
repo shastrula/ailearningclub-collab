@@ -139,6 +139,26 @@ if __name__ == '__main__':
         rollback_model()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of a CI/CD pipeline in machine learning?
+- [ ] To manually deploy models
+- [✓] To automate the deployment process
+- [ ] To store model versions
+- [ ] To perform data preprocessing
+
+### Quiz 2: Why is it important to include monitoring and rollback strategies in a CI/CD pipeline for ML?
+- [ ] To enhance model accuracy
+- [✓] To ensure quick recovery from failures
+- [ ] To reduce training time
+- [ ] To automate data collection
+
+### Quiz 3: Which of the following is a benefit of using CI/CD pipelines in machine learning?
+- [ ] Increased manual intervention
+- [ ] Slower development cycles
+- [✓] Improved collaboration and consistency
+- [ ] Higher error rates
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-2.ipynb)

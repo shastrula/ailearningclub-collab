@@ -134,6 +134,26 @@ print("Output after training:")
 print(output_layer)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of an activation function in a neural network?
+- [ ] To scale the input data
+- [✓] To introduce non-linearity into the model
+- [ ] To compute the weighted sum of inputs
+- [ ] To normalize the output
+
+### Quiz 2: Which activation function is commonly used in neural networks to handle the vanishing gradient problem?
+- [ ] Sigmoid
+- [✓] ReLU
+- [ ] Tanh
+- [ ] Softmax
+
+### Quiz 3: What is the role of backward propagation in a neural network?
+- [ ] To compute the weighted sum of inputs
+- [✓] To update the weights of the network by computing the gradient of the loss function
+- [ ] To normalize the output
+- [ ] To scale the input data
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-9.ipynb)

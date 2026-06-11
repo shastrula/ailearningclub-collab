@@ -114,6 +114,26 @@ exp = explainer.explain_instance(text, predict_fn, num_features=5)
 exp.show_in_notebook(text_colors=['#ff0000', '#00ff00'])
 ```
 
+
+## Quiz
+
+### Quiz 1: What is a common source of bias in NLP models?
+- [ ] Model architecture
+- [✓] Training data
+- [ ] Hyperparameters
+- [ ] Evaluation metrics
+
+### Quiz 2: Why is transparency important in NLP?
+- [ ] To increase model accuracy
+- [ ] To hide decision-making processes
+- [✓] To build user trust
+- [ ] To reduce computational cost
+
+### Quiz 3: Which technique can be used to explain individual predictions made by an NLP model?
+- [ ] Gradient Descent
+- [✓] LIME
+- [ ] Cross-Validation
+- [ ] Hyperparameter Tuning
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-15.ipynb)

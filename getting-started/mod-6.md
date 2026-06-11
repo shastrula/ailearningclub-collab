@@ -116,6 +116,26 @@ accuracy = model.score(X_test, y_test)
 print(f'Accuracy: {accuracy}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of `pip`?
+- [ ] To manage Python's standard library
+- [✓] To install and manage additional Python packages
+- [ ] To run Python scripts
+- [ ] To create virtual environments
+
+### Quiz 2: Why should you use virtual environments?
+- [ ] To increase the speed of your Python scripts
+- [✓] To isolate project dependencies and avoid version conflicts
+- [ ] To access the Python Package Index (PyPI)
+- [ ] To compile Python code
+
+### Quiz 3: Which command activates a virtual environment on macOS/Linux?
+- [ ] venv\Scripts\activate
+- [✓] source venv/bin/activate
+- [ ] pip install venv
+- [ ] python -m venv activate
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-6.ipynb)

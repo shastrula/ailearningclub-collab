@@ -128,6 +128,26 @@ logging.debug(outputs.last_hidden_state)
 print(inputs['input_ids'].shape)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is a common error when implementing BERT models?
+- [ ] Incorrect model selection
+- [✓] Incorrect tokenization
+- [ ] Using too many layers
+- [ ] Overfitting the model
+
+### Quiz 2: How can you debug issues with HuggingFace Transformers?
+- [ ] By increasing the model size
+- [✓] Using logging
+- [✓] Checking input data format
+- [✓] Inspecting model configurations
+
+### Quiz 3: Which of the following is NOT a special token used by BERT?
+- [ ] [CLS]
+- [ ] [SEP]
+- [✓] [START]
+- [ ] [PAD]
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-19.ipynb)

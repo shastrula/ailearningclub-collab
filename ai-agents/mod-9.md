@@ -125,6 +125,26 @@ actions = graph.execute()
 print(actions)
 ```
 
+
+## Quiz
+
+### Quiz 1: What does the ReAct framework enable AI agents to do?
+- [ ] Only reason about tasks
+- [ ] Only act upon tasks
+- [✓] Reason about tasks and act upon them
+- [ ] None of the above
+
+### Quiz 2: What is the primary purpose of LangGraph in multi-agent systems?
+- [ ] To define agent actions
+- [✓] To facilitate agent communication and coordination
+- [ ] To execute single-agent tasks
+- [ ] To store agent memory
+
+### Quiz 3: Which concept allows AI agents to invoke external tools or APIs?
+- [ ] Memory
+- [✓] Tool Calling
+- [ ] Multi-Agent Systems
+- [ ] ReAct Framework
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-9.ipynb)

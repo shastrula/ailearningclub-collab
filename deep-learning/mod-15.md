@@ -112,6 +112,26 @@ with torch.no_grad():  # Disable gradient calculation
 print('Inference output:', output)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the purpose of setting the model to evaluation mode?
+- [ ] To enable dropout during inference
+- [✓] To disable training-specific behaviors
+- [ ] To increase model accuracy
+- [ ] To save the model weights
+
+### Quiz 2: What function is used to load the model weights from a file?
+- [ ] torch.train()
+- [✓] torch.load()
+- [ ] model.save()
+- [ ] model.eval()
+
+### Quiz 3: Which context manager should be used during inference to disable gradient calculation?
+- [ ] with torch.enable_grad():
+- [✓] with torch.no_grad():
+- [ ] with model.no_grad():
+- [ ] with torch.inference_mode():
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-15.ipynb)

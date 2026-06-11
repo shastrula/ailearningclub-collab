@@ -111,6 +111,26 @@ result = json.loads(response['Body'].read())
 print(result)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the first step in creating a SageMaker endpoint?
+- [ ] Configuring an endpoint configuration
+- [✓] Creating a model
+- [ ] Deploying the endpoint
+- [ ] Invoking the endpoint
+
+### Quiz 2: Which boto3 client is used to invoke a SageMaker endpoint for inference?
+- [ ] sagemaker
+- [✓] sagemaker-runtime
+- [ ] ec2
+- [ ] lambda
+
+### Quiz 3: What is the purpose of invoking a SageMaker endpoint?
+- [ ] To train a model
+- [✓] To make real-time predictions
+- [ ] To store model artifacts
+- [ ] To configure endpoint settings
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-19.ipynb)

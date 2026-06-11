@@ -115,6 +115,26 @@ trainer = Trainer(
 trainer.train()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of scaling up transformer models?
+- [ ] Reduced computational cost
+- [✓] Increased complexity in patterns captured
+- [ ] Decreased memory requirements
+- [ ] Faster training times
+
+### Quiz 2: What is the purpose of fine-tuning a pre-trained model?
+- [ ] To reduce the model size
+- [✓] To adapt the model to a specific task
+- [ ] To increase the number of training epochs
+- [ ] To decrease the learning rate
+
+### Quiz 3: Which technique helps reduce memory usage when training large transformer models?
+- [ ] Increasing batch size
+- [✓] Using mixed precision training
+- [ ] Decreasing the number of layers
+- [ ] Reducing the vocabulary size
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-23.ipynb)

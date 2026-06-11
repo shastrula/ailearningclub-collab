@@ -103,6 +103,26 @@ xgb.set_hyperparameters(max_depth=5,
 xgb.fit({'train': 's3://your-bucket/xgboost/train', 'validation':'s3://your-bucket/xgboost/validation'})
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of Amazon SageMaker?
+- [ ] To manage AWS infrastructure
+- [✓] To build, train, and deploy machine learning models
+- [ ] To monitor cloud costs
+- [ ] To manage user identities and permissions
+
+### Quiz 2: Which AWS service is used to specify the training image in Amazon SageMaker?
+- [ ] EC2
+- [✓] ECR
+- [ ] S3
+- [ ] IAM
+
+### Quiz 3: What does the `fit` method do in the context of Amazon SageMaker?
+- [ ] It deploys the model to an endpoint
+- [✓] It starts the training job with the specified input data
+- [ ] It retrieves the model artifacts from S3
+- [ ] It configures the hyperparameters for the model
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-13.ipynb)

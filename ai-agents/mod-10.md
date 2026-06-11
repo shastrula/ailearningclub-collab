@@ -148,6 +148,26 @@ def workflow():
 workflow()
 ```
 
+
+## Quiz
+
+### Quiz 1: What are the two main steps in the ReAct framework?
+- [ ] Act and React
+- [✓] Reason and Act
+- [ ] Think and Do
+- [ ] Plan and Execute
+
+### Quiz 2: What is the primary purpose of LangGraph in multi-agent systems?
+- [ ] To define agent appearances
+- [ ] To manage agent memory
+- [✓] To define interactions and workflows
+- [ ] To handle agent errors
+
+### Quiz 3: How do memory mechanisms benefit autonomous agents?
+- [ ] They allow agents to forget past actions
+- [✓] They enable agents to remember past actions and states
+- [ ] They reduce the need for sensory inputs
+- [ ] They increase the agent's physical capabilities
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-10.ipynb)

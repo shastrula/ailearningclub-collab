@@ -103,6 +103,26 @@ concept_drift_detected = mse > 1  # Threshold can be adjusted
 print(f'Concept drift detected: {concept_drift_detected}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is data drift?
+- [ ] A change in the target variable
+- [✓] A change in the statistical properties of the input data
+- [ ] A change in the model's parameters
+- [ ] A change in the output predictions
+
+### Quiz 2: What is concept drift?
+- [ ] A change in the input features
+- [ ] A change in the statistical properties of the input data
+- [✓] A change in the relationship between input features and target variable
+- [ ] A change in the model's parameters
+
+### Quiz 3: How can you detect concept drift?
+- [ ] By changing the model's parameters
+- [✓] By monitoring the model's performance metrics on new data
+- [ ] By retraining the model frequently
+- [ ] By ignoring the changes in data
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-8.ipynb)

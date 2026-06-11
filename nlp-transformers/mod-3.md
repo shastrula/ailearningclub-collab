@@ -113,6 +113,26 @@ trainer = Trainer(
 trainer.train()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of BERT's bidirectional training approach?
+- [ ] It reduces training time
+- [✓] It allows the model to understand context from both directions
+- [ ] It increases the model's depth
+- [ ] It simplifies the model architecture
+
+### Quiz 2: What is the purpose of fine-tuning BERT on a specific task?
+- [ ] To reduce the model size
+- [✓] To adapt the pre-trained model to the new task
+- [ ] To increase the model's learning rate
+- [ ] To simplify the model's architecture
+
+### Quiz 3: Which pre-training task does BERT use to predict masked tokens in the input text?
+- [✓] Masked Language Modeling (MLM)
+- [ ] Next Sentence Prediction (NSP)
+- [ ] Part-of-Speech Tagging
+- [ ] Sentiment Analysis
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-3.ipynb)

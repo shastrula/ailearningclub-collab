@@ -148,6 +148,26 @@ for episode in range(1000):
 print('Optimal Q-table:', Q)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary goal in a Markov Decision Process (MDP)?
+- [ ] To minimize the expected cumulative reward
+- [✓] To maximize the expected cumulative reward
+- [ ] To find the shortest path between states
+- [ ] To balance exploration and exploitation
+
+### Quiz 2: Which of the following is a characteristic of Q-Learning?
+- [ ] It requires a model of the environment
+- [✓] It is a model-free reinforcement learning algorithm
+- [ ] It uses a value function to estimate the expected reward
+- [ ] It is used primarily for supervised learning tasks
+
+### Quiz 3: What is the role of the Q-table in Q-Learning?
+- [ ] It stores the transition probabilities between states
+- [✓] It stores the expected utility of taking a given action in a given state
+- [ ] It stores the immediate rewards for each state-action pair
+- [ ] It stores the policy for the agent
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-13.ipynb)

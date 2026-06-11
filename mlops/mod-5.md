@@ -115,6 +115,26 @@ print(f'Best Parameters: {best_params}')
 print(f'Best Score: {best_score:.2f}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary goal of model training?
+- [ ] To maximize the loss function
+- [✓] To minimize the loss function
+- [ ] To increase model complexity
+- [ ] To reduce the number of features
+
+### Quiz 2: Which technique is commonly used for hyperparameter tuning?
+- [ ] Principal Component Analysis
+- [✓] Grid Search
+- [ ] K-means Clustering
+- [ ] Decision Tree Pruning
+
+### Quiz 3: Why is hyperparameter tuning important?
+- [ ] It reduces the dataset size
+- [✓] It can significantly improve the performance of a model
+- [ ] It simplifies the model
+- [ ] It reduces the need for data preprocessing
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-5.ipynb)

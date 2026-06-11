@@ -117,6 +117,26 @@ response = langchain_model.generate(query, context=relevant_chunks)
 print(response)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of using embeddings in a vector database?
+- [ ] To store data in a relational format
+- [✓] To capture semantic meaning and enable semantic search
+- [ ] To compress data for faster retrieval
+- [ ] To encrypt data for security purposes
+
+### Quiz 2: Why is reranking important in a RAG system?
+- [ ] To increase the speed of data retrieval
+- [✓] To ensure the most relevant information is presented first
+- [ ] To reduce the size of the database
+- [ ] To enhance the security of the data
+
+### Quiz 3: How does chunking help in processing large documents?
+- [✓] It breaks down documents into smaller, manageable pieces
+- [ ] It increases the speed of data retrieval
+- [ ] It reduces the size of the database
+- [ ] It enhances the security of the data
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-21.ipynb)

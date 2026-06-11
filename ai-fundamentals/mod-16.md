@@ -118,6 +118,26 @@ report = classification_report(y_test, y_pred)
 print(report)
 ```
 
+
+## Quiz
+
+### Quiz 1: Which machine learning algorithm is used for predictive analytics in the healthcare example?
+- [ ] Support Vector Machine
+- [✓] Random Forest
+- [ ] K-Nearest Neighbors
+- [ ] Naive Bayes
+
+### Quiz 2: Which evaluation metric is used to assess the performance of the fraud detection model?
+- [ ] Mean Squared Error
+- [ ] R-squared
+- [✓] Classification Report
+- [ ] Confusion Matrix
+
+### Quiz 3: What is the primary benefit of using machine learning for fraud detection in finance?
+- [ ] Reduced computational cost
+- [✓] Real-time analysis and pattern recognition
+- [ ] Simplified data collection
+- [ ] Enhanced user interface
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-16.ipynb)

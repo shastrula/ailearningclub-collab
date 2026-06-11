@@ -104,6 +104,26 @@ for epoch in range(10):
     print(f'Epoch {epoch+1}, Loss: {loss.item():.4f}')  # Print loss for monitoring
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of setting the model to evaluation mode?
+- [ ] To enable dropout layers
+- [✓] To prevent gradient updates
+- [ ] To compute gradients
+- [ ] To update model parameters
+
+### Quiz 2: Which technique is used to adjust the learning rate during training in the provided code?
+- [ ] Batch Normalization
+- [✓] Learning Rate Scheduler
+- [ ] Gradient Clipping
+- [ ] Weight Decay
+
+### Quiz 3: What is the purpose of using a validation set during model evaluation?
+- [ ] To update model parameters
+- [✓] To assess model performance on unseen data
+- [ ] To compute gradients
+- [ ] To enable dropout layers
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-16.ipynb)

@@ -91,6 +91,26 @@ df_loaded = pq.read_table('large_dataset.parquet').to_pandas()
 print(df_loaded.head())  # Display the first few rows of the loaded dataset
 ```
 
+
+## Quiz
+
+### Quiz 1: What is a benefit of using columnar storage formats like Parquet?
+- [ ] They are easier to read and write in Python
+- [✓] They reduce I/O time significantly
+- [ ] They are more human-readable
+- [ ] They support all data types natively
+
+### Quiz 2: Why might you choose to load a dataset in chunks?
+- [ ] To make the data easier to visualize
+- [✓] To avoid memory issues with large datasets
+- [ ] To speed up data processing
+- [ ] To ensure data integrity
+
+### Quiz 3: Which library can be used for parallel processing of large datasets?
+- [✓] Dask
+- [ ] NumPy
+- [ ] Matplotlib
+- [ ] Scikit-learn
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-11.ipynb)

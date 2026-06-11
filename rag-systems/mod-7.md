@@ -100,6 +100,26 @@ reranked_documents = [doc for _, doc in sorted(zip(cosine_similarities, document
 print(reranked_documents)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of reranking in RAG systems?
+- [ ] To reduce the number of retrieved documents
+- [✓] To improve the relevance of retrieved documents
+- [ ] To increase the speed of document retrieval
+- [ ] To enhance the computational efficiency of the model
+
+### Quiz 2: Which model is used in the example to generate embeddings for reranking?
+- [ ] GPT-2
+- [✓] BERT
+- [ ] T5
+- [ ] RoBERTa
+
+### Quiz 3: Why not use a cross-encoder for initial retrieval?
+- [ ] It produces worse results
+- [✓] It requires scoring every document against the query — too slow at scale
+- [ ] It needs more storage
+- [ ] It only works with English
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-7.ipynb)

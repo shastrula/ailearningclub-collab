@@ -125,6 +125,26 @@ chunks = chunk_documents_by_similarity(documents)
 print(chunks)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of chunking in RAG systems?
+- [ ] To increase document size
+- [✓] To improve retrieval efficiency
+- [ ] To reduce computational cost
+- [ ] To enhance model complexity
+
+### Quiz 2: Which technique is used for advanced chunking based on semantic similarity?
+- [ ] Entity recognition
+- [ ] Topic modeling
+- [✓] Cosine similarity
+- [ ] TF-IDF vectorization
+
+### Quiz 3: What happens if chunks are too large?
+- [ ] Faster retrieval
+- [✓] Retrieved chunks contain too much irrelevant information
+- [ ] Better embeddings
+- [ ] Lower storage cost
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-4.ipynb)

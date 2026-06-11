@@ -117,6 +117,26 @@ flower_name = iris.target_names[prediction[0]]
 print(f'This flower is: {flower_name}')
 ```
 
+
+## Quiz
+
+### Quiz 1: Why do we split data into training and testing sets?
+- [ ] To make training faster
+- [✓] To test how well the model generalizes to new data
+- [ ] To reduce memory usage
+- [ ] To make the code simpler
+
+### Quiz 2: What is the purpose of using a Random Forest Classifier?
+- [ ] To reduce the dimensionality of the data
+- [✓] To construct multiple decision trees and merge their results to improve accuracy
+- [ ] To perform linear regression
+- [ ] To cluster data points
+
+### Quiz 3: What does the `accuracy_score` function do?
+- [✓] Calculates the accuracy of the model's predictions
+- [ ] Splits the data into training and testing sets
+- [ ] Performs feature scaling
+- [ ] Initializes the Random Forest Classifier
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-7.ipynb)

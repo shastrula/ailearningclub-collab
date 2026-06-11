@@ -101,6 +101,26 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of reranking algorithms in search systems?
+- [ ] To increase the number of search results
+- [✓] To improve the relevance of search results
+- [ ] To reduce the computational cost of searches
+- [ ] To enhance the visual appeal of search results
+
+### Quiz 2: Which machine learning model is used in the example to predict the relevance of search results?
+- [ ] Support Vector Machine
+- [ ] K-Nearest Neighbors
+- [✓] Random Forest Classifier
+- [ ] Neural Network
+
+### Quiz 3: Why is it important to have diverse training data for reranking algorithms?
+- [ ] To increase the model's complexity
+- [✓] To help the model generalize better and provide more accurate reranking
+- [ ] To reduce the training time
+- [ ] To enhance the model's visual output
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-6.ipynb)

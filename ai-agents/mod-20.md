@@ -147,6 +147,26 @@ results = [agent1.perform_task(task), agent2.perform_task(task)]
 print(results)  # Output: ['Agent1 performed traffic optimization', 'Agent2 performed traffic optimization']
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of the ReAct framework?
+- [ ] To enhance user interface design
+- [✓] To improve agent decision-making
+- [ ] To manage database transactions
+- [ ] To optimize network protocols
+
+### Quiz 2: What does LangGraph primarily facilitate?
+- [ ] Single-agent task execution
+- [✓] Multi-agent collaboration
+- [ ] Data encryption
+- [ ] Network routing
+
+### Quiz 3: Why is memory important in AI agents?
+- [ ] To enhance graphical capabilities
+- [✓] To make informed decisions based on past interactions
+- [ ] To optimize network speed
+- [ ] To manage external API calls
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-20.ipynb)

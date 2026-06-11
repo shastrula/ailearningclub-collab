@@ -59,6 +59,26 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+### Quiz 1: What does 'origin' refer to in Git?
+- [ ] Your local repository
+- [✓] The remote repository on GitHub/GitLab
+- [ ] The main branch
+- [ ] Your commit history
+
+### Quiz 2: Which command is used to push your local branch to a remote repository?
+- [ ] `git fetch origin`
+- [✓] `git push -u origin main`
+- [ ] `git merge origin`
+- [ ] `git clone origin`
+
+### Quiz 3: Why is it important to use descriptive branch names?
+- [ ] To make the branch name shorter
+- [✓] To clearly identify the purpose of the branch
+- [ ] To avoid conflicts with other branches
+- [ ] To speed up the merging process
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-4.ipynb)

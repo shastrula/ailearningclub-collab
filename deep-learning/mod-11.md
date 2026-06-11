@@ -110,6 +110,26 @@ for epoch in range(100):
         print(f'Epoch {epoch}, Loss: {loss.item()}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of using RNNs over feedforward neural networks?
+- [ ] They can process data in parallel
+- [✓] They have a memory of previous inputs
+- [ ] They are faster to train
+- [ ] They require less computational resources
+
+### Quiz 2: Which of the following is a common technique to mitigate the vanishing gradient problem in RNNs?
+- [ ] Increasing the learning rate
+- [✓] Using LSTM or GRU cells
+- [ ] Reducing the number of layers
+- [ ] Increasing the batch size
+
+### Quiz 3: In the context of RNNs, what does BPTT stand for?
+- [ ] Backpropagation through layers
+- [✓] Backpropagation through time
+- [ ] Batch processing through time
+- [ ] Binary propagation through time
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-11.ipynb)

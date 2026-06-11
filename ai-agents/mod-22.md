@@ -161,6 +161,16 @@ manufacturing_agent.perform_task()
 distribution_agent.perform_task()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of a ReAct agent?
+- [ ] To perform random actions
+- [✓] To reason and act based on context
+- [ ] To store data in memory
+- [ ] To communicate with other agents
+
+### Quiz 2: What is LangGraph used for
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-22.ipynb)

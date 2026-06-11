@@ -154,6 +154,16 @@ stat, pval = proportions_ztest(count, nobs)
 print(f"p-value: {pval}")
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of CI/CD in MLOps?
+- [ ] To manually deploy models
+- [✓] To automate the integration and deployment of models
+- [ ] To store features centrally
+- [ ] To perform A/B testing
+
+### Quiz 2: What is the main function of a feature store
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-20.ipynb)

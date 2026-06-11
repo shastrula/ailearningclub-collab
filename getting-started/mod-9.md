@@ -138,6 +138,26 @@ for epoch in range(10):  # loop over the dataset multiple times
     optimizer.step()    # update parameters
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the most important habit for AI developers?
+- [ ] Writing perfect code on the first try
+- [✓] Using Git to track changes and collaborate
+- [ ] Memorizing all algorithms
+- [ ] Working alone on projects
+
+### Quiz 2: Which of the following is a core machine learning concept?
+- [ ] Writing perfect code on the first try
+- [✓] Understanding decision trees
+- [ ] Memorizing all algorithms
+- [ ] Working alone on projects
+
+### Quiz 3: What is a Retrieval-Augmented Generation (RAG) system used for?
+- [ ] Writing perfect code on the first try
+- [ ] Memorizing all algorithms
+- [✓] Fetching relevant information and generating coherent responses
+- [ ] Working alone on projects
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-9.ipynb)

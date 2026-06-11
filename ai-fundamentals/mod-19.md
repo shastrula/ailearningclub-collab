@@ -122,6 +122,26 @@ cv_scores = cross_val_score(model, X, y, cv=5)
 print(f'Cross-validation scores: {cv_scores}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of feature scaling in machine learning?
+- [ ] To reduce the dimensionality of the data
+- [✓] To make features comparable by standardizing the range of features
+- [ ] To encode categorical variables
+- [ ] To split the dataset into training and testing sets
+
+### Quiz 2: Which metric is commonly used to evaluate the performance of a classification model?
+- [ ] Mean Squared Error
+- [ ] R-squared
+- [✓] Accuracy
+- [ ] Mean Absolute Error
+
+### Quiz 3: What is the purpose of cross-validation in model evaluation?
+- [ ] To increase the size of the training dataset
+- [✓] To assess how the results of a statistical analysis will generalize to an independent data set
+- [ ] To reduce the computational cost of model training
+- [ ] To select the best hyperparameters for the model
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-19.ipynb)

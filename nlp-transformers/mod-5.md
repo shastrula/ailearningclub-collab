@@ -113,6 +113,26 @@ print(f'Transformers version: {transformers.__version__}')
 print(f'Torch version: {torch.__version__}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What command is used to activate a virtual environment on Unix or MacOS?
+- [ ] nlp-env\Scripts\activate
+- [✓] source nlp-env/bin/activate
+- [ ] nlp-env\bin\activate
+- [ ] activate nlp-env
+
+### Quiz 2: Which library is essential for working with BERT models?
+- [ ] nltk
+- [✓] transformers
+- [ ] tensorflow
+- [ ] keras
+
+### Quiz 3: Why is it important to use a virtual environment?
+- [ ] To speed up the installation process
+- [✓] To isolate project dependencies and avoid conflicts
+- [ ] To reduce the size of the Python installation
+- [ ] To automatically update all libraries
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-5.ipynb)

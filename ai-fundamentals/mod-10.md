@@ -95,6 +95,26 @@ for i in range(0, 4, 2):
 print(output)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of convolutional layers in a CNN?
+- [ ] To increase the dimensionality of the input
+- [✓] To extract features from the input
+- [ ] To fully connect all neurons in the network
+- [ ] To perform non-linear transformations
+
+### Quiz 2: What is the main function of pooling layers in a CNN?
+- [ ] To increase the number of parameters
+- [ ] To extract features from the input
+- [✓] To reduce the spatial dimensions of the input
+- [ ] To perform non-linear transformations
+
+### Quiz 3: Which of the following is a real-world application of CNNs?
+- [ ] Weather forecasting
+- [✓] Object detection in self-driving cars
+- [ ] Stock market prediction
+- [ ] Language translation
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-10.ipynb)

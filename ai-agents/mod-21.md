@@ -104,6 +104,26 @@ def communicate():
 env.run()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of the ReAct framework?
+- [ ] To manage databases
+- [✓] To develop AI agents that can reason and act
+- [ ] To create web applications
+- [ ] To design user interfaces
+
+### Quiz 2: What does LangGraph primarily facilitate in AI development?
+- [ ] Single-agent interactions
+- [ ] Database management
+- [✓] Multi-agent systems and interactions
+- [ ] User interface design
+
+### Quiz 3: Which of the following is a benefit of using the ReAct framework?
+- [ ] Enhanced graphic design capabilities
+- [✓] Modularity and reusable behaviors
+- [ ] Improved database query performance
+- [ ] Faster web page load times
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-21.ipynb)

@@ -110,6 +110,26 @@ np.array: Array of embeddings
 print(f'Embeddings: {embeddings}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of a vector database?
+- [ ] To store relational data in tables
+- [✓] To handle high-dimensional vector data efficiently
+- [ ] To perform simple CRUD operations
+- [ ] To manage text documents
+
+### Quiz 2: What do embeddings represent in natural language processing?
+- [ ] Raw text data
+- [✓] Vector representations of words or sentences that capture semantic meaning
+- [ ] Database tables
+- [ ] SQL queries
+
+### Quiz 3: Why use a vector database instead of a regular database for RAG?
+- [ ] Lower cost
+- [✓] Faster similarity search on high-dimensional data
+- [ ] Better SQL support
+- [ ] Easier backups
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-2.ipynb)

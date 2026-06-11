@@ -129,6 +129,26 @@ inputs = tokenizer(input_texts, padding=True, truncation=True, return_tensors='p
 print(inputs)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary benefit of gradient checkpointing?
+- [ ] Increases training speed
+- [✓] Reduces memory usage
+- [ ] Improves model accuracy
+- [ ] Decreases input size
+
+### Quiz 2: What is the main advantage of batch processing?
+- [ ] Reduces memory usage
+- [✓] Speeds up inference and training
+- [ ] Improves model accuracy
+- [ ] Decreases input size
+
+### Quiz 3: Which technique uses both 16-bit and 32-bit floating point types to reduce memory consumption?
+- [✓] Mixed precision training
+- [ ] Gradient checkpointing
+- [ ] Batch processing
+- [ ] Knowledge distillation
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-24.ipynb)

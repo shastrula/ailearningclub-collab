@@ -109,6 +109,26 @@ df = pd.read_csv(pd.compat.StringIO(csv_content))
 print(df.head())
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of Amazon SageMaker Model Monitoring?
+- [ ] To train new models
+- [✓] To monitor the performance of existing models in production
+- [ ] To store model artifacts
+- [ ] To deploy models to endpoints
+
+### Quiz 2: Where are the monitoring results stored?
+- [ ] Local machine
+- [✓] Amazon S3 bucket
+- [ ] Amazon RDS
+- [ ] Amazon DynamoDB
+
+### Quiz 3: What is the importance of interpreting monitoring results?
+- [✓] To understand if the model is drifting or if there are any anomalies in the data
+- [ ] To retrain the model
+- [ ] To deploy the model
+- [ ] To store model artifacts
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-18.ipynb)

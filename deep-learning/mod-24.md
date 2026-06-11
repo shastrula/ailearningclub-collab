@@ -146,6 +146,26 @@ with torch.no_grad():
 print(f'Accuracy on the validation set: {100 * correct / total}%')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the purpose of the 'transform' variable in the data preprocessing code?
+- [ ] To load the dataset
+- [✓] To normalize the data
+- [ ] To shuffle the data
+- [ ] To split the dataset
+
+### Quiz 2: What does the 'nn.Linear' function do in the model building code?
+- [✓] It initializes a linear layer
+- [ ] It defines the loss function
+- [ ] It sets up the optimizer
+- [ ] It normalizes the input data
+
+### Quiz 3: Why is it important to split the dataset into training and validation sets?
+- [ ] To increase the size of the dataset
+- [✓] To evaluate the model's performance on unseen data
+- [ ] To reduce training time
+- [ ] To normalize the data
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-24.ipynb)

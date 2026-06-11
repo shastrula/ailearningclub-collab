@@ -107,6 +107,26 @@ for doc, score in ranked_docs:
     print(f'Document: {doc}, Similarity: {score}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of using embeddings in a vector database?
+- [ ] To store data points as integers
+- [✓] To capture semantic meaning of text
+- [ ] To perform keyword matching
+- [ ] To encrypt data
+
+### Quiz 2: What is the goal of reranking in a hybrid search system?
+- [ ] To increase the number of search results
+- [✓] To reorder results based on relevance
+- [ ] To filter out irrelevant documents
+- [ ] To improve the speed of the search
+
+### Quiz 3: Which of the following techniques is used to break down large documents into smaller, manageable pieces?
+- [ ] Embedding
+- [✓] Chunking
+- [ ] Reranking
+- [ ] Vectorization
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-10.ipynb)

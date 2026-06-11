@@ -73,6 +73,26 @@ data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/sol
 print(data.head())
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of Git?
+- [ ] To compile code
+- [✓] To track changes in a codebase
+- [ ] To run machine learning models
+- [ ] To design user interfaces
+
+### Quiz 2: What should you ensure during Python installation on Windows?
+- [✓] Add Python to PATH
+- [ ] Install all optional features
+- [ ] Choose a custom installation folder
+- [ ] Install pip separately
+
+### Quiz 3: Which Python library is used in the hands-on code example to load and display data?
+- [ ] NumPy
+- [✓] Pandas
+- [ ] Matplotlib
+- [ ] Scikit-learn
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-2.ipynb)

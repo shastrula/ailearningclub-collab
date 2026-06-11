@@ -85,6 +85,26 @@ plt.ylabel('y')
 plt.show()  # Display the plot
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of version control systems like Git in AI development?
+- [ ] To automatically write and format Python code.
+- [✓] To track changes in code over time, revert failed experiments, and enable seamless collaboration with other engineers.
+- [ ] To train machine learning models significantly faster.
+- [ ] To deploy completed models to a cloud server like AWS.
+
+### Quiz 2: Why is Python considered the dominant language for Artificial Intelligence and Machine Learning?
+- [ ] It executes code significantly faster than languages like C++ or Java.
+- [ ] It is the only programming language capable of running on modern GPUs.
+- [✓] It has a massive ecosystem of specialized AI libraries (like PyTorch and Pandas) and a clean syntax that allows engineers to focus on logic rather than boilerplate code.
+- [ ] It is required by Apple and Microsoft for all mobile application development.
+
+### Quiz 3: Which development environment is famously used by data scientists for interactive coding, data exploration, and creating visual, step-by-step documentation?
+- [ ] Visual Studio (C++)
+- [ ] Eclipse
+- [✓] Jupyter Notebooks
+- [ ] Android Studio
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-1.ipynb)

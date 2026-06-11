@@ -123,6 +123,26 @@ result = langchain.query(query)
 print(f'LangChain Result: {result}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary benefit of using advanced vector databases in RAG systems?
+- [ ] Reduced computational cost
+- [✓] Improved query accuracy
+- [ ] Lower memory usage
+- [ ] Faster training times
+
+### Quiz 2: Which type of embeddings are designed to capture richer semantic information in RAG systems?
+- [ ] Static embeddings
+- [ ] One-hot embeddings
+- [✓] Contextual embeddings
+- [ ] Binary embeddings
+
+### Quiz 3: What is the purpose of chunking strategies in RAG systems?
+- [ ] To reduce memory usage
+- [✓] To improve retrieval efficiency
+- [ ] To enhance model training
+- [ ] To simplify data storage
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-18.ipynb)

@@ -100,6 +100,26 @@ for i in range(10):
     print(f'Iteration {i+1}: x = {x}, f(x) = {f(x)}')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the result of adding the vectors [1, 2, 3] and [4, 5, 6]?
+- [ ] [5, 7, 8]
+- [✓] [5, 7, 9]
+- [ ] [6, 7, 9]
+- [ ] [4, 6, 7]
+
+### Quiz 2: In the gradient descent example, what is the primary purpose of the derivative function?
+- [ ] To calculate the sum of the function values
+- [ ] To determine the optimal learning rate
+- [✓] To find the slope of the function at a given point
+- [ ] To initialize the starting value of x
+
+### Quiz 3: Which of the following is a common optimization algorithm used in machine learning?
+- [ ] Newton's Method
+- [✓] Gradient Descent
+- [ ] Simplex Algorithm
+- [ ] Genetic Algorithm
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-2.ipynb)

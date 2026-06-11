@@ -121,6 +121,26 @@ train_dataset = CustomDataset(train_encodings, train_labels)
 val_dataset = CustomDataset(val_encodings, val_labels)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of fine-tuning a pre-trained BERT model?
+- [ ] To train the model from scratch
+- [✓] To adapt the pre-trained model to a specific task with limited data
+- [ ] To replace the pre-trained model entirely
+- [ ] To ignore the pre-trained weights
+
+### Quiz 2: Which Hugging Face class simplifies the process of fine-tuning a BERT model?
+- [✓] Trainer
+- [ ] Tokenizer
+- [ ] ModelForSequenceClassification
+- [ ] TrainingArguments
+
+### Quiz 3: What does the `num_labels` parameter in `BertForSequenceClassification` specify?
+- [ ] The number of training epochs
+- [✓] The number of output classes for the classification task
+- [ ] The batch size for training
+- [ ] The learning rate for the model
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-8.ipynb)

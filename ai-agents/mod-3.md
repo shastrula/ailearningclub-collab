@@ -124,6 +124,26 @@ result = workflow.run()
 print(result)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of LangGraph?
+- [ ] To create simple text transformations
+- [✓] To build complex workflows with language models
+- [ ] To manage database connections
+- [ ] To handle web requests
+
+### Quiz 2: How does LangGraph handle conditional workflows?
+- [ ] Using random selection
+- [✓] By evaluating output and directing flow accordingly
+- [ ] By using external APIs
+- [ ] By storing data in a database
+
+### Quiz 3: Which component of LangGraph represents individual steps in the workflow?
+- [ ] Edges
+- [✓] Nodes
+- [ ] Conditions
+- [ ] Branches
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-3.ipynb)

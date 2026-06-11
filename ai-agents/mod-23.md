@@ -129,6 +129,26 @@ results = graph.execute()
 print(results)  # Output: {'A': 'Agent A completed task', 'B': 'Agent B completed task'}
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of the ReAct framework?
+- [ ] To store data
+- [✓] To reason and act on tasks
+- [ ] To fetch external data
+- [ ] To manage user interfaces
+
+### Quiz 2: What does LangGraph enable in multi-agent systems?
+- [ ] Single-agent tasks
+- [ ] Data storage
+- [✓] Agent collaboration
+- [ ] User interface design
+
+### Quiz 3: Why is memory important for AI agents?
+- [ ] To enhance graphical capabilities
+- [✓] To enable context awareness and improved performance
+- [ ] To manage external APIs
+- [ ] To design user interfaces
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-23.ipynb)

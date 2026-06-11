@@ -105,6 +105,26 @@ nx.draw(lang_graph, pos, with_labels=True, node_color='lightblue', edge_color='g
 plt.show()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of the ReAct framework in AI agents?
+- [ ] To handle user input
+- [✓] To reason about actions and their consequences
+- [ ] To manage database queries
+- [ ] To perform natural language processing
+
+### Quiz 2: What is LangGraph primarily used for in multi-agent systems?
+- [ ] Data storage
+- [✓] Agent interaction visualization
+- [ ] Natural language processing
+- [ ] User interface design
+
+### Quiz 3: Which of the following is a common use case for multi-agent systems?
+- [ ] Social media content moderation
+- [✓] Smart grid management
+- [ ] Simple CRUD applications
+- [ ] Basic web scraping tasks
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-7.ipynb)

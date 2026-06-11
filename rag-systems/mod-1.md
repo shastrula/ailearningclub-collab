@@ -109,6 +109,28 @@ print(f"User Query: {user_query}")
 print(f"Most Relevant Document: '{retrieved_chunk}'")
 ```
 
+
+## Quiz
+
+Test your understanding of the core RAG concepts.
+
+### Quiz 1: What is the primary function of a vector database in a RAG system?
+- [ ] To store the Large Language Model itself.
+- [ ] To store raw text documents in a compressed format.
+- [✓] To store text chunks and their corresponding embedding vectors, enabling efficient similarity search.
+- [ ] To generate text answers based on a user's query.
+
+### Quiz 2: Why is "chunking" a necessary step in the RAG indexing pipeline?
+- [ ] To make the documents harder to read for security purposes.
+- [✓] To break down large documents into smaller, semantically coherent pieces that can fit within an LLM's limited context window.
+- [ ] To increase the number of files stored in the vector database.
+- [ ] To convert the documents into a different language.
+
+### Quiz 3: During the retrieval step, how does the system determine which documents are "relevant" to the user's query?
+- [ ] It performs a keyword search for the words in the query.
+- [ ] It asks the LLM which documents seem most relevant.
+- [✓] It calculates the vector similarity (e.g., cosine similarity or L2 distance) between the query embedding and all chunk embeddings in the database.
+- [ ] It retrieves documents at random to ensure diversity.
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-1.ipynb)

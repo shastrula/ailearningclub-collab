@@ -127,6 +127,26 @@ print(f'Best parameters: {grid_search.best_params_}')
 print(f'Best cross-validation score: {grid_search.best_score_}')
 ```
 
+
+## Quiz
+
+### Quiz 1: Which evaluation metric is best for imbalanced datasets?
+- [ ] Accuracy
+- [ ] Precision
+- [✓] F1 Score
+- [ ] AUC-ROC
+
+### Quiz 2: What is the purpose of K-fold cross-validation?
+- [ ] To increase model complexity
+- [ ] To reduce overfitting
+- [✓] To evaluate model performance on different data subsets
+- [ ] To select the best hyperparameters
+
+### Quiz 3: Which technique is used for hyperparameter tuning?
+- [ ] Cross-validation
+- [✓] Grid Search
+- [ ] Random Forest
+- [ ] K-means Clustering
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-6.ipynb)

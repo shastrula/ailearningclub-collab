@@ -91,6 +91,26 @@ bias_score = detect_bias(dataset)
 print(f'Bias Score: {bias_score}')  # Output: Bias Score: 0.3
 ```
 
+
+## Quiz
+
+### Quiz 1: What is a critical step in ensuring data privacy in RAG systems?
+- [ ] Ignoring data encryption
+- [✓] Implementing robust encryption methods
+- [ ] Using weak passwords
+- [ ] Storing data in plain text
+
+### Quiz 2: Which method helps in detecting bias in a dataset used for training RAG systems?
+- [ ] Increasing dataset size
+- [ ] Using a single data point
+- [✓] Implementing diverse dataset curation
+- [ ] Ignoring dataset diversity
+
+### Quiz 3: Why is it important to mitigate bias in RAG systems?
+- [ ] To increase dataset size
+- [✓] To ensure equitable results for all users
+- [ ] To ignore legal compliance
+- [ ] To store data in plain text
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-17.ipynb)

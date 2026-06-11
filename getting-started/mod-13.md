@@ -59,6 +59,26 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Quiz
+
+### Quiz 1: What should you do before starting work on a feature?
+- [ ] Delete all local branches
+- [✓] Pull the latest changes from main
+- [ ] Push your changes immediately
+- [ ] Create a new repository
+
+### Quiz 2: Which Git command is used to resolve a merge conflict?
+- [ ] git merge --abort
+- [✓] Edit the conflicted file and commit the changes
+- [ ] git rebase
+- [ ] git checkout
+
+### Quiz 3: What is the best practice for naming a Pull Request?
+- [ ] Use a single word
+- [✓] Use a descriptive title like "Add preprocessing pipeline"
+- [ ] Use numbers only
+- [ ] Use emojis only
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-13.ipynb)

@@ -128,6 +128,49 @@ plt.legend(title='Target Classes')
 plt.show()
 ```
 
+
+## Quiz
+
+### In-depth Explanation
+
+**t-Distributed Stochastic Neighbor Embedding (t-SNE)** is a machine learning algorithm for visualization developed by Laurens van der Maaten and Geoffrey Hinton. It is a nonlinear dimensionality reduction technique well-suited for embedding high-dimensional data for visualization in a low-dimensional space of two or three dimensions. Specifically, it models each high-dimensional object by a two- or three-dimensional point in such a way that similar objects are modeled by nearby points and dissimilar objects are modeled by distant points.
+
+**Why use t-SNE?**
+- **Visualization:** Excellent for visualizing high-dimensional data in 2D or 3D.
+- **Cluster Identification:** Helps in identifying clusters within the data.
+- **Pattern Recognition:** Useful for recognizing patterns and structures in complex datasets.
+
+**How t-SNE works:**
+1. **Probability Distribution:** t-SNE converts the high-dimensional Euclidean distances between points into conditional probabilities that represent similarities.
+2. **Low-Dimensional Mapping:** It then defines a similar probability distribution in the low-dimensional space and tries to minimize the Kullback-Leibler divergence between the two distributions to find the best low-dimensional representation.
+
+### Real-World Case Study
+
+**Image Recognition:** In image recognition, t-SNE is used to visualize the high-dimensional feature space of images. This helps in understanding how different images are clustered and can reveal underlying patterns and structures. For example, in a dataset of handwritten digits, t-SNE can help visualize how digits of the same class cluster together, providing insights into the feature space.
+
+### Hands-On Code Example
+
+
+
+### Interactive Quizzes
+
+#### Quiz 1: What is the primary goal of PCA?
+- [ ] To increase the number of features
+- [✓] To reduce the number of features while preserving variance
+- [ ] To classify data into categories
+- [ ] To predict continuous values
+
+#### Quiz 2: Which algorithm is best suited for visualizing high-dimensional data in 2D or 3D?
+- [ ] K-Means Clustering
+- [ ] Linear Regression
+- [✓] t-SNE
+- [ ] Decision Trees
+
+#### Quiz 3: What does t-SNE stand for?
+- [ ] Time-Series Neural Embedding
+- [✓] t-Distributed Stochastic Neighbor Embedding
+- [ ] Two-Step Neural Engineering
+- [ ] Temporal State Network Embedding
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-8.ipynb)

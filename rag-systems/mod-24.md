@@ -117,6 +117,26 @@ generated_text = generator(prompt, max_length=50, num_return_sequences=1)
 print(generated_text)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of a vector database in a RAG system?
+- [ ] Storing raw text data
+- [✓] Indexing and searching text embeddings
+- [ ] Generating natural language responses
+- [ ] Performing keyword-based searches
+
+### Quiz 2: Which component of a RAG system is responsible for refining search results based on relevance?
+- [ ] Embeddings
+- [ ] Chunking
+- [✓] Reranking
+- [ ] LangChain
+
+### Quiz 3: What is the purpose of hybrid search in a RAG system?
+- [ ] To store raw text data
+- [✓] To combine keyword and semantic searches for optimal results
+- [ ] To generate natural language responses
+- [ ] To perform only keyword-based searches
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-24.ipynb)

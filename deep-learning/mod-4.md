@@ -136,6 +136,26 @@ model = ActivationNN()
 print(model)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary role of activation functions in a neural network?
+- [ ] To increase the computational speed
+- [✓] To introduce non-linearity into the model
+- [ ] To reduce the number of layers
+- [ ] To eliminate the need for backpropagation
+
+### Quiz 2: Which of the following is NOT a type of neural network layer?
+- [ ] Convolutional Layer
+- [ ] Recurrent Layer
+- [ ] Linear Layer
+- [✓] Activation Layer
+
+### Quiz 3: What is the purpose of Dropout in neural networks?
+- [ ] Speed up training
+- [✓] Reduce overfitting
+- [ ] Normalize weights
+- [ ] Compute gradients
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-4.ipynb)

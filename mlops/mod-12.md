@@ -116,6 +116,26 @@ config = FairingConfig(
 config.deploy()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of setting up Kubeflow on a Kubernetes cluster?
+- [ ] To manage databases
+- [✓] To streamline ML workflows
+- [ ] To deploy web applications
+- [ ] To monitor network traffic
+
+### Quiz 2: Which Kubeflow component is used to define and manage ML workflows?
+- [ ] Katib
+- [ ] Central Dashboard
+- [✓] Kubeflow Pipelines
+- [ ] TensorBoard
+
+### Quiz 3: Why is it important to serve models with Kubeflow?
+- [ ] To manage databases
+- [✓] To easily deploy, scale, and monitor models
+- [ ] To deploy web applications
+- [ ] To monitor network traffic
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-12.ipynb)

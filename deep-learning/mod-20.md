@@ -103,6 +103,26 @@ loaded_model.load_state_dict(torch.load('simple_model.pth'))
 loaded_model.eval()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of data normalization?
+- [ ] To increase the size of the dataset
+- [✓] To ensure all input features are on a similar scale
+- [ ] To decrease the training time
+- [ ] To make the model more complex
+
+### Quiz 2: Which PyTorch function is used to save a model's state dictionary?
+- [ ] torch.save_model
+- [ ] torch.save_state
+- [✓] torch.save
+- [ ] torch.model_save
+
+### Quiz 3: Why is data augmentation important in deep learning?
+- [ ] To reduce the size of the dataset
+- [✓] To make the model more robust to variations in the data
+- [ ] To simplify the model architecture
+- [ ] To speed up training without improving performance
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-20.ipynb)

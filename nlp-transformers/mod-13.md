@@ -100,6 +100,67 @@ print(f'Cross-Validation Scores: {scores}')
 print(f'Mean Cross-Validation Score: {np.mean(scores)}')
 ```
 
+
+## Quiz
+
+This module delves into the critical process of evaluating the performance of NLP models, particularly focusing on BERT and other transformer models. Understanding how to effectively assess model performance is essential for ensuring that your models are not only accurate but also reliable and generalizable.
+
+### Understanding Evaluation Metrics
+
+Evaluation metrics are crucial for assessing how well a model performs on a given task. Common metrics include accuracy, precision, recall, F1 score, and AUC-ROC. Each metric provides different insights into model performance, and choosing the right one depends on the specific task and the nature of the data.
+
+#### In-depth Explanation
+
+- **Accuracy**: Measures the proportion of correct predictions out of all predictions. It is simple but can be misleading for imbalanced datasets.
+- **Precision**: Measures the proportion of true positive predictions out of all positive predictions. It is useful when the cost of false positives is high.
+- **Recall**: Measures the proportion of true positive predictions out of all actual positives. It is useful when the cost of false negatives is high.
+- **F1 Score**: The harmonic mean of precision and recall. It provides a balance between precision and recall, making it a good choice for imbalanced datasets.
+- **AUC-ROC**: Measures the ability of the model to distinguish between positive and negative classes. It is useful for evaluating models on imbalanced datasets.
+
+#### Real-World Case Study
+
+In the healthcare industry, precision is often more critical than recall when diagnosing diseases. For example, in cancer detection, a false positive (indicating cancer when there is none) can lead to unnecessary anxiety and further invasive testing, whereas a false negative (missing a cancer diagnosis) can be life-threatening. Therefore, models are often tuned to maximize precision.
+
+#### Hands-On Code Example
+
+
+
+### Cross-Validation
+
+Cross-validation is a technique used to assess the performance of a model by training and evaluating it on different subsets of the data. This helps in understanding the model's ability to generalize to unseen data and mitigates the risk of overfitting.
+
+#### In-depth Explanation
+
+- **K-Fold Cross-Validation**: The dataset is split into K subsets. The model is trained on K-1 subsets and validated on the remaining one. This process is repeated K times, each time with a different subset as the validation set.
+- **Stratified K-Fold Cross-Validation**: Ensures that each fold is a good representative of the whole by preserving the percentage of samples for each class.
+
+#### Real-World Case Study
+
+In financial forecasting, models are often validated using cross-validation to ensure they generalize well across different market conditions. This is critical because financial data can be highly volatile and non-stationary.
+
+#### Hands-On Code Example
+
+
+
+### Interactive Quizzes
+
+### Quiz 1: What does the F1 score represent?
+- [ ] The arithmetic mean of precision and recall
+- [✓] The harmonic mean of precision and recall
+- [ ] The geometric mean of precision and recall
+- [ ] The maximum of precision and recall
+
+### Quiz 2: What is the primary purpose of cross-validation?
+- [ ] To reduce the training time of the model
+- [✓] To ensure the model generalizes well to unseen data
+- [ ] To increase the accuracy of the model
+- [ ] To reduce the complexity of the model
+
+### Quiz 3: Which metric is most important in a scenario where false positives are more costly than false negatives?
+- [✓] Precision
+- [ ] Recall
+- [ ] Accuracy
+- [ ] F1 Score
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-13.ipynb)

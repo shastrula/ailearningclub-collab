@@ -129,6 +129,26 @@ reranked_results = [result for _, result in sorted(zip(similarities, [result for
 print(reranked_results)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of a vector database in hybrid search systems?
+- [ ] Storing raw text data
+- [✓] Storing and retrieving vector embeddings for similarity searches
+- [ ] Performing keyword searches
+- [ ] Generating natural language responses
+
+### Quiz 2: What is the purpose of chunking in hybrid search?
+- [ ] To increase the number of search results
+- [ ] To filter out irrelevant documents
+- [✓] To break down large documents into smaller, manageable pieces
+- [ ] To convert text into vector embeddings
+
+### Quiz 3: What is the goal of reranking in hybrid search?
+- [ ] To increase the number of search results
+- [✓] To reorder search results based on relevance
+- [ ] To filter out irrelevant documents
+- [ ] To convert text into vector embeddings
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-12.ipynb)

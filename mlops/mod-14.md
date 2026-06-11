@@ -137,6 +137,26 @@ input_data ='s3://your-bucket/xgboost/input/train'
 xgb.fit({'train': input_data})
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of setting up an IAM role in SageMaker?
+- [ ] To store model artifacts
+- [✓] To grant SageMaker permissions to access AWS resources
+- [ ] To define the model architecture
+- [ ] To specify the training algorithm
+
+### Quiz 2: Which parameter in the XGBoost estimator configuration specifies the learning rate?
+- [ ] max_depth
+- [✓] eta
+- [ ] gamma
+- [ ] min_child_weight
+
+### Quiz 3: Where is the input data for training typically stored?
+- [ ] Local file system
+- [✓] Amazon S3
+- [ ] RDS
+- [ ] DynamoDB
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-14.ipynb)

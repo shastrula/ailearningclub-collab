@@ -93,6 +93,26 @@ print('Tokens:', tokens)
 print('Token IDs:', token_ids)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of subword tokenization?
+- [ ] It increases the size of the vocabulary.
+- [✓] It reduces the size of the vocabulary.
+- [ ] It eliminates the need for special tokens.
+- [ ] It simplifies the tokenization process.
+
+### Quiz 2: What is a potential pitfall when creating a custom tokenizer?
+- [✓] Forgetting to add special tokens.
+- [ ] Using a pre-trained tokenizer.
+- [ ] Overcomplicating the tokenization process.
+- [ ] Not handling domain-specific vocabulary.
+
+### Quiz 3: Which of the following is a real-world application of custom tokenization?
+- [ ] General news article summarization.
+- [✓] Medical text analysis.
+- [ ] Social media sentiment analysis.
+- [ ] Generic email classification.
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-9.ipynb)

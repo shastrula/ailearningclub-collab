@@ -125,6 +125,26 @@ tuner = RandomSearch(
 tuner.search(x_train, y_train, epochs=5, validation_data=(x_test, y_test))
 ```
 
+
+## Quiz
+
+### Quiz 1: What is transfer learning?
+- [ ] A technique where a model is trained from scratch for each new task
+- [✓] A technique where a pre-trained model is used as the starting point for a new task
+- [ ] A technique where multiple models are trained simultaneously
+- [ ] A technique where models are trained using only synthetic data
+
+### Quiz 2: What does AutoML aim to automate?
+- [ ] Data preprocessing
+- [✓] Model selection and hyperparameter tuning
+- [ ] Data visualization
+- [ ] Deployment of models
+
+### Quiz 3: Which of the following is a benefit of using transfer learning?
+- [ ] It requires more data for training
+- [✓] It saves time and computational resources
+- [ ] It always achieves higher accuracy than training from scratch
+- [ ] It is only applicable to text data
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-20.ipynb)

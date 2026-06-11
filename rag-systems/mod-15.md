@@ -144,6 +144,26 @@ result = qa_chain.run(query)
 print('Result:', result)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary function of a vector database in a RAG system?
+- [ ] Storing raw text documents
+- [✓] Storing and retrieving high-dimensional vectors
+- [ ] Generating text embeddings
+- [ ] Performing exact string matches
+
+### Quiz 2: Which technique is used to refine the initial set of retrieved documents in a RAG system?
+- [ ] Chunking
+- [ ] Embedding
+- [✓] Reranking
+- [ ] Vectorization
+
+### Quiz 3: What does LangChain provide for developing applications powered by language models?
+- [✓] Tools for chaining together different components
+- [ ] A pre-trained language model
+- [ ] A vector database
+- [ ] A text embedding model
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-15.ipynb)

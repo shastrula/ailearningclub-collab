@@ -99,6 +99,26 @@ feature_vector = store.get_online_features(
 print(feature_vector)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of feature engineering in machine learning?
+- [ ] To reduce model complexity
+- [✓] To improve model performance by creating meaningful features
+- [ ] To increase dataset size
+- [ ] To automate model training
+
+### Quiz 2: What is the main benefit of using a feature store?
+- [ ] To store raw data
+- [ ] To improve model accuracy
+- [✓] To centralize and standardize feature management
+- [ ] To automate data preprocessing
+
+### Quiz 3: Which of the following is NOT a benefit of using a feature store?
+- [ ] Centralization
+- [ ] Standardization
+- [ ] Collaboration
+- [✓] Reducing model training time
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-4.ipynb)

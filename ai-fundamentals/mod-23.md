@@ -118,6 +118,26 @@ model.fit(client_data_2, client_labels_2, epochs=1)
 print('Federated Learning completed.')
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary goal of Explainable AI (XAI)?
+- [ ] To increase model accuracy
+- [✓] To make AI models more transparent and interpretable
+- [ ] To reduce model training time
+- [ ] To enhance data collection methods
+
+### Quiz 2: Which technique is used in Federated Learning to preserve data privacy?
+- [ ] Centralized data storage
+- [ ] Data encryption
+- [✓] Distributed data training without sharing
+- [ ] Increased data collection
+
+### Quiz 3: What is a real-world application of Federated Learning?
+- [ ] Online banking fraud detection
+- [✓] Gboard keyboard next-word prediction
+- [ ] Social media sentiment analysis
+- [ ] Weather forecasting
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-23.ipynb)

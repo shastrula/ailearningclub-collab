@@ -204,6 +204,26 @@ trainer = Trainer(
 trainer.train()
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of model optimization?
+- [ ] To increase the model size
+- [✓] To enhance model performance and efficiency
+- [ ] To reduce the training time
+- [ ] To eliminate the need for fine-tuning
+
+### Quiz 2: What is pruning in the context of model optimization?
+- [ ] Increasing the number of layers in the model
+- [✓] Removing unnecessary parameters from the model
+- [ ] Reducing the learning rate during training
+- [ ] Training a model from scratch
+
+### Quiz 3: What is fine-tuning in the context of transformer models?
+- [ ] Training a model from scratch
+- [✓] Adjusting a pre-trained model to a specific task
+- [ ] Increasing the number of layers in the model
+- [ ] Reducing the learning rate during training
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-10.ipynb)

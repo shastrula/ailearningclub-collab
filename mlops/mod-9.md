@@ -115,6 +115,26 @@ else:
     print("The difference is not statistically significant.")
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary purpose of A/B testing in machine learning?
+- [ ] To train models
+- [✓] To compare model performance
+- [ ] To preprocess data
+- [ ] To visualize data
+
+### Quiz 2: Which statistical test is commonly used to determine the significance of differences in A/B testing?
+- [ ] ANOVA
+- [ ] Chi-squared test
+- [✓] T-test
+- [ ] Z-test
+
+### Quiz 3: What does a p-value less than 0.05 indicate in A/B testing?
+- [✓] The difference is statistically significant.
+- [ ] The difference is not statistically significant.
+- [ ] The test is invalid.
+- [ ] The sample size is too small.
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-9.ipynb)

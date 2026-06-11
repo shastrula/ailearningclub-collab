@@ -118,6 +118,26 @@ result = graph.run('start')
 print(result)
 ```
 
+
+## Quiz
+
+### Quiz 1: What does the ReAct framework enable AI agents to do?
+- [ ] Perform complex mathematical calculations
+- [✓] Reason about their actions and make decisions
+- [ ] Generate natural language text
+- [ ] Create visual art
+
+### Quiz 2: What is the purpose of tool calling in AI agents?
+- [ ] To enhance graphical user interfaces
+- [✓] To allow agents to invoke external tools or functions
+- [ ] To improve natural language processing
+- [ ] To create autonomous workflows
+
+### Quiz 3: How does memory enhance the capabilities of AI agents?
+- [ ] By allowing agents to perform complex mathematical calculations
+- [✓] By enabling agents to retain information across interactions
+- [ ] By improving the graphical user interface
+- [ ] By creating autonomous workflows
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-18.ipynb)

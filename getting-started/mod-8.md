@@ -91,6 +91,29 @@ optimizer = optim.SGD(net.parameters(), lr=0.01)
 print(net)
 ```
 
+
+## Quiz
+
+### Quiz 1: Why is it important to organize your ML project?
+
+- [ ] It makes the project look neat
+- [✓] It improves collaboration, maintainability, and reproducibility
+- [ ] It reduces the size of the project
+- [ ] It is not important
+
+### Quiz 2: What should you include in your `.gitignore` file?
+
+- [ ] All Python files
+- [✓] Large data files and generated models
+- [ ] All files in your project
+- [ ] Nothing - it's optional
+
+### Quiz 3: What is the purpose of the `git commit -m` command?
+
+- [ ] To merge branches
+- [✓] To save changes with a descriptive message
+- [ ] To delete files
+- [ ] To create a new branch
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-8.ipynb)

@@ -97,6 +97,26 @@ predictions = model.predict(X_poly)
 print(predictions)
 ```
 
+
+## Quiz
+
+### Quiz 1: What is the primary advantage of using Gradient Boosting Machines?
+- [ ] They are simple to implement
+- [✓] They improve performance iteratively
+- [ ] They can handle missing values
+- [ ] They require less computational resources
+
+### Quiz 2: Which feature engineering technique creates new features by combining existing ones in a polynomial form?
+- [ ] Interaction terms
+- [ ] Domain-specific transformations
+- [✓] Polynomial features
+- [ ] Normalization
+
+### Quiz 3: Why is feature engineering important in machine learning?
+- [ ] It simplifies the model
+- [✓] It can significantly enhance the predictive power of machine learning models
+- [ ] It reduces the need for data preprocessing
+- [ ] It always leads to overfitting
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-15.ipynb)
