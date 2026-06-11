@@ -59,6 +59,70 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import faiss
+import numpy as np
+
+# Create a FAISS index
+d = 128  # Dimension of the vectors
+index = faiss.IndexFlatL2(d)
+
+# Add vectors to the index
+vectors = [[1.0]*d, [2.0]*d, [3.0]*d]
+index.add(np.array(vectors).astype('float32'))
+
+# Search for nearest neighbors
+query_vector = [1.5]*d
+distances, indices = index.search(np.array([query_vector]).astype('float32'), 2)
+print(f'Nearest neighbors: {indices}, Distances: {distances}')
+```
+
+```python
+from sentence_transformers import SentenceTransformer
+
+# Load a pre-trained model
+model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+
+# Generate embeddings
+sentences = ['This is an example sentence.', 'Each sentence is converted into a vector.']
+embeddings = model.encode(sentences)
+print(f'Embeddings: {embeddings}')
+```
+
+```python
+from transformers import BertTokenizer, BertModel
+import torch
+
+# Load pre-trained BERT model and tokenizer
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertModel.from_pretrained('bert-base-uncased')
+
+# Tokenize and encode sentences
+sentences = ['This is an example sentence.', 'Each sentence is converted into a vector.']
+inputs = tokenizer(sentences, return_tensors='pt', padding=True, truncation=True)
+
+# Get BERT embeddings
+with torch.no_grad():
+    outputs = model(**inputs)
+     embeddings = outputs.last_hidden_state.mean(dim=1)
+print(f'BERT Embeddings: {embeddings}')
+```
+
+```python
+from langchain import LangChain
+
+# Initialize LangChain with multiple models
+langchain = LangChain(models=['model1','model2'])
+
+# Perform a query using LangChain
+query = "What is the capital of France?"
+result = langchain.query(query)
+print(f'LangChain Result: {result}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-18.ipynb)

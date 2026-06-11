@@ -59,6 +59,61 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+
+sagemaker_client = boto3.client('sagemaker', region_name='us-east-1')
+
+# Create user profile
+response = sagemaker_client.create_user_profile(
+    DomainId='d-xxxxx',
+    UserProfileName='data-scientist-1',
+    UserSettings={
+        'ExecutionRole': 'arn:aws:iam::123456789012:role/SageMakerRole',
+        'SharingSettings': {
+            'NotebookOutputOption': 'Allowed',
+            'S3OutputPath': 's3://my-bucket/studio-output'
+        }
+    }
+)
+
+print(f"User profile created: {response['UserProfileArn']}")
+```
+
+```python
+# Access SageMaker session from Studio notebook
+import sagemaker
+from sagemaker import get_execution_role
+
+session = sagemaker.Session()
+role = get_execution_role()
+bucket = session.default_bucket()
+
+# List available notebooks
+notebooks = session.list_notebook_instances()
+print(f"Available notebooks: {len(notebooks['NotebookInstances'])}")
+```
+
+```python
+# Create and run a simple notebook
+import pandas as pd
+import numpy as np
+
+# Load data
+data = pd.read_csv('s3://my-bucket/data.csv')
+print(f"Data shape: {data.shape}")
+
+# Basic exploration
+print(data.describe())
+print(data.isnull().sum())
+
+# Save processed data
+data.to_csv('s3://my-bucket/processed_data.csv', index=False)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-sagemaker/mod-2.ipynb)

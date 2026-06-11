@@ -59,6 +59,64 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+from sentence_transformers import SentenceTransformer
+
+# Load pre-trained model
+model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+
+# Sample documents
+documents = [
+    'The quick brown fox jumps over the lazy dog.',
+    'A journey of a thousand miles begins with a single step.'
+]
+
+# Generate embeddings
+embeddings = model.encode(documents)
+
+print(embeddings)
+```
+
+```python
+from transformers import pipeline
+
+# Load pre-trained model for chunking and reranking
+chunker = pipeline('feature-extraction', model='distilbert-base-uncased')
+
+# Sample document
+document = 'The quick brown fox jumps over the lazy dog. A journey of a thousand miles begins with a single step.'
+
+# Chunk the document
+chunks = [document[i:i+10] for i in range(0, len(document), 10)]
+
+# Generate features for each chunk
+features = chunker(chunks)
+
+print(features)
+```
+
+```python
+from langchain import LangChain
+
+# Initialize LangChain model
+langchain_model = LangChain('gpt-3.5-turbo')
+
+# Sample query
+query = 'What is the capital of France?'
+
+# Retrieve relevant chunks using our RAG system
+relevant_chunks = retrieve_chunks(query)
+
+# Generate response using LangChain
+response = langchain_model.generate(query, context=relevant_chunks)
+
+print(response)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-21.ipynb)

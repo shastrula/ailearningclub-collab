@@ -59,6 +59,69 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import dvc.api
+
+# Initialize DVC in the current directory
+dvc.api.init()
+print("DVC initialized.")
+```
+
+```python
+# Add a dataset to DVC
+dvc.api.add('data/dataset.csv')
+print("Dataset added to DVC.")
+```
+
+```python
+# Commit the changes to DVC
+dvc.api.commit('Add dataset to DVC')
+print("Changes committed.")
+```
+
+```python
+import mlflow
+from sklearn.linear_model import LogisticRegression
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+# Load data
+data = load_iris()
+X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, test_size=0.2, random_state=42)
+
+# Train model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Start an MLflow run
+with mlflow.start_run(run_name='example_run'):
+    # Log parameters
+    mlflow.log_param('learning_rate', 0.01)
+    
+    # Log metrics
+    accuracy = model.score(X_test, y_test)
+    mlflow.log_metric('accuracy', accuracy)
+    
+    # Log model
+    model_uri = mlflow.sklearn.log_model(model, 'model')
+    
+print(f"Model logged with accuracy: {accuracy}")
+```
+
+```python
+from mlflow.tracking import MlflowClient
+
+# Create an MLflow client
+client = MlflowClient()
+
+# Register the model
+model_version = client.create_model_version(model_uri, 'example_model', 'champion')
+print(f"Model version {model_version.version} registered.")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-3.ipynb)

@@ -59,6 +59,118 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import torch
+import torch.nn as nn
+
+# Define a simple linear regression model
+class LinearRegression(nn.Module):
+    def __init__(self):
+        super(LinearRegression, self).__init__()
+        self.linear = nn.Linear(1, 1)  # Input and output dimension is 1
+
+    def forward(self, x):
+        out = self.linear(x)
+        return out
+
+# Initialize the model
+model = LinearRegression()
+
+# Define the loss function
+criterion = nn.MSELoss()
+
+# Example input and target
+inputs = torch.tensor([[1.0], [2.0], [3.0]], requires_grad=True)
+targets = torch.tensor([[2.0], [4.0], [6.0]])
+
+# Forward pass
+outputs = model(inputs)
+loss = criterion(outputs, targets)
+print(f'Initial Loss: {loss.item()}')
+```
+
+```python
+import torch.optim as optim
+
+# Initialize the model and loss function
+model = LinearRegression()
+criterion = nn.MSELoss()
+
+# Define the optimizer
+optimizer = optim.SGD(model.parameters(), lr=0.01)
+
+# Training loop
+for epoch in range(100):
+    # Forward pass
+    outputs = model(inputs)
+    loss = criterion(outputs, targets)
+
+    # Backward pass and optimization
+    optimizer.zero_grad()  # Zero the gradient buffers
+    loss.backward()        # Backward pass: compute gradient of the loss with respect to model parameters
+    optimizer.step()       # Perform a single optimization step (parameter update)
+
+    if (epoch+1) % 10 == 0:
+        print(f'Epoch [{epoch+1}/100], Loss: {loss.item():.4f}')
+```
+
+```python
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torchvision import datasets, transforms
+from torch.utils.data import DataLoader
+
+# Define a simple CNN model
+class SimpleCNN(nn.Module):
+    def __init__(self):
+        super(SimpleCNN, self).__init__()
+        self.conv1 = nn.Conv2d(1, 32, 3, 1)
+        self.conv2 = nn.Conv2d(32, 64, 3, 1)
+        self.fc1 = nn.Linear(9216, 128)
+        self.fc2 = nn.Linear(128, 10)
+
+    def forward(self, x):
+        x = self.conv1(x)
+        x = nn.functional.relu(x)
+        x = self.conv2(x)
+        x = nn.functional.relu(x)
+        x = torch.flatten(x, 1)
+        x = self.fc1(x)
+        x = nn.functional.relu(x)
+        x = self.fc2(x)
+        output = nn.functional.log_softmax(x, dim=1)
+        return output
+
+# Load and normalize the MNIST dataset
+transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize((0.1307,), (0.3081,))
+])
+
+train_dataset = datasets.MNIST('./data', train=True, download=True, transform=transform)
+train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
+
+# Initialize the model, loss function, and optimizer
+model = SimpleCNN()
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+# Training loop
+for epoch in range(1, 4):  # Let's train for 3 epochs
+    for batch_idx, (data, target) in enumerate(train_loader):
+        optimizer.zero_grad()
+        output = model(data)
+        loss = criterion(output, target)
+        loss.backward()
+        optimizer.step()
+        if batch_idx % 100 == 0:
+            print(f'Train Epoch: {epoch} [{batch_idx * len(data)}/{len(train_loader.dataset)} ({100. * batch_idx / len(train_loader):.0f}%)]\tLoss: {loss.item():.6f}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-5.ipynb)

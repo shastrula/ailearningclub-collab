@@ -59,6 +59,51 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+# example1.py
+import react
+
+# Define an AI agent using the ReAct framework
+agent = react.Agent()
+
+# Add a behavior to the agent
+@agent.behavior
+def greet():
+    """Simple behavior that returns a greeting message."""
+    return "Hello, world!"
+
+# Run the agent
+agent.run()
+```
+
+```python
+# example2.py
+import langgraph
+
+# Create a LangGraph environment
+env = langgraph.Environment()
+
+# Define two agents
+agent1 = langgraph.Agent("Agent 1")
+agent2 = langgraph.Agent("Agent 2")
+
+# Add agents to the environment
+env.add_agent(agent1)
+env.add_agent(agent2)
+
+# Define an interaction between agents
+@env.interaction(agent1, agent2)
+def communicate():
+    """Defines an interaction where Agent 1 sends a message to Agent 2."""
+    return "Agent 1 says hello to Agent 2"
+
+# Run the environment
+env.run()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-21.ipynb)

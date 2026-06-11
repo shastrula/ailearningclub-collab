@@ -52,6 +52,47 @@ Recent advances in Advanced Tokenization Techniques:
 
 True mastery comes from implementing Advanced Tokenization Techniques in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Code Examples
+
+```python
+from transformers import BertTokenizer
+
+# Initialize the BERT tokenizer
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+
+# Tokenize a sample sentence
+sample_text = 'Tokenization is crucial for NLP tasks.'
+tokens = tokenizer.tokenize(sample_text)  # Breaks down words into subwords
+
+# Convert tokens to IDs
+token_ids = tokenizer.convert_tokens_to_ids(tokens)  # Maps subwords to unique IDs
+
+print('Tokens:', tokens)
+print('Token IDs:', token_ids)
+```
+
+```python
+from transformers import BertTokenizer
+
+# Initialize a BERT tokenizer
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+
+# Custom tokenizer example: Adding special tokens
+special_tokens_dict = {'additional_special_tokens': ['@NEWTOKEN']}
+tokenizer.add_special_tokens(special_tokens_dict)  # Adds new special tokens to the tokenizer
+
+# Tokenize a sample sentence with the custom tokenizer
+sample_text = 'This is a @NEWTOKEN example.'
+tokens = tokenizer.tokenize(sample_text)  # Tokenizes the text, including the new special token
+
+# Convert tokens to IDs
+token_ids = tokenizer.convert_tokens_to_ids(tokens)  # Maps tokens to unique IDs
+
+print('Tokens:', tokens)
+print('Token IDs:', token_ids)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-9.ipynb)

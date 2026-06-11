@@ -55,6 +55,60 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+from sentence_transformers import SentenceTransformer
+import numpy as np
+
+# 1. Load a pre-trained model from Hugging Face
+# This model is small, fast, and performs very well for its size.
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# 2. Our document chunks
+document_chunks = [
+    "The Eiffel Tower is located in Paris, France.",
+    "The Great Wall of China is one of the seven wonders of the world.",
+    "Photosynthesis is the process by which plants use sunlight to synthesize foods."
+]
+
+# 3. Generate embeddings
+embeddings = model.encode(document_chunks)
+
+# Each embedding is a vector (a list of numbers)
+print("Shape of embeddings:", embeddings.shape)
+print("Embedding for the first chunk:\n", embeddings[0][:10], "...") # Print first 10 dimensions
+```
+
+```python
+import faiss
+
+# Assume 'embeddings' is the output from the previous step
+# FAISS requires numpy arrays
+embeddings = np.array(embeddings, dtype='float32')
+
+# 1. Build the FAISS index
+dimension = embeddings.shape[1]  # The size of our embedding vector (e.g., 384 for MiniLM)
+index = faiss.IndexFlatL2(dimension)
+index.add(embeddings) # Add our document chunk embeddings to the index
+
+# 2. Embed the user's query
+user_query = "What is the process plants use to get energy?"
+query_embedding = model.encode([user_query])
+
+# 3. Perform the search
+k = 1 # Retrieve the top 1 most similar chunk
+distances, indices = index.search(np.array(query_embedding, dtype='float32'), k)
+
+# 4. Get the result
+retrieved_chunk_index = indices[0][0]
+retrieved_chunk = document_chunks[retrieved_chunk_index]
+
+print(f"User Query: {user_query}")
+print(f"Most Relevant Document: '{retrieved_chunk}'")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-1.ipynb)

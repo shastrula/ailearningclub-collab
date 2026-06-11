@@ -59,6 +59,90 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+# Sample documents
+documents = ["The cat sat on the mat.", "The dog played in the park.", "The cat chased the mouse."]
+
+# Create TF-IDF vectorizer
+vectorizer = TfidfVectorizer()
+
+# Fit and transform documents
+tfidf_matrix = vectorizer.fit_transform(documents)
+
+# Convert to dense array for simplicity
+tfidf_matrix_dense = tfidf_matrix.toarray()
+
+# Calculate cosine similarity
+similarity_matrix = cosine_similarity(tfidf_matrix_dense)
+
+print(similarity_matrix)
+```
+
+```python
+from collections import defaultdict
+
+# Sample documents
+documents = ["The cat sat on the mat.", "The dog played in the park.", "The cat chased the mouse."]
+
+# Create an inverted index
+index = defaultdict(list)
+
+for doc_id, doc in enumerate(documents):
+    words = doc.lower().split()
+    for word in words:
+        index[word].append(doc_id)
+
+# Search for a keyword
+keyword = "cat"
+results = index[keyword.lower()]
+
+print(f"Documents containing '{keyword}': {results}")
+```
+
+```python
+import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+from collections import defaultdict
+
+# Sample documents
+documents = ["The cat sat on the mat.", "The dog played in the park.", "The cat chased the mouse."]
+
+# Keyword search
+index = defaultdict(list)
+for doc_id, doc in enumerate(documents):
+    words = doc.lower().split()
+    for word in words:
+        index[word].append(doc_id)
+
+# Vector search
+vectorizer = TfidfVectorizer()
+tfidf_matrix = vectorizer.fit_transform(documents)
+tfidf_matrix_dense = tfidf_matrix.toarray()
+
+# Query
+query = "cat"
+keyword_results = index[query.lower()]
+query_vector = vectorizer.transform([query]).toarray()
+
+# Combine results
+combined_scores = {}
+for doc_id in keyword_results:
+    similarity_score = cosine_similarity(query_vector, tfidf_matrix_dense[doc_id])
+    combined_scores[doc_id] = similarity_score[0][0]
+
+# Sort by combined scores
+sorted_results = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
+print(sorted_results)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-11.ipynb)

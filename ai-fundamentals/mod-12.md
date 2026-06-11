@@ -55,6 +55,44 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import nltk
+nltk.download('punkt')
+from nltk.tokenize import word_tokenize
+
+# Sample text
+text = "Natural Language Processing is fascinating."
+
+# Tokenizing the text
+tokens = word_tokenize(text)
+
+print(tokens)
+```
+
+```python
+import nltk
+nltk.download('stopwords')
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+# Sample text
+text = "Natural Language Processing is fascinating."
+
+# Tokenizing the text
+tokens = word_tokenize(text)
+
+# Loading stop words
+stop_words = set(stopwords.words('english'))
+
+# Removing stop words
+filtered_tokens = [word for word in tokens if word.lower() not in stop_words]
+
+print(filtered_tokens)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-12.ipynb)

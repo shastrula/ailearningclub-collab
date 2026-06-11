@@ -59,6 +59,69 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import pandas as pd
+from sklearn.preprocessing import StandardScaler, SimpleImputer
+
+# Sample dataset
+data = {
+    'blood_pressure': [120, 130, None, 150, 160],
+    'heart_rate': [70, 80, 85, None, 90],
+    'cholesterol': [200, 220, 210, 190, None],
+    'target': [0, 1, 1, 0, 1]  # 0: No disease, 1: Disease
+}
+df = pd.DataFrame(data)
+
+# Handling missing values with imputation
+imputer = SimpleImputer(strategy='median')
+df[['blood_pressure', 'heart_rate', 'cholesterol']] = imputer.fit_transform(df[['blood_pressure', 'heart_rate', 'cholesterol']])
+
+# Feature scaling
+scaler = StandardScaler()
+df[['blood_pressure', 'heart_rate', 'cholesterol']] = scaler.fit_transform(df[['blood_pressure', 'heart_rate', 'cholesterol']])
+
+# Feature engineering: Creating a new feature for high blood pressure
+df['high_blood_pressure'] = df['blood_pressure'] > 140
+
+print(df)
+```
+
+```python
+from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+# Splitting the dataset
+X = df[['blood_pressure', 'heart_rate', 'cholesterol']]
+y = df['target']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Model training
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(X_train, y_train)
+
+# Predictions
+y_pred = model.predict(X_test)
+
+# Evaluation
+accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
+
+print(f'Accuracy: {accuracy}')
+print(f'Precision: {precision}')
+print(f'Recall: {recall}')
+print(f'F1-Score: {f1}')
+
+# Cross-validation
+cv_scores = cross_val_score(model, X, y, cv=5)
+print(f'Cross-validation scores: {cv_scores}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-19.ipynb)

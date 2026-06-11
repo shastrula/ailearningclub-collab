@@ -59,6 +59,100 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+# Approximate derivative using finite differences
+def derivative(f, x, h=1e-5):
+    return (f(x + h) - f(x - h)) / (2 * h)
+
+# Example: f(x) = x²
+def f(x):
+    return x**2
+
+# Derivative at x=3 should be 6
+print(derivative(f, 3))  # ≈ 6.0
+```
+
+```python
+# Compute gradient of a function
+x = np.array([1.0, 2.0, 3.0])
+
+# Function: f(x, y, z) = x² + y² + z²
+def f(x):
+    return np.sum(x**2)
+
+# Numerical gradient
+def numerical_gradient(f, x, h=1e-5):
+    grad = np.zeros_like(x)
+    for i in range(len(x)):
+        x_h = x.copy()
+        x_h[i] += h
+        grad[i] = (f(x_h) - f(x)) / h
+    return grad
+
+grad = numerical_gradient(f, x)
+print("Gradient:", grad)  # [2, 4, 6]
+```
+
+```python
+# Trapezoidal rule for integration
+def trapezoidal_integration(f, a, b, n=1000):
+    x = np.linspace(a, b, n)
+    y = f(x)
+    dx = (b - a) / n
+    return np.sum((y[:-1] + y[1:]) / 2) * dx
+
+# Example: integrate x² from 0 to 1
+def f(x):
+    return x**2
+
+result = trapezoidal_integration(f, 0, 1)
+print("Integral:", result)  # ≈ 0.333 (exact: 1/3)
+```
+
+```python
+# Simple gradient descent
+def gradient_descent(f, grad_f, x0, learning_rate=0.01, iterations=100):
+    x = x0.copy()
+    for i in range(iterations):
+        grad = grad_f(x)
+        x = x - learning_rate * grad
+    return x
+
+# Example: minimize f(x) = (x-3)²
+def f(x):
+    return (x - 3)**2
+
+def grad_f(x):
+    return 2 * (x - 3)
+
+x_min = gradient_descent(f, grad_f, x0=0.0)
+print("Minimum at x =", x_min)  # ≈ 3.0
+```
+
+```python
+# Compute partial derivatives
+def partial_derivative(f, x, i, h=1e-5):
+    x_h = x.copy()
+    x_h[i] += h
+    return (f(x_h) - f(x)) / h
+
+# Example: f(x, y) = x² + xy + y²
+def f(x):
+    return x[0]**2 + x[0]*x[1] + x[1]**2
+
+x = np.array([1.0, 2.0])
+df_dx = partial_derivative(f, x, 0)  # ∂f/∂x
+df_dy = partial_derivative(f, x, 1)  # ∂f/∂y
+
+print("∂f/∂x =", df_dx)  # ≈ 4
+print("∂f/∂y =", df_dy)  # ≈ 5
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/applied-maths-numpy/mod-3.ipynb)

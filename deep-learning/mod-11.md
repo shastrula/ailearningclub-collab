@@ -59,6 +59,57 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import torch
+import torch.nn as nn
+
+# Define a simple RNN model
+class SimpleRNN(nn.Module):
+    def __init__(self, input_size, hidden_size, output_size):
+        super(SimpleRNN, self).__init__()
+        self.hidden_size = hidden_size
+        self.rnn = nn.RNN(input_size, hidden_size, batch_first=True)
+        self.fc = nn.Linear(hidden_size, output_size)
+
+    def forward(self, x):
+        h0 = torch.zeros(1, x.size(0), self.hidden_size).to(x.device)
+        out, _ = self.rnn(x, h0)
+        out = self.fc(out[:, -1, :])
+        return out
+
+# Instantiate the model
+input_size = 10
+hidden_size = 20
+output_size = 1
+model = SimpleRNN(input_size, hidden_size, output_size)
+print(model)
+```
+
+```python
+import torch.optim as optim
+
+# Dummy data
+inputs = torch.randn(5, 3, 10)  # (sequence_length, batch_size, input_size)
+targets = torch.randint(0, 2, (5, 3)).long()  # (sequence_length, batch_size)
+
+# Loss and optimizer
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=0.01)
+
+# Training loop
+for epoch in range(100):
+    optimizer.zero_grad()
+    outputs = model(inputs)
+    loss = criterion(outputs, targets.view(-1))
+    loss.backward()
+    optimizer.step()
+    if epoch % 10 == 0:
+        print(f'Epoch {epoch}, Loss: {loss.item()}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-11.ipynb)

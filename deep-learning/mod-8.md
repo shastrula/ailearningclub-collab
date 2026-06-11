@@ -59,6 +59,47 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import torch
+from torch.utils.data import DataLoader, TensorDataset
+
+# Sample data
+x = torch.tensor([[1, 2], [3, 4], [5, 6], [7, 8]])
+y = torch.tensor([0, 0, 1, 1])
+
+# Create a TensorDataset
+dataset = TensorDataset(x, y)
+
+# Create a DataLoader
+dataloader = DataLoader(dataset, batch_size=2, shuffle=True)
+
+# Iterate through the DataLoader
+for batch_x, batch_y in dataloader:
+    print(f'Batch X: {batch_x}')
+    print(f'Batch Y: {batch_y}')
+```
+
+```python
+import torch
+from torchvision import transforms
+from PIL import Image
+
+# Define a transform to normalize the data
+transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.5], std=[0.5])
+])
+
+# Load an image and apply the transform
+image = Image.open('example.jpg')
+preprocessed_image = transform(image)
+
+print(preprocessed_image)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-8.ipynb)

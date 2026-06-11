@@ -52,6 +52,107 @@ Recent advances in Deep Learning: Recurrent Neural Networks:
 
 True mastery comes from implementing Deep Learning: Recurrent Neural Networks in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Code Examples
+
+```python
+import torch
+import torch.nn as nn
+import numpy as np
+
+# Define the RNN model
+class SimpleRNN(nn.Module):
+    def __init__(self, input_size, hidden_size, output_size):
+        super(SimpleRNN, self).__init__()
+        self.hidden_size = hidden_size
+        self.rnn = nn.RNN(input_size, hidden_size, batch_first=True)
+        self.fc = nn.Linear(hidden_size, output_size)
+    
+    def forward(self, x, hidden):
+        out, hidden = self.rnn(x, hidden)
+        out = self.fc(out[:, -1, :])
+        return out, hidden
+
+# Hyperparameters
+input_size = 1
+hidden_size = 50
+output_size = 1
+learning_rate = 0.01
+num_epochs = 200
+
+# Create model, loss function, and optimizer
+model = SimpleRNN(input_size, hidden_size, output_size)
+criterion = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+
+# Generate some sequential data
+X = torch.tensor([[i] for i in range(10)], dtype=torch.float32)
+y = X * 0.5 + 0.2
+
+# Train the model
+for epoch in range(num_epochs):
+    hidden = torch.zeros(1, 1, hidden_size)  # Batch size = 1
+    optimizer.zero_grad()
+    outputs, _ = model(X.unsqueeze(0), hidden)  # Add batch dimension
+    loss = criterion(outputs, y.unsqueeze(0))  # Add batch dimension
+    loss.backward()
+    optimizer.step()
+
+# Predict
+hidden = torch.zeros(1, 1, hidden_size)
+output, _ = model(X.unsqueeze(0), hidden)
+print(output)
+```
+
+```python
+import torch
+import torch.nn as nn
+import numpy as np
+
+# Define the LSTM model
+class LSTMModel(nn.Module):
+    def __init__(self, input_size, hidden_size, output_size):
+        super(LSTMModel, self).__init__()
+        self.hidden_size = hidden_size
+        self.lstm = nn.LSTM(input_size, hidden_size, batch_first=True)
+        self.fc = nn.Linear(hidden_size, output_size)
+    
+    def forward(self, x, hidden):
+        out, hidden = self.lstm(x, hidden)
+        out = self.fc(out[:, -1, :])
+        return out, hidden
+
+# Hyperparameters
+input_size = 1
+hidden_size = 50
+output_size = 1
+learning_rate = 0.01
+num_epochs = 200
+
+# Create model, loss function, and optimizer
+model = LSTMModel(input_size, hidden_size, output_size)
+criterion = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+
+# Generate some sequential data
+X = torch.tensor([[i] for i in range(10)], dtype=torch.float32)
+y = X * 0.5 + 0.2
+
+# Train the model
+for epoch in range(num_epochs):
+    hidden = (torch.zeros(1, 1, hidden_size), torch.zeros(1, 1, hidden_size))  # (h0, c0)
+    optimizer.zero_grad()
+    outputs, _ = model(X.unsqueeze(0), hidden)  # Add batch dimension
+    loss = criterion(outputs, y.unsqueeze(0))  # Add batch dimension
+    loss.backward()
+    optimizer.step()
+
+# Predict
+hidden = (torch.zeros(1, 1, hidden_size), torch.zeros(1, 1, hidden_size))
+output, _ = model(X.unsqueeze(0), hidden)
+print(output)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-11.ipynb)

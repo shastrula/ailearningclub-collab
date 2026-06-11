@@ -59,6 +59,47 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import torch
+from transformers import AutoModel, AutoTokenizer
+
+# Load pre-trained model and tokenizer
+model_name = 'bert-base-uncased'
+model = AutoModel.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+```
+
+```python
+# Example query and documents
+query = 'What is the capital of France?'
+documents = ['Paris is the capital of France.', 'The Eiffel Tower is in Paris.', 'France is a country in Europe.']
+
+# Tokenize and encode query and documents
+inputs = tokenizer(query, documents, return_tensors='pt', padding=True, truncation=True)
+```
+
+```python
+# Get embeddings
+outputs = model(**inputs)
+query_embedding = outputs.last_hidden_state[:, 0, :].mean(dim=0)
+document_embeddings = outputs.last_hidden_state[:, 1:, :].mean(dim=1)
+```
+
+```python
+# Compute cosine similarity
+cosine_similarities = torch.nn.functional.cosine_similarity(query_embedding.unsqueeze(0), document_embeddings, dim=1)
+```
+
+```python
+# Rerank documents based on similarity
+reranked_documents = [doc for _, doc in sorted(zip(cosine_similarities, documents), key=lambda pair: pair[0], reverse=True)]
+
+print(reranked_documents)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-7.ipynb)

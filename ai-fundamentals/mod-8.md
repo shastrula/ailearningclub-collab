@@ -59,6 +59,75 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+from sklearn.decomposition import PCA
+from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import StandardScaler
+
+# Load the iris dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Standardize the data
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Initialize PCA
+pca = PCA(n_components=2)
+
+# Fit and transform the data
+X_pca = pca.fit_transform(X_scaled)
+
+# Plotting the results
+plt.figure(figsize=(8, 6))
+sns.scatterplot(x=X_pca[:, 0], y=X_pca[:, 1], hue=y, palette='viridis', edgecolor='k')
+plt.xlabel('First Principal Component')
+plt.ylabel('Second Principal Component')
+plt.title('PCA of Iris Dataset')
+plt.legend(title='Target Classes')
+plt.show()
+```
+
+```python
+import numpy as np
+from sklearn.manifold import TSNE
+from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import StandardScaler
+
+# Load the iris dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Standardize the data
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Initialize t-SNE
+tsne = TSNE(n_components=2, random_state=0)
+
+# Fit and transform the data
+X_tsne = tsne.fit_transform(X_scaled)
+
+# Plotting the results
+plt.figure(figsize=(8, 6))
+sns.scatterplot(x=X_tsne[:, 0], y=X_tsne[:, 1], hue=y, palette='viridis', edgecolor='k')
+plt.xlabel('t-SNE Component 1')
+plt.ylabel('t-SNE Component 2')
+plt.title('t-SNE of Iris Dataset')
+plt.legend(title='Target Classes')
+plt.show()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-8.ipynb)

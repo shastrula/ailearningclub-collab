@@ -59,6 +59,60 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import os
+import subprocess
+
+# Create a virtual environment named 'nlp-env'
+os.system('python -m venv nlp-env')
+
+# Activate the virtual environment
+# On Windows:
+# nlp-env\Scripts\activate
+# On Unix or MacOS:
+subprocess.run(['bash', '-c','source nlp-env/bin/activate'])
+
+# Upgrade pip to the latest version
+subprocess.run(['pip', 'install', '--upgrade', 'pip'])
+```
+
+```python
+import subprocess
+
+# Install transformers and torch
+subprocess.run(['pip', 'install', 'transformers', 'torch'])
+
+# Verify installation
+import transformers
+import torch
+
+print(f'Transformers version: {transformers.__version__}')
+print(f'Torch version: {torch.__version__}')
+```
+
+```python
+import os
+import subprocess
+
+# Create and activate virtual environment
+os.system('python -m venv nlp-env')
+subprocess.run(['bash', '-c','source nlp-env/bin/activate'])
+subprocess.run(['pip', 'install', '--upgrade', 'pip'])
+
+# Install required libraries
+subprocess.run(['pip', 'install', 'transformers', 'torch'])
+
+# Verify installation
+import transformers
+import torch
+
+print(f'Transformers version: {transformers.__version__}')
+print(f'Torch version: {torch.__version__}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-5.ipynb)

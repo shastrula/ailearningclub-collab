@@ -55,6 +55,61 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+# Example vectors
+vector1 = np.array([1, 2, 3])
+vector2 = np.array([4, 5, 6])
+
+# Calculate cosine similarity
+def cosine_similarity(vec1, vec2):
+    """
+    Compute the cosine similarity between two vectors.
+    
+    Parameters:
+    vec1 (np.array): First vector
+    vec2 (np.array): Second vector
+    
+    Returns:
+    float: Cosine similarity score
+    """
+    dot_product = np.dot(vec1, vec2)
+    norm_vec1 = np.linalg.norm(vec1)
+    norm_vec2 = np.linalg.norm(vec2)
+    return dot_product / (norm_vec1 * norm_vec2)
+
+# Compute similarity
+similarity = cosine_similarity(vector1, vector2)
+print(f'Cosine similarity: {similarity}')
+```
+
+```python
+from sentence_transformers import SentenceTransformer
+
+# Load pre-trained model
+model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+
+# Example sentences
+sentences = ['This is an example sentence.', 'Each sentence is converted into a vector.']
+
+# Generate embeddings
+embeddings = model.encode(sentences)
+"""
+Generate vector representations (embeddings) for each sentence.
+
+Parameters:
+sentences (list): List of sentences to encode
+
+Returns:
+np.array: Array of embeddings
+"""
+print(f'Embeddings: {embeddings}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-2.ipynb)

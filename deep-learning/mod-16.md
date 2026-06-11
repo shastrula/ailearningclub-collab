@@ -59,6 +59,51 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import torch
+from torch.utils.data import DataLoader
+from sklearn.metrics import accuracy_score
+
+# Assume'model' is your trained model and 'val_loader' is your validation data loader
+model.eval()  # Set the model to evaluation mode
+
+correct = 0
+total = 0
+
+with torch.no_grad():  # Disable gradient calculations for evaluation
+    for inputs, labels in val_loader:
+        outputs = model(inputs)
+        _, predicted = torch.max(outputs.data, 1)  # Get the index of the max log-probability
+        total += labels.size(0)
+        correct += (predicted == labels).sum().item()  # Sum up correct predictions
+
+accuracy = 100 * correct / total
+print(f'Validation Accuracy: {accuracy:.2f}%')
+```
+
+```python
+import torch.optim as optim
+from torch.optim.lr_scheduler import StepLR
+
+# Assume'model' is your trained model and 'train_loader' is your training data loader
+optimizer = optim.Adam(model.parameters(), lr=0.001)  # Define optimizer with initial learning rate
+scheduler = StepLR(optimizer, step_size=5, gamma=0.1)  # Define learning rate scheduler
+
+for epoch in range(10):
+    model.train()  # Set the model to training mode
+    for inputs, labels in train_loader:
+        optimizer.zero_grad()  # Zero the parameter gradients
+        outputs = model(inputs)  # Forward pass
+        loss = torch.nn.functional.cross_entropy(outputs, labels)  # Calculate loss
+        loss.backward()  # Backward pass
+        optimizer.step()  # Update parameters
+    scheduler.step()  # Update learning rate
+    print(f'Epoch {epoch+1}, Loss: {loss.item():.4f}')  # Print loss for monitoring
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-16.ipynb)

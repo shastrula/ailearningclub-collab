@@ -59,6 +59,20 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+# Import the pandas library
+import pandas as pd
+
+# Load a sample dataset
+data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/solar.csv')
+
+# Display the first 5 rows of the dataset
+print(data.head())
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-2.ipynb)

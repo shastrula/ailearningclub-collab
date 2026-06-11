@@ -59,6 +59,47 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+# Define two vectors
+vector1 = np.array([1, 2, 3])
+vector2 = np.array([4, 5, 6])
+
+# Perform vector addition
+vector_sum = vector1 + vector2
+print('Vector Sum:', vector_sum)
+
+# Perform dot product
+dot_product = np.dot(vector1, vector2)
+print('Dot Product:', dot_product)
+```
+
+```python
+import numpy as np
+
+# Define a simple function f(x) = x^2
+def f(x):
+    return x ** 2
+
+# Define the derivative of the function
+def derivative(x):
+    return 2 * x
+
+# Initial value
+x = np.array(5.0)
+learning_rate = 0.1
+
+# Gradient Descent
+for i in range(10):
+    gradient = derivative(x)
+    x = x - learning_rate * gradient
+    print(f'Iteration {i+1}: x = {x}, f(x) = {f(x)}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-2.ipynb)

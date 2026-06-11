@@ -59,6 +59,38 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+# src/train.py
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+# Define a simple neural network
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.fc1 = nn.Linear(10, 5)
+        self.fc2 = nn.Linear(5, 1)
+
+    def forward(self, x):
+        x = torch.relu(self.fc1(x))
+        x = self.fc2(x)
+        return x
+
+# Instantiate the network
+net = Net()
+
+# Define a loss function and optimizer
+criterion = nn.MSELoss()
+optimizer = optim.SGD(net.parameters(), lr=0.01)
+
+# Print the model
+print(net)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-8.ipynb)

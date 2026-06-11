@@ -59,6 +59,126 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import mlflow
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+
+# Define a function to train and log a model
+def train_model(data):
+    X = data.drop('target', axis=1)
+    y = data['target']
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model.fit(X_train, y_train)
+    
+    y_pred = model.predict(X_test)
+    accuracy = accuracy_score(y_test, y_pred)
+    
+    with mlflow.start_run():
+        mlflow.log_param('n_estimators', 100)
+        mlflow.log_metric('accuracy', accuracy)
+        mlflow.sklearn.log_model(model, "model")
+    
+    return model
+
+# Load dataset
+data = pd.read_csv('data.csv')
+
+# Main function to run CI/CD pipeline
+def main():
+    model = train_model(data)
+    print(f"Model trained with accuracy: {model.score(X_test, y_test)}")
+
+if __name__ == '__main__':
+    main()
+```
+
+```python
+from feast import FeatureStore
+import pandas as pd
+from datetime import timedelta
+
+# Initialize Feast Feature Store
+store = FeatureStore(repo_path='feature_repo')
+
+# Define a feature view
+@store.feature_view(
+    name='driver_features',
+    entities=['driver_id'],
+    ttl=timedelta(days=1),
+)
+def driver_features():
+    return store.get_historical_features(
+        entity_df=pd.DataFrame({'driver_id': [1, 2, 3]}),
+        feature_refs=['driver_features:avg_daily_trips', 'driver_features:total_earnings'],
+    )
+
+# Fetch features
+feature_view = driver_features()
+print(feature_view.to_df())
+```
+
+```python
+import pandas as pd
+from sklearn.metrics import mean_squared_error
+
+def detect_drift(baseline_data, new_data, threshold=0.05):
+    baseline_stats = baseline_data.describe()
+    new_stats = new_data.describe()
+    
+    drift_score = mean_squared_error(baseline_stats, new_stats)
+    
+    if drift_score > threshold:
+        print("Drift detected! Retrain the model.")
+    else:
+        print("No significant drift detected.")
+
+# Example usage
+baseline_data = pd.read_csv('baseline_data.csv')
+new_data = pd.read_csv('new_data.csv')
+detect_drift(baseline_data, new_data)
+```
+
+```python
+import numpy as np
+
+def ab_test(control_group, treatment_group, metric):
+    control_metric = metric(control_group)
+    treatment_metric = metric(treatment_group)
+    
+    if treatment_metric > control_metric:
+        print("Treatment group performs better.")
+    else:
+        print("Control group performs better.")
+
+# Example usage
+control_group = np.random.rand(100)
+treatment_group = np.random.rand(100)
+ab_test(control_group, treatment_group, np.mean)
+```
+
+```python
+# Example of using Kubeflow Pipelines SDK to create a simple pipeline
+from kfp import dsl
+
+@dsl.pipeline(
+    name='Simple ML Pipeline',
+    description='A simple ML pipeline example.'
+)
+def simple_pipeline():
+    pass  # Define your pipeline steps here
+
+# Compile the pipeline
+kfp.compiler.Compiler().compile(simple_pipeline, 'simple_pipeline.yaml')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-24.ipynb)

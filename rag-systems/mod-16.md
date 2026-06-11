@@ -59,6 +59,77 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import sqlite3
+from cryptography.fernet import Fernet
+
+# Generate a key for encryption
+key = Fernet.generate_key()
+cipher_suite = Fernet(key)
+
+# Example data to encrypt
+data ='sensitive_data'.encode()
+
+# Encrypt the data
+encrypted_data = cipher_suite.encrypt(data)
+
+# Store encrypted data in a SQLite database
+conn = sqlite3.connect('encrypted_db.sqlite')
+cursor = conn.cursor()
+cursor.execute('CREATE TABLE IF NOT EXISTS data (id INTEGER PRIMARY KEY, encrypted_data BLOB)')
+cursor.execute('INSERT INTO data (encrypted_data) VALUES (?)', (encrypted_data,))
+conn.commit()
+conn.close()
+```
+
+```python
+from flask import Flask, request, jsonify
+from flask_httpauth import HTTPBasicAuth
+from werkzeug.security import generate_password_hash, check_password_hash
+
+app = Flask(__name__)
+auth = HTTPBasicAuth()
+
+# User data (in a real scenario, this would be a database)
+users = {
+    'advisor1': generate_password_hash('securepassword1'),
+    'advisor2': generate_password_hash('securepassword2')
+}
+
+@auth.verify_password
+def verify_password(username, password):
+    if username in users and check_password_hash(users.get(username), password):
+        return username
+    return None
+
+@app.route('/secure-endpoint', methods=['GET'])
+@auth.login_required
+def secure_endpoint():
+    return jsonify({'message': 'Access granted to secure endpoint'})
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+```python
+from diffprivlib.mechanisms import LaplaceMechanism
+
+# Initialize the Laplace mechanism with epsilon as the privacy budget
+laplace = LaplaceMechanism(epsilon=1.0)
+
+# Example data point
+data_point = 50
+
+# Add noise to the data point
+noisy_data_point = laplace.randomise(data_point)
+
+print(f"Original data point: {data_point}")
+print(f"Noisy data point: {noisy_data_point}")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-16.ipynb)

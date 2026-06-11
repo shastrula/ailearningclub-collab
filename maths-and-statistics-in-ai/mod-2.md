@@ -59,6 +59,111 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+def numerical_gradient(loss_fn, theta, epsilon=1e-5):
+    """Compute gradient by finite differences"""
+    grad = np.zeros_like(theta)
+    for i in range(len(theta)):
+        theta_plus = theta.copy()
+        theta_plus[i] += epsilon
+        theta_minus = theta.copy()
+        theta_minus[i] -= epsilon
+        grad[i] = (loss_fn(theta_plus) - loss_fn(theta_minus)) / (2 * epsilon)
+    return grad
+
+# Example: minimize f(x) = x^2
+def f(x):
+    return np.sum(x**2)
+
+theta = np.array([3.0, 4.0])
+grad = numerical_gradient(f, theta)
+print(f"Gradient at {theta}: {grad}")  # [6.0, 8.0] (correct: 2*x)
+```
+
+```python
+import torch
+
+# Define a simple network
+x = torch.tensor([2.0], requires_grad=True)
+y = x**2 + 3*x + 1
+
+# Compute gradient automatically
+y.backward()
+print(f"dy/dx at x=2: {x.grad}")  # 7.0 (correct: 2*2 + 3)
+
+# For a neural network
+model = torch.nn.Linear(10, 1)
+x = torch.randn(32, 10)
+y_true = torch.randn(32, 1)
+
+# Forward pass
+y_pred = model(x)
+loss = torch.nn.functional.mse_loss(y_pred, y_true)
+
+# Backward pass (compute gradients)
+loss.backward()
+
+# Gradients are now in model.weight.grad and model.bias.grad
+print(f"Weight gradient shape: {model.weight.grad.shape}")
+```
+
+```python
+import torch
+import torch.optim as optim
+
+model = torch.nn.Linear(10, 1)
+optimizer = optim.SGD(model.parameters(), lr=0.01)  # lr = learning rate
+
+for epoch in range(100):
+    # Forward pass
+    y_pred = model(x)
+    loss = torch.nn.functional.mse_loss(y_pred, y_true)
+    
+    # Backward pass
+    optimizer.zero_grad()  # Clear old gradients
+    loss.backward()        # Compute new gradients
+    
+    # Update weights
+    optimizer.step()       # theta = theta - lr * grad
+    
+    if epoch % 10 == 0:
+        print(f"Epoch {epoch}, Loss: {loss.item():.4f}")
+```
+
+```python
+# Adam = Adaptive Moment Estimation
+# Combines momentum with adaptive learning rates
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+# Same training loop as before
+for epoch in range(100):
+    y_pred = model(x)
+    loss = torch.nn.functional.mse_loss(y_pred, y_true)
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+```
+
+```python
+from torch.utils.checkpoint import checkpoint
+
+class TransformerBlock(torch.nn.Module):
+    def forward(self, x):
+        # Without checkpointing: stores all activations
+        # x = self.attention(x)
+        # x = self.ffn(x)
+        
+        # With checkpointing: recomputes activations during backward
+        x = checkpoint(self.attention, x)
+        x = checkpoint(self.ffn, x)
+        return x
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/maths-and-statistics-in-ai/mod-2.ipynb)

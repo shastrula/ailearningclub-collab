@@ -59,6 +59,56 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+from sagemaker.model_monitor import DefaultModelMonitor
+from sagemaker.model_monitor.dataset_format import DatasetFormat
+
+# Initialize the boto3 client
+sagemaker_client = boto3.client('sagemaker')
+
+# Define the model monitor
+monitor = DefaultModelMonitor(
+    role='AmazonSageMakerExecutionRole',  # IAM role with necessary permissions
+    instance_count=1,
+    instance_type='ml.m5.large',
+    volume_size_in_gb=20,
+    max_runtime_in_seconds=3600,
+)
+
+# Set up the monitoring schedule
+monitor.create_monitoring_schedule(
+    monitor_schedule_name='example-monitoring-schedule',
+    endpoint_input='example-endpoint',  # The endpoint to monitor
+    output_s3_uri='s3://example-bucket/model-monitor-output',  # S3 bucket for output
+    statistics='s3://example-bucket/baseline-statistics',  # Baseline statistics
+    constraints='s3://example-bucket/constraints',  # Constraints file
+    schedule_cron_expression='0 0 * * *',  # Cron expression for schedule (daily)
+    dataset_format=DatasetFormat.csv(header=True)  # Format of the dataset
+)
+```
+
+```python
+import boto3
+import pandas as pd
+
+# Initialize the boto3 client
+s3_client = boto3.client('s3')
+
+# Download the monitoring results
+response = s3_client.get_object(Bucket='example-bucket', Key='model-monitor-output/example-monitoring-schedule/output.csv')
+csv_content = response['Body'].read().decode('utf-8')
+
+# Load the results into a pandas DataFrame
+df = pd.read_csv(pd.compat.StringIO(csv_content))
+
+# Display the results
+print(df.head())
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-18.ipynb)

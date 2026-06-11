@@ -59,6 +59,63 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+# Install NumPy
+!pip install numpy
+
+# Import NumPy
+import numpy as np
+
+# Create a NumPy array
+array = np.array([1, 2, 3, 4, 5])
+
+# Perform a simple operation
+print(array * 2)  # Output: [2 4 6 8 10]
+```
+
+```python
+# Install Pandas
+!pip install pandas
+
+# Import Pandas
+import pandas as pd
+
+# Create a Pandas DataFrame
+data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35]}
+df = pd.DataFrame(data)
+
+# Display the DataFrame
+print(df)
+```
+
+```python
+# Install scikit-learn
+!pip install scikit-learn
+
+# Import necessary modules
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+
+# Load the Iris dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create and train the model
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(X_train, y_train)
+
+# Evaluate the model
+accuracy = model.score(X_test, y_test)
+print(f'Accuracy: {accuracy}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-6.ipynb)

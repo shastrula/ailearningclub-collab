@@ -59,6 +59,69 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import torch
+import torch.nn as nn
+
+# Define an LSTM network
+class LSTMNetwork(nn.Module):
+    def __init__(self, input_size, hidden_size, num_layers, output_size):
+        super(LSTMNetwork, self).__init__()
+        self.hidden_size = hidden_size
+        self.num_layers = num_layers
+        self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True)
+        self.fc = nn.Linear(hidden_size, output_size)
+
+    def forward(self, x):
+        h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)
+        c0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)
+        
+        out, _ = self.lstm(x, (h0, c0))  # Forward pass through the LSTM
+        out = self.fc(out[:, -1, :])     # Fully connected layer
+        return out
+
+# Initialize the network
+input_size = 10
+hidden_size = 20
+num_layers = 2
+output_size = 1
+
+model = LSTMNetwork(input_size, hidden_size, num_layers, output_size)
+print(model)
+```
+
+```python
+import torch.optim as optim
+
+# Sample data
+input_sequence = torch.randn(1, 5, 10)  # Batch size = 1, Sequence length = 5, Feature size = 10
+target = torch.tensor([[1.0]])
+
+# Define loss function and optimizer
+criterion = nn.MSELoss()
+optimizer = optim.Adam(model.parameters(), lr=0.01)
+
+# Forward pass
+output = model(input_sequence)
+
+# Compute loss
+loss = criterion(output, target)
+print(f'Initial Loss: {loss.item()}')
+
+# Backward pass and optimization
+optimizer.zero_grad()
+loss.backward()
+optimizer.step()
+
+# Compute loss after one optimization step
+output = model(input_sequence)
+loss = criterion(output, target)
+print(f'Loss after one step: {loss.item()}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-12.ipynb)

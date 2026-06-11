@@ -59,6 +59,81 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+# Create vectors
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+# Vector addition
+c = a + b  # [5, 7, 9]
+
+# Scalar multiplication
+d = 2 * a  # [2, 4, 6]
+
+# Dot product (inner product)
+dot_product = np.dot(a, b)  # 1*4 + 2*5 + 3*6 = 32
+
+# Vector magnitude (norm)
+magnitude = np.linalg.norm(a)  # sqrt(1² + 2² + 3²) ≈ 3.74
+```
+
+```python
+# Create matrices
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+
+# Matrix addition
+C = A + B
+
+# Matrix multiplication
+D = np.dot(A, B)
+# or
+D = A @ B
+
+# Matrix transpose
+A_T = A.T
+
+# Matrix inverse
+A_inv = np.linalg.inv(A)
+
+# Determinant
+det_A = np.linalg.det(A)
+```
+
+```python
+A = np.array([[1, 2], [2, 1]])
+
+# Compute eigenvalues and eigenvectors
+eigenvalues, eigenvectors = np.linalg.eig(A)
+
+print("Eigenvalues:", eigenvalues)
+print("Eigenvectors:", eigenvectors)
+```
+
+```python
+# Solve Ax = b
+A = np.array([[3, 1], [1, 2]])
+b = np.array([9, 8])
+
+# Solution
+x = np.linalg.solve(A, b)
+print("x =", x)
+```
+
+```python
+# Singular Value Decomposition (SVD)
+A = np.array([[1, 2], [3, 4], [5, 6]])
+U, S, V = np.linalg.svd(A)
+
+# QR Decomposition
+Q, R = np.linalg.qr(A)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/applied-maths-numpy/mod-2.ipynb)

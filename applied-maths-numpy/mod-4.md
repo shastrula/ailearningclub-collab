@@ -59,6 +59,94 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+# Set seed for reproducibility
+np.random.seed(42)
+
+# Uniform distribution [0, 1)
+uniform = np.random.rand(5)
+
+# Normal distribution (mean=0, std=1)
+normal = np.random.randn(5)
+
+# Random integers
+integers = np.random.randint(0, 10, 5)
+
+# Random choice from array
+choices = np.random.choice([1, 2, 3, 4, 5], 5)
+```
+
+```python
+# Uniform distribution
+uniform_samples = np.random.uniform(0, 10, 1000)
+
+# Normal distribution
+normal_samples = np.random.normal(loc=0, scale=1, size=1000)
+
+# Binomial distribution
+binomial_samples = np.random.binomial(n=10, p=0.5, size=1000)
+
+# Poisson distribution
+poisson_samples = np.random.poisson(lam=3, size=1000)
+```
+
+```python
+# Simulate coin flips
+flips = np.random.randint(0, 2, 10000)
+
+# Probability of heads
+p_heads = np.sum(flips) / len(flips)
+print(f"P(Heads) ≈ {p_heads}")  # ≈ 0.5
+
+# Simulate dice rolls
+rolls = np.random.randint(1, 7, 10000)
+
+# Probability of rolling 6
+p_six = np.sum(rolls == 6) / len(rolls)
+print(f"P(6) ≈ {p_six}")  # ≈ 0.167
+```
+
+```python
+# Generate samples
+samples = np.random.normal(loc=5, scale=2, size=10000)
+
+# Expected value (mean)
+expected_value = np.mean(samples)
+print(f"E[X] ≈ {expected_value}")  # ≈ 5
+
+# Variance
+variance = np.var(samples)
+print(f"Var(X) ≈ {variance}")  # ≈ 4
+
+# Standard deviation
+std_dev = np.std(samples)
+print(f"σ ≈ {std_dev}")  # ≈ 2
+```
+
+```python
+# Estimate π using Monte Carlo
+n_samples = 100000
+
+# Generate random points in [0,1] x [0,1]
+x = np.random.uniform(0, 1, n_samples)
+y = np.random.uniform(0, 1, n_samples)
+
+# Distance from origin
+distances = np.sqrt(x**2 + y**2)
+
+# Points inside unit circle
+inside_circle = np.sum(distances <= 1)
+
+# Estimate π
+pi_estimate = 4 * inside_circle / n_samples
+print(f"π ≈ {pi_estimate}")  # ≈ 3.14159
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/applied-maths-numpy/mod-4.ipynb)

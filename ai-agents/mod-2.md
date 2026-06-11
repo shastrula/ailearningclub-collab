@@ -59,6 +59,39 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from langchain import Agent
+
+# Initialize the agent
+agent = Agent()
+
+# Define the task
+task = "Find the latest news on technology"
+
+# ReAct Cycle
+thought = agent.reason(task)  # Thought: "I need to search for the latest tech news"
+print(f"Thought: {thought}")
+
+action = agent.act(thought)  # Action: search_tool("latest tech news")
+print(f"Action: {action}")
+
+observation = agent.observe(action)  # Observation: "Found news articles"
+print(f"Observation: {observation}")
+
+# Next Thought based on observation
+next_thought = agent.reason(observation)  # Thought: "I need to summarize the news"
+print(f"Next Thought: {next_thought}")
+
+final_action = agent.act(next_thought)  # Action: summarize_news(observation)
+print(f"Final Action: {final_action}")
+
+final_answer = agent.observe(final_action)  # Final Answer: Summarized news
+print(f"Final Answer: {final_answer}")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-2.ipynb)

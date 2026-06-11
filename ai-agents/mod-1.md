@@ -55,6 +55,47 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+# Note: This requires the langchain and openai packages
+# !pip install langchain openai
+
+from langchain_openai import ChatOpenAI
+from langchain.agents import load_tools, initialize_agent, AgentType
+
+# 1. Initialize the "Brain" (The LLM)
+# We set temperature=0 so the agent is deterministic and analytical
+llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
+
+# 2. Equip the Agent with Tools
+# We give it a calculator tool ('llm-math') to perform accurate calculations
+tools = load_tools(["llm-math"], llm=llm)
+
+# 3. Initialize the Agent
+# We use the ZERO_SHOT_REACT_DESCRIPTION agent type
+# This tells the agent to use the ReAct framework to figure out which tool to use
+agent = initialize_agent(
+    tools, 
+    llm, 
+    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, 
+    verbose=True # Verbose mode lets us see its thought process!
+)
+
+# 4. Give the Agent a Goal
+question = "What is 15.3 raised to the power of 4.7?"
+
+print(f"Goal: {question}\n")
+print("--- Agent Execution Trace ---")
+
+# Run the agent
+result = agent.run(question)
+
+print("\n--- Final Output ---")
+print(result)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-1.ipynb)

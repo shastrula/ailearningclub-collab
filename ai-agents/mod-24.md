@@ -59,6 +59,60 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import random
+
+# Define a simple ReAct agent
+class ReActAgent:
+    def __init__(self):
+        self.rules = [
+            lambda state: state['battery'] < 20,  # Rule: Check if battery is low
+            lambda state: state['task_queue']    # Rule: Check if there are tasks to perform
+        ]
+        self.actions = ['charge', 'perform_task']  # Possible actions
+
+    def decide(self, state):
+        for i, rule in enumerate(self.rules):
+            if rule(state):
+                return self.actions[i]  # Return action based on the first matching rule
+        return 'idle'  # Return idle if no rules match
+
+# Simulate agent state
+state = {'battery': 15, 'task_queue': ['clean_room']}
+agent = ReActAgent()
+action = agent.decide(state)
+print(f'Agent decided to {action}.')
+```
+
+```python
+from langgraph import LangGraph
+
+# Define agent behaviors
+def agent1_behavior(state):
+    return 'action1'
+
+def agent2_behavior(state):
+    return 'action2'
+
+# Create a LangGraph instance
+graph = LangGraph()
+
+# Add agents and their behaviors
+graph.add_agent('agent1', agent1_behavior)
+graph.add_agent('agent2', agent2_behavior)
+
+# Define interactions
+graph.add_interaction('agent1', 'agent2')
+
+# Run the graph
+state = {'shared_state': 'initial'}
+actions = graph.run(state)
+print(f'Actions taken: {actions}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-24.ipynb)

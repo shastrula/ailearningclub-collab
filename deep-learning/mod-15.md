@@ -59,6 +59,59 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import torch
+import torch.nn as nn
+
+# Define a simple model
+class SimpleModel(nn.Module):
+    def __init__(self):
+        super(SimpleModel, self).__init__()
+        self.fc = nn.Linear(10, 1)  # Fully connected layer
+
+    def forward(self, x):
+        return self.fc(x)
+
+# Instantiate the model
+model = SimpleModel()
+
+# Export the model
+torch.save(model.state_dict(), 'model.pth')
+print('Model exported successfully')
+```
+
+```python
+import torch
+import torch.nn as nn
+
+# Define the same model architecture
+class SimpleModel(nn.Module):
+    def __init__(self):
+        super(SimpleModel, self).__init__()
+        self.fc = nn.Linear(10, 1)
+
+    def forward(self, x):
+        return self.fc(x)
+
+# Instantiate the model
+model = SimpleModel()
+
+# Load the model weights
+model.load_state_dict(torch.load('model.pth'))
+model.eval()  # Set the model to evaluation mode
+
+# Prepare a sample input
+input_tensor = torch.randn(1, 10)
+
+# Perform inference
+with torch.no_grad():  # Disable gradient calculation
+    output = model(input_tensor)
+print('Inference output:', output)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-15.ipynb)

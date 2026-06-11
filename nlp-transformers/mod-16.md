@@ -59,6 +59,66 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from transformers import BertTokenizer, BertForSequenceClassification
+from transformers import pipeline
+
+# Load pre-trained BERT model and tokenizer
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertForSequenceClassification.from_pretrained('bert-base-uncased')
+
+# Create a sentiment analysis pipeline
+sentiment_pipeline = pipeline('sentiment-analysis', model=model, tokenizer=tokenizer)
+
+# Analyze sentiment of a sample text
+result = sentiment_pipeline('I love using BERT for NLP tasks!')
+print(result)
+```
+
+```python
+from transformers import BertTokenizer, BertForSequenceClassification, Trainer, TrainingArguments
+from datasets import load_dataset
+import torch
+
+# Load dataset
+dataset = load_dataset('imdb')
+
+# Load tokenizer and model
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertForSequenceClassification.from_pretrained('bert-base-uncased')
+
+# Tokenize dataset
+def tokenize_function(examples):
+    return tokenizer(examples['text'], padding='max_length', truncation=True)
+
+tokenized_datasets = dataset.map(tokenize_function, batched=True)
+
+# Define training arguments
+training_args = TrainingArguments(
+    output_dir='./results',
+    evaluation_strategy='epoch',
+    learning_rate=2e-5,
+    per_device_train_batch_size=16,
+    per_device_eval_batch_size=16,
+    num_train_epochs=3,
+    weight_decay=0.01
+)
+
+# Initialize Trainer
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=tokenized_datasets['train'],
+    eval_dataset=tokenized_datasets['test']
+)
+
+# Train the model
+trainer.train()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-16.ipynb)

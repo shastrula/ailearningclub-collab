@@ -59,6 +59,70 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+from sagemaker.session import Session
+from sagemaker.experiments.run import Run, RunInput, RunOutput
+
+# Initialize a SageMaker session
+session = Session()
+
+# Create an experiment
+experiment_name = 'fraud-detection-experiment'
+experiment = Experiment.create(experiment_name=experiment_name, sagemaker_boto_client=boto3.client('sagemaker'))
+
+print(f'Experiment ARN: {experiment.experiment_arn}')
+
+# Start a run within the experiment
+with Run(experiment_name=experiment_name, run_name='run-1', sagemaker_boto_client=boto3.client('sagemaker')) as run:
+    # Log parameters
+    run.log_parameters({'learning_rate': 0.01, 'epochs': 10})
+    
+    # Log input data
+    run.log_input(RunInput(data=['s3://input-data-bucket/train.csv','s3://input-data-bucket/validation.csv']))
+    
+    # Log model artifact
+    run.log_output(RunOutput(artifact='s3://output-data-bucket/model.tar.gz'))
+    
+    # Log metrics
+    run.log_metric(name='accuracy', value=0.95, iteration_number=10)
+```
+
+```python
+from sagemaker.tuner import HyperparameterTuner, IntegerParameter, ContinuousParameter
+from sagemaker.estimator import Estimator
+
+# Define the estimator
+estimator = Estimator(
+    image_uri='123456789012.dkr.ecr.region.amazonaws.com/xgboost:latest',
+    role='SageMakerRole',
+    instance_count=1,
+    instance_type='ml.m5.large',
+    output_path='s3://output-data-bucket/'
+)
+
+# Define the hyperparameter ranges
+hyperparameter_ranges = {
+    'learning_rate': ContinuousParameter(0.01, 0.2),
+   'max_depth': IntegerParameter(3, 10)
+}
+
+# Create the HyperparameterTuner
+tuner = HyperparameterTuner(
+    estimator,
+    objective_metric_name='validation:auc',
+    hyperparameter_ranges=hyperparameter_ranges,
+    max_jobs=20,
+    max_parallel_jobs=3
+)
+
+# Start the tuning job
+tuner.fit('s3://input-data-bucket/')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-16.ipynb)

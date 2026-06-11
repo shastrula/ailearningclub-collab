@@ -59,6 +59,106 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import random
+
+# Define a simple ReAct agent
+class ReActAgent:
+    def __init__(self):
+        self.thoughts = []
+
+    def reason(self, situation):
+        self.thoughts.append(f'Analyzing situation: {situation}')
+        # Simulate reasoning by randomly choosing an option
+        return random.choice(['Option A', 'Option B'])
+
+    def act(self, decision):
+        self.thoughts.append(f'Choosing action: {decision}')
+        print(f'Executing: {decision}')
+
+# Instantiate and use the agent
+agent = ReActAgent()
+decision = agent.reason('Complex problem')
+agent.act(decision)
+```
+
+```python
+from langgraph import LangGraph
+
+# Define agent functions
+def agent1(data):
+    return {'output': 'Agent 1 processed data'}
+
+def agent2(data):
+    return {'output': 'Agent 2 processed data'}
+
+# Create a LangGraph instance
+graph = LangGraph()
+
+# Add agents and define workflow
+graph.add_agent('agent1', agent1)
+graph.add_agent('agent2', agent2)
+graph.add_edge('agent1', 'agent2')
+
+# Run the workflow
+result = graph.run({'input': 'Initial data'})
+print(result)
+```
+
+```python
+def external_tool(query):
+    # Simulate an external tool that provides answers
+    return f'Answer to {query} from external tool'
+
+class ToolCallingAgent:
+    def __init__(self):
+        pass
+
+    def call_tool(self, query):
+        return external_tool(query)
+
+agent = ToolCallingAgent()
+response = agent.call_tool('What is the capital of France?')
+print(response)
+```
+
+```python
+class MemoryAgent:
+    def __init__(self):
+        self.memory = {}
+
+    def store(self, key, value):
+        self.memory[key] = value
+
+    def recall(self, key):
+        return self.memory.get(key, 'No memory found')
+
+agent = MemoryAgent()
+agent.store('user_name', 'Alice')
+print(agent.recall('user_name'))
+```
+
+```python
+from langgraph import LangGraph
+
+def agent1(data):
+    return {'output': 'Agent 1 processed data'}
+
+def agent2(data):
+    return {'output': 'Agent 2 processed data'}
+
+graph = LangGraph()
+graph.add_agent('agent1', agent1)
+graph.add_agent('agent2', agent2)
+graph.add_edge('agent1', 'agent2')
+
+result = graph.run({'input': 'Initial data'})
+print(result)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-17.ipynb)

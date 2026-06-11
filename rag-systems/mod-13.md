@@ -59,6 +59,51 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+from sentence_transformers import SentenceTransformer
+
+# Load pre-trained model
+model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+
+# Sample text
+texts = ['This is a sample sentence.', 'Another example sentence.']
+
+# Generate embeddings
+embeddings = model.encode(texts)
+
+print(embeddings)
+```
+
+```python
+from transformers import pipeline
+import numpy as np
+from sentence_transformers import SentenceTransformer
+
+# Load pre-trained model for reranking
+reranker = pipeline('text-classification', model='distilbert-base-uncased')
+
+# Sample chunks and query
+chunks = ['This is chunk one.', 'This is chunk two.']
+query ='relevant information'
+
+# Generate embeddings for chunks and query
+model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+chunk_embeddings = model.encode(chunks)
+query_embedding = model.encode([query])[0]
+
+# Calculate similarity scores
+scores = [np.dot(chunk_embedding, query_embedding) for chunk_embedding in chunk_embeddings]
+
+# Rerank chunks based on scores
+ranked_chunks = [chunk for _, chunk in sorted(zip(scores, chunks), key=lambda pair: pair[0], reverse=True)]
+
+print(ranked_chunks)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-13.ipynb)

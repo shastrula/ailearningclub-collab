@@ -59,6 +59,95 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import random
+
+# Define the environment
+environment = ['clean', 'dirty']
+
+# Define the agent's actions
+actions = ['clean','move']
+
+# Reasoning step
+def reason(state):
+    """Determine the action based on the current state of the environment."""
+    if state == 'dirty':
+        return 'clean'
+    else:
+        return'move'
+
+# Acting step
+def act(action):
+    """Execute the chosen action."""
+    if action == 'clean':
+        print('Agent is cleaning...')
+    else:
+        print('Agent is moving...')
+
+# Simulate the agent
+current_state = random.choice(environment)
+chosen_action = reason(current_state)
+act(chosen_action)
+```
+
+```python
+from langgraph import Graph, Agent
+
+# Define agents
+agent1 = Agent('Agent 1')
+agent2 = Agent('Agent 2')
+
+# Define interactions
+def interact(agent1, agent2):
+    """Simulate an interaction between two agents."""
+    print(f'{agent1.name} interacts with {agent2.name}')
+
+# Create a graph
+graph = Graph()
+
+# Add agents and interactions to the graph
+graph.add_agent(agent1)
+graph.add_agent(agent2)
+graph.add_interaction(interact, [agent1, agent2])
+
+# Run the graph
+graph.run()
+```
+
+```python
+class Tool:
+    def perform_task(self):
+        return "Task performed"
+
+class Agent:
+    def __init__(self, name, memory=[]):
+        self.name = name
+        self.memory = memory
+        self.tool = Tool()
+
+    def use_tool(self):
+        result = self.tool.perform_task()
+        self.memory.append(result)
+        print(f'{self.name} used the tool. Memory: {self.memory}')
+
+agent = Agent('Agent 1')
+agent.use_tool()
+```
+
+```python
+def workflow():
+    steps = ['step1','step2','step3']
+    for step in steps:
+        print(f'Executing {step}')
+        # Simulate action execution
+        print(f'{step} completed')
+
+workflow()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-10.ipynb)

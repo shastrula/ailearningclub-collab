@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# Load the Iris dataset
+data = load_iris()
+X, y = data.data, data.target
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Initialize and train the Logistic Regression model
+model = LogisticRegression(max_iter=200)
+model.fit(X_train, y_train)
+
+# Make predictions on the test set
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Accuracy: {accuracy:.2f}')
+```
+
+```python
+import pandas as pd
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.ensemble import RandomForestClassifier
+
+# Sample DataFrame
+data = {'feature1': [1, 2, 3, 4], 'feature2': ['A', 'B', 'A', 'B'], 'target': [0, 1, 0, 1]}
+df = pd.DataFrame(data)
+
+# Define preprocessing for numeric and categorical features
+numeric_features = ['feature1']
+categorical_features = ['feature2']
+
+numeric_transformer = StandardScaler()
+categorical_transformer = OneHotEncoder(drop='first')
+
+preprocessor = ColumnTransformer(transformers=[
+    ('num', numeric_transformer, numeric_features),
+    ('cat', categorical_transformer, categorical_features)
+])
+
+# Create a pipeline that preprocesses the data and then fits a Random Forest model
+pipeline = Pipeline(steps=[
+    ('preprocessor', preprocessor),
+    ('classifier', RandomForestClassifier())
+])
+
+# Split the data into features and target
+X = df.drop('target', axis=1)
+y = df['target']
+
+# Fit the pipeline
+pipeline.fit(X, y)
+
+# Predict using the pipeline
+y_pred = pipeline.predict(X)
+print(y_pred)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-5.ipynb)

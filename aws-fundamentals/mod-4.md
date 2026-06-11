@@ -59,6 +59,32 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+
+s3 = boto3.client('s3')
+
+# Create bucket
+s3.create_bucket(Bucket='my-unique-bucket-name')
+
+# Upload file
+s3.upload_file('myfile.txt', 'my-unique-bucket-name', 'myfile.txt')
+
+# List objects
+response = s3.list_objects_v2(Bucket='my-unique-bucket-name')
+for obj in response.get('Contents', []):
+    print(f"Key: {obj['Key']}, Size: {obj['Size']}")
+
+# Download file
+s3.download_file('my-unique-bucket-name', 'myfile.txt', 'downloaded.txt')
+
+# Delete object
+s3.delete_object(Bucket='my-unique-bucket-name', Key='myfile.txt')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-fundamentals/mod-4.ipynb)

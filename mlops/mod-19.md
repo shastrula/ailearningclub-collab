@@ -59,6 +59,58 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+from sagemaker.model import Model
+
+# Initialize boto3 session
+session = boto3.Session()
+
+sagemaker_client = session.client('sagemaker')
+
+# Specify the model details
+model_name ='my-model'
+image = 'your-ecr-image-uri'
+model_data ='s3://your-bucket/model.tar.gz'
+role = 'your-iam-role-arn'
+
+# Create a SageMaker Model
+sagemaker_model = Model(image=image, model_data=model_data, role=role, name=model_name)
+
+# Deploy the model to create an endpoint
+predictor = sagemaker_model.deploy(initial_instance_count=1, instance_type='ml.m5.large')
+
+# The endpoint name is usually derived from the model name
+endpoint_name = predictor.endpoint
+print(f"Endpoint created with name: {endpoint_name}")
+```
+
+```python
+import boto3
+import json
+
+# Initialize boto3 runtime client
+runtime = boto3.client('sagemaker-runtime')
+
+# Specify the endpoint name
+endpoint_name ='my-model-endpoint'
+
+# Prepare the input data
+input_data = json.dumps({"instances": [[1.0, 2.0, 5.0]]})
+
+# Invoke the endpoint
+response = runtime.invoke_endpoint(EndpointName=endpoint_name,
+                                   ContentType='application/json',
+                                   Body=input_data)
+
+# Extract and print the prediction
+result = json.loads(response['Body'].read())
+print(result)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-19.ipynb)

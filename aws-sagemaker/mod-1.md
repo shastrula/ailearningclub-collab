@@ -55,6 +55,39 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import sagemaker
+from sagemaker import get_execution_role
+
+# Initialize SageMaker session
+session = sagemaker.Session()
+role = get_execution_role()
+bucket = session.default_bucket()
+
+print(f"Default bucket: {bucket}")
+print(f"Execution role: {role}")
+print(f"Region: {session.boto_region_name}")
+```
+
+```python
+# Create a simple notebook instance
+from sagemaker.estimator import Estimator
+
+# Define training parameters
+training_params = {
+    "image_uri": "382416733822.dkr.ecr.us-east-1.amazonaws.com/xgboost:latest",
+    "role": role,
+    "instance_count": 1,
+    "instance_type": "ml.m5.xlarge",
+    "output_path": f"s3://{bucket}/output"
+}
+
+print("SageMaker is ready for ML workflows")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-sagemaker/mod-1.ipynb)

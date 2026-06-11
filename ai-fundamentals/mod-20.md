@@ -59,6 +59,72 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import tensorflow as tf
+from tensorflow.keras.applications.vgg16 import VGG16
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
+
+# Load the VGG16 model pre-trained on ImageNet data
+base_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
+
+# Freeze the layers of the base model to prevent them from being updated during training
+for layer in base_model.layers:
+    layer.trainable = False
+
+# Add custom layers on top of the base model
+x = base_model.output
+x = GlobalAveragePooling2D()(x)  # Global Average Pooling to reduce spatial dimensions
+predictions = Dense(10, activation='softmax')(x)  # Output layer for 10 classes
+
+# Define the new model
+model = Model(inputs=base_model.input, outputs=predictions)
+
+# Compile the model
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+# Model summary
+model.summary()
+```
+
+```python
+import tensorflow as tf
+from tensorflow import keras
+from keras_tuner import RandomSearch
+
+# Define a model-building function
+def build_model(hp):
+    model = keras.Sequential()
+    model.add(keras.layers.Dense(units=hp.Int('units',
+                                              min_value=32,
+                                              max_value=512,
+                                              step=32),
+                                 activation='relu', input_shape=(784,)))
+    model.add(keras.layers.Dense(10, activation='softmax'))
+    model.compile(optimizer=keras.optimizers.Adam(hp.Choice('learning_rate',
+                                                            values=[1e-2, 1e-3, 1e-4])),
+                  loss='sparse_categorical_crossentropy',
+                  metrics=['accuracy'])
+    return model
+
+# Instantiate the tuner
+tuner = RandomSearch(
+    build_model,
+    objective='val_accuracy',
+    max_trials=5,
+    executions_per_trial=3,
+    directory='my_dir',
+    project_name='helloworld'
+)
+
+# Assume x_train, y_train, x_test, y_test are defined and preprocessed
+# Perform the search
+tuner.search(x_train, y_train, epochs=5, validation_data=(x_test, y_test))
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-20.ipynb)

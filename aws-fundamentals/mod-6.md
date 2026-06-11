@@ -59,6 +59,64 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+
+rds = boto3.client('rds')
+
+# Create RDS instance
+rds.create_db_instance(
+    DBInstanceIdentifier='mydb',
+    DBInstanceClass='db.t3.micro',
+    Engine='mysql',
+    MasterUsername='admin',
+    MasterUserPassword='MyPassword123',
+    AllocatedStorage=20
+)
+
+# Create read replica
+rds.create_db_instance_read_replica(
+    DBInstanceIdentifier='mydb-replica',
+    SourceDBInstanceIdentifier='mydb'
+)
+
+# Describe instances
+response = rds.describe_db_instances(DBInstanceIdentifier='mydb')
+for db in response['DBInstances']:
+    print(f"Endpoint: {db['Endpoint']['Address']}")
+    print(f"Status: {db['DBInstanceStatus']}")
+```
+
+```python
+import boto3
+
+dynamodb = boto3.resource('dynamodb')
+
+# Create table
+table = dynamodb.create_table(
+    TableName='Users',
+    KeySchema=[
+        {'AttributeName': 'userId', 'KeyType': 'HASH'},
+        {'AttributeName': 'timestamp', 'KeyType': 'RANGE'}
+    ],
+    AttributeDefinitions=[
+        {'AttributeName': 'userId', 'AttributeType': 'S'},
+        {'AttributeName': 'timestamp', 'AttributeType': 'N'}
+    ],
+    BillingMode='PAY_PER_REQUEST'
+)
+
+# Put item
+table.put_item(Item={'userId': 'user123', 'timestamp': 1234567890, 'name': 'John'})
+
+# Get item
+response = table.get_item(Key={'userId': 'user123', 'timestamp': 1234567890})
+print(response['Item'])
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-fundamentals/mod-6.ipynb)

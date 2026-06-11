@@ -52,6 +52,84 @@ Recent advances in Debugging and Optimization in Deep Learning:
 
 True mastery comes from implementing Debugging and Optimization in Deep Learning in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Code Examples
+
+```python
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+# Define a simple model
+class SimpleModel(nn.Module):
+    def __init__(self):
+        super(SimpleModel, self).__init__()
+        self.fc = nn.Linear(10, 1)
+
+    def forward(self, x):
+        # Debugging print
+        print(f"Input to the model: {x}")
+        output = self.fc(x)
+        # Debugging print
+        print(f"Output from the model: {output}")
+        return output
+
+# Initialize the model, loss function, and optimizer
+model = SimpleModel()
+criterion = nn.BCEWithLogitsLoss()
+optimizer = optim.SGD(model.parameters(), lr=0.01)
+
+# Dummy data
+inputs = torch.randn(5, 10)
+targets = torch.randint(0, 2, (5, 1)).float()
+
+# Forward pass
+outputs = model(inputs)
+
+# Calculate loss
+loss = criterion(outputs, targets)
+print(f'Initial Loss: {loss.item()}')
+```
+
+```python
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+# Define the same simple model
+class SimpleModel(nn.Module):
+    def __init__(self):
+        super(SimpleModel, self).__init__()
+        self.fc = nn.Linear(10, 1)
+
+    def forward(self, x):
+        return self.fc(x)
+
+# Initialize the model, loss function, and optimizer with learning rate scheduler
+model = SimpleModel()
+criterion = nn.BCEWithLogitsLoss()
+optimizer = optim.SGD(model.parameters(), lr=0.01)
+scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.1)
+
+# Dummy data
+inputs = torch.randn(5, 10)
+targets = torch.randint(0, 2, (5, 1)).float()
+
+# Training loop with learning rate scheduler and gradient clipping
+for epoch in range(3):
+    optimizer.zero_grad()
+    outputs = model(inputs)
+    loss = criterion(outputs, targets)
+    
+    # Gradient clipping
+    nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+    
+    loss.backward()
+    optimizer.step()
+    scheduler.step()
+    print(f'Epoch {epoch+1}, Loss: {loss.item()}, LR: {scheduler.get_last_lr()[0]}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-19.ipynb)

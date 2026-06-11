@@ -55,6 +55,63 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+# 1D array (vector)
+a = np.array([1, 2, 3])
+
+# 2D array (matrix)
+A = np.array([[1, 2], [3, 4]])
+
+# Array of zeros
+zeros = np.zeros((2, 3))
+
+# Array of ones
+ones = np.ones((2, 3))
+
+# Range of values
+range_arr = np.arange(0, 10, 2)  # [0, 2, 4, 6, 8]
+
+# Random array
+random_arr = np.random.rand(3, 3)
+```
+
+```python
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+# Element-wise operations
+print(a + b)      # [5, 7, 9]
+print(a * b)      # [4, 10, 18]
+print(a / b)      # [0.25, 0.4, 0.5]
+
+# Scalar operations
+print(a * 2)      # [2, 4, 6]
+print(a + 10)     # [11, 12, 13]
+```
+
+```python
+A = np.array([[1, 2, 3], [4, 5, 6]])
+
+print(A.shape)    # (2, 3) - 2 rows, 3 columns
+print(A.size)     # 6 - total elements
+print(A.dtype)    # int64 - data type
+print(A.ndim)     # 2 - number of dimensions
+```
+
+```python
+a = np.array([10, 20, 30, 40, 50])
+
+print(a[0])       # 10 - first element
+print(a[-1])      # 50 - last element
+print(a[1:4])     # [20, 30, 40] - elements 1 to 3
+print(a[::2])     # [10, 30, 50] - every 2nd element
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/applied-maths-numpy/mod-1.ipynb)

@@ -59,6 +59,65 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import langgraph
+
+# Define a simple agent using LangGraph
+def agent():
+    return 'Hello from Agent!'
+
+# Create a LangGraph instance
+graph = langgraph.Graph()
+
+# Add the agent to the graph
+graph.add_node('agent', agent)
+
+# Define the edges
+graph.add_edge('start', 'agent')
+graph.add_edge('agent', 'end')
+
+# Run the graph
+result = graph.run('start')
+print(result)
+```
+
+```python
+import langgraph
+
+# Define a tool function
+def tool():
+    return 'Tool result'
+
+# Define an agent with memory
+class Agent:
+    def __init__(self):
+        self.memory = {}
+    def act(self):
+        if 'tool_result' in self.memory:
+            return self.memory['tool_result']
+        else:
+            self.memory['tool_result'] = tool()
+            return self.memory['tool_result']
+
+# Create a LangGraph instance
+graph = langgraph.Graph()
+
+# Add the agent to the graph
+agent_instance = Agent()
+graph.add_node('agent', agent_instance.act)
+
+# Define the edges
+graph.add_edge('start', 'agent')
+graph.add_edge('agent', 'end')
+
+# Run the graph
+result = graph.run('start')
+print(result)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-18.ipynb)

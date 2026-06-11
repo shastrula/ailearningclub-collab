@@ -59,6 +59,76 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import random
+
+# Define a simple ReAct agent
+class ReActAgent:
+    def __init__(self):
+        self.memory = {}
+
+    def reason(self, task):
+        # Simulate reasoning process
+        if 'math' in task:
+            return'solve_math'
+        elif 'fetch' in task:
+            return 'fetch_data'
+        else:
+            return 'unknown'
+
+    def act(self, action):
+        # Simulate action based on reasoning
+        if action =='solve_math':
+            return self.solve_math()
+        elif action == 'fetch_data':
+            return self.fetch_data()
+        else:
+            return 'Action not recognized'
+
+    def solve_math(self):
+        return random.randint(1, 100)
+
+    def fetch_data(self):
+        return 'Data fetched successfully'
+
+# Example usage
+agent = ReActAgent()
+task ='solve math problem'
+action = agent.reason(task)
+result = agent.act(action)
+print(result)  # Output will vary as it is random
+```
+
+```python
+from langgraph import LangGraph
+
+# Define individual agents
+class AgentA:
+    def perform_task(self):
+        return 'Agent A completed task'
+
+class AgentB:
+    def perform_task(self):
+        return 'Agent B completed task'
+
+# Create a LangGraph instance
+graph = LangGraph()
+
+# Add agents to the graph
+graph.add_agent('A', AgentA())
+graph.add_agent('B', AgentB())
+
+# Define interactions between agents
+graph.add_interaction('A', 'B')
+
+# Execute the graph
+results = graph.execute()
+print(results)  # Output: {'A': 'Agent A completed task', 'B': 'Agent B completed task'}
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-23.ipynb)

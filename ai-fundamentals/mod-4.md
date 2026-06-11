@@ -59,6 +59,79 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+
+# Sample dataset
+data = {
+   'square_footage': [1500, 1600, 1700, 1800, 1900, 2000],
+    'bedrooms': [3, 3, 4, 4, 5, 5],
+    'price': [300000, 320000, 340000, 360000, 380000, 400000]
+}
+df = pd.DataFrame(data)
+
+# Features and target variable
+X = df[['square_footage', 'bedrooms']]
+y = df['price']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create and train the model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Make predictions
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+mse = mean_squared_error(y_test, y_pred)
+print(f'Mean Squared Error: {mse}')
+```
+
+```python
+import numpy as np
+import pandas as pd
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+from sklearn.pipeline import make_pipeline
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+
+# Sample dataset
+data = {
+    'time': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    'price': [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+}
+df = pd.DataFrame(data)
+
+# Features and target variable
+X = df[['time']]
+y = df['price']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create and train the model
+degree = 2
+model = make_pipeline(PolynomialFeatures(degree), LinearRegression())
+model.fit(X_train, y_train)
+
+# Make predictions
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+mse = mean_squared_error(y_test, y_pred)
+print(f'Mean Squared Error: {mse}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-4.ipynb)

@@ -59,6 +59,45 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import torch
+import numpy as np
+
+# Creating a tensor from a list
+tensor_from_list = torch.tensor([1, 2, 3])
+print('Tensor from list:', tensor_from_list)
+
+# Creating a tensor with random numbers
+random_tensor = torch.rand(3, 3)
+print('Random tensor:', random_tensor)
+
+# Creating a tensor from a NumPy array
+numpy_array = np.array([1, 2, 3])
+tensor_from_numpy = torch.from_numpy(numpy_array)
+print('Tensor from NumPy array:', tensor_from_numpy)
+```
+
+```python
+import torch
+
+# Create tensors with requires_grad=True
+x = torch.tensor([1.0, 2.0, 3.0], requires_grad=True)
+y = torch.tensor([4.0, 5.0, 6.0])
+
+# Perform operations
+z = x + y
+out = z * z
+
+# Compute gradients
+out.backward(torch.tensor([1.0, 1.0, 1.0]))
+
+# Print gradients
+print('Gradient of x:', x.grad)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-3.ipynb)

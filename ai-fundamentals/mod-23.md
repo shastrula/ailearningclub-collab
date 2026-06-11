@@ -59,6 +59,65 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import lime
+import lime.lime_tabular
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+
+# Load dataset
+iris = load_iris()
+X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.2, random_state=42)
+
+# Train model
+model = RandomForestClassifier()
+model.fit(X_train, y_train)
+
+# Initialize LIME explainer
+explainer = lime.lime_tabular.LimeTabularExplainer(
+    X_train, 
+    feature_names=iris.feature_names, 
+    class_names=iris.target_names, 
+    mode='classification')
+
+# Explain prediction for the first test instance
+exp = explainer.explain_instance(X_test[0], model.predict_proba)
+exp.show_in_notebook(show_table=True)
+```
+
+```python
+import tensorflow as tf
+from tensorflow.keras import layers, models
+import numpy as np
+
+# Define a simple model
+model = models.Sequential([
+    layers.Dense(10, activation='relu', input_shape=(784,)),
+    layers.Dense(10, activation='softmax')
+])
+
+# Compile the model
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+
+# Simulate federated learning with two clients
+client_data_1 = np.random.rand(100, 784)
+client_data_2 = np.random.rand(100, 784)
+client_labels_1 = np.random.randint(0, 10, 100)
+client_labels_2 = np.random.randint(0, 10, 100)
+
+# Train on client 1
+model.fit(client_data_1, client_labels_1, epochs=1)
+
+# Train on client 2
+model.fit(client_data_2, client_labels_2, epochs=1)
+
+print('Federated Learning completed.')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-23.ipynb)

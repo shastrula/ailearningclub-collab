@@ -55,6 +55,36 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+# Import necessary libraries
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+
+# Generate some sample data
+np.random.seed(0)
+X = 2 * np.random.rand(100, 1)  # Random values between 0 and 2
+y = 4 + 3 * X + np.random.randn(100, 1)  # Linear relationship with some noise
+
+# Create and train the Linear Regression model
+model = LinearRegression()
+model.fit(X, y)  # Fit the model to the data
+
+# Make predictions using the model
+X_new = np.array([[0], [2]])  # New values to predict
+y_predict = model.predict(X_new)  # Predictions
+
+# Plot the results
+plt.scatter(X, y)  # Scatter plot of the original data
+plt.plot(X_new, y_predict, color='red')  # Plot the predicted line
+plt.xlabel('X')
+plt.ylabel('y')
+plt.show()  # Display the plot
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-1.ipynb)

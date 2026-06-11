@@ -59,6 +59,46 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import pandas as pd
+from sklearn.utils import resample
+
+# Assuming df is a pandas DataFrame with a 'label' column
+df_majority = df[df.label==0]  # Majority class (e.g., positive reviews)
+df_minority = df[df.label==1]  # Minority class (e.g., negative reviews)
+
+# Upsample minority class
+df_minority_upsampled = resample(df_minority,
+                                 replace=True,     # sample with replacement
+                                 n_samples=df_majority.shape[0],  # match number of majority class
+                                 random_state=123) # reproducible results
+
+# Combine majority class with upsampled minority class
+df_upsampled = pd.concat([df_majority, df_minority_upsampled])
+
+print("Upsampled DataFrame with balanced classes")
+print(df_upsampled.head())
+```
+
+```python
+from transformers import BertTokenizer
+
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+
+text = "This is an example of a sentence with an OOV word like 'xyzzy'."
+
+# Tokenize the text
+tokens = tokenizer.tokenize(text)
+
+# Convert tokens to IDs
+token_ids = tokenizer.convert_tokens_to_ids(tokens)
+
+print("Token IDs:", token_ids)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-14.ipynb)

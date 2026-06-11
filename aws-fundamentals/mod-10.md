@@ -59,6 +59,45 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+
+route53 = boto3.client('route53')
+
+# Create hosted zone
+response = route53.create_hosted_zone(
+    Name='example.com',
+    CallerReference='unique-ref-123'
+)
+zone_id = response['HostedZone']['Id']
+
+# Create A record
+route53.change_resource_record_sets(
+    HostedZoneId=zone_id,
+    ChangeBatch={
+        'Changes': [
+            {
+                'Action': 'CREATE',
+                'ResourceRecordSet': {
+                    'Name': 'example.com',
+                    'Type': 'A',
+                    'TTL': 300,
+                    'ResourceRecords': [{'Value': '192.0.2.1'}]
+                }
+            }
+        ]
+    }
+)
+
+# List records
+response = route53.list_resource_record_sets(HostedZoneId=zone_id)
+for record in response['ResourceRecordSets']:
+    print(f"{record['Name']} ({record['Type']})")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-fundamentals/mod-10.ipynb)

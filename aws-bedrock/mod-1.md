@@ -55,6 +55,32 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import boto3
+
+client = boto3.client('bedrock-runtime', region_name='us-east-1')
+
+response = client.invoke_model(
+    modelId='anthropic.claude-3-sonnet-20240229-v1:0',
+    body=json.dumps({
+        "anthropic_version": "bedrock-2023-06-01",
+        "max_tokens": 1024,
+        "messages": [
+            {
+                "role": "user",
+                "content": "What is AWS Bedrock?"
+            }
+        ]
+    })
+)
+
+result = json.loads(response['body'].read())
+print(result['content'][0]['text'])
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-bedrock/mod-1.ipynb)

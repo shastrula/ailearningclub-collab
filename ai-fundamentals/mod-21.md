@@ -59,6 +59,64 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+data = pd.read_csv('machine_data.csv')
+
+# Features and target
+X = data.drop('failure', axis=1)
+y = data['failure']
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Initialize and train the RandomForestClassifier
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(X_train, y_train)
+
+# Make predictions on the test set
+y_pred = model.predict(X_test)
+
+# Evaluate the model's accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Accuracy: {accuracy:.2f}')
+```
+
+```python
+import pandas as pd
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+
+# Load dataset
+data = pd.read_csv('customer_data.csv')
+
+# Select features for clustering
+X = data[['age', 'annual_income', 'spending_score']]
+
+# Apply K-Means clustering
+kmeans = KMeans(n_clusters=3, random_state=42)
+kmeans.fit(X)
+
+# Add cluster labels to the data
+data['cluster'] = kmeans.labels_
+
+# Plot the clusters
+plt.scatter(data['annual_income'], data['spending_score'], c=data['cluster'], cmap='viridis')
+plt.scatter(kmeans.cluster_centers_[:, 1], kmeans.cluster_centers_[:, 2], s=300, c='red')
+plt.xlabel('Annual Income')
+plt.ylabel('Spending Score')
+plt.title('Customer Segments')
+plt.show()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-21.ipynb)

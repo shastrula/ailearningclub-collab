@@ -59,6 +59,55 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+# example1.py
+
+import joblib
+import numpy as np
+from flask import Flask, request, jsonify
+
+# Save the trained model to a file
+model = joblib.load('trained_model.pkl')
+
+# Define a function to make predictions
+def predict(input_data):
+    prediction = model.predict(input_data)
+    return prediction
+
+# Create a Flask app
+app = Flask(__name__)
+
+@app.route('/predict', methods=['POST'])
+def predict_endpoint():
+    input_data = np.array(request.json['data'])
+    output = predict(input_data)
+    return jsonify(output.tolist())
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+```python
+# example2.py
+
+import pandas as pd
+from sklearn.metrics import confusion_matrix
+
+# Load dataset
+data = pd.read_csv('data.csv')
+
+# Assume'model' is a trained classifier
+model = joblib.load('trained_model.pkl')
+predictions = model.predict(data.drop('target', axis=1))
+
+# Calculate confusion matrix
+cm = confusion_matrix(data['target'], predictions)
+print(cm)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-14.ipynb)

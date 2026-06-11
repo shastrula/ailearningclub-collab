@@ -59,6 +59,83 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import torch
+import torch.nn as nn
+
+# Define a simple neural network with one hidden layer
+class SimpleNN(nn.Module):
+    def __init__(self):
+        super(SimpleNN, self).__init__()
+        # Input layer to hidden layer with ReLU activation
+        self.hidden = nn.Linear(10, 5)
+        # Hidden layer to output layer with ReLU activation
+        self.predict = nn.Linear(5, 1)
+
+    def forward(self, x):
+        # Apply ReLU activation function
+        x = torch.relu(self.hidden(x))
+        # Output layer
+        out = self.predict(x)
+        return out
+
+# Instantiate the model
+model = SimpleNN()
+print(model)
+```
+
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+class CNN(nn.Module):
+    def __init__(self):
+        super(CNN, self).__init__()
+        self.conv1 = nn.Conv2d(1, 32, kernel_size=3, stride=1, padding=1)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=1)
+        self.fc1 = nn.Linear(64 * 7 * 7, 128)
+        self.fc2 = nn.Linear(128, 10)
+
+    def forward(self, x):
+        x = F.relu(F.max_pool2d(self.conv1(x), 2))
+        x = F.relu(F.max_pool2d(self.conv2(x), 2))
+        x = x.view(-1, 64 * 7 * 7)
+        x = F.relu(self.fc1(x))
+        x = self.fc2(x)
+        return F.log_softmax(x, dim=1)
+
+# Instantiate the model
+model = CNN()
+print(model)
+```
+
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+class ActivationNN(nn.Module):
+    def __init__(self):
+        super(ActivationNN, self).__init__()
+        self.fc1 = nn.Linear(10, 5)
+        self.fc2 = nn.Linear(5, 1)
+
+    def forward(self, x):
+        # Apply ReLU activation function
+        x = F.relu(self.fc1(x))
+        # Apply Sigmoid activation function
+        x = torch.sigmoid(self.fc2(x))
+        return x
+
+# Instantiate the model
+model = ActivationNN()
+print(model)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-4.ipynb)

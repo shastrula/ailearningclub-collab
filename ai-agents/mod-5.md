@@ -59,6 +59,61 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+# Define a simple calculator tool
+def calculator(x, y, operation):
+    if operation == 'add':
+        return x + y
+    elif operation =='subtract':
+        return x - y
+    elif operation =='multiply':
+        return x * y
+    elif operation == 'divide':
+        return x / y
+    else:
+        return "Invalid operation"
+
+# Simulate LLM output
+llm_output = {
+    "type": "tool_call",
+    "tool": "calculator",
+    "args": {"x": 5, "y": 3, "operation": "add"}
+}
+
+# Parse and execute the tool call
+if llm_output["type"] == "tool_call":
+    tool = llm_output["tool"]
+    args = llm_output["args"]
+    result = globals()[tool](**args)  # Dynamically call the tool
+    print(f"Tool Result: {result}")
+```
+
+```python
+import requests
+
+# Define a function to call an external API
+def external_api_call(endpoint, params):
+    response = requests.get(endpoint, params=params)
+    return response.json()
+
+# Simulate LLM output
+llm_output = {
+    "type": "tool_call",
+    "tool": "external_api_call",
+    "args": {"endpoint": "https://api.example.com/data", "params": {"key": "value"}}
+}
+
+# Parse and execute the tool call
+if llm_output["type"] == "tool_call":
+    tool = llm_output["tool"]
+    args = llm_output["args"]
+    result = globals()[tool](**args)  # Dynamically call the tool
+    print(f"API Result: {result}")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-5.ipynb)

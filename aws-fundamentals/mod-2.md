@@ -59,6 +59,28 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+
+iam = boto3.client('iam')
+
+# Create user
+iam.create_user(UserName='app-user')
+
+# Create access key
+response = iam.create_access_key(UserName='app-user')
+print(f"Access Key: {response['AccessKey']['AccessKeyId']}")
+
+# Attach policy
+iam.attach_user_policy(
+    UserName='app-user',
+    PolicyArn='arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess'
+)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-fundamentals/mod-2.ipynb)

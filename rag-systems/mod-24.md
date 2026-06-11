@@ -59,6 +59,64 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import faiss
+
+# Example: Creating a simple vector database using Faiss
+dimension = 128  # Dimension of the vectors
+index = faiss.IndexFlatL2(dimension)  # L2 distance metric
+vectors = [[1.0]*dimension, [2.0]*dimension]  # Sample vectors
+index.add(vectors)  # Adding vectors to the index
+
+# Searching for nearest neighbors
+query_vector = [1.5]*dimension
+distances, indices = index.search([query_vector], 2)  # Searching for 2 nearest neighbors
+print(f'Distances: {distances}, Indices: {indices}')
+```
+
+```python
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+sentences = ["This is an example sentence", "Each sentence is converted"]
+embeddings = model.encode(sentences)
+print(embeddings)
+```
+
+```python
+import re
+
+def chunk_text(text, chunk_size=500):
+    return [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
+
+text = "This is a long text that needs to be chunked into smaller pieces for processing."
+chunks = chunk_text(text)
+print(chunks)
+```
+
+```python
+def rerank_results(results, relevance_scores):
+    ranked_results = sorted(zip(results, relevance_scores), key=lambda x: x[1], reverse=True)
+    return [result for result, score in ranked_results]
+
+results = ["result1", "result2", "result3"]
+relevance_scores = [0.8, 0.6, 0.9]
+reranked_results = rerank_results(results, relevance_scores)
+print(reranked_results)
+```
+
+```python
+from transformers import pipeline
+
+generator = pipeline('text-generation', model='gpt2')
+prompt = 'Once upon a time,'
+generated_text = generator(prompt, max_length=50, num_return_sequences=1)
+print(generated_text)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-24.ipynb)

@@ -59,6 +59,58 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import pandas as pd
+from sklearn.impute import SimpleImputer
+
+# Sample dataset with missing values
+data = {'A': [1, 2, None, 4], 'B': [None, 2, 3, 4]}
+df = pd.DataFrame(data)
+
+# Using SimpleImputer to fill missing values with the mean
+imputer = SimpleImputer(strategy='mean')
+df_imputed = pd.DataFrame(imputer.fit_transform(df), columns=df.columns)
+
+print(df_imputed)
+```
+
+```python
+from sklearn.preprocessing import StandardScaler
+import numpy as np
+
+# Sample dataset
+data = np.array([[1, 2], [2, 3], [3, 4], [4, 5]])
+
+# Applying feature scaling
+scaler = StandardScaler()
+scaled_data = scaler.fit_transform(data)
+
+print(scaled_data)
+```
+
+```python
+from sklearn.preprocessing import OneHotEncoder, PolynomialFeatures
+import pandas as pd
+
+# Sample dataset
+data = {'category': ['A', 'B', 'A', 'C'], 'value': [1, 2, 3, 4]}
+df = pd.DataFrame(data)
+
+# One-hot encoding for categorical variables
+encoder = OneHotEncoder(sparse=False)
+encoded_categories = encoder.fit_transform(df[['category']])
+
+# Polynomial features
+poly = PolynomialFeatures(degree=2, include_bias=False)
+poly_features = poly.fit_transform(df[['value']])
+
+print("One-hot encoded categories:\n", encoded_categories)
+print("Polynomial features:\n", poly_features)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-3.ipynb)

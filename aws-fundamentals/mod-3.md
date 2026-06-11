@@ -59,6 +59,35 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+
+ec2 = boto3.client('ec2')
+
+# Launch instance
+response = ec2.run_instances(
+    ImageId='ami-0c55b159cbfafe1f0',
+    MinCount=1,
+    MaxCount=1,
+    InstanceType='t3.micro',
+    KeyName='my-key',
+    SecurityGroups=['web-sg']
+)
+
+instance_id = response['Instances'][0]['InstanceId']
+print(f"Launched instance: {instance_id}")
+
+# Describe instances
+instances = ec2.describe_instances(InstanceIds=[instance_id])
+for reservation in instances['Reservations']:
+    for instance in reservation['Instances']:
+        print(f"State: {instance['State']['Name']}")
+        print(f"Public IP: {instance.get('PublicIpAddress', 'N/A')}")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-fundamentals/mod-3.ipynb)

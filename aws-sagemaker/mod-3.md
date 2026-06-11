@@ -59,6 +59,118 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from sagemaker.sklearn.processing import SKLearnProcessor
+import sagemaker
+
+session = sagemaker.Session()
+role = 'arn:aws:iam::123456789012:role/SageMakerRole'
+
+# Create SKLearnProcessor
+sklearn_processor = SKLearnProcessor(
+    framework_version='0.23-1',
+    role=role,
+    instance_type='ml.m5.xlarge',
+    instance_count=1,
+    sagemaker_session=session
+)
+
+# Run processing job
+sklearn_processor.run(
+    code='preprocessing.py',
+    inputs=[
+        ProcessingInput(
+            source='s3://my-bucket/raw-data/',
+            destination='/opt/ml/processing/input'
+        )
+    ],
+    outputs=[
+        ProcessingOutput(
+            source='/opt/ml/processing/output',
+            destination='s3://my-bucket/processed-data/'
+        )
+    ],
+    arguments=['--input-data', '/opt/ml/processing/input']
+)
+```
+
+```python
+from sagemaker.spark.processing import PySparkProcessor
+
+spark_processor = PySparkProcessor(
+    framework_version='2.4',
+    role=role,
+    instance_type='ml.m5.xlarge',
+    instance_count=3,
+    sagemaker_session=session
+)
+
+# Run Spark job
+spark_processor.run(
+    submit_app='spark_etl.py',
+    inputs=[
+        ProcessingInput(
+            source='s3://my-bucket/raw-data/',
+            destination='/opt/ml/processing/input'
+        )
+    ],
+    outputs=[
+        ProcessingOutput(
+            source='/opt/ml/processing/output',
+            destination='s3://my-bucket/processed-data/'
+        )
+    ]
+)
+```
+
+```python
+from sagemaker.processing import FrameworkProcessor
+
+tf_processor = FrameworkProcessor(
+    estimator_cls=TensorFlow,
+    framework_version='2.8',
+    role=role,
+    instance_type='ml.p3.2xlarge',
+    instance_count=1,
+    sagemaker_session=session
+)
+
+# Run TensorFlow processing job
+tf_processor.run(
+    code='data_augmentation.py',
+    inputs=[
+        ProcessingInput(
+            source='s3://my-bucket/images/',
+            destination='/opt/ml/processing/input'
+        )
+    ],
+    outputs=[
+        ProcessingOutput(
+            source='/opt/ml/processing/output',
+            destination='s3://my-bucket/augmented-images/'
+        )
+    ]
+)
+```
+
+```python
+# Check processing job status
+import boto3
+
+sm_client = boto3.client('sagemaker')
+
+response = sm_client.describe_processing_job(
+    ProcessingJobName='data-prep-job-2024-01-15-12-30-45'
+)
+
+print(f"Status: {response['ProcessingJobStatus']}")
+print(f"Exit code: {response['ExitCode']}")
+print(f"Logs: {response['ProcessingOutputConfig']}")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-sagemaker/mod-3.ipynb)

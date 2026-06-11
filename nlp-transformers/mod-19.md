@@ -59,6 +59,75 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from transformers import BertTokenizer
+
+# Load pre-trained BERT tokenizer
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+
+# Sample input text
+text = "Debugging BERT models can be challenging."
+
+# Correct tokenization
+inputs = tokenizer(text, return_tensors='pt', add_special_tokens=True)
+
+print(inputs)
+```
+
+```python
+from transformers import BertModel
+
+# Load pre-trained BERT model
+model = BertModel.from_pretrained('bert-base-uncased')
+
+# Forward pass through the model
+outputs = model(**inputs)
+
+print(outputs.last_hidden_state.shape)
+```
+
+```python
+# Incorrect tokenization without special tokens
+inputs = tokenizer(text, return_tensors='pt', add_special_tokens=False)
+
+try:
+    outputs = model(**inputs)
+except ValueError as e:
+    print(f"Error: {e}")
+```
+
+```python
+import logging
+from transformers import BertTokenizer, BertModel
+
+# Configure logging
+logging.basicConfig(level=logging.DEBUG)
+
+# Load pre-trained BERT tokenizer and model
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertModel.from_pretrained('bert-base-uncased')
+
+# Sample input text
+text = "Debugging HuggingFace Transformers."
+
+# Tokenize the input text
+inputs = tokenizer(text, return_tensors='pt')
+
+# Forward pass through the model
+outputs = model(**inputs)
+
+# Log the last hidden state
+logging.debug(outputs.last_hidden_state)
+```
+
+```python
+# Check input tensor shape
+print(inputs['input_ids'].shape)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-19.ipynb)

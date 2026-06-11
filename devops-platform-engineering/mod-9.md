@@ -59,6 +59,110 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+# Python application with CloudWatch metrics
+import boto3
+import time
+from datetime import datetime
+
+cloudwatch = boto3.client('cloudwatch')
+
+def put_metric(metric_name, value, unit='None'):
+    cloudwatch.put_metric_data(
+        Namespace='MyApp',
+        MetricData=[
+            {
+                'MetricName': metric_name,
+                'Value': value,
+                'Unit': unit,
+                'Timestamp': datetime.utcnow()
+            }
+        ]
+    )
+
+# Track request latency
+start_time = time.time()
+# ... process request ...
+latency = (time.time() - start_time) * 1000
+put_metric('RequestLatency', latency, 'Milliseconds')
+
+# Track business metrics
+put_metric('OrdersProcessed', 42, 'Count')
+put_metric('RevenueGenerated', 1500.00, 'None')
+```
+
+```python
+# Python application with OpenTelemetry tracing
+from opentelemetry import trace, metrics
+from opentelemetry.exporter.jaeger.thrift import JaegerExporter
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import BatchSpanProcessor
+
+# Configure Jaeger exporter
+jaeger_exporter = JaegerExporter(
+    agent_host_name="localhost",
+    agent_port=6831,
+)
+
+trace.set_tracer_provider(TracerProvider())
+trace.get_tracer_provider().add_span_processor(
+    BatchSpanProcessor(jaeger_exporter)
+)
+
+tracer = trace.get_tracer(__name__)
+
+# Create spans
+with tracer.start_as_current_span("process_order") as span:
+    span.set_attribute("order_id", "12345")
+    
+    with tracer.start_as_current_span("validate_order"):
+        # Validation logic
+        pass
+    
+    with tracer.start_as_current_span("process_payment"):
+        # Payment logic
+        pass
+```
+
+```python
+# Structured logging with JSON
+import json
+import logging
+
+class JSONFormatter(logging.Formatter):
+    def format(self, record):
+        log_data = {
+            'timestamp': self.formatTime(record),
+            'level': record.levelname,
+            'logger': record.name,
+            'message': record.getMessage(),
+            'module': record.module,
+            'function': record.funcName,
+            'line': record.lineno
+        }
+        
+        if record.exc_info:
+            log_data['exception'] = self.formatException(record.exc_info)
+        
+        return json.dumps(log_data)
+
+# Configure logging
+handler = logging.StreamHandler()
+handler.setFormatter(JSONFormatter())
+logger = logging.getLogger(__name__)
+logger.addHandler(handler)
+
+# Log with context
+logger.info("Order processed", extra={
+    'order_id': '12345',
+    'customer_id': '67890',
+    'amount': 99.99
+})
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/devops-platform-engineering/mod-9.ipynb)

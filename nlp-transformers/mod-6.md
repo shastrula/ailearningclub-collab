@@ -55,6 +55,57 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import nltk
+nltk.download('punkt')
+from nltk.tokenize import word_tokenize
+
+# Sample text
+sample_text = "Tokenization is essential in NLP."
+
+# Tokenize the text into words
+tokens = word_tokenize(sample_text)
+
+print(tokens)
+```
+
+```python
+from transformers import BertTokenizer
+
+# Initialize the BERT tokenizer
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+
+# Sample text
+sample_text = "Tokenization is essential in NLP."
+
+# Tokenize the text into subwords
+tokens = tokenizer.tokenize(sample_text)
+
+print(tokens)
+```
+
+```python
+from transformers import BertTokenizer
+
+# Initialize the BERT tokenizer
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+
+# Sample text
+sample_text = "Tokenization is essential in NLP. BERT uses special tokens."
+
+# Tokenize the text with special tokens
+tokens = tokenizer.tokenize(sample_text)
+tokens = ['[CLS]'] + tokens + ['[SEP]']
+
+# Convert tokens to input IDs
+input_ids = tokenizer.convert_tokens_to_ids(tokens)
+
+print(input_ids)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-6.ipynb)

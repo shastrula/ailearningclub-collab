@@ -59,6 +59,104 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+# Example developer portal API
+from fastapi import FastAPI, HTTPException
+from typing import List
+
+app = FastAPI()
+
+class ServiceRequest:
+    def __init__(self, service_id: str, parameters: dict):
+        self.service_id = service_id
+        self.parameters = parameters
+
+@app.get("/catalog")
+async def get_catalog():
+    """List available services"""
+    return {
+        "services": [
+            {
+                "id": "web-service",
+                "name": "Web Service",
+                "description": "Deploy a web application"
+            },
+            {
+                "id": "database",
+                "name": "PostgreSQL Database",
+                "description": "Deploy a database"
+            }
+        ]
+    }
+
+@app.post("/services/{service_id}/provision")
+async def provision_service(service_id: str, request: ServiceRequest):
+    """Provision a service from the catalog"""
+    # Validate parameters
+    # Generate infrastructure code
+    # Apply infrastructure
+    # Return service details
+    return {
+        "service_id": service_id,
+        "status": "provisioning",
+        "request_id": "req-12345"
+    }
+
+@app.get("/services/{service_id}/status")
+async def get_service_status(service_id: str):
+    """Get status of provisioned service"""
+    return {
+        "service_id": service_id,
+        "status": "ready",
+        "url": "https://my-service.example.com"
+    }
+
+@app.get("/templates")
+async def get_templates():
+    """List available deployment templates"""
+    return {
+        "templates": [
+            {
+                "id": "web-service-template",
+                "name": "Web Service",
+                "description": "Standard web service template"
+            }
+        ]
+    }
+```
+
+```python
+# Track platform adoption and usage
+import prometheus_client
+
+# Metrics
+services_provisioned = prometheus_client.Counter(
+    'platform_services_provisioned_total',
+    'Total services provisioned',
+    ['service_type']
+)
+
+provisioning_duration = prometheus_client.Histogram(
+    'platform_provisioning_duration_seconds',
+    'Time to provision service',
+    ['service_type']
+)
+
+developer_satisfaction = prometheus_client.Gauge(
+    'platform_developer_satisfaction',
+    'Developer satisfaction score',
+    ['team']
+)
+
+# Usage
+services_provisioned.labels(service_type='web-service').inc()
+provisioning_duration.labels(service_type='web-service').observe(45.2)
+developer_satisfaction.labels(team='backend').set(8.5)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/devops-platform-engineering/mod-11.ipynb)

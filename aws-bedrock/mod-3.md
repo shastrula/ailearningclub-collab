@@ -59,6 +59,161 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+import json
+
+client = boto3.client('bedrock-runtime', region_name='us-east-1')
+
+# Invoke Claude 3 Sonnet
+response = client.invoke_model(
+    modelId='anthropic.claude-3-sonnet-20240229-v1:0',
+    body=json.dumps({
+        "anthropic_version": "bedrock-2023-06-01",
+        "max_tokens": 1024,
+        "messages": [
+            {
+                "role": "user",
+                "content": "What is machine learning?"
+            }
+        ]
+    })
+)
+
+# Parse response
+result = json.loads(response['body'].read())
+print(result['content'][0]['text'])
+```
+
+```python
+# Claude format
+claude_body = {
+    "anthropic_version": "bedrock-2023-06-01",
+    "max_tokens": 1024,
+    "messages": [{"role": "user", "content": "Hello"}]
+}
+
+# Llama format
+llama_body = {
+    "prompt": "What is AI?",
+    "max_gen_len": 512,
+    "temperature": 0.7,
+    "top_p": 0.9
+}
+
+# Mistral format
+mistral_body = {
+    "prompt": "Explain quantum computing",
+    "max_tokens": 512,
+    "temperature": 0.7
+}
+
+# Titan format
+titan_body = {
+    "inputText": "Summarize AWS",
+    "textGenerationConfig": {
+        "maxTokenCount": 512,
+        "temperature": 0.7,
+        "topP": 0.9
+    }
+}
+```
+
+```python
+import boto3
+
+client = boto3.client('bedrock-runtime', region_name='us-east-1')
+
+# Start a conversation
+messages = [
+    {
+        "role": "user",
+        "content": "What is AWS Bedrock?"
+    }
+]
+
+response = client.converse(
+    modelId='anthropic.claude-3-sonnet-20240229-v1:0',
+    messages=messages,
+    system="You are a helpful AWS expert.",
+    inferenceConfig={
+        "maxTokens": 1024,
+        "temperature": 0.7
+    }
+)
+
+assistant_message = response['output']['message']['content'][0]['text']
+print(assistant_message)
+
+# Continue conversation
+messages.append({
+    "role": "assistant",
+    "content": assistant_message
+})
+
+messages.append({
+    "role": "user",
+    "content": "How does it compare to OpenAI?"
+})
+
+response = client.converse(
+    modelId='anthropic.claude-3-sonnet-20240229-v1:0',
+    messages=messages,
+    system="You are a helpful AWS expert.",
+    inferenceConfig={
+        "maxTokens": 1024,
+        "temperature": 0.7
+    }
+)
+
+print(response['output']['message']['content'][0]['text'])
+```
+
+```python
+# Streaming with InvokeModel
+response = client.invoke_model_with_response_stream(
+    modelId='anthropic.claude-3-sonnet-20240229-v1:0',
+    body=json.dumps({
+        "anthropic_version": "bedrock-2023-06-01",
+        "max_tokens": 1024,
+        "messages": [
+            {"role": "user", "content": "Write a 500-word essay on AI"}
+        ]
+    })
+)
+
+# Process stream
+for event in response['body']:
+    if 'contentBlockDelta' in event:
+        delta = event['contentBlockDelta']['delta']
+        if 'text' in delta:
+            print(delta['text'], end='', flush=True)
+
+print()  # Newline after streaming completes
+```
+
+```python
+# Streaming with Converse
+response = client.converse_stream(
+    modelId='anthropic.claude-3-sonnet-20240229-v1:0',
+    messages=[
+        {"role": "user", "content": "Explain quantum computing in detail"}
+    ],
+    inferenceConfig={
+        "maxTokens": 2048,
+        "temperature": 0.7
+    }
+)
+
+# Process stream
+for event in response['stream']:
+    if 'contentBlockDelta' in event:
+        print(event['contentBlockDelta']['delta']['text'], end='', flush=True)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-bedrock/mod-3.ipynb)

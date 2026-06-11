@@ -59,6 +59,91 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import faiss
+from sentence_transformers import SentenceTransformer
+import numpy as np
+
+# Load pre-trained model
+model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+
+# Sample documents
+documents = ['This is the first document.', 'This document is the second document.']
+
+# Generate embeddings
+embeddings = model.encode(documents)
+
+# Initialize Faiss index
+d = embeddings.shape[1]
+index = faiss.IndexFlatL2(d)
+
+# Add embeddings to the index
+index.add(np.array(embeddings).astype('float32'))
+
+# Query the index
+query = model.encode(['This is a query document.'])
+D, I = index.search(np.array(query).astype('float32'), k=2)
+
+print('Distances:', D)
+print('Indices:', I)
+```
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+# Sample documents
+documents = ['This is the first document.', 'This document is the second document.']
+
+# Chunk documents
+chunks = [' '.join(doc.split(' ')[:len(doc.split(' '))/2]) for doc in documents]
+
+# Initialize TF-IDF Vectorizer
+vectorizer = TfidfVectorizer()
+
+# Generate TF-IDF matrix
+tfidf_matrix = vectorizer.fit_transform(chunks)
+
+# Query
+query = 'This is a query document.'
+query_vec = vectorizer.transform([query])
+
+# Calculate cosine similarity
+similarities = cosine_similarity(query_vec, tfidf_matrix)
+
+# Rerank based on similarity
+ranked_indices = similarities.argsort()[0][::-1]
+
+print('Reranked Indices:', ranked_indices)
+```
+
+```python
+from langchain import RetrievalQA
+from langchain.retrievers import BM25Retriever
+from langchain.llms import HuggingFaceHub
+
+# Sample documents
+documents = ['This is the first document.', 'This document is the second document.']
+
+# Initialize BM25Retriever
+retriever = BM25Retriever.from_documents(documents)
+
+# Initialize HuggingFaceHub LLM
+llm = HuggingFaceHub(repo_id="facebook/bart-large-cnn")
+
+# Create RetrievalQA chain
+qa_chain = RetrievalQA.from_chain_type(llm=llm, retriever=retriever)
+
+# Query
+query = "What is the first document about?"
+result = qa_chain.run(query)
+
+print('Result:', result)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-15.ipynb)

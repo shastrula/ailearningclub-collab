@@ -55,6 +55,43 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import torch
+
+# Creating a tensor from a list
+tensor_from_list = torch.tensor([1.0, 2.0, 3.0])
+print('Tensor from list:', tensor_from_list)
+```
+
+```python
+# Using GPU if available
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+```
+
+```python
+x = torch.tensor([1.0, 2.0, 3.0], requires_grad=True)
+y = x * 2
+y.backward()
+print(x.grad)  # Gradients of x
+```
+
+```python
+import torch.nn as nn
+
+# Defining a linear layer
+linear_layer = nn.Linear(10, 5)
+```
+
+```python
+import torch.optim as optim
+
+# Using Adam optimizer
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-2.ipynb)

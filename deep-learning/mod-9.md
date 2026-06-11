@@ -59,6 +59,40 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import torch
+import torch.nn as nn
+
+# Define a simple convolutional layer
+conv_layer = nn.Conv2d(in_channels=1, out_channels=32, kernel_size=3, stride=1, padding=1)
+
+# Print the layer's parameters
+print("Weights:", conv_layer.weight)
+print("Bias:", conv_layer.bias)
+```
+
+```python
+import torch
+import torch.nn as nn
+
+# Define a max pooling layer
+pool_layer = nn.MaxPool2d(kernel_size=2, stride=2)
+
+# Example input tensor
+input_tensor = torch.tensor([[[[ 1,  2,  3,  4],
+                               [ 5,  6,  7,  8],
+                               [ 9, 10, 11, 12],
+                               [13, 14, 15, 16]]]])
+
+# Apply the pooling layer
+output_tensor = pool_layer(input_tensor)
+
+print("Output Tensor:", output_tensor)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-9.ipynb)

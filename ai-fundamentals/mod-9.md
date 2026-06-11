@@ -55,6 +55,85 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+def sigmoid(x):
+    """Sigmoid activation function."""
+    return 1 / (1 + np.exp(-x))
+
+# Inputs to the neuron
+inputs = np.array([0, 1, -1])
+
+# Weights associated with each input
+weights = np.array([0.5, -0.5, 0.3])
+
+# Bias term
+bias = 0.1
+
+# Weighted sum of inputs plus bias
+weighted_sum = np.dot(weights, inputs) + bias
+
+# Apply activation function
+output = sigmoid(weighted_sum)
+
+print(f"Output: {output}")
+```
+
+```python
+import numpy as np
+
+# Define a simple neural network with one neuron
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+def sigmoid_derivative(x):
+    return x * (1 - x)
+
+# Input dataset
+inputs = np.array([[0, 0, 1],
+                    [1, 1, 1],
+                    [1, 0, 1],
+                    [0, 1, 1]])
+
+# Output dataset            
+outputs = np.array([[0], [1], [1], [0]])
+
+# Seed random numbers to make calculation deterministic
+np.random.seed(1)
+
+# Initialize weights randomly with mean 0
+weights = 2 * np.random.random((3, 1)) - 1
+
+# Forward propagation
+for iteration in range(20000):
+
+    # Input layer
+    input_layer = inputs
+    
+    # Output layer (with sigmoid activation)
+    output_layer = sigmoid(np.dot(input_layer, weights))
+    
+    # Calculate the error (The difference between the desired output
+    # and the predicted output).
+    error = outputs - output_layer
+    
+    # Multiply error by input and gradient of the sigmoid function.
+    # Less confident weights are adjusted more.
+    adjustments = error * sigmoid_derivative(output_layer)
+    
+    # Update weights
+    weights += np.dot(input_layer.T, adjustments)
+
+print("Weights after training:")
+print(weights)
+print("Output after training:")
+print(output_layer)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-9.ipynb)

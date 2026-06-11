@@ -59,6 +59,40 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+import json
+
+lambda_client = boto3.client('lambda')
+
+# Create function
+response = lambda_client.create_function(
+    FunctionName='my-function',
+    Runtime='python3.11',
+    Role='arn:aws:iam::ACCOUNT:role/lambda-role',
+    Handler='lambda_function.lambda_handler',
+    Code={'ZipFile': b'function code here'}
+)
+
+# Invoke function
+response = lambda_client.invoke(
+    FunctionName='my-function',
+    InvocationType='RequestResponse',
+    Payload=json.dumps({'key': 'value'})
+)
+
+print(json.loads(response['Payload'].read()))
+
+# Update function code
+lambda_client.update_function_code(
+    FunctionName='my-function',
+    ZipFile=b'new function code'
+)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-fundamentals/mod-7.ipynb)

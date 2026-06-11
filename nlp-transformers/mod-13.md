@@ -59,6 +59,47 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+# Sample true labels and predictions
+y_true = [0, 1, 0, 1, 0, 1]
+y_pred = [0, 0, 0, 1, 1, 1]
+
+# Calculate evaluation metrics
+accuracy = accuracy_score(y_true, y_pred)
+precision = precision_score(y_true, y_pred)
+recall = recall_score(y_true, y_pred)
+f1 = f1_score(y_true, y_pred)
+
+print(f'Accuracy: {accuracy}')
+print(f'Precision: {precision}')
+print(f'Recall: {recall}')
+print(f'F1 Score: {f1}')
+```
+
+```python
+from sklearn.model_selection import cross_val_score
+from sklearn.ensemble import RandomForestClassifier
+import numpy as np
+
+# Sample data
+X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])
+y = np.array([0, 1, 0, 1])
+
+# Initialize the model
+model = RandomForestClassifier()
+
+# Perform cross-validation
+scores = cross_val_score(model, X, y, cv=2)
+
+print(f'Cross-Validation Scores: {scores}')
+print(f'Mean Cross-Validation Score: {np.mean(scores)}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-13.ipynb)

@@ -59,6 +59,44 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+
+ec2 = boto3.client('ec2')
+
+# Create VPC
+vpc = ec2.create_vpc(CidrBlock='10.0.0.0/16')
+vpc_id = vpc['Vpc']['VpcId']
+
+# Create subnet
+subnet = ec2.create_subnet(VpcId=vpc_id, CidrBlock='10.0.1.0/24')
+subnet_id = subnet['Subnet']['SubnetId']
+
+# Create Internet Gateway
+igw = ec2.create_internet_gateway()
+igw_id = igw['InternetGateway']['InternetGatewayId']
+
+# Attach IGW to VPC
+ec2.attach_internet_gateway(InternetGatewayId=igw_id, VpcId=vpc_id)
+
+# Create route table
+rt = ec2.create_route_table(VpcId=vpc_id)
+rt_id = rt['RouteTable']['RouteTableId']
+
+# Add route to IGW
+ec2.create_route(
+    RouteTableId=rt_id,
+    DestinationCidrBlock='0.0.0.0/0',
+    GatewayId=igw_id
+)
+
+# Associate route table with subnet
+ec2.associate_route_table(SubnetId=subnet_id, RouteTableId=rt_id)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-fundamentals/mod-5.ipynb)

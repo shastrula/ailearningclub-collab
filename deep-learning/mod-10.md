@@ -52,6 +52,98 @@ Recent advances in Transfer Learning in Deep Learning:
 
 True mastery comes from implementing Transfer Learning in Deep Learning in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Code Examples
+
+```python
+import torch
+import torch.nn as nn
+import torchvision.models as models
+import torchvision.transforms as transforms
+from torch.utils.data import DataLoader
+from torchvision.datasets import ImageFolder
+
+# Load a pre-trained ResNet-18 model
+model = models.resnet18(pretrained=True)
+
+# Freeze all layers to prevent them from being updated
+for param in model.parameters():
+    param.requires_grad = False
+
+# Replace the last layer for our specific task (assuming 2 classes)
+num_features = model.fc.in_features
+model.fc = nn.Linear(num_features, 2)
+
+# Define loss function and optimizer
+criterion = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.fc.parameters(), lr=0.001)
+
+# Data transformations and loading
+transform = transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.ToTensor()
+])
+train_data = ImageFolder('path/to/train', transform=transform)
+train_loader = DataLoader(train_data, batch_size=4, shuffle=True)
+
+# Training loop
+for epoch in range(2):  # loop over the dataset multiple times
+    for i, data in enumerate(train_loader, 0):
+        inputs, labels = data
+        optimizer.zero_grad()
+        outputs = model(inputs)
+        loss = criterion(outputs, labels)
+        loss.backward()
+        optimizer.step()
+        print(f'Epoch {epoch+1}, Batch {i+1}, Loss: {loss.item()}')
+```
+
+```python
+import torch
+import torch.nn as nn
+import torchvision.models as models
+import torchvision.transforms as transforms
+from torch.utils.data import DataLoader
+from torchvision.datasets import ImageFolder
+
+# Load a pre-trained ResNet-18 model
+model = models.resnet18(pretrained=True)
+
+# Unfreeze some layers for fine-tuning
+for name, param in model.named_parameters():
+    if 'layer4' in name or 'fc' in name:
+        param.requires_grad = True
+    else:
+        param.requires_grad = False
+
+# Replace the last layer for our specific task (assuming 2 classes)
+num_features = model.fc.in_features
+model.fc = nn.Linear(num_features, 2)
+
+# Define loss function and optimizer
+criterion = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+
+# Data transformations and loading
+transform = transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.ToTensor()
+])
+train_data = ImageFolder('path/to/train', transform=transform)
+train_loader = DataLoader(train_data, batch_size=4, shuffle=True)
+
+# Training loop
+for epoch in range(2):  # loop over the dataset multiple times
+    for i, data in enumerate(train_loader, 0):
+        inputs, labels = data
+        optimizer.zero_grad()
+        outputs = model(inputs)
+        loss = criterion(outputs, labels)
+        loss.backward()
+        optimizer.step()
+        print(f'Epoch {epoch+1}, Batch {i+1}, Loss: {loss.item()}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-10.ipynb)

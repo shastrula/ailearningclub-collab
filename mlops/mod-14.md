@@ -59,6 +59,84 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+
+# Create a session
+session = boto3.Session(
+    aws_access_key_id='YOUR_ACCESS_KEY',
+    aws_secret_access_key='YOUR_SECRET_KEY',
+    region_name='us-west-2'
+)
+
+iam_client = session.client('iam')
+
+# Create an IAM role
+trust_relationship_policy = {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": ["sagemaker.amazonaws.com"]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+role_response = iam_client.create_role(
+    RoleName='SageMakerRole',
+    AssumeRolePolicyDocument=json.dumps(trust_relationship_policy)
+)
+
+print(role_response)
+```
+
+```python
+import boto3
+from sagemaker.session import Session
+from sagemaker.image_uris import retrieve
+from sagemaker.estimator import Estimator
+
+# Initialize boto3 session
+session = Session()
+
+# Retrieve the URI for the built-in XGBoost algorithm
+container = retrieve('xgboost', session.boto_region_name, '1.0-1')
+
+# Set up the estimator
+xgb = Estimator(
+    image_uri=container,
+    role='SageMakerRole',
+    instance_count=1,
+    instance_type='ml.m5.large',
+    output_path='s3://your-bucket/xgboost/output',
+    sagemaker_session=session
+)
+
+# Set hyperparameters
+xgb.set_hyperparameters(
+    max_depth=5,
+    eta=0.2,
+    gamma=4,
+    min_child_weight=6,
+    subsample=0.8,
+    silent=0,
+    objective='binary:logistic',
+    num_round=100
+)
+
+# Specify input data
+input_data ='s3://your-bucket/xgboost/input/train'
+
+# Start the training job
+xgb.fit({'train': input_data})
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-14.ipynb)

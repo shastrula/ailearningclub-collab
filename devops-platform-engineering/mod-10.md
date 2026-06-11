@@ -59,6 +59,25 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+import json
+
+secrets_client = boto3.client('secretsmanager')
+
+def get_db_credentials():
+    response = secrets_client.get_secret_value(
+        SecretId='prod/db-password'
+    )
+    secret = json.loads(response['SecretString'])
+    return secret['username'], secret['password']
+
+username, password = get_db_credentials()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/devops-platform-engineering/mod-10.ipynb)

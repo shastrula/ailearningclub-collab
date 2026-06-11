@@ -55,6 +55,64 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import os
+import pandas as pd
+
+# Simulate a check for new data
+def check_for_new_data():
+    # In a real system, this might check an S3 bucket or a database
+    return os.path.exists('new_data.csv')
+
+def run_data_validation(data_path):
+    print(f"Validating data in {data_path}...")
+    df = pd.read_csv(data_path)
+    # A simple validation: check if 'age' column exists and is positive
+    if 'age' not in df.columns or (df['age'] <= 0).any():
+        raise ValueError("Data validation failed: 'age' column is invalid.")
+    print("Data validation passed.")
+    return True
+
+def trigger_retraining():
+    print("Triggering model retraining pipeline...")
+    # This would kick off a Kubeflow, SageMaker, or Vertex AI pipeline
+    pass
+
+# Main CI/CD logic
+if check_for_new_data():
+    print("New data detected.")
+    if run_data_validation('new_data.csv'):
+        trigger_retraining()
+else:
+    print("No new data. Skipping pipeline.")
+```
+
+```python
+from scipy.stats import ks_2samp
+import pandas as pd
+
+# Load training and production data
+train_data = pd.read_csv('train_data.csv')
+prod_data = pd.read_csv('prod_data.csv')
+
+# Function to check for data drift
+def check_data_drift(train_df, prod_df, feature):
+    train_feature = train_df[feature]
+    prod_feature = prod_df[feature]
+    statistic, p_value = ks_2samp(train_feature, prod_feature)
+    print(f"KS Statistic: {statistic}, P-value: {p_value}")
+    if p_value < 0.05:
+        print(f"Data drift detected for feature: {feature}")
+    else:
+        print(f"No data drift detected for feature: {feature}")
+
+# Check data drift for 'age' feature
+check_data_drift(train_data, prod_data, 'age')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-1.ipynb)

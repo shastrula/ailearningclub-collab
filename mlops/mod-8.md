@@ -59,6 +59,50 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import pandas as pd
+from sklearn.metrics import mean_squared_error
+
+# Example dataset
+data_old = pd.DataFrame({'feature': [1, 2, 3, 4, 5], 'target': [2, 4, 6, 8, 10]})
+data_new = pd.DataFrame({'feature': [6, 7, 8, 9, 10], 'target': [12, 14, 16, 18, 20]})
+
+# Calculate statistical metrics
+mean_old = data_old['feature'].mean()
+std_old = data_old['feature'].std()
+mean_new = data_new['feature'].mean()
+std_new = data_new['feature'].std()
+
+# Detect drift
+drift_detected = mean_old!= mean_new or std_old!= std_new
+print(f'Data drift detected: {drift_detected}')
+```
+
+```python
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+
+# Example dataset
+data_old = pd.DataFrame({'feature': [1, 2, 3, 4, 5], 'target': [2, 4, 6, 8, 10]})
+data_new = pd.DataFrame({'feature': [6, 7, 8, 9, 10], 'target': [15, 17, 19, 21, 23]})
+
+# Train model on old data
+model = LinearRegression()
+model.fit(data_old[['feature']], data_old['target'])
+
+# Predict on new data
+predictions = model.predict(data_new[['feature']])
+mse = mean_squared_error(data_new['target'], predictions)
+
+# Detect concept drift
+concept_drift_detected = mse > 1  # Threshold can be adjusted
+print(f'Concept drift detected: {concept_drift_detected}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-8.ipynb)

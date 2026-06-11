@@ -59,6 +59,56 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+data = pd.read_csv('data.csv')
+X = data.drop('target', axis=1)
+y = data['target']
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train model
+model = RandomForestClassifier()
+model.fit(X_train, y_train)
+
+# Evaluate model
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Model Accuracy: {accuracy:.2f}')
+```
+
+```python
+from hops import featurestore
+
+# Define feature group
+feature_group = featurestore.get_or_create_feature_group(
+    name='user_features',
+    version=1,
+    description='User features for recommendation system',
+    primary_key=['user_id'],
+    event_time='event_time'
+)
+
+# Load data
+data = pd.read_csv('user_data.csv')
+
+# Insert data into feature group
+feature_group.insert(data, write_options={'wait_for_job': True})
+
+# Retrieve features
+features = feature_group.select_all()
+print(features.head())
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-21.ipynb)

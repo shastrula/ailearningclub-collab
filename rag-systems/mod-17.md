@@ -59,6 +59,38 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import hashlib
+
+# Function to hash sensitive data
+def hash_data(data):
+    """Hashes sensitive data using SHA-256 to ensure data privacy."""
+    return hashlib.sha256(data.encode()).hexdigest()
+
+# Example usage
+sensitive_data = 'user_password123'
+hashed_data = hash_data(sensitive_data)
+print(hashed_data)  # Output: 5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+```
+
+```python
+import numpy as np
+
+# Function to detect bias in a dataset
+def detect_bias(data):
+    """Detects bias in a dataset by calculating the mean score."""
+    bias_score = np.mean(data)
+    return bias_score
+
+# Example usage
+dataset = [0.1, 0.2, 0.3, 0.4, 0.5]
+bias_score = detect_bias(dataset)
+print(f'Bias Score: {bias_score}')  # Output: Bias Score: 0.3
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-17.ipynb)

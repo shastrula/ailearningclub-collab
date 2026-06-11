@@ -59,6 +59,49 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import time
+
+def react_agent(task):
+    """Simulate a ReAct agent performing a task."""
+    start_time = time.time()
+    # Simulate reasoning
+    reasoning_steps = 3
+    # Simulate action
+    action_result = 'Task completed'
+    end_time = time.time()
+    response_time = end_time - start_time
+    return action_result, response_time, reasoning_steps
+
+# Example usage
+result, time_taken, steps = react_agent('Sample task')
+print(f'Result: {result}, Time Taken: {time_taken}s, Reasoning Steps: {steps}')
+```
+
+```python
+import networkx as nx
+import matplotlib.pyplot as plt
+
+def langgraph_efficiency(graph):
+    """Evaluate the efficiency of a LangGraph."""
+    nodes = graph.nodes
+    edges = graph.edges
+    complexity = len(nodes) + len(edges)
+    execution_times = {node: 0.01 for node in nodes}  # Simulated execution times
+    total_time = sum(execution_times.values())
+    throughput = len(nodes) / total_time
+    return complexity, total_time, throughput
+
+# Example graph
+G = nx.DiGraph()
+G.add_edges_from([('A', 'B'), ('B', 'C'), ('C', 'D')])
+complexity, time, throughput = langgraph_efficiency(G)
+print(f'Complexity: {complexity}, Total Time: {time}s, Throughput: {throughput} nodes/s')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-13.ipynb)

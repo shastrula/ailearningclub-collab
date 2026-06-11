@@ -59,6 +59,58 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from sklearn.cluster import KMeans
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generate sample data
+X = np.array([[1, 2], [1, 4], [1, 0],
+              [4, 2], [4, 4], [4, 0]])
+
+# Apply K-Means clustering
+kmeans = KMeans(n_clusters=2, random_state=0)
+kmeans.fit(X)
+
+# Print cluster labels and centroids
+print('Cluster labels:', kmeans.labels_)
+print('Centroids:', kmeans.cluster_centers_)
+
+# Plot the clusters and centroids
+plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_, cmap='viridis')
+plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=300, c='red')
+plt.title('K-Means Clustering')
+plt.show()
+```
+
+```python
+from sklearn.cluster import AgglomerativeClustering
+import numpy as np
+from scipy.cluster.hierarchy import dendrogram, linkage
+import matplotlib.pyplot as plt
+
+# Generate sample data
+X = np.array([[1, 2], [1, 4], [1, 0],
+              [4, 2], [4, 4], [4, 0]])
+
+# Apply Agglomerative Clustering
+clustering = AgglomerativeClustering(n_clusters=2)
+clustering.fit(X)
+
+# Plot dendrogram
+linked = linkage(X, 'ward')
+plt.figure(figsize=(10, 7))
+dendrogram(linked,
+           orientation='top',
+           distance_sort='descending',
+           show_leaf_counts=True)
+plt.title('Hierarchical Clustering Dendrogram')
+plt.show()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-7.ipynb)

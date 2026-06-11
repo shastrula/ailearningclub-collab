@@ -59,6 +59,52 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import random
+
+# Define a simple ReAct agent
+class ReActAgent:
+    def __init__(self):
+        self.actions = ['action1', 'action2', 'action3']
+
+    def react(self, situation):
+        # Simulate reasoning about actions
+        print(f'Evaluating actions for situation: {situation}')
+        chosen_action = random.choice(self.actions)
+        print(f'Chosen action: {chosen_action}')
+        return chosen_action
+
+# Create an instance of the ReAct agent
+agent = ReActAgent()
+# Simulate a situation
+situation = 'complex_scenario'
+# Agent reacts to the situation
+agent.react(situation)
+```
+
+```python
+import networkx as nx
+import matplotlib.pyplot as plt
+
+# Create a LangGraph instance
+lang_graph = nx.DiGraph()
+
+# Add agents as nodes
+lang_graph.add_node('Agent1')
+lang_graph.add_node('Agent2')
+
+# Add edges to represent interactions
+lang_graph.add_edge('Agent1', 'Agent2', weight=1)
+
+# Visualize the graph
+pos = nx.spring_layout(lang_graph)
+nx.draw(lang_graph, pos, with_labels=True, node_color='lightblue', edge_color='gray')
+plt.show()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-7.ipynb)

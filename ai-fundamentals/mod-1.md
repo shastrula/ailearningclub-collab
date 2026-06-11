@@ -55,6 +55,49 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+# Raw Data
+x = np.array([1, 2, 3, 4, 5])  # years of experience
+y = np.array([40, 50, 60, 70, 80])  # salary in thousands
+
+# Training the Model
+# Calculate slope (m) and intercept (b) for the line of best fit
+slope = (np.mean(x * y) - np.mean(x) * np.mean(y)) / (np.mean(x**2) - np.mean(x)**2)
+intercept = np.mean(y) - slope * np.mean(x)
+
+print(f'Learned Slope (m): {slope}')
+print(f'Learned Intercept (b): {intercept}')
+
+# Prediction
+new_x = 6  # years of experience
+predicted_y = slope * new_x + intercept
+print(f'Predicted salary for 6 years experience: ${predicted_y}k')
+```
+
+```python
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+
+# Raw data
+data = {
+    'age': [25, 32, 47, 51, 22],
+   'salary': [50000, 65000, 120000, 135000, 48000]
+}
+df = pd.DataFrame(data)
+
+# Standardizing features
+scaler = StandardScaler()
+scaled_features = scaler.fit_transform(df)
+
+print("Original Data:\n", df)
+print("\nScaled Data (Mean=0, Variance=1):\n", scaled_features)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-1.ipynb)

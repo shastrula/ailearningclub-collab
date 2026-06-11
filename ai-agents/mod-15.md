@@ -59,6 +59,61 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import random
+
+# Define a simple ReAct agent
+class ReActAgent:
+    def __init__(self):
+        self.memory = {}
+
+    def reason(self, situation):
+        # Simulate reasoning process
+        if situation in self.memory:
+            return self.memory[situation]
+        else:
+            # Random decision for demonstration
+            decision = random.choice(['A', 'B', 'C'])
+            self.memory[situation] = decision
+            return decision
+
+    def act(self, situation):
+        decision = self.reason(situation)
+        print(f'Acting on decision: {decision}')
+
+# Example usage
+agent = ReActAgent()
+agent.act('new_situation')
+```
+
+```python
+from langgraph import LangGraph
+
+# Define individual agents
+def agent1(input):
+    return f'Agent 1 processed: {input}'
+
+def agent2(input):
+    return f'Agent 2 processed: {input}'
+
+# Create a LangGraph instance
+graph = LangGraph()
+
+# Add agents and define workflow
+graph.add_agent('agent1', agent1)
+graph.add_agent('agent2', agent2)
+graph.add_edge('start', 'agent1')
+graph.add_edge('agent1', 'agent2')
+graph.add_edge('agent2', 'end')
+
+# Run the workflow
+result = graph.run('initial_input')
+print(result)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-15.ipynb)

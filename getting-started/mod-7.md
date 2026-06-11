@@ -59,6 +59,64 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from sklearn import datasets
+import pandas as pd
+
+# Load the iris dataset
+iris = datasets.load_iris()
+X = iris.data  # Features (measurements)
+y = iris.target  # Labels (flower types)
+
+# Convert to DataFrame for better visualization
+df = pd.DataFrame(X, columns=iris.feature_names)
+df['target'] = y
+
+print(df.head())
+```
+
+```python
+from sklearn.model_selection import train_test_split
+
+# Split data: 80% training, 20% testing
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+print(f'Training samples: {len(X_train)}')
+print(f'Testing samples: {len(X_test)}')
+```
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+
+# Create a model
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Train it on the training data
+model.fit(X_train, y_train)
+
+# Make predictions on test data
+y_pred = model.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Model Accuracy: {accuracy:.2%}')
+```
+
+```python
+# Make a prediction on new data
+new_flower = [[5.1, 3.5, 1.4, 0.2]]  # Measurements
+prediction = model.predict(new_flower)
+flower_name = iris.target_names[prediction[0]]
+
+print(f'This flower is: {flower_name}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-7.ipynb)

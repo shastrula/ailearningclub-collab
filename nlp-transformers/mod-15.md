@@ -59,6 +59,61 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report
+
+# Example dataset with inherent bias
+data = pd.DataFrame({
+    'text': ['I love this product!', 'This is terrible.', 'Great experience.', 'I hate this.', 
+             'Women are amazing!', 'Men are strong.'],
+    'label': [1, 0, 1, 0, 1, 1]  # Biased labels favoring positive sentiment for certain groups
+})
+
+# Splitting the dataset
+X_train, X_test, y_train, y_test = train_test_split(data['text'], data['label'], test_size=0.2, random_state=42)
+
+# Simple model for demonstration
+def simple_model(text):
+    return 1 if 'love' in text.lower() or 'great' in text.lower() else 0
+
+# Predicting and evaluating
+y_pred = [simple_model(text) for text in X_test]
+print(classification_report(y_test, y_pred))
+```
+
+```python
+from transformers import pipeline
+
+# Load a pre-trained model
+classifier = pipeline('sentiment-analysis')
+
+# Example text for classification
+text = 'The movie was amazing!'
+
+# Get the prediction
+result = classifier(text)
+print(result)
+
+# Using LIME for explainability (requires lime library)
+#!pip install lime
+
+from lime.lime_text import LimeTextExplainer
+
+explainer = LimeTextExplainer(class_names=['POSITIVE', 'NEGATIVE'])
+
+def predict_fn(texts):
+    results = classifier(texts)
+    return [r['score'] for r in results if r['label'] == 'POSITIVE']
+
+exp = explainer.explain_instance(text, predict_fn, num_features=5)
+exp.show_in_notebook(text_colors=['#ff0000', '#00ff00'])
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-15.ipynb)

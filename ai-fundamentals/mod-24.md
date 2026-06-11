@@ -59,6 +59,58 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
+
+# Sample true labels
+y_true = [0, 1, 1, 0, 1, 0]
+
+# Sample predicted labels
+y_pred = [0, 0, 1, 0, 1, 1]
+
+# Calculate metrics
+accuracy = accuracy_score(y_true, y_pred)
+precision = precision_score(y_true, y_pred)
+recall = recall_score(y_true, y_pred)
+f1 = f1_score(y_true, y_pred)
+roc_auc = roc_auc_score(y_true, y_pred)
+
+# Print results
+print(f'Accuracy: {accuracy}')
+print(f'Precision: {precision}')
+print(f'Recall: {recall}')
+print(f'F1 Score: {f1}')
+print(f'ROC AUC: {roc_auc}')
+```
+
+```python
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.feature_selection import RFE
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Create a random forest classifier
+clf = RandomForestClassifier(n_estimators=50, random_state=0)
+
+# Use Recursive Feature Elimination
+rfe = RFE(clf, n_features_to_select=2, step=1)
+rfe.fit(X, y)
+
+# Print feature importance
+print('Feature ranking:')
+for i in range(X.shape[1]):
+    print(f'Feature {i}: {rfe.ranking_[i]}')
+
+# Print selected features
+print(f'Selected features: {rfe.support_}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-24.ipynb)

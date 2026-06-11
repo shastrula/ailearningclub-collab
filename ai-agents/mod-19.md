@@ -59,6 +59,96 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import langgraph
+
+# Define a simple ReAct agent
+def react_agent(state):
+    """
+    This function defines the behavior of the ReAct agent.
+    
+    Parameters:
+    - state (dict): The current state of the agent.
+    
+    Returns:
+    - dict: The next action to be taken by the agent.
+    """
+    if state['task'] == 'fetch_data':
+        return {'action': 'call_tool', 'tool': 'data_fetcher'}
+    elif state['task'] == 'analyze_data':
+        return {'action': 'call_tool', 'tool': 'data_analyzer'}
+    else:
+        return {'action': 'done'}
+
+# Create a LangGraph workflow
+workflow = langgraph.Workflow()
+workflow.add_node('react_agent', react_agent)
+workflow.add_edge('start','react_agent')
+workflow.add_edge('react_agent', 'end')
+
+# Execute the workflow
+state = {'task': 'fetch_data'}
+workflow.run(state)
+```
+
+```python
+import langgraph
+
+# Define a tool for fetching data
+def data_fetcher():
+    """
+    This function simulates fetching data from an external source.
+    
+    Returns:
+    - dict: The fetched data.
+    """
+    return {'data': 'fetched_data'}
+
+# Define a tool for analyzing data
+def data_analyzer(data):
+    """
+    This function simulates analyzing the fetched data.
+    
+    Parameters:
+    - data (str): The data to be analyzed.
+    
+    Returns:
+    - dict: The analysis result.
+    """
+    return {'analysis': 'analyzed_data'}
+
+# Define an agent with memory
+def memory_agent(state):
+    """
+    This function defines the behavior of the agent with memory.
+    
+    Parameters:
+    - state (dict): The current state of the agent.
+    
+    Returns:
+    - dict: The next action to be taken by the agent.
+    """
+    if state['task'] == 'fetch_data':
+        state['data'] = data_fetcher()
+        return {'action': 'analyze_data'}
+    elif state['task'] == 'analyze_data':
+        state['analysis'] = data_analyzer(state['data']['data'])
+        return {'action': 'done'}
+
+# Create a LangGraph workflow
+workflow = langgraph.Workflow()
+workflow.add_node('memory_agent', memory_agent)
+workflow.add_edge('start','memory_agent')
+workflow.add_edge('memory_agent', 'end')
+
+# Execute the workflow
+state = {'task': 'fetch_data'}
+workflow.run(state)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-19.ipynb)

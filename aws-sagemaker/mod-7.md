@@ -59,6 +59,148 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from sagemaker.estimator import Estimator
+import sagemaker
+
+session = sagemaker.Session()
+role = 'arn:aws:iam::123456789012:role/SageMakerRole'
+
+# Train a model
+estimator = Estimator(
+    image_uri='382416733822.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:latest',
+    role=role,
+    instance_count=1,
+    instance_type='ml.m5.xlarge',
+    output_path='s3://my-bucket/output',
+    sagemaker_session=session
+)
+
+estimator.fit({'training': 's3://my-bucket/train-data/'})
+
+# Deploy as real-time endpoint
+predictor = estimator.deploy(
+    initial_instance_count=1,
+    instance_type='ml.m5.large',
+    endpoint_name='xgboost-realtime-endpoint'
+)
+
+# Make predictions
+import csv
+import io
+
+test_data = '5.1,3.5,1.4,0.2'
+response = predictor.predict(test_data)
+print(f"Prediction: {response}")
+```
+
+```python
+from sagemaker.serverless import ServerlessInferenceConfig
+
+# Create serverless endpoint
+serverless_config = ServerlessInferenceConfig(
+    memory_size_in_mb=1024,
+    max_concurrency=10
+)
+
+predictor = estimator.deploy(
+    serverless_inference_config=serverless_config,
+    endpoint_name='xgboost-serverless-endpoint'
+)
+
+# Invoke serverless endpoint
+response = predictor.predict(test_data)
+print(f"Prediction: {response}")
+```
+
+```python
+from sagemaker.async_inference.async_inference_config import AsyncInferenceConfig
+
+# Configure async inference
+async_config = AsyncInferenceConfig(
+    output_path='s3://my-bucket/async-output/',
+    max_concurrent_invocations_per_instance=10
+)
+
+predictor = estimator.deploy(
+    initial_instance_count=1,
+    instance_type='ml.m5.large',
+    async_inference_config=async_config,
+    endpoint_name='xgboost-async-endpoint'
+)
+
+# Invoke async endpoint
+import json
+
+input_location = 's3://my-bucket/async-input/test-data.json'
+response = predictor.predict_async(input_location)
+output_location = response.output_location
+print(f"Output will be at: {output_location}")
+```
+
+```python
+from sagemaker.multidatamodel import MultiDataModel
+
+# Create multi-model endpoint
+multi_model = MultiDataModel(
+    name='multi-model-endpoint',
+    model_data_prefix='s3://my-bucket/models/',
+    model_name='xgboost-multi',
+    container_uri='382416733822.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:latest',
+    role=role,
+    sagemaker_session=session
+)
+
+# Add models
+multi_model.add('model-1.tar.gz')
+multi_model.add('model-2.tar.gz')
+
+# Deploy
+predictor = multi_model.deploy(
+    initial_instance_count=1,
+    instance_type='ml.m5.large'
+)
+
+# Invoke specific model
+response = predictor.predict(
+    test_data,
+    target_model='model-1.tar.gz'
+)
+```
+
+```python
+import boto3
+
+autoscaling = boto3.client('application-autoscaling')
+
+# Register endpoint for auto-scaling
+autoscaling.register_scalable_target(
+    ServiceNamespace='sagemaker',
+    ResourceId='endpoint/my-endpoint/variant/AllTraffic',
+    ScalableDimension='sagemaker:variant:DesiredInstanceCount',
+    MinCapacity=1,
+    MaxCapacity=10
+)
+
+# Create scaling policy
+autoscaling.put_scaling_policy(
+    PolicyName='endpoint-scaling-policy',
+    ServiceNamespace='sagemaker',
+    ResourceId='endpoint/my-endpoint/variant/AllTraffic',
+    ScalableDimension='sagemaker:variant:DesiredInstanceCount',
+    PolicyType='TargetTrackingScaling',
+    TargetTrackingScalingPolicyConfiguration={
+        'TargetValue': 70.0,
+        'PredefinedMetricSpecification': {
+            'PredefinedMetricType': 'SageMakerVariantInvocationsPerInstance'
+        }
+    }
+)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-sagemaker/mod-7.ipynb)

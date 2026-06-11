@@ -52,6 +52,55 @@ Recent advances in Advanced PyTorch Features:
 
 True mastery comes from implementing Advanced PyTorch Features in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Code Examples
+
+```python
+import torch
+import torch.nn as nn
+
+class CustomMSELoss(nn.Module):
+    def __init__(self):
+        super(CustomMSELoss, self).__init__()
+
+    def forward(self, input, target):
+        # Compute the squared difference between input and target
+        squared_diff = (input - target) ** 2
+        # Return the mean of the squared differences
+        return torch.mean(squared_diff)
+
+# Example usage
+loss_fn = CustomMSELoss()
+input = torch.tensor([1.0, 2.0, 3.0], requires_grad=True)
+target = torch.tensor([1.0, 2.0, 2.0])
+loss = loss_fn(input, target)
+loss.backward()
+print('Gradient:', input.grad)
+```
+
+```python
+import torch
+import torch.nn as nn
+
+# Define a simple model
+class SimpleModel(nn.Module):
+    def __init__(self):
+        super(SimpleModel, self).__init__()
+        self.fc = nn.Linear(10, 1)
+
+    def forward(self, x):
+        return self.fc(x)
+
+model = SimpleModel()
+optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+
+# Save the model checkpoint
+torch.save(model.state_dict(), 'model_checkpoint.pth')
+
+# Load the model checkpoint
+model.load_state_dict(torch.load('model_checkpoint.pth'))
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-17.ipynb)

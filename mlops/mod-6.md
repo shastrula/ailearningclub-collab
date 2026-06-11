@@ -59,6 +59,50 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import mlflow
+import mlflow.sklearn
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier
+
+# Initialize MLflow
+mlflow.set_tracking_uri("http://localhost:5000")
+
+# Load data and train a simple model
+iris = load_iris()
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(iris.data, iris.target)
+
+# Log the model to MLflow
+with mlflow.start_run() as run:
+    mlflow.sklearn.log_model(model, "model")
+    run_id = run.info.run_uuid
+    print(f'Model logged with run ID: {run_id}')
+```
+
+```python
+from flask import Flask, request, jsonify
+import joblib
+
+app = Flask(__name__)
+
+# Load the pre-trained model
+model = joblib.load('model.pkl')
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    data = request.json
+    features = data['features']
+    prediction = model.predict([features])
+    return jsonify({'prediction': prediction.tolist()})
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-6.ipynb)

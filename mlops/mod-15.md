@@ -59,6 +59,26 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+import sagemaker
+
+# Initialize a session
+session = boto3.Session()
+
+# Get the region
+region = session.region_name
+
+# Create a SageMaker session
+sagemaker_session = sagemaker.Session()
+
+print(f'AWS Region: {region}')
+print(f'SageMaker Session: {sagemaker_session}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-15.ipynb)

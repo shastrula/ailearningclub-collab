@@ -59,6 +59,72 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import spacy
+
+# Load the spaCy model
+nlp = spacy.load('en_core_web_sm')
+
+# Sample document
+document = "Natural language processing (NLP) is a sub-field of linguistics, computer science, and artificial intelligence concerned with the interactions between computers and human language, in particular how to program computers to process and analyze large amounts of natural language data."
+
+# Process the document with spaCy
+doc = nlp(document)
+
+# Define a function to chunk the document based on sentences
+def chunk_document(doc, chunk_size=2):
+    chunks = []
+    sentences = list(doc.sents)
+    for i in range(0, len(sentences), chunk_size):
+        chunk = ' '.join(str(sent) for sent in sentences[i:i + chunk_size])
+        chunks.append(chunk)
+    return chunks
+
+# Chunk the document
+chunks = chunk_document(doc)
+print(chunks)
+```
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+# Sample documents
+documents = [
+    "Natural language processing (NLP) is a sub-field of linguistics, computer science, and artificial intelligence concerned with the interactions between computers and human language.",
+    "In particular, how to program computers to process and analyze large amounts of natural language data.",
+    "Challenges in natural language processing frequently correspond to difficulties in artificial intelligence."
+]
+
+# Vectorize the documents using TF-IDF
+vectorizer = TfidfVectorizer()
+tfidf_matrix = vectorizer.fit_transform(documents)
+
+# Compute cosine similarity
+similarity_matrix = cosine_similarity(tfidf_matrix)
+
+# Define a function to chunk documents based on semantic similarity
+def chunk_documents_by_similarity(documents, threshold=0.5):
+    chunks = []
+    current_chunk = [documents[0]]
+    for i in range(1, len(documents)):
+        similarity = similarity_matrix[i-1, i]
+        if similarity > threshold:
+            current_chunk.append(documents[i])
+        else:
+            chunks.append(' '.join(current_chunk))
+            current_chunk = [documents[i]]
+    chunks.append(' '.join(current_chunk))
+    return chunks
+
+# Chunk the documents
+chunks = chunk_documents_by_similarity(documents)
+print(chunks)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-4.ipynb)

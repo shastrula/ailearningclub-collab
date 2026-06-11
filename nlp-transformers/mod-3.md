@@ -59,6 +59,60 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from transformers import BertTokenizer, BertModel
+import torch
+
+# Initialize BERT tokenizer and model
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertModel.from_pretrained('bert-base-uncased')
+
+# Tokenize input text
+inputs = tokenizer("Hello, how are you?", return_tensors='pt')
+
+# Get model outputs
+outputs = model(**inputs)
+
+# Print the last hidden states
+print(outputs.last_hidden_state)
+```
+
+```python
+from transformers import BertForSequenceClassification, Trainer, TrainingArguments
+from datasets import load_dataset
+
+# Load a dataset
+dataset = load_dataset('glue','mrpc')
+
+# Initialize BERT model for sequence classification
+model = BertForSequenceClassification.from_pretrained('bert-base-uncased')
+
+# Define training arguments
+training_args = TrainingArguments(
+    output_dir='./results',
+    evaluation_strategy='epoch',
+    learning_rate=2e-5,
+    per_device_train_batch_size=16,
+    per_device_eval_batch_size=64,
+    num_train_epochs=3,
+    weight_decay=0.01,
+)
+
+# Initialize Trainer
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=dataset['train'],
+    eval_dataset=dataset['validation']
+)
+
+# Train the model
+trainer.train()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-3.ipynb)

@@ -59,6 +59,54 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+# Example embeddings for words
+embeddings = {
+    'apple': np.array([0.1, 0.2, 0.3]),
+    'orange': np.array([0.4, 0.5, 0.6]),
+    'banana': np.array([0.7, 0.8, 0.9])
+}
+
+# Function to compute cosine similarity
+def cosine_similarity(vec1, vec2):
+    return np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
+
+# Query embedding
+query = 'apple'
+query_embedding = embeddings[query]
+
+# Compute similarity with all embeddings
+similarities = {word: cosine_similarity(query_embedding, embedding) for word, embedding in embeddings.items()}
+print(similarities)
+```
+
+```python
+import random
+
+# Example chunks from a document
+chunks = [
+    'The quick brown fox jumps over the lazy dog.',
+    'A journey of a thousand miles begins with a single step.',
+    'To be or not to be, that is the question.',
+    'All that glitters is not gold.'
+]
+
+# Simple reranking function based on random scores
+def rerank_chunks(chunks):
+    scores = {chunk: random.random() for chunk in chunks}
+    ranked_chunks = sorted(chunks, key=lambda chunk: scores[chunk], reverse=True)
+    return ranked_chunks
+
+# Rerank the chunks
+ranked_chunks = rerank_chunks(chunks)
+print(ranked_chunks)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-19.ipynb)

@@ -59,6 +59,45 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import joblib
+from sklearn.ensemble import RandomForestClassifier
+import numpy as np
+
+# Train a simple RandomForest model
+X = np.array([[0, 0], [1, 1]])
+y = np.array([0, 1])
+model = RandomForestClassifier()
+model.fit(X, y)
+
+# Serialize the model
+joblib.dump(model, 'random_forest_model.joblib')
+```
+
+```python
+from flask import Flask, request, jsonify
+import joblib
+import numpy as np
+
+app = Flask(__name__)
+
+# Load the serialized model
+model = joblib.load('random_forest_model.joblib')
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    data = request.get_json()
+    input_data = np.array(data['input']).reshape(1, -1)  # Reshape input data
+    prediction = model.predict(input_data)
+    return jsonify({'prediction': int(prediction[0])})
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-18.ipynb)

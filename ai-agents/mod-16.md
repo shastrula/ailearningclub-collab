@@ -59,6 +59,60 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import logging
+import time
+
+# Set up logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def monitor_agent(agent):
+    try:
+        # Simulate agent activity
+        activity = agent.perform_task()
+        logging.info(f'Agent performed task: {activity}')
+    except Exception as e:
+        logging.error(f'Error occurred: {e}')
+
+class ExampleAgent:
+    def perform_task(self):
+        # Simulate task performance with a small delay
+        time.sleep(1)
+        return 'Task completed successfully'
+
+# Monitor the agent
+agent = ExampleAgent()
+monitor_agent(agent)
+```
+
+```python
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def maintain_agent(agent):
+    try:
+        # Simulate agent maintenance
+        agent.update()
+        logging.info('Agent updated successfully')
+    except Exception as e:
+        logging.error(f'Error during maintenance: {e}')
+
+class ExampleAgent:
+    def update(self):
+        # Simulate update process
+        time.sleep(1)
+        return 'Agent updated successfully'
+
+# Maintain the agent
+agent = ExampleAgent()
+maintain_agent(agent)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-16.ipynb)

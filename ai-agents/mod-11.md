@@ -59,6 +59,56 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import random
+
+def react_agent():
+    # Define a simple task: find a random number between 1 and 10
+    target = random.randint(1, 10)
+    current = 0
+    attempts = 0
+    
+    while current!= target:
+        # Reason: Choose a new number
+        current = random.randint(1, 10)
+        # Act: Increment attempts
+        attempts += 1
+        print(f'Attempt {attempts}: Current number is {current}')
+    
+    print(f'Target {target} found in {attempts} attempts!')
+
+# Run the ReAct agent
+react_agent()
+```
+
+```python
+from langgraph import LangGraph
+
+# Define two simple agents
+def agent1():
+    return 'Agent 1: Hello!'
+
+def agent2():
+    return 'Agent 2: Hi there!'
+
+# Create a LangGraph instance
+graph = LangGraph()
+
+# Add agents to the graph
+graph.add_agent('agent1', agent1)
+graph.add_agent('agent2', agent2)
+
+# Define interactions
+graph.add_interaction('agent1', 'agent2')
+
+# Run the multi-agent system
+output = graph.run()
+print(output)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-11.ipynb)

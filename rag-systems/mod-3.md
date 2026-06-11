@@ -59,6 +59,61 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import torch
+from transformers import BertModel, BertTokenizer
+
+# Load pre-trained BERT model and tokenizer
+model = BertModel.from_pretrained('bert-base-uncased')
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+
+# Tokenize and encode a sample text
+text = 'The quick brown fox jumps over the lazy dog.'
+inputs = tokenizer(text, return_tensors='pt', padding=True, truncation=True)
+
+# Get embeddings from BERT
+with torch.no_grad():
+    outputs = model(**inputs)
+    embeddings = outputs.last_hidden_state
+
+# Extract embeddings for the first token (usually [CLS])
+embedding = embeddings[:, 0, :].squeeze()
+
+print(embedding)
+```
+
+```python
+import torch
+from transformers import BertModel, BertTokenizer
+
+# Load pre-trained BERT model and tokenizer
+model = BertModel.from_pretrained('bert-base-uncased')
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+
+# Sample document
+document = 'The quick brown fox jumps over the lazy dog. This is a test document for chunking and embedding.'
+
+# Define chunk size
+chunk_size = 10
+
+# Split document into chunks
+chunks = [document[i:i+chunk_size] for i in range(0, len(document), chunk_size)]
+
+# Embed each chunk
+chunk_embeddings = []
+for chunk in chunks:
+    inputs = tokenizer(chunk, return_tensors='pt', padding=True, truncation=True)
+    with torch.no_grad():
+        outputs = model(**inputs)
+        embedding = outputs.last_hidden_state[:, 0, :].squeeze()
+    chunk_embeddings.append(embedding)
+
+print(chunk_embeddings)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-3.ipynb)

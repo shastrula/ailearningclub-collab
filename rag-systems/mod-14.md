@@ -59,6 +59,48 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+# Sample predictions and ground truth
+predictions = np.array([1, 0, 1, 1, 0])
+ground_truth = np.array([1, 0, 1, 0, 0])
+
+# Calculate accuracy
+accuracy = np.mean(predictions == ground_truth)
+print(f"Accuracy: {accuracy}")
+```
+
+```python
+from sklearn.metrics import precision_score, recall_score
+
+# Sample predictions and ground truth
+predictions = [1, 0, 1, 1, 0]
+ground_truth = [1, 0, 1, 0, 0]
+
+# Calculate precision and recall
+precision = precision_score(ground_truth, predictions)
+recall = recall_score(ground_truth, predictions)
+
+print(f"Precision: {precision}")
+print(f"Recall: {recall}")
+```
+
+```python
+from sklearn.metrics import f1_score
+
+# Sample predictions and ground truth
+predictions = [1, 0, 1, 1, 0]
+ground_truth = [1, 0, 1, 0, 0]
+
+# Calculate F1 Score
+f1 = f1_score(ground_truth, predictions)
+print(f"F1 Score: {f1}")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-14.ipynb)

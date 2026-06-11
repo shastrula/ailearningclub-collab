@@ -55,6 +55,26 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+def perceptron(inputs, weights, bias, threshold=0):
+    z = np.dot(inputs, weights) + bias
+    return 1 if z > threshold else 0
+
+# AND gate
+weights = np.array([0.5, 0.5])
+bias = -0.75
+
+test_cases = [(0,0), (0,1), (1,0), (1,1)]
+for x1, x2 in test_cases:
+    output = perceptron([x1, x2], weights, bias)
+    print(f"({x1}, {x2}) → {output}")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/maths-and-statistics-in-ai/mod-7.ipynb)

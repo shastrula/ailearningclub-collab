@@ -52,6 +52,51 @@ Recent advances in Advanced Topics in Machine Learning:
 
 True mastery comes from implementing Advanced Topics in Machine Learning in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Code Examples
+
+```python
+import numpy as np
+from sklearn.ensemble import GradientBoostingRegressor
+
+# Sample data
+X = np.array([[1, 2], [3, 4], [5, 6], [7, 8]])
+y = np.array([10, 20, 30, 40])
+
+# Initialize GBM
+gbm = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3)
+
+# Fit the model
+gbm.fit(X, y)
+
+# Predict
+predictions = gbm.predict(X)
+print(predictions)
+```
+
+```python
+import pandas as pd
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+
+# Sample data
+df = pd.DataFrame({'feature1': [1, 2, 3, 4], 'feature2': [5, 6, 7, 8]})
+
+y = pd.Series([10, 20, 30, 40])
+
+# Polynomial features
+poly = PolynomialFeatures(degree=2)
+X_poly = poly.fit_transform(df)
+
+# Linear regression
+model = LinearRegression()
+model.fit(X_poly, y)
+
+# Predict
+predictions = model.predict(X_poly)
+print(predictions)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-15.ipynb)

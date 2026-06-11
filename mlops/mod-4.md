@@ -59,6 +59,46 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import pandas as pd
+
+# Sample dataset
+data = {'age': [25, 30, 35, 40], 'income': [50000, 60000, 70000, 80000]}
+df = pd.DataFrame(data)
+
+# Feature engineering: creating a new feature 'age_group'
+def age_group(age):
+    if age < 30:
+        return 'young'
+    elif age < 40:
+        return'middle-aged'
+    else:
+        return'senior'
+
+df['age_group'] = df['age'].apply(age_group)
+
+print(df)
+```
+
+```python
+from feast import FeatureStore
+
+# Initialize the feature store
+store = FeatureStore(repo_path="path/to/feature_repo")
+
+# Retrieve features for an entity
+entity_df = pd.DataFrame.from_dict({'driver_id': [1001, 1002]})
+feature_vector = store.get_online_features(
+    feature_refs=['driver_id', 'avg_daily_trips'],
+    entity_rows=[{"driver_id": 1001}, {"driver_id": 1002}]
+).to_df()
+
+print(feature_vector)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-4.ipynb)

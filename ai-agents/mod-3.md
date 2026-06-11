@@ -55,6 +55,75 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+from langgraph import Graph
+
+# Create a LangGraph instance
+workflow = Graph()
+
+# Define nodes
+workflow.add_node('start', lambda: 'Hello, LangGraph!')
+workflow.add_node('end', lambda x: f'Received: {x}')
+
+# Define edges
+workflow.add_edge('start', 'end')
+
+# Run the workflow
+result = workflow.run()
+print(result)
+```
+
+```python
+from langgraph import Graph
+
+# Create a LangGraph instance
+workflow = Graph()
+
+# Define nodes
+workflow.add_node('start', lambda: 'Check condition')
+workflow.add_node('condition', lambda x: x == 'Check condition')
+workflow.add_node('true_branch', lambda: 'Condition is true')
+workflow.add_node('false_branch', lambda: 'Condition is false')
+workflow.add_node('end', lambda x: f'Final output: {x}')
+
+# Define edges
+workflow.add_edge('start', 'condition')
+workflow.add_edge('condition', 'true_branch', condition=True)
+workflow.add_edge('condition', 'false_branch', condition=False)
+workflow.add_edge('true_branch', 'end')
+workflow.add_edge('false_branch', 'end')
+
+# Run the workflow
+result = workflow.run()
+print(result)
+```
+
+```python
+import requests
+from langgraph import Graph
+
+# Create a LangGraph instance
+workflow = Graph()
+
+# Define nodes
+workflow.add_node('start', lambda: 'Fetch weather data')
+workflow.add_node('fetch_weather', lambda: requests.get('https://api.openweathermap.org/data/2.5/weather?q=London&appid=your_api_key').json())
+workflow.add_node('format_weather', lambda data: f"Current temperature in London: {data['main']['temp']} K")
+workflow.add_node('end', lambda x: f'Final output: {x}')
+
+# Define edges
+workflow.add_edge('start', 'fetch_weather')
+workflow.add_edge('fetch_weather', 'format_weather')
+workflow.add_edge('format_weather', 'end')
+
+# Run the workflow
+result = workflow.run()
+print(result)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-3.ipynb)

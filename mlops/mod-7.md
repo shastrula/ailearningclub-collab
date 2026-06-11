@@ -59,6 +59,44 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import sklearn.metrics as metrics
+
+# Example: Calculating performance metrics
+y_true = [0, 1, 1, 0, 1, 0]
+y_pred = [0, 1, 0, 0, 1, 1]
+
+accuracy = metrics.accuracy_score(y_true, y_pred)
+precision = metrics.precision_score(y_true, y_pred)
+recall = metrics.recall_score(y_true, y_pred)
+f1 = metrics.f1_score(y_true, y_pred)
+
+print(f'Accuracy: {accuracy}')
+print(f'Precision: {precision}')
+print(f'Recall: {recall}')
+print(f'F1 Score: {f1}')
+```
+
+```python
+import numpy as np
+from scipy.stats import ttest_ind
+
+# Example: Detecting data drift using statistical tests
+def detect_drift(old_data, new_data):
+    # Perform a t-test to check for significant differences in means
+    t_stat, p_value = ttest_ind(old_data, new_data)
+    return p_value < 0.05  # Threshold for significance
+
+old_data = np.random.rand(100)
+new_data = np.random.rand(100)
+
+drift_detected = detect_drift(old_data, new_data)
+print(f'Drift Detected: {drift_detected}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-7.ipynb)

@@ -52,6 +52,115 @@ Recent advances in Advanced Topics in AI Agent Research:
 
 True mastery comes from implementing Advanced Topics in AI Agent Research in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Code Examples
+
+```python
+import random
+
+# Define a simple ReAct agent
+class ReActAgent:
+    def __init__(self):
+        self.memory = {}
+
+    def reason(self, context):
+        # Simple reasoning based on context
+        if context == 'obstacle':
+            return 'avoid'
+        elif context == 'goal':
+            return 'approach'
+        else:
+            return 'explore'
+
+    def act(self, action):
+        # Perform the action
+        if action == 'avoid':
+            print('Avoiding obstacle')
+        elif action == 'approach':
+            print('Approaching goal')
+        else:
+            print('Exploring environment')
+
+# Simulate environment
+contexts = ['obstacle', 'goal', 'unknown']
+agent = ReActAgent()
+for context in contexts:
+    action = agent.reason(context)
+    agent.act(action)
+```
+
+```python
+from langchain import LangGraph
+
+# Define nodes in the LangGraph
+def node1(input):
+    return f'Processed input: {input}'
+
+def node2(input):
+    return f'Further processed: {input}'
+
+# Create LangGraph
+graph = LangGraph()
+graph.add_node('node1', node1)
+graph.add_node('node2', node2)
+graph.add_edge('start', 'node1')
+graph.add_edge('node1', 'node2')
+graph.add_edge('node2', 'end')
+
+# Run the graph
+result = graph.run('initial input')
+print(result)
+```
+
+```python
+import requests
+
+def get_stock_price(symbol):
+    response = requests.get(f'https://api.example.com/stock/{symbol}')
+    return response.json()['price']
+
+class FinancialAgent:
+    def analyze_stock(self, symbol):
+        price = get_stock_price(symbol)
+        print(f'The current price of {symbol} is {price}')
+
+agent = FinancialAgent()
+agent.analyze_stock('AAPL')
+```
+
+```python
+class MemoryAgent:
+    def __init__(self):
+        self.memory = {}
+
+    def store(self, key, value):
+        self.memory[key] = value
+
+    def retrieve(self, key):
+        return self.memory.get(key, None)
+
+agent = MemoryAgent()
+agent.store('user_name', 'Alice')
+print(agent.retrieve('user_name'))  # Output: Alice
+```
+
+```python
+class SupplyChainAgent:
+    def __init__(self, role):
+        self.role = role
+
+    def perform_task(self):
+        print(f'{self.role} agent performing task')
+
+procurement_agent = SupplyChainAgent('procurement')
+manufacturing_agent = SupplyChainAgent('manufacturing')
+distribution_agent = SupplyChainAgent('distribution')
+
+procurement_agent.perform_task()
+manufacturing_agent.perform_task()
+distribution_agent.perform_task()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-22.ipynb)

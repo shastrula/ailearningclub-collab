@@ -55,6 +55,99 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+# Define the states, actions, and transition probabilities
+states = ['A', 'B', 'C']
+actions = ['left', 'right']
+transition_probs = {
+    ('A', 'left'): {'A': 1.0},
+    ('A', 'right'): {'B': 0.8, 'C': 0.2},
+    ('B', 'left'): {'A': 0.6, 'B': 0.4},
+    ('B', 'right'): {'C': 1.0},
+    ('C', 'left'): {'B': 1.0},
+    ('C', 'right'): {'C': 1.0}
+}
+
+# Define the rewards
+rewards = {
+    ('A', 'left', 'A'): 0,
+    ('A', 'right', 'B'): 1,
+    ('A', 'right', 'C'): -1,
+    ('B', 'left', 'A'): 0.5,
+    ('B', 'left', 'B'): -0.5,
+    ('B', 'right', 'C'): 2,
+    ('C', 'left', 'B'): 0,
+    ('C', 'right', 'C'): 0
+}
+
+# Value iteration algorithm
+V = {s: 0 for s in states}
+gamma = 0.9
+
+for _ in range(1000):
+    V_new = V.copy()
+    for s in states:
+        V_new[s] = max(
+            sum(transition_probs[s, a][s_] * (rewards[s, a, s_] + gamma * V[s_]) for s_ in transition_probs[s, a])
+            for a in actions
+        )
+    V = V_new
+
+print('Optimal value function:', V)
+```
+
+```python
+import numpy as np
+import random
+
+# Define the environment
+states = ['A', 'B', 'C']
+actions = ['left', 'right']
+rewards = {
+    ('A', 'left'): 0,
+    ('A', 'right'): 1,
+    ('B', 'left'): 0.5,
+    ('B', 'right'): 2,
+    ('C', 'left'): 0,
+    ('C', 'right'): 0
+}
+
+# Initialize Q-table
+Q = np.zeros((len(states), len(actions)))
+
+# Hyperparameters
+alpha = 0.1  # Learning rate
+gamma = 0.9  # Discount factor
+epsilon = 0.1  # Exploration rate
+
+# Q-Learning algorithm
+for episode in range(1000):
+    state = random.choice(states)
+    done = False
+    while not done:
+        if random.uniform(0, 1) < epsilon:
+            action = random.choice(actions)  # Explore
+        else:
+            action = actions[np.argmax(Q[states.index(state), :])]  # Exploit
+        next_state = random.choice([s for s in states if s!= state])
+        reward = rewards[(state, action)]
+        best_next_action = np.argmax(Q[states.index(next_state), :])
+        Q[states.index(state), actions.index(action)] += alpha * (
+            reward + gamma * Q[states.index(next_state), best_next_action] - 
+            Q[states.index(state), actions.index(action)]
+        )
+        state = next_state
+        if state == 'C':
+            done = True
+
+print('Optimal Q-table:', Q)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-13.ipynb)

@@ -52,6 +52,108 @@ Recent advances in Advanced Topics in MLOps:
 
 True mastery comes from implementing Advanced Topics in MLOps in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Code Examples
+
+```python
+import mlflow
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+
+# Define a function to train a model
+def train_model():
+    data = load_iris()
+    X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, test_size=0.2, random_state=42)
+    model = RandomForestClassifier()
+    model.fit(X_train, y_train)
+    
+    # Log the model using MLflow
+    mlflow.sklearn.log_model(model, "model")
+    
+    return model
+
+# Train and log the model
+train_model()
+```
+
+```python
+from feast import FeatureStore
+import pandas as pd
+
+# Initialize the feature store
+store = FeatureStore(repo_path="path/to/feature_repo")
+
+# Retrieve features for a specific entity
+entity_df = store.get_historical_features(
+    entity_df=pd.DataFrame.from_dict({'driver_id': [1001]}),
+    feature_refs=["driver_hourly_stats:conv_rate", "driver_hourly_stats:acc_rate"]
+).to_df()
+
+print(entity_df)
+```
+
+```python
+import mlflow
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+
+# Define a function to train a model
+def train_model():
+    data = load_iris()
+    X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, test_size=0.2, random_state=42)
+    model = RandomForestClassifier()
+    model.fit(X_train, y_train)
+    
+    # Log the model using MLflow
+    with mlflow.start_run():
+        mlflow.sklearn.log_model(model, "model")
+        run_id = mlflow.active_run().info.run_id
+    
+    # Register the model
+    mlflow.register_model(f"runs:/{run_id}/model", "RandomForestModel")
+    
+    return model
+
+# Train and register the model
+train_model()
+```
+
+```python
+import numpy as np
+from alibi.datasets import fetch_adult
+from alibi.explainers import detect_concept_drift
+
+# Load dataset
+data = fetch_adult()
+X, y = data.data, data.target
+
+# Simulate concept drift by changing the data distribution
+X_drift = np.concatenate([X[:5000], X[6000:]])
+y_drift = np.concatenate([y[:5000], y[6000:]])
+
+# Detect concept drift
+drift_detector = detect_concept_drift(X, X_drift)
+print(drift_detector)
+```
+
+```python
+import numpy as np
+import statsmodels.api as sm
+from statsmodels.stats.proportion import proportions_ztest
+
+# Simulate A/B test results
+conversion_A = np.random.binomial(1, 0.1, 1000)  # 1000 samples with 10% conversion rate
+conversion_B = np.random.binomial(1, 0.12, 1000) # 1000 samples with 12% conversion rate
+
+# Perform A/B test
+count = np.array([sum(conversion_A), sum(conversion_B)])
+nobs = np.array([len(conversion_A), len(conversion_B)])
+stat, pval = proportions_ztest(count, nobs)
+print(f"p-value: {pval}")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-20.ipynb)

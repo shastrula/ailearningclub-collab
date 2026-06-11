@@ -59,6 +59,39 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+from datetime import datetime, timedelta
+
+ce = boto3.client('ce')
+
+# Get cost and usage
+end_date = datetime.now().date()
+start_date = end_date - timedelta(days=30)
+
+response = ce.get_cost_and_usage(
+    TimePeriod={
+        'Start': start_date.isoformat(),
+        'End': end_date.isoformat()
+    },
+    Granularity='DAILY',
+    Metrics=['UnblendedCost'],
+    GroupBy=[
+        {'Type': 'DIMENSION', 'Key': 'SERVICE'}
+    ]
+)
+
+for result in response['ResultsByTime']:
+    print(f"Date: {result['TimePeriod']['Start']}")
+    for group in result['Groups']:
+        service = group['Keys'][0]
+        cost = group['Metrics']['UnblendedCost']['Amount']
+        print(f"  {service}: ${cost}")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-fundamentals/mod-11.ipynb)

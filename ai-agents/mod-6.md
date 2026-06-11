@@ -59,6 +59,67 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import random
+
+# Simple AI agent with memory
+class SimpleAgent:
+    def __init__(self):
+        """Initialize the agent with an empty memory dictionary."""
+        self.memory = {}
+
+    def interact(self, input_data):
+        """
+        Interact with the agent.
+        
+        Parameters:
+        - input_data (str): The input query from the user.
+        
+        Returns:
+        - str: The response from the agent.
+        """
+        if input_data in self.memory:
+            # Retrieve response from memory if available
+            return self.memory[input_data]
+        else:
+            # Generate a random response if not in memory
+            response = random.choice(['Response A', 'Response B'])
+            self.memory[input_data] = response  # Store the response in memory
+            return response
+
+# Example usage
+agent = SimpleAgent()
+print(agent.interact('Query 1'))  # Output will be either 'Response A' or 'Response B'
+```
+
+```python
+from langgraph import LangGraph
+
+# Initialize LangGraph with memory
+graph = LangGraph(memory_size=10)
+
+# Define a simple interaction function
+def interact(input_text):
+    """
+    Interact with the LangGraph model.
+    
+    Parameters:
+    - input_text (str): The input text from the user.
+    
+    Returns:
+    - str: The generated response.
+    """
+    response = graph.generate_response(input_text)  # Generate a response
+    graph.update_memory(input_text, response)  # Update memory with the interaction
+    return response
+
+# Example usage
+print(interact('Hello, how are you?'))  # Output will be a generated response from the model
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-6.ipynb)

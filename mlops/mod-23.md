@@ -59,6 +59,117 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import mlflow
+
+# Example of a CI/CD pipeline for ML using MLflow
+
+# Assuming 'model' is a trained scikit-learn model
+model =...
+
+# Log metrics and parameters
+mlflow.log_metric("accuracy", 0.95)
+mlflow.log_param("learning_rate", 0.01)
+
+# Log the model
+mlflow.sklearn.log_model(model, "model")
+
+# Register the model
+model_uri = mlflow.get_artifact_uri("model")
+mlflow.register_model(model_uri, "RegisteredModel")
+
+print("Metrics and parameters logged. Model logged and registered successfully.")
+```
+
+```python
+from feast import FeatureStore
+import pandas as pd
+
+# Initialize the Feature Store
+store = FeatureStore(repo_path="/path/to/feature_repo")
+
+# Example DataFrame
+df = pd.DataFrame({
+    'driver_id': [1001, 1002, 1003],
+    'event_timestamp': [pd.Timestamp('2023-10-01 12:00:00'), pd.Timestamp('2023-10-01 12:00:01'), pd.Timestamp('2023-10-01 12:00:02')]
+})
+
+# Get historical features
+entity_df = store.get_historical_features(
+    entity_df=df,
+    feature_refs=["driver_hourly_stats:conv_rate", "driver_hourly_stats:acc_rate"]
+)
+
+# Retrieve the feature values
+feature_vector = entity_df[["conv_rate", "acc_rate"]].to_pandas()
+
+print("Feature vector retrieved successfully.")
+```
+
+```python
+import mlflow
+
+# Log a model with MLflow
+model =...  # Trained model
+mlflow.sklearn.log_model(model, "model")
+
+# Register the model
+model_uri = mlflow.get_artifact_uri("model")
+registered_model = mlflow.register_model(model_uri, "RegisteredModel")
+
+print(f"Model registered with name: {registered_model.name}")
+```
+
+```python
+import pandas as pd
+from sklearn.metrics import accuracy_score
+
+# Example data
+current_data = pd.DataFrame({
+    'feature1': [1, 2, 3, 4, 5],
+    'feature2': [5, 4, 3, 2, 1],
+    'label': [0, 0, 1, 1, 1]
+})
+
+model =...  # Trained model
+predictions = model.predict(current_data[['feature1', 'feature2']])
+
+# Calculate accuracy
+accuracy = accuracy_score(current_data['label'], predictions)
+
+# Threshold for drift detection
+threshold = 0.8
+
+if accuracy < threshold:
+    print("Model drift detected! Consider retraining the model.")
+else:
+    print("Model performance is within acceptable limits.")
+```
+
+```python
+import numpy as np
+
+# Simulate A/B test results
+model_a_performance = np.random.rand(100)
+model_b_performance = np.random.rand(100)
+
+# Calculate average performance
+avg_performance_a = np.mean(model_a_performance)
+avg_performance_b = np.mean(model_b_performance)
+
+print(f"Average performance of Model A: {avg_performance_a}")
+print(f"Average performance of Model B: {avg_performance_b}")
+
+# Determine the better model
+if avg_performance_a > avg_performance_b:
+    print("Model A performs better.")
+else:
+    print("Model B performs better.")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-23.ipynb)

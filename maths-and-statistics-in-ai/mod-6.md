@@ -59,6 +59,91 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate correlated data
+x = np.random.rand(50) * 100
+y = x + np.random.randn(50) * 10
+
+# Create scatter plot
+plt.scatter(x, y, alpha=0.6, s=100, color='blue')
+plt.xlabel('Variable X')
+plt.ylabel('Variable Y')
+plt.title('Scatter Plot: Relationship Analysis')
+plt.grid(True, alpha=0.3)
+plt.show()
+```
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate data
+data = np.random.normal(loc=70, scale=15, size=1000)
+
+# Create histogram
+plt.hist(data, bins=30, alpha=0.7, color='green', edgecolor='black')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.title('Histogram: Distribution Analysis')
+plt.grid(True, alpha=0.3, axis='y')
+plt.show()
+```
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate time series data
+months = np.arange(1, 13)
+sales = np.array([100, 120, 115, 140, 160, 155, 180, 190, 175, 200, 210, 220])
+
+# Create line chart
+plt.plot(months, sales, marker='o', linewidth=2, markersize=8, color='red')
+plt.xlabel('Month')
+plt.ylabel('Sales ($1000s)')
+plt.title('Line Chart: Sales Trend')
+plt.grid(True, alpha=0.3)
+plt.xticks(months)
+plt.show()
+```
+
+```python
+import matplotlib.pyplot as plt
+
+# Data
+regions = ['North', 'South', 'East', 'West']
+sales = [300, 150, 200, 180]
+
+# Create bar chart
+plt.bar(regions, sales, color=['red', 'blue', 'green', 'orange'])
+plt.xlabel('Region')
+plt.ylabel('Sales ($1000s)')
+plt.title('Bar Chart: Regional Sales Comparison')
+plt.grid(True, alpha=0.3, axis='y')
+plt.show()
+```
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate data
+data = [np.random.normal(50, 15, 100) for _ in range(4)]
+
+# Create box plot
+plt.boxplot(data, labels=['Group A', 'Group B', 'Group C', 'Group D'])
+plt.ylabel('Value')
+plt.title('Box Plot: Distribution Comparison')
+plt.grid(True, alpha=0.3, axis='y')
+plt.show()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/maths-and-statistics-in-ai/mod-6.ipynb)

@@ -52,6 +52,49 @@ Recent advances in Ethical Considerations in Deep Learning:
 
 True mastery comes from implementing Ethical Considerations in Deep Learning in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Code Examples
+
+```python
+import torch
+from torchvision import datasets, transforms
+
+# Load and transform the dataset
+transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5,), (0.5,))])
+trainset = datasets.MNIST('~/.pytorch/MNIST_data/', download=True, train=True, transform=transform)
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=64, shuffle=True)
+
+# Check for dataset balance
+class_counts = [0] * 10
+for images, labels in trainloader:
+    for label in labels:
+        class_counts[label.item()] += 1
+print(class_counts)
+```
+
+```python
+import torch
+import torch.nn as nn
+
+# Define a simple neural network
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.fc1 = nn.Linear(784, 128)
+        self.fc2 = nn.Linear(128, 64)
+        self.fc3 = nn.Linear(64, 10)
+
+    def forward(self, x):
+        x = torch.relu(self.fc1(x))
+        x = torch.relu(self.fc2(x))
+        x = self.fc3(x)
+        return x
+
+# Instantiate the network and print its structure
+net = Net()
+print(net)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-23.ipynb)

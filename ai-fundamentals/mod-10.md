@@ -52,6 +52,49 @@ Recent advances in Deep Learning: Convolutional Neural Networks:
 
 True mastery comes from implementing Deep Learning: Convolutional Neural Networks in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Code Examples
+
+```python
+import numpy as np
+
+# Define a simple 3x3 filter
+filter = np.array([[1, 0, -1], [1, 0, -1], [1, 0, -1]])
+
+# Define a 5x5 input matrix
+input_matrix = np.array([[0, 1, 2, 3, 4],
+                         [5, 6, 7, 8, 9],
+                         [10, 11, 12, 13, 14],
+                         [15, 16, 17, 18, 19],
+                         [20, 21, 22, 23, 24]])
+
+# Perform convolution
+output = np.zeros((3, 3))
+for i in range(3):
+    for j in range(3):
+        output[i, j] = np.sum(filter * input_matrix[i:i+3, j:j+3])
+
+print(output)
+```
+
+```python
+import numpy as np
+
+# Define a 4x4 input matrix
+input_matrix = np.array([[1, 2, 3, 4],
+                         [5, 6, 7, 8],
+                         [9, 10, 11, 12],
+                         [13, 14, 15, 16]])
+
+# Perform max pooling with a 2x2 filter and stride of 2
+output = np.zeros((2, 2))
+for i in range(0, 4, 2):
+    for j in range(0, 4, 2):
+        output[i//2, j//2] = np.max(input_matrix[i:i+2, j:j+2])
+
+print(output)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-10.ipynb)

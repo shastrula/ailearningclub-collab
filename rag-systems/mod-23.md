@@ -59,6 +59,52 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+# Create embeddings using SentenceTransformers (production-ready)
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# Encode text into dense vectors
+texts = ['What is RAG?', 'Retrieval-Augmented Generation explained', 'How to cook pasta']
+embeddings = model.encode(texts)
+
+# Check similarity — semantically similar texts have high cosine similarity
+from sklearn.metrics.pairwise import cosine_similarity
+sims = cosine_similarity(embeddings)
+print(f'RAG question vs RAG explanation: {sims[0][1]:.3f}')  # ~0.75 (similar)
+print(f'RAG question vs cooking: {sims[0][2]:.3f}')          # ~0.15 (unrelated)
+```
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+# Example documents and query
+documents = ["The quick brown fox jumps over the lazy dog.",
+             "A quick brown dog jumps over the lazy fox."]
+query = "quick brown jumps"
+
+# Chunking: Split documents into chunks
+chunks = [doc.split() for doc in documents]
+
+# Vectorization
+vectorizer = TfidfVectorizer()
+vectors = vectorizer.fit_transform(documents)
+query_vec = vectorizer.transform([query])
+
+# Similarity scores
+similarities = cosine_similarity(query_vec, vectors).flatten()
+
+# Reranking
+ranked_chunks = sorted(zip(chunks, similarities), key=lambda x: x[1], reverse=True)
+
+print('Reranked chunks:', ranked_chunks)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-23.ipynb)

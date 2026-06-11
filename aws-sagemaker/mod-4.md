@@ -59,6 +59,162 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from sagemaker.estimator import Estimator
+import sagemaker
+
+session = sagemaker.Session()
+role = 'arn:aws:iam::123456789012:role/SageMakerRole'
+bucket = session.default_bucket()
+
+# XGBoost container URI
+xgboost_container = '246618743249.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:1.5-1'
+
+# Create XGBoost estimator
+xgb_estimator = Estimator(
+    image_uri=xgboost_container,
+    role=role,
+    instance_count=1,
+    instance_type='ml.m5.xlarge',
+    output_path=f's3://{bucket}/xgboost-output',
+    sagemaker_session=session
+)
+
+# Set hyperparameters
+xgb_estimator.set_hyperparameters(
+    objective='binary:logistic',
+    num_round=100,
+    max_depth=5,
+    eta=0.2,
+    gamma=4,
+    min_child_weight=6,
+    subsample=0.8
+)
+
+# Train the model
+xgb_estimator.fit(
+    {'training': f's3://{bucket}/train-data.csv'},
+    job_name='xgboost-training-job'
+)
+```
+
+```python
+from sagemaker.linear_learner import LinearLearner
+
+linear_learner = LinearLearner(
+    role=role,
+    instance_count=1,
+    instance_type='ml.m5.xlarge',
+    output_path=f's3://{bucket}/linear-output',
+    sagemaker_session=session
+)
+
+# Set hyperparameters
+linear_learner.set_hyperparameters(
+    feature_dim=100,
+    mini_batch_size=32,
+    predictor_type='binary_classifier',
+    loss='logistic',
+    optimizer='adam',
+    learning_rate=0.01,
+    epochs=10
+)
+
+# Train
+linear_learner.fit(
+    {'training': f's3://{bucket}/train-data.recordio'},
+    job_name='linear-learner-job'
+)
+```
+
+```python
+from sagemaker.image_uris import retrieve
+
+# Get Image Classification container
+image_uri = retrieve(
+    framework='image-classification',
+    region='us-east-1',
+    version='latest'
+)
+
+image_classifier = Estimator(
+    image_uri=image_uri,
+    role=role,
+    instance_count=1,
+    instance_type='ml.p3.2xlarge',
+    output_path=f's3://{bucket}/image-output',
+    sagemaker_session=session
+)
+
+# Set hyperparameters
+image_classifier.set_hyperparameters(
+    num_classes=10,
+    num_layers=50,
+    image_shape='3,224,224',
+    epochs=30,
+    learning_rate=0.01,
+    batch_size=32,
+    optimizer='sgd'
+)
+
+# Train
+image_classifier.fit(
+    {'training': f's3://{bucket}/image-train/'},
+    job_name='image-classification-job'
+)
+```
+
+```python
+from sagemaker.blazingtext import BlazingText
+
+blazingtext = BlazingText(
+    role=role,
+    instance_count=1,
+    instance_type='ml.p3.2xlarge',
+    output_path=f's3://{bucket}/blazingtext-output',
+    sagemaker_session=session
+)
+
+# Set hyperparameters for text classification
+blazingtext.set_hyperparameters(
+    mode='supervised',
+    epochs=5,
+    learning_rate=0.05,
+    word_ngrams=2,
+    vector_dim=100,
+    batch_size=32
+)
+
+# Train
+blazingtext.fit(
+    {'training': f's3://{bucket}/text-train.txt'},
+    job_name='blazingtext-job'
+)
+```
+
+```python
+# Deploy XGBoost model
+predictor = xgb_estimator.deploy(
+    initial_instance_count=1,
+    instance_type='ml.m5.large',
+    endpoint_name='xgboost-endpoint'
+)
+
+# Make predictions
+import csv
+import io
+
+# Prepare test data
+test_data = '5.1,3.5,1.4,0.2'
+
+# Invoke endpoint
+response = predictor.predict(test_data)
+print(f"Prediction: {response}")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-sagemaker/mod-4.ipynb)

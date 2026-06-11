@@ -55,6 +55,45 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+# hello.py
+# Your first Python program
+print('Hello, AI!')
+
+# Variables
+name = 'Alice'
+age = 25
+
+# Using f-string for formatted output
+print(f'My name is {name} and I am {age} years old')
+```
+
+```python
+# Numbers
+age = 25         # Integer
+height = 5.9     # Float
+```
+
+```python
+# Strings
+name = 'Alice'
+```
+
+```python
+# Lists (ordered collections)
+fruits = ['apple', 'banana', 'orange']
+print(fruits[0])  # Access first item
+```
+
+```python
+# Dictionaries (key-value pairs)
+person = {'name': 'Alice', 'age': 25, 'city': 'NYC'}
+print(person['name'])
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/getting-started/mod-5.ipynb)

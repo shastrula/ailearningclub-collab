@@ -59,6 +59,101 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import torch
+from torch import nn
+from torch.optim import Adam
+import torch.nn.functional as F
+from torch.utils.data import DataLoader
+from torchvision import datasets, transforms
+
+# Define the Generator
+class Generator(nn.Module):
+    def __init__(self, input_dim, output_dim):
+        super(Generator, self).__init__()
+        self.main = nn.Sequential(
+            nn.Linear(input_dim, 128),
+            nn.ReLU(True),
+            nn.Linear(128, 256),
+            nn.ReLU(True),
+            nn.Linear(256, output_dim),
+            nn.Tanh()  # Output range [-1, 1]
+        )
+
+    def forward(self, x):
+        return self.main(x)
+
+# Define the Discriminator
+class Discriminator(nn.Module):
+    def __init__(self, input_dim):
+        super(Discriminator, self).__init__()
+        self.main = nn.Sequential(
+            nn.Linear(input_dim, 256),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Linear(256, 128),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Linear(128, 1),
+            nn.Sigmoid()  # Output range [0, 1]
+        )
+
+    def forward(self, x):
+        return self.main(x)
+
+# Hyperparameters
+input_dim = 100  # Noise vector dimension
+output_dim = 784  # For MNIST (28x28 images)
+lr = 0.0002
+batch_size = 64
+
+# Initialize the networks
+generator = Generator(input_dim, output_dim)
+discriminator = Discriminator(output_dim)
+
+# Optimizers
+optimizer_G = Adam(generator.parameters(), lr=lr)
+optimizer_D = Adam(discriminator.parameters(), lr=lr)
+
+# Loss function
+criterion = nn.BCELoss()
+
+# Load the dataset
+transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize([0.5], [0.5])])
+dataset = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
+dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
+
+# Training loop
+num_epochs = 50
+for epoch in range(num_epochs):
+    for real_data, _ in dataloader:
+        # Train the discriminator
+        optimizer_D.zero_grad()
+        real_labels = torch.ones(batch_size, 1)
+        output_D_real = discriminator(real_data.view(batch_size, -1))
+        loss_D_real = criterion(output_D_real, real_labels)
+
+        noise = torch.randn(batch_size, input_dim)
+        fake_data = generator(noise)
+        output_D_fake = discriminator(fake_data.detach())  # Detach to avoid training G on these labels
+        loss_D_fake = criterion(output_D_fake, torch.zeros(batch_size, 1))
+        loss_D = loss_D_real + loss_D_fake
+        loss_D.backward()
+        optimizer_D.step()
+
+        # Train the generator
+        optimizer_G.zero_grad()
+        noise = torch.randn(batch_size, input_dim)
+        fake_data = generator(noise)
+        output_D_fake = discriminator(fake_data)
+        loss_G = criterion(output_D_fake, torch.ones(batch_size, 1))
+        loss_G.backward()
+        optimizer_G.step()
+
+    print(f'Epoch [{epoch+1}/{num_epochs}] Loss D: {loss_D.item():.4f}, Loss G: {loss_G.item():.4f}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-13.ipynb)

@@ -59,6 +59,67 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+# Define the Autoencoder
+class Autoencoder(nn.Module):
+    def __init__(self):
+        super(Autoencoder, self).__init__()
+        # Encoder
+        self.encoder = nn.Sequential(
+            nn.Linear(784, 128),  # Flattened 28x28 image to 128 neurons
+            nn.ReLU(),
+            nn.Linear(128, 64),   # 128 to 64 neurons
+            nn.ReLU(),
+            nn.Linear(64, 12)    # 64 to 12 neurons (latent space)
+        )
+        # Decoder
+        self.decoder = nn.Sequential(
+            nn.Linear(12, 64),   # 12 to 64 neurons
+            nn.ReLU(),
+            nn.Linear(64, 128),  # 64 to 128 neurons
+            nn.ReLU(),
+            nn.Linear(128, 784), # 128 to flattened 28x28 image
+            nn.Sigmoid()         # Output should be between 0 and 1
+        )
+
+    def forward(self, x):
+        encoded = self.encoder(x)
+        decoded = self.decoder(encoded)
+        return decoded
+
+# Initialize the autoencoder, loss function, and optimizer
+autoencoder = Autoencoder()
+criterion = nn.MSELoss()
+optimizer = optim.Adam(autoencoder.parameters(), lr=0.001)
+
+# Example input (flattened 28x28 image)
+input_data = torch.randn(1, 784)
+
+# Forward pass
+output = autoencoder(input_data)
+
+# Compute loss
+loss = criterion(output, input_data)
+print(f'Initial Loss: {loss.item()}')
+
+# Training loop
+num_epochs = 10
+for epoch in range(num_epochs):
+    optimizer.zero_grad()  # Clear gradients
+    output = autoencoder(input_data)
+    loss = criterion(output, input_data)
+    loss.backward()        # Backpropagation
+    optimizer.step()       # Update weights
+    print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-14.ipynb)

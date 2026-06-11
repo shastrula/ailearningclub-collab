@@ -52,6 +52,48 @@ Recent advances in Working with Data in Deep Learning:
 
 True mastery comes from implementing Working with Data in Deep Learning in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Code Examples
+
+```python
+import torch
+from torchvision import datasets, transforms
+
+# Define a transform to normalize the data
+transform = transforms.Compose([
+    transforms.ToTensor(),        # Convert images to PyTorch tensors
+    transforms.Normalize((0.5,), (0.5,))  # Normalize the data to have mean=0.5 and std=0.5
+])
+
+# Download and load the training data
+trainset = datasets.MNIST('~/.pytorch/MNIST_data/', download=True, train=True, transform=transform)
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=64, shuffle=True)
+```
+
+```python
+import torch
+from torchvision import datasets, transforms
+import matplotlib.pyplot as plt
+
+# Define a transform to normalize the data
+transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize((0.5,), (0.5,))
+])
+
+# Download and load the training data
+trainset = datasets.MNIST('~/.pytorch/MNIST_data/', download=True, train=True, transform=transform)
+
+# Get a batch of training data
+dataiter = iter(trainloader)
+images, labels = dataiter.next()
+
+# Show an image from the batch
+img = images[0].numpy().squeeze()
+plt.imshow(img, cmap='gray')
+plt.show()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-7.ipynb)

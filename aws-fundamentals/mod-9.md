@@ -59,6 +59,90 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+from datetime import datetime, timedelta
+
+cloudwatch = boto3.client('cloudwatch')
+
+# Put custom metric
+cloudwatch.put_metric_data(
+    Namespace='MyApp',
+    MetricData=[
+        {
+            'MetricName': 'RequestCount',
+            'Value': 100,
+            'Unit': 'Count',
+            'Timestamp': datetime.utcnow()
+        }
+    ]
+)
+
+# Create alarm
+cloudwatch.put_metric_alarm(
+    AlarmName='high-cpu',
+    MetricName='CPUUtilization',
+    Namespace='AWS/EC2',
+    Statistic='Average',
+    Period=300,
+    Threshold=80,
+    ComparisonOperator='GreaterThanThreshold',
+    AlarmActions=['arn:aws:sns:us-east-1:ACCOUNT:my-alerts']
+)
+
+# Get metric statistics
+response = cloudwatch.get_metric_statistics(
+    Namespace='AWS/EC2',
+    MetricName='CPUUtilization',
+    StartTime=datetime.utcnow() - timedelta(hours=1),
+    EndTime=datetime.utcnow(),
+    Period=300,
+    Statistics=['Average']
+)
+
+for datapoint in response['Datapoints']:
+    print(f"Time: {datapoint['Timestamp']}, CPU: {datapoint['Average']}%")
+```
+
+```python
+import boto3
+
+logs = boto3.client('logs')
+
+# Create log group
+logs.create_log_group(logGroupName='/aws/lambda/my-function')
+
+# Create log stream
+logs.create_log_stream(
+    logGroupName='/aws/lambda/my-function',
+    logStreamName='2024-01-01'
+)
+
+# Put log events
+logs.put_log_events(
+    logGroupName='/aws/lambda/my-function',
+    logStreamName='2024-01-01',
+    logEvents=[
+        {
+            'message': 'Function started',
+            'timestamp': int(datetime.utcnow().timestamp() * 1000)
+        }
+    ]
+)
+
+# Query logs
+response = logs.filter_log_events(
+    logGroupName='/aws/lambda/my-function',
+    filterPattern='ERROR'
+)
+
+for event in response['events']:
+    print(event['message'])
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-fundamentals/mod-9.ipynb)

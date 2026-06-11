@@ -59,6 +59,104 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import time
+import numpy as np
+
+# Representing 1000 tokens, each with 768 dimensions (like BERT embeddings)
+tokens = np.random.randn(1000, 768)
+weights = np.random.randn(768, 768)
+
+# Pure Python loop (DON'T DO THIS)
+def slow_matmul(A, B):
+    result = [[0] * len(B[0]) for _ in range(len(A))]
+    for i in range(len(A)):
+        for j in range(len(B[0])):
+            for k in range(len(B)):
+                result[i][j] += A[i][k] * B[k][j]
+    return result
+
+start = time.time()
+# This would take ~30 seconds for 1000x768 matrices
+# slow_result = slow_matmul(tokens, weights)
+print("Pure Python: ~30 seconds (skipped)")
+```
+
+```python
+# NumPy vectorized (FAST)
+start = time.time()
+result = np.matmul(tokens, weights)  # or tokens @ weights
+elapsed = time.time() - start
+print(f"NumPy: {elapsed:.4f} seconds")  # ~0.01 seconds
+
+# PyTorch on GPU (EVEN FASTER)
+import torch
+tokens_gpu = torch.randn(1000, 768, device="cuda")
+weights_gpu = torch.randn(768, 768, device="cuda")
+
+start = time.time()
+result_gpu = torch.matmul(tokens_gpu, weights_gpu)
+elapsed = time.time() - start
+print(f"PyTorch GPU: {elapsed:.4f} seconds")  # ~0.001 seconds
+```
+
+```python
+# Manual implementation (for understanding)
+def matmul_manual(A, B):
+    m, n = A.shape
+    n, p = B.shape
+    C = np.zeros((m, p))
+    for i in range(m):
+        for j in range(p):
+            C[i, j] = np.dot(A[i, :], B[:, j])  # Dot product of row i and column j
+    return C
+
+# Verify it matches NumPy
+A = np.random.randn(3, 4)
+B = np.random.randn(4, 5)
+assert np.allclose(matmul_manual(A, B), A @ B)
+```
+
+```python
+import torch
+import torch.nn.functional as F
+
+# Query embedding (768-dim, like from a BERT encoder)
+query = torch.randn(768)
+
+# Document embeddings (1000 documents, each 768-dim)
+documents = torch.randn(1000, 768)
+
+# Compute cosine similarity for all documents at once
+# This is a single matrix multiplication!
+similarities = F.cosine_similarity(query.unsqueeze(0), documents)
+
+# Get top-5 most similar documents
+top_5_indices = torch.topk(similarities, k=5).indices
+print(f"Most similar documents: {top_5_indices}")
+```
+
+```python
+import torch
+import time
+
+# Test on Apple Silicon GPU
+device = "mps" if torch.backends.mps.is_available() else "cpu"
+
+A = torch.randn(4096, 4096, device=device)
+B = torch.randn(4096, 4096, device=device)
+
+start = time.time()
+C = torch.matmul(A, B)
+elapsed = time.time() - start
+
+print(f"4096x4096 matmul on {device}: {elapsed:.4f}s")
+# MPS: ~0.05s | CPU: ~2s
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/maths-and-statistics-in-ai/mod-1.ipynb)

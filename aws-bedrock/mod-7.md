@@ -59,6 +59,226 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+import json
+
+client = boto3.client('bedrock', region_name='us-east-1')
+
+# Create a guardrail
+response = client.create_guardrail(
+    name='customer-support-guardrail',
+    description='Safety guardrail for customer support chatbot',
+    topicPolicyConfig={
+        'topicsConfig': [
+            {
+                'name': 'financial-advice',
+                'definition': 'Providing investment or financial advice',
+                'examples': [
+                    'Should I buy this stock?',
+                    'What cryptocurrency should I invest in?'
+                ],
+                'type': 'DENY'
+            },
+            {
+                'name': 'medical-advice',
+                'definition': 'Providing medical or health advice',
+                'examples': [
+                    'What medicine should I take?',
+                    'Is this symptom serious?'
+                ],
+                'type': 'DENY'
+            }
+        ]
+    },
+    contentPolicyConfig={
+        'filtersConfig': [
+            {
+                'type': 'VIOLENCE',
+                'inputStrength': 'HIGH',
+                'outputStrength': 'HIGH'
+            },
+            {
+                'type': 'HATE',
+                'inputStrength': 'HIGH',
+                'outputStrength': 'HIGH'
+            },
+            {
+                'type': 'SEXUAL',
+                'inputStrength': 'MEDIUM',
+                'outputStrength': 'MEDIUM'
+            },
+            {
+                'type': 'INSULTS',
+                'inputStrength': 'MEDIUM',
+                'outputStrength': 'MEDIUM'
+            }
+        ]
+    },
+    sensitiveInformationPolicyConfig={
+        'piiEntitiesConfig': [
+            {
+                'type': 'EMAIL',
+                'action': 'ANONYMIZE'
+            },
+            {
+                'type': 'PHONE',
+                'action': 'ANONYMIZE'
+            },
+            {
+                'type': 'SSN',
+                'action': 'BLOCK'
+            },
+            {
+                'type': 'CREDIT_CARD',
+                'action': 'BLOCK'
+            }
+        ]
+    },
+    wordPolicyConfig={
+        'wordsConfig': [
+            {
+                'text': 'competitor-name',
+                'action': 'BLOCK'
+            }
+        ],
+        'managedWordListConfig': [
+            {
+                'type': 'PROFANITY'
+            }
+        ]
+    }
+)
+
+guardrail_id = response['guardrailId']
+print(f"Guardrail ID: {guardrail_id}")
+```
+
+```python
+# Apply guardrail to model invocation
+response = client.invoke_model(
+    modelId='anthropic.claude-3-sonnet-20240229-v1:0',
+    body=json.dumps({
+        "anthropic_version": "bedrock-2023-06-01",
+        "max_tokens": 1024,
+        "messages": [
+            {"role": "user", "content": "What is AWS Bedrock?"}
+        ]
+    }),
+    guardrailIdentifier=guardrail_id,
+    guardrailVersion='1'
+)
+
+result = json.loads(response['body'].read())
+print(result['content'][0]['text'])
+```
+
+```python
+# Configure content filters
+content_filters = {
+    'VIOLENCE': {
+        'inputStrength': 'HIGH',      # Filter user input strictly
+        'outputStrength': 'HIGH'      # Filter model output strictly
+    },
+    'HATE': {
+        'inputStrength': 'HIGH',
+        'outputStrength': 'HIGH'
+    },
+    'SEXUAL': {
+        'inputStrength': 'MEDIUM',    # Medium filtering
+        'outputStrength': 'MEDIUM'
+    },
+    'INSULTS': {
+        'inputStrength': 'LOW',       # Light filtering
+        'outputStrength': 'MEDIUM'
+    },
+    'MISCONDUCT': {
+        'inputStrength': 'HIGH',
+        'outputStrength': 'HIGH'
+    }
+}
+
+# Strength levels:
+# HIGH: Strict filtering, blocks most content
+# MEDIUM: Moderate filtering
+# LOW: Minimal filtering, only obvious violations
+# NONE: No filtering
+```
+
+```python
+# Configure PII handling
+pii_config = {
+    'EMAIL': {
+        'action': 'ANONYMIZE'  # Replace with [EMAIL]
+    },
+    'PHONE': {
+        'action': 'ANONYMIZE'  # Replace with [PHONE]
+    },
+    'NAME': {
+        'action': 'ANONYMIZE'  # Replace with [NAME]
+    },
+    'SSN': {
+        'action': 'BLOCK'      # Block the entire request
+    },
+    'CREDIT_CARD': {
+        'action': 'BLOCK'      # Block the entire request
+    },
+    'IP_ADDRESS': {
+        'action': 'ANONYMIZE'
+    },
+    'DRIVER_LICENSE': {
+        'action': 'BLOCK'
+    }
+}
+
+# Example: User input with PII
+user_input = "My email is john@example.com and my phone is 555-1234"
+
+# After guardrail processing:
+# "My email is [EMAIL] and my phone is [PHONE]"
+```
+
+```python
+# Define denied topics
+denied_topics = [
+    {
+        'name': 'illegal-activities',
+        'definition': 'Instructions for illegal activities',
+        'examples': [
+            'How to make explosives',
+            'How to hack into systems',
+            'How to forge documents'
+        ],
+        'type': 'DENY'
+    },
+    {
+        'name': 'self-harm',
+        'definition': 'Content promoting self-harm',
+        'examples': [
+            'How to hurt myself',
+            'Methods of suicide'
+        ],
+        'type': 'DENY'
+    }
+]
+
+# Define allowed topics (optional)
+allowed_topics = [
+    {
+        'name': 'product-support',
+        'definition': 'Questions about our products',
+        'examples': [
+            'How do I use feature X?',
+            'What are the system requirements?'
+        ],
+        'type': 'ALLOW'
+    }
+]
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-bedrock/mod-7.ipynb)

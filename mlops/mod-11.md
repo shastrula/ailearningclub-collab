@@ -59,6 +59,87 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from kfp import dsl
+
+# Define a simple pipeline
+@dsl.pipeline(
+    name='Simple Pipeline',
+    description='A simple pipeline with two components: add and multiply'
+)
+def simple_pipeline():
+    
+    # Define an addition component
+    def add(a: float, b: float) -> float:
+        """Simple function to add two numbers."""
+        return a + b
+    
+    # Create a ContainerOp for the addition component
+    add_op = dsl.ContainerOp(
+        name='add',
+        image='python:3.7',  # Docker image to use
+        command=['python', '-c'],  # Command to run inside the container
+        arguments=['print({})'.format(add(1, 2))]  # Arguments to pass to the command
+    )
+    
+    # Define a multiplication component
+    def multiply(a: float, b: float) -> float:
+        """Simple function to multiply two numbers."""
+        return a * b
+    
+    # Create a ContainerOp for the multiplication component
+    multiply_op = dsl.ContainerOp(
+        name='multiply',
+        image='python:3.7',
+        command=['python', '-c'],
+        arguments=['print({})'.format(multiply(3, 4))]
+    )
+    
+    # Chain the components: multiply after add
+    multiply_op.after(add_op)
+
+if __name__ == '__main__':
+    # Compile the pipeline
+    pipeline_func = simple_pipeline
+    pipeline_filename = pipeline_func.__name__ + '.zip'
+    import kfp.compiler as compiler
+    compiler.Compiler().compile(pipeline_func, pipeline_filename)
+    print(f'Pipeline compiled successfully. The pipeline definition is saved in {pipeline_filename}.')
+```
+
+```python
+import kfp
+from kfp.v2 import dsl
+from kfp.v2.dsl import component
+
+# Define a component for addition
+@component
+def add(a: float, b: float) -> float:
+    """Component to add two numbers."""
+    return a + b
+
+# Define a pipeline that uses the addition component
+@dsl.pipeline(
+    name='Addition Pipeline',
+    description='A pipeline that adds two numbers'
+)
+def addition_pipeline(a: float, b: float):
+    add_task = add(a, b)  # Use the addition component
+
+if __name__ == '__main__':
+    # Submit the pipeline for execution
+    client = kfp.Client()
+    client.create_run_from_pipeline_func(
+        addition_pipeline,
+        arguments={'a': 1, 'b': 2},  # Arguments for the pipeline
+        experiment_name='addition_experiment'  # Name of the experiment
+    )
+    print('Pipeline submitted for execution.')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-11.ipynb)

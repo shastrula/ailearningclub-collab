@@ -59,6 +59,94 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+def reason(task):
+    """Simulate reasoning about a task."""
+    # Example reasoning logic
+    if 'sort' in task:
+        return'sorting algorithm'
+    return 'default action'
+
+def act(action):
+    """Simulate performing an action."""
+    # Example action logic
+    if action =='sorting algorithm':
+        return 'Performing sort'
+    return 'Performing default action'
+
+task = 'sort numbers'
+action = reason(task)
+result = act(action)
+print(result)  # Output: Performing sort
+```
+
+```python
+from langgraph import LangGraph
+
+# Define agents
+agent1 = LangGraph.Agent('Agent1', lambda task: 'Agent1 processed'+ task)
+agent2 = LangGraph.Agent('Agent2', lambda task: 'Agent2 processed'+ task)
+
+# Create a multi-agent system
+system = LangGraph.System()
+system.add_agent(agent1)
+system.add_agent(agent2)
+
+# Define task and execute
+task = 'example task'
+result = system.execute(task)
+print(result)  # Output: ['Agent1 processed example task', 'Agent2 processed example task']
+```
+
+```python
+def tool_call(tool, input_data):
+    """Simulate calling an external tool."""
+    if tool == 'database_query':
+        return 'Query result:'+ input_data
+    return 'Tool not recognized'
+
+tool = 'database_query'
+input_data = 'user_id=123'
+result = tool_call(tool, input_data)
+print(result)  # Output: Query result: user_id=123
+```
+
+```python
+class Memory:
+    def __init__(self):
+        self.data = {}
+
+    def store(self, key, value):
+        self.data[key] = value
+
+    def retrieve(self, key):
+        return self.data.get(key, 'No data found')
+
+memory = Memory()
+memory.store('user_preferences', 'likes_tech')
+preference = memory.retrieve('user_preferences')
+print(preference)  # Output: likes_tech
+```
+
+```python
+class Agent:
+    def __init__(self, name):
+        self.name = name
+
+    def perform_task(self, task):
+        return f'{self.name} performed {task}'
+
+agent1 = Agent('Agent1')
+agent2 = Agent('Agent2')
+
+task = 'traffic optimization'
+results = [agent1.perform_task(task), agent2.perform_task(task)]
+print(results)  # Output: ['Agent1 performed traffic optimization', 'Agent2 performed traffic optimization']
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-20.ipynb)

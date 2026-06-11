@@ -59,6 +59,62 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import numpy as np
+from scipy.stats import ttest_ind
+
+# Generate synthetic data
+np.random.seed(42)
+data_A = np.random.rand(100)
+data_B = np.random.rand(100) + 0.1  # Model B is slightly better
+
+# Calculate performance metric (e.g., mean)
+mean_A = np.mean(data_A)
+mean_B = np.mean(data_B)
+
+print(f'Mean of Model A: {mean_A}')
+print(f'Mean of Model B: {mean_B}')
+
+# Perform t-test
+t_stat, p_value = ttest_ind(data_A, data_B)
+
+print(f'T-statistic: {t_stat}')
+print(f'P-value: {p_value}')
+```
+
+```python
+import numpy as np
+from scipy.stats import ttest_ind
+
+# Generate synthetic data
+np.random.seed(42)
+data_A = np.random.rand(100)
+data_B = np.random.rand(100) + 0.1  # Model B is slightly better
+
+# Calculate performance metric (e.g., mean)
+mean_A = np.mean(data_A)
+mean_B = np.mean(data_B)
+
+print(f'Mean of Model A: {mean_A}')
+print(f'Mean of Model B: {mean_B}')
+
+# Perform t-test
+t_stat, p_value = ttest_ind(data_A, data_B)
+
+print(f'T-statistic: {t_stat}')
+print(f'P-value: {p_value}')
+
+# Check for statistical significance
+alpha = 0.05
+if p_value < alpha:
+    print("The difference is statistically significant.")
+else:
+    print("The difference is not statistically significant.")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-9.ipynb)

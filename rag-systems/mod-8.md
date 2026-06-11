@@ -55,6 +55,84 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import numpy as np
+from sentence_transformers import SentenceTransformer
+
+# Load a pre-trained model for creating embeddings
+model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+
+# Function to create embeddings
+def create_embedding(text):
+    return model.encode(text)
+
+text = "Hello, world!"
+embedding = create_embedding(text)
+print(embedding)
+```
+
+```python
+import random
+import spacy
+
+# Load a pre-trained spaCy model
+nlp = spacy.load("en_core_web_sm")
+
+# Function to chunk text
+def chunk_text(text, chunk_size=100):
+    doc = nlp(text)
+    return [doc[i:i+chunk_size] for i in range(0, len(doc), chunk_size)]
+
+# Function to rerank results
+def rerank_results(results):
+    # Placeholder for a more complex reranking algorithm
+    return sorted(results, key=lambda x: random.random())
+
+text = "This is a long document that needs to be chunked and reranked."
+chunks = chunk_text(text)
+reranked_chunks = rerank_results(chunks)
+print(reranked_chunks)
+```
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sentence_transformers import SentenceTransformer
+import numpy as np
+
+# Load a pre-trained model for creating embeddings
+model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+
+# Function to perform hybrid search
+def hybrid_search(query, documents, top_k=5):
+    # Keyword-based search using TF-IDF
+    vectorizer = TfidfVectorizer()
+    tfidf_matrix = vectorizer.fit_transform(documents)
+    query_vec = vectorizer.transform([query])
+    keyword_scores = (tfidf_matrix * query_vec.T).toarray().flatten()
+    
+    # Semantic search using embeddings
+    document_embeddings = model.encode(documents)
+    query_embedding = model.encode(query)
+    semantic_scores = 1 - np.linalg.norm(document_embeddings - query_embedding, axis=1)
+    
+    # Combine scores
+    combined_scores = keyword_scores + semantic_scores
+    top_indices = np.argsort(combined_scores)[-top_k:]
+    return [documents[i] for i in top_indices]
+
+documents = [
+    "The quick brown fox jumps over the lazy dog.",
+    "A quick brown dog jumps over the lazy fox.",
+    "The lazy fox is jumped over by the quick brown dog."
+]
+query = "quick fox"
+results = hybrid_search(query, documents)
+print(results)
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/rag-systems/mod-8.ipynb)

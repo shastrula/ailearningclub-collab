@@ -59,6 +59,88 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from transformers import BertTokenizer, BertModel
+import torch
+
+# Load the BERT tokenizer and model
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertModel.from_pretrained('bert-base-uncased')
+
+# Encode a sample text
+inputs = tokenizer("Hello, how are you?", return_tensors='pt')
+
+# Get the model's output
+outputs = model(**inputs)
+
+# Print the last hidden state
+last_hidden_state = outputs.last_hidden_state
+print(last_hidden_state)
+```
+
+```python
+from transformers import BertForSequenceClassification, Trainer, TrainingArguments, BertTokenizer
+from sklearn.model_selection import train_test_split
+import torch
+
+# Load the BERT tokenizer and model
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=2)
+
+# Sample dataset
+texts = ["I love this product!", "This is awful."]
+labels = [1, 0]  # 1 for positive, 0 for negative
+
+# Split the dataset
+train_texts, test_texts, train_labels, test_labels = train_test_split(texts, labels, test_size=0.2)
+
+# Tokenize the dataset
+train_encodings = tokenizer(train_texts, truncation=True, padding=True)
+test_encodings = tokenizer(test_texts, truncation=True, padding=True)
+
+# Create a PyTorch dataset
+class Dataset(torch.utils.data.Dataset):
+    def __init__(self, encodings, labels):
+        self.encodings = encodings
+        self.labels = labels
+
+    def __getitem__(self, idx):
+        item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
+        item['labels'] = torch.tensor(self.labels[idx])
+        return item
+
+    def __len__(self):
+        return len(self.labels)
+
+train_dataset = Dataset(train_encodings, train_labels)
+test_dataset = Dataset(test_encodings, test_labels)
+
+# Training arguments
+training_args = TrainingArguments(
+    output_dir='./results',
+    evaluation_strategy='epoch',
+    learning_rate=2e-5,
+    per_device_train_batch_size=16,
+    per_device_eval_batch_size=16,
+    num_train_epochs=3,
+    weight_decay=0.01,
+)
+
+# Trainer
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=train_dataset,
+    eval_dataset=test_dataset
+)
+
+# Train the model
+trainer.train()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-25.ipynb)

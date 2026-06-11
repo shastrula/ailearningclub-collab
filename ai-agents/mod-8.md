@@ -59,6 +59,59 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import random
+
+# Define a simple ReAct agent
+class ReActAgent:
+    def __init__(self, name):
+        self.name = name
+
+    def react(self, event):
+        """Defines the reactive behavior of the agent."""
+        if event == 'obstacle':
+            return f'{self.name} avoids obstacle'
+        elif event == 'goal':
+            return f'{self.name} reaches goal'
+        else:
+            return f'{self.name} performs default action'
+
+# Simulate environment events
+events = ['obstacle', 'goal', 'default']
+agent = ReActAgent('Agent1')
+
+# Agent reacts to random events
+for _ in range(5):
+    event = random.choice(events)
+    print(agent.react(event))
+```
+
+```python
+import networkx as nx
+import matplotlib.pyplot as plt
+
+# Create a LangGraph for multi-agent system
+G = nx.DiGraph()
+
+# Add agents as nodes
+G.add_node('Agent1')
+G.add_node('Agent2')
+
+# Add edges representing communication
+G.add_edge('Agent1', 'Agent2', action='send_message')
+G.add_edge('Agent2', 'Agent1', action='receive_message')
+
+# Draw the graph
+pos = nx.spring_layout(G)
+nx.draw(G, pos, with_labels=True, node_color='lightblue', edge_color='gray')
+labels = nx.get_edge_attributes(G, 'action')
+nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
+plt.show()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-agents/mod-8.ipynb)

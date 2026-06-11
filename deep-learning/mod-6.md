@@ -52,6 +52,95 @@ Recent advances in Training Deep Learning Models:
 
 True mastery comes from implementing Training Deep Learning Models in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Code Examples
+
+```python
+import torch
+import torch.nn as nn
+
+# Define a simple neural network
+class SimpleNN(nn.Module):
+    def __init__(self):
+        super(SimpleNN, self).__init__()
+        self.fc = nn.Linear(10, 1)
+
+    def forward(self, x):
+        return self.fc(x)
+
+# Instantiate the model
+model = SimpleNN()
+
+# Define a loss function
+criterion = nn.MSELoss()
+
+# Create some dummy data
+inputs = torch.randn(5, 10)
+targets = torch.randn(5, 1)
+
+# Forward pass
+outputs = model(inputs)
+
+# Calculate loss
+loss = criterion(outputs, targets)
+print(f'Loss: {loss.item()}')
+```
+
+```python
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+# Define a simple neural network
+class SimpleNN(nn.Module):
+    def __init__(self):
+        super(SimpleNN, self).__init__()
+        self.fc = nn.Linear(10, 1)
+
+    def forward(self, x):
+        return self.fc(x)
+
+# Instantiate the model
+model = SimpleNN()
+
+# Define a loss function
+criterion = nn.MSELoss()
+
+# Define an optimizer
+optimizer = optim.SGD(model.parameters(), lr=0.01)
+
+# Create some dummy data
+inputs = torch.randn(5, 10)
+targets = torch.randn(5, 1)
+
+# Training loop
+for epoch in range(10):
+    optimizer.zero_grad()   # Zero the gradient buffers
+    outputs = model(inputs)
+    loss = criterion(outputs, targets)
+    loss.backward()         # Backpropagation
+    optimizer.step()        # Update weights
+    print(f'Epoch {epoch+1}, Loss: {loss.item()}')
+```
+
+```python
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+# Assume `predictions` and `targets` are your model's predictions and the actual labels
+predictions = torch.round(outputs).detach().numpy().flatten()
+targets = targets.detach().numpy().flatten()
+
+accuracy = accuracy_score(targets, predictions)
+precision = precision_score(targets, predictions)
+recall = recall_score(targets, predictions)
+f1 = f1_score(targets, predictions)
+
+print(f'Accuracy: {accuracy}')
+print(f'Precision: {precision}')
+print(f'Recall: {recall}')
+print(f'F1 Score: {f1}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-6.ipynb)

@@ -59,6 +59,139 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from sagemaker.estimator import Estimator
+import sagemaker
+
+session = sagemaker.Session()
+role = 'arn:aws:iam::123456789012:role/SageMakerRole'
+bucket = session.default_bucket()
+
+# Create estimator for custom training script
+estimator = Estimator(
+    image_uri='382416733822.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:latest',
+    role=role,
+    instance_count=1,
+    instance_type='ml.m5.xlarge',
+    output_path=f's3://{bucket}/training-output',
+    code_location=f's3://{bucket}/code',
+    sagemaker_session=session
+)
+
+# Set hyperparameters
+estimator.set_hyperparameters(
+    epochs=10,
+    batch_size=32,
+    learning_rate=0.001,
+    optimizer='adam'
+)
+
+# Start training
+estimator.fit(
+    {'training': f's3://{bucket}/train-data/'},
+    job_name='training-job-2024-01-15',
+    wait=True
+)
+```
+
+```python
+from sagemaker.tensorflow import TensorFlow
+
+# TensorFlow estimator with hyperparameters
+tf_estimator = TensorFlow(
+    entry_point='train.py',
+    role=role,
+    instance_count=1,
+    instance_type='ml.p3.2xlarge',
+    framework_version='2.8',
+    py_version='py39',
+    output_path=f's3://{bucket}/tf-output',
+    sagemaker_session=session,
+    hyperparameters={
+        'epochs': 50,
+        'batch_size': 64,
+        'learning_rate': 0.001,
+        'dropout': 0.5,
+        'activation': 'relu'
+    }
+)
+
+# Fit the model
+tf_estimator.fit(
+    {'training': f's3://{bucket}/train-data/'},
+    job_name='tensorflow-training'
+)
+```
+
+```python
+from sagemaker.estimator import Estimator
+
+# Enable spot training
+estimator = Estimator(
+    image_uri='382416733822.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:latest',
+    role=role,
+    instance_count=1,
+    instance_type='ml.m5.xlarge',
+    output_path=f's3://{bucket}/training-output',
+    sagemaker_session=session,
+    use_spot_instances=True,
+    max_run=3600,
+    max_wait=5400
+)
+
+# Spot training can save up to 90% on compute costs
+estimator.fit(
+    {'training': f's3://{bucket}/train-data/'},
+    job_name='spot-training-job'
+)
+```
+
+```python
+from sagemaker.pytorch import PyTorch
+
+# Distributed training with multiple instances
+pytorch_estimator = PyTorch(
+    entry_point='train.py',
+    role=role,
+    instance_count=4,  # Multiple instances
+    instance_type='ml.p3.8xlarge',
+    framework_version='1.12',
+    py_version='py38',
+    output_path=f's3://{bucket}/pytorch-output',
+    sagemaker_session=session,
+    distribution={
+        'torch_distributed': {
+            'enabled': True
+        }
+    }
+)
+
+# Train with distributed strategy
+pytorch_estimator.fit(
+    {'training': f's3://{bucket}/train-data/'},
+    job_name='distributed-training'
+)
+```
+
+```python
+# Check training job status
+import boto3
+
+sm_client = boto3.client('sagemaker')
+
+response = sm_client.describe_training_job(
+    TrainingJobName='my-training-job'
+)
+
+print(f"Status: {response['TrainingJobStatus']}")
+print(f"Start time: {response['CreationTime']}")
+print(f"Training time: {response.get('TrainingEndTime', 'In progress')}")
+print(f"Billable seconds: {response['BillableTimeInSeconds']}")
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-sagemaker/mod-5.ipynb)

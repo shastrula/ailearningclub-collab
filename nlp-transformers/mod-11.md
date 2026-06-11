@@ -59,6 +59,38 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import pandas as pd
+
+# Define the chunk size
+chunk_size = 10000
+
+# Iterate over the dataset in chunks
+for chunk in pd.read_csv('large_dataset.csv', chunksize=chunk_size):
+    # Preprocess each chunk
+    chunk = chunk.dropna()  # Example preprocessing step: removing rows with missing values
+    # Further processing or storage of the chunk can be done here
+    print(chunk.head())  # Display the first few rows of the current chunk
+```
+
+```python
+import pandas as pd
+import pyarrow.parquet as pq
+
+# Load a large dataset
+df = pd.read_csv('large_dataset.csv')
+
+# Save the dataset in Parquet format
+df.to_parquet('large_dataset.parquet', index=False)
+
+# Retrieve the dataset
+df_loaded = pq.read_table('large_dataset.parquet').to_pandas()
+print(df_loaded.head())  # Display the first few rows of the loaded dataset
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-11.ipynb)

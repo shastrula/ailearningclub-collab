@@ -59,6 +59,50 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+# Import necessary libraries
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
+from datasets import load_dataset
+
+# Load a pre-trained BERT tokenizer and model
+tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
+model = AutoModelForSequenceClassification.from_pretrained('bert-base-uncased')
+
+# Load a dataset (e.g., IMDb movie reviews for sentiment analysis)
+dataset = load_dataset('imdb')
+
+# Tokenize the dataset
+def tokenize_function(examples):
+    return tokenizer(examples['text'], padding='max_length', truncation=True)
+
+tokenized_datasets = dataset.map(tokenize_function, batched=True)
+
+# Define training arguments
+training_args = TrainingArguments(
+    output_dir='./results',
+    evaluation_strategy='epoch',
+    learning_rate=2e-5,
+    per_device_train_batch_size=8,
+    per_device_eval_batch_size=8,
+    num_train_epochs=3,
+    weight_decay=0.01
+)
+
+# Initialize Trainer
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=tokenized_datasets['train'],
+    eval_dataset=tokenized_datasets['test']
+)
+
+# Train the model
+trainer.train()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/nlp-transformers/mod-7.ipynb)

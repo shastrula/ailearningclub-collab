@@ -59,6 +59,74 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
+
+# Example predictions and true labels
+y_true = [0, 1, 1, 0, 1, 0]
+y_pred = [0, 0, 1, 0, 1, 1]
+y_prob = [0.1, 0.4, 0.7, 0.2, 0.8, 0.3]  # Predicted probabilities for AUC-ROC
+
+# Calculate metrics
+accuracy = accuracy_score(y_true, y_pred)
+precision = precision_score(y_true, y_pred)
+recall = recall_score(y_true, y_pred)
+f1 = f1_score(y_true, y_pred)
+auc_roc = roc_auc_score(y_true, y_prob)
+
+# Print results
+print(f'Accuracy: {accuracy}')
+print(f'Precision: {precision}')
+print(f'Recall: {recall}')
+print(f'F1 Score: {f1}')
+print(f'AUC-ROC: {auc_roc}')
+```
+
+```python
+from sklearn.model_selection import cross_val_score
+from sklearn.datasets import load_iris
+from sklearn.ensemble import RandomForestClassifier
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Define model
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Perform 5-fold cross-validation
+scores = cross_val_score(model, X, y, cv=5)
+
+# Print results
+print(f'Cross-validation scores: {scores}')
+print(f'Mean cross-validation score: {scores.mean()}')
+```
+
+```python
+from sklearn.model_selection import GridSearchCV
+from sklearn.svm import SVC
+
+# Define parameter grid
+param_grid = {
+    'C': [0.1, 1, 10, 100],
+    'kernel': ['linear', 'rbf']
+}
+
+# Define model
+svc = SVC()
+
+# Perform Grid Search
+grid_search = GridSearchCV(svc, param_grid, cv=5)
+grid_search.fit(X, y)
+
+# Print best parameters and score
+print(f'Best parameters: {grid_search.best_params_}')
+print(f'Best cross-validation score: {grid_search.best_score_}')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/ai-fundamentals/mod-6.ipynb)

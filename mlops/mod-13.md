@@ -55,6 +55,54 @@ Recognizing these patterns helps you avoid repeating them.
 - Build monitoring into your system from the start
 - Plan for updates and operational maintenance
 
+
+## Code Examples
+
+```python
+import boto3
+
+# Initialize a session using Amazon SageMaker
+session = boto3.Session(region_name='us-west-2')
+
+sagemaker_client = session.client('sagemaker')
+
+# List available SageMaker notebook instances
+response = sagemaker_client.list_notebook_instances()
+print(response)
+```
+
+```python
+import boto3
+from sagemaker import Session
+from sagemaker.amazon.amazon_estimator import get_image_uri
+import sagemaker
+
+session = Session()
+
+# Specify the training image
+training_image = get_image_uri(session.boto_region_name, 'xgboost')
+
+# Set up the estimator
+xgb = sagemaker.estimator.Estimator(training_image,
+                                   'your-iam-role',
+                                   train_instance_count=1,
+                                   train_instance_type='ml.m4.xlarge',
+                                   output_path='s3://your-bucket/xgboost/output',
+                                   sagemaker_session=session)
+
+xgb.set_hyperparameters(max_depth=5,
+                         eta=0.2,
+                         gamma=4,
+                         min_child_weight=6,
+                         subsample=0.8,
+                         silent=0,
+                         objective='binary:logistic',
+                         num_round=100)
+
+# Specify the input data
+xgb.fit({'train': 's3://your-bucket/xgboost/train', 'validation':'s3://your-bucket/xgboost/validation'})
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-13.ipynb)

@@ -52,6 +52,57 @@ Recent advances in Best Practices and Tips for Deep Learning with PyTorch:
 
 True mastery comes from implementing Best Practices and Tips for Deep Learning with PyTorch in realistic scenarios, encountering problems, debugging them, and learning from experience.
 
+
+## Code Examples
+
+```python
+import torch
+from torchvision import datasets, transforms
+
+# Define a transform to normalize the data
+transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize((0.5,), (0.5,))
+])
+
+# Apply the transform to the dataset
+trainset = datasets.MNIST('~/.pytorch/MNIST_data/', download=True, train=True, transform=transform)
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=64, shuffle=True)
+
+# Print out the mean and stddev of the dataset
+dataiter = iter(trainloader)
+images, labels = dataiter.next()
+print(f'Mean: {images.mean()}, Stddev: {images.std()}')
+```
+
+```python
+import torch
+import torch.nn as nn
+
+# Define a simple neural network
+class SimpleNet(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.fc1 = nn.Linear(784, 128)
+        self.fc2 = nn.Linear(128, 10)
+
+    def forward(self, x):
+        x = torch.relu(self.fc1(x))
+        x = self.fc2(x)
+        return x
+
+# Initialize the model
+model = SimpleNet()
+
+# Save the model
+torch.save(model.state_dict(),'simple_model.pth')
+
+# Load the model
+loaded_model = SimpleNet()
+loaded_model.load_state_dict(torch.load('simple_model.pth'))
+loaded_model.eval()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/deep-learning/mod-20.ipynb)

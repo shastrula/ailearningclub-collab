@@ -59,6 +59,63 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import subprocess
+
+# Example: Running a shell command to deploy Kubeflow
+subprocess.run(['kubectl', 'apply', '-f', 'https://github.com/kubeflow/manifests/releases/latest/download/kfdef-base-0.6.0.yaml'])
+```
+
+```python
+from kfp import dsl
+
+@dsl.pipeline(
+    name='Training pipeline',
+    description='An example pipeline that performs a simple training job.'
+)
+def train_pipeline(
+    learning_rate: float = 0.01,
+    epochs: int = 10
+):
+    from kfp.dsl import ContainerOp
+    train_op = ContainerOp(
+        name='train',
+        image='tensorflow/tensorflow:2.1.0',
+        command=['python', 'train.py'],
+        arguments=['--learning_rate', learning_rate, '--epochs', epochs]
+    )
+    return train_op
+
+if __name__ == '__main__' :
+    from kfp_tekton.compiler import TektonCompiler
+    TektonCompiler().compile(train_pipeline, 'train_pipeline.yaml')
+```
+
+```python
+from kubeflow. fairing import FairingConfig
+from kubeflow.fairing.deployers import JobDeployer
+from kubeflow.fairing.preprocessors import BasePreProcessor
+
+class MyPreProcessor(BasePreProcessor):
+    def preprocess(self, input_path, output_path):
+        # Your preprocessing logic here
+        pass
+
+config = FairingConfig(
+    deployer=JobDeployer(job_name="my-model"),
+    preprocessor=MyPreProcessor(),
+    input_path="gs://my-bucket/input",
+    output_path="gs://my-bucket/output",
+    mode="local",
+    requirements=["tensorflow==2.1.0"]
+)
+
+config.deploy()
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/mlops/mod-12.ipynb)

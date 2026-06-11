@@ -59,6 +59,41 @@ Learning from others' experiences:
 - Build observability into systems from the start
 - Plan for maintenance and operational updates
 
+
+## Code Examples
+
+```python
+import boto3
+import json
+
+cf = boto3.client('cloudformation')
+
+# Create stack
+cf.create_stack(
+    StackName='my-stack',
+    TemplateBody=open('template.yaml').read(),
+    Parameters=[
+        {'ParameterKey': 'InstanceType', 'ParameterValue': 't3.micro'}
+    ]
+)
+
+# Describe stack
+response = cf.describe_stacks(StackName='my-stack')
+for stack in response['Stacks']:
+    print(f"Status: {stack['StackStatus']}")
+    for output in stack.get('Outputs', []):
+        print(f"{output['OutputKey']}: {output['OutputValue']}")
+
+# Update stack
+cf.update_stack(
+    StackName='my-stack',
+    TemplateBody=open('template.yaml').read()
+)
+
+# Delete stack
+cf.delete_stack(StackName='my-stack')
+```
+
 ## Practice in Notebook
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shastrula/ailearningclub-collab/blob/main/aws-fundamentals/mod-8.ipynb)
