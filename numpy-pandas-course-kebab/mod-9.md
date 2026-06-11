@@ -79,22 +79,7 @@ print(joined_df)
 
 > **💡 Tip:** When merging or joining DataFrames, ensure that the columns or indices you are merging on have consistent data types to avoid unexpected results.
 
-Joining DataFrames is another powerful technique for combining datasets. The `join` method in Pandas is used to join DataFrames on their index. This is particularly useful when you have DataFrames with aligned indices and want to combine them horizontally. You can specify the type of join similar to merging, allowing for flexible data combination strategies.
-
-```python title="example2.py"
-import pandas as pd
-
-# Creating two DataFrames with aligned indices
-df1 = pd.DataFrame({'value1': [1, 2, 3]}, index=['A', 'B', 'C'])
-df2 = pd.DataFrame({'value2': [4, 5, 6]}, index=['B', 'C', 'D'])
-
-# Joining DataFrames on their index
-joined_df = df1.join(df2, how='inner')
-
-print(joined_df)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What type of join is performed by default when using the `merge` function in Pandas?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,22 +103,7 @@ print(joined_df)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Joining DataFrames is another powerful technique for combining datasets. The `join` method in Pandas is used to join DataFrames on their index. This is particularly useful when you have DataFrames with aligned indices and want to combine them horizontally. You can specify the type of join similar to merging, allowing for flexible data combination strategies.
-
-```python title="example2.py"
-import pandas as pd
-
-# Creating two DataFrames with aligned indices
-df1 = pd.DataFrame({'value1': [1, 2, 3]}, index=['A', 'B', 'C'])
-df2 = pd.DataFrame({'value2': [4, 5, 6]}, index=['B', 'C', 'D'])
-
-# Joining DataFrames on their index
-joined_df = df1.join(df2, how='inner')
-
-print(joined_df)
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which method is used to join DataFrames on their index in Pandas?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

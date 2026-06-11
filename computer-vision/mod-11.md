@@ -79,22 +79,7 @@ cv2.imwrite('brighter_example.jpg', brighter_image)
 
 > **💡 Tip:** When applying multiple augmentations, be cautious not to over-augment the data, as this can lead to unrealistic images that may confuse the model.
 
-Color space augmentations involve altering the color properties of images. Techniques such as changing brightness, contrast, saturation, and hue can help the model become more robust to variations in lighting and color conditions. These augmentations are particularly useful for outdoor scenes where lighting conditions can vary significantly.
-
-```python title="example2.py"
-import cv2
-
-# Load an image
-image = cv2.imread('example.jpg')
-
-# Increase brightness
-brighter_image = cv2.convertScaleAbs(image, beta=50)
-
-# Save the brighter image
-cv2.imwrite('brighter_example.jpg', brighter_image)
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which transformation helps the model learn invariant features?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,22 +103,7 @@ cv2.imwrite('brighter_example.jpg', brighter_image)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Color space augmentations involve altering the color properties of images. Techniques such as changing brightness, contrast, saturation, and hue can help the model become more robust to variations in lighting and color conditions. These augmentations are particularly useful for outdoor scenes where lighting conditions can vary significantly.
-
-```python title="example2.py"
-import cv2
-
-# Load an image
-image = cv2.imread('example.jpg')
-
-# Increase brightness
-brighter_image = cv2.convertScaleAbs(image, beta=50)
-
-# Save the brighter image
-cv2.imwrite('brighter_example.jpg', brighter_image)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which color space augmentation increases the lightness of an image?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

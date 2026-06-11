@@ -106,49 +106,7 @@ print(loss.item())
 
 > **💡 Tip:** When implementing GPTQ, ensure that the quantization levels are chosen carefully to balance between model compression and accuracy. Regularly evaluate the model's performance to avoid significant drops in accuracy.
 
-To implement GPTQ, we need to modify the training process to include quantization-aware steps. This involves calculating the gradients, determining the significance of each weight, and then quantizing the weights accordingly. The goal is to maintain the model's accuracy while reducing its size.
-
-```python title="example2.py"
-import torch
-import torch.nn as nn
-
-# Define a simple neural network
-class SimpleNN(nn.Module):
-    def __init__(self):
-        super(SimpleNN, self).__init__()
-        self.fc1 = nn.Linear(10, 5)
-
-    def forward(self, x):
-        return self.fc1(x)
-
-# Initialize the model
-model = SimpleNN()
-
-# Define a dummy input and target
-input_tensor = torch.randn(1, 10)
-target = torch.randn(1, 5)
-
-# Define a loss function and optimizer
-criterion = nn.MSELoss()
-optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
-
-# Forward pass
-output = model(input_tensor)
-
-# Compute loss
-loss = criterion(output, target)
-
-# Backward pass
-loss.backward()
-
-# Update weights
-optimizer.step()
-
-# Print the loss
-print(loss.item())
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of GPTQ?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -172,49 +130,7 @@ print(loss.item())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-To implement GPTQ, we need to modify the training process to include quantization-aware steps. This involves calculating the gradients, determining the significance of each weight, and then quantizing the weights accordingly. The goal is to maintain the model's accuracy while reducing its size.
-
-```python title="example2.py"
-import torch
-import torch.nn as nn
-
-# Define a simple neural network
-class SimpleNN(nn.Module):
-    def __init__(self):
-        super(SimpleNN, self).__init__()
-        self.fc1 = nn.Linear(10, 5)
-
-    def forward(self, x):
-        return self.fc1(x)
-
-# Initialize the model
-model = SimpleNN()
-
-# Define a dummy input and target
-input_tensor = torch.randn(1, 10)
-target = torch.randn(1, 5)
-
-# Define a loss function and optimizer
-criterion = nn.MSELoss()
-optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
-
-# Forward pass
-output = model(input_tensor)
-
-# Compute loss
-loss = criterion(output, target)
-
-# Backward pass
-loss.backward()
-
-# Update weights
-optimizer.step()
-
-# Print the loss
-print(loss.item())
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which part of the neural network does GPTQ primarily target for quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

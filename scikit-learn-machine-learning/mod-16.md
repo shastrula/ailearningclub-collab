@@ -80,23 +80,7 @@ print(f'Recall: {recall}')
 
 > **💡 Tip:** When dealing with imbalanced datasets, consider using metrics like precision, recall, and the F1 score instead of accuracy to get a more comprehensive understanding of your model's performance.
 
-Precision and recall are essential metrics for evaluating the performance of classification models, especially in imbalanced datasets. Precision measures the proportion of true positive predictions among all positive predictions, while recall measures the proportion of true positive predictions among all actual positives.
-
-```python title="example2.py"
-from sklearn.metrics import precision_score, recall_score
-
-y_true = [0, 1, 2, 2, 2]
-y_pred = [0, 0, 2, 2, 1]
-
-# Calculate precision and recall
-precision = precision_score(y_true, y_pred, average='macro')
-recall = recall_score(y_true, y_pred, average='macro')
-
-print(f'Precision: {precision}')
-print(f'Recall: {recall}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does the accuracy metric measure?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,23 +104,7 @@ print(f'Recall: {recall}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Precision and recall are essential metrics for evaluating the performance of classification models, especially in imbalanced datasets. Precision measures the proportion of true positive predictions among all positive predictions, while recall measures the proportion of true positive predictions among all actual positives.
-
-```python title="example2.py"
-from sklearn.metrics import precision_score, recall_score
-
-y_true = [0, 1, 2, 2, 2]
-y_pred = [0, 0, 2, 2, 1]
-
-# Calculate precision and recall
-precision = precision_score(y_true, y_pred, average='macro')
-recall = recall_score(y_true, y_pred, average='macro')
-
-print(f'Precision: {precision}')
-print(f'Recall: {recall}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which metric is better suited for imbalanced datasets?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -98,41 +98,7 @@ print('Quantized model evaluation:', quantized_outputs)
 
 > **💡 Tip:** When applying GPTQ, ensure that you thoroughly evaluate the quantized model to check for any significant drop in performance. It's also important to fine-tune the quantized model if necessary to regain some of the lost accuracy.
 
-To apply GPTQ to a real model, you need to follow a series of steps that include loading the model, quantizing its weights, and then evaluating the performance of the quantized model. This process ensures that the model remains efficient and effective even after quantization.
-
-```python title="example2.py"
-import torch
-from transformers import AutoModel, AutoTokenizer
-from datasets import load_dataset
-
-# Load a pre-trained model and tokenizer
-model_name = 'bert-base-uncased'
-model = AutoModel.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-# Load a dataset for evaluation
-dataset = load_dataset('glue','mrpc')
-
-# Define a function to evaluate the model
-def evaluate_model(model, dataset):
-    inputs = tokenizer(dataset['sentence1'], dataset['sentence2'], return_tensors='pt', padding=True, truncation=True)
-    with torch.no_grad():
-        outputs = model(**inputs)
-    return outputs
-
-# Quantize the model
-quantized_model = quantize_model(model)
-
-# Evaluate the original and quantized models
-original_outputs = evaluate_model(model, dataset['test'])
-quantized_outputs = evaluate_model(quantized_model, dataset['test'])
-
-# Print the evaluation results
-print('Original model evaluation:', original_outputs)
-print('Quantized model evaluation:', quantized_outputs)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of GPTQ?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -156,41 +122,7 @@ print('Quantized model evaluation:', quantized_outputs)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-To apply GPTQ to a real model, you need to follow a series of steps that include loading the model, quantizing its weights, and then evaluating the performance of the quantized model. This process ensures that the model remains efficient and effective even after quantization.
-
-```python title="example2.py"
-import torch
-from transformers import AutoModel, AutoTokenizer
-from datasets import load_dataset
-
-# Load a pre-trained model and tokenizer
-model_name = 'bert-base-uncased'
-model = AutoModel.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-# Load a dataset for evaluation
-dataset = load_dataset('glue','mrpc')
-
-# Define a function to evaluate the model
-def evaluate_model(model, dataset):
-    inputs = tokenizer(dataset['sentence1'], dataset['sentence2'], return_tensors='pt', padding=True, truncation=True)
-    with torch.no_grad():
-        outputs = model(**inputs)
-    return outputs
-
-# Quantize the model
-quantized_model = quantize_model(model)
-
-# Evaluate the original and quantized models
-original_outputs = evaluate_model(model, dataset['test'])
-quantized_outputs = evaluate_model(quantized_model, dataset['test'])
-
-# Print the evaluation results
-print('Original model evaluation:', original_outputs)
-print('Quantized model evaluation:', quantized_outputs)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the typical bit precision used in GPTQ?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -86,29 +86,7 @@ print(f'F1 Score: {f1}')
 
 > **💡 Tip:** When benchmarking, ensure that the evaluation dataset is representative of the real-world data the model will encounter. This helps in obtaining more reliable and generalizable performance metrics.
 
-Common evaluation metrics for fine-tuned language models include accuracy, precision, recall, F1 score, and perplexity. These metrics provide a comprehensive view of the model's performance. Additionally, latency and throughput are critical for assessing the model's efficiency in real-time applications. Proper selection and interpretation of these metrics are vital for effective benchmarking.
-
-```python title="example2.py"
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-
-# Simulated ground truth and predictions
-ground_truth = [1, 0, 1, 0]
-predictions = [1, 1, 1, 0]
-
-# Calculate metrics
-accuracy = accuracy_score(ground_truth, predictions)
-precision = precision_score(ground_truth, predictions)
-recall = recall_score(ground_truth, predictions)
-f1 = f1_score(ground_truth, predictions)
-
-# Print results
-print(f'Accuracy: {accuracy}')
-print(f'Precision: {precision}')
-print(f'Recall: {recall}')
-print(f'F1 Score: {f1}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of benchmarking fine-tuned models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -132,29 +110,7 @@ print(f'F1 Score: {f1}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Common evaluation metrics for fine-tuned language models include accuracy, precision, recall, F1 score, and perplexity. These metrics provide a comprehensive view of the model's performance. Additionally, latency and throughput are critical for assessing the model's efficiency in real-time applications. Proper selection and interpretation of these metrics are vital for effective benchmarking.
-
-```python title="example2.py"
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-
-# Simulated ground truth and predictions
-ground_truth = [1, 0, 1, 0]
-predictions = [1, 1, 1, 0]
-
-# Calculate metrics
-accuracy = accuracy_score(ground_truth, predictions)
-precision = precision_score(ground_truth, predictions)
-recall = recall_score(ground_truth, predictions)
-f1 = f1_score(ground_truth, predictions)
-
-# Print results
-print(f'Accuracy: {accuracy}')
-print(f'Precision: {precision}')
-print(f'Recall: {recall}')
-print(f'F1 Score: {f1}')
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which metric is NOT typically used for evaluating language models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

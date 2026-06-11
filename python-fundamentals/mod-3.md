@@ -81,21 +81,7 @@ Learning Curve       | Easy   | Medium  | Medium
 
 **Recommendation**: Start with VSCode if you're new to programming. It's simple and won't overwhelm you. Switch to PyCharm when you need advanced features.
 
-```text title="ide-comparison.txt"
-Feature              | VSCode | PyCharm | IntelliJ
----------------------|--------|---------|----------
-Price                | Free   | Free*   | Free*
-Setup Time           | 5 min  | 2 min   | 10 min
-Memory Usage         | Low    | High    | High
-Debugging            | Good   | Excellent | Good
-Code Completion      | Good   | Excellent | Excellent
-Best For             | Beginners | Professionals | Multi-language
-Learning Curve       | Easy   | Medium  | Medium
-
-*Community Edition is free
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which IDE is best for beginners?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -183,32 +183,6 @@ with open('generated_image.png', 'wb') as f:
 
 ---
 
-```json
-{
-  "claude": {
-    "opus": "anthropic.claude-3-opus-20240229-v1:0",
-    "sonnet": "anthropic.claude-3-sonnet-20240229-v1:0",
-    "haiku": "anthropic.claude-3-haiku-20240307-v1:0"
-  },
-  "llama": {
-    "llama3_70b": "meta.llama3-70b-instruct-v1:0",
-    "llama3_8b": "meta.llama3-8b-instruct-v1:0",
-    "llama2_70b": "meta.llama2-70b-chat-v1:0"
-  },
-  "mistral": {
-    "large": "mistral.mistral-large-2402-v1:0",
-    "7b": "mistral.mistral-7b-instruct-v0:2"
-  },
-  "titan": {
-    "text_premier": "amazon.titan-text-premier-v1:0",
-    "text_express": "amazon.titan-text-express-v1:0",
-    "embeddings": "amazon.titan-embed-text-v2:0"
-  }
-}
-```
-
----
-
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which Claude 3 model offers the best balance of speed and capability?</p>
   <div class="space-y-2">
@@ -233,33 +207,7 @@ with open('generated_image.png', 'wb') as f:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```json
-{
-  "claude": {
-    "opus": "anthropic.claude-3-opus-20240229-v1:0",
-    "sonnet": "anthropic.claude-3-sonnet-20240229-v1:0",
-    "haiku": "anthropic.claude-3-haiku-20240307-v1:0"
-  },
-  "llama": {
-    "llama3_70b": "meta.llama3-70b-instruct-v1:0",
-    "llama3_8b": "meta.llama3-8b-instruct-v1:0",
-    "llama2_70b": "meta.llama2-70b-chat-v1:0"
-  },
-  "mistral": {
-    "large": "mistral.mistral-large-2402-v1:0",
-    "7b": "mistral.mistral-7b-instruct-v0:2"
-  },
-  "titan": {
-    "text_premier": "amazon.titan-text-premier-v1:0",
-    "text_express": "amazon.titan-text-express-v1:0",
-    "embeddings": "amazon.titan-embed-text-v2:0"
-  }
-}
-```
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which model family is best for cost-sensitive, high-volume tasks?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -283,33 +231,7 @@ with open('generated_image.png', 'wb') as f:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```json
-{
-  "claude": {
-    "opus": "anthropic.claude-3-opus-20240229-v1:0",
-    "sonnet": "anthropic.claude-3-sonnet-20240229-v1:0",
-    "haiku": "anthropic.claude-3-haiku-20240307-v1:0"
-  },
-  "llama": {
-    "llama3_70b": "meta.llama3-70b-instruct-v1:0",
-    "llama3_8b": "meta.llama3-8b-instruct-v1:0",
-    "llama2_70b": "meta.llama2-70b-chat-v1:0"
-  },
-  "mistral": {
-    "large": "mistral.mistral-large-2402-v1:0",
-    "7b": "mistral.mistral-7b-instruct-v0:2"
-  },
-  "titan": {
-    "text_premier": "amazon.titan-text-premier-v1:0",
-    "text_express": "amazon.titan-text-express-v1:0",
-    "embeddings": "amazon.titan-embed-text-v2:0"
-  }
-}
-```
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is Titan Embeddings used for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -333,33 +255,7 @@ with open('generated_image.png', 'wb') as f:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```json
-{
-  "claude": {
-    "opus": "anthropic.claude-3-opus-20240229-v1:0",
-    "sonnet": "anthropic.claude-3-sonnet-20240229-v1:0",
-    "haiku": "anthropic.claude-3-haiku-20240307-v1:0"
-  },
-  "llama": {
-    "llama3_70b": "meta.llama3-70b-instruct-v1:0",
-    "llama3_8b": "meta.llama3-8b-instruct-v1:0",
-    "llama2_70b": "meta.llama2-70b-chat-v1:0"
-  },
-  "mistral": {
-    "large": "mistral.mistral-large-2402-v1:0",
-    "7b": "mistral.mistral-7b-instruct-v0:2"
-  },
-  "titan": {
-    "text_premier": "amazon.titan-text-premier-v1:0",
-    "text_express": "amazon.titan-text-express-v1:0",
-    "embeddings": "amazon.titan-embed-text-v2:0"
-  }
-}
-```
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which model would you choose for complex multi-step reasoning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

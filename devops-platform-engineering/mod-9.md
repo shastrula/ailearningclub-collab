@@ -205,45 +205,6 @@ resource "aws_sns_topic_subscription" "alerts_email" {
 
 ---
 
-```hcl
-# CloudWatch Log Group
-resource "aws_cloudwatch_log_group" "app" {
-  name              = "/ecs/my-app"
-  retention_in_days = 7
-
-  tags = {
-    Name = "app-logs"
-  }
-}
-
-# CloudWatch Alarm
-resource "aws_cloudwatch_metric_alarm" "high_cpu" {
-  alarm_name          = "high-cpu-alarm"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = 2
-  metric_name         = "CPUUtilization"
-  namespace           = "AWS/EC2"
-  period              = 300
-  statistic           = "Average"
-  threshold           = 80
-  alarm_description   = "Alert when CPU exceeds 80%"
-  alarm_actions       = [aws_sns_topic.alerts.arn]
-}
-
-# SNS Topic for alerts
-resource "aws_sns_topic" "alerts" {
-  name = "devops-alerts"
-}
-
-resource "aws_sns_topic_subscription" "alerts_email" {
-  topic_arn = aws_sns_topic.alerts.arn
-  protocol  = "email"
-  endpoint  = "devops@example.com"
-}
-```
-
----
-
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What are the three pillars of observability?</p>
   <div class="space-y-2">
@@ -268,46 +229,7 @@ resource "aws_sns_topic_subscription" "alerts_email" {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```hcl
-# CloudWatch Log Group
-resource "aws_cloudwatch_log_group" "app" {
-  name              = "/ecs/my-app"
-  retention_in_days = 7
-
-  tags = {
-    Name = "app-logs"
-  }
-}
-
-# CloudWatch Alarm
-resource "aws_cloudwatch_metric_alarm" "high_cpu" {
-  alarm_name          = "high-cpu-alarm"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = 2
-  metric_name         = "CPUUtilization"
-  namespace           = "AWS/EC2"
-  period              = 300
-  statistic           = "Average"
-  threshold           = 80
-  alarm_description   = "Alert when CPU exceeds 80%"
-  alarm_actions       = [aws_sns_topic.alerts.arn]
-}
-
-# SNS Topic for alerts
-resource "aws_sns_topic" "alerts" {
-  name = "devops-alerts"
-}
-
-resource "aws_sns_topic_subscription" "alerts_email" {
-  topic_arn = aws_sns_topic.alerts.arn
-  protocol  = "email"
-  endpoint  = "devops@example.com"
-}
-```
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is AWS CloudWatch?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -331,46 +253,7 @@ resource "aws_sns_topic_subscription" "alerts_email" {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```hcl
-# CloudWatch Log Group
-resource "aws_cloudwatch_log_group" "app" {
-  name              = "/ecs/my-app"
-  retention_in_days = 7
-
-  tags = {
-    Name = "app-logs"
-  }
-}
-
-# CloudWatch Alarm
-resource "aws_cloudwatch_metric_alarm" "high_cpu" {
-  alarm_name          = "high-cpu-alarm"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = 2
-  metric_name         = "CPUUtilization"
-  namespace           = "AWS/EC2"
-  period              = 300
-  statistic           = "Average"
-  threshold           = 80
-  alarm_description   = "Alert when CPU exceeds 80%"
-  alarm_actions       = [aws_sns_topic.alerts.arn]
-}
-
-# SNS Topic for alerts
-resource "aws_sns_topic" "alerts" {
-  name = "devops-alerts"
-}
-
-resource "aws_sns_topic_subscription" "alerts_email" {
-  topic_arn = aws_sns_topic.alerts.arn
-  protocol  = "email"
-  endpoint  = "devops@example.com"
-}
-```
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is Prometheus used for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -393,45 +276,6 @@ resource "aws_sns_topic_subscription" "alerts_email" {
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-
-```hcl
-# CloudWatch Log Group
-resource "aws_cloudwatch_log_group" "app" {
-  name              = "/ecs/my-app"
-  retention_in_days = 7
-
-  tags = {
-    Name = "app-logs"
-  }
-}
-
-# CloudWatch Alarm
-resource "aws_cloudwatch_metric_alarm" "high_cpu" {
-  alarm_name          = "high-cpu-alarm"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = 2
-  metric_name         = "CPUUtilization"
-  namespace           = "AWS/EC2"
-  period              = 300
-  statistic           = "Average"
-  threshold           = 80
-  alarm_description   = "Alert when CPU exceeds 80%"
-  alarm_actions       = [aws_sns_topic.alerts.arn]
-}
-
-# SNS Topic for alerts
-resource "aws_sns_topic" "alerts" {
-  name = "devops-alerts"
-}
-
-resource "aws_sns_topic_subscription" "alerts_email" {
-  topic_arn = aws_sns_topic.alerts.arn
-  protocol  = "email"
-  endpoint  = "devops@example.com"
-}
-```
-
----
 
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is Grafana's primary function?</p>
@@ -457,46 +301,7 @@ resource "aws_sns_topic_subscription" "alerts_email" {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```hcl
-# CloudWatch Log Group
-resource "aws_cloudwatch_log_group" "app" {
-  name              = "/ecs/my-app"
-  retention_in_days = 7
-
-  tags = {
-    Name = "app-logs"
-  }
-}
-
-# CloudWatch Alarm
-resource "aws_cloudwatch_metric_alarm" "high_cpu" {
-  alarm_name          = "high-cpu-alarm"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = 2
-  metric_name         = "CPUUtilization"
-  namespace           = "AWS/EC2"
-  period              = 300
-  statistic           = "Average"
-  threshold           = 80
-  alarm_description   = "Alert when CPU exceeds 80%"
-  alarm_actions       = [aws_sns_topic.alerts.arn]
-}
-
-# SNS Topic for alerts
-resource "aws_sns_topic" "alerts" {
-  name = "devops-alerts"
-}
-
-resource "aws_sns_topic_subscription" "alerts_email" {
-  topic_arn = aws_sns_topic.alerts.arn
-  protocol  = "email"
-  endpoint  = "devops@example.com"
-}
-```
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is distributed tracing used for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

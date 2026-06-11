@@ -117,30 +117,7 @@ Immutable: test
 Safe list: [Item 0, Item 1, Item 2, Item 3, Item 4]
 ```
 
-Common patterns for ensuring thread safety in concurrent applications.
-
-```java title="ThreadSafetyPatterns.java"
-import java.util.concurrent.*;
-import java.util.*;
-
-public class ThreadSafetyPatterns {
-    // Pattern 1: Immutable objects
-    static class ImmutableData {
-        private final String value;
-        private final int number;
-        
-        public ImmutableData(String value, int number) {
-            this.value = value;
-            this.number = number;
-        }
-        
-        public String getValue() { return value; }
-        public int getNumber() { return number; }
-    }
-    
-    // Pattern 2: Thread-safe collections
-    static class SafeList {
-        private List<String>
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What method must be called to start a thread?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -164,30 +141,7 @@ public class ThreadSafetyPatterns {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Common patterns for ensuring thread safety in concurrent applications.
-
-```java title="ThreadSafetyPatterns.java"
-import java.util.concurrent.*;
-import java.util.*;
-
-public class ThreadSafetyPatterns {
-    // Pattern 1: Immutable objects
-    static class ImmutableData {
-        private final String value;
-        private final int number;
-        
-        public ImmutableData(String value, int number) {
-            this.value = value;
-            this.number = number;
-        }
-        
-        public String getValue() { return value; }
-        public int getNumber() { return number; }
-    }
-    
-    // Pattern 2: Thread-safe collections
-    static class SafeList {
-        private List<String>
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does the synchronized keyword prevent?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -211,30 +165,7 @@ public class ThreadSafetyPatterns {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Common patterns for ensuring thread safety in concurrent applications.
-
-```java title="ThreadSafetyPatterns.java"
-import java.util.concurrent.*;
-import java.util.*;
-
-public class ThreadSafetyPatterns {
-    // Pattern 1: Immutable objects
-    static class ImmutableData {
-        private final String value;
-        private final int number;
-        
-        public ImmutableData(String value, int number) {
-            this.value = value;
-            this.number = number;
-        }
-        
-        public String getValue() { return value; }
-        public int getNumber() { return number; }
-    }
-    
-    // Pattern 2: Thread-safe collections
-    static class SafeList {
-        private List<String>
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does the volatile keyword ensure?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -258,30 +189,7 @@ public class ThreadSafetyPatterns {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Common patterns for ensuring thread safety in concurrent applications.
-
-```java title="ThreadSafetyPatterns.java"
-import java.util.concurrent.*;
-import java.util.*;
-
-public class ThreadSafetyPatterns {
-    // Pattern 1: Immutable objects
-    static class ImmutableData {
-        private final String value;
-        private final int number;
-        
-        public ImmutableData(String value, int number) {
-            this.value = value;
-            this.number = number;
-        }
-        
-        public String getValue() { return value; }
-        public int getNumber() { return number; }
-    }
-    
-    // Pattern 2: Thread-safe collections
-    static class SafeList {
-        private List<String>
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ What does ExecutorService manage?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -305,30 +213,7 @@ public class ThreadSafetyPatterns {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Common patterns for ensuring thread safety in concurrent applications.
-
-```java title="ThreadSafetyPatterns.java"
-import java.util.concurrent.*;
-import java.util.*;
-
-public class ThreadSafetyPatterns {
-    // Pattern 1: Immutable objects
-    static class ImmutableData {
-        private final String value;
-        private final int number;
-        
-        public ImmutableData(String value, int number) {
-            this.value = value;
-            this.number = number;
-        }
-        
-        public String getValue() { return value; }
-        public int getNumber() { return number; }
-    }
-    
-    // Pattern 2: Thread-safe collections
-    static class SafeList {
-        private List<String>
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the main advantage of CompletableFuture?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

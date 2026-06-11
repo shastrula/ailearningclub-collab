@@ -92,35 +92,7 @@ plt.show()
 
 > **💡 Tip:** When working with high-dimensional data, visualizing joint and marginal distributions can help in understanding the underlying structure and relationships between variables.
 
-A marginal distribution is the probability distribution of a subset of random variables, obtained by summing or integrating out the other variables from the joint distribution. It provides insights into the individual behavior of a variable, irrespective of the others.
-
-```python title="example2.py"
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.stats import multivariate_normal
-
-# Define mean vector and covariance matrix
-mean = [0, 0]
-cov = [[1, 0.5], [0.5, 1]]
-
-# Create a multivariate normal distribution
-mv_normal = multivariate_normal(mean, cov)
-
-# Generate samples from the distribution
-samples = mv_normal.rvs(1000)
-
-# Calculate the marginal distribution for X
-marginal_x = np.histogram(samples[:, 0], bins=30, density=True)
-
-# Plot the marginal distribution
-plt.plot(marginal_x[1][:-1], marginal_x[0])
-plt.title('Marginal Distribution of X')
-plt.xlabel('X')
-plt.ylabel('Probability Density')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does a joint distribution represent?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -144,35 +116,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-A marginal distribution is the probability distribution of a subset of random variables, obtained by summing or integrating out the other variables from the joint distribution. It provides insights into the individual behavior of a variable, irrespective of the others.
-
-```python title="example2.py"
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.stats import multivariate_normal
-
-# Define mean vector and covariance matrix
-mean = [0, 0]
-cov = [[1, 0.5], [0.5, 1]]
-
-# Create a multivariate normal distribution
-mv_normal = multivariate_normal(mean, cov)
-
-# Generate samples from the distribution
-samples = mv_normal.rvs(1000)
-
-# Calculate the marginal distribution for X
-marginal_x = np.histogram(samples[:, 0], bins=30, density=True)
-
-# Plot the marginal distribution
-plt.plot(marginal_x[1][:-1], marginal_x[0])
-plt.title('Marginal Distribution of X')
-plt.xlabel('X')
-plt.ylabel('Probability Density')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How is a marginal distribution obtained from a joint distribution?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -78,28 +78,7 @@ print('Posterior Probability P(A|B):', posterior_A_given_B)
 
 > **💡 Tip:** When applying Bayes' Theorem, ensure that the prior probabilities and likelihoods are accurately defined to avoid incorrect posterior probabilities.
 
-Bayes' Theorem describes the probability of an event based on prior knowledge of conditions that might be related to the event. It is widely used in machine learning for updating probabilities as new evidence is gathered.
-
-```python title="example2.py"
-import numpy as np
-
-# Define prior probabilities
-prior_A = 0.5
-prior_B = 0.5
-
-# Define likelihoods
-likelihood_A_given_B = 0.8
-likelihood_B_given_A = 0.7
-
-# Calculate marginal likelihood
-marginal_likelihood = likelihood_A_given_B * prior_B + likelihood_B_given_A * prior_A
-
-# Calculate posterior probability using Bayes' Theorem
-posterior_A_given_B = (likelihood_A_given_B * prior_A) / marginal_likelihood
-print('Posterior Probability P(A|B):', posterior_A_given_B)
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the joint probability of two independent events A and B if P(A) = 0.3 and P(B) = 0.4?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -123,28 +102,7 @@ print('Posterior Probability P(A|B):', posterior_A_given_B)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Bayes' Theorem describes the probability of an event based on prior knowledge of conditions that might be related to the event. It is widely used in machine learning for updating probabilities as new evidence is gathered.
-
-```python title="example2.py"
-import numpy as np
-
-# Define prior probabilities
-prior_A = 0.5
-prior_B = 0.5
-
-# Define likelihoods
-likelihood_A_given_B = 0.8
-likelihood_B_given_A = 0.7
-
-# Calculate marginal likelihood
-marginal_likelihood = likelihood_A_given_B * prior_B + likelihood_B_given_A * prior_A
-
-# Calculate posterior probability using Bayes' Theorem
-posterior_A_given_B = (likelihood_A_given_B * prior_A) / marginal_likelihood
-print('Posterior Probability P(A|B):', posterior_A_given_B)
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ In Bayes' Theorem, what does the posterior probability represent?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

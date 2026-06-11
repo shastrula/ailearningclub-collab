@@ -79,29 +79,7 @@ for epoch in range(epochs):
 
 > **💡 Tip:** When fine-tuning Transformer models, ensure that the learning rate is appropriately set to avoid overfitting, especially when the pre-trained model is large.
 
-Training Transformers for time series forecasting involves careful consideration of the loss function and optimization strategy. Mean Squared Error (MSE) is commonly used as the loss function for regression tasks. Fine-tuning pre-trained Transformer models can significantly reduce training time and improve performance, especially when dealing with limited data.
-
-```python title="example2.py"
-import torch
-import torch.optim as optim
-
-# Assume model is defined as in example1.py
-model = TimeSeriesTransformer(input_dim=1, d_model=512, nhead=8, num_encoder_layers=3, num_decoder_layers=3)
-criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=0.001)
-
-# Training loop
-epochs = 10
-for epoch in range(epochs):
-    optimizer.zero_grad()
-    output = model(src, tgt)
-    loss = criterion(output, tgt[:, :output.size(1), :])
-    loss.backward()
-    optimizer.step()
-    print(f'Epoch {epoch+1}, Loss: {loss.item()}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary advantage of using Transformers for time series forecasting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -125,29 +103,7 @@ for epoch in range(epochs):
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Training Transformers for time series forecasting involves careful consideration of the loss function and optimization strategy. Mean Squared Error (MSE) is commonly used as the loss function for regression tasks. Fine-tuning pre-trained Transformer models can significantly reduce training time and improve performance, especially when dealing with limited data.
-
-```python title="example2.py"
-import torch
-import torch.optim as optim
-
-# Assume model is defined as in example1.py
-model = TimeSeriesTransformer(input_dim=1, d_model=512, nhead=8, num_encoder_layers=3, num_decoder_layers=3)
-criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=0.001)
-
-# Training loop
-epochs = 10
-for epoch in range(epochs):
-    optimizer.zero_grad()
-    output = model(src, tgt)
-    loss = criterion(output, tgt[:, :output.size(1), :])
-    loss.backward()
-    optimizer.step()
-    print(f'Epoch {epoch+1}, Loss: {loss.item()}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which loss function is commonly used for training Transformers in time series forecasting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

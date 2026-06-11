@@ -125,22 +125,7 @@ The model correctly identifies sentiment direction for 1-star and 5-star reviews
 
 > **💡 Tip:** This pattern — load a public dataset, apply a pre-trained model, extract insights — is the foundation of most real-world NLP projects. You rarely need to train from scratch.
 
-We'll load the Yelp review dataset, filter to real estate related businesses, and use a sentiment pipeline to analyse customer sentiment — then combine it with geographic data to see which neighbourhoods have the best-reviewed properties.
-
-```python title="full_pipeline.py"
-from datasets import load_dataset
-from transformers import pipeline
-import pandas as pd
-
-# 1. Load dataset (streaming — it's large)
-print('Loading dataset...')
-ds = load_dataset('yelp_review_full', streaming=True)
-
-# 2. Take a sample of 500 reviews
-samples = []
-for i, ex in enumerate(ds['train']):
-    samples.append({'text': ex['text'][:512], 'stars': ex['label'] + 1})
-    if i >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Why do 3-star reviews confuse sentiment models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

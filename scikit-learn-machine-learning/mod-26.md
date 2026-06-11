@@ -100,35 +100,7 @@ for feat1, feat2, corr in high_corr_pairs:
 
 > **💡 Tip:** Look for correlations > 0.9 (multicollinearity) or < -0.9. Remove one feature from highly correlated pairs to reduce redundancy.
 
-Correlation matrices and scatter plots reveal feature relationships. High correlation between features suggests multicollinearity; correlation with target suggests predictive power.
-
-```python title="example2.py"
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Correlation matrix
-corr_matrix = df.corr()
-
-# Heatmap
-plt.figure(figsize=(10, 8))
-sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', center=0)
-plt.title('Feature Correlation Matrix')
-plt.show()
-
-# Scatter plot: feature vs target
-plt.figure(figsize=(10, 6))
-plt.scatter(df['feature1'], df['target'], alpha=0.5)
-plt.xlabel('feature1')
-plt.ylabel('target')
-plt.title('Feature vs Target Relationship')
-plt.show()
-
-# Identify highly correlated features (multicollinearity)
-high_corr_pairs = []
-for i in range(len(corr_matrix.columns)):
-    for j in range(i+1, len(corr_matrix.columns)):
-        if abs(corr_matrix.iloc[i, j]) >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of EDA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -152,35 +124,7 @@ for i in range(len(corr_matrix.columns)):
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Correlation matrices and scatter plots reveal feature relationships. High correlation between features suggests multicollinearity; correlation with target suggests predictive power.
-
-```python title="example2.py"
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Correlation matrix
-corr_matrix = df.corr()
-
-# Heatmap
-plt.figure(figsize=(10, 8))
-sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', center=0)
-plt.title('Feature Correlation Matrix')
-plt.show()
-
-# Scatter plot: feature vs target
-plt.figure(figsize=(10, 6))
-plt.scatter(df['feature1'], df['target'], alpha=0.5)
-plt.xlabel('feature1')
-plt.ylabel('target')
-plt.title('Feature vs Target Relationship')
-plt.show()
-
-# Identify highly correlated features (multicollinearity)
-high_corr_pairs = []
-for i in range(len(corr_matrix.columns)):
-    for j in range(i+1, len(corr_matrix.columns)):
-        if abs(corr_matrix.iloc[i, j]) >
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What correlation threshold indicates multicollinearity?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

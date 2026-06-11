@@ -93,37 +93,6 @@ public enum OrderStatus {
 }
 ```
 
-Enums are excellent for implementing state machines. Each enum constant represents a state, and methods define transitions.
-
-```java title="OrderStatus.java"
-public enum OrderStatus {
-    PENDING("Order received"),
-    PROCESSING("Processing order"),
-    SHIPPED("Order shipped"),
-    DELIVERED("Order delivered"),
-    CANCELLED("Order cancelled");
-    
-    private String description;
-    
-    OrderStatus(String description) {
-        this.description = description;
-    }
-    
-    public OrderStatus nextStatus() {
-        switch(this) {
-            case PENDING: return PROCESSING;
-            case PROCESSING: return SHIPPED;
-            case SHIPPED: return DELIVERED;
-            default: return this;
-        }
-    }
-    
-    public String getDescription() {
-        return description;
-    }
-}
-```
-
 <div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the output of the following code?
 
@@ -151,38 +120,7 @@ System.out.println(day.ordinal());</p>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Enums are excellent for implementing state machines. Each enum constant represents a state, and methods define transitions.
-
-```java title="OrderStatus.java"
-public enum OrderStatus {
-    PENDING("Order received"),
-    PROCESSING("Processing order"),
-    SHIPPED("Order shipped"),
-    DELIVERED("Order delivered"),
-    CANCELLED("Order cancelled");
-    
-    private String description;
-    
-    OrderStatus(String description) {
-        this.description = description;
-    }
-    
-    public OrderStatus nextStatus() {
-        switch(this) {
-            case PENDING: return PROCESSING;
-            case PROCESSING: return SHIPPED;
-            case SHIPPED: return DELIVERED;
-            default: return this;
-        }
-    }
-    
-    public String getDescription() {
-        return description;
-    }
-}
-```
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which collection is optimized for storing enum constants?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -206,38 +144,7 @@ public enum OrderStatus {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Enums are excellent for implementing state machines. Each enum constant represents a state, and methods define transitions.
-
-```java title="OrderStatus.java"
-public enum OrderStatus {
-    PENDING("Order received"),
-    PROCESSING("Processing order"),
-    SHIPPED("Order shipped"),
-    DELIVERED("Order delivered"),
-    CANCELLED("Order cancelled");
-    
-    private String description;
-    
-    OrderStatus(String description) {
-        this.description = description;
-    }
-    
-    public OrderStatus nextStatus() {
-        switch(this) {
-            case PENDING: return PROCESSING;
-            case PROCESSING: return SHIPPED;
-            case SHIPPED: return DELIVERED;
-            default: return this;
-        }
-    }
-    
-    public String getDescription() {
-        return description;
-    }
-}
-```
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Can an enum have a constructor?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -260,37 +167,6 @@ public enum OrderStatus {
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-
-Enums are excellent for implementing state machines. Each enum constant represents a state, and methods define transitions.
-
-```java title="OrderStatus.java"
-public enum OrderStatus {
-    PENDING("Order received"),
-    PROCESSING("Processing order"),
-    SHIPPED("Order shipped"),
-    DELIVERED("Order delivered"),
-    CANCELLED("Order cancelled");
-    
-    private String description;
-    
-    OrderStatus(String description) {
-        this.description = description;
-    }
-    
-    public OrderStatus nextStatus() {
-        switch(this) {
-            case PENDING: return PROCESSING;
-            case PROCESSING: return SHIPPED;
-            case SHIPPED: return DELIVERED;
-            default: return this;
-        }
-    }
-    
-    public String getDescription() {
-        return description;
-    }
-}
-```
 
 <div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does the values() method return for an enum?</p>
@@ -316,38 +192,7 @@ public enum OrderStatus {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Enums are excellent for implementing state machines. Each enum constant represents a state, and methods define transitions.
-
-```java title="OrderStatus.java"
-public enum OrderStatus {
-    PENDING("Order received"),
-    PROCESSING("Processing order"),
-    SHIPPED("Order shipped"),
-    DELIVERED("Order delivered"),
-    CANCELLED("Order cancelled");
-    
-    private String description;
-    
-    OrderStatus(String description) {
-        this.description = description;
-    }
-    
-    public OrderStatus nextStatus() {
-        switch(this) {
-            case PENDING: return PROCESSING;
-            case PROCESSING: return SHIPPED;
-            case SHIPPED: return DELIVERED;
-            default: return this;
-        }
-    }
-    
-    public String getDescription() {
-        return description;
-    }
-}
-```
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which pattern uses enums to represent different states and transitions?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

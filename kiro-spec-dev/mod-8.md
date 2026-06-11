@@ -64,8 +64,6 @@ Learning from others' experiences:
 
 Things that apply to every feature — error handling patterns, logging conventions, security rules — belong in steering files, not repeated in every spec. Keep specs focused on the specific feature; let steering handle the universal rules.
 
-Things that apply to every feature — error handling patterns, logging conventions, security rules — belong in steering files, not repeated in every spec. Keep specs focused on the specific feature; let steering handle the universal rules.
-
 <div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the right granularity for a Kiro spec?</p>
   <div class="space-y-2">

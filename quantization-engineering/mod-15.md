@@ -81,24 +81,7 @@ print(f'Quantized model size: {sum(p.numel() for p in quantized_model.parameters
 
 > **💡 Tip:** When applying GPTQ quantization, ensure that the gradient penalty is properly tuned to balance between quantization error and model accuracy.
 
-GPTQ (Gradient Penalty for Quantization) is a post-training quantization technique that minimizes the performance drop by applying a gradient penalty during the quantization process. This method is particularly effective for transformer-based models, ensuring that the quantized model retains most of its original accuracy.
-
-```python title="gptq_quantization.py"
-import torch
-from gptq import quantize
-
-# Load a pre-trained BERT model
-model = torch.hub.load('huggingface/transformers', 'BERT', pretrained=True)
-
-# Apply GPTQ quantization
-quantized_model = quantize(model, bits=4)
-
-# Print model sizes for comparison
-print(f'Original model size: {sum(p.numel() for p in model.parameters())}')
-print(f'Quantized model size: {sum(p.numel() for p in quantized_model.parameters())}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of GGUF quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -122,24 +105,7 @@ print(f'Quantized model size: {sum(p.numel() for p in quantized_model.parameters
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-GPTQ (Gradient Penalty for Quantization) is a post-training quantization technique that minimizes the performance drop by applying a gradient penalty during the quantization process. This method is particularly effective for transformer-based models, ensuring that the quantized model retains most of its original accuracy.
-
-```python title="gptq_quantization.py"
-import torch
-from gptq import quantize
-
-# Load a pre-trained BERT model
-model = torch.hub.load('huggingface/transformers', 'BERT', pretrained=True)
-
-# Apply GPTQ quantization
-quantized_model = quantize(model, bits=4)
-
-# Print model sizes for comparison
-print(f'Original model size: {sum(p.numel() for p in model.parameters())}')
-print(f'Quantized model size: {sum(p.numel() for p in quantized_model.parameters())}')
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the key feature of GPTQ quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

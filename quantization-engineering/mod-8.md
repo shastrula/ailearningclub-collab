@@ -87,30 +87,7 @@ print(outputs)
 
 > **💡 Tip:** Ensure that the device used for inference matches the device on which the model was quantized. Mismatches can lead to errors or suboptimal performance.
 
-Once the model is quantized using GGUF, it can be loaded and used for inference. This process involves loading the quantized model weights and performing inference with the same tokenizer used during quantization. The quantized model will run faster and consume less memory compared to the original model.
-
-```python title="example2.py"
-import torch
-from transformers import AutoTokenizer
-
-# Load the tokenizer
-model_name = 'bert-base-uncased'
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-# Load the quantized model
-gguf_model = torch.quantization.QuantizedDynamicModel(torch.device('cpu'),
-                                                       torch.jit.script(AutoModel.from_pretrained(model_name)),
-                                                       'gguf_model.pth')
-
-# Prepare input
-inputs = tokenizer('Hello, world!', return_tensors='pt')
-
-# Perform inference
-outputs = gguf_model(**inputs)
-print(outputs)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary benefit of using GGUF for model quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -134,30 +111,7 @@ print(outputs)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Once the model is quantized using GGUF, it can be loaded and used for inference. This process involves loading the quantized model weights and performing inference with the same tokenizer used during quantization. The quantized model will run faster and consume less memory compared to the original model.
-
-```python title="example2.py"
-import torch
-from transformers import AutoTokenizer
-
-# Load the tokenizer
-model_name = 'bert-base-uncased'
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-# Load the quantized model
-gguf_model = torch.quantization.QuantizedDynamicModel(torch.device('cpu'),
-                                                       torch.jit.script(AutoModel.from_pretrained(model_name)),
-                                                       'gguf_model.pth')
-
-# Prepare input
-inputs = tokenizer('Hello, world!', return_tensors='pt')
-
-# Perform inference
-outputs = gguf_model(**inputs)
-print(outputs)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which function is used to convert a PyTorch model to GGUF format?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

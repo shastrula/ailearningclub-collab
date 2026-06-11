@@ -86,29 +86,7 @@ cv2.destroyAllWindows()
 
 > **💡 Tip:** When deploying computer vision models on edge devices, consider the computational constraints and optimize your models for lower power consumption and faster inference times.
 
-The integration of computer vision with Internet of Things (IoT) and edge computing is a significant trend. This allows for real-time processing and decision-making at the edge, reducing latency and bandwidth usage. Technologies like TinyML are enabling the deployment of machine learning models on microcontrollers, making vision-enabled IoT devices more feasible.
-
-```python title="example2.py"
-import cv2
-
-# Initialize the camera
-cap = cv2.VideoCapture(0)
-
-while True:
-    ret, frame = cap.read()
-    if not ret:
-        break
-    # Display the resulting frame
-    cv2.imshow('Frame', frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-# Release the capture
-cap.release()
-cv2.destroyAllWindows()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which neural network architecture is known for its compound scaling method?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -132,29 +110,7 @@ cv2.destroyAllWindows()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-The integration of computer vision with Internet of Things (IoT) and edge computing is a significant trend. This allows for real-time processing and decision-making at the edge, reducing latency and bandwidth usage. Technologies like TinyML are enabling the deployment of machine learning models on microcontrollers, making vision-enabled IoT devices more feasible.
-
-```python title="example2.py"
-import cv2
-
-# Initialize the camera
-cap = cv2.VideoCapture(0)
-
-while True:
-    ret, frame = cap.read()
-    if not ret:
-        break
-    # Display the resulting frame
-    cv2.imshow('Frame', frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-# Release the capture
-cap.release()
-cv2.destroyAllWindows()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What technology enables machine learning models to be deployed on microcontrollers?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

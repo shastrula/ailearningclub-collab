@@ -82,25 +82,7 @@ print(data.head())
 
 > **💡 Tip:** Always make a backup of your original data before performing any cleaning operations to avoid accidental data loss.
 
-Data cleaning and preprocessing are critical steps to ensure the accuracy and reliability of your analysis. This involves handling missing values, removing duplicates, and transforming data into a suitable format. Clean data is essential for accurate and meaningful insights.
-
-```python title="example2.py"
-import pandas as pd
-
-# Load data from a CSV file
-data = pd.read_csv('data.csv')
-
-# Handle missing values by filling them with the mean of the column
-data['Age'].fillna(data['Age'].mean(), inplace=True)
-
-# Remove duplicate rows
-data.drop_duplicates(inplace=True)
-
-# Display the cleaned data
-print(data.head())
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of loading and exploring data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,25 +106,7 @@ print(data.head())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Data cleaning and preprocessing are critical steps to ensure the accuracy and reliability of your analysis. This involves handling missing values, removing duplicates, and transforming data into a suitable format. Clean data is essential for accurate and meaningful insights.
-
-```python title="example2.py"
-import pandas as pd
-
-# Load data from a CSV file
-data = pd.read_csv('data.csv')
-
-# Handle missing values by filling them with the mean of the column
-data['Age'].fillna(data['Age'].mean(), inplace=True)
-
-# Remove duplicate rows
-data.drop_duplicates(inplace=True)
-
-# Display the cleaned data
-print(data.head())
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Which method is used to handle missing values in a Pandas DataFrame?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

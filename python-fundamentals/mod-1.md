@@ -65,12 +65,7 @@ Recognizing these patterns helps you avoid repeating them.
 
 > **💡 Tip:** In production AI systems, you often use Python for training and prototyping, then convert to C++/Java for deployment if performance is critical.
 
-✗ Real-time systems requiring extreme performance (use C/C++)
-✗ Mobile apps (use Swift for iOS, Kotlin for Android)
-✗ Systems programming (use C/Rust)
-✗ Games (use C# with Unity or C++ with Unreal)
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Why is Python good for AI despite being slow?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

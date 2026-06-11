@@ -83,26 +83,7 @@ check_system_resources()
 
 > **💡 Tip:** Ensure that your enterprise network can handle the bandwidth requirements for data transfer when deploying LLMs, especially if you are using distributed training or inference setups.
 
-Deploying LLMs in an enterprise requires significant hardware resources. GPUs are essential for accelerating model training and inference. Enterprises should consider using multi-GPU setups and high-memory servers to handle large models efficiently. Additionally, robust network infrastructure is necessary to support data transfer and model serving.
-
-```python title="example2.py"
-import psutil
-
-# Function to check system resources
-def check_system_resources():
-    cpu_percent = psutil.cpu_percent(interval=1)
-    memory = psutil.virtual_memory()
-    disk = psutil.disk_usage('/')
-    
-    print(f'CPU Usage: {cpu_percent}% ')
-    print(f'Memory Usage: {memory.percent}% ')
-    print(f'Disk Usage: {disk.percent}% ')
-
-# Call the function
-check_system_resources()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary benefit of using Ollama for local LLM deployment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -126,26 +107,7 @@ check_system_resources()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Deploying LLMs in an enterprise requires significant hardware resources. GPUs are essential for accelerating model training and inference. Enterprises should consider using multi-GPU setups and high-memory servers to handle large models efficiently. Additionally, robust network infrastructure is necessary to support data transfer and model serving.
-
-```python title="example2.py"
-import psutil
-
-# Function to check system resources
-def check_system_resources():
-    cpu_percent = psutil.cpu_percent(interval=1)
-    memory = psutil.virtual_memory()
-    disk = psutil.disk_usage('/')
-    
-    print(f'CPU Usage: {cpu_percent}% ')
-    print(f'Memory Usage: {memory.percent}% ')
-    print(f'Disk Usage: {disk.percent}% ')
-
-# Call the function
-check_system_resources()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which hardware component is crucial for accelerating LLM inference in an enterprise setting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

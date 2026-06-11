@@ -76,19 +76,7 @@ Hello, Colab!
 
 > **💡 Tip:** Always ensure your cells are running in the correct order, especially when dependencies exist between them. Misordered cells can lead to errors.
 
-Cells in Google Colab can contain either code or markdown. To run a cell, click the play button to the left of the cell or use the keyboard shortcut Shift + Enter. This will execute the cell and move the cursor to the next cell. If you want the cursor to stay in the same cell after execution, use Ctrl + Enter.
-
-```python title="example2.py"
-# This code demonstrates running cells in Google Colab
-print('Hello, Colab!')  # This will print the text to the output
-# Click the play button or use Shift + Enter to run this cell
-```
-
-```
-Hello, Colab!
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ How do you save a notebook to Google Drive?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -112,19 +100,7 @@ Hello, Colab!
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Cells in Google Colab can contain either code or markdown. To run a cell, click the play button to the left of the cell or use the keyboard shortcut Shift + Enter. This will execute the cell and move the cursor to the next cell. If you want the cursor to stay in the same cell after execution, use Ctrl + Enter.
-
-```python title="example2.py"
-# This code demonstrates running cells in Google Colab
-print('Hello, Colab!')  # This will print the text to the output
-# Click the play button or use Shift + Enter to run this cell
-```
-
-```
-Hello, Colab!
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What keyboard shortcut moves the cursor to the next cell after running a cell?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

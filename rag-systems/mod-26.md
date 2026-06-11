@@ -104,55 +104,6 @@ context_docs = retriever.retrieve(query, k_final=3)
 print(f"Retrieved {len(context_docs)} documents for generation.")
 ```
 
-Production RAG systems use multi-stage pipelines: (1) fast initial retrieval (dense/sparse), (2) candidate reranking (cross-encoder), (3) context expansion (adding surrounding chunks), (4) LLM generation.
-
-```python title="example3.py"
-from langchain.chains import RetrievalQA
-from langchain.llms import HuggingFacePipeline
-from langchain.retrievers import BM25Retriever, EnsembleRetriever
-from langchain.vectorstores import FAISS
-from langchain.embeddings import HuggingFaceEmbeddings
-from sentence_transformers import CrossEncoder
-
-# Setup retrievers
-embeddings = HuggingFaceEmbeddings(model_name="paraphrase-MiniLM-L6-v2")
-documents = ["Machine learning...", "Deep learning..."]  # Your docs
-dense_retriever = FAISS.from_texts(documents, embeddings).as_retriever(k=10)
-sparse_retriever = BM25Retriever.from_texts(documents)
-hybrid_retriever = EnsembleRetriever(
-    retrievers=[dense_retriever, sparse_retriever],
-    weights=[0.6, 0.4]
-)
-
-# Multi-stage pipeline
-class MultiStageRetriever:
-    def __init__(self, hybrid_retriever, cross_encoder_model):
-        self.hybrid = hybrid_retriever
-        self.cross_encoder = CrossEncoder(cross_encoder_model)
-    
-    def retrieve(self, query, k_final=3):
-        # Stage 1: Hybrid retrieval (top-10)
-        candidates = self.hybrid.get_relevant_documents(query)[:10]
-        
-        # Stage 2: Cross-encoder reranking
-        pairs = [[query, doc.page_content] for doc in candidates]
-        scores = self.cross_encoder.predict(pairs)
-        reranked = sorted(zip(scores, candidates), key=lambda x: x[0], reverse=True)
-        
-        # Return top-k
-        return [doc for _, doc in reranked[:k_final]]
-
-retriever = MultiStageRetriever(
-    hybrid_retriever,
-    'cross-encoder/ms-marco-MiniLM-L-6-v2'
-)
-
-# Use in RAG chain
-query = "What is deep learning?"
-context_docs = retriever.retrieve(query, k_final=3)
-print(f"Retrieved {len(context_docs)} documents for generation.")
-```
-
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the advantage of hybrid search over dense-only retrieval?</p>
   <div class="space-y-2">
@@ -177,56 +128,7 @@ print(f"Retrieved {len(context_docs)} documents for generation.")
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Production RAG systems use multi-stage pipelines: (1) fast initial retrieval (dense/sparse), (2) candidate reranking (cross-encoder), (3) context expansion (adding surrounding chunks), (4) LLM generation.
-
-```python title="example3.py"
-from langchain.chains import RetrievalQA
-from langchain.llms import HuggingFacePipeline
-from langchain.retrievers import BM25Retriever, EnsembleRetriever
-from langchain.vectorstores import FAISS
-from langchain.embeddings import HuggingFaceEmbeddings
-from sentence_transformers import CrossEncoder
-
-# Setup retrievers
-embeddings = HuggingFaceEmbeddings(model_name="paraphrase-MiniLM-L6-v2")
-documents = ["Machine learning...", "Deep learning..."]  # Your docs
-dense_retriever = FAISS.from_texts(documents, embeddings).as_retriever(k=10)
-sparse_retriever = BM25Retriever.from_texts(documents)
-hybrid_retriever = EnsembleRetriever(
-    retrievers=[dense_retriever, sparse_retriever],
-    weights=[0.6, 0.4]
-)
-
-# Multi-stage pipeline
-class MultiStageRetriever:
-    def __init__(self, hybrid_retriever, cross_encoder_model):
-        self.hybrid = hybrid_retriever
-        self.cross_encoder = CrossEncoder(cross_encoder_model)
-    
-    def retrieve(self, query, k_final=3):
-        # Stage 1: Hybrid retrieval (top-10)
-        candidates = self.hybrid.get_relevant_documents(query)[:10]
-        
-        # Stage 2: Cross-encoder reranking
-        pairs = [[query, doc.page_content] for doc in candidates]
-        scores = self.cross_encoder.predict(pairs)
-        reranked = sorted(zip(scores, candidates), key=lambda x: x[0], reverse=True)
-        
-        # Return top-k
-        return [doc for _, doc in reranked[:k_final]]
-
-retriever = MultiStageRetriever(
-    hybrid_retriever,
-    'cross-encoder/ms-marco-MiniLM-L-6-v2'
-)
-
-# Use in RAG chain
-query = "What is deep learning?"
-context_docs = retriever.retrieve(query, k_final=3)
-print(f"Retrieved {len(context_docs)} documents for generation.")
-```
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ When should cross-encoder reranking be used?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

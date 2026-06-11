@@ -90,33 +90,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 > **💡 Tip:** When applying GPTQ, ensure that the gradient penalty is tuned correctly to avoid significant performance degradation. Experiment with different penalty values to find the optimal balance between model size and accuracy.
 
-GPTQ is a quantization technique that applies gradient penalty to ensure the quantized model maintains performance close to the original model. This method is particularly effective for large language models where precision is critical. GPTQ balances the trade-off between model size and performance, making it suitable for deployment on edge devices.
-
-```python title="example2.py"
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from quantize import quantize_gptq  # Hypothetical GPTQ quantization function
-
-# Load a pre-trained model and tokenizer
-model_name = 'EleutherAI/gpt-neo-125M'
-model = AutoModelForCausalLM.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-# Apply GPTQ quantization
-quantized_model = quantize_gptq(model)
-
-# Save the quantized model
-quantized_model.save_pretrained('gptq_model')
-
-# Load and use the quantized model
-loaded_model = AutoModelForCausalLM.from_pretrained('gptq_model')
-input_text = 'Hello, how are you?'
-input_ids = tokenizer(input_text, return_tensors='pt').input_ids
-output = loaded_model.generate(input_ids, max_length=50)
-print(tokenizer.decode(output[0], skip_special_tokens=True))
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of GGUF in quantization engineering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -140,33 +114,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-GPTQ is a quantization technique that applies gradient penalty to ensure the quantized model maintains performance close to the original model. This method is particularly effective for large language models where precision is critical. GPTQ balances the trade-off between model size and performance, making it suitable for deployment on edge devices.
-
-```python title="example2.py"
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from quantize import quantize_gptq  # Hypothetical GPTQ quantization function
-
-# Load a pre-trained model and tokenizer
-model_name = 'EleutherAI/gpt-neo-125M'
-model = AutoModelForCausalLM.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-# Apply GPTQ quantization
-quantized_model = quantize_gptq(model)
-
-# Save the quantized model
-quantized_model.save_pretrained('gptq_model')
-
-# Load and use the quantized model
-loaded_model = AutoModelForCausalLM.from_pretrained('gptq_model')
-input_text = 'Hello, how are you?'
-input_ids = tokenizer(input_text, return_tensors='pt').input_ids
-output = loaded_model.generate(input_ids, max_length=50)
-print(tokenizer.decode(output[0], skip_special_tokens=True))
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does GPTQ stand for and what is its main goal?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -82,25 +82,7 @@ print(answer)
 
 > **💡 Tip:** When implementing Chain-of-Thought, ensure that your prompts are clear and explicitly guide the model through each step of the reasoning process. This will help the model generate more accurate and logical responses.
 
-To implement Chain-of-Thought in Python, you need to create a function that constructs a CoT prompt and uses a language model to generate a response. The function should take a question as input, format it into a CoT prompt, and then use the model to generate an answer. This approach helps ensure that the model provides a step-by-step reasoning process in its response.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Load a pre-trained language model
-model = pipeline('text-generation', model='distilgpt2')
-
-def cot_prompt(question):
-    prompt = f"Let's think step by step: {question} What is the answer?"
-    return model(prompt, max_length=50, num_return_sequences=1)[0]['generated_text']
-
-# Example usage
-question = "What is 2 + 2?"
-answer = cot_prompt(question)
-print(answer)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of Chain-of-Thought prompting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,25 +106,7 @@ print(answer)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-To implement Chain-of-Thought in Python, you need to create a function that constructs a CoT prompt and uses a language model to generate a response. The function should take a question as input, format it into a CoT prompt, and then use the model to generate an answer. This approach helps ensure that the model provides a step-by-step reasoning process in its response.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Load a pre-trained language model
-model = pipeline('text-generation', model='distilgpt2')
-
-def cot_prompt(question):
-    prompt = f"Let's think step by step: {question} What is the answer?"
-    return model(prompt, max_length=50, num_return_sequences=1)[0]['generated_text']
-
-# Example usage
-question = "What is 2 + 2?"
-answer = cot_prompt(question)
-print(answer)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which Python library is used in the example to generate text using a language model?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

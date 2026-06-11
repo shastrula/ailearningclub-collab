@@ -81,24 +81,7 @@ plt.show()
 
 > **💡 Tip:** When creating scatter plots with Seaborn, consider using the `hue` parameter to color-code points based on a categorical variable. This can reveal hidden patterns or relationships within your data.
 
-Scatter plots are essential for visualizing the relationship between two variables. Seaborn's `scatterplot` function enables the creation of scatter plots with ease, allowing for the customization of markers, colors, and sizes to enhance the interpretability of the data.
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Load an example dataset
-tips = sns.load_dataset('tips')
-
-# Create a scatter plot
-sns.scatterplot(x='total_bill', y='tip', data=tips, hue='size', size='size')
-plt.title('Total Bill vs Tip')
-plt.xlabel('Total Bill')
-plt.ylabel('Tip')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which Seaborn function is used to create histograms?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -122,24 +105,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Scatter plots are essential for visualizing the relationship between two variables. Seaborn's `scatterplot` function enables the creation of scatter plots with ease, allowing for the customization of markers, colors, and sizes to enhance the interpretability of the data.
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Load an example dataset
-tips = sns.load_dataset('tips')
-
-# Create a scatter plot
-sns.scatterplot(x='total_bill', y='tip', data=tips, hue='size', size='size')
-plt.title('Total Bill vs Tip')
-plt.xlabel('Total Bill')
-plt.ylabel('Tip')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What parameter in Seaborn's scatterplot function can be used to color-code points based on a categorical variable?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

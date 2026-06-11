@@ -80,23 +80,7 @@ print(df)
 
 > **💡 Tip:** When creating lag and rolling window features, ensure that the time series data is stationary or apply differencing to make it stationary. Non-stationary data can lead to misleading features and poor model performance.
 
-Rolling window statistics involve calculating summary statistics (such as mean, sum, max, min) over a sliding window of a specified size. These features can help capture trends and seasonality in the data, providing additional context for the forecasting models. Rolling window features are particularly useful for highlighting short-term patterns and anomalies.
-
-```python title="example2.py"
-import pandas as pd
-
-# Sample time series data
-data = {'value': [10, 15, 20, 25, 30, 35, 40, 45, 50, 55]}
-df = pd.DataFrame(data)
-
-# Creating rolling window features
-df['rolling_mean'] = df['value'].rolling(window=3).mean()
-df['rolling_sum'] = df['value'].rolling(window=3).sum()
-
-print(df)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of creating lag features in time series data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,23 +104,7 @@ print(df)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Rolling window statistics involve calculating summary statistics (such as mean, sum, max, min) over a sliding window of a specified size. These features can help capture trends and seasonality in the data, providing additional context for the forecasting models. Rolling window features are particularly useful for highlighting short-term patterns and anomalies.
-
-```python title="example2.py"
-import pandas as pd
-
-# Sample time series data
-data = {'value': [10, 15, 20, 25, 30, 35, 40, 45, 50, 55]}
-df = pd.DataFrame(data)
-
-# Creating rolling window features
-df['rolling_mean'] = df['value'].rolling(window=3).mean()
-df['rolling_sum'] = df['value'].rolling(window=3).sum()
-
-print(df)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which rolling window statistic is useful for highlighting short-term trends in time series data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

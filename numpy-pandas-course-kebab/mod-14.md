@@ -75,25 +75,7 @@ plt.show()
 
 > **💡 Tip:** When creating pair plots with Seaborn, ensure that the 'hue' parameter is set to a categorical variable to differentiate between groups effectively.
 
-Seaborn is a statistical data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. Advanced visualizations include heatmaps, pair plots, and distribution plots, which are essential for exploratory data analysis (EDA).
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Sample data
-data = sns.load_dataset('iris')
-
-# Pair plot
-sns.pairplot(data, hue='species')
-
-# Customizing the plot
-plt.suptitle('Pair Plot of Iris Dataset', y=1.02)
-
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What function from Matplotlib is used to add a title to a plot?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,25 +99,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Seaborn is a statistical data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. Advanced visualizations include heatmaps, pair plots, and distribution plots, which are essential for exploratory data analysis (EDA).
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Sample data
-data = sns.load_dataset('iris')
-
-# Pair plot
-sns.pairplot(data, hue='species')
-
-# Customizing the plot
-plt.suptitle('Pair Plot of Iris Dataset', y=1.02)
-
-plt.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which Seaborn function is used to create a pair plot?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -84,27 +84,7 @@ print(f'GPU Memory Free: {gpu[0].memoryFree} MB')
 
 > **💡 Tip:** Ensure that your hardware setup includes redundant components to avoid single points of failure, which can disrupt model training and inference processes.
 
-Scaling LLMs in enterprise environments demands robust hardware infrastructure. GPUs are essential for parallel processing, while high-bandwidth memory ensures efficient data handling. Enterprises must also consider network infrastructure to support distributed computing environments, enabling seamless scaling across multiple servers.
-
-```python title="example2.py"
-import psutil
-
-# Check available memory
-memory = psutil.virtual_memory()
-
-print(f'Total Memory: {memory.total / (1024 ** 3):.2f} GB')
-print(f'Available Memory: {memory.available / (1024 ** 3):.2f} GB')
-
-# Check GPU availability
-import GPUtil
-gpu = GPUtil.getFirstAvailable()
-
-print(f'GPU Name: {gpu[0].name}')
-print(f'GPU Memory Total: {gpu[0].memoryTotal} MB')
-print(f'GPU Memory Free: {gpu[0].memoryFree} MB')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which tool provides a streamlined interface for managing and deploying LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -128,27 +108,7 @@ print(f'GPU Memory Free: {gpu[0].memoryFree} MB')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Scaling LLMs in enterprise environments demands robust hardware infrastructure. GPUs are essential for parallel processing, while high-bandwidth memory ensures efficient data handling. Enterprises must also consider network infrastructure to support distributed computing environments, enabling seamless scaling across multiple servers.
-
-```python title="example2.py"
-import psutil
-
-# Check available memory
-memory = psutil.virtual_memory()
-
-print(f'Total Memory: {memory.total / (1024 ** 3):.2f} GB')
-print(f'Available Memory: {memory.available / (1024 ** 3):.2f} GB')
-
-# Check GPU availability
-import GPUtil
-gpu = GPUtil.getFirstAvailable()
-
-print(f'GPU Name: {gpu[0].name}')
-print(f'GPU Memory Total: {gpu[0].memoryTotal} MB')
-print(f'GPU Memory Free: {gpu[0].memoryFree} MB')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is essential for parallel processing when scaling LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

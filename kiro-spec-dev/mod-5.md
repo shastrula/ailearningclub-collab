@@ -80,24 +80,6 @@ action:
     endpoints, request shapes, or response formats.
 ```
 
-- Auto-generate tests when source files change
-- Update API documentation when route files are modified
-- Run a linter prompt when a PR is opened
-- Sync design.md when the database schema changes
-- Notify in chat when a task is marked complete
-
-```yaml title=".kiro/hooks/sync-docs.yaml"
-name: Sync API docs on route change
-trigger:
-  type: file_change
-  glob: "src/routes/**/*.ts"
-action:
-  prompt: |
-    The file {{changed_file} was modified.
-    Update docs/api.md to reflect any new or changed
-    endpoints, request shapes, or response formats.
-```
-
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a Kiro hook?</p>
   <div class="space-y-2">

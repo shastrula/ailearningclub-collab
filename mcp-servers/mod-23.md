@@ -78,28 +78,7 @@ asyncio.run(main())
 
 > **💡 Tip:** When implementing asynchronous operations, ensure that all I/O-bound tasks are offloaded to async functions to prevent blocking the event loop.
 
-Real-time processing and asynchronous communication are essential for maintaining responsiveness and efficiency in MCP server integrations. Utilizing Python's asyncio library allows for non-blocking operations, enabling the server to handle multiple tasks concurrently without waiting for each to complete.
-
-```python title="example2.py"
-import asyncio
-
-async def fetch_data(url):
-    """Simulates fetching data from a URL asynchronously"""
-    print(f'Fetching data from {url}')
-    await asyncio.sleep(2)  # Simulate network delay
-    return f'Data from {url}'
-
-async def main():
-    tasks = [fetch_data('http://example.com') for _ in range(3)]
-    results = await asyncio.gather(*tasks)
-    for result in results:
-        print(result)
-
-# Run the main function
-asyncio.run(main())
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary benefit of compressing data in MCP server integrations?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -123,28 +102,7 @@ asyncio.run(main())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Real-time processing and asynchronous communication are essential for maintaining responsiveness and efficiency in MCP server integrations. Utilizing Python's asyncio library allows for non-blocking operations, enabling the server to handle multiple tasks concurrently without waiting for each to complete.
-
-```python title="example2.py"
-import asyncio
-
-async def fetch_data(url):
-    """Simulates fetching data from a URL asynchronously"""
-    print(f'Fetching data from {url}')
-    await asyncio.sleep(2)  # Simulate network delay
-    return f'Data from {url}'
-
-async def main():
-    tasks = [fetch_data('http://example.com') for _ in range(3)]
-    results = await asyncio.gather(*tasks)
-    for result in results:
-        print(result)
-
-# Run the main function
-asyncio.run(main())
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which Python library is used for asynchronous programming in the example?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

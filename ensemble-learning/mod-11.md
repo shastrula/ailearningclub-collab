@@ -86,36 +86,7 @@ print(list(zip(model.feature_name(), model.feature_importance())))
 
 > **💡 Tip:** When using leaf-wise growth, it's important to set a minimum number of data points in a leaf ('min_data_in_leaf') to prevent overfitting.
 
-LightGBM grows trees leaf-wise, as opposed to level-wise growth in traditional gradient boosting. This means that LightGBM adds a new leaf to the split that provides the most gain, which can lead to faster convergence and better performance. However, to avoid overfitting, a maximum depth limit is often set.
-
-```python title="example2.py"
-import lightgbm as lgb
-
-# Create a synthetic dataset
-from sklearn.datasets import make_classification
-X, y = make_classification(n_samples=10000, n_features=20, random_state=42)
-
-# Create a LightGBM dataset
-train_data = lgb.Dataset(X, label=y)
-
-# Set parameters for the model
-params = {
-    'objective': 'binary',
-    'metric': 'binary_logloss',
-    'num_leaves': 31,
-    'learning_rate': 0.05,
-   'max_depth': -1,  # No limit on max depth for leaf-wise tree growth
-    'min_data_in_leaf': 20
-}
-
-# Train the model
-model = lgb.train(params, train_data, num_boost_round=100)
-
-# Print the first few feature importances
-print(list(zip(model.feature_name(), model.feature_importance())))
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the primary advantage of histogram-based learning in LightGBM?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -139,36 +110,7 @@ print(list(zip(model.feature_name(), model.feature_importance())))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-LightGBM grows trees leaf-wise, as opposed to level-wise growth in traditional gradient boosting. This means that LightGBM adds a new leaf to the split that provides the most gain, which can lead to faster convergence and better performance. However, to avoid overfitting, a maximum depth limit is often set.
-
-```python title="example2.py"
-import lightgbm as lgb
-
-# Create a synthetic dataset
-from sklearn.datasets import make_classification
-X, y = make_classification(n_samples=10000, n_features=20, random_state=42)
-
-# Create a LightGBM dataset
-train_data = lgb.Dataset(X, label=y)
-
-# Set parameters for the model
-params = {
-    'objective': 'binary',
-    'metric': 'binary_logloss',
-    'num_leaves': 31,
-    'learning_rate': 0.05,
-   'max_depth': -1,  # No limit on max depth for leaf-wise tree growth
-    'min_data_in_leaf': 20
-}
-
-# Train the model
-model = lgb.train(params, train_data, num_boost_round=100)
-
-# Print the first few feature importances
-print(list(zip(model.feature_name(), model.feature_importance())))
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the default growth strategy for trees in LightGBM?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

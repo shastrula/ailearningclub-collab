@@ -76,26 +76,7 @@ reflect_on_actions(actions, outcomes)
 
 > **💡 Tip:** Ensure that reflection mechanisms are regularly updated to adapt to new scenarios and improve decision-making accuracy.
 
-Reflection in Agentic AI refers to the agent's ability to assess its actions and outcomes, learning from past experiences to improve future performance. Tool use involves leveraging external tools and resources to enhance the agent's capabilities. Combining reflection with tool use allows agents to adapt and optimize their strategies over time.
-
-```python title="example2.py"
-import random
-
-# Define a reflection function
-def reflect_on_actions(actions, outcomes):
-    for action, outcome in zip(actions, outcomes):
-        if outcome == 'success':
-            print(f'Action {action} was successful.')
-        else:
-            print(f'Action {action} failed. Adjusting strategy...')
-
-# Example usage
-actions = ['search', 'analyze', 'execute']
-outcomes = ['success', 'failure','success']
-reflect_on_actions(actions, outcomes)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of planning in Agentic AI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -119,26 +100,7 @@ reflect_on_actions(actions, outcomes)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Reflection in Agentic AI refers to the agent's ability to assess its actions and outcomes, learning from past experiences to improve future performance. Tool use involves leveraging external tools and resources to enhance the agent's capabilities. Combining reflection with tool use allows agents to adapt and optimize their strategies over time.
-
-```python title="example2.py"
-import random
-
-# Define a reflection function
-def reflect_on_actions(actions, outcomes):
-    for action, outcome in zip(actions, outcomes):
-        if outcome == 'success':
-            print(f'Action {action} was successful.')
-        else:
-            print(f'Action {action} failed. Adjusting strategy...')
-
-# Example usage
-actions = ['search', 'analyze', 'execute']
-outcomes = ['success', 'failure','success']
-reflect_on_actions(actions, outcomes)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How does reflection enhance an Agentic AI's performance?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

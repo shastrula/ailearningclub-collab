@@ -59,9 +59,7 @@ Ensemble methods combine the predictions of several base estimators to improve g
 
 > **💡 Tip:** When using ensemble methods, be mindful of overfitting. Techniques like cross-validation and regularization can help mitigate this risk.
 
-Ensemble methods combine the predictions of several base estimators to improve generalizability and robustness over a single estimator. Common ensemble techniques include Bagging, Boosting, and Stacking.
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which of the following is NOT an ensemble method?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -71,15 +71,6 @@ Learning from others' experiences:
 - [OpenJDK](https://openjdk.org/) — Open-source Java Development Kit
 
 
-- [Oracle Java Documentation](https://docs.oracle.com/en/java/) — Official Java SE documentation
-- [Java Tutorials (Oracle)](https://docs.oracle.com/javase/tutorial/) — Comprehensive Java learning path
-- [Effective Java (Joshua Bloch)](https://www.oreilly.com/library/view/effective-java/9780134686097/) — Best practices for Java development
-- [Baeldung](https://www.baeldung.com/) — Practical Java & Spring tutorials
-- [JDoodle Online Compiler](https://www.jdoodle.com/online-java-compiler/) — Run Java code in browser
-- [Java Concurrency in Practice](https://jcip.net/) — Definitive guide to multithreading
-- [OpenJDK](https://openjdk.org/) — Open-source Java Development Kit
-
-
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How would you apply this concept in practice?</p>
   <div class="space-y-2">
@@ -103,16 +94,7 @@ Learning from others' experiences:
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-- [Oracle Java Documentation](https://docs.oracle.com/en/java/) — Official Java SE documentation
-- [Java Tutorials (Oracle)](https://docs.oracle.com/javase/tutorial/) — Comprehensive Java learning path
-- [Effective Java (Joshua Bloch)](https://www.oreilly.com/library/view/effective-java/9780134686097/) — Best practices for Java development
-- [Baeldung](https://www.baeldung.com/) — Practical Java & Spring tutorials
-- [JDoodle Online Compiler](https://www.jdoodle.com/online-java-compiler/) — Run Java code in browser
-- [Java Concurrency in Practice](https://jcip.net/) — Definitive guide to multithreading
-- [OpenJDK](https://openjdk.org/) — Open-source Java Development Kit
-
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ What is the relationship between this and previous concepts?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

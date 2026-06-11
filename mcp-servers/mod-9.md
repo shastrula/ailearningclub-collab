@@ -75,25 +75,7 @@ print(response)
 
 > **💡 Tip:** When integrating AI agents, ensure that their roles and capabilities are clearly defined to avoid confusion and improve the quality of responses.
 
-Integrating AI agents into MCP servers can significantly enhance their capabilities. AI agents can perform complex tasks, provide dynamic responses, and even learn from interactions. This section covers the steps to integrate AI agents, including setting up the environment, defining agent roles, and testing interactions.
-
-```python title="example2.py"
-from langchain import AIAgent
-
-def setup_agent():
-    """Sets up an AI agent with specific roles and capabilities."""
-    agent = AIAgent()
-    agent.add_role('strategist', 'Develops defense strategies')
-    agent.add_capability('analyze', 'Analyzes threats and suggests countermeasures')
-    return agent
-
-# Example usage
-agent = setup_agent()
-response = agent.interact('What is the best strategy to defend against a dragon?')
-print(response)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of advanced prompt engineering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,25 +99,7 @@ print(response)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Integrating AI agents into MCP servers can significantly enhance their capabilities. AI agents can perform complex tasks, provide dynamic responses, and even learn from interactions. This section covers the steps to integrate AI agents, including setting up the environment, defining agent roles, and testing interactions.
-
-```python title="example2.py"
-from langchain import AIAgent
-
-def setup_agent():
-    """Sets up an AI agent with specific roles and capabilities."""
-    agent = AIAgent()
-    agent.add_role('strategist', 'Develops defense strategies')
-    agent.add_capability('analyze', 'Analyzes threats and suggests countermeasures')
-    return agent
-
-# Example usage
-agent = setup_agent()
-response = agent.interact('What is the best strategy to defend against a dragon?')
-print(response)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a key benefit of integrating AI agents into MCP servers?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

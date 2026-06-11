@@ -94,37 +94,7 @@ Ordinal encoded data: [[1.]
 
 > **💡 Tip:** Avoid multicollinearity when using one-hot encoding by dropping one category to prevent redundant information.
 
-Categorical features need to be encoded into numerical values for machine learning models to process them. Common encoding techniques include one-hot encoding and ordinal encoding. One-hot encoding creates binary columns for each category, while ordinal encoding assigns a unique integer to each category based on some order.
-
-```python title="example2.py"
-from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
-
-# Sample data
-categories = np.array([['cat'], ['dog'], ['cat'], ['bird']])
-
-# One-Hot Encoding
-one_hot_encoder = OneHotEncoder()
-data_onehot = one_hot_encoder.fit_transform(categories).toarray()
-print('One-Hot encoded data:', data_onehot)
-
-# Ordinal Encoding
-ordinal_encoder = OrdinalEncoder()
-data_ordinal = ordinal_encoder.fit_transform(categories)
-print('Ordinal encoded data:', data_ordinal)
-```
-
-```
-One-Hot encoded data: [[1. 0. 0.]
- [0. 1. 0.]
- [1. 0. 0.]
- [0. 0. 1.]]
-Ordinal encoded data: [[1.]
- [2.]
- [1.]
- [0.]]
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which scaling technique transforms features to have a mean of 0 and a standard deviation of 1?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -148,37 +118,7 @@ Ordinal encoded data: [[1.]
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Categorical features need to be encoded into numerical values for machine learning models to process them. Common encoding techniques include one-hot encoding and ordinal encoding. One-hot encoding creates binary columns for each category, while ordinal encoding assigns a unique integer to each category based on some order.
-
-```python title="example2.py"
-from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
-
-# Sample data
-categories = np.array([['cat'], ['dog'], ['cat'], ['bird']])
-
-# One-Hot Encoding
-one_hot_encoder = OneHotEncoder()
-data_onehot = one_hot_encoder.fit_transform(categories).toarray()
-print('One-Hot encoded data:', data_onehot)
-
-# Ordinal Encoding
-ordinal_encoder = OrdinalEncoder()
-data_ordinal = ordinal_encoder.fit_transform(categories)
-print('Ordinal encoded data:', data_ordinal)
-```
-
-```
-One-Hot encoded data: [[1. 0. 0.]
- [0. 1. 0.]
- [1. 0. 0.]
- [0. 0. 1.]]
-Ordinal encoded data: [[1.]
- [2.]
- [1.]
- [0.]]
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which encoding technique creates binary columns for each category?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -88,31 +88,7 @@ print(qlora_layer)
 
 > **💡 Tip:** When implementing PEFT techniques, ensure that the rank `r` of the low-rank matrices is chosen appropriately to balance between efficiency and performance. A too-small rank may lead to underfitting, while a too-large rank may negate the benefits of PEFT.
 
-PEFT techniques offer several advantages over traditional fine-tuning methods. By updating only a small subset of parameters, PEFT reduces the computational cost and memory requirements significantly. Additionally, PEFT methods help in preserving the pre-trained knowledge of the model, leading to better generalization and performance on downstream tasks. This makes PEFT an attractive option for fine-tuning large language models in resource-constrained environments.
-
-```python title="example2.py"
-import torch
-
-# Example of applying QLoRA to a linear layer
-class QLoRALinear(torch.nn.Module):
-    def __init__(self, in_features, out_features, r=8, quant_bits=4):
-        super(QLoRALinear, self).__init__()
-        self.linear = torch.nn.Linear(in_features, out_features, bias=False)
-        self.lora_A = torch.nn.Linear(in_features, r, bias=False)
-        self.lora_B = torch.nn.Linear(r, out_features, bias=False)
-        self.quant_bits = quant_bits
-
-    def forward(self, x):
-        # Quantization simulation
-        x_quant = torch.round(x * (2 ** self.quant_bits - 1)) / (2 ** self.quant_bits - 1)
-        return self.linear(x) + self.lora_B(self.lora_A(x_quant))
-
-# Initialize a QLoRALinear layer
-qlora_layer = QLoRALinear(10, 5)
-print(qlora_layer)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of PEFT techniques?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -136,31 +112,7 @@ print(qlora_layer)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-PEFT techniques offer several advantages over traditional fine-tuning methods. By updating only a small subset of parameters, PEFT reduces the computational cost and memory requirements significantly. Additionally, PEFT methods help in preserving the pre-trained knowledge of the model, leading to better generalization and performance on downstream tasks. This makes PEFT an attractive option for fine-tuning large language models in resource-constrained environments.
-
-```python title="example2.py"
-import torch
-
-# Example of applying QLoRA to a linear layer
-class QLoRALinear(torch.nn.Module):
-    def __init__(self, in_features, out_features, r=8, quant_bits=4):
-        super(QLoRALinear, self).__init__()
-        self.linear = torch.nn.Linear(in_features, out_features, bias=False)
-        self.lora_A = torch.nn.Linear(in_features, r, bias=False)
-        self.lora_B = torch.nn.Linear(r, out_features, bias=False)
-        self.quant_bits = quant_bits
-
-    def forward(self, x):
-        # Quantization simulation
-        x_quant = torch.round(x * (2 ** self.quant_bits - 1)) / (2 ** self.quant_bits - 1)
-        return self.linear(x) + self.lora_B(self.lora_A(x_quant))
-
-# Initialize a QLoRALinear layer
-qlora_layer = QLoRALinear(10, 5)
-print(qlora_layer)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which of the following is an advantage of using PEFT?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

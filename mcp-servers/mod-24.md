@@ -87,30 +87,7 @@ integrate_models()
 
 > **💡 Tip:** When building AI agent integrations, ensure that the data formats between models are compatible and that error handling is robust to manage any discrepancies or failures in communication.
 
-Building AI agent integrations involves creating systems where multiple AI models work together to achieve a common goal. This requires understanding how to interface different models, handle data flow, and manage context transitions. Effective integrations can lead to more powerful and versatile AI applications.
-
-```python title="example2.py"
-import requests
-
-# Example of integrating two AI models
-def integrate_models():
-    model1_url = 'https://api.example.com/model1'
-    model2_url = 'https://api.example.com/model2'
-    
-    # Send a request to Model 1
-    response1 = requests.post(model1_url, json={'prompt': 'Summarize this text:'})
-    summary = response1.json().get('summary')
-    
-    # Send the summary to Model 2
-    response2 = requests.post(model2_url, json={'text': summary})
-    final_output = response2.json().get('output')
-    
-    print(f'Final integrated output: {final_output}')
-
-integrate_models()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of Model Context Protocol (MCP)?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -134,30 +111,7 @@ integrate_models()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Building AI agent integrations involves creating systems where multiple AI models work together to achieve a common goal. This requires understanding how to interface different models, handle data flow, and manage context transitions. Effective integrations can lead to more powerful and versatile AI applications.
-
-```python title="example2.py"
-import requests
-
-# Example of integrating two AI models
-def integrate_models():
-    model1_url = 'https://api.example.com/model1'
-    model2_url = 'https://api.example.com/model2'
-    
-    # Send a request to Model 1
-    response1 = requests.post(model1_url, json={'prompt': 'Summarize this text:'})
-    summary = response1.json().get('summary')
-    
-    # Send the summary to Model 2
-    response2 = requests.post(model2_url, json={'text': summary})
-    final_output = response2.json().get('output')
-    
-    print(f'Final integrated output: {final_output}')
-
-integrate_models()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a key consideration when building AI agent integrations?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

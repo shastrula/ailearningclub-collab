@@ -92,35 +92,7 @@ model.fit(padded_sequences, labels, epochs=5)
 
 > **💡 Tip:** When working with text data, ensure that your sequences are padded to a uniform length to avoid issues during model training.
 
-Once the text data is preprocessed and tokenized, we can build a neural network model for text classification. Common architectures include using embedding layers, convolutional neural networks (CNNs), and recurrent neural networks (RNNs). In this example, we'll build a simple model using an embedding layer and an LSTM layer for binary text classification.
-
-```python title="example2.py"
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Embedding, LSTM, Dense
-
-# Sample preprocessed data
-sequences = [[1, 2, 3, 4], [5, 6, 7, 8]]
-labels = [1, 0]
-
-# Padding sequences to ensure uniform length
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-padded_sequences = pad_sequences(sequences, maxlen=5)
-
-# Building the model
-model = Sequential()
-model.add(Embedding(input_dim=100, output_dim=8, input_length=5))
-model.add(LSTM(32))
-model.add(Dense(1, activation='sigmoid'))
-
-# Compiling the model
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-
-# Training the model
-model.fit(padded_sequences, labels, epochs=5)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of tokenization in text preprocessing?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -144,35 +116,7 @@ model.fit(padded_sequences, labels, epochs=5)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Once the text data is preprocessed and tokenized, we can build a neural network model for text classification. Common architectures include using embedding layers, convolutional neural networks (CNNs), and recurrent neural networks (RNNs). In this example, we'll build a simple model using an embedding layer and an LSTM layer for binary text classification.
-
-```python title="example2.py"
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Embedding, LSTM, Dense
-
-# Sample preprocessed data
-sequences = [[1, 2, 3, 4], [5, 6, 7, 8]]
-labels = [1, 0]
-
-# Padding sequences to ensure uniform length
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-padded_sequences = pad_sequences(sequences, maxlen=5)
-
-# Building the model
-model = Sequential()
-model.add(Embedding(input_dim=100, output_dim=8, input_length=5))
-model.add(LSTM(32))
-model.add(Dense(1, activation='sigmoid'))
-
-# Compiling the model
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-
-# Training the model
-model.fit(padded_sequences, labels, epochs=5)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which layer is commonly used in text classification models to capture sequential information?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

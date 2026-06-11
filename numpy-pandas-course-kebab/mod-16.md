@@ -89,32 +89,7 @@ plt.show()
 
 > **💡 Tip:** When customizing plots, consider the audience and context to choose appropriate styles and elements that enhance understanding and engagement.
 
-Matplotlib provides various styling options to change the appearance of your plots, including line styles, colors, markers, and grid settings. These styling choices allow you to create visually distinct plots that effectively convey your data's message.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-
-# Sample data
-x = [1, 2, 3, 4, 5]
-y1 = [2, 3, 5, 7, 11]
-y2 = [1, 4, 6, 8, 10]
-
-# Create a plot with multiple lines
-plt.plot(x, y1, linestyle='--', color='r', marker='s', label='Series 1')
-plt.plot(x, y2, linestyle='-.', color='b', marker='^', label='Series 2')
-
-# Add grid and customize plot
-plt.grid(True, linestyle='--', linewidth=0.5)
-plt.title('Styling Plots with Matplotlib', fontsize=16, fontweight='bold')
-plt.xlabel('X-axis Label', fontsize=12)
-plt.ylabel('Y-axis Label', fontsize=12)
-plt.legend()
-
-# Display the plot
-plt.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which function is used to set the title of a plot in Matplotlib?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -138,32 +113,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Matplotlib provides various styling options to change the appearance of your plots, including line styles, colors, markers, and grid settings. These styling choices allow you to create visually distinct plots that effectively convey your data's message.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-
-# Sample data
-x = [1, 2, 3, 4, 5]
-y1 = [2, 3, 5, 7, 11]
-y2 = [1, 4, 6, 8, 10]
-
-# Create a plot with multiple lines
-plt.plot(x, y1, linestyle='--', color='r', marker='s', label='Series 1')
-plt.plot(x, y2, linestyle='-.', color='b', marker='^', label='Series 2')
-
-# Add grid and customize plot
-plt.grid(True, linestyle='--', linewidth=0.5)
-plt.title('Styling Plots with Matplotlib', fontsize=16, fontweight='bold')
-plt.xlabel('X-axis Label', fontsize=12)
-plt.ylabel('Y-axis Label', fontsize=12)
-plt.legend()
-
-# Display the plot
-plt.show()
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ How can you change the line style of a plot in Matplotlib?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

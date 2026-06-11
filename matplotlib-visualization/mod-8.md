@@ -78,25 +78,7 @@ fig.show()
 
 > **💡 Tip:** When creating interactive plots, ensure that the data is clean and well-structured to avoid unexpected behavior or errors in the visualization.
 
-Plotly offers extensive customization options to make your plots more informative and visually appealing. You can modify the appearance of plots, add annotations, and even make them interactive. Interactivity allows users to zoom, pan, and hover over data points for more detailed information.
-
-```python title="example2.py"
-import plotly.express as px
-
-# Load a sample dataset
-df = px.data.iris()
-
-# Create an interactive scatter plot
-fig = px.scatter(df, x='sepal_width', y='sepal_length', color='species', title='Iris Dataset Scatter Plot')
-
-# Update layout for better visualization
-fig.update_layout(xaxis_title='Sepal Width', yaxis_title='Sepal Length')
-
-# Show the plot
-fig.show()
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What function is used to create a figure in Plotly?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,25 +102,7 @@ fig.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Plotly offers extensive customization options to make your plots more informative and visually appealing. You can modify the appearance of plots, add annotations, and even make them interactive. Interactivity allows users to zoom, pan, and hover over data points for more detailed information.
-
-```python title="example2.py"
-import plotly.express as px
-
-# Load a sample dataset
-df = px.data.iris()
-
-# Create an interactive scatter plot
-fig = px.scatter(df, x='sepal_width', y='sepal_length', color='species', title='Iris Dataset Scatter Plot')
-
-# Update layout for better visualization
-fig.update_layout(xaxis_title='Sepal Width', yaxis_title='Sepal Length')
-
-# Show the plot
-fig.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which Plotly function is used to load a sample dataset?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

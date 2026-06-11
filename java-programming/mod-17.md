@@ -85,28 +85,7 @@ public class EmployeeService {
 
 > **💡 Tip:** Always ensure that transactions are properly managed to avoid data inconsistencies and to maintain database integrity.
 
-A Persistence Context in JPA is a set of entity instances managed by the JPA provider. Transactions are used to group a set of operations into a single atomic unit of work. The @Transactional annotation is used to mark methods that should be executed within a transaction. JPA provides mechanisms to handle transactions declaratively or programmatically.
-
-```java title="example2.java"
-@Service
-public class EmployeeService {
-
-    @PersistenceContext
-    private EntityManager entityManager;
-
-    @Transactional
-    public void saveEmployee(Employee employee) {
-        entityManager.persist(employee);
-    }
-
-    @Transactional
-    public Employee findEmployee(Long id) {
-        return entityManager.find(Employee.class, id);
-    }
-}
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does the @Entity annotation do in JPA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -130,28 +109,7 @@ public class EmployeeService {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-A Persistence Context in JPA is a set of entity instances managed by the JPA provider. Transactions are used to group a set of operations into a single atomic unit of work. The @Transactional annotation is used to mark methods that should be executed within a transaction. JPA provides mechanisms to handle transactions declaratively or programmatically.
-
-```java title="example2.java"
-@Service
-public class EmployeeService {
-
-    @PersistenceContext
-    private EntityManager entityManager;
-
-    @Transactional
-    public void saveEmployee(Employee employee) {
-        entityManager.persist(employee);
-    }
-
-    @Transactional
-    public Employee findEmployee(Long id) {
-        return entityManager.find(Employee.class, id);
-    }
-}
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ How do you mark a method to be executed within a transaction in JPA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -77,24 +77,7 @@ print(df_filled)
 
 > **💡 Tip:** Always check for and handle missing values before proceeding with any machine learning tasks to avoid skewed results.
 
-Data cleaning is a critical step in the data preprocessing pipeline. It involves handling missing values, removing duplicates, and correcting errors in the dataset. Pandas provides various methods to facilitate these tasks, ensuring that the data is in a suitable format for machine learning algorithms.
-
-```python title="example2.py"
-import pandas as pd
-import numpy as np
-
-# Creating a DataFrame with missing values
-data = {'A': [1, 2, np.nan], 'B': [4, np.nan, np.nan], 'C': [7, 8, 9]}
-df = pd.DataFrame(data)
-
-# Filling missing values with the mean of the column
-df_filled = df.fillna(df.mean())
-
-# Displaying the cleaned DataFrame
-print(df_filled)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a Pandas DataFrame?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,24 +101,7 @@ print(df_filled)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Data cleaning is a critical step in the data preprocessing pipeline. It involves handling missing values, removing duplicates, and correcting errors in the dataset. Pandas provides various methods to facilitate these tasks, ensuring that the data is in a suitable format for machine learning algorithms.
-
-```python title="example2.py"
-import pandas as pd
-import numpy as np
-
-# Creating a DataFrame with missing values
-data = {'A': [1, 2, np.nan], 'B': [4, np.nan, np.nan], 'C': [7, 8, 9]}
-df = pd.DataFrame(data)
-
-# Filling missing values with the mean of the column
-df_filled = df.fillna(df.mean())
-
-# Displaying the cleaned DataFrame
-print(df_filled)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which method is used to fill missing values in a Pandas DataFrame?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

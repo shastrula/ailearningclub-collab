@@ -92,35 +92,7 @@ print('Cluster labels:', labels)
 
 > **💡 Tip:** When choosing the number of clusters for K-Means, use the Elbow Method to find the optimal K by plotting the sum of squared distances from each point to its assigned center.
 
-Hierarchical clustering creates a tree of clusters. It can be agglomerative (bottom-up) or divisive (top-down). Agglomerative clustering starts with each data point as a separate cluster and merges them until a stopping criterion is met. It is useful for visualizing the structure of the data through dendrograms.
-
-```python title="example2.py"
-from sklearn.cluster import AgglomerativeClustering
-import numpy as np
-from scipy.cluster.hierarchy import dendrogram, linkage
-import matplotlib.pyplot as plt
-
-# Generate sample data
-X = np.array([[1, 2], [1, 4], [1, 0],
-              [4, 2], [4, 4], [4, 0]])
-
-# Apply Agglomerative Clustering
-clustering = AgglomerativeClustering(n_clusters=2).fit(X)
-
-# Get cluster labels
-labels = clustering.labels_
-
-# Plot dendrogram
-linked = linkage(X,'single')
-plt.figure(figsize=(10, 7))
-dendrogram(linked)
-plt.title('Dendrogram')
-plt.show()
-
-print('Cluster labels:', labels)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of K-Means clustering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -144,35 +116,7 @@ print('Cluster labels:', labels)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Hierarchical clustering creates a tree of clusters. It can be agglomerative (bottom-up) or divisive (top-down). Agglomerative clustering starts with each data point as a separate cluster and merges them until a stopping criterion is met. It is useful for visualizing the structure of the data through dendrograms.
-
-```python title="example2.py"
-from sklearn.cluster import AgglomerativeClustering
-import numpy as np
-from scipy.cluster.hierarchy import dendrogram, linkage
-import matplotlib.pyplot as plt
-
-# Generate sample data
-X = np.array([[1, 2], [1, 4], [1, 0],
-              [4, 2], [4, 4], [4, 0]])
-
-# Apply Agglomerative Clustering
-clustering = AgglomerativeClustering(n_clusters=2).fit(X)
-
-# Get cluster labels
-labels = clustering.labels_
-
-# Plot dendrogram
-linked = linkage(X,'single')
-plt.figure(figsize=(10, 7))
-dendrogram(linked)
-plt.title('Dendrogram')
-plt.show()
-
-print('Cluster labels:', labels)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which type of clustering builds a tree of clusters?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

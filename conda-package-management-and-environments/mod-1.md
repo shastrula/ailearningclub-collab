@@ -74,21 +74,7 @@ if __name__ == '__main__':
 
 > **💡 Tip:** Always ensure your Conda environment is activated before installing or updating packages to avoid conflicts.
 
-Conda makes it easy to install, upgrade, and remove packages. It can handle both Python packages and non-Python packages, ensuring that all dependencies are resolved automatically.
-
-```python title="example2.py"
-import conda
-from conda.cli import main
-
-# Install a package within the active Conda environment
-def install_package():
-    main.main(args=['install', '--yes', 'numpy'])
-
-if __name__ == '__main__':
-    install_package()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of using Conda environments?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -112,21 +98,7 @@ if __name__ == '__main__':
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Conda makes it easy to install, upgrade, and remove packages. It can handle both Python packages and non-Python packages, ensuring that all dependencies are resolved automatically.
-
-```python title="example2.py"
-import conda
-from conda.cli import main
-
-# Install a package within the active Conda environment
-def install_package():
-    main.main(args=['install', '--yes', 'numpy'])
-
-if __name__ == '__main__':
-    install_package()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which command is used to install a package in a Conda environment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

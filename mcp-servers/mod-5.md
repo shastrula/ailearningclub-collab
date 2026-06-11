@@ -85,28 +85,7 @@ print(prompt)
 
 > **💡 Tip:** Always test your prompts with the AI to ensure they produce the desired output. Iterate and refine based on the responses you receive.
 
-Incorporating context and specificity into prompts ensures that the AI understands the nuances of the request. This involves providing background information, specifying the desired format of the response, and highlighting any particular aspects that need to be addressed.
-
-```python title="example2.py"
-def craft_contextual_prompt(task, context, format='paragraph'):
-    """Craft a contextually rich prompt based on a given task and context."""
-    # Define a template for the prompt
-    prompt_template = 'Given the context of {context}, please provide a {format} explanation of the following topic: {task}'
-    
-    # Fill in the template with the task, context, and format
-    prompt = prompt_template.format(context=context, task=task, format=format)
-    
-    return prompt
-
-# Example usage
-task = 'quantum computing'
-context = 'its applications in cryptography'
-format = 'bullet points'
-prompt = craft_contextual_prompt(task, context, format)
-print(prompt)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of an effective prompt?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -130,28 +109,7 @@ print(prompt)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Incorporating context and specificity into prompts ensures that the AI understands the nuances of the request. This involves providing background information, specifying the desired format of the response, and highlighting any particular aspects that need to be addressed.
-
-```python title="example2.py"
-def craft_contextual_prompt(task, context, format='paragraph'):
-    """Craft a contextually rich prompt based on a given task and context."""
-    # Define a template for the prompt
-    prompt_template = 'Given the context of {context}, please provide a {format} explanation of the following topic: {task}'
-    
-    # Fill in the template with the task, context, and format
-    prompt = prompt_template.format(context=context, task=task, format=format)
-    
-    return prompt
-
-# Example usage
-task = 'quantum computing'
-context = 'its applications in cryptography'
-format = 'bullet points'
-prompt = craft_contextual_prompt(task, context, format)
-print(prompt)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Why is it important to incorporate context into a prompt?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

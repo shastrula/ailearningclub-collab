@@ -77,20 +77,7 @@ print('Task completed')
 
 > **💡 Tip:** When using cell magics, ensure that the magic command is on the first line of the cell to avoid unexpected behavior.
 
-Cell magics allow you to write multi-line commands and scripts within a single cell. They are particularly useful for tasks such as running shell commands, writing tests, or configuring notebook settings. One of the most commonly used cell magics is '%%time', which can be used to measure the execution time of a cell.
-
-```python title="example2.py"
-%%time
-
-import time
-
-# Simulate a time-consuming task
-time.sleep(2)
-
-print('Task completed')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of line magics in Jupyter Notebooks?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -114,20 +101,7 @@ print('Task completed')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Cell magics allow you to write multi-line commands and scripts within a single cell. They are particularly useful for tasks such as running shell commands, writing tests, or configuring notebook settings. One of the most commonly used cell magics is '%%time', which can be used to measure the execution time of a cell.
-
-```python title="example2.py"
-%%time
-
-import time
-
-# Simulate a time-consuming task
-time.sleep(2)
-
-print('Task completed')
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Which cell magic is used to measure the execution time of a cell?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

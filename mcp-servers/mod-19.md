@@ -75,25 +75,7 @@ print(response.json())
 
 > **💡 Tip:** Ensure that all AI agents adhere to a consistent data format when communicating with the MCP Server to avoid data mismatches and integration issues.
 
-Integrating AI agents within the MCP framework involves defining clear communication protocols, ensuring data consistency, and managing context transitions. Effective integration enhances the collaborative capabilities of AI models, leading to more intelligent and responsive systems. This section covers best practices and strategies for seamless AI agent integration.
-
-```python title="ai_agent_integration.py"
-import requests
-
-# Define the MCP Server endpoint
-mcp_server_url = 'http://localhost:65432/api/context'
-
-# Prepare the data to be sent
-data = {'model': 'AIModel1', 'context': 'UserQuery', 'input': 'What is the weather today?'}
-
-# Send a POST request to the MCP Server
-response = requests.post(mcp_server_url, json=data)
-
-# Print the response from the server
-print(response.json())
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary function of an MCP Server in AI systems?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,25 +99,7 @@ print(response.json())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Integrating AI agents within the MCP framework involves defining clear communication protocols, ensuring data consistency, and managing context transitions. Effective integration enhances the collaborative capabilities of AI models, leading to more intelligent and responsive systems. This section covers best practices and strategies for seamless AI agent integration.
-
-```python title="ai_agent_integration.py"
-import requests
-
-# Define the MCP Server endpoint
-mcp_server_url = 'http://localhost:65432/api/context'
-
-# Prepare the data to be sent
-data = {'model': 'AIModel1', 'context': 'UserQuery', 'input': 'What is the weather today?'}
-
-# Send a POST request to the MCP Server
-response = requests.post(mcp_server_url, json=data)
-
-# Print the response from the server
-print(response.json())
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a best practice for integrating AI agents within the MCP framework?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

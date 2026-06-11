@@ -81,31 +81,7 @@ print('Inference result:', output)
 
 > **💡 Tip:** Ensure that your GPU drivers and CUDA toolkit are up-to-date to avoid compatibility issues and maximize performance gains.
 
-llama.cpp supports hardware acceleration through GPU utilization. By leveraging CUDA or other GPU libraries, you can significantly reduce inference times. Proper configuration of memory management and kernel optimizations is essential for achieving peak performance.
-
-```python title="example2.py"
-import llama_cpp
-
-# Initialize llama.cpp with GPU acceleration
-config = {
-    'use_gpu': True,
-    'gpu_memory_limit': 8192,
-    'kernel_optimization': 'O3'
-}
-
-llama_cpp.initialize(config)
-
-# Load the model
-model = llama_cpp.load_model('path/to/model')
-
-# Perform inference
-output = model.infer('This is a test sentence.')
-
-# Print the inference result
-print('Inference result:', output)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What parameter in Ollama configuration directly affects the number of samples processed in each iteration?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -129,31 +105,7 @@ print('Inference result:', output)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-llama.cpp supports hardware acceleration through GPU utilization. By leveraging CUDA or other GPU libraries, you can significantly reduce inference times. Proper configuration of memory management and kernel optimizations is essential for achieving peak performance.
-
-```python title="example2.py"
-import llama_cpp
-
-# Initialize llama.cpp with GPU acceleration
-config = {
-    'use_gpu': True,
-    'gpu_memory_limit': 8192,
-    'kernel_optimization': 'O3'
-}
-
-llama_cpp.initialize(config)
-
-# Load the model
-model = llama_cpp.load_model('path/to/model')
-
-# Perform inference
-output = model.infer('This is a test sentence.')
-
-# Print the inference result
-print('Inference result:', output)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which configuration setting in llama.cpp is critical for managing GPU memory usage?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

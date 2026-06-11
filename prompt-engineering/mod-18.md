@@ -80,23 +80,7 @@ print(translations)
 
 > **💡 Tip:** When crafting few-shot prompts, vary the examples to include different lengths, styles, and complexities to improve the model's generalization capabilities.
 
-Creating effective few-shot prompts involves providing clear and diverse examples that encapsulate the task at hand. The examples should cover various aspects of the problem to help the model generalize better. It's also important to ensure that the examples are relevant and representative of the data the model will encounter in real-world applications.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Initialize a text generation pipeline
-generator = pipeline('text-generation')
-
-# Few-shot prompt for text generation
-prompt = "Translate the following English sentences to French:\n1. I love programming.\n2. The weather is beautiful today."
-
-# Generate translations
-translations = generator(prompt, max_length=100)
-print(translations)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of few-shot learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,23 +104,7 @@ print(translations)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Creating effective few-shot prompts involves providing clear and diverse examples that encapsulate the task at hand. The examples should cover various aspects of the problem to help the model generalize better. It's also important to ensure that the examples are relevant and representative of the data the model will encounter in real-world applications.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Initialize a text generation pipeline
-generator = pipeline('text-generation')
-
-# Few-shot prompt for text generation
-prompt = "Translate the following English sentences to French:\n1. I love programming.\n2. The weather is beautiful today."
-
-# Generate translations
-translations = generator(prompt, max_length=100)
-print(translations)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What should you vary in your few-shot prompt examples to improve model performance?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

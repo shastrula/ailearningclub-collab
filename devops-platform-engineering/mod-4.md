@@ -81,25 +81,6 @@ docker cp myapp-container:/app/data.txt ./data.txt
 
 ---
 
-```bash
-# Execute command in running container
-docker exec -it myapp-container bash
-
-# Inspect container details
-docker inspect myapp-container
-
-# View resource usage
-docker stats myapp-container
-
-# View container processes
-docker top myapp-container
-
-# Copy files from container
-docker cp myapp-container:/app/data.txt ./data.txt
-```
-
----
-
 <div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the main advantage of containers over virtual machines?</p>
   <div class="space-y-2">
@@ -124,26 +105,7 @@ docker cp myapp-container:/app/data.txt ./data.txt
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```bash
-# Execute command in running container
-docker exec -it myapp-container bash
-
-# Inspect container details
-docker inspect myapp-container
-
-# View resource usage
-docker stats myapp-container
-
-# View container processes
-docker top myapp-container
-
-# Copy files from container
-docker cp myapp-container:/app/data.txt ./data.txt
-```
-
----
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the purpose of a multi-stage Docker build?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -167,26 +129,7 @@ docker cp myapp-container:/app/data.txt ./data.txt
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```bash
-# Execute command in running container
-docker exec -it myapp-container bash
-
-# Inspect container details
-docker inspect myapp-container
-
-# View resource usage
-docker stats myapp-container
-
-# View container processes
-docker top myapp-container
-
-# Copy files from container
-docker cp myapp-container:/app/data.txt ./data.txt
-```
-
----
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does a Docker volume do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -209,25 +152,6 @@ docker cp myapp-container:/app/data.txt ./data.txt
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-
-```bash
-# Execute command in running container
-docker exec -it myapp-container bash
-
-# Inspect container details
-docker inspect myapp-container
-
-# View resource usage
-docker stats myapp-container
-
-# View container processes
-docker top myapp-container
-
-# Copy files from container
-docker cp myapp-container:/app/data.txt ./data.txt
-```
-
----
 
 <div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ How do containers on the same Docker network communicate?</p>
@@ -253,26 +177,7 @@ docker cp myapp-container:/app/data.txt ./data.txt
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```bash
-# Execute command in running container
-docker exec -it myapp-container bash
-
-# Inspect container details
-docker inspect myapp-container
-
-# View resource usage
-docker stats myapp-container
-
-# View container processes
-docker top myapp-container
-
-# Copy files from container
-docker cp myapp-container:/app/data.txt ./data.txt
-```
-
----
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the best practice for reducing Docker image layers?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

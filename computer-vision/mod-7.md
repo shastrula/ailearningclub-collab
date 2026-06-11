@@ -94,37 +94,7 @@ unet_model.compile(optimizer='adam', loss='binary_crossentropy')
 
 > **💡 Tip:** When training U-Net, ensure that your dataset is properly preprocessed and augmented to avoid overfitting, especially when working with limited data.
 
-U-Net is a popular convolutional neural network architecture for image segmentation, especially in medical imaging. It consists of a contracting path to capture context and a symmetric expanding path that enables precise localization. U-Net is known for its ability to produce high-quality segmentation results with relatively few training images.
-
-```python title="example2.py"
-import tensorflow as tf
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, UpSampling2D, concatenate
-
-# Define the U-Net model
-def unet(input_size=(128, 128, 1)):
-    inputs = Input(input_size)
-    # Contracting path
-    c1 = Conv2D(64, (3, 3), activation='relu', padding='same')(inputs)
-    c1 = Conv2D(64, (3, 3), activation='relu', padding='same')(c1)
-    p1 = MaxPooling2D((2, 2))(c1)
-    
-    # Expanding path
-    u1 = UpSampling2D((2, 2))(p1)
-    u1 = concatenate([u1, c1], axis=3)
-    c2 = Conv2D(64, (3, 3), activation='relu', padding='same')(u1)
-    c2 = Conv2D(64, (3, 3), activation='relu', padding='same')(c2)
-    outputs = Conv2D(1, (1, 1), activation='sigmoid')(c2)
-    
-    model = Model(inputs=[inputs], outputs=[outputs])
-    return model
-
-# Create and compile the U-Net model
-unet_model = unet()
-unet_model.compile(optimizer='adam', loss='binary_crossentropy')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of image segmentation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -148,37 +118,7 @@ unet_model.compile(optimizer='adam', loss='binary_crossentropy')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-U-Net is a popular convolutional neural network architecture for image segmentation, especially in medical imaging. It consists of a contracting path to capture context and a symmetric expanding path that enables precise localization. U-Net is known for its ability to produce high-quality segmentation results with relatively few training images.
-
-```python title="example2.py"
-import tensorflow as tf
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, UpSampling2D, concatenate
-
-# Define the U-Net model
-def unet(input_size=(128, 128, 1)):
-    inputs = Input(input_size)
-    # Contracting path
-    c1 = Conv2D(64, (3, 3), activation='relu', padding='same')(inputs)
-    c1 = Conv2D(64, (3, 3), activation='relu', padding='same')(c1)
-    p1 = MaxPooling2D((2, 2))(c1)
-    
-    # Expanding path
-    u1 = UpSampling2D((2, 2))(p1)
-    u1 = concatenate([u1, c1], axis=3)
-    c2 = Conv2D(64, (3, 3), activation='relu', padding='same')(u1)
-    c2 = Conv2D(64, (3, 3), activation='relu', padding='same')(c2)
-    outputs = Conv2D(1, (1, 1), activation='sigmoid')(c2)
-    
-    model = Model(inputs=[inputs], outputs=[outputs])
-    return model
-
-# Create and compile the U-Net model
-unet_model = unet()
-unet_model.compile(optimizer='adam', loss='binary_crossentropy')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which architecture is commonly used for medical image segmentation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

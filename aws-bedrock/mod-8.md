@@ -186,8 +186,6 @@ print(result['content'][0]['text'])
 
 ---
 
----
-
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the main advantage of fine-tuning over pre-training?</p>
   <div class="space-y-2">
@@ -212,9 +210,7 @@ print(result['content'][0]['text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the minimum recommended training data size?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -238,9 +234,7 @@ print(result['content'][0]['text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is provisioned throughput used for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -263,8 +257,6 @@ print(result['content'][0]['text'])
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-
----
 
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What format should training data be in?</p>

@@ -75,18 +75,7 @@ print(f'Best parameters: {grid_search.best_params_}')
 
 > **💡 Tip:** Use cross-validation to avoid overfitting during hyperparameter tuning.
 
-Hyperparameters are settings that affect the model's performance. Techniques like Grid Search and Random Search can be used to find the optimal hyperparameters.
-
-```python title="hyperparameter_tuning.py"
-from sklearn.model_selection import GridSearchCV
-
-param_grid = {'n_estimators': [50, 100, 150],'max_depth': [None, 10, 20, 30]}
-grid_search = GridSearchCV(estimator=model, param_grid=param_grid, cv=5)
-grid_search.fit(x_train, y_train)
-print(f'Best parameters: {grid_search.best_params_}')
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the purpose of splitting data into training and testing sets?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

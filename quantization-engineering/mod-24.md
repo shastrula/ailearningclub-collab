@@ -83,26 +83,7 @@ print(f'Inference time: {result.mean:.4f} seconds')
 
 > **💡 Tip:** Ensure that the input tensor dimensions match the expected input size of the model to avoid runtime errors.
 
-Benchmarking is essential to evaluate the performance of quantized models. This involves measuring metrics such as inference time, model size, and accuracy. Tools like PyTorch’s `torch.utils.benchmark` can be used to conduct these evaluations efficiently.
-
-```python title="benchmark_example.py"
-import torch
-from torch.utils.benchmark import Timer
-
-# Load a quantized model
-quantized_model = torch.jit.load('quantized_model.pt')
-
-# Prepare input tensor
-input_tensor = torch.randn(1, 3, 224, 224)
-
-# Benchmark inference time
-timer = Timer(stmt='quantized_model(input_tensor)', globals=globals())
-result = timer.timeit(100)
-
-print(f'Inference time: {result.mean:.4f} seconds')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of quantization in machine learning models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -126,26 +107,7 @@ print(f'Inference time: {result.mean:.4f} seconds')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Benchmarking is essential to evaluate the performance of quantized models. This involves measuring metrics such as inference time, model size, and accuracy. Tools like PyTorch’s `torch.utils.benchmark` can be used to conduct these evaluations efficiently.
-
-```python title="benchmark_example.py"
-import torch
-from torch.utils.benchmark import Timer
-
-# Load a quantized model
-quantized_model = torch.jit.load('quantized_model.pt')
-
-# Prepare input tensor
-input_tensor = torch.randn(1, 3, 224, 224)
-
-# Benchmark inference time
-timer = Timer(stmt='quantized_model(input_tensor)', globals=globals())
-result = timer.timeit(100)
-
-print(f'Inference time: {result.mean:.4f} seconds')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which tool can be used to benchmark the performance of a quantized model in PyTorch?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

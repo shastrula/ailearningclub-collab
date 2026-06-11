@@ -88,31 +88,7 @@ NumPy time: 0.0008s
 
 > **💡 Tip:** Always profile before optimizing. Focus on the slowest parts first for maximum impact.
 
-Replace loops with NumPy operations for 100x speedups.
-
-```python title="vectorization.py"
-import numpy as np
-import time
-
-# Slow: Python loop
-data = list(range(1000000))
-start = time.time()
-result = [x * 2 for x in data]
-print(f"Loop time: {time.time() - start:.4f}s")
-
-# Fast: NumPy vectorization
-data_np = np.arange(1000000)
-start = time.time()
-result_np = data_np * 2
-print(f"NumPy time: {time.time() - start:.4f}s")
-```
-
-```
-Loop time: 0.0523s
-NumPy time: 0.0008s
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What's the first step in optimization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -124,43 +124,7 @@ cv2.destroyAllWindows()
 
 > **💡 Tip:** When working with object detection models like YOLO or Faster R-CNN, ensure that the input images are pre-processed correctly according to the model's requirements. This includes resizing, normalization, and potentially other transformations. Incorrect pre-processing can lead to poor detection performance.
 
-Object detection is a computer technology related to computer vision and image processing that deals with detecting instances of semantic objects of a certain class (such as humans, buildings, or cars) in digital images and videos. Well-researched areas include face detection, pedestrian detection, and vehicle detection. Two popular object detection frameworks are YOLO (You Only Look Once) and Faster R-CNN (Region-based Convolutional Neural Networks).
-
-```python title="example2.py"
-import cv2
-
-# Load a pre-trained YOLO model
-net = cv2.dnn.readNet('yolov3.weights', 'yolov3.cfg')
-
-# Load class names
-with open('coco.names', 'r') as f:
-    classes = [line.strip() for line in f.readlines()]
-
-# Load an image
-image = cv2.imread('image.jpg')
-height, width = image.shape[:2]
-
-# Prepare the image for the model
-blob = cv2.dnn.blobFromImage(image, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
-net.setInput(blob)
-
-# Get the output layer names
-layer_names = net.getLayerNames()
-output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
-
-# Run the forward pass
-outs = net.forward(output_layers)
-
-# Process the detections
-class_ids = []
-confidences = []
-boxes = []
-for out in outs:
-    for detection in out:
-        scores = detection[5:]
-        class_id = np.argmax(scores)
-        confidence = scores[class_id]
-        if confidence >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary function of convolutional layers in a CNN?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -184,43 +148,7 @@ for out in outs:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Object detection is a computer technology related to computer vision and image processing that deals with detecting instances of semantic objects of a certain class (such as humans, buildings, or cars) in digital images and videos. Well-researched areas include face detection, pedestrian detection, and vehicle detection. Two popular object detection frameworks are YOLO (You Only Look Once) and Faster R-CNN (Region-based Convolutional Neural Networks).
-
-```python title="example2.py"
-import cv2
-
-# Load a pre-trained YOLO model
-net = cv2.dnn.readNet('yolov3.weights', 'yolov3.cfg')
-
-# Load class names
-with open('coco.names', 'r') as f:
-    classes = [line.strip() for line in f.readlines()]
-
-# Load an image
-image = cv2.imread('image.jpg')
-height, width = image.shape[:2]
-
-# Prepare the image for the model
-blob = cv2.dnn.blobFromImage(image, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
-net.setInput(blob)
-
-# Get the output layer names
-layer_names = net.getLayerNames()
-output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
-
-# Run the forward pass
-outs = net.forward(output_layers)
-
-# Process the detections
-class_ids = []
-confidences = []
-boxes = []
-for out in outs:
-    for detection in out:
-        scores = detection[5:]
-        class_id = np.argmax(scores)
-        confidence = scores[class_id]
-        if confidence >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which object detection framework uses a single neural network to predict bounding boxes and class probabilities directly from full images in one evaluation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

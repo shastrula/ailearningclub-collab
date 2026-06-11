@@ -80,23 +80,7 @@ check_health()
 
 > **💡 Tip:** Regularly review and update monitoring thresholds to adapt to changing performance expectations and new data patterns.
 
-Maintaining LLM health involves regular updates, retraining, and security checks. It is important to periodically retrain the model with new data to keep it up-to-date and relevant. Additionally, conducting security audits and applying patches can help protect the LLM from vulnerabilities and threats.
-
-```python title="example2.py"
-import random
-
-def check_health():
-    """Simulate checking LLM health."""
-    health_status = ['Good', 'Warning', 'Critical']
-    for _ in range(5):
-        status = random.choice(health_status)
-        print(f'Health Status: {status}')
-        time.sleep(1)  # Simulate delay
-
-check_health()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is a key metric for monitoring LLM performance?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,23 +104,7 @@ check_health()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Maintaining LLM health involves regular updates, retraining, and security checks. It is important to periodically retrain the model with new data to keep it up-to-date and relevant. Additionally, conducting security audits and applying patches can help protect the LLM from vulnerabilities and threats.
-
-```python title="example2.py"
-import random
-
-def check_health():
-    """Simulate checking LLM health."""
-    health_status = ['Good', 'Warning', 'Critical']
-    for _ in range(5):
-        status = random.choice(health_status)
-        print(f'Health Status: {status}')
-        time.sleep(1)  # Simulate delay
-
-check_health()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which practice is essential for maintaining LLM health?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -70,14 +70,7 @@ arr = np.array([1, 2, 3, 4, 5])
 
 > **💡 Tip:** Remember to always import numpy as np to make it easier to distinguish between NumPy and Python built-in functions.
 
-NumPy provides a large, multi-dimensional array object and an assortment of routines for operations on arrays. It offers great performance due to the fact that it is built upon C and Fortran.
-
-```python title="example.py"
-import numpy as np
-arr = np.array([1, 2, 3, 4, 5])
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does the function np.array() create in Python?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -101,14 +94,7 @@ arr = np.array([1, 2, 3, 4, 5])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-NumPy provides a large, multi-dimensional array object and an assortment of routines for operations on arrays. It offers great performance due to the fact that it is built upon C and Fortran.
-
-```python title="example.py"
-import numpy as np
-arr = np.array([1, 2, 3, 4, 5])
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which statement about the shape attribute of a numpy array is true?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

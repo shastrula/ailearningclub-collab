@@ -86,29 +86,7 @@ print(f'Accuracy: {accuracy:.2f}')
 
 > **💡 Tip:** When working with image data, ensure that the images are properly normalized and that the dataset is balanced to avoid bias in the model.
 
-Once the image data is preprocessed, it can be used to train machine learning models. Linear models, such as Logistic Regression, can be effective for image classification tasks. These models learn linear relationships between the pixel values and the class labels.
-
-```python title="example2.py"
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-
-# Assume X is the preprocessed image data and y are the labels
-X_train, X_test, y_train, y_test = train_test_split(scaled_data, labels, test_size=0.2, random_state=42)
-
-# Train a logistic regression model
-model = LogisticRegression(max_iter=1000)
-model.fit(X_train, y_train)
-
-# Make predictions
-y_pred = model.predict(X_test)
-
-# Evaluate the model
-accuracy = accuracy_score(y_test, y_pred)
-print(f'Accuracy: {accuracy:.2f}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the first step in preprocessing image data for machine learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -132,29 +110,7 @@ print(f'Accuracy: {accuracy:.2f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Once the image data is preprocessed, it can be used to train machine learning models. Linear models, such as Logistic Regression, can be effective for image classification tasks. These models learn linear relationships between the pixel values and the class labels.
-
-```python title="example2.py"
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-
-# Assume X is the preprocessed image data and y are the labels
-X_train, X_test, y_train, y_test = train_test_split(scaled_data, labels, test_size=0.2, random_state=42)
-
-# Train a logistic regression model
-model = LogisticRegression(max_iter=1000)
-model.fit(X_train, y_train)
-
-# Make predictions
-y_pred = model.predict(X_test)
-
-# Evaluate the model
-accuracy = accuracy_score(y_test, y_pred)
-print(f'Accuracy: {accuracy:.2f}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which model is used in the example to classify image data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

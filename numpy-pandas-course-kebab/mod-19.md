@@ -79,22 +79,7 @@ print(df)
 
 > **💡 Tip:** Always make a copy of your original dataset before performing any cleaning operations to preserve the original data.
 
-Duplicate records can skew analysis and lead to incorrect conclusions. Identifying and removing duplicates is a vital step in data cleaning. This can be done by checking for identical rows across all columns or specific columns that should uniquely identify records.
-
-```python title="example2.py"
-import pandas as pd
-
-# Sample DataFrame with duplicate rows
-data = {'A': [1, 2, 2, 4], 'B': [2, 2, 2, 4]}
-df = pd.DataFrame(data)
-
-# Remove duplicate rows
-df.drop_duplicates(inplace=True)
-
-print(df)
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ What is a common method for handling missing values in a dataset?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,22 +103,7 @@ print(df)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Duplicate records can skew analysis and lead to incorrect conclusions. Identifying and removing duplicates is a vital step in data cleaning. This can be done by checking for identical rows across all columns or specific columns that should uniquely identify records.
-
-```python title="example2.py"
-import pandas as pd
-
-# Sample DataFrame with duplicate rows
-data = {'A': [1, 2, 2, 4], 'B': [2, 2, 2, 4]}
-df = pd.DataFrame(data)
-
-# Remove duplicate rows
-df.drop_duplicates(inplace=True)
-
-print(df)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which method is used to remove duplicate rows in a DataFrame?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

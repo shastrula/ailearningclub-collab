@@ -81,24 +81,7 @@ print('Cross-validated scores:', scores)
 
 > **💡 Tip:** Always use cross-validation to get a robust estimate of your model's performance. It helps prevent overfitting and provides a more reliable metric for model evaluation.
 
-After preprocessing, the next step is to train and evaluate machine learning models. This involves selecting appropriate models, tuning hyperparameters, and using cross-validation to assess performance. Ensemble methods like Random Forests and Gradient Boosting often provide better results than individual models due to their ability to reduce variance and bias.
-
-```python title="model_training.py"
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import cross_val_score
-
-# Assuming X_preprocessed and y are defined
-y = [0, 1, 0]
-
-# Initialize the model
-model = RandomForestClassifier(n_estimators=100, random_state=42)
-
-# Perform cross-validation
-scores = cross_val_score(model, X_preprocessed, y, cv=5)
-print('Cross-validated scores:', scores)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of data preprocessing in machine learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -122,24 +105,7 @@ print('Cross-validated scores:', scores)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-After preprocessing, the next step is to train and evaluate machine learning models. This involves selecting appropriate models, tuning hyperparameters, and using cross-validation to assess performance. Ensemble methods like Random Forests and Gradient Boosting often provide better results than individual models due to their ability to reduce variance and bias.
-
-```python title="model_training.py"
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import cross_val_score
-
-# Assuming X_preprocessed and y are defined
-y = [0, 1, 0]
-
-# Initialize the model
-model = RandomForestClassifier(n_estimators=100, random_state=42)
-
-# Perform cross-validation
-scores = cross_val_score(model, X_preprocessed, y, cv=5)
-print('Cross-validated scores:', scores)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which method is commonly used to evaluate the performance of a machine learning model?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

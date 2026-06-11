@@ -77,20 +77,7 @@ print(X_lda)
 
 > **💡 Tip:** When applying PCA or LDA, ensure that the data is properly scaled (e.g., using StandardScaler) to avoid features with larger scales dominating the principal components.
 
-Linear Discriminant Analysis (LDA) is a generalization of Fisher's linear discriminant, a method used in statistics, pattern recognition, and machine learning to find a linear combination of features that characterizes or separates two or more classes of objects or events. The resulting combination may be used as a linear classifier, or, more commonly, for dimensionality reduction before later classification.
-
-```python title="example2.py"
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
-
-# Initialize LDA and fit the data
-lda = LDA(n_components=2)
-X_lda = lda.fit(X, y).transform(X)
-
-# Print the transformed data
-print(X_lda)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of PCA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -114,20 +101,7 @@ print(X_lda)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Linear Discriminant Analysis (LDA) is a generalization of Fisher's linear discriminant, a method used in statistics, pattern recognition, and machine learning to find a linear combination of features that characterizes or separates two or more classes of objects or events. The resulting combination may be used as a linear classifier, or, more commonly, for dimensionality reduction before later classification.
-
-```python title="example2.py"
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
-
-# Initialize LDA and fit the data
-lda = LDA(n_components=2)
-X_lda = lda.fit(X, y).transform(X)
-
-# Print the transformed data
-print(X_lda)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the main difference between PCA and LDA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

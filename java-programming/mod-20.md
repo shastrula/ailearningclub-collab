@@ -79,22 +79,7 @@ public class GreetingController {
 
 > **💡 Tip:** Always ensure your microservices are stateless to facilitate scaling and load balancing.
 
-A RESTful service is a key component of microservices architecture. It allows different services to communicate over HTTP, using standard methods like GET, POST, PUT, and DELETE. Spring Boot makes it easy to create these services with minimal boilerplate code.
-
-```java title="example2.java"
-@RestController
-@RequestMapping("/api/greeting")
-public class GreetingController {
-
-    @GetMapping
-    public String greeting() {
-        return "Hello, this is a Spring Boot Microservice";
-    }
-}
-
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the primary purpose of using Spring Boot in microservices?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,22 +103,7 @@ public class GreetingController {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-A RESTful service is a key component of microservices architecture. It allows different services to communicate over HTTP, using standard methods like GET, POST, PUT, and DELETE. Spring Boot makes it easy to create these services with minimal boilerplate code.
-
-```java title="example2.java"
-@RestController
-@RequestMapping("/api/greeting")
-public class GreetingController {
-
-    @GetMapping
-    public String greeting() {
-        return "Hello, this is a Spring Boot Microservice";
-    }
-}
-
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which HTTP method is typically used to retrieve data from a RESTful service?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

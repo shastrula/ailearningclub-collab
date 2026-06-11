@@ -82,25 +82,7 @@ print(f'GPU Memory: {gpu_info}')
 
 > **💡 Tip:** Ensure your system is up-to-date with the latest drivers and software to avoid compatibility issues during model training.
 
-Training LLMs locally demands significant computational resources. Key hardware requirements include a high-performance CPU, ample RAM (at least 32GB), and a powerful GPU with at least 16GB of VRAM. Ensuring your system meets these requirements is essential for efficient and effective model training.
-
-```python title="check_hardware.py"
-import psutil
-
-# Check CPU and RAM
-cpu_count = psutil.cpu_count(logical=False)
-ram = psutil.virtual_memory().total / (1024 ** 3)
-
-print(f'CPU Cores: {cpu_count}')
-print(f'RAM: {ram} GB')
-
-# Check GPU (example using NVIDIA-SMI)
-import subprocess
-gpu_info = subprocess.run(['nvidia-smi', '--query-gpu=memory.total', '--format=csv,noheader'], capture_output=True, text=True).stdout.strip()
-print(f'GPU Memory: {gpu_info}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary use of Ollama in local LLM training?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,25 +106,7 @@ print(f'GPU Memory: {gpu_info}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Training LLMs locally demands significant computational resources. Key hardware requirements include a high-performance CPU, ample RAM (at least 32GB), and a powerful GPU with at least 16GB of VRAM. Ensuring your system meets these requirements is essential for efficient and effective model training.
-
-```python title="check_hardware.py"
-import psutil
-
-# Check CPU and RAM
-cpu_count = psutil.cpu_count(logical=False)
-ram = psutil.virtual_memory().total / (1024 ** 3)
-
-print(f'CPU Cores: {cpu_count}')
-print(f'RAM: {ram} GB')
-
-# Check GPU (example using NVIDIA-SMI)
-import subprocess
-gpu_info = subprocess.run(['nvidia-smi', '--query-gpu=memory.total', '--format=csv,noheader'], capture_output=True, text=True).stdout.strip()
-print(f'GPU Memory: {gpu_info}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the minimum recommended RAM for efficient local LLM training?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

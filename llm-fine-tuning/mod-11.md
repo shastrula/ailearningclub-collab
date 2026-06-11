@@ -97,40 +97,7 @@ ppo_update(policy, rewards, states, actions)
 
 > **💡 Tip:** When implementing RLHF with PPO, ensure that the reward model is well-trained and accurately reflects human preferences. Poorly trained reward models can lead to suboptimal performance and misalignment of the language model.
 
-Proximal Policy Optimization (PPO) is a popular reinforcement learning algorithm that can be used in conjunction with RLHF. PPO helps stabilize the training process by clipping the probability ratio, preventing large updates that could destabilize the model. Integrating PPO with RLHF allows for more efficient and effective fine-tuning of LLMs.
-
-```python title="example2.py"
-import torch
-import torch.nn as nn
-import torch.optim as optim
-
-# Define a simple neural network for the policy
-class PolicyNetwork(nn.Module):
-    def __init__(self):
-        super(PolicyNetwork, self).__init__()
-        self.fc = nn.Linear(4, 2)
-        self.softmax = nn.Softmax(dim=-1)
-    
-    def forward(self, x):
-        return self.softmax(self.fc(x))
-
-# Initialize policy network and optimizer
-policy = PolicyNetwork()
-optimizer = optim.Adam(policy.parameters(), lr=0.01)
-
-# Placeholder for actual PPO implementation
-def ppo_update(policy, rewards, states, actions):
-    # Placeholder for PPO update logic
-    pass
-
-# Simulate PPO update
-states = torch.randn(10, 4)  # 10 states, each with 4 features
-actions = torch.randint(0, 2, (10,))  # 10 actions
-rewards = torch.randn(10)  # 10 rewards
-ppo_update(policy, rewards, states, actions)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of RLHF?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -154,40 +121,7 @@ ppo_update(policy, rewards, states, actions)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Proximal Policy Optimization (PPO) is a popular reinforcement learning algorithm that can be used in conjunction with RLHF. PPO helps stabilize the training process by clipping the probability ratio, preventing large updates that could destabilize the model. Integrating PPO with RLHF allows for more efficient and effective fine-tuning of LLMs.
-
-```python title="example2.py"
-import torch
-import torch.nn as nn
-import torch.optim as optim
-
-# Define a simple neural network for the policy
-class PolicyNetwork(nn.Module):
-    def __init__(self):
-        super(PolicyNetwork, self).__init__()
-        self.fc = nn.Linear(4, 2)
-        self.softmax = nn.Softmax(dim=-1)
-    
-    def forward(self, x):
-        return self.softmax(self.fc(x))
-
-# Initialize policy network and optimizer
-policy = PolicyNetwork()
-optimizer = optim.Adam(policy.parameters(), lr=0.01)
-
-# Placeholder for actual PPO implementation
-def ppo_update(policy, rewards, states, actions):
-    # Placeholder for PPO update logic
-    pass
-
-# Simulate PPO update
-states = torch.randn(10, 4)  # 10 states, each with 4 features
-actions = torch.randint(0, 2, (10,))  # 10 actions
-rewards = torch.randn(10)  # 10 rewards
-ppo_update(policy, rewards, states, actions)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which algorithm is commonly used with RLHF for stable training?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

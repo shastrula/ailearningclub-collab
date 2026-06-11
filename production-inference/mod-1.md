@@ -85,32 +85,7 @@ with trt.Builder(TRT_LOGGER) as builder, builder.create_network() as network, bu
 
 > **💡 Tip:** When using TensorRT, ensure that your model is compatible with the supported layer types and operations. Additionally, profile your model to identify bottlenecks and optimize accordingly.
 
-TensorRT is a high-performance deep learning inference optimizer and runtime. It accelerates neural network inference by optimizing models for deployment on NVIDIA GPUs, resulting in significant speedups and reduced latency.
-
-```python title="example2.py"
-import tensorrt as trt
-
-# Initialize the TensorRT logger and builder
-TRT_LOGGER = trt.Logger(trt.Logger.WARNING)
-builder = trt.Builder(TRT_LOGGER)
-
-# Create a network and configure the builder
-network = builder.create_network(1 << int(trt.NetworkDefinitionCreationFlag.EXPLICIT_BATCH))
-config = builder.create_builder_config()
-
-# Load a pre-trained model and build the engine
-with trt.Builder(TRT_LOGGER) as builder, builder.create_network() as network, builder.create_builder_config() as config:
-    # Add layers and operations to the network
-    #... (code to add layers)
-    # Build the engine
-    engine = builder.build_engine(network, config)
-
-    # Save the engine to a file
-    with open('model.engine', 'wb') as f:
-        f.write(engine.serialize())
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of vLLM?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -134,32 +109,7 @@ with trt.Builder(TRT_LOGGER) as builder, builder.create_network() as network, bu
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-TensorRT is a high-performance deep learning inference optimizer and runtime. It accelerates neural network inference by optimizing models for deployment on NVIDIA GPUs, resulting in significant speedups and reduced latency.
-
-```python title="example2.py"
-import tensorrt as trt
-
-# Initialize the TensorRT logger and builder
-TRT_LOGGER = trt.Logger(trt.Logger.WARNING)
-builder = trt.Builder(TRT_LOGGER)
-
-# Create a network and configure the builder
-network = builder.create_network(1 << int(trt.NetworkDefinitionCreationFlag.EXPLICIT_BATCH))
-config = builder.create_builder_config()
-
-# Load a pre-trained model and build the engine
-with trt.Builder(TRT_LOGGER) as builder, builder.create_network() as network, builder.create_builder_config() as config:
-    # Add layers and operations to the network
-    #... (code to add layers)
-    # Build the engine
-    engine = builder.build_engine(network, config)
-
-    # Save the engine to a file
-    with open('model.engine', 'wb') as f:
-        f.write(engine.serialize())
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which of the following is a key feature of TensorRT?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

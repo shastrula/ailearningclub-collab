@@ -77,24 +77,7 @@ print(model.predict([[0, 0]])[0])
 
 > **💡 Tip:** When using Logistic Regression, ensure your features are scaled properly as the algorithm is sensitive to the scale of the input features.
 
-Logistic Regression is a popular algorithm used for binary classification problems. Despite its name, it is a classification, not regression, technique. It models the probability that a given input point belongs to a certain class. The algorithm uses a logistic function to provide a probability which can then be used to assign a class.
-
-```python title="example2.py"
-from sklearn.linear_model import LogisticRegression
-from sklearn.datasets import make_classification
-
-# Generate a binary classification dataset
-X, y = make_classification(n_samples=100, n_features=2, n_informative=2, n_redundant=0, random_state=1)
-
-# Create and train the model
-model = LogisticRegression(max_iter=1000)
-model.fit(X, y)
-
-# Make a prediction
-print(model.predict([[0, 0]])[0])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What type of problems is Linear Regression best suited for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,24 +101,7 @@ print(model.predict([[0, 0]])[0])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Logistic Regression is a popular algorithm used for binary classification problems. Despite its name, it is a classification, not regression, technique. It models the probability that a given input point belongs to a certain class. The algorithm uses a logistic function to provide a probability which can then be used to assign a class.
-
-```python title="example2.py"
-from sklearn.linear_model import LogisticRegression
-from sklearn.datasets import make_classification
-
-# Generate a binary classification dataset
-X, y = make_classification(n_samples=100, n_features=2, n_informative=2, n_redundant=0, random_state=1)
-
-# Create and train the model
-model = LogisticRegression(max_iter=1000)
-model.fit(X, y)
-
-# Make a prediction
-print(model.predict([[0, 0]])[0])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary use of Logistic Regression?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

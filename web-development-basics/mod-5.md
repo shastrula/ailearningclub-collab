@@ -86,30 +86,6 @@ let buttons = element.querySelectorAll("button");
 
 ---
 
-Navigate between elements:
-
-```javascript
-let element = document.querySelector(".item");
-
-// Parent and children
-let parent = element.parentElement;
-let children = element.children;
-let firstChild = element.firstElementChild;
-let lastChild = element.lastElementChild;
-
-// Siblings
-let nextSibling = element.nextElementSibling;
-let prevSibling = element.previousElementSibling;
-
-// Closest parent matching selector
-let container = element.closest(".container");
-
-// Query within element
-let buttons = element.querySelectorAll("button");
-```
-
----
-
 <div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which method selects all elements with a class name?</p>
   <div class="space-y-2">
@@ -136,31 +112,7 @@ let buttons = element.querySelectorAll("button");
 
 ---
 
-Navigate between elements:
-
-```javascript
-let element = document.querySelector(".item");
-
-// Parent and children
-let parent = element.parentElement;
-let children = element.children;
-let firstChild = element.firstElementChild;
-let lastChild = element.lastElementChild;
-
-// Siblings
-let nextSibling = element.nextElementSibling;
-let prevSibling = element.previousElementSibling;
-
-// Closest parent matching selector
-let container = element.closest(".container");
-
-// Query within element
-let buttons = element.querySelectorAll("button");
-```
-
----
-
-<div class="quiz" data-correct="2">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does addEventListener do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -186,31 +138,7 @@ let buttons = element.querySelectorAll("button");
 
 ---
 
-Navigate between elements:
-
-```javascript
-let element = document.querySelector(".item");
-
-// Parent and children
-let parent = element.parentElement;
-let children = element.children;
-let firstChild = element.firstElementChild;
-let lastChild = element.lastElementChild;
-
-// Siblings
-let nextSibling = element.nextElementSibling;
-let prevSibling = element.previousElementSibling;
-
-// Closest parent matching selector
-let container = element.closest(".container");
-
-// Query within element
-let buttons = element.querySelectorAll("button");
-```
-
----
-
-<div class="quiz" data-correct="2">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does event.preventDefault() do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -236,31 +164,7 @@ let buttons = element.querySelectorAll("button");
 
 ---
 
-Navigate between elements:
-
-```javascript
-let element = document.querySelector(".item");
-
-// Parent and children
-let parent = element.parentElement;
-let children = element.children;
-let firstChild = element.firstElementChild;
-let lastChild = element.lastElementChild;
-
-// Siblings
-let nextSibling = element.nextElementSibling;
-let prevSibling = element.previousElementSibling;
-
-// Closest parent matching selector
-let container = element.closest(".container");
-
-// Query within element
-let buttons = element.querySelectorAll("button");
-```
-
----
-
-<div class="quiz" data-correct="2">
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ What is event bubbling?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -286,31 +190,7 @@ let buttons = element.querySelectorAll("button");
 
 ---
 
-Navigate between elements:
-
-```javascript
-let element = document.querySelector(".item");
-
-// Parent and children
-let parent = element.parentElement;
-let children = element.children;
-let firstChild = element.firstElementChild;
-let lastChild = element.lastElementChild;
-
-// Siblings
-let nextSibling = element.nextElementSibling;
-let prevSibling = element.previousElementSibling;
-
-// Closest parent matching selector
-let container = element.closest(".container");
-
-// Query within element
-let buttons = element.querySelectorAll("button");
-```
-
----
-
-<div class="quiz" data-correct="2">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ How do you add a class to an element?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

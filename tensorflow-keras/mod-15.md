@@ -110,53 +110,7 @@ plt.show()
 
 > **💡 Tip:** When working with time series data, it's important to preprocess the data to ensure stationarity and remove any trends or seasonality. Techniques such as differencing or seasonal decomposition can help achieve this.
 
-Recurrent Neural Networks (RNNs) are particularly well-suited for modeling sequential data like time series. RNNs have feedback connections that allow them to maintain a memory of previous inputs, making them effective at capturing temporal dependencies. In this section, we will build an RNN model using Keras to forecast future values in a time series dataset.
-
-```python title="example2.py"
-import numpy as np
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import SimpleRNN, Dense
-
-# Generate synthetic time series data
-np.random.seed(42)
-time = np.arange(0, 100)
-data = np.sin(0.1 * time) + np.random.normal(scale=0.1, size=len(time))
-
-# Prepare data for RNN
-def create_dataset(data, look_back=1):
-    X, Y = [], []
-    for i in range(len(data)-look_back-1):
-        X.append(data[i:(i+look_back), 0])
-        Y.append(data[i + look_back, 0])
-    return np.array(X), np.array(Y)
-
-look_back = 10
-X, Y = create_dataset(data.reshape(-1, 1), look_back)
-
-# Build RNN model
-model = Sequential()
-model.add(SimpleRNN(50, input_shape=(look_back, 1)))
-model.add(Dense(1))
-model.compile(loss='mean_squared_error', optimizer='adam')
-
-# Train the model
-model.fit(X, Y, epochs=100, batch_size=1, verbose=2)
-
-# Make predictions
-train_predict = model.predict(X)
-
-# Plot predictions
-plt.plot(data, label='Actual')
-plt.plot(np.arange(look_back, len(data)), train_predict, label='Predicted')
-plt.title('Time Series Forecasting with RNN')
-plt.xlabel('Time')
-plt.ylabel('Value')
-plt.legend()
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary characteristic of time series data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -180,53 +134,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Recurrent Neural Networks (RNNs) are particularly well-suited for modeling sequential data like time series. RNNs have feedback connections that allow them to maintain a memory of previous inputs, making them effective at capturing temporal dependencies. In this section, we will build an RNN model using Keras to forecast future values in a time series dataset.
-
-```python title="example2.py"
-import numpy as np
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import SimpleRNN, Dense
-
-# Generate synthetic time series data
-np.random.seed(42)
-time = np.arange(0, 100)
-data = np.sin(0.1 * time) + np.random.normal(scale=0.1, size=len(time))
-
-# Prepare data for RNN
-def create_dataset(data, look_back=1):
-    X, Y = [], []
-    for i in range(len(data)-look_back-1):
-        X.append(data[i:(i+look_back), 0])
-        Y.append(data[i + look_back, 0])
-    return np.array(X), np.array(Y)
-
-look_back = 10
-X, Y = create_dataset(data.reshape(-1, 1), look_back)
-
-# Build RNN model
-model = Sequential()
-model.add(SimpleRNN(50, input_shape=(look_back, 1)))
-model.add(Dense(1))
-model.compile(loss='mean_squared_error', optimizer='adam')
-
-# Train the model
-model.fit(X, Y, epochs=100, batch_size=1, verbose=2)
-
-# Make predictions
-train_predict = model.predict(X)
-
-# Plot predictions
-plt.plot(data, label='Actual')
-plt.plot(np.arange(look_back, len(data)), train_predict, label='Predicted')
-plt.title('Time Series Forecasting with RNN')
-plt.xlabel('Time')
-plt.ylabel('Value')
-plt.legend()
-plt.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which type of neural network is particularly well-suited for modeling sequential data like time series?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -80,10 +80,7 @@ JSP (JavaServer Pages) is a technology that helps software developers create dyn
 
 > **💡 Tip:** Always ensure that your JSP files are compiled before deployment to avoid runtime errors.
 
-JSP (JavaServer Pages) is a technology that helps software developers create dynamically generated web pages based on HTML, XML, or other document types. JSP files are easier to maintain than Servlets because they separate the application logic from the presentation layer.
-
-```java title="example2.jsp"
-<%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of a Java Servlet?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -107,10 +104,7 @@ JSP (JavaServer Pages) is a technology that helps software developers create dyn
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-JSP (JavaServer Pages) is a technology that helps software developers create dynamically generated web pages based on HTML, XML, or other document types. JSP files are easier to maintain than Servlets because they separate the application logic from the presentation layer.
-
-```java title="example2.jsp"
-<%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does JSP stand for and what is its main advantage?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

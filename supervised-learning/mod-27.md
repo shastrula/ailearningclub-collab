@@ -97,40 +97,7 @@ print(best_params)
 
 > **💡 Tip:** Always perform cross-validation when tuning hyperparameters to avoid overfitting and ensure the model generalizes well to unseen data.
 
-Tuning the parameters of a Gradient Boosting model is essential for achieving optimal performance. Key parameters include `n_estimators`, `learning_rate`, and `max_depth`. `n_estimators` defines the number of boosting stages, `learning_rate` shrinks the contribution of each tree, and `max_depth` limits the depth of the trees.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.datasets import make_regression
-from sklearn.model_selection import train_test_split, GridSearchCV
-
-# Generate a random regression problem
-X, y = make_regression(n_samples=100, n_features=2, noise=0.1)
-
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Initialize the Gradient Boosting Regressor
-gbr = GradientBoostingRegressor(random_state=42)
-
-# Define the parameter grid
-param_grid = {
-    'n_estimators': [50, 100, 200],
-    'learning_rate': [0.01, 0.1, 0.2],
-    'max_depth': [3, 4, 5]
-}
-
-# Perform Grid Search
-grid_search = GridSearchCV(estimator=gbr, param_grid=param_grid, cv=3, n_jobs=-1, verbose=2)
-grid_search.fit(X_train, y_train)
-
-# Get the best parameters
-best_params = grid_search.best_params_
-print(best_params)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary goal of Gradient Boosting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -154,40 +121,7 @@ print(best_params)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Tuning the parameters of a Gradient Boosting model is essential for achieving optimal performance. Key parameters include `n_estimators`, `learning_rate`, and `max_depth`. `n_estimators` defines the number of boosting stages, `learning_rate` shrinks the contribution of each tree, and `max_depth` limits the depth of the trees.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.datasets import make_regression
-from sklearn.model_selection import train_test_split, GridSearchCV
-
-# Generate a random regression problem
-X, y = make_regression(n_samples=100, n_features=2, noise=0.1)
-
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Initialize the Gradient Boosting Regressor
-gbr = GradientBoostingRegressor(random_state=42)
-
-# Define the parameter grid
-param_grid = {
-    'n_estimators': [50, 100, 200],
-    'learning_rate': [0.01, 0.1, 0.2],
-    'max_depth': [3, 4, 5]
-}
-
-# Perform Grid Search
-grid_search = GridSearchCV(estimator=gbr, param_grid=param_grid, cv=3, n_jobs=-1, verbose=2)
-grid_search.fit(X_train, y_train)
-
-# Get the best parameters
-best_params = grid_search.best_params_
-print(best_params)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which parameter in Gradient Boosting controls the number of boosting stages?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

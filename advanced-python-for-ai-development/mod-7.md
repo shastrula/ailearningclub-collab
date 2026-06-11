@@ -93,36 +93,7 @@ plt.show()
 
 > **💡 Tip:** When using K-Means clustering, it's important to choose the right number of clusters. The Elbow Method is a useful technique to determine the optimal number of clusters by plotting the explained variation as a function of the number of clusters.
 
-Unsupervised learning deals with unlabeled data and aims to learn the patterns and structure from the data without predefined labels. K-Means clustering is a popular unsupervised learning algorithm that partitions the data into K distinct clusters based on feature similarity. It is widely used for customer segmentation, image compression, and more.
-
-**example2.py**
-
-```
-from sklearn.cluster import KMeans
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Generate sample data
-X = np.array([[1, 2], [1, 4], [1, 0],
-              [4, 2], [4, 4], [4, 0]])
-
-# Create a KMeans model
-kmeans = KMeans(n_clusters=2, random_state=42)
-
-# Fit the model to the data
-kmeans.fit(X)
-
-# Get the cluster centers and labels
-centroids = kmeans.cluster_centers_
-labels = kmeans.labels_
-
-# Plot the data points and centroids
-plt.scatter(X[:, 0], X[:, 1], c=labels, cmap='viridis')
-plt.scatter(centroids[:, 0], centroids[:, 1], s=300, c='red', marker='X')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of using train_test_split in the first code example?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -146,36 +117,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Unsupervised learning deals with unlabeled data and aims to learn the patterns and structure from the data without predefined labels. K-Means clustering is a popular unsupervised learning algorithm that partitions the data into K distinct clusters based on feature similarity. It is widely used for customer segmentation, image compression, and more.
-
-**example2.py**
-
-```
-from sklearn.cluster import KMeans
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Generate sample data
-X = np.array([[1, 2], [1, 4], [1, 0],
-              [4, 2], [4, 4], [4, 0]])
-
-# Create a KMeans model
-kmeans = KMeans(n_clusters=2, random_state=42)
-
-# Fit the model to the data
-kmeans.fit(X)
-
-# Get the cluster centers and labels
-centroids = kmeans.cluster_centers_
-labels = kmeans.labels_
-
-# Plot the data points and centroids
-plt.scatter(X[:, 0], X[:, 1], c=labels, cmap='viridis')
-plt.scatter(centroids[:, 0], centroids[:, 1], s=300, c='red', marker='X')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ In the second code example, what does the KMeans algorithm do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

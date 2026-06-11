@@ -111,54 +111,7 @@ print(model)
 
 > **💡 Tip:** When performing quantization-aware training, ensure that the calibration dataset is representative of the data distribution the model will encounter during inference to achieve optimal performance.
 
-Quantization-aware training (QAT) is a technique where the model is trained with quantization effects simulated during the training process. This helps the model learn to be more robust to the quantization errors that will be introduced during inference. QAT typically involves modifying the training loop to include fake quantization operations, which mimic the effects of quantization without actually quantizing the weights and activations.
-
-```python title="example2.py"
-import torch
-import torch.nn as nn
-
-# Define a simple neural network
-class SimpleNN(nn.Module):
-    def __init__(self):
-        super(SimpleNN, self).__init__()
-        self.fc1 = nn.Linear(10, 5)
-        self.fc2 = nn.Linear(5, 2)
-
-    def forward(self, x):
-        x = torch.relu(self.fc1(x))
-        x = torch.relu(self.fc2(x))
-        return x
-
-# Initialize the model
-model = SimpleNN()
-
-# Prepare the model for quantization-aware training
-model.qconfig = torch.quantization.get_default_qat_qconfig('fbgemm')
-torch.quantization.prepare_qat(model, inplace=True)
-
-# Define a simple training loop
-optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
-criterion = nn.CrossEntropyLoss()
-
-# Dummy input and target
-input = torch.randn(1, 10)
-target = torch.tensor([1])
-
-# Training step
-optimizer.zero_grad()
-output = model(input)
-loss = criterion(output, target)
-loss.backward()
-optimizer.step()
-
-# Convert the model to quantized version
-torch.quantization.convert(model, inplace=True)
-
-# Print the model
-print(model)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of model quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -182,54 +135,7 @@ print(model)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Quantization-aware training (QAT) is a technique where the model is trained with quantization effects simulated during the training process. This helps the model learn to be more robust to the quantization errors that will be introduced during inference. QAT typically involves modifying the training loop to include fake quantization operations, which mimic the effects of quantization without actually quantizing the weights and activations.
-
-```python title="example2.py"
-import torch
-import torch.nn as nn
-
-# Define a simple neural network
-class SimpleNN(nn.Module):
-    def __init__(self):
-        super(SimpleNN, self).__init__()
-        self.fc1 = nn.Linear(10, 5)
-        self.fc2 = nn.Linear(5, 2)
-
-    def forward(self, x):
-        x = torch.relu(self.fc1(x))
-        x = torch.relu(self.fc2(x))
-        return x
-
-# Initialize the model
-model = SimpleNN()
-
-# Prepare the model for quantization-aware training
-model.qconfig = torch.quantization.get_default_qat_qconfig('fbgemm')
-torch.quantization.prepare_qat(model, inplace=True)
-
-# Define a simple training loop
-optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
-criterion = nn.CrossEntropyLoss()
-
-# Dummy input and target
-input = torch.randn(1, 10)
-target = torch.tensor([1])
-
-# Training step
-optimizer.zero_grad()
-output = model(input)
-loss = criterion(output, target)
-loss.backward()
-optimizer.step()
-
-# Convert the model to quantized version
-torch.quantization.convert(model, inplace=True)
-
-# Print the model
-print(model)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which technique is used to train a model to be robust to quantization errors?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

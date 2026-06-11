@@ -80,23 +80,7 @@ print(df)
 
 > **💡 Tip:** Always check for and handle missing values before performing any analysis to avoid skewed results.
 
-Pandas DataFrames are powerful for data manipulation and cleaning. Best practices involve using methods like `dropna()` for handling missing values, `fillna()` for imputation, and `apply()` for custom transformations. Additionally, leveraging `groupby()` for aggregation and `merge()` for combining datasets efficiently are critical skills. These practices ensure data integrity and prepare datasets for analysis.
-
-```python title="example2.py"
-import pandas as pd
-
-# Create a sample DataFrame
-data = {'A': [1, 2, np.nan], 'B': [4, np.nan, 6]}
-df = pd.DataFrame(data)
-
-# Fill missing values with the mean of the column
-df['A'].fillna(df['A'].mean(), inplace=True)
-df['B'].fillna(df['B'].mean(), inplace=True)
-
-print(df)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary advantage of using NumPy arrays over Python lists for data science tasks?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,23 +104,7 @@ print(df)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Pandas DataFrames are powerful for data manipulation and cleaning. Best practices involve using methods like `dropna()` for handling missing values, `fillna()` for imputation, and `apply()` for custom transformations. Additionally, leveraging `groupby()` for aggregation and `merge()` for combining datasets efficiently are critical skills. These practices ensure data integrity and prepare datasets for analysis.
-
-```python title="example2.py"
-import pandas as pd
-
-# Create a sample DataFrame
-data = {'A': [1, 2, np.nan], 'B': [4, np.nan, 6]}
-df = pd.DataFrame(data)
-
-# Fill missing values with the mean of the column
-df['A'].fillna(df['A'].mean(), inplace=True)
-df['B'].fillna(df['B'].mean(), inplace=True)
-
-print(df)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which Pandas method is best for combining two DataFrames based on a common column?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

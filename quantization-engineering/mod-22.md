@@ -84,27 +84,7 @@ print(quantized_weights)
 
 > **💡 Tip:** When quantizing models, ensure that the quantization level (e.g., INT4, INT8) is appropriate for the specific application to balance between performance and accuracy.
 
-INT4 and INT8 quantization techniques reduce the bit-width of model parameters to 4 or 8 bits, respectively, to save memory and computational resources. The bitsandbytes library provides efficient implementations for these quantization methods, enabling faster inference and reduced model size without significant loss in accuracy.
-
-```python title="example2.py"
-import torch
-import bitsandbytes as bnb
-
-# Example of quantizing a simple linear layer using INT8 quantization
-
-# Initialize a linear layer
-linear_layer = torch.nn.Linear(10, 5)
-
-# Quantize the weights using INT8
-quantized_weights = bnb.nn.int8_quantize(linear_layer.weight)
-
-# Replace the original weights with quantized weights
-linear_layer.weight.data = quantized_weights
-
-print(quantized_weights)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of GGUF quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -128,27 +108,7 @@ print(quantized_weights)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-INT4 and INT8 quantization techniques reduce the bit-width of model parameters to 4 or 8 bits, respectively, to save memory and computational resources. The bitsandbytes library provides efficient implementations for these quantization methods, enabling faster inference and reduced model size without significant loss in accuracy.
-
-```python title="example2.py"
-import torch
-import bitsandbytes as bnb
-
-# Example of quantizing a simple linear layer using INT8 quantization
-
-# Initialize a linear layer
-linear_layer = torch.nn.Linear(10, 5)
-
-# Quantize the weights using INT8
-quantized_weights = bnb.nn.int8_quantize(linear_layer.weight)
-
-# Replace the original weights with quantized weights
-linear_layer.weight.data = quantized_weights
-
-print(quantized_weights)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which library provides efficient implementations for INT4/INT8 quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -90,33 +90,7 @@ print(f'Accuracy: {xgb_clf.score(X_test, y_test):.2f}')
 
 > **💡 Tip:** When using boosting algorithms like XGBoost, tuning hyperparameters such as learning_rate and n_estimators can significantly impact model performance.
 
-Boosting is an ensemble technique where multiple models are trained sequentially. Each model attempts to correct the errors of the previous one. Popular boosting algorithms include AdaBoost, XGBoost, LightGBM, and CatBoost.
-
-```python title="example2.py"
-import xgboost as xgb
-from sklearn.datasets import make_classification
-from sklearn.model_selection import train_test_split
-
-# Generate a random binary classification dataset
-X, y = make_classification(n_samples=1000, n_features=20, n_classes=2, random_state=42)
-
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Initialize the XGBoost classifier
-xgb_clf = xgb.XGBClassifier(n_estimators=100, learning_rate=0.1, random_state=42)
-
-# Train the model
-xgb_clf.fit(X_train, y_train)
-
-# Make predictions
-y_pred = xgb_clf.predict(X_test)
-
-# Print the accuracy
-print(f'Accuracy: {xgb_clf.score(X_test, y_test):.2f}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of bagging?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -140,33 +114,7 @@ print(f'Accuracy: {xgb_clf.score(X_test, y_test):.2f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Boosting is an ensemble technique where multiple models are trained sequentially. Each model attempts to correct the errors of the previous one. Popular boosting algorithms include AdaBoost, XGBoost, LightGBM, and CatBoost.
-
-```python title="example2.py"
-import xgboost as xgb
-from sklearn.datasets import make_classification
-from sklearn.model_selection import train_test_split
-
-# Generate a random binary classification dataset
-X, y = make_classification(n_samples=1000, n_features=20, n_classes=2, random_state=42)
-
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Initialize the XGBoost classifier
-xgb_clf = xgb.XGBClassifier(n_estimators=100, learning_rate=0.1, random_state=42)
-
-# Train the model
-xgb_clf.fit(X_train, y_train)
-
-# Make predictions
-y_pred = xgb_clf.predict(X_test)
-
-# Print the accuracy
-print(f'Accuracy: {xgb_clf.score(X_test, y_test):.2f}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which boosting algorithm is known for its efficiency in handling large datasets?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

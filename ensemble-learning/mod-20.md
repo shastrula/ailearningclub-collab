@@ -91,34 +91,7 @@ print('Accuracy:', xgb_clf.score(X_test, y_test))
 
 > **💡 Tip:** When using ensemble methods, ensure that the base models are diverse to maximize the benefits of ensemble learning.
 
-Boosting is an ensemble technique that reduces bias by sequentially training models, where each new model attempts to correct the errors of the previous one. Popular boosting algorithms include XGBoost, LightGBM, and CatBoost. These methods are effective for both classification and regression tasks and often yield high performance.
-
-```python title="example2.py"
-import xgboost as xgb
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-
-# Load dataset
-iris = load_iris()
-X, y = iris.data, iris.target
-
-# Split dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Create an XGBoost classifier
-xgb_clf = xgb.XGBClassifier(use_label_encoder=False, eval_metric='logloss')
-
-# Train the model
-xgb_clf.fit(X_train, y_train)
-
-# Make predictions
-y_pred = xgb_clf.predict(X_test)
-
-# Print the accuracy
-print('Accuracy:', xgb_clf.score(X_test, y_test))
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of Bagging?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -142,34 +115,7 @@ print('Accuracy:', xgb_clf.score(X_test, y_test))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Boosting is an ensemble technique that reduces bias by sequentially training models, where each new model attempts to correct the errors of the previous one. Popular boosting algorithms include XGBoost, LightGBM, and CatBoost. These methods are effective for both classification and regression tasks and often yield high performance.
-
-```python title="example2.py"
-import xgboost as xgb
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-
-# Load dataset
-iris = load_iris()
-X, y = iris.data, iris.target
-
-# Split dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Create an XGBoost classifier
-xgb_clf = xgb.XGBClassifier(use_label_encoder=False, eval_metric='logloss')
-
-# Train the model
-xgb_clf.fit(X_train, y_train)
-
-# Make predictions
-y_pred = xgb_clf.predict(X_test)
-
-# Print the accuracy
-print('Accuracy:', xgb_clf.score(X_test, y_test))
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which ensemble method focuses on sequentially training models to correct errors?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

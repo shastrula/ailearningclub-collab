@@ -74,24 +74,7 @@ plt.show()
 
 > **💡 Tip:** When creating pair plots with Seaborn, ensure that the 'hue' parameter is used to differentiate categories, making the plot more informative and easier to interpret.
 
-Seaborn is a powerful library for creating advanced EDA charts. It builds on Matplotlib and provides a high-level interface for drawing attractive and informative statistical graphics. Advanced EDA charts such as pair plots, heatmaps, and violin plots help in uncovering deeper insights from the data.
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-import pandas as pd
-
-# Load example dataset
-data = sns.load_dataset('iris')
-
-# Create a pair plot
-sns.pairplot(data, hue='species')
-
-# Show the plot
-plt.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which library is used for creating interactive visualizations?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -115,24 +98,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Seaborn is a powerful library for creating advanced EDA charts. It builds on Matplotlib and provides a high-level interface for drawing attractive and informative statistical graphics. Advanced EDA charts such as pair plots, heatmaps, and violin plots help in uncovering deeper insights from the data.
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-import pandas as pd
-
-# Load example dataset
-data = sns.load_dataset('iris')
-
-# Create a pair plot
-sns.pairplot(data, hue='species')
-
-# Show the plot
-plt.show()
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ What type of plot is created using the 'pairplot' function in Seaborn?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

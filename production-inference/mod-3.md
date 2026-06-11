@@ -81,28 +81,7 @@ print('Engine loaded successfully for inference')
 
 > **💡 Tip:** Always ensure that the input tensor dimensions match the model's expected input shape to avoid runtime errors during inference.
 
-Once the TensorRT engine is built, it can be optimized and serialized for deployment. Optimization involves techniques like layer fusion and precision adjustments. Serialization converts the engine into a format that can be easily stored and loaded for inference.
-
-```python title="example2.py"
-import tensorrt as trt
-import pycuda.driver as cuda
-import pycuda.autoinit
-
-# Serialize the engine
-with open('model.engine', 'wb') as f:
-    f.write(engine.serialize())
-
-print('Engine serialized and saved to model.engine')
-
-# Load the engine for inference
-with open('model.engine', 'rb') as f, trt.Runtime(trt.Logger(trt.Logger.WARNING)) as runtime:
-    engine = runtime.deserialize_cuda_engine(f.read())
-    context = engine.create_execution_context()
-
-print('Engine loaded successfully for inference')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary function of TensorRT?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -126,28 +105,7 @@ print('Engine loaded successfully for inference')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Once the TensorRT engine is built, it can be optimized and serialized for deployment. Optimization involves techniques like layer fusion and precision adjustments. Serialization converts the engine into a format that can be easily stored and loaded for inference.
-
-```python title="example2.py"
-import tensorrt as trt
-import pycuda.driver as cuda
-import pycuda.autoinit
-
-# Serialize the engine
-with open('model.engine', 'wb') as f:
-    f.write(engine.serialize())
-
-print('Engine serialized and saved to model.engine')
-
-# Load the engine for inference
-with open('model.engine', 'rb') as f, trt.Runtime(trt.Logger(trt.Logger.WARNING)) as runtime:
-    engine = runtime.deserialize_cuda_engine(f.read())
-    context = engine.create_execution_context()
-
-print('Engine loaded successfully for inference')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which step is crucial after building a TensorRT engine for deployment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

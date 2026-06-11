@@ -82,29 +82,7 @@ model.compile(optimizer='adam', loss='mean_squared_error')
 
 > **💡 Tip:** When defining your model in Keras, always ensure that the input_shape parameter in the first layer matches the shape of your input data to avoid dimension mismatch errors.
 
-Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. It was developed with a focus on enabling fast experimentation. Being able to go from idea to result with the least possible delay is key to doing good research. Keras allows you to quickly build and evaluate neural network architectures.
-
-```python title="example2.py"
-from keras.models import Sequential
-from keras.layers import Dense
-
-# Create a simple Keras Sequential model
-model = Sequential()
-
-# Add an input layer 
-model.add(Dense(10, activation='relu', input_shape=(4,)))
-
-# Add one hidden layer
-model.add(Dense(8, activation='relu'))
-
-# Add an output layer 
-model.add(Dense(1))
-
-# Compile the model
-model.compile(optimizer='adam', loss='mean_squared_error')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is TensorFlow primarily used for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -128,29 +106,7 @@ model.compile(optimizer='adam', loss='mean_squared_error')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. It was developed with a focus on enabling fast experimentation. Being able to go from idea to result with the least possible delay is key to doing good research. Keras allows you to quickly build and evaluate neural network architectures.
-
-```python title="example2.py"
-from keras.models import Sequential
-from keras.layers import Dense
-
-# Create a simple Keras Sequential model
-model = Sequential()
-
-# Add an input layer 
-model.add(Dense(10, activation='relu', input_shape=(4,)))
-
-# Add one hidden layer
-model.add(Dense(8, activation='relu'))
-
-# Add an output layer 
-model.add(Dense(1))
-
-# Compile the model
-model.compile(optimizer='adam', loss='mean_squared_error')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which API is Keras designed to work with?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

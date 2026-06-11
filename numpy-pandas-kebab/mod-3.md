@@ -75,14 +75,7 @@ import pandas as pd
 > **💡 Tip:** Don't forget to handle missing values when working with real-world datasets using methods like fillna(), dropna() or interpolate().
 
 
-Numpy is a powerful library for handling numerical data in Python. It provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these data structures.
-
-```python title="example.py"
-import numpy as np
-# Perform various array operations such as reshaping, slicing, broadcasting etc.
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which function from Pandas can be used for data aggregation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -103,46 +103,7 @@ print(f'Accuracy: {accuracy * 100:.2f}%')
 
 > **💡 Tip:** When tuning hyperparameters, start with a coarse grid to identify the best range, then perform a finer grid search within that range for optimal performance.
 
-XGBoost offers several advanced features such as handling missing values, built-in cross-validation, and support for various objective functions. Hyperparameter tuning is crucial for optimizing model performance. Common hyperparameters include learning_rate, max_depth, and n_estimators.
-
-```python title="example2.py"
-import xgboost as xgb
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.metrics import accuracy_score
-
-# Load dataset
-data = load_iris()
-X, y = data.data, data.target
-
-# Split dataset into training set and test set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Create DMatrix from numpy array
-dtrain = xgb.DMatrix(X_train, label=y_train)
-dtest = xgb.DMatrix(X_test, label=y_test)
-
-# Set parameters for GridSearch
-params = {'max_depth': [3, 4, 5], 'learning_rate': [0.01, 0.1, 0.2], 'n_estimators': [100, 200, 300]}
-xgb_model = xgb.XGBClassifier(objective='multi:softprob', eval_metric='mlogloss')
-
-# Perform GridSearch
-grid_search = GridSearchCV(estimator=xgb_model, param_grid=params, scoring='accuracy', cv=3, n_jobs=-1)
-grid_search.fit(X_train, y_train)
-
-# Get best parameters and train the model
-best_params = grid_search.best_params_
-bst = xgb.train(best_params, dtrain, num_round=10)
-
-# Make prediction
-y_pred = bst.predict(dtest)
-
-# Evaluate the model
-accuracy = accuracy_score(y_test, y_pred.round())
-print(f'Accuracy: {accuracy * 100:.2f}%')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary objective function used in the first code example?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -166,46 +127,7 @@ print(f'Accuracy: {accuracy * 100:.2f}%')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-XGBoost offers several advanced features such as handling missing values, built-in cross-validation, and support for various objective functions. Hyperparameter tuning is crucial for optimizing model performance. Common hyperparameters include learning_rate, max_depth, and n_estimators.
-
-```python title="example2.py"
-import xgboost as xgb
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.metrics import accuracy_score
-
-# Load dataset
-data = load_iris()
-X, y = data.data, data.target
-
-# Split dataset into training set and test set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Create DMatrix from numpy array
-dtrain = xgb.DMatrix(X_train, label=y_train)
-dtest = xgb.DMatrix(X_test, label=y_test)
-
-# Set parameters for GridSearch
-params = {'max_depth': [3, 4, 5], 'learning_rate': [0.01, 0.1, 0.2], 'n_estimators': [100, 200, 300]}
-xgb_model = xgb.XGBClassifier(objective='multi:softprob', eval_metric='mlogloss')
-
-# Perform GridSearch
-grid_search = GridSearchCV(estimator=xgb_model, param_grid=params, scoring='accuracy', cv=3, n_jobs=-1)
-grid_search.fit(X_train, y_train)
-
-# Get best parameters and train the model
-best_params = grid_search.best_params_
-bst = xgb.train(best_params, dtrain, num_round=10)
-
-# Make prediction
-y_pred = bst.predict(dtest)
-
-# Evaluate the model
-accuracy = accuracy_score(y_test, y_pred.round())
-print(f'Accuracy: {accuracy * 100:.2f}%')
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Which hyperparameter is NOT included in the GridSearch in the second code example?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

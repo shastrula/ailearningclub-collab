@@ -92,35 +92,7 @@ print(f'Accuracy: {accuracy:.2f}')
 
 > **💡 Tip:** When using ensemble methods, be cautious of overfitting, especially with complex models like Gradient Boosting. Regularly validate your model using techniques like cross-validation to ensure it generalizes well to unseen data.
 
-Boosting is another ensemble technique where models are trained sequentially, each trying to correct the mistakes of the previous one. This method focuses on reducing bias and is highly effective for both classification and regression tasks. A popular boosting algorithm is Gradient Boosting.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.datasets import make_classification
-from sklearn.model_selection import train_test_split
-
-# Generate a random binary classification dataset
-X, y = make_classification(n_samples=1000, n_features=20, n_classes=2, random_state=42)
-
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Initialize the Gradient Boosting classifier
-gbc = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, random_state=42)
-
-# Train the model
-gbc.fit(X_train, y_train)
-
-# Make predictions
-y_pred = gbc.predict(X_test)
-
-# Calculate accuracy
-accuracy = np.mean(y_pred == y_test)
-print(f'Accuracy: {accuracy:.2f}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of bagging ensemble methods?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -144,35 +116,7 @@ print(f'Accuracy: {accuracy:.2f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Boosting is another ensemble technique where models are trained sequentially, each trying to correct the mistakes of the previous one. This method focuses on reducing bias and is highly effective for both classification and regression tasks. A popular boosting algorithm is Gradient Boosting.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.datasets import make_classification
-from sklearn.model_selection import train_test_split
-
-# Generate a random binary classification dataset
-X, y = make_classification(n_samples=1000, n_features=20, n_classes=2, random_state=42)
-
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Initialize the Gradient Boosting classifier
-gbc = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, random_state=42)
-
-# Train the model
-gbc.fit(X_train, y_train)
-
-# Make predictions
-y_pred = gbc.predict(X_test)
-
-# Calculate accuracy
-accuracy = np.mean(y_pred == y_test)
-print(f'Accuracy: {accuracy:.2f}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which ensemble method trains models sequentially to correct mistakes?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

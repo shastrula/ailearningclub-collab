@@ -68,15 +68,7 @@ Each model page shows: what it does, how to use it, training data, and performan
 
 > **💡 Tip:** For any new task, search HuggingFace first. There's almost certainly a model already trained for it. Only train from scratch when you have domain-specific data that doesn't exist publicly.
 
-Go to huggingface.co/models and filter by:
-- Task — text classification, translation, image classification, etc.
-- Language — English, multilingual, etc.
-- Library — PyTorch, TensorFlow, etc.
-- Downloads — sort by most downloaded to find battle-tested models
-
-Each model page shows: what it does, how to use it, training data, and performance benchmarks.
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the HuggingFace Hub?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

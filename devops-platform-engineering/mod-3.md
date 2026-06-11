@@ -96,40 +96,6 @@ jobs:
 
 ---
 
-GitHub Actions integrates with Git to automate workflows:
-
-```yaml
-name: Deploy on Push to Main
-
-on:
-  push:
-    branches: [main]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Build Docker image
-        run: docker build -t myapp:${{ github.sha }} .
-      
-      - name: Push to ECR
-        run: |
-          aws ecr get-login-password --region us-east-1 | \
-            docker login --username AWS --password-stdin ${{ secrets.ECR_REGISTRY }}
-          docker push ${{ secrets.ECR_REGISTRY }}/myapp:${{ github.sha }}
-      
-      - name: Deploy to ECS
-        run: |
-          aws ecs update-service \
-            --cluster production \
-            --service myapp \
-            --force-new-deployment
-```
-
----
-
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the main advantage of trunk-based development?</p>
   <div class="space-y-2">
@@ -154,41 +120,7 @@ jobs:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-GitHub Actions integrates with Git to automate workflows:
-
-```yaml
-name: Deploy on Push to Main
-
-on:
-  push:
-    branches: [main]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Build Docker image
-        run: docker build -t myapp:${{ github.sha }} .
-      
-      - name: Push to ECR
-        run: |
-          aws ecr get-login-password --region us-east-1 | \
-            docker login --username AWS --password-stdin ${{ secrets.ECR_REGISTRY }}
-          docker push ${{ secrets.ECR_REGISTRY }}/myapp:${{ github.sha }}
-      
-      - name: Deploy to ECS
-        run: |
-          aws ecs update-service \
-            --cluster production \
-            --service myapp \
-            --force-new-deployment
-```
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does a Git pre-commit hook allow you to do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -212,41 +144,7 @@ jobs:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-GitHub Actions integrates with Git to automate workflows:
-
-```yaml
-name: Deploy on Push to Main
-
-on:
-  push:
-    branches: [main]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Build Docker image
-        run: docker build -t myapp:${{ github.sha }} .
-      
-      - name: Push to ECR
-        run: |
-          aws ecr get-login-password --region us-east-1 | \
-            docker login --username AWS --password-stdin ${{ secrets.ECR_REGISTRY }}
-          docker push ${{ secrets.ECR_REGISTRY }}/myapp:${{ github.sha }}
-      
-      - name: Deploy to ECS
-        run: |
-          aws ecs update-service \
-            --cluster production \
-            --service myapp \
-            --force-new-deployment
-```
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the core principle of GitOps?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -269,40 +167,6 @@ jobs:
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-
-GitHub Actions integrates with Git to automate workflows:
-
-```yaml
-name: Deploy on Push to Main
-
-on:
-  push:
-    branches: [main]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Build Docker image
-        run: docker build -t myapp:${{ github.sha }} .
-      
-      - name: Push to ECR
-        run: |
-          aws ecr get-login-password --region us-east-1 | \
-            docker login --username AWS --password-stdin ${{ secrets.ECR_REGISTRY }}
-          docker push ${{ secrets.ECR_REGISTRY }}/myapp:${{ github.sha }}
-      
-      - name: Deploy to ECS
-        run: |
-          aws ecs update-service \
-            --cluster production \
-            --service myapp \
-            --force-new-deployment
-```
-
----
 
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does ArgoCD do in a Kubernetes cluster?</p>
@@ -328,41 +192,7 @@ jobs:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-GitHub Actions integrates with Git to automate workflows:
-
-```yaml
-name: Deploy on Push to Main
-
-on:
-  push:
-    branches: [main]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Build Docker image
-        run: docker build -t myapp:${{ github.sha }} .
-      
-      - name: Push to ECR
-        run: |
-          aws ecr get-login-password --region us-east-1 | \
-            docker login --username AWS --password-stdin ${{ secrets.ECR_REGISTRY }}
-          docker push ${{ secrets.ECR_REGISTRY }}/myapp:${{ github.sha }}
-      
-      - name: Deploy to ECS
-        run: |
-          aws ecs update-service \
-            --cluster production \
-            --service myapp \
-            --force-new-deployment
-```
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ What is the benefit of using annotated tags in Git?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

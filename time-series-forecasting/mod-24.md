@@ -87,30 +87,7 @@ print(forecast[['ds', 'yhat']][-12:])
 
 > **💡 Tip:** When using Prophet, ensure your data is in the correct format with 'ds' for dates and 'y' for values to avoid common errors.
 
-Modern forecasting techniques like Facebook's Prophet and neural network-based models such as LSTM (Long Short-Term Memory) and Transformers are gaining traction. These models can handle complex patterns and seasonality more effectively, offering higher accuracy for non-linear and irregular time series data.
-
-```python title="example2.py"
-from fbprophet import Prophet
-import pandas as pd
-
-# Load time series data
-data = pd.read_csv('time_series_data.csv', parse_dates=['date'], index_col='date')
-data.reset_index(inplace=True)
-data.rename(columns={'date': 'ds', 'value': 'y'}, inplace=True)
-
-# Fit Prophet model
-model = Prophet()
-model.fit(data)
-
-# Create future dataframe
-future = model.make_future_dataframe(periods=12)
-
-# Forecast
-forecast = model.predict(future)
-print(forecast[['ds', 'yhat']][-12:])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary advantage of using SARIMA over ARIMA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -134,30 +111,7 @@ print(forecast[['ds', 'yhat']][-12:])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Modern forecasting techniques like Facebook's Prophet and neural network-based models such as LSTM (Long Short-Term Memory) and Transformers are gaining traction. These models can handle complex patterns and seasonality more effectively, offering higher accuracy for non-linear and irregular time series data.
-
-```python title="example2.py"
-from fbprophet import Prophet
-import pandas as pd
-
-# Load time series data
-data = pd.read_csv('time_series_data.csv', parse_dates=['date'], index_col='date')
-data.reset_index(inplace=True)
-data.rename(columns={'date': 'ds', 'value': 'y'}, inplace=True)
-
-# Fit Prophet model
-model = Prophet()
-model.fit(data)
-
-# Create future dataframe
-future = model.make_future_dataframe(periods=12)
-
-# Forecast
-forecast = model.predict(future)
-print(forecast[['ds', 'yhat']][-12:])
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which model is specifically designed to handle non-linear time series data effectively?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -83,26 +83,7 @@ divide_numbers(10, 0)
 
 > **💡 Tip:** Always use specific exceptions in your except blocks to handle different types of errors appropriately, rather than catching all exceptions with a general except clause.
 
-Error handling involves using try-except blocks to catch and handle exceptions that may occur during the execution of your code. This ensures that your program can gracefully handle errors and continue running, or provide meaningful feedback to the user. In Google Colab, proper error handling can prevent your notebooks from crashing and help you maintain a smooth workflow.
-
-```python title="example2.py"
-def divide_numbers(a, b):
-    try:
-        # Attempt to divide two numbers
-        result = a / b
-        print(f'Result: {result}')
-    except ZeroDivisionError:
-        # Handle division by zero error
-        print('Error: Division by zero is not allowed')
-    except Exception as e:
-        # Handle any other exceptions
-        print(f'An error occurred: {e}')
-
-# Example usage
-divide_numbers(10, 0)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary purpose of using print statements in debugging?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -126,26 +107,7 @@ divide_numbers(10, 0)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Error handling involves using try-except blocks to catch and handle exceptions that may occur during the execution of your code. This ensures that your program can gracefully handle errors and continue running, or provide meaningful feedback to the user. In Google Colab, proper error handling can prevent your notebooks from crashing and help you maintain a smooth workflow.
-
-```python title="example2.py"
-def divide_numbers(a, b):
-    try:
-        # Attempt to divide two numbers
-        result = a / b
-        print(f'Result: {result}')
-    except ZeroDivisionError:
-        # Handle division by zero error
-        print('Error: Division by zero is not allowed')
-    except Exception as e:
-        # Handle any other exceptions
-        print(f'An error occurred: {e}')
-
-# Example usage
-divide_numbers(10, 0)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which block is used to handle exceptions in Python?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -74,17 +74,7 @@ mypy your_script.py
 
 > **💡 Tip:** Add type hints to all functions in production AI code for better maintainability and fewer runtime errors.
 
-mypy validates type hints without running code, catching bugs early.
-
-```bash title="check_types.sh"
-# Install mypy
-pip install mypy
-
-# Check types in your file
-mypy your_script.py
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the benefit of type hints?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

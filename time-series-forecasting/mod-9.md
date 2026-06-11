@@ -89,39 +89,7 @@ print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
 
 > **💡 Tip:** Ensure that the holiday dates are correctly specified and aligned with your dataset to avoid inaccurate forecasts.
 
-Incorporating holidays into your Prophet model can significantly improve forecast accuracy, especially for datasets influenced by seasonal events. Prophet allows you to specify holiday effects, enabling the model to account for these disruptions in the time series data.
-
-```python title="example2.py"
-from fbprophet import Prophet
-import pandas as pd
-
-# Create a DataFrame with dates and values
-df = pd.DataFrame({'ds': pd.date_range(start='2020-01-01', end='2020-12-31'), 'y': range(365)})
-
-# Define holidays
-holidays = pd.DataFrame({'holiday': 'new_year', 'ds': pd.to_datetime(['2020-01-01']), 'lower_window': 0, 'upper_window': 1})
-
-# Initialize the Prophet model
-model = Prophet()
-
-# Add holidays to the model
-model.add_country_holidays(country_name='US')
-model.add_holidays(holidays)
-
-# Fit the model
-model.fit(df)
-
-# Create a DataFrame for future dates
-future = model.make_future_dataframe(periods=365)
-
-# Make predictions
-forecast = model.predict(future)
-
-# Print the forecast
-print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What method is used to add custom seasonality in Prophet?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -145,39 +113,7 @@ print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Incorporating holidays into your Prophet model can significantly improve forecast accuracy, especially for datasets influenced by seasonal events. Prophet allows you to specify holiday effects, enabling the model to account for these disruptions in the time series data.
-
-```python title="example2.py"
-from fbprophet import Prophet
-import pandas as pd
-
-# Create a DataFrame with dates and values
-df = pd.DataFrame({'ds': pd.date_range(start='2020-01-01', end='2020-12-31'), 'y': range(365)})
-
-# Define holidays
-holidays = pd.DataFrame({'holiday': 'new_year', 'ds': pd.to_datetime(['2020-01-01']), 'lower_window': 0, 'upper_window': 1})
-
-# Initialize the Prophet model
-model = Prophet()
-
-# Add holidays to the model
-model.add_country_holidays(country_name='US')
-model.add_holidays(holidays)
-
-# Fit the model
-model.fit(df)
-
-# Create a DataFrame for future dates
-future = model.make_future_dataframe(periods=365)
-
-# Make predictions
-forecast = model.predict(future)
-
-# Print the forecast
-print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Which method is used to add holidays to a Prophet model?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

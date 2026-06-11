@@ -89,32 +89,7 @@ fig.show()
 
 > **💡 Tip:** When creating 3D plots, ensure your data is properly formatted as a meshgrid for surface plots. This will help in accurately representing the relationships between variables.
 
-Plotly provides an excellent framework for creating interactive 3D plots. These plots can be embedded in web applications and allow users to rotate, zoom, and pan the plot to explore the data from different angles. This interactivity can significantly enhance the understanding of complex datasets.
-
-```python title="example2.py"
-import plotly.graph_objects as go
-import numpy as np
-
-# Generate data
-x = np.outer(np.linspace(-2, 2, 30), np.ones(30))
-y = x.copy().T
-z = np.cos(x ** 2 + y ** 2)
-
-# Create a 3D surface plot
-fig = go.Figure(data=[go.Surface(x=x, y=y, z=z)])
-
-# Update layout
-fig.update_layout(title='Interactive 3D Surface Plot',
-                  autosize=False,
-                  width=800,
-                  height=800,
-                  margin=dict(l=65, r=50, b=65, t=90))
-
-# Show plot
-fig.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What class from Matplotlib is used to create 3D plots?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -138,32 +113,7 @@ fig.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Plotly provides an excellent framework for creating interactive 3D plots. These plots can be embedded in web applications and allow users to rotate, zoom, and pan the plot to explore the data from different angles. This interactivity can significantly enhance the understanding of complex datasets.
-
-```python title="example2.py"
-import plotly.graph_objects as go
-import numpy as np
-
-# Generate data
-x = np.outer(np.linspace(-2, 2, 30), np.ones(30))
-y = x.copy().T
-z = np.cos(x ** 2 + y ** 2)
-
-# Create a 3D surface plot
-fig = go.Figure(data=[go.Surface(x=x, y=y, z=z)])
-
-# Update layout
-fig.update_layout(title='Interactive 3D Surface Plot',
-                  autosize=False,
-                  width=800,
-                  height=800,
-                  margin=dict(l=65, r=50, b=65, t=90))
-
-# Show plot
-fig.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which Plotly function is used to create an interactive 3D surface plot?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

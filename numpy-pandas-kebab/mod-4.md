@@ -89,9 +89,7 @@ plt.show()
 A histogram showing the distribution of data values and a box plot showing the spread and outliers.
 ```
 
-Histograms and box plots are essential for understanding the distribution and spread of data. We will explore how to create these plots using Pandas and Matplotlib.
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which plot is best for understanding the distribution of a dataset?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

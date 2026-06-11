@@ -100,47 +100,7 @@ public class Main {
 
 > **💡 Tip:** When using Spring Context, ensure that your configuration classes are annotated with @Configuration and your beans are annotated with @Bean to properly define and manage them.
 
-The Spring Context is the central interface in the Spring Framework that provides a way to manage beans and their lifecycle. It acts as a container that loads bean definitions, wires beans together, configures them, and manages their lifecycle. The context is responsible for instantiating, configuring, and assembling the beans, and managing their dependencies.
-
-```java title="example2.java"
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
-// Configuration class
-@Configuration
-public class AppConfig {
-
-    // Define a bean
-    @Bean
-    public MessageService messageService() {
-        return new MessageService();
-    }
-
-    // Define a bean with a dependency
-    @Bean
-    public MessagingClient messagingClient() {
-        return new MessagingClient(messageService());
-    }
-}
-
-// Main class to run the application
-public class Main {
-    public static void main(String[] args) {
-        // Create the Spring application context
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-
-        // Retrieve the bean from the context
-        MessagingClient client = context.getBean(MessagingClient.class);
-
-        // Use the bean
-        client.send();
-    }
-}
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary purpose of Dependency Injection in Spring?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -164,47 +124,7 @@ public class Main {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-The Spring Context is the central interface in the Spring Framework that provides a way to manage beans and their lifecycle. It acts as a container that loads bean definitions, wires beans together, configures them, and manages their lifecycle. The context is responsible for instantiating, configuring, and assembling the beans, and managing their dependencies.
-
-```java title="example2.java"
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
-// Configuration class
-@Configuration
-public class AppConfig {
-
-    // Define a bean
-    @Bean
-    public MessageService messageService() {
-        return new MessageService();
-    }
-
-    // Define a bean with a dependency
-    @Bean
-    public MessagingClient messagingClient() {
-        return new MessagingClient(messageService());
-    }
-}
-
-// Main class to run the application
-public class Main {
-    public static void main(String[] args) {
-        // Create the Spring application context
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-
-        // Retrieve the bean from the context
-        MessagingClient client = context.getBean(MessagingClient.class);
-
-        // Use the bean
-        client.send();
-    }
-}
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which annotation is used to define a bean in Spring?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

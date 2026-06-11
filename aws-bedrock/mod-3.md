@@ -261,50 +261,6 @@ for event in response['stream']:
 
 ---
 
-```json
-{
-  "claude_response": {
-    "content": [
-      {
-        "type": "text",
-        "text": "Response text here"
-      }
-    ],
-    "usage": {
-      "input_tokens": 10,
-      "output_tokens": 50
-    },
-    "stop_reason": "end_turn"
-  },
-  "llama_response": {
-    "generation": "Response text here",
-    "prompt_token_count": 10,
-    "generation_token_count": 50,
-    "stop_reason": "length"
-  },
-  "converse_response": {
-    "output": {
-      "message": {
-        "role": "assistant",
-        "content": [
-          {
-            "type": "text",
-            "text": "Response text here"
-          }
-        ]
-      }
-    },
-    "usage": {
-      "inputTokens": 10,
-      "outputTokens": 50
-    },
-    "stopReason": "end_turn"
-  }
-}
-```
-
----
-
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the main advantage of the Converse API over InvokeModel?</p>
   <div class="space-y-2">
@@ -329,51 +285,7 @@ for event in response['stream']:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```json
-{
-  "claude_response": {
-    "content": [
-      {
-        "type": "text",
-        "text": "Response text here"
-      }
-    ],
-    "usage": {
-      "input_tokens": 10,
-      "output_tokens": 50
-    },
-    "stop_reason": "end_turn"
-  },
-  "llama_response": {
-    "generation": "Response text here",
-    "prompt_token_count": 10,
-    "generation_token_count": 50,
-    "stop_reason": "length"
-  },
-  "converse_response": {
-    "output": {
-      "message": {
-        "role": "assistant",
-        "content": [
-          {
-            "type": "text",
-            "text": "Response text here"
-          }
-        ]
-      }
-    },
-    "usage": {
-      "inputTokens": 10,
-      "outputTokens": 50
-    },
-    "stopReason": "end_turn"
-  }
-}
-```
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which method should you use for long-running responses to improve user experience?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -397,51 +309,7 @@ for event in response['stream']:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```json
-{
-  "claude_response": {
-    "content": [
-      {
-        "type": "text",
-        "text": "Response text here"
-      }
-    ],
-    "usage": {
-      "input_tokens": 10,
-      "output_tokens": 50
-    },
-    "stop_reason": "end_turn"
-  },
-  "llama_response": {
-    "generation": "Response text here",
-    "prompt_token_count": 10,
-    "generation_token_count": 50,
-    "stop_reason": "length"
-  },
-  "converse_response": {
-    "output": {
-      "message": {
-        "role": "assistant",
-        "content": [
-          {
-            "type": "text",
-            "text": "Response text here"
-          }
-        ]
-      }
-    },
-    "usage": {
-      "inputTokens": 10,
-      "outputTokens": 50
-    },
-    "stopReason": "end_turn"
-  }
-}
-```
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What error indicates that a model hasn't been enabled in your AWS account?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -464,50 +332,6 @@ for event in response['stream']:
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-
-```json
-{
-  "claude_response": {
-    "content": [
-      {
-        "type": "text",
-        "text": "Response text here"
-      }
-    ],
-    "usage": {
-      "input_tokens": 10,
-      "output_tokens": 50
-    },
-    "stop_reason": "end_turn"
-  },
-  "llama_response": {
-    "generation": "Response text here",
-    "prompt_token_count": 10,
-    "generation_token_count": 50,
-    "stop_reason": "length"
-  },
-  "converse_response": {
-    "output": {
-      "message": {
-        "role": "assistant",
-        "content": [
-          {
-            "type": "text",
-            "text": "Response text here"
-          }
-        ]
-      }
-    },
-    "usage": {
-      "inputTokens": 10,
-      "outputTokens": 50
-    },
-    "stopReason": "end_turn"
-  }
-}
-```
-
----
 
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How can you estimate the cost of an API call before invoking?</p>

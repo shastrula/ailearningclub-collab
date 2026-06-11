@@ -89,32 +89,7 @@ static_batching(requests, batch_size)
 
 > **💡 Tip:** When implementing batching strategies, consider the trade-offs between latency and resource utilization. Dynamic batching is generally more flexible and can handle varying request rates, while static batching offers more predictable performance.
 
-Static batching involves predefining a fixed batch size and waiting until the batch is full before processing. This strategy ensures consistent batch sizes but may introduce latency if the batch is not filled quickly.
-
-```python title="example2.py"
-import time
-
-# Simulate inference requests
-requests = [1, 2, 3, 4, 5]
-batch_size = 3
-
-# Static batching function
-def static_batching(requests, batch_size):
-    batch = []
-    for request in requests:
-        batch.append(request)
-        if len(batch) == batch_size:
-            print(f"Processing batch: {batch}")
-            batch = []
-            time.sleep(1)  # Simulate inference time
-    if batch:  # Process remaining requests
-        print(f"Processing batch: {batch}")
-        time.sleep(1)  # Simulate inference time
-
-static_batching(requests, batch_size)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary advantage of dynamic batching?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -138,32 +113,7 @@ static_batching(requests, batch_size)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Static batching involves predefining a fixed batch size and waiting until the batch is full before processing. This strategy ensures consistent batch sizes but may introduce latency if the batch is not filled quickly.
-
-```python title="example2.py"
-import time
-
-# Simulate inference requests
-requests = [1, 2, 3, 4, 5]
-batch_size = 3
-
-# Static batching function
-def static_batching(requests, batch_size):
-    batch = []
-    for request in requests:
-        batch.append(request)
-        if len(batch) == batch_size:
-            print(f"Processing batch: {batch}")
-            batch = []
-            time.sleep(1)  # Simulate inference time
-    if batch:  # Process remaining requests
-        print(f"Processing batch: {batch}")
-        time.sleep(1)  # Simulate inference time
-
-static_batching(requests, batch_size)
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ What is a potential drawback of static batching?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

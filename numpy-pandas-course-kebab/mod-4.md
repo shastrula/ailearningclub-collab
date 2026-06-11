@@ -81,20 +81,7 @@ print('Average Score:', average_score)
 
 > **💡 Tip:** Always check for missing values in your DataFrame before performing any operations. Use df.isnull().sum() to get a summary of missing values in each column.
 
-Once you have a DataFrame, you can perform various operations such as selecting columns, filtering rows, and aggregating data. These operations are essential for data cleaning and preparation, which are critical steps in any data science workflow.
-
-```python title="example2.py"
-import pandas as pd
-
-# Creating a DataFrame from a dictionary
-data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35], 'Score': [88, 92, 85]}
-df = pd.DataFrame(data)
-
-# Selecting a column
-print(df['Name'])
-
-# Filtering rows
-filtered_df = df[df['Age'] >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a Pandas DataFrame?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,20 +105,7 @@ filtered_df = df[df['Age'] >
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Once you have a DataFrame, you can perform various operations such as selecting columns, filtering rows, and aggregating data. These operations are essential for data cleaning and preparation, which are critical steps in any data science workflow.
-
-```python title="example2.py"
-import pandas as pd
-
-# Creating a DataFrame from a dictionary
-data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35], 'Score': [88, 92, 85]}
-df = pd.DataFrame(data)
-
-# Selecting a column
-print(df['Name'])
-
-# Filtering rows
-filtered_df = df[df['Age'] >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How do you select a column in a DataFrame?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

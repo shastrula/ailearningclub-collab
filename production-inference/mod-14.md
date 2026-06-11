@@ -86,29 +86,7 @@ print(outputs.logits)
 
 > **💡 Tip:** When implementing batching, ensure that the batch size is optimized for your specific hardware and model to avoid underutilization or overloading the system.
 
-Batching is a technique where multiple inference requests are grouped together and processed in a single forward pass through the model. This reduces the overhead associated with each inference call and improves overall throughput. Proper implementation of batching is critical for high-performance serving of machine learning models.
-
-```python title="example2.py"
-import torch
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
-
-# Load the model and tokenizer
-model = AutoModelForSequenceClassification.from_pretrained('bert-base-uncased')
-tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
-
-# Define a batch of input sentences
-sentences = ['This is the first sentence.', 'This is the second sentence.']
-
-# Tokenize the sentences
-inputs = tokenizer(sentences, return_tensors='pt', padding=True, truncation=True)
-
-# Perform batch inference
-outputs = model(**inputs)
-
-print(outputs.logits)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary benefit of using vLLM for inference?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -132,29 +110,7 @@ print(outputs.logits)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Batching is a technique where multiple inference requests are grouped together and processed in a single forward pass through the model. This reduces the overhead associated with each inference call and improves overall throughput. Proper implementation of batching is critical for high-performance serving of machine learning models.
-
-```python title="example2.py"
-import torch
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
-
-# Load the model and tokenizer
-model = AutoModelForSequenceClassification.from_pretrained('bert-base-uncased')
-tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
-
-# Define a batch of input sentences
-sentences = ['This is the first sentence.', 'This is the second sentence.']
-
-# Tokenize the sentences
-inputs = tokenizer(sentences, return_tensors='pt', padding=True, truncation=True)
-
-# Perform batch inference
-outputs = model(**inputs)
-
-print(outputs.logits)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the main advantage of batching during inference?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -81,24 +81,7 @@ print(f'Quantized model size: {sum(p.numel() for p in quantized_model.parameters
 
 > **💡 Tip:** When quantizing models, it's important to evaluate the impact on model accuracy. Lower precision quantization can lead to significant accuracy drops, so always benchmark your quantized model against the original to ensure it meets your performance requirements.
 
-Quantization techniques vary in precision levels, such as INT8, INT4, and mixed precision. Each technique offers different trade-offs between model size, inference speed, and accuracy. bitsandbytes supports various quantization levels and methods, allowing you to choose the best approach for your specific use case. Understanding these trade-offs is essential for making informed decisions when quantizing models.
-
-```python title="example2.py"
-import bitsandbytes as bnb
-import torch
-
-# Load a pre-trained model
-model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=True)
-
-# Convert the model to 4-bit precision using bitsandbytes
-quantized_model = bnb.nn.Quantize(model, bits=4)
-
-# Print the original and quantized model sizes
-print(f'Original model size: {sum(p.numel() for p in model.parameters())}')
-print(f'Quantized model size: {sum(p.numel() for p in quantized_model.parameters())}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of using bitsandbytes for quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -122,24 +105,7 @@ print(f'Quantized model size: {sum(p.numel() for p in quantized_model.parameters
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Quantization techniques vary in precision levels, such as INT8, INT4, and mixed precision. Each technique offers different trade-offs between model size, inference speed, and accuracy. bitsandbytes supports various quantization levels and methods, allowing you to choose the best approach for your specific use case. Understanding these trade-offs is essential for making informed decisions when quantizing models.
-
-```python title="example2.py"
-import bitsandbytes as bnb
-import torch
-
-# Load a pre-trained model
-model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=True)
-
-# Convert the model to 4-bit precision using bitsandbytes
-quantized_model = bnb.nn.Quantize(model, bits=4)
-
-# Print the original and quantized model sizes
-print(f'Original model size: {sum(p.numel() for p in model.parameters())}')
-print(f'Quantized model size: {sum(p.numel() for p in quantized_model.parameters())}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which quantization level typically offers the best trade-off between model size and accuracy?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

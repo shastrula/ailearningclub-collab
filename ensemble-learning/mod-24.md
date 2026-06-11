@@ -100,43 +100,7 @@ print(f'CatBoost Score: {cat_score}')
 
 > **💡 Tip:** When using ensemble methods, always ensure that your base models are diverse to maximize the benefits of ensemble learning.
 
-XGBoost, LightGBM, and CatBoost are advanced boosting libraries designed to be highly efficient and scalable. XGBoost is known for its speed and performance, LightGBM is optimized for large datasets, and CatBoost handles categorical features effectively. This section will guide you through implementing these libraries in Python.
-
-```python title="example2.py"
-import xgboost as xgb
-import lightgbm as lgb
-import catboost as cb
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-
-# Load dataset
-iris = load_iris()
-X, y = iris.data, iris.target
-
-# Split dataset
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# XGBoost
-xgb_model = xgb.XGBClassifier(use_label_encoder=False, eval_metric='logloss')
-xgb_model.fit(X_train, y_train)
-xgb_score = xgb_model.score(X_test, y_test)
-
-# LightGBM
-lgb_model = lgb.LGBMClassifier()
-lgb_model.fit(X_train, y_train)
-lgb_score = lgb_model.score(X_test, y_test)
-
-# CatBoost
-cat_model = cb.CatBoostClassifier(verbose=0)
-cat_model.fit(X_train, y_train)
-cat_score = cat_model.score(X_test, y_test)
-
-print(f'XGBoost Score: {xgb_score}')
-print(f'LightGBM Score: {lgb_score}')
-print(f'CatBoost Score: {cat_score}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary difference between Bagging and Boosting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -160,43 +124,7 @@ print(f'CatBoost Score: {cat_score}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-XGBoost, LightGBM, and CatBoost are advanced boosting libraries designed to be highly efficient and scalable. XGBoost is known for its speed and performance, LightGBM is optimized for large datasets, and CatBoost handles categorical features effectively. This section will guide you through implementing these libraries in Python.
-
-```python title="example2.py"
-import xgboost as xgb
-import lightgbm as lgb
-import catboost as cb
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-
-# Load dataset
-iris = load_iris()
-X, y = iris.data, iris.target
-
-# Split dataset
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# XGBoost
-xgb_model = xgb.XGBClassifier(use_label_encoder=False, eval_metric='logloss')
-xgb_model.fit(X_train, y_train)
-xgb_score = xgb_model.score(X_test, y_test)
-
-# LightGBM
-lgb_model = lgb.LGBMClassifier()
-lgb_model.fit(X_train, y_train)
-lgb_score = lgb_model.score(X_test, y_test)
-
-# CatBoost
-cat_model = cb.CatBoostClassifier(verbose=0)
-cat_model.fit(X_train, y_train)
-cat_score = cat_model.score(X_test, y_test)
-
-print(f'XGBoost Score: {xgb_score}')
-print(f'LightGBM Score: {lgb_score}')
-print(f'CatBoost Score: {cat_score}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which library is specifically designed to handle categorical features effectively?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

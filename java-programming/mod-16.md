@@ -143,22 +143,7 @@ public class ObserverExample {
 
 > **💡 Tip:** When implementing the Observer pattern, ensure that the notify method is called only when there are changes in the subject's state to avoid unnecessary updates.
 
-The Observer pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. This is particularly useful in event handling systems, where multiple components need to react to state changes in a central object.
-
-```java title="ObserverExample.java"
-import java.util.ArrayList;
-import java.util.List;
-
-// Subject interface
-interface Subject {
-    void registerObserver(Observer o);
-    void removeObserver(Observer o);
-    void notifyObservers();
-}
-
-// Concrete Subject
-class ConcreteSubject implements Subject {
-    private List<Observer>
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the primary purpose of the Singleton pattern?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -182,22 +167,7 @@ class ConcreteSubject implements Subject {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-The Observer pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. This is particularly useful in event handling systems, where multiple components need to react to state changes in a central object.
-
-```java title="ObserverExample.java"
-import java.util.ArrayList;
-import java.util.List;
-
-// Subject interface
-interface Subject {
-    void registerObserver(Observer o);
-    void removeObserver(Observer o);
-    void notifyObservers();
-}
-
-// Concrete Subject
-class ConcreteSubject implements Subject {
-    private List<Observer>
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Which method is used in the Observer pattern to update observers?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

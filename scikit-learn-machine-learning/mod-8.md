@@ -81,24 +81,7 @@ plt.show()
 
 > **💡 Tip:** When tuning a Random Forest, consider adjusting the number of trees (n_estimators) and the maximum depth of the trees (max_depth). Increasing the number of trees will generally increase the accuracy of the model but will also increase the training time. Adjusting the maximum depth can help prevent overfitting.
 
-One of the advantages of Random Forests is their ability to provide insights into feature importance. Feature importance scores can be calculated for each feature in the dataset by measuring the total reduction of the criterion brought by that feature. It is also known as the Gini importance. This can be particularly useful for feature selection and understanding which features contribute most to the predictions of the model.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-
-# Get the feature importances
-importances = clf.feature_importances_
-
-# Plot the feature importances of the forest
-plt.figure()
-plt.title('Feature Importances')
-plt.bar(range(X.shape[1]), importances, color='r', align='center')
-plt.xticks(range(X.shape[1]), range(X.shape[1]))
-plt.xlim([-1, X.shape[1]])
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary advantage of using Random Forests over a single decision tree?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -122,24 +105,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-One of the advantages of Random Forests is their ability to provide insights into feature importance. Feature importance scores can be calculated for each feature in the dataset by measuring the total reduction of the criterion brought by that feature. It is also known as the Gini importance. This can be particularly useful for feature selection and understanding which features contribute most to the predictions of the model.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-
-# Get the feature importances
-importances = clf.feature_importances_
-
-# Plot the feature importances of the forest
-plt.figure()
-plt.title('Feature Importances')
-plt.bar(range(X.shape[1]), importances, color='r', align='center')
-plt.xticks(range(X.shape[1]), range(X.shape[1]))
-plt.xlim([-1, X.shape[1]])
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How does Random Forest determine the importance of features?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

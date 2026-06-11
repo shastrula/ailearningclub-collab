@@ -94,37 +94,7 @@ accuracy
 
 > **💡 Tip:** When working with text data, always ensure that your text is properly cleaned and preprocessed. This includes handling punctuation, special characters, and ensuring consistent casing to avoid issues during vectorization and model training.
 
-After preprocessing, the next step is to train a machine learning model using the vectorized text data. Various models can be used, including linear models, support vector machines (SVM), decision trees, and ensemble methods. It's also important to evaluate the model's performance using appropriate metrics and techniques like cross-validation.
-
-```python title="example2.py"
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-
-# Sample text data and labels
-text_data = ["I love this product", "This is the worst service ever"]
-labels = [1, 0]  # 1 for positive, 0 for negative
-
-# Vectorization
-vectorizer = CountVectorizer(stop_words='english')
-X = vectorizer.fit_transform(text_data)
-
-# Split data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.2, random_state=42)
-
-# Train a Logistic Regression model
-model = LogisticRegression()
-model.fit(X_train, y_train)
-
-# Make predictions
-y_pred = model.predict(X_test)
-
-# Evaluate the model
-accuracy = accuracy_score(y_test, y_pred)
-accuracy
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of using CountVectorizer in text preprocessing?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -148,37 +118,7 @@ accuracy
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-After preprocessing, the next step is to train a machine learning model using the vectorized text data. Various models can be used, including linear models, support vector machines (SVM), decision trees, and ensemble methods. It's also important to evaluate the model's performance using appropriate metrics and techniques like cross-validation.
-
-```python title="example2.py"
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-
-# Sample text data and labels
-text_data = ["I love this product", "This is the worst service ever"]
-labels = [1, 0]  # 1 for positive, 0 for negative
-
-# Vectorization
-vectorizer = CountVectorizer(stop_words='english')
-X = vectorizer.fit_transform(text_data)
-
-# Split data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.2, random_state=42)
-
-# Train a Logistic Regression model
-model = LogisticRegression()
-model.fit(X_train, y_train)
-
-# Make predictions
-y_pred = model.predict(X_test)
-
-# Evaluate the model
-accuracy = accuracy_score(y_test, y_pred)
-accuracy
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which metric is commonly used to evaluate the performance of a text classification model?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

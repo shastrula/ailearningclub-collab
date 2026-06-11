@@ -78,21 +78,7 @@ public class Main {
 
 > **💡 Tip:** Remember to always initialize your objects using a constructor to ensure all attributes are properly set.
 
-An object is an instance of a class. When a class is defined, no memory is allocated until an object of that class is created. Objects are created using the 'new' keyword followed by a call to a constructor, which initializes the object. Each object has its own copy of the class attributes.
-
-```java title="example2.java"
-public class Main {
-    public static void main(String[] args) {
-        // Creating an object of Car
-        Car myCar = new Car("Tesla", "Model S", 2022);
-        // Calling the method to display information
-        myCar.displayInfo();
-    }
-}
-
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the purpose of a class in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -116,21 +102,7 @@ public class Main {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-An object is an instance of a class. When a class is defined, no memory is allocated until an object of that class is created. Objects are created using the 'new' keyword followed by a call to a constructor, which initializes the object. Each object has its own copy of the class attributes.
-
-```java title="example2.java"
-public class Main {
-    public static void main(String[] args) {
-        // Creating an object of Car
-        Car myCar = new Car("Tesla", "Model S", 2022);
-        // Calling the method to display information
-        myCar.displayInfo();
-    }
-}
-
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How do you create an object from a class in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -193,21 +165,7 @@ public class Example5 {
 Example 5
 ```
 
-An object is an instance of a class. When a class is defined, no memory is allocated until an object of that class is created. Objects are created using the 'new' keyword followed by a call to a constructor, which initializes the object. Each object has its own copy of the class attributes.
-
-```java title="example2.java"
-public class Main {
-    public static void main(String[] args) {
-        // Creating an object of Car
-        Car myCar = new Car("Tesla", "Model S", 2022);
-        // Calling the method to display information
-        myCar.displayInfo();
-    }
-}
-
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Question 3: What is a key concept in Classes and Objects?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -231,21 +189,7 @@ public class Main {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-An object is an instance of a class. When a class is defined, no memory is allocated until an object of that class is created. Objects are created using the 'new' keyword followed by a call to a constructor, which initializes the object. Each object has its own copy of the class attributes.
-
-```java title="example2.java"
-public class Main {
-    public static void main(String[] args) {
-        // Creating an object of Car
-        Car myCar = new Car("Tesla", "Model S", 2022);
-        // Calling the method to display information
-        myCar.displayInfo();
-    }
-}
-
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Question 4: What is a key concept in Classes and Objects?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -269,21 +213,7 @@ public class Main {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-An object is an instance of a class. When a class is defined, no memory is allocated until an object of that class is created. Objects are created using the 'new' keyword followed by a call to a constructor, which initializes the object. Each object has its own copy of the class attributes.
-
-```java title="example2.java"
-public class Main {
-    public static void main(String[] args) {
-        // Creating an object of Car
-        Car myCar = new Car("Tesla", "Model S", 2022);
-        // Calling the method to display information
-        myCar.displayInfo();
-    }
-}
-
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Question 5: What is a key concept in Classes and Objects?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -307,21 +237,7 @@ public class Main {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-An object is an instance of a class. When a class is defined, no memory is allocated until an object of that class is created. Objects are created using the 'new' keyword followed by a call to a constructor, which initializes the object. Each object has its own copy of the class attributes.
-
-```java title="example2.java"
-public class Main {
-    public static void main(String[] args) {
-        // Creating an object of Car
-        Car myCar = new Car("Tesla", "Model S", 2022);
-        // Calling the method to display information
-        myCar.displayInfo();
-    }
-}
-
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Question 6: What is a key concept in Classes and Objects?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -345,21 +261,7 @@ public class Main {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-An object is an instance of a class. When a class is defined, no memory is allocated until an object of that class is created. Objects are created using the 'new' keyword followed by a call to a constructor, which initializes the object. Each object has its own copy of the class attributes.
-
-```java title="example2.java"
-public class Main {
-    public static void main(String[] args) {
-        // Creating an object of Car
-        Car myCar = new Car("Tesla", "Model S", 2022);
-        // Calling the method to display information
-        myCar.displayInfo();
-    }
-}
-
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Question 7: What is a key concept in Classes and Objects?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -383,21 +285,7 @@ public class Main {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-An object is an instance of a class. When a class is defined, no memory is allocated until an object of that class is created. Objects are created using the 'new' keyword followed by a call to a constructor, which initializes the object. Each object has its own copy of the class attributes.
-
-```java title="example2.java"
-public class Main {
-    public static void main(String[] args) {
-        // Creating an object of Car
-        Car myCar = new Car("Tesla", "Model S", 2022);
-        // Calling the method to display information
-        myCar.displayInfo();
-    }
-}
-
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Question 8: What is a key concept in Classes and Objects?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -421,21 +309,7 @@ public class Main {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-An object is an instance of a class. When a class is defined, no memory is allocated until an object of that class is created. Objects are created using the 'new' keyword followed by a call to a constructor, which initializes the object. Each object has its own copy of the class attributes.
-
-```java title="example2.java"
-public class Main {
-    public static void main(String[] args) {
-        // Creating an object of Car
-        Car myCar = new Car("Tesla", "Model S", 2022);
-        // Calling the method to display information
-        myCar.displayInfo();
-    }
-}
-
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Question 9: What is a key concept in Classes and Objects?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -459,21 +333,7 @@ public class Main {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-An object is an instance of a class. When a class is defined, no memory is allocated until an object of that class is created. Objects are created using the 'new' keyword followed by a call to a constructor, which initializes the object. Each object has its own copy of the class attributes.
-
-```java title="example2.java"
-public class Main {
-    public static void main(String[] args) {
-        // Creating an object of Car
-        Car myCar = new Car("Tesla", "Model S", 2022);
-        // Calling the method to display information
-        myCar.displayInfo();
-    }
-}
-
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Question 10: What is a key concept in Classes and Objects?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

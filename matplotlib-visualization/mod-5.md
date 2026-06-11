@@ -75,22 +75,7 @@ plt.show()
 
 > **💡 Tip:** When creating pair plots, be mindful of the number of variables you include to avoid overly complex and cluttered visualizations.
 
-Seaborn allows for the creation of more advanced plots such as pair plots and joint plots, which are useful for understanding relationships between multiple variables. These plots can reveal patterns, correlations, and distributions that might not be apparent from individual plots.
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Load an example dataset
-tips = sns.load_dataset('tips')
-
-# Create a pair plot
-sns.pairplot(tips, hue='day')
-plt.suptitle('Pair Plot of Tips Dataset', y=1.02)
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does the `kde=True` parameter do in `sns.histplot()`?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -114,22 +99,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Seaborn allows for the creation of more advanced plots such as pair plots and joint plots, which are useful for understanding relationships between multiple variables. These plots can reveal patterns, correlations, and distributions that might not be apparent from individual plots.
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Load an example dataset
-tips = sns.load_dataset('tips')
-
-# Create a pair plot
-sns.pairplot(tips, hue='day')
-plt.suptitle('Pair Plot of Tips Dataset', y=1.02)
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of the `hue` parameter in `sns.pairplot()`?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -89,32 +89,7 @@ plt.show()
 
 > **💡 Tip:** When customizing plots in Seaborn, experiment with different color palettes, themes, and annotation styles to find the combination that best conveys your data insights and resonates with your audience.
 
-Annotating plots with text, labels, and annotations can provide additional context and insights to your visualizations. Seaborn allows you to add annotations to your plots using Matplotlib's text and annotation functions. By strategically placing annotations, you can highlight key data points, trends, or insights, making your plots more informative and engaging for your audience.
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Load example dataset
-tips = sns.load_dataset('tips')
-
-# Create a scatter plot
-sns.scatterplot(data=tips, x='total_bill', y='tip', hue='day')
-
-# Annotate specific data points
-plt.annotate('High tip amount', xy=(23, 5.94), xytext=(25, 6.5),
-             arrowprops=dict(facecolor='black', shrink=0.05))
-
-# Set plot title and axis labels
-plt.title('Total Bill vs Tip by Day')
-plt.xlabel('Total Bill')
-plt.ylabel('Tip')
-
-# Show plot
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which Seaborn function is used to create a scatter plot?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -138,32 +113,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Annotating plots with text, labels, and annotations can provide additional context and insights to your visualizations. Seaborn allows you to add annotations to your plots using Matplotlib's text and annotation functions. By strategically placing annotations, you can highlight key data points, trends, or insights, making your plots more informative and engaging for your audience.
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Load example dataset
-tips = sns.load_dataset('tips')
-
-# Create a scatter plot
-sns.scatterplot(data=tips, x='total_bill', y='tip', hue='day')
-
-# Annotate specific data points
-plt.annotate('High tip amount', xy=(23, 5.94), xytext=(25, 6.5),
-             arrowprops=dict(facecolor='black', shrink=0.05))
-
-# Set plot title and axis labels
-plt.title('Total Bill vs Tip by Day')
-plt.xlabel('Total Bill')
-plt.ylabel('Tip')
-
-# Show plot
-plt.show()
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ How can you add annotations to a Seaborn plot?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

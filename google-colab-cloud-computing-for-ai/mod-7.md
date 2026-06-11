@@ -73,16 +73,7 @@ Collaborative editing in Google Colab allows multiple users to work on the same 
 
 > **💡 Tip:** When collaborating, it's important to communicate with your team to avoid conflicts when editing the same cells simultaneously.
 
-Collaborative editing in Google Colab allows multiple users to work on the same notebook at the same time. Changes made by one user are instantly visible to others, promoting real-time collaboration. To start a collaborative session, ensure that the notebook is shared and that all collaborators have the shareable link.
-
-```python title="example2.py"
-# This code demonstrates collaborative editing in Google Colab
-# Ensure the notebook is shared and all collaborators have the link
-# Open the shared notebook and start editing
-# Changes will be visible to all collaborators in real-time
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How do you share a Google Colab notebook with collaborators?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,16 +97,7 @@ Collaborative editing in Google Colab allows multiple users to work on the same 
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Collaborative editing in Google Colab allows multiple users to work on the same notebook at the same time. Changes made by one user are instantly visible to others, promoting real-time collaboration. To start a collaborative session, ensure that the notebook is shared and that all collaborators have the shareable link.
-
-```python title="example2.py"
-# This code demonstrates collaborative editing in Google Colab
-# Ensure the notebook is shared and all collaborators have the link
-# Open the shared notebook and start editing
-# Changes will be visible to all collaborators in real-time
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a key feature of collaborative editing in Google Colab?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

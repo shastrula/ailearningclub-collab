@@ -81,24 +81,7 @@ print(predictions)
 
 > **💡 Tip:** Ensure that the environment where you deploy the model has the same TensorFlow version and dependencies as the environment where the model was trained to avoid compatibility issues.
 
-Once your model is trained and tuned, the final step is to deploy it. Deployment involves saving the model and loading it into a production environment where it can make predictions on new data. TensorFlow provides several ways to save and load models, including the SavedModel format and HDF5 format.
-
-```python title="deployment.py"
-import tensorflow as tf
-from tensorflow.keras import models
-
-# Save the model
-model.save('my_model')
-
-# Load the model
-loaded_model = models.load_model('my_model')
-
-# Make predictions with the loaded model
-predictions = loaded_model.predict(x_test[:5])
-print(predictions)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of the final project in this module?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -122,24 +105,7 @@ print(predictions)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Once your model is trained and tuned, the final step is to deploy it. Deployment involves saving the model and loading it into a production environment where it can make predictions on new data. TensorFlow provides several ways to save and load models, including the SavedModel format and HDF5 format.
-
-```python title="deployment.py"
-import tensorflow as tf
-from tensorflow.keras import models
-
-# Save the model
-model.save('my_model')
-
-# Load the model
-loaded_model = models.load_model('my_model')
-
-# Make predictions with the loaded model
-predictions = loaded_model.predict(x_test[:5])
-print(predictions)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which format is commonly used to save and deploy TensorFlow models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

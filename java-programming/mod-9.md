@@ -85,15 +85,7 @@ public class Example2 {
 
 > **💡 Tip:** When working with streams, remember that they are lazy and only evaluated when a terminal operation is called. This means you can chain multiple operations without immediate execution, which can lead to more efficient processing.
 
-Streams are a sequence of elements supporting sequential and parallel aggregate operations. They are used to process data in a declarative way, which means you describe what you want to do, not how to do it. This leads to more readable and maintainable code, especially when dealing with complex data processing tasks.
-
-```java title="example2.java"
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class Example2 {
-    public static void main(String[] args) {
-        List<String>
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of a lambda expression in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,15 +109,7 @@ public class Example2 {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Streams are a sequence of elements supporting sequential and parallel aggregate operations. They are used to process data in a declarative way, which means you describe what you want to do, not how to do it. This leads to more readable and maintainable code, especially when dealing with complex data processing tasks.
-
-```java title="example2.java"
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class Example2 {
-    public static void main(String[] args) {
-        List<String>
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which of the following is a terminal operation in the Stream API?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

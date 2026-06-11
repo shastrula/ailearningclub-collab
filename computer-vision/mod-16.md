@@ -94,37 +94,7 @@ model.summary()
 
 > **💡 Tip:** When implementing semantic segmentation, ensure that your dataset is properly preprocessed and augmented to avoid overfitting. Additionally, fine-tuning hyperparameters such as learning rate and batch size can significantly impact the model's performance.
 
-The U-Net architecture is particularly well-suited for semantic segmentation tasks due to its symmetric expanding and contracting paths, which allow it to capture context and localization information effectively. The contracting path captures context, while the expansive path enables precise localization.
-
-```python title="example2.py"
-import numpy as np
-import matplotlib.pyplot as plt
-from keras.models import Model
-from keras.layers import Input, Conv2D, MaxPooling2D, UpSampling2D, concatenate
-
-# Define a U-Net model
-def unet():
-    inputs = Input((256, 256, 3))
-    conv1 = Conv2D(64, 3, activation='relu', padding='same')(inputs)
-    pool1 = MaxPooling2D(pool_size=(2, 2))(conv1)
-    conv2 = Conv2D(128, 3, activation='relu', padding='same')(pool1)
-    pool2 = MaxPooling2D(pool_size=(2, 2))(conv2)
-    up1 = UpSampling2D(size=(2, 2))(pool2)
-    concat1 = concatenate([up1, conv2], axis=3)
-    conv3 = Conv2D(64, 3, activation='relu', padding='same')(concat1)
-    up2 = UpSampling2D(size=(2, 2))(conv3)
-    concat2 = concatenate([up2, conv1], axis=3)
-    conv4 = Conv2D(64, 3, activation='relu', padding='same')(concat2)
-    outputs = Conv2D(1, 1, activation='sigmoid')(conv4)
-    model = Model(inputs=inputs, outputs=outputs)
-    return model
-
-# Create and summarize the model
-model = unet()
-model.summary()
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the primary purpose of the contracting path in a U-Net architecture?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -148,37 +118,7 @@ model.summary()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-The U-Net architecture is particularly well-suited for semantic segmentation tasks due to its symmetric expanding and contracting paths, which allow it to capture context and localization information effectively. The contracting path captures context, while the expansive path enables precise localization.
-
-```python title="example2.py"
-import numpy as np
-import matplotlib.pyplot as plt
-from keras.models import Model
-from keras.layers import Input, Conv2D, MaxPooling2D, UpSampling2D, concatenate
-
-# Define a U-Net model
-def unet():
-    inputs = Input((256, 256, 3))
-    conv1 = Conv2D(64, 3, activation='relu', padding='same')(inputs)
-    pool1 = MaxPooling2D(pool_size=(2, 2))(conv1)
-    conv2 = Conv2D(128, 3, activation='relu', padding='same')(pool1)
-    pool2 = MaxPooling2D(pool_size=(2, 2))(conv2)
-    up1 = UpSampling2D(size=(2, 2))(pool2)
-    concat1 = concatenate([up1, conv2], axis=3)
-    conv3 = Conv2D(64, 3, activation='relu', padding='same')(concat1)
-    up2 = UpSampling2D(size=(2, 2))(conv3)
-    concat2 = concatenate([up2, conv1], axis=3)
-    conv4 = Conv2D(64, 3, activation='relu', padding='same')(concat2)
-    outputs = Conv2D(1, 1, activation='sigmoid')(conv4)
-    model = Model(inputs=inputs, outputs=outputs)
-    return model
-
-# Create and summarize the model
-model = unet()
-model.summary()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the role of the expansive path in a U-Net architecture?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

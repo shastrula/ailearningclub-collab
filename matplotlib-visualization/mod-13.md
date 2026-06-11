@@ -82,25 +82,7 @@ fig.show()
 
 > **💡 Tip:** When working with time series data, always ensure your date column is correctly formatted as a datetime object. This will enable you to utilize various time-based functions and make your visualizations more accurate and meaningful.
 
-Plotly is a powerful library for creating interactive plots. It allows for more dynamic and engaging visualizations, which can be particularly useful for exploring time series data. With Plotly, you can create plots that respond to user interactions, such as zooming and panning, making it easier to identify patterns and anomalies in your data.
-
-```python title="example2.py"
-import plotly.express as px
-import pandas as pd
-
-# Sample time series data
-data = {'date': ['2023-01-01', '2023-02-01', '2023-03-01', '2023-04-01', '2023-05-01'],
-        'value': [10, 15, 14, 18, 20]}
-df = pd.DataFrame(data)
-df['date'] = pd.to_datetime(df['date'])
-df.set_index('date', inplace=True)
-
-# Creating an interactive plot with Plotly
-fig = px.line(df, x=df.index, y='value', title='Interactive Time Series Data')
-fig.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of visualizing time series data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,25 +106,7 @@ fig.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Plotly is a powerful library for creating interactive plots. It allows for more dynamic and engaging visualizations, which can be particularly useful for exploring time series data. With Plotly, you can create plots that respond to user interactions, such as zooming and panning, making it easier to identify patterns and anomalies in your data.
-
-```python title="example2.py"
-import plotly.express as px
-import pandas as pd
-
-# Sample time series data
-data = {'date': ['2023-01-01', '2023-02-01', '2023-03-01', '2023-04-01', '2023-05-01'],
-        'value': [10, 15, 14, 18, 20]}
-df = pd.DataFrame(data)
-df['date'] = pd.to_datetime(df['date'])
-df.set_index('date', inplace=True)
-
-# Creating an interactive plot with Plotly
-fig = px.line(df, x=df.index, y='value', title='Interactive Time Series Data')
-fig.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which Python library is known for creating interactive plots?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -80,23 +80,7 @@ print(cot_result[0]['generated_text'])
 
 > **💡 Tip:** When designing CoT prompts, ensure that each step is clear and logically connected to the next to guide the model effectively.
 
-Chain-of-Thought (CoT) prompting encourages models to provide reasoning steps before arriving at an answer, enhancing their problem-solving capabilities. ReAct (Reason and Act) prompting combines reasoning with actionable steps, making the model more effective in complex tasks that require multi-step solutions.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Text generation pipeline
-generator = pipeline('text-generation', model='EleutherAI/gpt-neo-1.3B')
-
-# CoT prompt
-cot_prompt = "To solve the problem, let's think step by step: 2 + 2 is..."
-
-# Generate text
-cot_result = generator(cot_prompt, max_length=50)
-print(cot_result[0]['generated_text'])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary difference between zero-shot and few-shot learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,23 +104,7 @@ print(cot_result[0]['generated_text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Chain-of-Thought (CoT) prompting encourages models to provide reasoning steps before arriving at an answer, enhancing their problem-solving capabilities. ReAct (Reason and Act) prompting combines reasoning with actionable steps, making the model more effective in complex tasks that require multi-step solutions.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Text generation pipeline
-generator = pipeline('text-generation', model='EleutherAI/gpt-neo-1.3B')
-
-# CoT prompt
-cot_prompt = "To solve the problem, let's think step by step: 2 + 2 is..."
-
-# Generate text
-cot_result = generator(cot_prompt, max_length=50)
-print(cot_result[0]['generated_text'])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the main advantage of using Chain-of-Thought (CoT) prompting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

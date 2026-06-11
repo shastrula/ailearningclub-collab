@@ -80,27 +80,7 @@ plt.show()
 
 > **💡 Tip:** Ensure your time series data is stationary before applying certain models. Non-stationary data can lead to misleading results.
 
-Decomposition is a technique used to break down a time series into its constituent components: trend, seasonality, and residuals (noise). This helps in understanding the underlying patterns and making forecasts. The statsmodels library in Python provides tools for time series decomposition.
-
-```python title="example2.py"
-import pandas as pd
-import matplotlib.pyplot as plt
-from statsmodels.tsa.seasonal import seasonal_decompose
-
-# Sample time series data with seasonality
-data = {'date': pd.date_range(start='2020-01-01', periods=24, freq='M'),
-         'value': [10, 12, 15, 18, 20, 22, 25, 28, 30, 32, 35, 38,
-                    40, 42, 45, 48, 50, 52, 55, 58, 60, 62, 65, 68]}
-df = pd.DataFrame(data)
-df.set_index('date', inplace=True)
-
-# Decompose the time series
-decomposition = seasonal_decompose(df['value'], model='additive')
-decomposition.plot()
-plt.show()
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What are the three main components of time series data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,27 +104,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Decomposition is a technique used to break down a time series into its constituent components: trend, seasonality, and residuals (noise). This helps in understanding the underlying patterns and making forecasts. The statsmodels library in Python provides tools for time series decomposition.
-
-```python title="example2.py"
-import pandas as pd
-import matplotlib.pyplot as plt
-from statsmodels.tsa.seasonal import seasonal_decompose
-
-# Sample time series data with seasonality
-data = {'date': pd.date_range(start='2020-01-01', periods=24, freq='M'),
-         'value': [10, 12, 15, 18, 20, 22, 25, 28, 30, 32, 35, 38,
-                    40, 42, 45, 48, 50, 52, 55, 58, 60, 62, 65, 68]}
-df = pd.DataFrame(data)
-df.set_index('date', inplace=True)
-
-# Decompose the time series
-decomposition = seasonal_decompose(df['value'], model='additive')
-decomposition.plot()
-plt.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which Python library is commonly used for time series decomposition?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

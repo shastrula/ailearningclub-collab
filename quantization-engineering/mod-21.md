@@ -82,25 +82,7 @@ print(f'Inference time: {end_time - start_time} seconds')
 
 > **💡 Tip:** When quantizing models, ensure to validate the quantized model's performance against the original model to maintain accuracy and reliability.
 
-Benchmarking is essential to evaluate the performance of quantized models. It involves measuring metrics like inference time, memory usage, and accuracy. Tools like bitsandbytes library can be used to efficiently handle large models with reduced precision. Model compression techniques further optimize the model size without significant loss in performance.
-
-```python title="example2.py"
-import time
-import bitsandbytes as bnb
-
-# Load the quantized model
-quantized_model = bnb.nn.QuantizedLinear.from_float(torch.load('quantized_model.pth'))
-
-# Benchmark inference time
-input_tensor = torch.randn(1, 1000)
-start_time = time.time()
-output = quantized_model(input_tensor)
-end_time = time.time()
-
-print(f'Inference time: {end_time - start_time} seconds')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which quantization technique dynamically adjusts quantization levels?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,25 +106,7 @@ print(f'Inference time: {end_time - start_time} seconds')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Benchmarking is essential to evaluate the performance of quantized models. It involves measuring metrics like inference time, memory usage, and accuracy. Tools like bitsandbytes library can be used to efficiently handle large models with reduced precision. Model compression techniques further optimize the model size without significant loss in performance.
-
-```python title="example2.py"
-import time
-import bitsandbytes as bnb
-
-# Load the quantized model
-quantized_model = bnb.nn.QuantizedLinear.from_float(torch.load('quantized_model.pth'))
-
-# Benchmark inference time
-input_tensor = torch.randn(1, 1000)
-start_time = time.time()
-output = quantized_model(input_tensor)
-end_time = time.time()
-
-print(f'Inference time: {end_time - start_time} seconds')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of benchmarking quantized models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

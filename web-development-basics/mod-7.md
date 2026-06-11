@@ -138,19 +138,7 @@ form.addEventListener("submit", async (e) => {
 
 ---
 
-Fetch data and update the page:
-
-```javascript
-// Fetch and display user list
-async function displayUsers() {
-  try {
-    let response = await fetch("https://api.example.com/users");
-    let users = await response.json();
-    
-    let list = document.querySelector("#user-list");
-    list.innerHTML = "";
-    
-    users.forEach(user =>
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does REST API stand for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -176,19 +164,7 @@ async function displayUsers() {
 
 ---
 
-Fetch data and update the page:
-
-```javascript
-// Fetch and display user list
-async function displayUsers() {
-  try {
-    let response = await fetch("https://api.example.com/users");
-    let users = await response.json();
-    
-    let list = document.querySelector("#user-list");
-    list.innerHTML = "";
-    
-    users.forEach(user =>
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does JSON stand for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -214,19 +190,7 @@ async function displayUsers() {
 
 ---
 
-Fetch data and update the page:
-
-```javascript
-// Fetch and display user list
-async function displayUsers() {
-  try {
-    let response = await fetch("https://api.example.com/users");
-    let users = await response.json();
-    
-    let list = document.querySelector("#user-list");
-    list.innerHTML = "";
-    
-    users.forEach(user =>
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which HTTP method is used to create new data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -252,19 +216,7 @@ async function displayUsers() {
 
 ---
 
-Fetch data and update the page:
-
-```javascript
-// Fetch and display user list
-async function displayUsers() {
-  try {
-    let response = await fetch("https://api.example.com/users");
-    let users = await response.json();
-    
-    let list = document.querySelector("#user-list");
-    list.innerHTML = "";
-    
-    users.forEach(user =>
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does response.json() do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -290,19 +242,7 @@ async function displayUsers() {
 
 ---
 
-Fetch data and update the page:
-
-```javascript
-// Fetch and display user list
-async function displayUsers() {
-  try {
-    let response = await fetch("https://api.example.com/users");
-    let users = await response.json();
-    
-    let list = document.querySelector("#user-list");
-    list.innerHTML = "";
-    
-    users.forEach(user =>
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is async/await used for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

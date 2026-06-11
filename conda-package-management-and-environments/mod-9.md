@@ -74,24 +74,7 @@ os.system('conda env remove --name myenv_clone --yes')
 
 > **💡 Tip:** Always ensure that the environment you are cloning from is up-to-date with all necessary packages to avoid missing dependencies in the cloned environment.
 
-Cloning environments allows you to create a copy of an existing environment, which can be useful for creating development, testing, or production environments. This ensures that all environments are identical, reducing the chances of environment-specific bugs. Additionally, managing environments through Conda's environment.yml files allows for easy sharing and replication of environments.
-
-```python title="example2.py"
-import conda
-import os
-
-# Create and activate a new environment
-conda.create(name='myenv_clone', clone='myenv')
-conda.activate('myenv_clone')
-
-# Export the environment to a YAML file
-conda.export(filename='myenv_clone.yml')
-
-# Remove the environment
-os.system('conda env remove --name myenv_clone --yes')
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What command is used to create a new environment in Conda?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -115,24 +98,7 @@ os.system('conda env remove --name myenv_clone --yes')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Cloning environments allows you to create a copy of an existing environment, which can be useful for creating development, testing, or production environments. This ensures that all environments are identical, reducing the chances of environment-specific bugs. Additionally, managing environments through Conda's environment.yml files allows for easy sharing and replication of environments.
-
-```python title="example2.py"
-import conda
-import os
-
-# Create and activate a new environment
-conda.create(name='myenv_clone', clone='myenv')
-conda.activate('myenv_clone')
-
-# Export the environment to a YAML file
-conda.export(filename='myenv_clone.yml')
-
-# Remove the environment
-os.system('conda env remove --name myenv_clone --yes')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ How do you clone an existing environment in Conda?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

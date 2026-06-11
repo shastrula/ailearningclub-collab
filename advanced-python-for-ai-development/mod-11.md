@@ -82,32 +82,7 @@ Result of x + y: tensor([ 7.,  5.])
 
 > **💡 Tip:** When working with large datasets, always ensure that your data is properly normalized and preprocessed to avoid issues during training.
 
-PyTorch, developed by Facebook's AI Research lab, is another powerful deep learning framework. It is known for its dynamic computation graph and ease of use, making it particularly popular among researchers. PyTorch uses the torch library as its core, providing tensor computation with strong GPU acceleration and a deep integration with the Python ecosystem.
-
-**example2.py**
-
-```
-import torch
-
-# Define a simple tensor
-x = torch.tensor([5.0, 3.0])
-
-# Perform an operation on the tensor
-y = torch.tensor([2.0, 2.0])
-z = x + y
-
-print('Tensor x:', x)
-print('Tensor y:', y)
-print('Result of x + y:', z)
-```
-
-```
-Tensor x: tensor([5., 3.])
-Tensor y: tensor([2., 2.])
-Result of x + y: tensor([ 7.,  5.])
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary advantage of using TensorFlow's data flow graphs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -131,32 +106,7 @@ Result of x + y: tensor([ 7.,  5.])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-PyTorch, developed by Facebook's AI Research lab, is another powerful deep learning framework. It is known for its dynamic computation graph and ease of use, making it particularly popular among researchers. PyTorch uses the torch library as its core, providing tensor computation with strong GPU acceleration and a deep integration with the Python ecosystem.
-
-**example2.py**
-
-```
-import torch
-
-# Define a simple tensor
-x = torch.tensor([5.0, 3.0])
-
-# Perform an operation on the tensor
-y = torch.tensor([2.0, 2.0])
-z = x + y
-
-print('Tensor x:', x)
-print('Tensor y:', y)
-print('Result of x + y:', z)
-```
-
-```
-Tensor x: tensor([5., 3.])
-Tensor y: tensor([2., 2.])
-Result of x + y: tensor([ 7.,  5.])
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which of the following statements is true about PyTorch?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

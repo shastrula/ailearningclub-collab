@@ -93,36 +93,7 @@ print(quantized_model)
 
 > **💡 Tip:** When applying GGUF, ensure that the model's accuracy is evaluated post-quantization to confirm that the performance degradation is within acceptable limits.
 
-GGUF can be applied to various layers of a neural network, including convolutional and linear layers. By quantizing these layers, we can significantly reduce the model size and inference time. This is particularly beneficial for deploying models on mobile devices or IoT applications where efficiency is paramount.
-
-```python title="example2.py"
-import torch
-import torch.nn as nn
-
-# Define a convolutional neural network
-class ConvNet(nn.Module):
-    def __init__(self):
-        super(ConvNet, self).__init__()
-        self.conv1 = nn.Conv2d(1, 10, kernel_size=5)
-        self.fc = nn.Linear(320, 10)
-
-    def forward(self, x):
-        x = nn.functional.relu(nn.functional.max_pool2d(self.conv1(x), 2))
-        x = x.view(-1, 320)
-        x = self.fc(x)
-        return x
-
-# Initialize the model
-model = ConvNet()
-
-# Apply GGUF quantization
-quantized_model = torch.quantization.quantize_dynamic(model, {nn.Conv2d, nn.Linear}, dtype=torch.qint8)
-
-# Print the quantized model
-print(quantized_model)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of GGUF?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -146,36 +117,7 @@ print(quantized_model)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-GGUF can be applied to various layers of a neural network, including convolutional and linear layers. By quantizing these layers, we can significantly reduce the model size and inference time. This is particularly beneficial for deploying models on mobile devices or IoT applications where efficiency is paramount.
-
-```python title="example2.py"
-import torch
-import torch.nn as nn
-
-# Define a convolutional neural network
-class ConvNet(nn.Module):
-    def __init__(self):
-        super(ConvNet, self).__init__()
-        self.conv1 = nn.Conv2d(1, 10, kernel_size=5)
-        self.fc = nn.Linear(320, 10)
-
-    def forward(self, x):
-        x = nn.functional.relu(nn.functional.max_pool2d(self.conv1(x), 2))
-        x = x.view(-1, 320)
-        x = self.fc(x)
-        return x
-
-# Initialize the model
-model = ConvNet()
-
-# Apply GGUF quantization
-quantized_model = torch.quantization.quantize_dynamic(model, {nn.Conv2d, nn.Linear}, dtype=torch.qint8)
-
-# Print the quantized model
-print(quantized_model)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which layers can be quantized using GGUF?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

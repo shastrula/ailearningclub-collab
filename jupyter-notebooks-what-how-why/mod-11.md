@@ -70,13 +70,7 @@ Learning from others' experiences:
 
 > **💡 Tip:** Always test your notebook by restarting the kernel and running all cells to ensure it works for others.
 
-- Clear cell outputs before sharing (Cell → All Output → Clear)
-- Add markdown cells explaining your analysis
-- Use descriptive variable names
-- Include comments in code cells
-- Test the notebook from top to bottom before sharing
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What format is best for sharing a notebook with non-technical stakeholders?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

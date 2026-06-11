@@ -77,24 +77,7 @@ print(f'Mean Squared Error: {mse}')
 
 > **💡 Tip:** Always check the assumptions of Linear Regression, such as linearity, independence, homoscedasticity, and normality of residuals, to ensure the model's validity.
 
-After fitting a Linear Regression model, it's important to evaluate its performance. Common metrics include the coefficient of determination (R^2 score) and Mean Squared Error (MSE). The R^2 score indicates how well the model explains the variance in the target variable, while MSE measures the average squared difference between actual and predicted values.
-
-```python title="example2.py"
-from sklearn.metrics import r2_score, mean_squared_error
-
-# Actual and predicted values
-y_true = np.array([2, 3, 5, 7, 11])
-y_pred = model.predict(x)
-
-# Calculate metrics
-r2 = r2_score(y_true, y_pred)
-mse = mean_squared_error(y_true, y_pred)
-
-print(f'R^2 Score: {r2}')
-print(f'Mean Squared Error: {mse}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of Linear Regression?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,24 +101,7 @@ print(f'Mean Squared Error: {mse}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-After fitting a Linear Regression model, it's important to evaluate its performance. Common metrics include the coefficient of determination (R^2 score) and Mean Squared Error (MSE). The R^2 score indicates how well the model explains the variance in the target variable, while MSE measures the average squared difference between actual and predicted values.
-
-```python title="example2.py"
-from sklearn.metrics import r2_score, mean_squared_error
-
-# Actual and predicted values
-y_true = np.array([2, 3, 5, 7, 11])
-y_pred = model.predict(x)
-
-# Calculate metrics
-r2 = r2_score(y_true, y_pred)
-mse = mean_squared_error(y_true, y_pred)
-
-print(f'R^2 Score: {r2}')
-print(f'Mean Squared Error: {mse}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which metric is used to evaluate how well the Linear Regression model explains the variance in the target variable?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

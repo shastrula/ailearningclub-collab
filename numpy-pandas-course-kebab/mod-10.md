@@ -78,21 +78,7 @@ print(aggregations)
 
 > **💡 Tip:** When using the `agg` method, ensure that the aggregation functions you choose are appropriate for the type of data you are working with to avoid incorrect results.
 
-Aggregation functions are used to perform calculations on grouped data. Common aggregation functions include sum, mean, count, min, max, and standard deviation. These functions help in summarizing the data within each group, providing valuable insights.
-
-```python title="example2.py"
-import pandas as pd
-
-# Sample DataFrame
-data = {'Category': ['A', 'B', 'A', 'B', 'A', 'B'], 'Values': [10, 20, 30, 40, 50, 60]}
-df = pd.DataFrame(data)
-
-# Grouping by 'Category' and applying multiple aggregation functions
-aggregations = df.groupby('Category')['Values'].agg(['sum','mean', 'count'])
-print(aggregations)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does the `groupby` function in Pandas allow you to do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -116,21 +102,7 @@ print(aggregations)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Aggregation functions are used to perform calculations on grouped data. Common aggregation functions include sum, mean, count, min, max, and standard deviation. These functions help in summarizing the data within each group, providing valuable insights.
-
-```python title="example2.py"
-import pandas as pd
-
-# Sample DataFrame
-data = {'Category': ['A', 'B', 'A', 'B', 'A', 'B'], 'Values': [10, 20, 30, 40, 50, 60]}
-df = pd.DataFrame(data)
-
-# Grouping by 'Category' and applying multiple aggregation functions
-aggregations = df.groupby('Category')['Values'].agg(['sum','mean', 'count'])
-print(aggregations)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which aggregation function calculates the average value within each group?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

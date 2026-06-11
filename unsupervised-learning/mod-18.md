@@ -82,25 +82,7 @@ print('Anomalies detected:', anomalies)
 
 > **💡 Tip:** When using DBSCAN, carefully tune the 'eps' and'min_samples' parameters to achieve optimal clustering and anomaly detection performance.
 
-DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is another powerful unsupervised learning algorithm that groups together points that are packed closely together, marking as anomalies points that lie alone in low-density regions. DBSCAN does not require specifying the number of clusters in advance and can find arbitrarily shaped clusters.
-
-```python title="example2.py"
-from sklearn.cluster import DBSCAN
-from sklearn.datasets import make_moons
-
-# Generate synthetic data
-X, _ = make_moons(n_samples=300, noise=0.05, random_state=0)
-
-# Apply DBSCAN
-dbsc = DBSCAN(eps=0.3, min_samples=5).fit(X)
-
-# Identify anomalies
-anomalies = X[dbsc.labels_ == -1]
-
-print('Anomalies detected:', anomalies)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which clustering algorithm requires specifying the number of clusters in advance?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,25 +106,7 @@ print('Anomalies detected:', anomalies)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is another powerful unsupervised learning algorithm that groups together points that are packed closely together, marking as anomalies points that lie alone in low-density regions. DBSCAN does not require specifying the number of clusters in advance and can find arbitrarily shaped clusters.
-
-```python title="example2.py"
-from sklearn.cluster import DBSCAN
-from sklearn.datasets import make_moons
-
-# Generate synthetic data
-X, _ = make_moons(n_samples=300, noise=0.05, random_state=0)
-
-# Apply DBSCAN
-dbsc = DBSCAN(eps=0.3, min_samples=5).fit(X)
-
-# Identify anomalies
-anomalies = X[dbsc.labels_ == -1]
-
-print('Anomalies detected:', anomalies)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does DBSCAN stand for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -82,7 +82,7 @@ print(sqrt_result)
 
 > **💡 Tip:** Ensure that your cells are in the correct order to avoid dependency issues. Running cells out of order can lead to errors if a subsequent cell relies on the output of a previous one.
 
-Running multiple code cells in sequence is straightforward. You can execute all cells in a notebook by selecting 'Cell' >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the output of running the first code cell?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,7 +106,7 @@ Running multiple code cells in sequence is straightforward. You can execute all 
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Running multiple code cells in sequence is straightforward. You can execute all cells in a notebook by selecting 'Cell' >
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the output of running the second code cell?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

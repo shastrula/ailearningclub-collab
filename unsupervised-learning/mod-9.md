@@ -79,29 +79,7 @@ plt.show()
 
 > **💡 Tip:** When using Kernel PCA, carefully choose the kernel function and its parameters, as they significantly impact the transformation and the resulting components.
 
-Kernel PCA extends PCA to non-linear dimensionality reduction through the use of kernel functions. It maps data into a higher-dimensional space where linear PCA is applied, allowing it to capture complex, non-linear relationships in the data. This technique is valuable for datasets where linear methods fall short.
-
-```python title="example2.py"
-from sklearn.decomposition import KernelPCA
-from sklearn.datasets import make_circles
-import matplotlib.pyplot as plt
-
-# Generate a sample dataset
-X, y = make_circles(n_samples=1000, factor=.5, noise=0.05)
-
-# Initialize Kernel PCA
-kpca = KernelPCA(n_components=2, kernel='rbf', gamma=10)
-
-# Fit and transform the data
-X_kpca = kpca.fit_transform(X)
-
-# Plotting the results
-plt.scatter(X_kpca[:, 0], X_kpca[:, 1], c=y)
-plt.title('Kernel PCA transformation')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary advantage of using Incremental PCA over standard PCA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -125,29 +103,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Kernel PCA extends PCA to non-linear dimensionality reduction through the use of kernel functions. It maps data into a higher-dimensional space where linear PCA is applied, allowing it to capture complex, non-linear relationships in the data. This technique is valuable for datasets where linear methods fall short.
-
-```python title="example2.py"
-from sklearn.decomposition import KernelPCA
-from sklearn.datasets import make_circles
-import matplotlib.pyplot as plt
-
-# Generate a sample dataset
-X, y = make_circles(n_samples=1000, factor=.5, noise=0.05)
-
-# Initialize Kernel PCA
-kpca = KernelPCA(n_components=2, kernel='rbf', gamma=10)
-
-# Fit and transform the data
-X_kpca = kpca.fit_transform(X)
-
-# Plotting the results
-plt.scatter(X_kpca[:, 0], X_kpca[:, 1], c=y)
-plt.title('Kernel PCA transformation')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which kernel function is commonly used in Kernel PCA for non-linear dimensionality reduction?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

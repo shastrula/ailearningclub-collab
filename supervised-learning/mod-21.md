@@ -94,37 +94,7 @@ print(f'Accuracy: {accuracy}')
 
 > **💡 Tip:** Ensure your data is properly preprocessed and scaled before training Logistic Regression to achieve optimal performance.
 
-Logistic Regression is widely used for binary classification problems. In this case study, we will examine how Logistic Regression can be employed to predict whether a patient has a particular disease based on symptoms and medical history.
-
-```python title="logistic_regression_example.py"
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-
-# Load dataset
-data = pd.read_csv('patient_data.csv')
-
-# Features and target
-X = data.drop('disease', axis=1)
-y = data['disease']
-
-# Split data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Model
-model = LogisticRegression()
-model.fit(X_train, y_train)
-
-# Predictions
-y_pred = model.predict(X_test)
-
-# Evaluate
-accuracy = accuracy_score(y_test, y_pred)
-print(f'Accuracy: {accuracy}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary use case for Linear Regression?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -148,37 +118,7 @@ print(f'Accuracy: {accuracy}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Logistic Regression is widely used for binary classification problems. In this case study, we will examine how Logistic Regression can be employed to predict whether a patient has a particular disease based on symptoms and medical history.
-
-```python title="logistic_regression_example.py"
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-
-# Load dataset
-data = pd.read_csv('patient_data.csv')
-
-# Features and target
-X = data.drop('disease', axis=1)
-y = data['disease']
-
-# Split data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Model
-model = LogisticRegression()
-model.fit(X_train, y_train)
-
-# Predictions
-y_pred = model.predict(X_test)
-
-# Evaluate
-accuracy = accuracy_score(y_test, y_pred)
-print(f'Accuracy: {accuracy}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which metric is commonly used to evaluate the performance of Logistic Regression?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

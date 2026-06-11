@@ -79,22 +79,7 @@ print(f'p-value: {result[1]}')
 
 > **💡 Tip:** Always check for stationarity before applying time series models, as non-stationary data can lead to misleading results.
 
-Stationarity is a fundamental concept in time series analysis, indicating that the statistical properties of the series, such as mean and variance, remain constant over time. A stationary time series is easier to model and predict. Techniques like differencing can be used to transform non-stationary data into stationary data.
-
-```python title="example2.py"
-from statsmodels.tsa.stattools import adfuller
-
-# Perform the Dickey-Fuller test for stationarity
-result = adfuller(data['value'])
-
-# Print the test result
-print(f'ADF Statistic: {result[0]}')
-print(f'p-value: {result[1]}')
-
-# If p-value < 0.05, the series is stationary
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What are the four components of a time series?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,22 +103,7 @@ print(f'p-value: {result[1]}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Stationarity is a fundamental concept in time series analysis, indicating that the statistical properties of the series, such as mean and variance, remain constant over time. A stationary time series is easier to model and predict. Techniques like differencing can be used to transform non-stationary data into stationary data.
-
-```python title="example2.py"
-from statsmodels.tsa.stattools import adfuller
-
-# Perform the Dickey-Fuller test for stationarity
-result = adfuller(data['value'])
-
-# Print the test result
-print(f'ADF Statistic: {result[0]}')
-print(f'p-value: {result[1]}')
-
-# If p-value < 0.05, the series is stationary
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does the Dickey-Fuller test determine?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

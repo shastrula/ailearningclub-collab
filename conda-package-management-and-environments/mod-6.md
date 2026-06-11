@@ -75,18 +75,7 @@ print('All packages have been updated to the latest versions.')
 
 > **💡 Tip:** Always review the changelogs or release notes of major packages before updating, as some updates may introduce breaking changes.
 
-To update all packages in a Conda environment, you can use the `conda update --all` command. This command updates all packages in the current environment to their latest versions, ensuring that your environment is up-to-date and consistent.
-
-```python title="example2.py"
-import conda
-from conda import api
-
-# Update all packages in the current environment
-api.update(None, all=True)
-print('All packages have been updated to the latest versions.')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which command updates a specific package to its latest version?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -110,18 +99,7 @@ print('All packages have been updated to the latest versions.')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-To update all packages in a Conda environment, you can use the `conda update --all` command. This command updates all packages in the current environment to their latest versions, ensuring that your environment is up-to-date and consistent.
-
-```python title="example2.py"
-import conda
-from conda import api
-
-# Update all packages in the current environment
-api.update(None, all=True)
-print('All packages have been updated to the latest versions.')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does the `conda update --all` command do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

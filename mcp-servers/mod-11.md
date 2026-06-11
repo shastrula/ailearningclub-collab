@@ -80,23 +80,7 @@ print(response.json())
 
 > **💡 Tip:** Always use environment variables to store sensitive information like API keys and encryption keys to avoid hardcoding them in your scripts.
 
-Implementing robust access control and authentication mechanisms is essential to ensure that only authorized users and systems can interact with the AI. This involves using techniques like OAuth for secure authentication and role-based access control (RBAC) to limit permissions.
-
-```python title="example2.py"
-import requests
-
-# OAuth token acquisition
-auth_response = requests.post('https://example.com/oauth/token', data={'grant_type': 'client_credentials'})
-access_token = auth_response.json().get('access_token')
-
-# Use the token for authenticated API request
-headers = {'Authorization': f'Bearer {access_token}'}
-response = requests.get('https://example.com/api/data', headers=headers)
-
-print(response.json())
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which protocol should be used for secure data transmission?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,23 +104,7 @@ print(response.json())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Implementing robust access control and authentication mechanisms is essential to ensure that only authorized users and systems can interact with the AI. This involves using techniques like OAuth for secure authentication and role-based access control (RBAC) to limit permissions.
-
-```python title="example2.py"
-import requests
-
-# OAuth token acquisition
-auth_response = requests.post('https://example.com/oauth/token', data={'grant_type': 'client_credentials'})
-access_token = auth_response.json().get('access_token')
-
-# Use the token for authenticated API request
-headers = {'Authorization': f'Bearer {access_token}'}
-response = requests.get('https://example.com/api/data', headers=headers)
-
-print(response.json())
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of using OAuth in AI integrations?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -69,13 +69,6 @@ Learning from others' experiences:
 - [Distill.pub](https://distill.pub/) — Clear explanations of ML concepts
 
 
-- [Deep Learning Book (Goodfellow)](https://www.deeplearningbook.org/) — Free online textbook
-- [3Blue1Brown Neural Networks](https://www.3blue1brown.com/topics/neural-networks) — Visual explanations
-- [PyTorch Tutorials](https://pytorch.org/tutorials/) — Official PyTorch learning resources
-- [TensorFlow Tutorials](https://www.tensorflow.org/tutorials) — Official TensorFlow guides
-- [Distill.pub](https://distill.pub/) — Clear explanations of ML concepts
-
-
 <div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ What are the trade-offs of this approach?</p>
   <div class="space-y-2">
@@ -99,13 +92,6 @@ Learning from others' experiences:
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-- [Deep Learning Book (Goodfellow)](https://www.deeplearningbook.org/) — Free online textbook
-- [3Blue1Brown Neural Networks](https://www.3blue1brown.com/topics/neural-networks) — Visual explanations
-- [PyTorch Tutorials](https://pytorch.org/tutorials/) — Official PyTorch learning resources
-- [TensorFlow Tutorials](https://www.tensorflow.org/tutorials) — Official TensorFlow guides
-- [Distill.pub](https://distill.pub/) — Clear explanations of ML concepts
-
-
 <div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ How would you optimize this for production?</p>
   <div class="space-y-2">

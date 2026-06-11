@@ -83,26 +83,7 @@ print(f'Scikit-Learn Version: {sklearn_version}')
 
 > **💡 Tip:** Ensure that your Python environment is isolated using virtual environments (e.g., venv or conda) to avoid version conflicts between different projects.
 
-After installing the required libraries, configure your development environment. This involves setting up an Integrated Development Environment (IDE) like PyCharm, VS Code, or Jupyter Notebooks. Ensure your environment is properly configured to run Python scripts and handle data science workflows efficiently.
-
-```python title="check_environment.py"
-import sys
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn import __version__ as sklearn_version
-
-# Check Python version
-print(f'Python Version: {sys.version}')
-
-# Check library versions
-print(f'NumPy Version: {np.__version__}')
-print(f'Pandas Version: {pd.__version__}')
-print(f'Matplotlib Version: {plt.__version__}')
-print(f'Scikit-Learn Version: {sklearn_version}')
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Which command is used to install Python libraries using pip?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -126,26 +107,7 @@ print(f'Scikit-Learn Version: {sklearn_version}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-After installing the required libraries, configure your development environment. This involves setting up an Integrated Development Environment (IDE) like PyCharm, VS Code, or Jupyter Notebooks. Ensure your environment is properly configured to run Python scripts and handle data science workflows efficiently.
-
-```python title="check_environment.py"
-import sys
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn import __version__ as sklearn_version
-
-# Check Python version
-print(f'Python Version: {sys.version}')
-
-# Check library versions
-print(f'NumPy Version: {np.__version__}')
-print(f'Pandas Version: {pd.__version__}')
-print(f'Matplotlib Version: {plt.__version__}')
-print(f'Scikit-Learn Version: {sklearn_version}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Why is it important to use virtual environments in Python development?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

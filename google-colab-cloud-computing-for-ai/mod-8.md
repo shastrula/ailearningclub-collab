@@ -64,14 +64,7 @@ drive.mount('/content/drive')
 
 > **💡 Tip:** Ensure you authorize the connection to your Google Drive by following the link provided in the notebook output and copying the authorization code back into the notebook.
 
-Colab's collaborative features enable multiple users to work on the same notebook simultaneously. This is achieved through real-time updates and shared editing capabilities. These features are essential for team projects, peer reviews, and educational settings where collaboration is key.
-
-```python title="example2.py"
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary benefit of using custom widgets in Google Colab?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -95,14 +88,7 @@ drive.mount('/content/drive')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Colab's collaborative features enable multiple users to work on the same notebook simultaneously. This is achieved through real-time updates and shared editing capabilities. These features are essential for team projects, peer reviews, and educational settings where collaboration is key.
-
-```python title="example2.py"
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How do collaborative features in Google Colab enhance team projects?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

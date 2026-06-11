@@ -95,43 +95,6 @@ console.log(counter());       // 2
 
 ---
 
-Variables have scope - where they can be accessed:
-
-```javascript
-// Global scope
-let global = "I'm global";
-
-function outer() {
-  // Function scope
-  let local = "I'm local";
-  
-  function inner() {
-    // Inner function scope
-    let innerVar = "I'm inner";
-    console.log(global);      // Can access global
-    console.log(local);       // Can access outer's local
-  }
-  
-  inner();
-  // console.log(innerVar);   // Error: not accessible
-}
-
-// Closure: inner function remembers outer scope
-function makeCounter() {
-  let count = 0;
-  return function() {
-    count++;
-    return count;
-  };
-}
-
-let counter = makeCounter();
-console.log(counter());       // 1
-console.log(counter());       // 2
-```
-
----
-
 <div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the difference between let and const?</p>
   <div class="space-y-2">
@@ -158,44 +121,7 @@ console.log(counter());       // 2
 
 ---
 
-Variables have scope - where they can be accessed:
-
-```javascript
-// Global scope
-let global = "I'm global";
-
-function outer() {
-  // Function scope
-  let local = "I'm local";
-  
-  function inner() {
-    // Inner function scope
-    let innerVar = "I'm inner";
-    console.log(global);      // Can access global
-    console.log(local);       // Can access outer's local
-  }
-  
-  inner();
-  // console.log(innerVar);   // Error: not accessible
-}
-
-// Closure: inner function remembers outer scope
-function makeCounter() {
-  let count = 0;
-  return function() {
-    count++;
-    return count;
-  };
-}
-
-let counter = makeCounter();
-console.log(counter());       // 1
-console.log(counter());       // 2
-```
-
----
-
-<div class="quiz" data-correct="2">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does the === operator check?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -221,44 +147,7 @@ console.log(counter());       // 2
 
 ---
 
-Variables have scope - where they can be accessed:
-
-```javascript
-// Global scope
-let global = "I'm global";
-
-function outer() {
-  // Function scope
-  let local = "I'm local";
-  
-  function inner() {
-    // Inner function scope
-    let innerVar = "I'm inner";
-    console.log(global);      // Can access global
-    console.log(local);       // Can access outer's local
-  }
-  
-  inner();
-  // console.log(innerVar);   // Error: not accessible
-}
-
-// Closure: inner function remembers outer scope
-function makeCounter() {
-  let count = 0;
-  return function() {
-    count++;
-    return count;
-  };
-}
-
-let counter = makeCounter();
-console.log(counter());       // 1
-console.log(counter());       // 2
-```
-
----
-
-<div class="quiz" data-correct="2">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What will this code output? let x = 5; x += 3; console.log(x);</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -281,43 +170,6 @@ console.log(counter());       // 2
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-
----
-
-Variables have scope - where they can be accessed:
-
-```javascript
-// Global scope
-let global = "I'm global";
-
-function outer() {
-  // Function scope
-  let local = "I'm local";
-  
-  function inner() {
-    // Inner function scope
-    let innerVar = "I'm inner";
-    console.log(global);      // Can access global
-    console.log(local);       // Can access outer's local
-  }
-  
-  inner();
-  // console.log(innerVar);   // Error: not accessible
-}
-
-// Closure: inner function remembers outer scope
-function makeCounter() {
-  let count = 0;
-  return function() {
-    count++;
-    return count;
-  };
-}
-
-let counter = makeCounter();
-console.log(counter());       // 1
-console.log(counter());       // 2
-```
 
 ---
 
@@ -347,44 +199,7 @@ console.log(counter());       // 2
 
 ---
 
-Variables have scope - where they can be accessed:
-
-```javascript
-// Global scope
-let global = "I'm global";
-
-function outer() {
-  // Function scope
-  let local = "I'm local";
-  
-  function inner() {
-    // Inner function scope
-    let innerVar = "I'm inner";
-    console.log(global);      // Can access global
-    console.log(local);       // Can access outer's local
-  }
-  
-  inner();
-  // console.log(innerVar);   // Error: not accessible
-}
-
-// Closure: inner function remembers outer scope
-function makeCounter() {
-  let count = 0;
-  return function() {
-    count++;
-    return count;
-  };
-}
-
-let counter = makeCounter();
-console.log(counter());       // 1
-console.log(counter());       // 2
-```
-
----
-
-<div class="quiz" data-correct="2">
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ What does the map() method do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

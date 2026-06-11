@@ -64,8 +64,6 @@ Learning from others' experiences:
 
 Steering files can be scoped to specific file patterns. A steering file with a glob of src/api/** only applies when Kiro is working on API files, keeping context focused and relevant.
 
-Steering files can be scoped to specific file patterns. A steering file with a glob of src/api/** only applies when Kiro is working on API files, keeping context focused and relevant.
-
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the main benefit of using .kiro/steering files?</p>
   <div class="space-y-2">

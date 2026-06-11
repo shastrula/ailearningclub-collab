@@ -83,30 +83,7 @@ print(f'AUC: {auc}')
 
 > **💡 Tip:** Always ensure your data is properly scaled before training a Logistic Regression model, as unscaled features can lead to suboptimal performance.
 
-Evaluating the performance of a Logistic Regression model is crucial to ensure its effectiveness. Common evaluation metrics include accuracy, precision, recall, and the F1 score. Additionally, the Receiver Operating Characteristic (ROC) curve and the Area Under the Curve (AUC) provide insights into the model's ability to distinguish between classes.
-
-```python title="example2.py"
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, roc_auc_score
-
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Train the model on the training set
-model.fit(X_train, y_train)
-
-# Make predictions on the testing set
-y_pred = model.predict(X_test)
-
-# Calculate accuracy and AUC
-accuracy = accuracy_score(y_test, y_pred)
-auc = roc_auc_score(y_test, model.predict_proba(X_test)[:, 1])
-
-print(f'Accuracy: {accuracy}')
-print(f'AUC: {auc}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What function is used to transform the output of a linear equation into a probability value in Logistic Regression?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -130,30 +107,7 @@ print(f'AUC: {auc}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Evaluating the performance of a Logistic Regression model is crucial to ensure its effectiveness. Common evaluation metrics include accuracy, precision, recall, and the F1 score. Additionally, the Receiver Operating Characteristic (ROC) curve and the Area Under the Curve (AUC) provide insights into the model's ability to distinguish between classes.
-
-```python title="example2.py"
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, roc_auc_score
-
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Train the model on the training set
-model.fit(X_train, y_train)
-
-# Make predictions on the testing set
-y_pred = model.predict(X_test)
-
-# Calculate accuracy and AUC
-accuracy = accuracy_score(y_test, y_pred)
-auc = roc_auc_score(y_test, model.predict_proba(X_test)[:, 1])
-
-print(f'Accuracy: {accuracy}')
-print(f'AUC: {auc}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which metric is commonly used to evaluate the performance of a Logistic Regression model?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

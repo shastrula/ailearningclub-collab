@@ -83,30 +83,7 @@ plt.show()
 
 > **💡 Tip:** When using Seaborn, ensure that your data is in a Pandas DataFrame for seamless integration and easier plotting.
 
-Seaborn is a statistical data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. Seaborn builds on Matplotlib and integrates closely with Pandas data structures. It is particularly useful for creating complex visualizations with minimal code.
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-import pandas as pd
-
-# Sample data
-data = {'category': ['A', 'B', 'C', 'D'], 'values': [10, 20, 15, 25]}
-df = pd.DataFrame(data)
-
-# Create a bar plot
-sns.barplot(x='category', y='values', data=df)
-
-# Add title and labels
-plt.title('Bar Plot with Seaborn')
-plt.xlabel('Category')
-plt.ylabel('Values')
-
-# Show the plot
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What function is used to display a plot in Matplotlib?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -130,30 +107,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Seaborn is a statistical data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. Seaborn builds on Matplotlib and integrates closely with Pandas data structures. It is particularly useful for creating complex visualizations with minimal code.
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-import pandas as pd
-
-# Sample data
-data = {'category': ['A', 'B', 'C', 'D'], 'values': [10, 20, 15, 25]}
-df = pd.DataFrame(data)
-
-# Create a bar plot
-sns.barplot(x='category', y='values', data=df)
-
-# Add title and labels
-plt.title('Bar Plot with Seaborn')
-plt.xlabel('Category')
-plt.ylabel('Values')
-
-# Show the plot
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which library is Seaborn built on top of?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

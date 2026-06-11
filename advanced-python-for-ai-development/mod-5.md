@@ -93,36 +93,7 @@ else:
 
 > **💡 Tip:** Always keep your API keys and tokens secure. Avoid hardcoding them in your scripts; instead, use environment variables or a configuration file.
 
-Many APIs require authentication to access their data. Common methods include API keys, OAuth tokens, and Bearer tokens. This section will demonstrate how to include these authentication methods in your API requests. Properly handling authentication is crucial to avoid access issues and ensure secure data retrieval.
-
-**example2.py**
-
-```
-import requests
-
-# Define the API endpoint and your API key
-url = 'https://api.example.com/secure-data'
-api_key = 'your_api_key_here'
-
-# Define headers for the request
-headers = {
-    'Authorization': f'Bearer {api_key}',
-    'Content-Type': 'application/json'
-}
-
-# Make a GET request to the API with authentication
-response = requests.get(url, headers=headers)
-
-# Check if the request was successful
-if response.status_code == 200:
-    # Parse the JSON response
-    data = response.json()
-    print(data)
-else:
-    print(f'Request failed with status code: {response.status_code}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of using the `requests` library in Python?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -146,36 +117,7 @@ else:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Many APIs require authentication to access their data. Common methods include API keys, OAuth tokens, and Bearer tokens. This section will demonstrate how to include these authentication methods in your API requests. Properly handling authentication is crucial to avoid access issues and ensure secure data retrieval.
-
-**example2.py**
-
-```
-import requests
-
-# Define the API endpoint and your API key
-url = 'https://api.example.com/secure-data'
-api_key = 'your_api_key_here'
-
-# Define headers for the request
-headers = {
-    'Authorization': f'Bearer {api_key}',
-    'Content-Type': 'application/json'
-}
-
-# Make a GET request to the API with authentication
-response = requests.get(url, headers=headers)
-
-# Check if the request was successful
-if response.status_code == 200:
-    # Parse the JSON response
-    data = response.json()
-    print(data)
-else:
-    print(f'Request failed with status code: {response.status_code}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How do you typically handle API authentication in Python?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

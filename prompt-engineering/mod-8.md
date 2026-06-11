@@ -77,20 +77,7 @@ print(output)
 
 > **💡 Tip:** When using CoT or ReAct, ensure the generated reasoning is accurate and verifiable to maintain user trust.
 
-Chain-of-Thought and ReAct prompting encourage models to provide reasoning steps before arriving at an answer. Ethically, this can enhance transparency but must be carefully designed to avoid misleading users or providing incorrect information.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Initialize a text generation pipeline
-generator = pipeline('text-generation')
-
-# CoT example: Generate text with reasoning steps
-output = generator('Why is the sky blue? Because...', max_length=100, num_return_sequences=1)
-print(output)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a key ethical consideration when using zero-shot learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -114,20 +101,7 @@ print(output)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Chain-of-Thought and ReAct prompting encourage models to provide reasoning steps before arriving at an answer. Ethically, this can enhance transparency but must be carefully designed to avoid misleading users or providing incorrect information.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Initialize a text generation pipeline
-generator = pipeline('text-generation')
-
-# CoT example: Generate text with reasoning steps
-output = generator('Why is the sky blue? Because...', max_length=100, num_return_sequences=1)
-print(output)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Why is it important to verify the reasoning steps in Chain-of-Thought prompting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

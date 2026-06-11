@@ -74,17 +74,7 @@ public class CICDExample {
 
 > **💡 Tip:** Ensure your CI/CD pipeline includes thorough testing stages to catch issues early in the development cycle.
 
-CI/CD pipelines automate the process of integrating code changes, testing, and deploying applications. This approach minimizes manual intervention, reduces errors, and speeds up the release cycle. Tools like Jenkins, GitLab CI, and GitHub Actions are commonly used to implement CI/CD pipelines.
-
-```java title="example2.java"
-public class CICDExample {
-    public static void main(String[] args) {
-        System.out.println("CI/CD Pipeline Executing");
-    }
-}
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of deployment in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -108,17 +98,7 @@ public class CICDExample {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-CI/CD pipelines automate the process of integrating code changes, testing, and deploying applications. This approach minimizes manual intervention, reduces errors, and speeds up the release cycle. Tools like Jenkins, GitLab CI, and GitHub Actions are commonly used to implement CI/CD pipelines.
-
-```java title="example2.java"
-public class CICDExample {
-    public static void main(String[] args) {
-        System.out.println("CI/CD Pipeline Executing");
-    }
-}
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which tool is commonly used to implement CI/CD pipelines?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

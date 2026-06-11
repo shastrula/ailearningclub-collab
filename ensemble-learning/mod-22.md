@@ -99,35 +99,7 @@ print('Accuracy:', accuracy)
 
 > **💡 Tip:** When using advanced boosting algorithms like XGBoost, always experiment with different parameters such as learning rate, max depth, and number of rounds to find the optimal configuration for your specific dataset.
 
-Boosting algorithms like XGBoost, LightGBM, and CatBoost have revolutionized the field of ensemble learning by providing faster training times and better performance. Future trends include the development of more efficient algorithms, better handling of categorical data, and integration with deep learning frameworks.
-
-```python title="example2.py"
-import xgboost as xgb
-from sklearn.datasets import load_breast_cancer
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-
-# Load dataset
-data = load_breast_cancer()
-X, y = data.data, data.target
-
-# Split dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Create DMatrix for XGBoost
-dtrain = xgb.DMatrix(X_train, label=y_train)
-dtest = xgb.DMatrix(X_test, label=y_test)
-
-# Set parameters for XGBoost
-params = {"objective": "binary:logistic", "max_depth": 3}
-
-# Train the XGBoost model
-num_round = 20
-bst = xgb.train(params, dtrain, num_round)
-
-# Make predictions
-preds = bst.predict(dtest)
-preds = [1 if p >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary advantage of using bagging techniques in ensemble learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -151,35 +123,7 @@ preds = [1 if p >
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Boosting algorithms like XGBoost, LightGBM, and CatBoost have revolutionized the field of ensemble learning by providing faster training times and better performance. Future trends include the development of more efficient algorithms, better handling of categorical data, and integration with deep learning frameworks.
-
-```python title="example2.py"
-import xgboost as xgb
-from sklearn.datasets import load_breast_cancer
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-
-# Load dataset
-data = load_breast_cancer()
-X, y = data.data, data.target
-
-# Split dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Create DMatrix for XGBoost
-dtrain = xgb.DMatrix(X_train, label=y_train)
-dtest = xgb.DMatrix(X_test, label=y_test)
-
-# Set parameters for XGBoost
-params = {"objective": "binary:logistic", "max_depth": 3}
-
-# Train the XGBoost model
-num_round = 20
-bst = xgb.train(params, dtrain, num_round)
-
-# Make predictions
-preds = bst.predict(dtest)
-preds = [1 if p >
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which boosting algorithm is known for its efficiency in handling large datasets with high-dimensional features?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

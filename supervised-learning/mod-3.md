@@ -80,30 +80,7 @@ print('Lasso coefficients:', lasso.coef_)
 
 > **💡 Tip:** When using Lasso regression, be mindful that it can shrink some coefficients to zero, effectively performing feature selection. This can be useful for models with many features.
 
-Regularization techniques like Ridge (L2) and Lasso (L1) regression help in reducing overfitting by adding a penalty to the loss function. Ridge regression adds the squared magnitude of coefficients as a penalty term, while Lasso adds the absolute value of magnitudes.
-
-```python title="example2.py"
-from sklearn.datasets import make_regression
-from sklearn.linear_model import Ridge, Lasso
-from sklearn.model_selection import train_test_split
-import numpy as np
-
-# Generate sample data
-X, y = make_regression(n_samples=100, n_features=5, noise=0.1)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Ridge Regression
-ridge = Ridge(alpha=1.0)
-ridge.fit(X_train, y_train)
-print('Ridge coefficients:', ridge.coef_)
-
-# Lasso Regression
-lasso = Lasso(alpha=0.1)
-lasso.fit(X_train, y_train)
-print('Lasso coefficients:', lasso.coef_)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of calculating VIF in linear regression?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -127,30 +104,7 @@ print('Lasso coefficients:', lasso.coef_)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Regularization techniques like Ridge (L2) and Lasso (L1) regression help in reducing overfitting by adding a penalty to the loss function. Ridge regression adds the squared magnitude of coefficients as a penalty term, while Lasso adds the absolute value of magnitudes.
-
-```python title="example2.py"
-from sklearn.datasets import make_regression
-from sklearn.linear_model import Ridge, Lasso
-from sklearn.model_selection import train_test_split
-import numpy as np
-
-# Generate sample data
-X, y = make_regression(n_samples=100, n_features=5, noise=0.1)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Ridge Regression
-ridge = Ridge(alpha=1.0)
-ridge.fit(X_train, y_train)
-print('Ridge coefficients:', ridge.coef_)
-
-# Lasso Regression
-lasso = Lasso(alpha=0.1)
-lasso.fit(X_train, y_train)
-print('Lasso coefficients:', lasso.coef_)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which regularization technique can shrink coefficients to zero?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

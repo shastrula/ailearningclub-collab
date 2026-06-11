@@ -82,25 +82,7 @@ public class Example2 {
 
 > **💡 Tip:** Always ensure that your catch blocks are ordered from the most specific to the most general to avoid catching exceptions you did not intend to handle.
 
-Java allows you to use multiple catch blocks to handle different types of exceptions separately. This enables you to provide specific responses to different kinds of errors, making your error handling more precise and effective.
-
-```java title="example2.java"
-public class Example2 {
-    public static void main(String[] args) {
-        try {
-            int[] numbers = {1, 2, 3};
-            System.out.println(numbers[3]); // This will throw an ArrayIndexOutOfBoundsException
-            int result = 10 / 0; // This will throw an ArithmeticException
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Caught an ArrayIndexOutOfBoundsException: " + e.getMessage());
-        } catch (ArithmeticException e) {
-            System.out.println("Caught an ArithmeticException: " + e.getMessage());
-        }
-    }
-}
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the purpose of the try block in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,25 +106,7 @@ public class Example2 {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Java allows you to use multiple catch blocks to handle different types of exceptions separately. This enables you to provide specific responses to different kinds of errors, making your error handling more precise and effective.
-
-```java title="example2.java"
-public class Example2 {
-    public static void main(String[] args) {
-        try {
-            int[] numbers = {1, 2, 3};
-            System.out.println(numbers[3]); // This will throw an ArrayIndexOutOfBoundsException
-            int result = 10 / 0; // This will throw an ArithmeticException
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Caught an ArrayIndexOutOfBoundsException: " + e.getMessage());
-        } catch (ArithmeticException e) {
-            System.out.println("Caught an ArithmeticException: " + e.getMessage());
-        }
-    }
-}
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What will be the output of the following code if an ArithmeticException is thrown?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

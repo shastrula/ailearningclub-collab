@@ -79,22 +79,7 @@ print(response)
 
 > **💡 Tip:** Ensure that your system meets the hardware requirements for running Ollama, including sufficient RAM and a compatible CPU or GPU, to avoid performance issues.
 
-To set up Ollama, you need to install the necessary dependencies and download the desired language model. Ollama supports various models, and you can choose one based on your specific requirements. Once installed, you can initialize the model and start using it for text generation and other NLP tasks.
-
-```python title="example2.py"
-import ollama
-
-# Download and initialize the 'llama2' model
-ollama.download('llama2')
-model = ollama.init('llama2')
-
-# Generate text with a specific prompt
-response = model.generate('The quick brown fox')
-
-print(response)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of Ollama?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,22 +103,7 @@ print(response)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-To set up Ollama, you need to install the necessary dependencies and download the desired language model. Ollama supports various models, and you can choose one based on your specific requirements. Once installed, you can initialize the model and start using it for text generation and other NLP tasks.
-
-```python title="example2.py"
-import ollama
-
-# Download and initialize the 'llama2' model
-ollama.download('llama2')
-model = ollama.init('llama2')
-
-# Generate text with a specific prompt
-response = model.generate('The quick brown fox')
-
-print(response)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which command is used to download a model in Ollama?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -79,22 +79,7 @@ print(cm)
 
 > **💡 Tip:** Regularly update and retrain your local LLMs with new, diverse datasets to minimize bias and improve fairness over time.
 
-Local LLMs can inherit biases present in their training data, leading to unfair outcomes. It is crucial to regularly audit models for bias and implement mitigation strategies. This includes diverse dataset curation and ongoing model evaluation to ensure equitable performance across different user groups.
-
-```python title="example2.py"
-import pandas as pd
-from sklearn.metrics import confusion_matrix
-
-# Example dataset
-data = {'predicted': [0, 1, 0, 1], 'actual': [0, 0, 1, 1]}
-df = pd.DataFrame(data)
-
-# Calculate confusion matrix
-cm = confusion_matrix(df['actual'], df['predicted'])
-print(cm)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a critical practice for ensuring data privacy in local LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,22 +103,7 @@ print(cm)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Local LLMs can inherit biases present in their training data, leading to unfair outcomes. It is crucial to regularly audit models for bias and implement mitigation strategies. This includes diverse dataset curation and ongoing model evaluation to ensure equitable performance across different user groups.
-
-```python title="example2.py"
-import pandas as pd
-from sklearn.metrics import confusion_matrix
-
-# Example dataset
-data = {'predicted': [0, 1, 0, 1], 'actual': [0, 0, 1, 1]}
-df = pd.DataFrame(data)
-
-# Calculate confusion matrix
-cm = confusion_matrix(df['actual'], df['predicted'])
-print(cm)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is an effective strategy to mitigate bias in local LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

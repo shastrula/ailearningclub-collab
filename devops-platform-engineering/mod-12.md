@@ -201,38 +201,6 @@ support:
 
 ---
 
-```yaml
-# On-call schedule
-schedule:
-  - week: 1
-    primary: alice
-    secondary: bob
-    escalation: charlie
-  
-  - week: 2
-    primary: bob
-    secondary: charlie
-    escalation: alice
-
-# On-call responsibilities
-responsibilities:
-  - Monitor alerts and dashboards
-  - Respond to incidents within 5 minutes
-  - Follow runbooks for common issues
-  - Escalate to technical lead if needed
-  - Document all actions taken
-  - Participate in postmortems
-
-# On-call support
-support:
-  - Slack channel: #on-call
-  - Pagerduty integration for alerts
-  - Runbooks available in wiki
-  - Escalation contacts documented
-```
-
----
-
 <div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is an SLO (Service Level Objective)?</p>
   <div class="space-y-2">
@@ -257,39 +225,7 @@ support:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```yaml
-# On-call schedule
-schedule:
-  - week: 1
-    primary: alice
-    secondary: bob
-    escalation: charlie
-  
-  - week: 2
-    primary: bob
-    secondary: charlie
-    escalation: alice
-
-# On-call responsibilities
-responsibilities:
-  - Monitor alerts and dashboards
-  - Respond to incidents within 5 minutes
-  - Follow runbooks for common issues
-  - Escalate to technical lead if needed
-  - Document all actions taken
-  - Participate in postmortems
-
-# On-call support
-support:
-  - Slack channel: #on-call
-  - Pagerduty integration for alerts
-  - Runbooks available in wiki
-  - Escalation contacts documented
-```
-
----
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is an error budget?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -313,39 +249,7 @@ support:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```yaml
-# On-call schedule
-schedule:
-  - week: 1
-    primary: alice
-    secondary: bob
-    escalation: charlie
-  
-  - week: 2
-    primary: bob
-    secondary: charlie
-    escalation: alice
-
-# On-call responsibilities
-responsibilities:
-  - Monitor alerts and dashboards
-  - Respond to incidents within 5 minutes
-  - Follow runbooks for common issues
-  - Escalate to technical lead if needed
-  - Document all actions taken
-  - Participate in postmortems
-
-# On-call support
-support:
-  - Slack channel: #on-call
-  - Pagerduty integration for alerts
-  - Runbooks available in wiki
-  - Escalation contacts documented
-```
-
----
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of a blameless postmortem?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -368,38 +272,6 @@ support:
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-
-```yaml
-# On-call schedule
-schedule:
-  - week: 1
-    primary: alice
-    secondary: bob
-    escalation: charlie
-  
-  - week: 2
-    primary: bob
-    secondary: charlie
-    escalation: alice
-
-# On-call responsibilities
-responsibilities:
-  - Monitor alerts and dashboards
-  - Respond to incidents within 5 minutes
-  - Follow runbooks for common issues
-  - Escalate to technical lead if needed
-  - Document all actions taken
-  - Participate in postmortems
-
-# On-call support
-support:
-  - Slack channel: #on-call
-  - Pagerduty integration for alerts
-  - Runbooks available in wiki
-  - Escalation contacts documented
-```
-
----
 
 <div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is chaos engineering?</p>
@@ -425,39 +297,7 @@ support:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-```yaml
-# On-call schedule
-schedule:
-  - week: 1
-    primary: alice
-    secondary: bob
-    escalation: charlie
-  
-  - week: 2
-    primary: bob
-    secondary: charlie
-    escalation: alice
-
-# On-call responsibilities
-responsibilities:
-  - Monitor alerts and dashboards
-  - Respond to incidents within 5 minutes
-  - Follow runbooks for common issues
-  - Escalate to technical lead if needed
-  - Document all actions taken
-  - Participate in postmortems
-
-# On-call support
-support:
-  - Slack channel: #on-call
-  - Pagerduty integration for alerts
-  - Runbooks available in wiki
-  - Escalation contacts documented
-```
-
----
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of SRE?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

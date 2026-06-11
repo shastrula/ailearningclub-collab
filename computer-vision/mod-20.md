@@ -123,37 +123,7 @@ cv2.destroyAllWindows()
 
 > **💡 Tip:** Ensure that the YOLO weights and configuration files are correctly downloaded and placed in the working directory to avoid runtime errors.
 
-You Only Look Once (YOLO) is a state-of-the-art, real-time object detection system. YOLO divides the image into regions and predicts bounding boxes and probabilities for each region. These bounding boxes are weighted by the predicted probabilities. YOLO is known for its speed and accuracy, making it suitable for real-time applications.
-
-```python title="example2.py"
-import cv2
-import numpy as np
-
-# Load YOLO
-net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
-layer_names = net.getLayerNames()
-output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
-
-# Load image
-img = cv2.imread("image.jpg")
-img = cv2.resize(img, None, fx=0.4, fy=0.4)
-height, width, channels = img.shape
-
-# Detecting objects
-blob = cv2.dnn.blobFromImage(img, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
-net.setInput(blob)
-outs = net.forward(output_layers)
-
-# Showing informations on the screen
-class_ids = []
-confidences = []
-boxes = []
-for out in outs:
-    for detection in out:
-        scores = detection[5:]
-        class_id = np.argmax(scores)
-        confidence = scores[class_id]
-        if confidence >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary advantage of using CNNs in image recognition tasks?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -177,37 +147,7 @@ for out in outs:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-You Only Look Once (YOLO) is a state-of-the-art, real-time object detection system. YOLO divides the image into regions and predicts bounding boxes and probabilities for each region. These bounding boxes are weighted by the predicted probabilities. YOLO is known for its speed and accuracy, making it suitable for real-time applications.
-
-```python title="example2.py"
-import cv2
-import numpy as np
-
-# Load YOLO
-net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
-layer_names = net.getLayerNames()
-output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
-
-# Load image
-img = cv2.imread("image.jpg")
-img = cv2.resize(img, None, fx=0.4, fy=0.4)
-height, width, channels = img.shape
-
-# Detecting objects
-blob = cv2.dnn.blobFromImage(img, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
-net.setInput(blob)
-outs = net.forward(output_layers)
-
-# Showing informations on the screen
-class_ids = []
-confidences = []
-boxes = []
-for out in outs:
-    for detection in out:
-        scores = detection[5:]
-        class_id = np.argmax(scores)
-        confidence = scores[class_id]
-        if confidence >
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the main benefit of using YOLO for object detection?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

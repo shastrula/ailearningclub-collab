@@ -120,63 +120,7 @@ plt.show()
 
 > **💡 Tip:** When using LSTM for time series forecasting, ensure your data is properly scaled and your sequences are correctly formatted to avoid common pitfalls.
 
-Long Short-Term Memory (LSTM) networks are a type of recurrent neural network capable of learning order dependence in sequence prediction problems. This case study illustrates how to use LSTM to forecast daily stock prices, highlighting the model's ability to capture long-term dependencies.
-
-```python title="example2.py"
-import numpy as np
-import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense
-import matplotlib.pyplot as plt
-
-# Load dataset
-data = pd.read_csv('stock_prices.csv', parse_dates=True, index_col='Date')
-
-# Scale data
-scaler = MinMaxScaler(feature_range=(0, 1))
-scaled_data = scaler.fit_transform(data)
-
-# Prepare data
-x_train, y_train = [], []
-for i in range(60, len(scaled_data)):
-    x_train.append(scaled_data[i-60:i, 0])
-    y_train.append(scaled_data[i, 0])
-x_train, y_train = np.array(x_train), np.array(y_train)
-x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
-
-# Build LSTM model
-model = Sequential()
-model.add(LSTM(units=50, return_sequences=True, input_shape=(x_train.shape[1], 1)))
-model.add(LSTM(units=50))
-model.add(Dense(1))
-
-model.compile(loss='mean_squared_error', optimizer='adam')
-model.fit(x_train, y_train, epochs=1, batch_size=1, verbose=2)
-
-# Forecast
-inputs = data[len(data)-len(x_train)-60:].values
-inputs = inputs.reshape(-1,1)
-inputs = scaler.transform(inputs)
-
-x_test = []
-for i in range(60, inputs.shape[0]):
-    x_test.append(inputs[i-60:i, 0])
-x_test = np.array(x_test)
-x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
-predicted_stock_price = model.predict(x_test)
-predicted_stock_price = scaler.inverse_transform(predicted_stock_price)
-
-# Plot
-plt.plot(data['Close'], label='Actual Stock Price')
-plt.plot(predicted_stock_price, color='red', label='Predicted Stock Price')
-plt.xlabel('Time')
-plt.ylabel('Stock Price')
-plt.legend()
-plt.show()
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does the 'I' in ARIMA stand for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -200,63 +144,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Long Short-Term Memory (LSTM) networks are a type of recurrent neural network capable of learning order dependence in sequence prediction problems. This case study illustrates how to use LSTM to forecast daily stock prices, highlighting the model's ability to capture long-term dependencies.
-
-```python title="example2.py"
-import numpy as np
-import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense
-import matplotlib.pyplot as plt
-
-# Load dataset
-data = pd.read_csv('stock_prices.csv', parse_dates=True, index_col='Date')
-
-# Scale data
-scaler = MinMaxScaler(feature_range=(0, 1))
-scaled_data = scaler.fit_transform(data)
-
-# Prepare data
-x_train, y_train = [], []
-for i in range(60, len(scaled_data)):
-    x_train.append(scaled_data[i-60:i, 0])
-    y_train.append(scaled_data[i, 0])
-x_train, y_train = np.array(x_train), np.array(y_train)
-x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
-
-# Build LSTM model
-model = Sequential()
-model.add(LSTM(units=50, return_sequences=True, input_shape=(x_train.shape[1], 1)))
-model.add(LSTM(units=50))
-model.add(Dense(1))
-
-model.compile(loss='mean_squared_error', optimizer='adam')
-model.fit(x_train, y_train, epochs=1, batch_size=1, verbose=2)
-
-# Forecast
-inputs = data[len(data)-len(x_train)-60:].values
-inputs = inputs.reshape(-1,1)
-inputs = scaler.transform(inputs)
-
-x_test = []
-for i in range(60, inputs.shape[0]):
-    x_test.append(inputs[i-60:i, 0])
-x_test = np.array(x_test)
-x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
-predicted_stock_price = model.predict(x_test)
-predicted_stock_price = scaler.inverse_transform(predicted_stock_price)
-
-# Plot
-plt.plot(data['Close'], label='Actual Stock Price')
-plt.plot(predicted_stock_price, color='red', label='Predicted Stock Price')
-plt.xlabel('Time')
-plt.ylabel('Stock Price')
-plt.legend()
-plt.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which layer type is essential for building an LSTM model in Keras?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

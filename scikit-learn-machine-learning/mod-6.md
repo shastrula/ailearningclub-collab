@@ -93,36 +93,7 @@ print(f'Accuracy: {accuracy}')
 
 > **💡 Tip:** When using SVMs, it's important to scale your data before training, as SVMs are sensitive to the scaling of the data. Use StandardScaler or MinMaxScaler from sklearn.preprocessing to normalize your features.
 
-The kernel trick is a technique that allows SVMs to solve non-linear classification problems by mapping the input features into a higher-dimensional space where a linear separation is possible. Common kernels include linear, polynomial, radial basis function (RBF), and sigmoid. The choice of kernel and its parameters can significantly affect the performance of the SVM.
-
-```python title="example2.py"
-from sklearn import datasets, svm
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-
-# Load the iris dataset
-iris = datasets.load_iris()
-X = iris.data
-y = iris.target
-
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Create a SVM classifier with RBF kernel
-clf = svm.SVC(kernel='rbf', gamma='scale')
-
-# Train the model using the training sets
-clf.fit(X_train, y_train)
-
-# Predict the response for the test dataset
-y_pred = clf.predict(X_test)
-
-# Calculate and print the accuracy
-accuracy = accuracy_score(y_test, y_pred)
-print(f'Accuracy: {accuracy}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of an SVM?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -146,36 +117,7 @@ print(f'Accuracy: {accuracy}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-The kernel trick is a technique that allows SVMs to solve non-linear classification problems by mapping the input features into a higher-dimensional space where a linear separation is possible. Common kernels include linear, polynomial, radial basis function (RBF), and sigmoid. The choice of kernel and its parameters can significantly affect the performance of the SVM.
-
-```python title="example2.py"
-from sklearn import datasets, svm
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-
-# Load the iris dataset
-iris = datasets.load_iris()
-X = iris.data
-y = iris.target
-
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Create a SVM classifier with RBF kernel
-clf = svm.SVC(kernel='rbf', gamma='scale')
-
-# Train the model using the training sets
-clf.fit(X_train, y_train)
-
-# Predict the response for the test dataset
-y_pred = clf.predict(X_test)
-
-# Calculate and print the accuracy
-accuracy = accuracy_score(y_test, y_pred)
-print(f'Accuracy: {accuracy}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which kernel is commonly used for non-linear classification problems in SVMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

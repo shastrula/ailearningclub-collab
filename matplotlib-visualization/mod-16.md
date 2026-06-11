@@ -83,26 +83,7 @@ fig.show()
 
 > **💡 Tip:** When creating animations, ensure that the data is properly formatted and that the frame intervals are set correctly to avoid choppy or overly slow animations.
 
-Plotly allows for the creation of interactive animations that can be embedded in web applications. Using the `px.scatter` function with the `animation_frame` parameter, you can animate scatter plots to show changes over time.
-
-```python title="example2.py"
-import plotly.express as px
-import pandas as pd
-
-# Create a DataFrame with sample data
-data = {
-    'frame': [1, 1, 1, 2, 2, 2, 3, 3, 3],
-    'x': [1, 2, 3, 1, 2, 3, 1, 2, 3],
-    'y': [1, 2, 3, 2, 3, 4, 3, 4, 5]
-}
-df = pd.DataFrame(data)
-
-# Create an animated scatter plot
-fig = px.scatter(df, x='x', y='y', animation_frame='frame', animation_group='x')
-fig.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which Matplotlib class is used to create animations?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -126,26 +107,7 @@ fig.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Plotly allows for the creation of interactive animations that can be embedded in web applications. Using the `px.scatter` function with the `animation_frame` parameter, you can animate scatter plots to show changes over time.
-
-```python title="example2.py"
-import plotly.express as px
-import pandas as pd
-
-# Create a DataFrame with sample data
-data = {
-    'frame': [1, 1, 1, 2, 2, 2, 3, 3, 3],
-    'x': [1, 2, 3, 1, 2, 3, 1, 2, 3],
-    'y': [1, 2, 3, 2, 3, 4, 3, 4, 5]
-}
-df = pd.DataFrame(data)
-
-# Create an animated scatter plot
-fig = px.scatter(df, x='x', y='y', animation_frame='frame', animation_group='x')
-fig.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which Plotly parameter is used to specify the animation frames?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

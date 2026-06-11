@@ -94,37 +94,7 @@ No output for this code, but it demonstrates how to open a session, begin a tran
 
 > **💡 Tip:** Always ensure that sessions are properly closed to avoid resource leaks and performance issues.
 
-Sessions in Hibernate are the primary interface for interacting with the database. They represent a single unit of work and provide methods to save, update, delete, and retrieve objects. Managing sessions effectively is key to optimizing performance and ensuring data integrity.
-
-```java title="example2.java"
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-
-public class HibernateExample {
-    public static void main(String[] args) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = null;
-        try {
-            transaction = session.beginTransaction();
-            // Example: Saving an object
-            Employee employee = new Employee("John Doe", "Developer");
-            session.save(employee);
-            transaction.commit();
-        } catch (Exception e) {
-            if (transaction!= null) transaction.rollback();
-            e.printStackTrace();
-        } finally {
-            session.close();
-        }
-    }
-}
-```
-
-```
-No output for this code, but it demonstrates how to open a session, begin a transaction, save an object, and commit the transaction.
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the primary purpose of the Hibernate configuration file?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -148,37 +118,7 @@ No output for this code, but it demonstrates how to open a session, begin a tran
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Sessions in Hibernate are the primary interface for interacting with the database. They represent a single unit of work and provide methods to save, update, delete, and retrieve objects. Managing sessions effectively is key to optimizing performance and ensuring data integrity.
-
-```java title="example2.java"
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-
-public class HibernateExample {
-    public static void main(String[] args) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = null;
-        try {
-            transaction = session.beginTransaction();
-            // Example: Saving an object
-            Employee employee = new Employee("John Doe", "Developer");
-            session.save(employee);
-            transaction.commit();
-        } catch (Exception e) {
-            if (transaction!= null) transaction.rollback();
-            e.printStackTrace();
-        } finally {
-            session.close();
-        }
-    }
-}
-```
-
-```
-No output for this code, but it demonstrates how to open a session, begin a transaction, save an object, and commit the transaction.
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does the SessionFactory do in Hibernate?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -86,36 +86,7 @@ plt.show()
 
 > **💡 Tip:** When creating subplots, use plt.tight_layout() to automatically adjust subplot parameters for a neat arrangement.
 
-Subplots allow you to display multiple plots within a single figure, enabling side-by-side comparisons and more comprehensive data visualization. Matplotlib provides flexible functions to create and arrange subplots.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Sample data
-x = np.linspace(0, 10, 100)
-y1 = np.sin(x)
-y2 = np.cos(x)
-
-# Create a figure with two subplots
-fig, axs = plt.subplots(2, 1, figsize=(8, 6))
-
-# Plot sine function in the first subplot
-axs[0].plot(x, y1, color='blue', label='Sine')
-axs[0].set_title('Sine Function')
-axs[0].legend()
-
-# Plot cosine function in the second subplot
-axs[1].plot(x, y2, color='red', label='Cosine')
-axs[1].set_title('Cosine Function')
-axs[1].legend()
-
-# Adjust layout and display the figure
-plt.tight_layout()
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which parameter can be used to change the line color in a Matplotlib plot?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -139,36 +110,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Subplots allow you to display multiple plots within a single figure, enabling side-by-side comparisons and more comprehensive data visualization. Matplotlib provides flexible functions to create and arrange subplots.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Sample data
-x = np.linspace(0, 10, 100)
-y1 = np.sin(x)
-y2 = np.cos(x)
-
-# Create a figure with two subplots
-fig, axs = plt.subplots(2, 1, figsize=(8, 6))
-
-# Plot sine function in the first subplot
-axs[0].plot(x, y1, color='blue', label='Sine')
-axs[0].set_title('Sine Function')
-axs[0].legend()
-
-# Plot cosine function in the second subplot
-axs[1].plot(x, y2, color='red', label='Cosine')
-axs[1].set_title('Cosine Function')
-axs[1].legend()
-
-# Adjust layout and display the figure
-plt.tight_layout()
-plt.show()
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What function is used to create a figure with multiple subplots in Matplotlib?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

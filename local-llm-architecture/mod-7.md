@@ -82,25 +82,7 @@ print(llama_cpp.get_hardware_config())
 
 > **💡 Tip:** Ensure that your hardware configurations are regularly updated and audited to adapt to new security threats and vulnerabilities.
 
-Securing LLM deployments also involves meeting specific hardware requirements to ensure optimal performance and security. This includes using trusted execution environments (TEEs), secure processors, and proper memory management. This section will guide you through selecting and configuring the appropriate hardware to enhance the security of your LLM deployments.
-
-```python title="example2.py"
-import llama_cpp
-
-# Example of setting up secure hardware requirements for llama.cpp
-hardware_config = {
-    'use_tee': True,
-   'secure_processor': 'Intel SGX',
-   'memory_limit': '16GB'
-}
-
-llama_cpp.setup(hardware_config)
-
-# Print hardware configuration to verify settings
-print(llama_cpp.get_hardware_config())
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which security feature is crucial for protecting data integrity in Ollama?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,25 +106,7 @@ print(llama_cpp.get_hardware_config())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Securing LLM deployments also involves meeting specific hardware requirements to ensure optimal performance and security. This includes using trusted execution environments (TEEs), secure processors, and proper memory management. This section will guide you through selecting and configuring the appropriate hardware to enhance the security of your LLM deployments.
-
-```python title="example2.py"
-import llama_cpp
-
-# Example of setting up secure hardware requirements for llama.cpp
-hardware_config = {
-    'use_tee': True,
-   'secure_processor': 'Intel SGX',
-   'memory_limit': '16GB'
-}
-
-llama_cpp.setup(hardware_config)
-
-# Print hardware configuration to verify settings
-print(llama_cpp.get_hardware_config())
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What hardware feature is essential for securing LLM deployments using llama.cpp?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

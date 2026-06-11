@@ -77,24 +77,7 @@ quantized_model.save_pretrained('gptq_model')
 
 > **💡 Tip:** When applying GPTQ, ensure that the calibration dataset is representative of the data the model will encounter during inference to maintain accuracy.
 
-GPTQ is a quantization technique that uses a teacher-student framework to quantize models. It applies gradient penalties to ensure that the quantized model maintains performance close to the original model.
-
-```python title="example2.py"
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
-import GPTQ
-
-# Load a pre-trained model and tokenizer
-model = AutoModelForSequenceClassification.from_pretrained('bert-base-uncased')
-tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
-
-# Apply GPTQ quantization
-quantized_model = GPTQ.quantize(model, tokenizer, bits=4)
-
-# Save the quantized model
-quantized_model.save_pretrained('gptq_model')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of GGUF?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,24 +101,7 @@ quantized_model.save_pretrained('gptq_model')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-GPTQ is a quantization technique that uses a teacher-student framework to quantize models. It applies gradient penalties to ensure that the quantized model maintains performance close to the original model.
-
-```python title="example2.py"
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
-import GPTQ
-
-# Load a pre-trained model and tokenizer
-model = AutoModelForSequenceClassification.from_pretrained('bert-base-uncased')
-tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
-
-# Apply GPTQ quantization
-quantized_model = GPTQ.quantize(model, tokenizer, bits=4)
-
-# Save the quantized model
-quantized_model.save_pretrained('gptq_model')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does GPTQ stand for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

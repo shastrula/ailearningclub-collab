@@ -103,46 +103,7 @@ train_gan(gan, generator, discriminator)
 
 > **💡 Tip:** When training GANs, it's important to monitor both the Generator and Discriminator losses. If the Discriminator loss is too low, it may indicate that the Generator is not producing diverse enough samples. Conversely, if the Generator loss is too high, the Discriminator may be too powerful, making it difficult for the Generator to produce realistic samples.
 
-Training GANs involves alternating between training the Discriminator and the Generator. The Discriminator is trained on real and generated data to improve its ability to distinguish between them. The Generator is trained to produce data that can fool the Discriminator. This process continues iteratively until the Generator produces high-quality, realistic data.
-
-```python title="example2.py"
-import numpy as np
-
-# Build the Generator
-generator = build_generator()
-
-# Build the GAN model
-gan_input = tf.keras.Input(shape=(100,))
-gan_output = discriminator(generator(gan_input))
-gan = tf.keras.Model(gan_input, gan_output)
-gan.compile(loss='binary_crossentropy', optimizer='adam')
-
-# Training function
-def train_gan(gan, generator, discriminator, epochs=10000, batch_size=128):
-    for epoch in range(epochs):
-        # Train Discriminator
-        real_images = np.random.uniform(-1, 1, size=(batch_size, 28, 28, 1))
-        real_labels = np.ones((batch_size, 1))
-        fake_images = generator.predict(np.random.normal(0, 1, size=(batch_size, 100)))
-        fake_labels = np.zeros((batch_size, 1))
-        d_loss_real = discriminator.train_on_batch(real_images, real_labels)
-        d_loss_fake = discriminator.train_on_batch(fake_images, fake_labels)
-        d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
-        
-        # Train Generator
-        noise = np.random.normal(0, 1, size=(batch_size, 100))
-        valid_y = np.array([1] * batch_size)
-        g_loss = gan.train_on_batch(noise, valid_y)
-        
-        # Print the progress
-        if epoch % 1000 == 0:
-            print(f"Epoch {epoch}, D loss: {d_loss[0]}, G loss: {g_loss}")
-
-# Train the GAN
-train_gan(gan, generator, discriminator)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What are the two main components of a GAN?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -166,46 +127,7 @@ train_gan(gan, generator, discriminator)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Training GANs involves alternating between training the Discriminator and the Generator. The Discriminator is trained on real and generated data to improve its ability to distinguish between them. The Generator is trained to produce data that can fool the Discriminator. This process continues iteratively until the Generator produces high-quality, realistic data.
-
-```python title="example2.py"
-import numpy as np
-
-# Build the Generator
-generator = build_generator()
-
-# Build the GAN model
-gan_input = tf.keras.Input(shape=(100,))
-gan_output = discriminator(generator(gan_input))
-gan = tf.keras.Model(gan_input, gan_output)
-gan.compile(loss='binary_crossentropy', optimizer='adam')
-
-# Training function
-def train_gan(gan, generator, discriminator, epochs=10000, batch_size=128):
-    for epoch in range(epochs):
-        # Train Discriminator
-        real_images = np.random.uniform(-1, 1, size=(batch_size, 28, 28, 1))
-        real_labels = np.ones((batch_size, 1))
-        fake_images = generator.predict(np.random.normal(0, 1, size=(batch_size, 100)))
-        fake_labels = np.zeros((batch_size, 1))
-        d_loss_real = discriminator.train_on_batch(real_images, real_labels)
-        d_loss_fake = discriminator.train_on_batch(fake_images, fake_labels)
-        d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
-        
-        # Train Generator
-        noise = np.random.normal(0, 1, size=(batch_size, 100))
-        valid_y = np.array([1] * batch_size)
-        g_loss = gan.train_on_batch(noise, valid_y)
-        
-        # Print the progress
-        if epoch % 1000 == 0:
-            print(f"Epoch {epoch}, D loss: {d_loss[0]}, G loss: {g_loss}")
-
-# Train the GAN
-train_gan(gan, generator, discriminator)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of the Generator in a GAN?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

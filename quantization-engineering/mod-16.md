@@ -96,39 +96,7 @@ print(f'Quantized model duration: {quant_duration:.4f} seconds')
 
 > **💡 Tip:** When benchmarking quantized models, ensure that the input data is consistent across both the full-precision and quantized models to obtain accurate comparisons.
 
-Benchmarking quantized models involves comparing their performance metrics against their full-precision counterparts. This process helps identify any degradation in accuracy and measures improvements in latency and model size. This section will guide you through setting up a benchmarking pipeline using Python.
-
-```python title="example2.py"
-import time
-import torch
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
-
-# Load models
-fp_model = AutoModelForSequenceClassification.from_pretrained('distilbert-base-uncased')
-quantized_model = bnb.nn.quantize(fp_model, bits=4)
-tokenizer = AutoTokenizer.from_pretrained('distilbert-base-uncased')
-
-# Prepare input data
-inputs = tokenizer('Hello, world!', return_tensors='pt')
-
-# Benchmark full-precision model
-start_time = time.time()
-with torch.no_grad():
-    fp_outputs = fp_model(**inputs)
-fp_duration = time.time() - start_time
-
-# Benchmark quantized model
-start_time = time.time()
-with torch.no_grad():
-    quant_outputs = quantized_model(**inputs)
-quant_duration = time.time() - start_time
-
-# Print results
-print(f'Full-precision model duration: {fp_duration:.4f} seconds')
-print(f'Quantized model duration: {quant_duration:.4f} seconds')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which metric is crucial for evaluating the performance of quantized models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -152,39 +120,7 @@ print(f'Quantized model duration: {quant_duration:.4f} seconds')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Benchmarking quantized models involves comparing their performance metrics against their full-precision counterparts. This process helps identify any degradation in accuracy and measures improvements in latency and model size. This section will guide you through setting up a benchmarking pipeline using Python.
-
-```python title="example2.py"
-import time
-import torch
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
-
-# Load models
-fp_model = AutoModelForSequenceClassification.from_pretrained('distilbert-base-uncased')
-quantized_model = bnb.nn.quantize(fp_model, bits=4)
-tokenizer = AutoTokenizer.from_pretrained('distilbert-base-uncased')
-
-# Prepare input data
-inputs = tokenizer('Hello, world!', return_tensors='pt')
-
-# Benchmark full-precision model
-start_time = time.time()
-with torch.no_grad():
-    fp_outputs = fp_model(**inputs)
-fp_duration = time.time() - start_time
-
-# Benchmark quantized model
-start_time = time.time()
-with torch.no_grad():
-    quant_outputs = quantized_model(**inputs)
-quant_duration = time.time() - start_time
-
-# Print results
-print(f'Full-precision model duration: {fp_duration:.4f} seconds')
-print(f'Quantized model duration: {quant_duration:.4f} seconds')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary goal of benchmarking quantized models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

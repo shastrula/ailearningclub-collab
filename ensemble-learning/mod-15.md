@@ -99,49 +99,7 @@ print(f'Stacking Classifier Accuracy with CV: {accuracy:.2f}')
 
 > **💡 Tip:** Ensure that the base models in your stacking ensemble are diverse to capture different aspects of the data. Using similar models may not provide significant improvements.
 
-To avoid overfitting, it's crucial to use cross-validation when training the base models in a stacking ensemble. This ensures that the meta-model is trained on out-of-fold predictions, which are more generalizable. The `StackingClassifier` in scikit-learn provides built-in support for cross-validation.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.datasets import load_breast_cancer
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-from sklearn.ensemble import StackingClassifier
-from sklearn.model_selection import KFold
-
-# Load dataset
-data = load_breast_cancer()
-X, y = data.data, data.target
-
-# Split data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Base models
-base_models = [
-    ('rf', RandomForestClassifier(n_estimators=10, random_state=42)),
-    ('gb', GradientBoostingClassifier(n_estimators=10, random_state=42))
-]
-
-# Meta-model
-meta_model = LogisticRegression()
-
-# Stacking classifier with cross-validation
-stacking_clf = StackingClassifier(estimators=base_models, final_estimator=meta_model, cv=KFold(n_splits=5, shuffle=True, random_state=42))
-
-# Train the stacking classifier
-stacking_clf.fit(X_train, y_train)
-
-# Make predictions
-y_pred = stacking_clf.predict(X_test)
-
-# Evaluate the model
-accuracy = accuracy_score(y_test, y_pred)
-print(f'Stacking Classifier Accuracy with CV: {accuracy:.2f}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of a stacking ensemble?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -165,49 +123,7 @@ print(f'Stacking Classifier Accuracy with CV: {accuracy:.2f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-To avoid overfitting, it's crucial to use cross-validation when training the base models in a stacking ensemble. This ensures that the meta-model is trained on out-of-fold predictions, which are more generalizable. The `StackingClassifier` in scikit-learn provides built-in support for cross-validation.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.datasets import load_breast_cancer
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-from sklearn.ensemble import StackingClassifier
-from sklearn.model_selection import KFold
-
-# Load dataset
-data = load_breast_cancer()
-X, y = data.data, data.target
-
-# Split data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Base models
-base_models = [
-    ('rf', RandomForestClassifier(n_estimators=10, random_state=42)),
-    ('gb', GradientBoostingClassifier(n_estimators=10, random_state=42))
-]
-
-# Meta-model
-meta_model = LogisticRegression()
-
-# Stacking classifier with cross-validation
-stacking_clf = StackingClassifier(estimators=base_models, final_estimator=meta_model, cv=KFold(n_splits=5, shuffle=True, random_state=42))
-
-# Train the stacking classifier
-stacking_clf.fit(X_train, y_train)
-
-# Make predictions
-y_pred = stacking_clf.predict(X_test)
-
-# Evaluate the model
-accuracy = accuracy_score(y_test, y_pred)
-print(f'Stacking Classifier Accuracy with CV: {accuracy:.2f}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Why is cross-validation important in stacking ensembles?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

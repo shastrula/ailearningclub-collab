@@ -79,22 +79,7 @@ Virtual environment created successfully
 
 > **💡 Tip:** Always activate your virtual environment before starting your Jupyter Notebook to ensure you are using the correct Python interpreter and dependencies.
 
-Creating a virtual environment is essential to manage dependencies and isolate your project. This ensures that different projects do not interfere with each other's dependencies.
-
-```python title="create_venv.py"
-import os
-import venv
-
-# Create a virtual environment in the specified directory
-venv.create('myenv', with_pip=True)
-print('Virtual environment created successfully')
-```
-
-```
-Virtual environment created successfully
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of installing Jupyter Notebook?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,22 +103,7 @@ Virtual environment created successfully
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Creating a virtual environment is essential to manage dependencies and isolate your project. This ensures that different projects do not interfere with each other's dependencies.
-
-```python title="create_venv.py"
-import os
-import venv
-
-# Create a virtual environment in the specified directory
-venv.create('myenv', with_pip=True)
-print('Virtual environment created successfully')
-```
-
-```
-Virtual environment created successfully
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Why is it important to create a virtual environment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

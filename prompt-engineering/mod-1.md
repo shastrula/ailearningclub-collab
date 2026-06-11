@@ -76,23 +76,7 @@ print(result[0]['generated_text'])
 
 > **💡 Tip:** When using CoT prompting, ensure that the intermediate steps are clear and logically lead to the final answer to improve the model's performance.
 
-Chain-of-Thought (CoT) prompting encourages the model to provide intermediate reasoning steps before arriving at a final answer. ReAct (Reason + Act) prompting combines reasoning with actionable steps, allowing the model to perform tasks that require both understanding and execution.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Text generation with CoT
-generator = pipeline("text-generation", model="google/t5-v1_1-base")
-
-# Example input
-prompt = "What is the capital of France? Let's think step by step: France is a country in Europe. The capital of France is Paris."
-
-# Generate text
-result = generator(prompt, max_length=50)
-print(result[0]['generated_text'])
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the primary difference between zero-shot and few-shot learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -116,23 +100,7 @@ print(result[0]['generated_text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Chain-of-Thought (CoT) prompting encourages the model to provide intermediate reasoning steps before arriving at a final answer. ReAct (Reason + Act) prompting combines reasoning with actionable steps, allowing the model to perform tasks that require both understanding and execution.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Text generation with CoT
-generator = pipeline("text-generation", model="google/t5-v1_1-base")
-
-# Example input
-prompt = "What is the capital of France? Let's think step by step: France is a country in Europe. The capital of France is Paris."
-
-# Generate text
-result = generator(prompt, max_length=50)
-print(result[0]['generated_text'])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of Chain-of-Thought (CoT) prompting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

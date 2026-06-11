@@ -77,27 +77,7 @@ fig.show()
 
 > **💡 Tip:** When choosing perplexity, consider the number of nearest neighbors that best represent the local structure of your data. A common rule of thumb is to set perplexity between 5 and 50.
 
-Beyond basic scatter plots, advanced visualization techniques can provide deeper insights. Interactive plots, 3D visualizations, and overlaying additional information (like cluster labels) can enhance the interpretability of t-SNE results. We will explore how to create these advanced visualizations using Python libraries.
-
-```python title="example2.py"
-import plotly.express as px
-from sklearn.cluster import KMeans
-
-# Apply t-SNE
-tsne = TSNE(n_components=3, perplexity=30, random_state=42)
-t_sne_results_3d = tsne.fit_transform(data)
-
-# Cluster the data
-kmeans = KMeans(n_clusters=10, random_state=42)
-clusters = kmeans.fit_predict(data)
-
-# Create 3D Plot
-fig = px.scatter_3d(x=t_sne_results_3d[:, 0], y=t_sne_results_3d[:, 1], z=t_sne_results_3d[:, 2], color=clusters,
-                    title='3D t-SNE Visualization with Clusters', labels={'color': 'Cluster'})
-fig.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which hyperparameter in t-SNE balances the local and global aspects of the data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -121,27 +101,7 @@ fig.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Beyond basic scatter plots, advanced visualization techniques can provide deeper insights. Interactive plots, 3D visualizations, and overlaying additional information (like cluster labels) can enhance the interpretability of t-SNE results. We will explore how to create these advanced visualizations using Python libraries.
-
-```python title="example2.py"
-import plotly.express as px
-from sklearn.cluster import KMeans
-
-# Apply t-SNE
-tsne = TSNE(n_components=3, perplexity=30, random_state=42)
-t_sne_results_3d = tsne.fit_transform(data)
-
-# Cluster the data
-kmeans = KMeans(n_clusters=10, random_state=42)
-clusters = kmeans.fit_predict(data)
-
-# Create 3D Plot
-fig = px.scatter_3d(x=t_sne_results_3d[:, 0], y=t_sne_results_3d[:, 1], z=t_sne_results_3d[:, 2], color=clusters,
-                    title='3D t-SNE Visualization with Clusters', labels={'color': 'Cluster'})
-fig.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a recommended range for the perplexity parameter in t-SNE?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

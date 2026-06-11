@@ -83,26 +83,7 @@ print(output)
 
 > **💡 Tip:** When applying INT4/INT8 quantization, ensure to calibrate the quantization parameters to minimize accuracy loss. Additionally, use mixed-precision training to maintain numerical stability.
 
-INT4 and INT8 quantization techniques reduce the bit-width of model parameters to 4 or 8 bits, respectively. The bitsandbytes library provides efficient implementations for low-bit quantization, enabling significant reductions in model size and memory usage. However, these techniques require careful handling to avoid precision loss and maintain model performance.
-
-```python title="example2.py"
-import bitsandbytes as bnb
-
-# Example of INT8 quantization using bitsandbytes
-model = torch.nn.Linear(10, 10)
-int8_model = bnb.nn.Linear8bit(10, 10)
-int8_model.weight.data = model.weight.data
-int8_model.bias.data = model.bias.data
-
-# Example input
-input_tensor = torch.randn(1, 10)
-
-# Forward pass through INT8 quantized model
-output = int8_model(input_tensor)
-print(output)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of GGUF and GPTQ quantization techniques?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -126,26 +107,7 @@ print(output)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-INT4 and INT8 quantization techniques reduce the bit-width of model parameters to 4 or 8 bits, respectively. The bitsandbytes library provides efficient implementations for low-bit quantization, enabling significant reductions in model size and memory usage. However, these techniques require careful handling to avoid precision loss and maintain model performance.
-
-```python title="example2.py"
-import bitsandbytes as bnb
-
-# Example of INT8 quantization using bitsandbytes
-model = torch.nn.Linear(10, 10)
-int8_model = bnb.nn.Linear8bit(10, 10)
-int8_model.weight.data = model.weight.data
-int8_model.bias.data = model.bias.data
-
-# Example input
-input_tensor = torch.randn(1, 10)
-
-# Forward pass through INT8 quantized model
-output = int8_model(input_tensor)
-print(output)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a key consideration when applying INT4/INT8 quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

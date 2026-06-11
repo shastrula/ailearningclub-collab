@@ -108,56 +108,6 @@ spec:
 
 ---
 
-Persistent Volumes provide storage that survives pod deletion:
-
-```yaml
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: pv-data
-spec:
-  capacity:
-    storage: 10Gi
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
-  awsElasticBlockStore:
-    volumeID: vol-12345678
-    fsType: ext4
-
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: pvc-data
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
-  resources:
-    requests:
-      storage: 5Gi
-
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: app-with-storage
-spec:
-  containers:
-  - name: app
-    image: myapp:1.0
-    volumeMounts:
-    - name: data
-      mountPath: /data
-  volumes:
-  - name: data
-    persistentVolumeClaim:
-      claimName: pvc-data
-```
-
----
-
 <div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is a Pod in Kubernetes?</p>
   <div class="space-y-2">
@@ -182,57 +132,7 @@ spec:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Persistent Volumes provide storage that survives pod deletion:
-
-```yaml
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: pv-data
-spec:
-  capacity:
-    storage: 10Gi
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
-  awsElasticBlockStore:
-    volumeID: vol-12345678
-    fsType: ext4
-
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: pvc-data
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
-  resources:
-    requests:
-      storage: 5Gi
-
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: app-with-storage
-spec:
-  containers:
-  - name: app
-    image: myapp:1.0
-    volumeMounts:
-    - name: data
-      mountPath: /data
-  volumes:
-  - name: data
-    persistentVolumeClaim:
-      claimName: pvc-data
-```
-
----
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the purpose of a Deployment in Kubernetes?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -256,57 +156,7 @@ spec:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Persistent Volumes provide storage that survives pod deletion:
-
-```yaml
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: pv-data
-spec:
-  capacity:
-    storage: 10Gi
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
-  awsElasticBlockStore:
-    volumeID: vol-12345678
-    fsType: ext4
-
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: pvc-data
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
-  resources:
-    requests:
-      storage: 5Gi
-
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: app-with-storage
-spec:
-  containers:
-  - name: app
-    image: myapp:1.0
-    volumeMounts:
-    - name: data
-      mountPath: /data
-  volumes:
-  - name: data
-    persistentVolumeClaim:
-      claimName: pvc-data
-```
-
----
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What types of Services are available in Kubernetes?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -329,56 +179,6 @@ spec:
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-
-Persistent Volumes provide storage that survives pod deletion:
-
-```yaml
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: pv-data
-spec:
-  capacity:
-    storage: 10Gi
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
-  awsElasticBlockStore:
-    volumeID: vol-12345678
-    fsType: ext4
-
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: pvc-data
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
-  resources:
-    requests:
-      storage: 5Gi
-
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: app-with-storage
-spec:
-  containers:
-  - name: app
-    image: myapp:1.0
-    volumeMounts:
-    - name: data
-      mountPath: /data
-  volumes:
-  - name: data
-    persistentVolumeClaim:
-      claimName: pvc-data
-```
-
----
 
 <div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the difference between ConfigMaps and Secrets?</p>
@@ -404,57 +204,7 @@ spec:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Persistent Volumes provide storage that survives pod deletion:
-
-```yaml
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: pv-data
-spec:
-  capacity:
-    storage: 10Gi
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
-  awsElasticBlockStore:
-    volumeID: vol-12345678
-    fsType: ext4
-
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: pvc-data
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
-  resources:
-    requests:
-      storage: 5Gi
-
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: app-with-storage
-spec:
-  containers:
-  - name: app
-    image: myapp:1.0
-    volumeMounts:
-    - name: data
-      mountPath: /data
-  volumes:
-  - name: data
-    persistentVolumeClaim:
-      claimName: pvc-data
-```
-
----
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is a Persistent Volume Claim (PVC) used for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

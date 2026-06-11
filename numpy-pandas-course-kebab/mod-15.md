@@ -85,32 +85,7 @@ plt.show()
 
 > **💡 Tip:** When creating subplots, use `plt.tight_layout()` to automatically adjust subplot parameters to give specified padding.
 
-Matplotlib provides extensive customization options for plots. You can change the line style, color, add markers, and more. Additionally, you can create subplots to display multiple plots in a single figure.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-
-x = [1, 2, 3, 4, 5]
-y1 = [2, 3, 5, 7, 11]
-y2 = [1, 4, 6, 8, 10]
-
-# Create subplots
-fig, axs = plt.subplots(2)
-
-# First subplot
-axs[0].plot(x, y1, 'g--')  # Green dashed line
-axs[0].set_title('First Subplot')
-
-# Second subplot
-axs[1].plot(x, y2, 'r^')  # Red triangles
-axs[1].set_title('Second Subplot')
-
-# Display the plots
-plt.tight_layout()
-plt.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What function is used to create a line plot in Matplotlib?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -134,32 +109,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Matplotlib provides extensive customization options for plots. You can change the line style, color, add markers, and more. Additionally, you can create subplots to display multiple plots in a single figure.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-
-x = [1, 2, 3, 4, 5]
-y1 = [2, 3, 5, 7, 11]
-y2 = [1, 4, 6, 8, 10]
-
-# Create subplots
-fig, axs = plt.subplots(2)
-
-# First subplot
-axs[0].plot(x, y1, 'g--')  # Green dashed line
-axs[0].set_title('First Subplot')
-
-# Second subplot
-axs[1].plot(x, y2, 'r^')  # Red triangles
-axs[1].set_title('Second Subplot')
-
-# Display the plots
-plt.tight_layout()
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which method is used to add a title to a plot in Matplotlib?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

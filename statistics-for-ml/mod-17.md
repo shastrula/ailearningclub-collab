@@ -90,29 +90,7 @@ print(f'P-value: {p_value}')
 
 > **💡 Tip:** Ensure that the number of bootstrap or permutation samples is sufficiently large to get a stable estimate of the statistic or p-value.
 
-A Permutation Test is a non-parametric test that provides a way to assess the null hypothesis by comparing the observed test statistic to a distribution of test statistics obtained by randomly permuting the labels of the data. This method is useful for hypothesis testing when the assumptions of traditional parametric tests are violated.
-
-```python title="permutation_test_example.py"
-import numpy as np
-
-# Sample data
-group1 = np.array([1, 2, 3, 4, 5])
-group2 = np.array([2, 3, 4, 5, 6])
-
-# Observed difference in means
-observed_diff = np.mean(group1) - np.mean(group2)
-
-# Permutation test
-n_permutations = 1000
-permutation_diffs = []
-for _ in range(n_permutations):
-    combined = np.concatenate([group1, group2])
-    np.random.shuffle(combined)
-    permuted_group1 = combined[:len(group1)]
-    permuted_group2 = combined[len(group1):]
-    permutation_diffs.append(np.mean(permuted_group1) - np.mean(permuted_group2))
-
-p_value = np.mean(np.abs(permutation_diffs) >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of the Bootstrap method?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -136,29 +114,7 @@ p_value = np.mean(np.abs(permutation_diffs) >
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-A Permutation Test is a non-parametric test that provides a way to assess the null hypothesis by comparing the observed test statistic to a distribution of test statistics obtained by randomly permuting the labels of the data. This method is useful for hypothesis testing when the assumptions of traditional parametric tests are violated.
-
-```python title="permutation_test_example.py"
-import numpy as np
-
-# Sample data
-group1 = np.array([1, 2, 3, 4, 5])
-group2 = np.array([2, 3, 4, 5, 6])
-
-# Observed difference in means
-observed_diff = np.mean(group1) - np.mean(group2)
-
-# Permutation test
-n_permutations = 1000
-permutation_diffs = []
-for _ in range(n_permutations):
-    combined = np.concatenate([group1, group2])
-    np.random.shuffle(combined)
-    permuted_group1 = combined[:len(group1)]
-    permuted_group2 = combined[len(group1):]
-    permutation_diffs.append(np.mean(permuted_group1) - np.mean(permuted_group2))
-
-p_value = np.mean(np.abs(permutation_diffs) >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does a Permutation Test help to assess?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

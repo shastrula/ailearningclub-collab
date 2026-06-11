@@ -79,22 +79,7 @@ print(f'The integral of g(x) from 0 to pi is {result}')
 
 > **💡 Tip:** When using numerical integration, ensure the function is well-behaved within the integration limits to avoid large errors.
 
-Integration is used in AI to calculate areas under curves, which can be essential in various applications such as calculating probabilities in Bayesian networks or determining the total effect of a variable in a model. Numerical integration methods are often employed due to the complexity of many AI-related functions.
-
-```python title="example2.py"
-import numpy as np
-from scipy.integrate import quad
-
-# Define a function to integrate
-def g(x):
-    return np.exp(-x) * np.sin(x)
-
-# Integrate g(x) from 0 to pi
-result, error = quad(g, 0, np.pi)
-print(f'The integral of g(x) from 0 to pi is {result}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of derivatives in AI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,22 +103,7 @@ print(f'The integral of g(x) from 0 to pi is {result}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Integration is used in AI to calculate areas under curves, which can be essential in various applications such as calculating probabilities in Bayesian networks or determining the total effect of a variable in a model. Numerical integration methods are often employed due to the complexity of many AI-related functions.
-
-```python title="example2.py"
-import numpy as np
-from scipy.integrate import quad
-
-# Define a function to integrate
-def g(x):
-    return np.exp(-x) * np.sin(x)
-
-# Integrate g(x) from 0 to pi
-result, error = quad(g, 0, np.pi)
-print(f'The integral of g(x) from 0 to pi is {result}')
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which numerical integration method is used in the provided code example?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -87,30 +87,7 @@ if __name__ == '__main__':
 
 > **💡 Tip:** Ensure that all AI agents are thoroughly tested in isolation before attempting integration to avoid complex debugging issues during collaboration.
 
-Integrating AI agents involves creating a cohesive environment where different agents can communicate and perform tasks collaboratively. This requires understanding the APIs and protocols each agent uses, as well as ensuring compatibility and efficient data exchange.
-
-```python title="example2.py"
-from flask import Flask, request, jsonify
-
-app = Flask(__name__)
-
-# Example of a simple Flask API to integrate AI agents
-@app.route('/integrate', methods=['POST'])
-def integrate_agents():
-    data = request.json
-    agent1_response = perform_task(data['agent1_task'])
-    agent2_response = perform_task(data['agent2_task'])
-    return jsonify({'agent1': agent1_response, 'agent2': agent2_response})
-
-def perform_task(task):
-    # Placeholder for actual task execution
-    return {'status':'success','result': 'Task performed'}
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary function of MCP servers in AI projects?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -134,30 +111,7 @@ if __name__ == '__main__':
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Integrating AI agents involves creating a cohesive environment where different agents can communicate and perform tasks collaboratively. This requires understanding the APIs and protocols each agent uses, as well as ensuring compatibility and efficient data exchange.
-
-```python title="example2.py"
-from flask import Flask, request, jsonify
-
-app = Flask(__name__)
-
-# Example of a simple Flask API to integrate AI agents
-@app.route('/integrate', methods=['POST'])
-def integrate_agents():
-    data = request.json
-    agent1_response = perform_task(data['agent1_task'])
-    agent2_response = perform_task(data['agent2_task'])
-    return jsonify({'agent1': agent1_response, 'agent2': agent2_response})
-
-def perform_task(task):
-    # Placeholder for actual task execution
-    return {'status':'success','result': 'Task performed'}
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is a critical step before integrating AI agents?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -89,32 +89,7 @@ print(result)
 
 > **💡 Tip:** Ensure that your MCP server and AI agent are running on the correct ports and that the API endpoints are properly configured to avoid connection issues.
 
-Integrating AI agents into applications requires a structured approach to ensure they function correctly within the system. This involves defining clear APIs, handling data flows, and ensuring the agents can interact with other components seamlessly. Effective integration enhances the agent's capability to provide valuable insights and automate complex tasks.
-
-```python title="example2.py"
-import requests
-
-# AI Agent Integration Example
-
-class AIAgent:
-    def __init__(self, api_url):
-        self.api_url = api_url
-
-    def send_request(self, data):
-        response = requests.post(self.api_url, json=data)
-        return response.json()
-
-    def process_text(self, text):
-        request_data = {'action': 'process','model': 'text_model', 'input': text}
-        return self.send_request(request_data)
-
-# Example usage
-agent = AIAgent('http://localhost:5000/mcp')
-result = agent.process_text('Hello, AI!')
-print(result)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary function of an MCP server?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -138,32 +113,7 @@ print(result)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Integrating AI agents into applications requires a structured approach to ensure they function correctly within the system. This involves defining clear APIs, handling data flows, and ensuring the agents can interact with other components seamlessly. Effective integration enhances the agent's capability to provide valuable insights and automate complex tasks.
-
-```python title="example2.py"
-import requests
-
-# AI Agent Integration Example
-
-class AIAgent:
-    def __init__(self, api_url):
-        self.api_url = api_url
-
-    def send_request(self, data):
-        response = requests.post(self.api_url, json=data)
-        return response.json()
-
-    def process_text(self, text):
-        request_data = {'action': 'process','model': 'text_model', 'input': text}
-        return self.send_request(request_data)
-
-# Example usage
-agent = AIAgent('http://localhost:5000/mcp')
-result = agent.process_text('Hello, AI!')
-print(result)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What should be ensured when integrating AI agents into applications?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

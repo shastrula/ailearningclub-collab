@@ -85,28 +85,7 @@ print(df)
 
 > **💡 Tip:** When using one-hot encoding, be mindful of the dimensionality it adds to your dataset. Too many categories can lead to a sparse matrix, which might affect model performance.
 
-Categorical features often need to be encoded into numerical values for machine learning models to process them. Common techniques include one-hot encoding and label encoding. One-hot encoding creates binary columns for each category, while label encoding assigns a unique integer to each category.
-
-```python title="example2.py"
-import pandas as pd
-from sklearn.preprocessing import OneHotEncoder
-
-# Sample DataFrame with categorical data
-data = {'color': ['red', 'blue', 'green','red']}
-df = pd.DataFrame(data)
-
-# One-hot encoding
-enc = OneHotEncoder()
-enc_data = enc.fit_transform(df[['color']]).toarray()
-enc_df = pd.DataFrame(enc_data, columns=enc.get_feature_names_out(['color']))
-
-# Concatenate original DataFrame with encoded DataFrame
-df = pd.concat([df, enc_df], axis=1)
-
-print(df)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of feature engineering in data science?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -130,28 +109,7 @@ print(df)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Categorical features often need to be encoded into numerical values for machine learning models to process them. Common techniques include one-hot encoding and label encoding. One-hot encoding creates binary columns for each category, while label encoding assigns a unique integer to each category.
-
-```python title="example2.py"
-import pandas as pd
-from sklearn.preprocessing import OneHotEncoder
-
-# Sample DataFrame with categorical data
-data = {'color': ['red', 'blue', 'green','red']}
-df = pd.DataFrame(data)
-
-# One-hot encoding
-enc = OneHotEncoder()
-enc_data = enc.fit_transform(df[['color']]).toarray()
-enc_df = pd.DataFrame(enc_data, columns=enc.get_feature_names_out(['color']))
-
-# Concatenate original DataFrame with encoded DataFrame
-df = pd.concat([df, enc_df], axis=1)
-
-print(df)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which encoding technique creates binary columns for each category?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

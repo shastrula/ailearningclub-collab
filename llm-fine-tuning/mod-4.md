@@ -84,31 +84,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 > **💡 Tip:** Ensure that the quantization level (e.g., int8) is compatible with your hardware to avoid runtime errors.
 
-To implement QLoRA, you need to apply quantization to the LoRA layers. This involves converting the floating-point weights to lower precision, such as int8, which significantly reduces memory footprint and speeds up computation. The quantized LoRA layers are then used to fine-tune the model.
-
-```python title="example2.py"
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from bitsandbytes import quantize_model
-
-# Load pre-trained model and tokenizer
-model_name = 'facebook/opt-1.3b'
-model = AutoModelForCausalLM.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-# Quantize the model using QLoRA
-quantized_model = quantize_model(model, bits=8)
-
-# Example input
-input_text = 'Hello, how are you?'
-inputs = tokenizer(input_text, return_tensors='pt')
-
-# Generate output
-outputs = quantized_model.generate(**inputs, max_length=50)
-print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does QLoRA stand for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -132,31 +108,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-To implement QLoRA, you need to apply quantization to the LoRA layers. This involves converting the floating-point weights to lower precision, such as int8, which significantly reduces memory footprint and speeds up computation. The quantized LoRA layers are then used to fine-tune the model.
-
-```python title="example2.py"
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from bitsandbytes import quantize_model
-
-# Load pre-trained model and tokenizer
-model_name = 'facebook/opt-1.3b'
-model = AutoModelForCausalLM.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-# Quantize the model using QLoRA
-quantized_model = quantize_model(model, bits=8)
-
-# Example input
-input_text = 'Hello, how are you?'
-inputs = tokenizer(input_text, return_tensors='pt')
-
-# Generate output
-outputs = quantized_model.generate(**inputs, max_length=50)
-print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which precision level is commonly used in QLoRA for quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

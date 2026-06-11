@@ -94,37 +94,7 @@ print(classification_report(y_test, y_pred))
 
 > **💡 Tip:** Always ensure your data is properly scaled before training a Logistic Regression model, as unscaled features can lead to poor performance.
 
-Evaluating the performance of a Logistic Regression model is crucial to ensure its effectiveness. Common evaluation metrics include accuracy, precision, recall, and the F1 score. Additionally, visualizing the decision boundary can provide insights into how well the model separates the classes.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-from sklearn.metrics import confusion_matrix, classification_report
-
-# Plotting the decision boundary
-def plot_decision_boundary(model, X, y):
-    h =.02  # step size in the mesh
-    x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
-    y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
-    xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
-                         np.arange(y_min, y_max, h))
-
-    Z = model.predict(np.c_[xx.ravel(), yy.ravel()])
-    Z = Z.reshape(xx.shape)
-    plt.contourf(xx, yy, Z, cmap=plt.cm.Paired, alpha=0.8)
-    plt.scatter(X[:, 0], X[:, 1], c=y, cmap=plt.cm.Paired)
-    plt.xlim(xx.min(), xx.max())
-    plt.ylim(yy.min(), yy.max())
-    plt.title('Decision Boundary')
-
-plot_decision_boundary(log_reg, X, y)
-
-# Confusion Matrix and Classification Report
-y_pred = log_reg.predict(X_test)
-print(confusion_matrix(y_test, y_pred))
-print(classification_report(y_test, y_pred))
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What function is used to convert the output of a linear equation into a probability in Logistic Regression?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -148,37 +118,7 @@ print(classification_report(y_test, y_pred))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Evaluating the performance of a Logistic Regression model is crucial to ensure its effectiveness. Common evaluation metrics include accuracy, precision, recall, and the F1 score. Additionally, visualizing the decision boundary can provide insights into how well the model separates the classes.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-from sklearn.metrics import confusion_matrix, classification_report
-
-# Plotting the decision boundary
-def plot_decision_boundary(model, X, y):
-    h =.02  # step size in the mesh
-    x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
-    y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
-    xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
-                         np.arange(y_min, y_max, h))
-
-    Z = model.predict(np.c_[xx.ravel(), yy.ravel()])
-    Z = Z.reshape(xx.shape)
-    plt.contourf(xx, yy, Z, cmap=plt.cm.Paired, alpha=0.8)
-    plt.scatter(X[:, 0], X[:, 1], c=y, cmap=plt.cm.Paired)
-    plt.xlim(xx.min(), xx.max())
-    plt.ylim(yy.min(), yy.max())
-    plt.title('Decision Boundary')
-
-plot_decision_boundary(log_reg, X, y)
-
-# Confusion Matrix and Classification Report
-y_pred = log_reg.predict(X_test)
-print(confusion_matrix(y_test, y_pred))
-print(classification_report(y_test, y_pred))
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which metric is commonly used to evaluate the performance of a Logistic Regression model?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

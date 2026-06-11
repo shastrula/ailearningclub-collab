@@ -89,32 +89,7 @@ print('Mean of the posterior distribution:', np.mean(samples))
 
 > **💡 Tip:** When choosing a conjugate prior, ensure it aligns well with the likelihood function of your data to maximize the benefits of computational efficiency and interpretability.
 
-Conjugate priors are particularly useful in machine learning for parameter estimation in probabilistic models. They allow for analytical solutions to the posterior distribution, which can significantly speed up computations. For example, in natural language processing, conjugate priors can be used to model the probability of word occurrences in a document, facilitating faster and more efficient Bayesian updates.
-
-```python title="example2.py"
-import numpy as np
-from scipy.stats import gamma, poisson
-
-# Prior parameters
-alpha_prior = 2
-beta_prior = 1
-
-# Observed data
-data = [3, 5, 2, 4, 3]
-
-# Posterior parameters
-alpha_posterior = alpha_prior + np.sum(data)
-beta_posterior = beta_prior + len(data)
-
-# Posterior distribution
-posterior_dist = gamma(alpha_posterior, scale=1/beta_posterior)
-
-# Sample from the posterior
-samples = posterior_dist.rvs(1000)
-print('Mean of the posterior distribution:', np.mean(samples))
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is a conjugate prior?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -138,32 +113,7 @@ print('Mean of the posterior distribution:', np.mean(samples))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Conjugate priors are particularly useful in machine learning for parameter estimation in probabilistic models. They allow for analytical solutions to the posterior distribution, which can significantly speed up computations. For example, in natural language processing, conjugate priors can be used to model the probability of word occurrences in a document, facilitating faster and more efficient Bayesian updates.
-
-```python title="example2.py"
-import numpy as np
-from scipy.stats import gamma, poisson
-
-# Prior parameters
-alpha_prior = 2
-beta_prior = 1
-
-# Observed data
-data = [3, 5, 2, 4, 3]
-
-# Posterior parameters
-alpha_posterior = alpha_prior + np.sum(data)
-beta_posterior = beta_prior + len(data)
-
-# Posterior distribution
-posterior_dist = gamma(alpha_posterior, scale=1/beta_posterior)
-
-# Sample from the posterior
-samples = posterior_dist.rvs(1000)
-print('Mean of the posterior distribution:', np.mean(samples))
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which distribution is a conjugate prior for the Poisson likelihood?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

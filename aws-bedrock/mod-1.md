@@ -94,16 +94,6 @@ print(result['content'][0]['text'])
 
 ---
 
-| Feature | Bedrock | OpenAI API | Self-hosted |
-|---------|---------|-----------|-------------|
-| Model choice | Multiple providers | GPT only | Any model |
-| Data privacy | Stays in AWS | Sent to OpenAI | Full control |
-| Setup time | Minutes | Minutes | Hours/days |
-| Cost predictability | On-demand or reserved | On-demand only | Infrastructure costs |
-| Compliance | AWS compliance | Limited | Full control |
-
----
-
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary advantage of AWS Bedrock?</p>
   <div class="space-y-2">
@@ -128,17 +118,7 @@ print(result['content'][0]['text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-| Feature | Bedrock | OpenAI API | Self-hosted |
-|---------|---------|-----------|-------------|
-| Model choice | Multiple providers | GPT only | Any model |
-| Data privacy | Stays in AWS | Sent to OpenAI | Full control |
-| Setup time | Minutes | Minutes | Hours/days |
-| Cost predictability | On-demand or reserved | On-demand only | Infrastructure costs |
-| Compliance | AWS compliance | Limited | Full control |
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which pricing model offers up to 40% savings?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -162,17 +142,7 @@ print(result['content'][0]['text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-| Feature | Bedrock | OpenAI API | Self-hosted |
-|---------|---------|-----------|-------------|
-| Model choice | Multiple providers | GPT only | Any model |
-| Data privacy | Stays in AWS | Sent to OpenAI | Full control |
-| Setup time | Minutes | Minutes | Hours/days |
-| Cost predictability | On-demand or reserved | On-demand only | Infrastructure costs |
-| Compliance | AWS compliance | Limited | Full control |
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What must you do before using a model in Bedrock?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -196,17 +166,7 @@ print(result['content'][0]['text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-| Feature | Bedrock | OpenAI API | Self-hosted |
-|---------|---------|-----------|-------------|
-| Model choice | Multiple providers | GPT only | Any model |
-| Data privacy | Stays in AWS | Sent to OpenAI | Full control |
-| Setup time | Minutes | Minutes | Hours/days |
-| Cost predictability | On-demand or reserved | On-demand only | Infrastructure costs |
-| Compliance | AWS compliance | Limited | Full control |
-
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which use case is NOT mentioned as a Bedrock strength?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

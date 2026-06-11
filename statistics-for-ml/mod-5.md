@@ -77,24 +77,7 @@ print(f'T-statistic: {t_stat}, P-value: {p_value}')
 
 > **💡 Tip:** Always ensure that your sample data meets the assumptions of the statistical test you are using, such as normality and equal variances for t-tests.
 
-The p-value is a crucial metric in hypothesis testing. It represents the probability of observing the test statistic (or something more extreme) if the null hypothesis is true. A low p-value (typically < 0.05) suggests that the observed data is unlikely under the null hypothesis, leading us to reject H0 in favor of H1. Conversely, a high p-value indicates insufficient evidence to reject H0.
-
-```python title="example2.py"
-import scipy.stats as stats
-
-# Example: Comparing means of two groups
-# Null hypothesis: The means of the two groups are equal
-# Alternative hypothesis: The means of the two groups are not equal
-
-# Sample data for two groups
-group1 = [12, 14, 16, 18, 20]
-group2 = [10, 13, 15, 17, 19]
-
-t_stat, p_value = stats.ttest_ind(group1, group2)
-print(f'T-statistic: {t_stat}, P-value: {p_value}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does a low p-value indicate in hypothesis testing?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,24 +101,7 @@ print(f'T-statistic: {t_stat}, P-value: {p_value}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-The p-value is a crucial metric in hypothesis testing. It represents the probability of observing the test statistic (or something more extreme) if the null hypothesis is true. A low p-value (typically < 0.05) suggests that the observed data is unlikely under the null hypothesis, leading us to reject H0 in favor of H1. Conversely, a high p-value indicates insufficient evidence to reject H0.
-
-```python title="example2.py"
-import scipy.stats as stats
-
-# Example: Comparing means of two groups
-# Null hypothesis: The means of the two groups are equal
-# Alternative hypothesis: The means of the two groups are not equal
-
-# Sample data for two groups
-group1 = [12, 14, 16, 18, 20]
-group2 = [10, 13, 15, 17, 19]
-
-t_stat, p_value = stats.ttest_ind(group1, group2)
-print(f'T-statistic: {t_stat}, P-value: {p_value}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ When should you reject the null hypothesis?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

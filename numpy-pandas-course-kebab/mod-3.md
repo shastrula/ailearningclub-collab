@@ -89,39 +89,7 @@ print(f'Non-vectorized time: {end - start}')
 
 > **💡 Tip:** Always prefer vectorized operations over loops for performance and readability. NumPy's broadcasting and vectorization capabilities are designed to handle large datasets efficiently.
 
-Vectorization is the process of converting an algorithm or data processing operation so that it operates on entire arrays of data at once, rather than iterating over individual elements. This approach significantly speeds up computations and is a key advantage of using NumPy.
-
-```python title="example2.py"
-import numpy as np
-
-# Create a large array
-arr = np.random.rand(1000000)
-
-# Use vectorized operation to compute the square of each element
-squared = arr ** 2
-
-# Compare performance with a non-vectorized approach
-def non_vectorized_square(arr):
-    result = []
-    for x in arr:
-        result.append(x ** 2)
-    return result
-
-# Time the vectorized operation
-import time
-start = time.time()
-squared = arr ** 2
-end = time.time()
-print(f'Vectorized time: {end - start}')
-
-# Time the non-vectorized operation
-start = time.time()
-non_vectorized_result = non_vectorized_square(arr)
-end = time.time()
-print(f'Non-vectorized time: {end - start}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary benefit of using broadcasting in NumPy?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -145,39 +113,7 @@ print(f'Non-vectorized time: {end - start}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Vectorization is the process of converting an algorithm or data processing operation so that it operates on entire arrays of data at once, rather than iterating over individual elements. This approach significantly speeds up computations and is a key advantage of using NumPy.
-
-```python title="example2.py"
-import numpy as np
-
-# Create a large array
-arr = np.random.rand(1000000)
-
-# Use vectorized operation to compute the square of each element
-squared = arr ** 2
-
-# Compare performance with a non-vectorized approach
-def non_vectorized_square(arr):
-    result = []
-    for x in arr:
-        result.append(x ** 2)
-    return result
-
-# Time the vectorized operation
-import time
-start = time.time()
-squared = arr ** 2
-end = time.time()
-print(f'Vectorized time: {end - start}')
-
-# Time the non-vectorized operation
-start = time.time()
-non_vectorized_result = non_vectorized_square(arr)
-end = time.time()
-print(f'Non-vectorized time: {end - start}')
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ How does vectorization in NumPy improve performance?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

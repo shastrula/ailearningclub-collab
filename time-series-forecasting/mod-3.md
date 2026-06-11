@@ -84,27 +84,7 @@ plt.show()
 
 > **💡 Tip:** When applying differencing, be cautious of over-differencing, which can introduce unnecessary noise into the data and complicate the forecasting process.
 
-Differencing is a method of transforming a time series dataset to make it stationary. This is often done by subtracting the previous value from the current value. The order of differencing (number of times the process is repeated) is chosen based on the nature of the time series data.
-
-```python title="example2.py"
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Sample non-stationary time series data
-data = pd.Series([2, 4, 6, 8, 10, 12, 14, 16, 18, 20])
-
-# First order differencing
-diff_data = data.diff().dropna()
-
-# Plot original and differenced data
-plt.figure(figsize=(12, 6))
-plt.plot(data, label='Original')
-plt.plot(diff_data, label='Differenced')
-plt.legend()
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does stationarity in a time series imply?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -128,27 +108,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Differencing is a method of transforming a time series dataset to make it stationary. This is often done by subtracting the previous value from the current value. The order of differencing (number of times the process is repeated) is chosen based on the nature of the time series data.
-
-```python title="example2.py"
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Sample non-stationary time series data
-data = pd.Series([2, 4, 6, 8, 10, 12, 14, 16, 18, 20])
-
-# First order differencing
-diff_data = data.diff().dropna()
-
-# Plot original and differenced data
-plt.figure(figsize=(12, 6))
-plt.plot(data, label='Original')
-plt.plot(diff_data, label='Differenced')
-plt.legend()
-plt.show()
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ What is the primary purpose of differencing in time series analysis?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

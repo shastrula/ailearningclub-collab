@@ -85,28 +85,7 @@ print(decrypted_data)
 
 > **💡 Tip:** Always use strong, unique encryption keys and regularly rotate them to enhance security.
 
-Data encryption is essential for protecting sensitive information during transmission and storage. When serving machine learning models, encrypting data in transit (using protocols like HTTPS) and at rest (using encryption algorithms) helps safeguard against interception and unauthorized access. Encryption ensures that even if data is compromised, it remains unintelligible to unauthorized parties.
-
-```python title="example2.py"
-from cryptography.fernet import Fernet
-
-# Generate a key for encryption
-key = Fernet.generate_key()
-cipher_suite = Fernet(key)
-
-# Encrypt data
-data = b'Sensitive information'
-encrypted_data = cipher_suite.encrypt(data)
-
-print(encrypted_data)
-
-# Decrypt data
-decrypted_data = cipher_suite.decrypt(encrypted_data)
-
-print(decrypted_data)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of authentication in model serving?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -130,28 +109,7 @@ print(decrypted_data)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Data encryption is essential for protecting sensitive information during transmission and storage. When serving machine learning models, encrypting data in transit (using protocols like HTTPS) and at rest (using encryption algorithms) helps safeguard against interception and unauthorized access. Encryption ensures that even if data is compromised, it remains unintelligible to unauthorized parties.
-
-```python title="example2.py"
-from cryptography.fernet import Fernet
-
-# Generate a key for encryption
-key = Fernet.generate_key()
-cipher_suite = Fernet(key)
-
-# Encrypt data
-data = b'Sensitive information'
-encrypted_data = cipher_suite.encrypt(data)
-
-print(encrypted_data)
-
-# Decrypt data
-decrypted_data = cipher_suite.decrypt(encrypted_data)
-
-print(decrypted_data)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Why is data encryption important in model serving?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

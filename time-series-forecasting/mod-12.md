@@ -92,35 +92,7 @@ for epoch in range(epochs):
 
 > **💡 Tip:** When training Transformer models, be mindful of overfitting. Use techniques like dropout, early stopping, and validation sets to ensure the model generalizes well.
 
-Training a Transformer model for time series forecasting involves preparing the data, defining the loss function, and optimizing the model parameters. It's important to handle the sequence length and ensure that the model can generalize well to unseen data. Fine-tuning hyperparameters such as the number of heads, model dimensions, and layers can significantly impact the model's performance.
-
-```python title="example2.py"
-import torch
-import torch.optim as optim
-
-# Assume we have a dataset 'time_series_data' with shape (num_samples, sequence_length, num_features)
-# And corresponding targets 'targets' with shape (num_samples,)
-
-# Define loss function and optimizer
-criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=0.001)
-
-# Training loop
-epochs = 10
-for epoch in range(epochs):
-    model.train()
-    total_loss = 0
-    for data, target in zip(time_series_data, targets):
-        optimizer.zero_grad()
-        output = model(data)
-        loss = criterion(output, target)
-        loss.backward()
-        optimizer.step()
-        total_loss += loss.item()
-    print(f'Epoch {epoch+1}, Loss: {total_loss / len(time_series_data)}') 
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary advantage of using Transformers for time series forecasting compared to RNNs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -144,35 +116,7 @@ for epoch in range(epochs):
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Training a Transformer model for time series forecasting involves preparing the data, defining the loss function, and optimizing the model parameters. It's important to handle the sequence length and ensure that the model can generalize well to unseen data. Fine-tuning hyperparameters such as the number of heads, model dimensions, and layers can significantly impact the model's performance.
-
-```python title="example2.py"
-import torch
-import torch.optim as optim
-
-# Assume we have a dataset 'time_series_data' with shape (num_samples, sequence_length, num_features)
-# And corresponding targets 'targets' with shape (num_samples,)
-
-# Define loss function and optimizer
-criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=0.001)
-
-# Training loop
-epochs = 10
-for epoch in range(epochs):
-    model.train()
-    total_loss = 0
-    for data, target in zip(time_series_data, targets):
-        optimizer.zero_grad()
-        output = model(data)
-        loss = criterion(output, target)
-        loss.backward()
-        optimizer.step()
-        total_loss += loss.item()
-    print(f'Epoch {epoch+1}, Loss: {total_loss / len(time_series_data)}') 
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which hyperparameter is crucial for fine-tuning the performance of a Transformer model for time series?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

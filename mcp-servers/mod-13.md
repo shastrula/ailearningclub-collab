@@ -86,29 +86,7 @@ if __name__ == '__main__':
 
 > **💡 Tip:** Ensure that the AI agent's context is regularly updated to reflect the current state of the system. This helps in maintaining accuracy and relevance in the agent's responses and actions.
 
-Integrating AI agents into existing systems requires careful planning and execution. This involves setting up the necessary infrastructure, defining communication protocols, and ensuring that the AI agent can interact with other components effectively. Tools like Flask for creating APIs and libraries like Transformers for model handling are commonly used.
-
-```python title="example2.py"
-from flask import Flask, request, jsonify
-from transformers import pipeline
-
-app = Flask(__name__)
-
-# Load a pre-trained summarization model
-summarizer = pipeline('summarization')
-
-@app.route('/summarize', methods=['POST'])
-def summarize_text():
-    data = request.json
-    text = data.get('text', '')
-    summary = summarizer(text, max_length=50, min_length=25, do_sample=False)[0]['summary_text']
-    return jsonify({'summary': summary})
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary function of an MCP server?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -132,29 +110,7 @@ if __name__ == '__main__':
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Integrating AI agents into existing systems requires careful planning and execution. This involves setting up the necessary infrastructure, defining communication protocols, and ensuring that the AI agent can interact with other components effectively. Tools like Flask for creating APIs and libraries like Transformers for model handling are commonly used.
-
-```python title="example2.py"
-from flask import Flask, request, jsonify
-from transformers import pipeline
-
-app = Flask(__name__)
-
-# Load a pre-trained summarization model
-summarizer = pipeline('summarization')
-
-@app.route('/summarize', methods=['POST'])
-def summarize_text():
-    data = request.json
-    text = data.get('text', '')
-    summary = summarizer(text, max_length=50, min_length=25, do_sample=False)[0]['summary_text']
-    return jsonify({'summary': summary})
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which library is commonly used for loading pre-trained models in Python?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

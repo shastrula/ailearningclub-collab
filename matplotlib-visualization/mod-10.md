@@ -91,34 +91,7 @@ if __name__ == '__main__':
 
 > **💡 Tip:** Ensure that the component IDs in your callback match the IDs defined in your layout to avoid errors.
 
-Callbacks in Dash allow you to create interactive elements in your dashboard. By defining a callback function, you can update parts of your dashboard in response to user actions, such as clicking a button or selecting a dropdown. Callbacks use the @app.callback decorator to specify input and output components.
-
-```python title="example2.py"
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
-from dash.dependencies import Input, Output
-
-app = dash.Dash(__name__)
-
-app.layout = html.Div([
-    dcc.Input(id='input-box', type='text', value=''),
-    html.Button('Submit', id='button', n_clicks=0),
-    html.H1(id='output-text')
-])
-
-@app.callback(
-    Output('output-text', 'children'), 
-    [Input('input-box', 'value'), Input('button', 'n_clicks')]
-)
-def update_output(value, n_clicks):
-    return f'Input: {value}, Number of clicks: {n_clicks}'
-
-if __name__ == '__main__':
-    app.run_server(debug=True)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of initializing a Dash app in Plotly Dash?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -142,34 +115,7 @@ if __name__ == '__main__':
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Callbacks in Dash allow you to create interactive elements in your dashboard. By defining a callback function, you can update parts of your dashboard in response to user actions, such as clicking a button or selecting a dropdown. Callbacks use the @app.callback decorator to specify input and output components.
-
-```python title="example2.py"
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
-from dash.dependencies import Input, Output
-
-app = dash.Dash(__name__)
-
-app.layout = html.Div([
-    dcc.Input(id='input-box', type='text', value=''),
-    html.Button('Submit', id='button', n_clicks=0),
-    html.H1(id='output-text')
-])
-
-@app.callback(
-    Output('output-text', 'children'), 
-    [Input('input-box', 'value'), Input('button', 'n_clicks')]
-)
-def update_output(value, n_clicks):
-    return f'Input: {value}, Number of clicks: {n_clicks}'
-
-if __name__ == '__main__':
-    app.run_server(debug=True)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What decorator is used to define callbacks in Dash?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

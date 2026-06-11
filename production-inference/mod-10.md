@@ -87,30 +87,7 @@ log_event('error', {'code': 500,'message': 'Internal Server Error'})
 
 > **💡 Tip:** Ensure logs are timestamped and include relevant context (e.g., user ID, request ID) to facilitate tracing and correlation of events.
 
-Logging is the process of recording events that occur within a system. Logs provide a historical record of system behavior, which is invaluable for debugging, auditing, and performance analysis. Structured logging, where logs are formatted in a consistent manner (e.g., JSON), enhances readability and facilitates automated analysis.
-
-```python title="example2.py"
-import logging
-import json
-
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
-def log_event(event_type, details):
-    """Log an event with structured data."""
-    log_entry = {
-        'event_type': event_type,
-        'timestamp': time.time(),
-        'details': details
-    }
-    logging.info(json.dumps(log_entry))
-
-# Simulate logging events
-log_event('request', {'user_id': 123, 'endpoint': '/api/data'})
-log_event('error', {'code': 500,'message': 'Internal Server Error'})
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of monitoring in a production environment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -134,30 +111,7 @@ log_event('error', {'code': 500,'message': 'Internal Server Error'})
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Logging is the process of recording events that occur within a system. Logs provide a historical record of system behavior, which is invaluable for debugging, auditing, and performance analysis. Structured logging, where logs are formatted in a consistent manner (e.g., JSON), enhances readability and facilitates automated analysis.
-
-```python title="example2.py"
-import logging
-import json
-
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
-def log_event(event_type, details):
-    """Log an event with structured data."""
-    log_entry = {
-        'event_type': event_type,
-        'timestamp': time.time(),
-        'details': details
-    }
-    logging.info(json.dumps(log_entry))
-
-# Simulate logging events
-log_event('request', {'user_id': 123, 'endpoint': '/api/data'})
-log_event('error', {'code': 500,'message': 'Internal Server Error'})
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Why is structured logging important in production systems?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

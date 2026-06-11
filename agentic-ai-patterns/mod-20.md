@@ -83,21 +83,7 @@ print(reflection)
 
 > **💡 Tip:** When implementing reflection in your AI agents, ensure that the evaluation criteria are clearly defined and that the reflection process is integrated into the agent's decision-making loop to facilitate continuous learning.
 
-Reflection in Agentic AI refers to the process by which an agent evaluates its actions and outcomes to learn and improve future performance. This involves analyzing the effectiveness of past actions, identifying patterns, and adjusting strategies accordingly. Reflection is essential for continuous improvement and adaptation in dynamic environments.
-
-```python title="example2.py"
-import random
-
-# Define a simple reflection function
-def reflect_on_actions(actions, outcome):
-    if outcome == 'success':
-        return f'Actions {actions} were successful.'
-    else:
-        return f'Actions {actions} failed. Re-evaluating strategy.'
-
-# Example usage
-actions = ['move_left','move_right','move_up']
-outcome ='success' if random.random() >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of planning in Agentic AI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -121,21 +107,7 @@ outcome ='success' if random.random() >
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Reflection in Agentic AI refers to the process by which an agent evaluates its actions and outcomes to learn and improve future performance. This involves analyzing the effectiveness of past actions, identifying patterns, and adjusting strategies accordingly. Reflection is essential for continuous improvement and adaptation in dynamic environments.
-
-```python title="example2.py"
-import random
-
-# Define a simple reflection function
-def reflect_on_actions(actions, outcome):
-    if outcome == 'success':
-        return f'Actions {actions} were successful.'
-    else:
-        return f'Actions {actions} failed. Re-evaluating strategy.'
-
-# Example usage
-actions = ['move_left','move_right','move_up']
-outcome ='success' if random.random() >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does reflection in Agentic AI involve?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

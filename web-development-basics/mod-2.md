@@ -82,7 +82,7 @@ Images are embedded with the `<img>` tag. Always include an `alt` attribute for 
 
 ---
 
-Images are embedded with the `<img>
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does HTML stand for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -108,7 +108,7 @@ Images are embedded with the `<img>
 
 ---
 
-Images are embedded with the `<img>
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which tag is used for the main content of a page?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -134,7 +134,7 @@ Images are embedded with the `<img>
 
 ---
 
-Images are embedded with the `<img>
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of the alt attribute in images?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -160,7 +160,7 @@ Images are embedded with the `<img>
 
 ---
 
-Images are embedded with the `<img>
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Which attribute specifies where a form should send its data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -186,7 +186,7 @@ Images are embedded with the `<img>
 
 ---
 
-Images are embedded with the `<img>
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ What is semantic HTML?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

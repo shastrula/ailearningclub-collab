@@ -89,32 +89,7 @@ print(f'Posterior Standard Deviation: {posterior_std}')
 
 > **💡 Tip:** When performing Bayesian inference, ensure that your prior distribution accurately reflects your initial beliefs about the parameter values. An improperly chosen prior can lead to misleading results.
 
-Bayesian inference is a method of statistical inference in which Bayes' theorem is used to update the probability for a hypothesis as more evidence or information becomes available. In machine learning, Bayesian inference can be used for parameter estimation, where we aim to determine the most likely values of the parameters of a model given the observed data.
-
-```python title="example2.py"
-import numpy as np
-from scipy.stats import norm
-
-# Prior distribution
-prior_mean = 0
-prior_std = 1
-
-# Observed data
-data = np.random.normal(1, 0.5, 100)
-
-# Likelihood
-likelihood_mean = np.mean(data)
-likelihood_std = np.std(data, ddof=1) / np.sqrt(len(data))
-
-# Posterior distribution
-posterior_mean = (prior_std**2 * likelihood_mean + likelihood_std**2 * prior_mean) / (prior_std**2 + likelihood_std**2)
-posterior_std = np.sqrt(1 / (1/prior_std**2 + 1/likelihood_std**2))
-
-print(f'Posterior Mean: {posterior_mean}')
-print(f'Posterior Standard Deviation: {posterior_std}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of hypothesis testing in A/B testing?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -138,32 +113,7 @@ print(f'Posterior Standard Deviation: {posterior_std}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Bayesian inference is a method of statistical inference in which Bayes' theorem is used to update the probability for a hypothesis as more evidence or information becomes available. In machine learning, Bayesian inference can be used for parameter estimation, where we aim to determine the most likely values of the parameters of a model given the observed data.
-
-```python title="example2.py"
-import numpy as np
-from scipy.stats import norm
-
-# Prior distribution
-prior_mean = 0
-prior_std = 1
-
-# Observed data
-data = np.random.normal(1, 0.5, 100)
-
-# Likelihood
-likelihood_mean = np.mean(data)
-likelihood_std = np.std(data, ddof=1) / np.sqrt(len(data))
-
-# Posterior distribution
-posterior_mean = (prior_std**2 * likelihood_mean + likelihood_std**2 * prior_mean) / (prior_std**2 + likelihood_std**2)
-posterior_std = np.sqrt(1 / (1/prior_std**2 + 1/likelihood_std**2))
-
-print(f'Posterior Mean: {posterior_mean}')
-print(f'Posterior Standard Deviation: {posterior_std}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the role of the prior distribution in Bayesian inference?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

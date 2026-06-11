@@ -74,17 +74,7 @@ print(f'KL Divergence: {kl_divergence}')
 
 > **💡 Tip:** When calculating KL Divergence, ensure that both distributions P and Q are properly normalized and that none of the probabilities are zero to avoid undefined or infinite results.
 
-Kullback-Leibler (KL) Divergence measures how one probability distribution diverges from a second, expected probability distribution. It is a non-symmetric measure of the difference between two probability distributions P and Q. KL Divergence is particularly useful in machine learning for comparing the predicted distribution with the true distribution.
-
-```python title="example2.py"
-import math
-
-# Define two probability distributions
-P = [0.2, 0.3, 0.5]
-Q = [0.3, 0.4, 0.3]
-
-# Calculate KL Divergence
-kl_divergence = sum(p * math.log2(p/q) for p, q in zip(P, Q) if p >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does higher entropy indicate in a random variable?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -108,17 +98,7 @@ kl_divergence = sum(p * math.log2(p/q) for p, q in zip(P, Q) if p >
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Kullback-Leibler (KL) Divergence measures how one probability distribution diverges from a second, expected probability distribution. It is a non-symmetric measure of the difference between two probability distributions P and Q. KL Divergence is particularly useful in machine learning for comparing the predicted distribution with the true distribution.
-
-```python title="example2.py"
-import math
-
-# Define two probability distributions
-P = [0.2, 0.3, 0.5]
-Q = [0.3, 0.4, 0.3]
-
-# Calculate KL Divergence
-kl_divergence = sum(p * math.log2(p/q) for p, q in zip(P, Q) if p >
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does KL Divergence measure between two probability distributions?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

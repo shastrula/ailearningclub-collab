@@ -82,25 +82,7 @@ for p in paragraphs:
 
 > **💡 Tip:** Always check the website's 'robots.txt' file before scraping to ensure compliance with their terms of service.
 
-Once we have the HTML content, we use BeautifulSoup to parse it. BeautifulSoup provides methods and Pythonic idioms that make it easy to navigate, search, and modify the parse tree. It's a powerful tool for extracting data from HTML.
-
-**example2.py**
-
-```
-from bs4 import BeautifulSoup
-import requests
-
-url = 'https://example.com'
-response = requests.get(url)
-soup = BeautifulSoup(response.text, 'html.parser')
-
-# Extract all paragraph texts
-paragraphs = soup.find_all('p')
-for p in paragraphs:
-    print(p.get_text())
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does the'status_code' attribute in a response object represent?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,25 +106,7 @@ for p in paragraphs:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Once we have the HTML content, we use BeautifulSoup to parse it. BeautifulSoup provides methods and Pythonic idioms that make it easy to navigate, search, and modify the parse tree. It's a powerful tool for extracting data from HTML.
-
-**example2.py**
-
-```
-from bs4 import BeautifulSoup
-import requests
-
-url = 'https://example.com'
-response = requests.get(url)
-soup = BeautifulSoup(response.text, 'html.parser')
-
-# Extract all paragraph texts
-paragraphs = soup.find_all('p')
-for p in paragraphs:
-    print(p.get_text())
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which method in BeautifulSoup is used to find all instances of a particular HTML tag?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

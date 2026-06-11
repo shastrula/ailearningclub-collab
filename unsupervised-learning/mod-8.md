@@ -92,39 +92,7 @@ print('Explained Variance Ratio:', explained_variance_ratio)
 
 > **💡 Tip:** Always standardize your data before applying PCA to ensure that each feature contributes equally to the analysis.
 
-Eigenvalues in PCA represent the amount of variance that each principal component captures from the data. The explained variance ratio of a principal component is the proportion of the dataset’s total variance that is captured by that component. This helps in understanding the significance of each principal component and deciding how many components to retain.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.decomposition import PCA
-
-# Sample data
-data = np.array([[2.5, 2.4],
-                 [0.5, 0.7],
-                 [2.2, 2.9],
-                 [1.9, 2.2],
-                 [3.1, 3.0],
-                 [2.3, 2.7],
-                 [2, 1.6],
-                 [1, 1.1],
-                 [1.5, 1.6],
-                 [1.1, 0.9]])
-
-# Apply PCA
-pca = PCA()
-pca.fit(data)
-
-# Eigenvalues
-eigenvalues = pca.explained_variance_ 
-
-# Explained variance ratio
-explained_variance_ratio = pca.explained_variance_ratio_ 
-
-print('Eigenvalues:', eigenvalues)
-print('Explained Variance Ratio:', explained_variance_ratio)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does PCA stand for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -148,39 +116,7 @@ print('Explained Variance Ratio:', explained_variance_ratio)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Eigenvalues in PCA represent the amount of variance that each principal component captures from the data. The explained variance ratio of a principal component is the proportion of the dataset’s total variance that is captured by that component. This helps in understanding the significance of each principal component and deciding how many components to retain.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.decomposition import PCA
-
-# Sample data
-data = np.array([[2.5, 2.4],
-                 [0.5, 0.7],
-                 [2.2, 2.9],
-                 [1.9, 2.2],
-                 [3.1, 3.0],
-                 [2.3, 2.7],
-                 [2, 1.6],
-                 [1, 1.1],
-                 [1.5, 1.6],
-                 [1.1, 0.9]])
-
-# Apply PCA
-pca = PCA()
-pca.fit(data)
-
-# Eigenvalues
-eigenvalues = pca.explained_variance_ 
-
-# Explained variance ratio
-explained_variance_ratio = pca.explained_variance_ratio_ 
-
-print('Eigenvalues:', eigenvalues)
-print('Explained Variance Ratio:', explained_variance_ratio)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does the explained variance ratio indicate in PCA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -78,21 +78,7 @@ fig.show()
 
 > **💡 Tip:** When creating dashboards, ensure that your visualizations are responsive and can adapt to different screen sizes to provide a seamless user experience across devices.
 
-Plotly is a powerful library for creating interactive plots, which are particularly useful for dashboards and web applications. It allows users to zoom, pan, and hover over data points for more detailed information, making it an excellent choice for exploratory data analysis (EDA) and presentation of findings.
-
-```python title="example2.py"
-import plotly.express as px
-import pandas as pd
-
-# Load a sample dataset
-data = px.data.tips()
-
-# Create an interactive scatter plot
-fig = px.scatter(data, x='total_bill', y='tip', color='size', hover_data=['day', 'time'], title='Tip vs Total Bill')
-fig.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which library is used for creating static, animated, and interactive visualizations in Python?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -116,21 +102,7 @@ fig.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Plotly is a powerful library for creating interactive plots, which are particularly useful for dashboards and web applications. It allows users to zoom, pan, and hover over data points for more detailed information, making it an excellent choice for exploratory data analysis (EDA) and presentation of findings.
-
-```python title="example2.py"
-import plotly.express as px
-import pandas as pd
-
-# Load a sample dataset
-data = px.data.tips()
-
-# Create an interactive scatter plot
-fig = px.scatter(data, x='total_bill', y='tip', color='size', hover_data=['day', 'time'], title='Tip vs Total Bill')
-fig.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What feature of Plotly allows users to explore data points in more detail?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

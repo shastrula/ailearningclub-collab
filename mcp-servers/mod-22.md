@@ -66,9 +66,7 @@ Troubleshooting involves identifying, diagnosing, and resolving issues that can 
 
 > **💡 Tip:** Always start by checking the most common issues first, such as connectivity problems or configuration errors, before diving into more complex diagnostics.
 
-Troubleshooting involves identifying, diagnosing, and resolving issues that can disrupt the normal operation of MCP Servers. It requires a systematic approach to ensure that problems are addressed promptly and effectively, minimizing downtime and maintaining system integrity.
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the first step you should take when troubleshooting a connectivity issue with an MCP Server?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

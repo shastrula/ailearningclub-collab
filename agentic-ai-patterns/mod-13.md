@@ -81,24 +81,7 @@ print(response)
 
 > **💡 Tip:** Ensure that the tools provided to AI agents are up-to-date and relevant to their tasks to maximize efficiency and effectiveness.
 
-Effective integration also involves the use of appropriate tools and continuous evaluation. AI agents should be equipped with the necessary tools to perform their tasks, and their performance should be regularly evaluated to ensure they meet the desired outcomes.
-
-```python title="example2.py"
-from autogen import Agent
-
-# Define an AI agent with specific tools
-agent = Agent(role='Customer Support', tools=['chatbot', 'knowledge_base'])
-
-# Define a task for the agent
-task = 'Respond to customer inquiries'
-
-# Execute the task
-response = agent.execute(task)
-
-print(response)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of planning and orchestration in integrating agentic AI with existing systems?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -122,24 +105,7 @@ print(response)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Effective integration also involves the use of appropriate tools and continuous evaluation. AI agents should be equipped with the necessary tools to perform their tasks, and their performance should be regularly evaluated to ensure they meet the desired outcomes.
-
-```python title="example2.py"
-from autogen import Agent
-
-# Define an AI agent with specific tools
-agent = Agent(role='Customer Support', tools=['chatbot', 'knowledge_base'])
-
-# Define a task for the agent
-task = 'Respond to customer inquiries'
-
-# Execute the task
-response = agent.execute(task)
-
-print(response)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Why is it important to regularly evaluate the performance of AI agents?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

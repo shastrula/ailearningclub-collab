@@ -85,28 +85,7 @@ for output in outputs:
 
 > **💡 Tip:** When using dynamic batching in vLLM, ensure that the batch size is appropriately configured to balance between GPU utilization and inference latency. Too large a batch size may increase latency, while too small a batch size may underutilize the GPU.
 
-vLLM offers several key features that make it stand out for high-throughput serving of LLMs. These include parallel decoding, which allows multiple tokens to be generated simultaneously, and dynamic batching, which groups multiple inference requests together to maximize GPU utilization. Additionally, vLLM supports mixed precision inference, reducing memory usage and speeding up computations.
-
-```python title="example2.py"
-import vllm
-
-# Initialize the vLLM engine with specific settings
-llm_engine = vllm.Engine(model='EleutherAI/gpt-neo-1.3B',
-                            tensor_parallel=2,
-                            dynamic_batching=True,
-                            mixed_precision='fp16')
-
-# Define multiple prompts
-prompts = ['Once upon a time,', 'In a galaxy far, far away,']
-
-# Generate text using the vLLM engine with dynamic batching
-outputs = llm_engine.generate(prompts, max_tokens=50)
-
-for output in outputs:
-    print(output)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary benefit of using vLLM for LLM inference?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -130,28 +109,7 @@ for output in outputs:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-vLLM offers several key features that make it stand out for high-throughput serving of LLMs. These include parallel decoding, which allows multiple tokens to be generated simultaneously, and dynamic batching, which groups multiple inference requests together to maximize GPU utilization. Additionally, vLLM supports mixed precision inference, reducing memory usage and speeding up computations.
-
-```python title="example2.py"
-import vllm
-
-# Initialize the vLLM engine with specific settings
-llm_engine = vllm.Engine(model='EleutherAI/gpt-neo-1.3B',
-                            tensor_parallel=2,
-                            dynamic_batching=True,
-                            mixed_precision='fp16')
-
-# Define multiple prompts
-prompts = ['Once upon a time,', 'In a galaxy far, far away,']
-
-# Generate text using the vLLM engine with dynamic batching
-outputs = llm_engine.generate(prompts, max_tokens=50)
-
-for output in outputs:
-    print(output)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which feature of vLLM allows multiple tokens to be generated simultaneously?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

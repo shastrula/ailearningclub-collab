@@ -102,45 +102,7 @@ print(f'Test set score: {best_mlp.score(X_test, y_test):.2f}')
 
 > **💡 Tip:** When tuning hyperparameters, start with a coarse grid to identify promising regions of the parameter space, then refine your search in those regions. This approach is more efficient than performing a fine-grained search over the entire parameter space from the start.
 
-Hyperparameter tuning is critical for achieving good performance with neural networks. Common hyperparameters include the number of hidden layers, the number of neurons in each layer, the activation function, the solver (optimization algorithm), and the learning rate. Cross-validation is a technique used to evaluate the model's performance on different subsets of the data, ensuring that the model generalizes well. Scikit-Learn provides tools like GridSearchCV to automate the process of hyperparameter tuning with cross-validation.
-
-```python title="example2.py"
-from sklearn.neural_network import MLPClassifier
-from sklearn.datasets import make_classification
-from sklearn.model_selection import GridSearchCV, train_test_split
-
-# Generate a random n-class classification problem
-X, y = make_classification(n_samples=100, n_features=20, n_informative=2, n_redundant=10, n_classes=2, random_state=1)
-
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
-
-# Define the parameter grid
-param_grid = {
-    'hidden_layer_sizes': [(50,), (100,), (50, 50)],
-    'activation': ['relu', 'tanh', 'logistic'],
-   'solver': ['adam','sgd']
-}
-
-# Create an MLPClassifier
-mlp = MLPClassifier(max_iter=300, random_state=1)
-
-# Set up the grid search
-grid_search = GridSearchCV(mlp, param_grid, cv=5, scoring='accuracy')
-
-# Perform the grid search
-grid_search.fit(X_train, y_train)
-
-# Print the best parameters and the best score
-print(f'Best parameters: {grid_search.best_params_}')
-print(f'Best score: {grid_search.best_score_:.2f}')
-
-# Evaluate the best model on the test set
-best_mlp = grid_search.best_estimator_
-print(f'Test set score: {best_mlp.score(X_test, y_test):.2f}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary function of the MLPClassifier in Scikit-Learn?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -164,45 +126,7 @@ print(f'Test set score: {best_mlp.score(X_test, y_test):.2f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Hyperparameter tuning is critical for achieving good performance with neural networks. Common hyperparameters include the number of hidden layers, the number of neurons in each layer, the activation function, the solver (optimization algorithm), and the learning rate. Cross-validation is a technique used to evaluate the model's performance on different subsets of the data, ensuring that the model generalizes well. Scikit-Learn provides tools like GridSearchCV to automate the process of hyperparameter tuning with cross-validation.
-
-```python title="example2.py"
-from sklearn.neural_network import MLPClassifier
-from sklearn.datasets import make_classification
-from sklearn.model_selection import GridSearchCV, train_test_split
-
-# Generate a random n-class classification problem
-X, y = make_classification(n_samples=100, n_features=20, n_informative=2, n_redundant=10, n_classes=2, random_state=1)
-
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
-
-# Define the parameter grid
-param_grid = {
-    'hidden_layer_sizes': [(50,), (100,), (50, 50)],
-    'activation': ['relu', 'tanh', 'logistic'],
-   'solver': ['adam','sgd']
-}
-
-# Create an MLPClassifier
-mlp = MLPClassifier(max_iter=300, random_state=1)
-
-# Set up the grid search
-grid_search = GridSearchCV(mlp, param_grid, cv=5, scoring='accuracy')
-
-# Perform the grid search
-grid_search.fit(X_train, y_train)
-
-# Print the best parameters and the best score
-print(f'Best parameters: {grid_search.best_params_}')
-print(f'Best score: {grid_search.best_score_:.2f}')
-
-# Evaluate the best model on the test set
-best_mlp = grid_search.best_estimator_
-print(f'Test set score: {best_mlp.score(X_test, y_test):.2f}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which Scikit-Learn tool is used for hyperparameter tuning with cross-validation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

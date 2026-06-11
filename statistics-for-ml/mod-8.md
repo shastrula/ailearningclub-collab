@@ -81,24 +81,7 @@ print('Corrected p-values:', corrected_p_values)
 
 > **💡 Tip:** When performing multiple hypothesis tests, always consider the trade-off between FWER and FDR. Use FWER methods like Bonferroni for stringent control of type I errors and FDR methods like Benjamini-Hochberg when you can tolerate some false positives to increase power.
 
-The False Discovery Rate (FDR) is the expected proportion of false positives among the total number of positive results. Unlike FWER, which controls the probability of making any false discoveries, FDR allows for some false positives but aims to keep their proportion low. The Benjamini-Hochberg procedure is a popular method for controlling the FDR.
-
-```python title="example2.py"
-import numpy as np
-from statsmodels.stats.multitest import multipletests
-
-# Generate some p-values
-p_values = np.random.rand(10)
-
-# Apply Benjamini-Hochberg correction
-reject, corrected_p_values, alpha_corrected, _ = multipletests(p_values, method='fdr_bh')
-
-print('Original p-values:', p_values)
-print('Reject null hypothesis:', reject)
-print('Corrected p-values:', corrected_p_values)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does FWER stand for?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -122,24 +105,7 @@ print('Corrected p-values:', corrected_p_values)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-The False Discovery Rate (FDR) is the expected proportion of false positives among the total number of positive results. Unlike FWER, which controls the probability of making any false discoveries, FDR allows for some false positives but aims to keep their proportion low. The Benjamini-Hochberg procedure is a popular method for controlling the FDR.
-
-```python title="example2.py"
-import numpy as np
-from statsmodels.stats.multitest import multipletests
-
-# Generate some p-values
-p_values = np.random.rand(10)
-
-# Apply Benjamini-Hochberg correction
-reject, corrected_p_values, alpha_corrected, _ = multipletests(p_values, method='fdr_bh')
-
-print('Original p-values:', p_values)
-print('Reject null hypothesis:', reject)
-print('Corrected p-values:', corrected_p_values)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which method is commonly used to control the FDR?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -79,29 +79,7 @@ plt.show()
 
 > **💡 Tip:** When dealing with noisy datasets, consider preprocessing steps such as dimensionality reduction (e.g., PCA) to mitigate the impact of noise before applying DBSCAN.
 
-DBSCAN is inherently robust to noise and can identify outliers as points that do not belong to any cluster. However, the algorithm's performance can degrade in the presence of significant noise. We'll explore techniques to preprocess data to reduce noise, as well as methods to post-process DBSCAN results to refine cluster assignments and handle outliers effectively.
-
-```python title="example2.py"
-from sklearn.datasets import make_blobs
-from sklearn.cluster import DBSCAN
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Generate sample data with noise
-X, _ = make_blobs(n_samples=300, centers=4, cluster_std=0.60, random_state=0)
-X = np.vstack((X, [[-10, -10], [-10, 10], [10, 10]]))  # Adding noise points
-
-# Apply DBSCAN
-dbscan = DBSCAN(eps=0.3, min_samples=5)
-labels = dbscan.fit_predict(X)
-
-# Plot results
-plt.scatter(X[:, 0], X[:, 1], c=labels, cmap='viridis')
-plt.title('DBSCAN Clustering with Noise')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary factor that influences the choice of eps in DBSCAN?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -125,29 +103,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-DBSCAN is inherently robust to noise and can identify outliers as points that do not belong to any cluster. However, the algorithm's performance can degrade in the presence of significant noise. We'll explore techniques to preprocess data to reduce noise, as well as methods to post-process DBSCAN results to refine cluster assignments and handle outliers effectively.
-
-```python title="example2.py"
-from sklearn.datasets import make_blobs
-from sklearn.cluster import DBSCAN
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Generate sample data with noise
-X, _ = make_blobs(n_samples=300, centers=4, cluster_std=0.60, random_state=0)
-X = np.vstack((X, [[-10, -10], [-10, 10], [10, 10]]))  # Adding noise points
-
-# Apply DBSCAN
-dbscan = DBSCAN(eps=0.3, min_samples=5)
-labels = dbscan.fit_predict(X)
-
-# Plot results
-plt.scatter(X[:, 0], X[:, 1], c=labels, cmap='viridis')
-plt.title('DBSCAN Clustering with Noise')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ How does DBSCAN handle outliers in the dataset?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

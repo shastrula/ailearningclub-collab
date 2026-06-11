@@ -87,34 +87,7 @@ print(f'Accuracy: {boost_clf.score(X_test, y_test):.2f}')
 
 > **💡 Tip:** When using ensemble methods, ensure that the base models are diverse to maximize the benefits of ensemble learning. Additionally, be cautious of overfitting, especially with boosting methods, by tuning hyperparameters appropriately.
 
-Boosting is another ensemble technique that builds models sequentially, where each new model attempts to correct the errors of the previous one. This method focuses on reducing bias and improving the overall model performance. Boosting is particularly effective for handling complex datasets and improving predictive accuracy.
-
-```python title="example2.py"
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-
-# Load dataset
-iris = load_iris()
-X, y = iris.data, iris.target
-
-# Split dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Create an AdaBoost ensemble
-boost_clf = AdaBoostClassifier(n_estimators=50, random_state=42)
-
-# Train the ensemble
-boost_clf.fit(X_train, y_train)
-
-# Make predictions
-y_pred = boost_clf.predict(X_test)
-
-# Print the accuracy
-print(f'Accuracy: {boost_clf.score(X_test, y_test):.2f}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of bagging?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -138,34 +111,7 @@ print(f'Accuracy: {boost_clf.score(X_test, y_test):.2f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Boosting is another ensemble technique that builds models sequentially, where each new model attempts to correct the errors of the previous one. This method focuses on reducing bias and improving the overall model performance. Boosting is particularly effective for handling complex datasets and improving predictive accuracy.
-
-```python title="example2.py"
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-
-# Load dataset
-iris = load_iris()
-X, y = iris.data, iris.target
-
-# Split dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Create an AdaBoost ensemble
-boost_clf = AdaBoostClassifier(n_estimators=50, random_state=42)
-
-# Train the ensemble
-boost_clf.fit(X_train, y_train)
-
-# Make predictions
-y_pred = boost_clf.predict(X_test)
-
-# Print the accuracy
-print(f'Accuracy: {boost_clf.score(X_test, y_test):.2f}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How does boosting differ from bagging?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

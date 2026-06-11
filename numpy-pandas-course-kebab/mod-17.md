@@ -76,23 +76,7 @@ plt.show()
 
 > **💡 Tip:** When using Seaborn's pairplot, ensure that the 'hue' parameter is set to a categorical variable to differentiate between groups in your data effectively.
 
-Seaborn allows for the creation of more advanced visualizations such as heatmaps, pair plots, and violin plots. These visualizations help in understanding complex relationships within the data. Seaborn's functions are designed to be flexible, allowing for customization to meet specific analytical needs.
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Load an example dataset
-iris = sns.load_dataset('iris')
-
-# Create a pair plot
-sns.pairplot(iris, hue='species')
-
-# Show the plot
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which Seaborn function is used to create a scatter plot?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -116,23 +100,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Seaborn allows for the creation of more advanced visualizations such as heatmaps, pair plots, and violin plots. These visualizations help in understanding complex relationships within the data. Seaborn's functions are designed to be flexible, allowing for customization to meet specific analytical needs.
-
-```python title="example2.py"
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Load an example dataset
-iris = sns.load_dataset('iris')
-
-# Create a pair plot
-sns.pairplot(iris, hue='species')
-
-# Show the plot
-plt.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What parameter in Seaborn's pairplot function is used to color code different categories?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

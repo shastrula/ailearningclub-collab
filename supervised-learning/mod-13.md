@@ -82,32 +82,7 @@ plt.show()
 
 > **💡 Tip:** Always validate the importance of features using domain knowledge to avoid over-reliance on model-derived importances, which can sometimes be misleading.
 
-Feature importance helps in understanding which features contribute most to the predictions of the Gradient Boosting model. This can aid in feature selection and model interpretation, leading to more efficient and transparent models.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.ensemble import GradientBoostingRegressor
-import matplotlib.pyplot as plt
-
-# Sample data
-X, y = np.array([[1, 2], [3, 4], [5, 6]]), np.array([10, 20, 30])
-
-# Define and fit the model
-model = GradientBoostingRegressor(n_estimators=100, max_depth=3)
-model.fit(X, y)
-
-# Get feature importances
-importances = model.feature_importances_
-
-# Plot feature importances
-plt.bar([f'Feature {i+1}' for i in range(X.shape[1])], importances)
-plt.xlabel('Features')
-plt.ylabel('Importance')
-plt.title('Feature Importances')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which hyperparameter is crucial for controlling the step size during the boosting process?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -131,32 +106,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Feature importance helps in understanding which features contribute most to the predictions of the Gradient Boosting model. This can aid in feature selection and model interpretation, leading to more efficient and transparent models.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.ensemble import GradientBoostingRegressor
-import matplotlib.pyplot as plt
-
-# Sample data
-X, y = np.array([[1, 2], [3, 4], [5, 6]]), np.array([10, 20, 30])
-
-# Define and fit the model
-model = GradientBoostingRegressor(n_estimators=100, max_depth=3)
-model.fit(X, y)
-
-# Get feature importances
-importances = model.feature_importances_
-
-# Plot feature importances
-plt.bar([f'Feature {i+1}' for i in range(X.shape[1])], importances)
-plt.xlabel('Features')
-plt.ylabel('Importance')
-plt.title('Feature Importances')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of calculating feature importance in Gradient Boosting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

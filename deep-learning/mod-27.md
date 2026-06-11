@@ -97,41 +97,6 @@ outputs = model.generate(
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```
 
-Running quantized models (INT8, INT4) reduces memory and speeds up computation. Combined with KV-cache quantization, this enables serving large models on consumer hardware.
-
-```python title="example3.py"
-import torch
-from transformers import AutoModelForCausalLM, BitsAndBytesConfig, AutoTokenizer
-
-# 4-bit quantization config
-bnb_config = BitsAndBytesConfig(
-    load_in_4bit=True,
-    bnb_4bit_quant_type="nf4",
-    bnb_4bit_use_double_quant=True,
-    bnb_4bit_compute_dtype=torch.bfloat16
-)
-
-# Load quantized model
-model = AutoModelForCausalLM.from_pretrained(
-    "EleutherAI/gpt-neo-125M",
-    quantization_config=bnb_config,
-    device_map="auto"
-)
-tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-neo-125M")
-
-# Inference with quantized model
-prompt = "What is machine learning?"
-inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-
-outputs = model.generate(
-    **inputs,
-    max_new_tokens=50,
-    use_cache=True
-)
-
-print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-```
-
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary benefit of KV-cache in inference?</p>
   <div class="space-y-2">
@@ -156,42 +121,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Running quantized models (INT8, INT4) reduces memory and speeds up computation. Combined with KV-cache quantization, this enables serving large models on consumer hardware.
-
-```python title="example3.py"
-import torch
-from transformers import AutoModelForCausalLM, BitsAndBytesConfig, AutoTokenizer
-
-# 4-bit quantization config
-bnb_config = BitsAndBytesConfig(
-    load_in_4bit=True,
-    bnb_4bit_quant_type="nf4",
-    bnb_4bit_use_double_quant=True,
-    bnb_4bit_compute_dtype=torch.bfloat16
-)
-
-# Load quantized model
-model = AutoModelForCausalLM.from_pretrained(
-    "EleutherAI/gpt-neo-125M",
-    quantization_config=bnb_config,
-    device_map="auto"
-)
-tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-neo-125M")
-
-# Inference with quantized model
-prompt = "What is machine learning?"
-inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-
-outputs = model.generate(
-    **inputs,
-    max_new_tokens=50,
-    use_cache=True
-)
-
-print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-```
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What memory complexity does Flash Attention reduce from?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

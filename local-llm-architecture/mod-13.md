@@ -86,29 +86,7 @@ print(output)
 
 > **💡 Tip:** Ensure that your edge device has sufficient memory and processing power to handle the model's requirements. Consider using model quantization and pruning to reduce the model size and improve inference speed.
 
-Deploying LLMs on edge devices requires careful consideration of hardware capabilities. Edge devices often have limited CPU, GPU, and memory resources compared to cloud servers. It is essential to choose models that are optimized for low-resource environments and to utilize hardware accelerators like TPUs or NPUs where available. Efficient model quantization and pruning techniques can also help reduce the resource footprint.
-
-```python title="example2.py"
-import torch
-
-# Load a quantized model
-model = torch.load('quantized_model.pth')
-model.eval()
-
-# Define a function to run inference
-def run_inference(input_text):
-    input_ids = torch.tensor([1, 2, 3])  # Placeholder for actual tokenization
-    with torch.no_grad():
-        output = model(input_ids)
-    return output
-
-# Example usage
-input_text = 'Hello, world!'
-output = run_inference(input_text)
-print(output)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary function of Ollama in deploying LLMs on edge devices?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -132,29 +110,7 @@ print(output)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Deploying LLMs on edge devices requires careful consideration of hardware capabilities. Edge devices often have limited CPU, GPU, and memory resources compared to cloud servers. It is essential to choose models that are optimized for low-resource environments and to utilize hardware accelerators like TPUs or NPUs where available. Efficient model quantization and pruning techniques can also help reduce the resource footprint.
-
-```python title="example2.py"
-import torch
-
-# Load a quantized model
-model = torch.load('quantized_model.pth')
-model.eval()
-
-# Define a function to run inference
-def run_inference(input_text):
-    input_ids = torch.tensor([1, 2, 3])  # Placeholder for actual tokenization
-    with torch.no_grad():
-        output = model(input_ids)
-    return output
-
-# Example usage
-input_text = 'Hello, world!'
-output = run_inference(input_text)
-print(output)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which technique is commonly used to reduce the resource footprint of LLMs on edge devices?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

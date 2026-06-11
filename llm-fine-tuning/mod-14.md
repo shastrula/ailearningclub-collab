@@ -79,22 +79,7 @@ print(f'BLEU Score: {bleuscore:.4f}')
 
 > **💡 Tip:** When evaluating fine-tuned LLMs, it's important to use a diverse set of metrics to get a comprehensive understanding of the model's performance. Relying solely on one metric can lead to an incomplete assessment.
 
-The BLEU (Bilingual Evaluation Understudy) score is a metric used to evaluate the quality of text which has been machine-translated from one natural language to another. It compares a candidate translation against one or more reference translations. Higher BLEU scores indicate better translation quality.
-
-```python title="example2.py"
-from nltk.translate.bleu_score import sentence_bleu
-
-# Define reference and candidate translations
-reference = [['the', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']]
-candidate = ['the', 'quick', 'brown', 'fox', 'jumped', 'over', 'the', 'lazy', 'dog']
-
-# Calculate BLEU score
-bleuscore = sentence_bleu(reference, candidate)
-
-print(f'BLEU Score: {bleuscore:.4f}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does a lower perplexity indicate in the context of language models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -118,22 +103,7 @@ print(f'BLEU Score: {bleuscore:.4f}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-The BLEU (Bilingual Evaluation Understudy) score is a metric used to evaluate the quality of text which has been machine-translated from one natural language to another. It compares a candidate translation against one or more reference translations. Higher BLEU scores indicate better translation quality.
-
-```python title="example2.py"
-from nltk.translate.bleu_score import sentence_bleu
-
-# Define reference and candidate translations
-reference = [['the', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']]
-candidate = ['the', 'quick', 'brown', 'fox', 'jumped', 'over', 'the', 'lazy', 'dog']
-
-# Calculate BLEU score
-bleuscore = sentence_bleu(reference, candidate)
-
-print(f'BLEU Score: {bleuscore:.4f}')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does a higher BLEU score signify in machine translation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

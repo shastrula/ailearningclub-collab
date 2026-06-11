@@ -83,26 +83,7 @@ print(tool_output)
 
 > **💡 Tip:** Ensure that the APIs or tools you integrate with your agentic AI solution are reliable and well-documented to avoid unexpected failures and enhance maintainability.
 
-Tool use in agentic AI refers to the agent's capability to leverage external tools and resources to enhance its performance. This involves identifying the appropriate tools for a given task, integrating them into the agent's workflow, and utilizing them effectively to achieve better outcomes. Tool use is essential for extending the agent's capabilities beyond its inherent limitations.
-
-```python title="example2.py"
-import requests
-
-# Define a function to use an external tool (API)
-def use_tool(api_url):
-    response = requests.get(api_url)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        return 'Error: Unable to fetch data'
-
-# Execute the tool use function
-api_url = 'https://api.example.com/data'
-tool_output = use_tool(api_url)
-print(tool_output)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of planning in agentic AI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -126,26 +107,7 @@ print(tool_output)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Tool use in agentic AI refers to the agent's capability to leverage external tools and resources to enhance its performance. This involves identifying the appropriate tools for a given task, integrating them into the agent's workflow, and utilizing them effectively to achieve better outcomes. Tool use is essential for extending the agent's capabilities beyond its inherent limitations.
-
-```python title="example2.py"
-import requests
-
-# Define a function to use an external tool (API)
-def use_tool(api_url):
-    response = requests.get(api_url)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        return 'Error: Unable to fetch data'
-
-# Execute the tool use function
-api_url = 'https://api.example.com/data'
-tool_output = use_tool(api_url)
-print(tool_output)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Why is tool use important in agentic AI?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

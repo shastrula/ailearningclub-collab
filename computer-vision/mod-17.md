@@ -97,40 +97,7 @@ for epoch in range(num_epochs):
 
 > **💡 Tip:** Ensure your dataset is well-annotated with accurate bounding boxes and segmentation masks to achieve good performance. Also, monitor the loss during training to avoid overfitting.
 
-Training a Mask R-CNN model involves preparing a dataset, defining the model architecture, setting up the training loop, and optimizing the model parameters. The dataset should contain images with corresponding bounding boxes and segmentation masks. The training loop includes forward and backward passes, updating the model weights based on the loss function.
-
-```python title="example2.py"
-import torch
-import torchvision
-from torchvision.models.detection.mask_rcnn import MaskRCNN_ResNet50_FPN_Weights
-
-# Load a pre-trained Mask R-CNN model
-model = torchvision.models.detection.maskrcnn_resnet50_fpn(weights=MaskRCNN_ResNet50_FPN_Weights.DEFAULT)
-model.train()
-
-# Define the optimizer
-optimizer = torch.optim.SGD(model.parameters(), lr=0.005, momentum=0.9, weight_decay=0.0005)
-
-# Define the loss function
-def criterion(inputs, targets):
-    loss = 0
-    for input, target in zip(inputs, targets):
-        loss += F.cross_entropy(input['class_logits'], target['labels'])
-        loss += F.cross_entropy(input['bbox_reg'], target['boxes'])
-        loss += F.cross_entropy(input['mask'], target['masks'])
-    return loss
-
-# Training loop
-for epoch in range(num_epochs):
-    for images, targets in data_loader:
-        optimizer.zero_grad()
-        outputs = model(images)
-        loss = criterion(outputs, targets)
-        loss.backward()
-        optimizer.step()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary function of Mask R-CNN?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -154,40 +121,7 @@ for epoch in range(num_epochs):
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Training a Mask R-CNN model involves preparing a dataset, defining the model architecture, setting up the training loop, and optimizing the model parameters. The dataset should contain images with corresponding bounding boxes and segmentation masks. The training loop includes forward and backward passes, updating the model weights based on the loss function.
-
-```python title="example2.py"
-import torch
-import torchvision
-from torchvision.models.detection.mask_rcnn import MaskRCNN_ResNet50_FPN_Weights
-
-# Load a pre-trained Mask R-CNN model
-model = torchvision.models.detection.maskrcnn_resnet50_fpn(weights=MaskRCNN_ResNet50_FPN_Weights.DEFAULT)
-model.train()
-
-# Define the optimizer
-optimizer = torch.optim.SGD(model.parameters(), lr=0.005, momentum=0.9, weight_decay=0.0005)
-
-# Define the loss function
-def criterion(inputs, targets):
-    loss = 0
-    for input, target in zip(inputs, targets):
-        loss += F.cross_entropy(input['class_logits'], target['labels'])
-        loss += F.cross_entropy(input['bbox_reg'], target['boxes'])
-        loss += F.cross_entropy(input['mask'], target['masks'])
-    return loss
-
-# Training loop
-for epoch in range(num_epochs):
-    for images, targets in data_loader:
-        optimizer.zero_grad()
-        outputs = model(images)
-        loss = criterion(outputs, targets)
-        loss.backward()
-        optimizer.step()
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which component of Mask R-CNN is responsible for predicting segmentation masks?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

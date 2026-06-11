@@ -81,24 +81,7 @@ print(X_pca)
 
 > **💡 Tip:** When applying PCA, ensure that your data is centered and scaled to achieve optimal results.
 
-PCA is a dimensionality reduction technique that transforms data into a set of orthogonal components that explain the maximum variance. It helps in reducing the number of features while preserving as much information as possible. PCA is widely used for visualization, noise reduction, and feature extraction.
-
-```python title="example2.py"
-from sklearn.decomposition import PCA
-import numpy as np
-
-# Generate sample data
-X = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
-
-# Apply PCA
-pca = PCA(n_components=1)
-X_pca = pca.fit_transform(X)
-
-# Print transformed data
-print(X_pca)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of K-Means clustering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -122,24 +105,7 @@ print(X_pca)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-PCA is a dimensionality reduction technique that transforms data into a set of orthogonal components that explain the maximum variance. It helps in reducing the number of features while preserving as much information as possible. PCA is widely used for visualization, noise reduction, and feature extraction.
-
-```python title="example2.py"
-from sklearn.decomposition import PCA
-import numpy as np
-
-# Generate sample data
-X = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
-
-# Apply PCA
-pca = PCA(n_components=1)
-X_pca = pca.fit_transform(X)
-
-# Print transformed data
-print(X_pca)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does PCA primarily aim to achieve?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

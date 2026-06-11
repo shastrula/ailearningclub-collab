@@ -90,34 +90,6 @@ Choose the right tool:
 
 ---
 
-Choose the right tool:
-
-```css
-/* Flexbox: one-dimensional, flexible */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Grid: two-dimensional, structured */
-.dashboard {
-  display: grid;
-  grid-template-columns: 200px 1fr 300px;
-  grid-template-rows: 60px 1fr 40px;
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .dashboard {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-}
-```
-
----
-
 <div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does the viewport meta tag do?</p>
   <div class="space-y-2">
@@ -144,35 +116,7 @@ Choose the right tool:
 
 ---
 
-Choose the right tool:
-
-```css
-/* Flexbox: one-dimensional, flexible */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Grid: two-dimensional, structured */
-.dashboard {
-  display: grid;
-  grid-template-columns: 200px 1fr 300px;
-  grid-template-rows: 60px 1fr 40px;
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .dashboard {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-}
-```
-
----
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the mobile-first approach?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -198,35 +142,7 @@ Choose the right tool:
 
 ---
 
-Choose the right tool:
-
-```css
-/* Flexbox: one-dimensional, flexible */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Grid: two-dimensional, structured */
-.dashboard {
-  display: grid;
-  grid-template-columns: 200px 1fr 300px;
-  grid-template-rows: 60px 1fr 40px;
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .dashboard {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-}
-```
-
----
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does justify-content do in flexbox?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -249,34 +165,6 @@ Choose the right tool:
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-
----
-
-Choose the right tool:
-
-```css
-/* Flexbox: one-dimensional, flexible */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Grid: two-dimensional, structured */
-.dashboard {
-  display: grid;
-  grid-template-columns: 200px 1fr 300px;
-  grid-template-rows: 60px 1fr 40px;
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .dashboard {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-}
-```
 
 ---
 
@@ -306,35 +194,7 @@ Choose the right tool:
 
 ---
 
-Choose the right tool:
-
-```css
-/* Flexbox: one-dimensional, flexible */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Grid: two-dimensional, structured */
-.dashboard {
-  display: grid;
-  grid-template-columns: 200px 1fr 300px;
-  grid-template-rows: 60px 1fr 40px;
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .dashboard {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-}
-```
-
----
-
-<div class="quiz" data-correct="0">
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ How do you make an image responsive?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

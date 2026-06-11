@@ -82,22 +82,7 @@ print(data_imputed)
 
 > **💡 Tip:** Always check for missing values before training your model and decide on an appropriate strategy to handle them.
 
-Missing data can skew the results of a machine learning model. Common techniques to handle missing data include removing rows with missing values or imputing missing values with statistical measures like mean, median, or mode.
-
-```python title="handle_missing_data.py"
-import pandas as pd
-from sklearn.impute import SimpleImputer
-
-# Load dataset
-data = pd.read_csv('data.csv')
-
-# Impute missing values with mean
-imputer = SimpleImputer(strategy='mean')
-data_imputed = pd.DataFrame(imputer.fit_transform(data), columns=data.columns)
-print(data_imputed)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which method is best for imputing missing values in a dataset with a mix of numerical and categorical data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

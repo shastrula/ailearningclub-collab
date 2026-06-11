@@ -77,21 +77,6 @@ model.fit(X, y)
 print(f'Optimized Model Parameters: {model.coef_}')
 ```
 
-Optimization techniques such as Gradient Descent and Stochastic Gradient Descent (SGD) are used to minimize the cost function and find the best model parameters. These techniques iteratively adjust the parameters to achieve the lowest possible error.
-
-```python title="optimization.py"
-from sklearn.linear_model import SGDClassifier
-from sklearn.datasets import load_iris
-
-iris = load_iris()
-X, y = iris.data, iris.target
-
-model = SGDClassifier(max_iter=1000)
-model.fit(X, y)
-
-print(f'Optimized Model Parameters: {model.coef_}')
-```
-
 <div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which metric is most suitable for imbalanced datasets?</p>
   <div class="space-y-2">

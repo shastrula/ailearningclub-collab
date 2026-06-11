@@ -82,25 +82,7 @@ print(generated_text[0]['generated_text'])
 
 > **💡 Tip:** When using zero-shot prompting, ensure that the prompts are clear and contextually rich to help the model generate more accurate and relevant responses.
 
-Zero-shot prompting is particularly beneficial in scenarios where labeled data is scarce or expensive to obtain. It allows models to be deployed in new domains or for new tasks without requiring additional training. This flexibility makes zero-shot prompting a powerful tool for rapid prototyping and deployment of NLP applications.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Load a pre-trained model for text generation
-generator = pipeline("text-generation")
-
-# Define a zero-shot prompt
-prompt = "Once upon a time, in a land far away, there lived a"
-
-# Generate text based on the prompt
-generated_text = generator(prompt, max_length=100)
-
-# Print the generated text
-print(generated_text[0]['generated_text'])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary advantage of zero-shot prompting?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,25 +106,7 @@ print(generated_text[0]['generated_text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Zero-shot prompting is particularly beneficial in scenarios where labeled data is scarce or expensive to obtain. It allows models to be deployed in new domains or for new tasks without requiring additional training. This flexibility makes zero-shot prompting a powerful tool for rapid prototyping and deployment of NLP applications.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Load a pre-trained model for text generation
-generator = pipeline("text-generation")
-
-# Define a zero-shot prompt
-prompt = "Once upon a time, in a land far away, there lived a"
-
-# Generate text based on the prompt
-generated_text = generator(prompt, max_length=100)
-
-# Print the generated text
-print(generated_text[0]['generated_text'])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ In which scenario is zero-shot prompting particularly useful?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

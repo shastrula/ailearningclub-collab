@@ -172,6 +172,137 @@ developer_satisfaction.labels(team='backend').set(8.5)
 
 ---
 
+<div class="quiz" data-correct="0">
+  <p class="font-semibold mb-3">❓ What is an Internal Developer Platform (IDP)?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7384629" value="0">
+      <span>A self-service platform that abstracts infrastructure complexity</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7384629" value="1">
+      <span>A version control system</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7384629" value="2">
+      <span>A monitoring tool</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7384629" value="3">
+      <span>A container registry</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz" data-correct="1">
+  <p class="font-semibold mb-3">❓ What is a service catalog in platform engineering?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374629" value="0">
+      <span>A list of deployed applications</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374629" value="1">
+      <span>A discoverable list of pre-configured infrastructure services</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374629" value="2">
+      <span>A database of customer information</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374629" value="3">
+      <span>A version control repository</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz" data-correct="0">
+  <p class="font-semibold mb-3">❓ What are golden paths?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9284736" value="0">
+      <span>Opinionated, pre-configured deployment patterns</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9284736" value="1">
+      <span>Network routing paths</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9284736" value="2">
+      <span>Database migration strategies</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q9284736" value="3">
+      <span>Security policies</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz" data-correct="2">
+  <p class="font-semibold mb-3">❓ What is Backstage?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7463829" value="0">
+      <span>A container orchestration platform</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7463829" value="1">
+      <span>A CI/CD tool</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7463829" value="2">
+      <span>An open-source developer portal</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q7463829" value="3">
+      <span>A monitoring system</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+
+<div class="quiz" data-correct="1">
+  <p class="font-semibold mb-3">❓ What is the primary goal of platform engineering?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374629" value="0">
+      <span>To replace developers with automation</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374629" value="1">
+      <span>To reduce cognitive load and enable developer self-service</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374629" value="2">
+      <span>To eliminate infrastructure teams</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8374629" value="3">
+      <span>To standardize all applications</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+## Service not starting
+- Check logs: `platform logs my-app`
+- Verify resources: `platform status my-app`
+- Check health: `platform health my-app`
+
+### High latency
+- Scale up: `platform scale my-app --replicas 5`
+- Check metrics: `platform metrics my-app`
+```
+
+---
+
 ### Service not starting
 - Check logs: `platform logs my-app`
 - Verify resources: `platform status my-app`

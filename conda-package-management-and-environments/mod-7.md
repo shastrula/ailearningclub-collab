@@ -73,16 +73,7 @@ subprocess.run(["conda", "remove", "numpy", "pandas"], check=True)
 
 > **💡 Tip:** Be cautious when removing packages, as this can break dependencies for other installed packages. Always ensure that removing a package won't disrupt your workflow.
 
-If you need to remove multiple packages, you can list them all in a single `conda remove` command. This is efficient for cleaning up environments by removing several unnecessary packages at once.
-
-```python title="example2.py"
-import subprocess
-
-# Remove 'numpy' and 'pandas' packages from the current environment
-subprocess.run(["conda", "remove", "numpy", "pandas"], check=True)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What command is used to remove a single package from a Conda environment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -106,16 +97,7 @@ subprocess.run(["conda", "remove", "numpy", "pandas"], check=True)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-If you need to remove multiple packages, you can list them all in a single `conda remove` command. This is efficient for cleaning up environments by removing several unnecessary packages at once.
-
-```python title="example2.py"
-import subprocess
-
-# Remove 'numpy' and 'pandas' packages from the current environment
-subprocess.run(["conda", "remove", "numpy", "pandas"], check=True)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ How can you remove multiple packages in a single command?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

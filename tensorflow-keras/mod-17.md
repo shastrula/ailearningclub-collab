@@ -93,36 +93,7 @@ autoencoder.fit(x_train, x_train, epochs=50, batch_size=128, shuffle=True, valid
 
 > **💡 Tip:** When training autoencoders, ensure that the loss function aligns with the data type. For binary data, use 'binary_crossentropy', and for continuous data, use'mean_squared_error'.
 
-Convolutional autoencoders use convolutional layers in both the encoder and decoder. They are particularly effective for image data, as convolutional layers can capture spatial hierarchies in the data. The encoder typically consists of convolutional and pooling layers, while the decoder uses convolutional and upsampling layers.
-
-```python title="example2.py"
-import tensorflow as tf
-from tensorflow.keras import layers
-
-input_img = tf.keras.Input(shape=(28, 28, 1))
-
-# Encoder
-x = layers.Conv2D(16, (3, 3), activation='relu', padding='same')(input_img)
-x = layers.MaxPooling2D((2, 2), padding='same')(x)
-encoded = layers.Conv2D(8, (3, 3), activation='relu', padding='same')(x)
-
-# Decoder
-x = layers.Conv2DTranspose(8, (3, 3), strides=2, activation='relu', padding='same')(encoded)
-x = layers.Conv2DTranspose(16, (3, 3), activation='relu', padding='same')(x)
-decoded = layers.Conv2DTranspose(1, (3, 3), activation='sigmoid', padding='same')(x)
-
-autoencoder = tf.keras.Model(input_img, decoded)
-autoencoder.compile(optimizer='adam', loss='binary_crossentropy')
-
-# Example usage
-import numpy as np
-x_train = np.random.random((1000, 28, 28, 1))
-x_test = np.random.random((100, 28, 28, 1))
-
-autoencoder.fit(x_train, x_train, epochs=50, batch_size=128, shuffle=True, validation_data=(x_test, x_test))
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of an autoencoder?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -146,36 +117,7 @@ autoencoder.fit(x_train, x_train, epochs=50, batch_size=128, shuffle=True, valid
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Convolutional autoencoders use convolutional layers in both the encoder and decoder. They are particularly effective for image data, as convolutional layers can capture spatial hierarchies in the data. The encoder typically consists of convolutional and pooling layers, while the decoder uses convolutional and upsampling layers.
-
-```python title="example2.py"
-import tensorflow as tf
-from tensorflow.keras import layers
-
-input_img = tf.keras.Input(shape=(28, 28, 1))
-
-# Encoder
-x = layers.Conv2D(16, (3, 3), activation='relu', padding='same')(input_img)
-x = layers.MaxPooling2D((2, 2), padding='same')(x)
-encoded = layers.Conv2D(8, (3, 3), activation='relu', padding='same')(x)
-
-# Decoder
-x = layers.Conv2DTranspose(8, (3, 3), strides=2, activation='relu', padding='same')(encoded)
-x = layers.Conv2DTranspose(16, (3, 3), activation='relu', padding='same')(x)
-decoded = layers.Conv2DTranspose(1, (3, 3), activation='sigmoid', padding='same')(x)
-
-autoencoder = tf.keras.Model(input_img, decoded)
-autoencoder.compile(optimizer='adam', loss='binary_crossentropy')
-
-# Example usage
-import numpy as np
-x_train = np.random.random((1000, 28, 28, 1))
-x_test = np.random.random((100, 28, 28, 1))
-
-autoencoder.fit(x_train, x_train, epochs=50, batch_size=128, shuffle=True, validation_data=(x_test, x_test))
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which type of autoencoder is best suited for image data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

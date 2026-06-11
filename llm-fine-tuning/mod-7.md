@@ -96,39 +96,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 > **💡 Tip:** Ensure that the rank (r) in the LoRA configuration is chosen appropriately for your specific task and model size to balance between efficiency and performance.
 
-LoRA (Low-Rank Adaptation) is a PEFT technique that inserts low-rank matrices into the model's layers during fine-tuning. This allows the model to adapt to new tasks with minimal parameter changes. LoRA significantly reduces the number of trainable parameters, making fine-tuning more efficient and less resource-intensive.
-
-```python title="example2.py"
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, LoraConfig, get_peft_model
-
-# Load pre-trained model and tokenizer
-model_name = 'facebook/opt-125m'
-model = AutoModelForCausalLM.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-# Define LoRA configuration
-lora_config = LoraConfig(
-    r=8,  # Rank of decomposition
-    lora_alpha=32,  # Scaling factor
-    lora_dropout=0.1,  # Dropout probability
-    bias="none",  # No bias correction
-    task_type="CAUSAL_LM"  # Task type
-)
-
-# Apply LoRA to the model
-model = get_peft_model(model, lora_config)
-
-# Define a simple input
-input_text = 'Hello, how are you?'
-inputs = tokenizer(input_text, return_tensors='pt')
-
-# Generate output
-output = model.generate(**inputs, max_length=50)
-print(tokenizer.decode(output[0], skip_special_tokens=True))
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary advantage of using PEFT techniques like LoRA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -152,39 +120,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-LoRA (Low-Rank Adaptation) is a PEFT technique that inserts low-rank matrices into the model's layers during fine-tuning. This allows the model to adapt to new tasks with minimal parameter changes. LoRA significantly reduces the number of trainable parameters, making fine-tuning more efficient and less resource-intensive.
-
-```python title="example2.py"
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, LoraConfig, get_peft_model
-
-# Load pre-trained model and tokenizer
-model_name = 'facebook/opt-125m'
-model = AutoModelForCausalLM.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-# Define LoRA configuration
-lora_config = LoraConfig(
-    r=8,  # Rank of decomposition
-    lora_alpha=32,  # Scaling factor
-    lora_dropout=0.1,  # Dropout probability
-    bias="none",  # No bias correction
-    task_type="CAUSAL_LM"  # Task type
-)
-
-# Apply LoRA to the model
-model = get_peft_model(model, lora_config)
-
-# Define a simple input
-input_text = 'Hello, how are you?'
-inputs = tokenizer(input_text, return_tensors='pt')
-
-# Generate output
-output = model.generate(**inputs, max_length=50)
-print(tokenizer.decode(output[0], skip_special_tokens=True))
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which parameter in the LoRA configuration determines the rank of the decomposition?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

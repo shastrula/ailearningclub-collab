@@ -81,19 +81,7 @@ print(filtered_df)
 
 > **💡 Tip:** When filtering DataFrames, ensure that the condition is correctly specified to avoid common errors like settingWithCopyWarning. Use .loc or.iloc for more complex selections.
 
-Pandas DataFrames provide powerful tools for filtering data based on conditions. You can filter rows that meet specific criteria, which is essential for tasks like data cleaning and preparing data for analysis. This allows you to focus on relevant subsets of your data, making your analysis more efficient and targeted.
-
-```python title="example2.py"
-import pandas as pd
-
-# Create a sample DataFrame
-data = {'name': ['Alice', 'Bob', 'Charlie', 'David'],
-         'age': [24, 19, 22, 32],
-         'city': ['New York', 'Los Angeles', 'Chicago', 'Houston']}
-df = pd.DataFrame(data)
-
-# Filter rows where age is greater than 20
-filtered_df = df[df['age'] >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which method is used to select an element at a specific row and column in a NumPy array?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -117,19 +105,7 @@ filtered_df = df[df['age'] >
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Pandas DataFrames provide powerful tools for filtering data based on conditions. You can filter rows that meet specific criteria, which is essential for tasks like data cleaning and preparing data for analysis. This allows you to focus on relevant subsets of your data, making your analysis more efficient and targeted.
-
-```python title="example2.py"
-import pandas as pd
-
-# Create a sample DataFrame
-data = {'name': ['Alice', 'Bob', 'Charlie', 'David'],
-         'age': [24, 19, 22, 32],
-         'city': ['New York', 'Los Angeles', 'Chicago', 'Houston']}
-df = pd.DataFrame(data)
-
-# Filter rows where age is greater than 20
-filtered_df = df[df['age'] >
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How do you filter rows in a Pandas DataFrame where a column value meets a certain condition?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

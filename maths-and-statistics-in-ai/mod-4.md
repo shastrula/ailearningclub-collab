@@ -85,32 +85,7 @@ Probability of getting at least one Heads: 0.75
 
 > **💡 Tip:** When calculating probabilities, ensure that the sample space is correctly defined and that all outcomes are equally likely. A common pitfall is to overlook some outcomes or to assume unequal probabilities without justification.
 
-The probability of an event is a measure of the likelihood that the event will occur. It is calculated as the number of favorable outcomes divided by the total number of possible outcomes. For example, the probability of getting Heads in a single coin flip is 0.5, since there is one favorable outcome (Heads) out of two possible outcomes (Heads or Tails).
-
-```python title="example2.py"
-import itertools
-
-# Define the sample space for a single coin flip
-coin_flip = ['Heads', 'Tails']
-
-# Define the sample space for two coin flips
-sample_space = list(itertools.product(coin_flip, repeat=2))
-
-# Count the number of favorable outcomes for getting at least one Heads
-favorable_outcomes = [outcome for outcome in sample_space if 'Heads' in outcome]
-
-# Calculate the probability
-probability = len(favorable_outcomes) / len(sample_space)
-
-# Print the probability
-print('Probability of getting at least one Heads:', probability)
-```
-
-```
-Probability of getting at least one Heads: 0.75
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the sample space for a single coin flip?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -134,32 +109,7 @@ Probability of getting at least one Heads: 0.75
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-The probability of an event is a measure of the likelihood that the event will occur. It is calculated as the number of favorable outcomes divided by the total number of possible outcomes. For example, the probability of getting Heads in a single coin flip is 0.5, since there is one favorable outcome (Heads) out of two possible outcomes (Heads or Tails).
-
-```python title="example2.py"
-import itertools
-
-# Define the sample space for a single coin flip
-coin_flip = ['Heads', 'Tails']
-
-# Define the sample space for two coin flips
-sample_space = list(itertools.product(coin_flip, repeat=2))
-
-# Count the number of favorable outcomes for getting at least one Heads
-favorable_outcomes = [outcome for outcome in sample_space if 'Heads' in outcome]
-
-# Calculate the probability
-probability = len(favorable_outcomes) / len(sample_space)
-
-# Print the probability
-print('Probability of getting at least one Heads:', probability)
-```
-
-```
-Probability of getting at least one Heads: 0.75
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the probability of getting at least one Heads in two coin flips?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

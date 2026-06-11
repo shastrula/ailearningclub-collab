@@ -73,23 +73,7 @@ print(result[0]['generated_text'])
 
 > **💡 Tip:** When using CoT prompting, ensure the intermediate steps are clear and logically lead to the final answer to improve the model's reasoning process.
 
-Chain-of-Thought prompting encourages the model to generate intermediate reasoning steps before arriving at a final answer, enhancing its problem-solving capabilities. ReAct (Reason + Act) prompting combines reasoning with actionable steps, allowing the model to perform tasks that require both understanding and execution.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Initialize a text generation pipeline
-generator = pipeline('text-generation')
-
-# Example input using CoT prompting
-prompt = 'To solve the problem 23 + 45, think step by step: 23 + 45 =?'
-
-# Generate text with CoT
-result = generator(prompt, max_length=50)
-print(result[0]['generated_text'])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary advantage of zero-shot learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -113,23 +97,7 @@ print(result[0]['generated_text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Chain-of-Thought prompting encourages the model to generate intermediate reasoning steps before arriving at a final answer, enhancing its problem-solving capabilities. ReAct (Reason + Act) prompting combines reasoning with actionable steps, allowing the model to perform tasks that require both understanding and execution.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Initialize a text generation pipeline
-generator = pipeline('text-generation')
-
-# Example input using CoT prompting
-prompt = 'To solve the problem 23 + 45, think step by step: 23 + 45 =?'
-
-# Generate text with CoT
-result = generator(prompt, max_length=50)
-print(result[0]['generated_text'])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does CoT prompting aim to enhance in AI models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

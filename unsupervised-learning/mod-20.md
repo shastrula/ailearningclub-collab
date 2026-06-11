@@ -83,26 +83,7 @@ print(labels)
 
 > **💡 Tip:** When using DBSCAN, carefully choose the `eps` and `min_samples` parameters to avoid over-clustering or under-clustering.
 
-DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is a density-based clustering algorithm. It groups together points that are packed closely together, marking as outliers points that lie alone in low-density regions. DBSCAN is useful in recommender systems for identifying dense regions of user preferences.
-
-```python title="example2.py"
-from sklearn.cluster import DBSCAN
-import numpy as np
-
-# Sample data
-data = np.array([[1, 2], [1, 4], [1, 0],
-                 [4, 2], [4, 4], [4, 0],
-                 [8, 2], [8, 4], [8, 0]])
-
-# Apply DBSCAN
-dbscan = DBSCAN(eps=3, min_samples=2).fit(data)
-
-# Get cluster labels
-labels = dbscan.labels_
-print(labels)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of K-Means clustering in recommender systems?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -126,26 +107,7 @@ print(labels)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is a density-based clustering algorithm. It groups together points that are packed closely together, marking as outliers points that lie alone in low-density regions. DBSCAN is useful in recommender systems for identifying dense regions of user preferences.
-
-```python title="example2.py"
-from sklearn.cluster import DBSCAN
-import numpy as np
-
-# Sample data
-data = np.array([[1, 2], [1, 4], [1, 0],
-                 [4, 2], [4, 4], [4, 0],
-                 [8, 2], [8, 4], [8, 0]])
-
-# Apply DBSCAN
-dbscan = DBSCAN(eps=3, min_samples=2).fit(data)
-
-# Get cluster labels
-labels = dbscan.labels_
-print(labels)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which parameter in DBSCAN controls the maximum distance between two samples for one to be considered as in the neighborhood of the other?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

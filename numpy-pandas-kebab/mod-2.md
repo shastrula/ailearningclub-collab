@@ -84,12 +84,7 @@ grouped_data = df.groupby('Region').agg({'Sales': ['mean', 'count']})
 
 > **💡 Tip:** Remember to install the pandas library using pip: `pip install pandas`
 
-Pandas is a powerful data manipulation library in Python that provides flexible data structures for efficient handling of tabular data. It's particularly useful for data cleaning, transformation, and analysis.
-
-```python title="example.py"
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of `pd.read_csv('data.csv')` in the code example?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -113,12 +108,7 @@ Pandas is a powerful data manipulation library in Python that provides flexible 
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Pandas is a powerful data manipulation library in Python that provides flexible data structures for efficient handling of tabular data. It's particularly useful for data cleaning, transformation, and analysis.
-
-```python title="example.py"
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does `df.groupby('Region').agg({'Sales': ['mean', 'count']})` do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

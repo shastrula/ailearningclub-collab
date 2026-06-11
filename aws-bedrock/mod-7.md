@@ -284,8 +284,6 @@ allowed_topics = [
 
 ---
 
----
-
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of Bedrock Guardrails?</p>
   <div class="space-y-2">
@@ -310,9 +308,7 @@ allowed_topics = [
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does the ANONYMIZE action do for PII?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -336,9 +332,7 @@ allowed_topics = [
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
----
-
-<div class="quiz" data-correct="1">
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What does a DENY topic policy do?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -361,8 +355,6 @@ allowed_topics = [
   <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
-
----
 
 <div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the difference between HIGH and LOW filter strength?</p>

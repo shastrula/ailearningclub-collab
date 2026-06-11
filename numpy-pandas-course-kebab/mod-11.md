@@ -85,28 +85,7 @@ print(rolling_mean.head())
 
 > **💡 Tip:** When resampling time series data, be mindful of the method used for aggregation (e.g., mean, sum, max) as it can significantly affect the resulting data. Additionally, when applying rolling window operations, choose an appropriate window size based on the characteristics of your data to avoid oversmoothing or undersmoothing.
 
-Resampling is a common operation in time series analysis that involves changing the frequency of the time series data. This can be useful for aggregating data over different time periods or interpolating missing values. Rolling window operations, on the other hand, involve applying a function to a moving window of data points. This can be used for calculating moving averages, detecting trends, or smoothing out noise in the data.
-
-```python title="example2.py"
-import pandas as pd
-import numpy as np
-
-# Create a sample time series data
-dates = pd.date_range('20230101', periods=100, freq='D')
-tseries_data = pd.Series(np.random.randn(100), index=dates)
-
-# Resample to weekly frequency and calculate the mean
-weekly_data = tseries_data.resample('W').mean()
-
-# Apply a rolling window operation to calculate the moving average
-rolling_mean = tseries_data.rolling(window=7).mean()
-
-# Display the resampled data and rolling mean
-print(weekly_data.head())
-print(rolling_mean.head())
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary characteristic of time series data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -130,28 +109,7 @@ print(rolling_mean.head())
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Resampling is a common operation in time series analysis that involves changing the frequency of the time series data. This can be useful for aggregating data over different time periods or interpolating missing values. Rolling window operations, on the other hand, involve applying a function to a moving window of data points. This can be used for calculating moving averages, detecting trends, or smoothing out noise in the data.
-
-```python title="example2.py"
-import pandas as pd
-import numpy as np
-
-# Create a sample time series data
-dates = pd.date_range('20230101', periods=100, freq='D')
-tseries_data = pd.Series(np.random.randn(100), index=dates)
-
-# Resample to weekly frequency and calculate the mean
-weekly_data = tseries_data.resample('W').mean()
-
-# Apply a rolling window operation to calculate the moving average
-rolling_mean = tseries_data.rolling(window=7).mean()
-
-# Display the resampled data and rolling mean
-print(weekly_data.head())
-print(rolling_mean.head())
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Which Pandas method is used to change the frequency of time series data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

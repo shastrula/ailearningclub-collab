@@ -82,26 +82,6 @@ print(f"RMSE: {rmse:.3f}")
 print(f"R²: {r2:.3f}")
 ```
 
-For regression, common metrics are:
-- **MAE** (Mean Absolute Error) — Average absolute difference
-- **RMSE** (Root Mean Squared Error) — Penalizes large errors more
-- **R²** (Coefficient of Determination) — Proportion of variance explained (0-1)
-
-```python title="example3.py"
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-
-# Predictions
-y_pred_reg = model.predict(X_test)
-
-mae = mean_absolute_error(y_test, y_pred_reg)
-rmse = np.sqrt(mean_squared_error(y_test, y_pred_reg))
-r2 = r2_score(y_test, y_pred_reg)
-
-print(f"MAE: {mae:.3f}")
-print(f"RMSE: {rmse:.3f}")
-print(f"R²: {r2:.3f}")
-```
-
 <div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ When should you use Recall over Precision?</p>
   <div class="space-y-2">
@@ -126,27 +106,7 @@ print(f"R²: {r2:.3f}")
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-For regression, common metrics are:
-- **MAE** (Mean Absolute Error) — Average absolute difference
-- **RMSE** (Root Mean Squared Error) — Penalizes large errors more
-- **R²** (Coefficient of Determination) — Proportion of variance explained (0-1)
-
-```python title="example3.py"
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-
-# Predictions
-y_pred_reg = model.predict(X_test)
-
-mae = mean_absolute_error(y_test, y_pred_reg)
-rmse = np.sqrt(mean_squared_error(y_test, y_pred_reg))
-r2 = r2_score(y_test, y_pred_reg)
-
-print(f"MAE: {mae:.3f}")
-print(f"RMSE: {rmse:.3f}")
-print(f"R²: {r2:.3f}")
-```
-
-<div class="quiz" data-correct="2">
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does ROC-AUC = 0.5 indicate?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

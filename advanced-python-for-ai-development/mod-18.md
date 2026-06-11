@@ -82,25 +82,7 @@ print(stdout.decode('utf-8'))
 
 > **💡 Tip:** Ensure that your CI/CD pipeline includes thorough testing steps to catch any issues early in the deployment process.
 
-CI/CD pipelines automate the process of testing and deploying code changes. By integrating CI/CD into the development workflow, teams can rapidly and reliably deploy AI models, ensuring that updates are consistently delivered to production.
-
-**example2.py**
-
-```
-import subprocess
-
-# Define the command to run the CI/CD pipeline
-ci_command = 'bash <(curl -s https://example.com/cicd-pipeline)'
-
-# Execute the CI/CD pipeline
-process = subprocess.Popen(ci_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-stdout, stderr = process.communicate()
-
-# Print the output of the CI/CD pipeline
-print(stdout.decode('utf-8'))
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is the primary benefit of using Docker for deploying AI models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,25 +106,7 @@ print(stdout.decode('utf-8'))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-CI/CD pipelines automate the process of testing and deploying code changes. By integrating CI/CD into the development workflow, teams can rapidly and reliably deploy AI models, ensuring that updates are consistently delivered to production.
-
-**example2.py**
-
-```
-import subprocess
-
-# Define the command to run the CI/CD pipeline
-ci_command = 'bash <(curl -s https://example.com/cicd-pipeline)'
-
-# Execute the CI/CD pipeline
-process = subprocess.Popen(ci_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-stdout, stderr = process.communicate()
-
-# Print the output of the CI/CD pipeline
-print(stdout.decode('utf-8'))
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What is a key feature of CI/CD pipelines in AI development?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

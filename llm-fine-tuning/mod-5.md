@@ -114,57 +114,7 @@ trainer.train()
 
 > **💡 Tip:** Ensure that the quantization scale and zero point are correctly set to avoid significant loss of precision in the model's weights.
 
-To implement QLoRA, you need to integrate quantization and low-rank adaptation into your fine-tuning pipeline. This involves modifying the model's parameters to include low-rank matrices and applying quantization to these matrices. The process requires careful handling of the model's weights to ensure that the fine-tuning is both effective and efficient. Practical implementation often involves using libraries like Hugging Face's Transformers, which provide tools to facilitate these modifications.
-
-```python title="example2.py"
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments
-
-# Load pre-trained model and tokenizer
-model_name = 'facebook/opt-1.3b'
-model = AutoModelForCausalLM.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-# Apply QLoRA
-for name, param in model.named_parameters():
-    if 'lora' in name:
-        param.data = torch.quantize_per_tensor(param.data, scale=1.0, zero_point=0, dtype=torch.quint8)
-
-# Define training arguments
-training_args = TrainingArguments(
-    output_dir='./results',
-    per_device_train_batch_size=4,
-    per_device_eval_batch_size=4,
-    num_train_epochs=3,
-    logging_dir='./logs'
-)
-
-# Define a simple dataset
-class SimpleDataset(torch.utils.data.Dataset):
-    def __init__(self, tokenizer, texts):
-        self.tokenizer = tokenizer
-        self.texts = texts
-    def __len__(self):
-        return len(self.texts)
-    def __getitem__(self, idx):
-        return self.tokenizer(self.texts[idx], padding='max_length', truncation=True, max_length=512, return_tensors='pt')
-
-texts = ['Translate English to French: How are you?'] * 100
-dataset = SimpleDataset(tokenizer, texts)
-
-# Initialize Trainer
-trainer = Trainer(
-    model=model,
-    args=training_args,
-    train_dataset=dataset,
-    eval_dataset=dataset
-)
-
-# Train the model
-trainer.train()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary benefit of using QLoRA for fine-tuning LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -188,57 +138,7 @@ trainer.train()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-To implement QLoRA, you need to integrate quantization and low-rank adaptation into your fine-tuning pipeline. This involves modifying the model's parameters to include low-rank matrices and applying quantization to these matrices. The process requires careful handling of the model's weights to ensure that the fine-tuning is both effective and efficient. Practical implementation often involves using libraries like Hugging Face's Transformers, which provide tools to facilitate these modifications.
-
-```python title="example2.py"
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments
-
-# Load pre-trained model and tokenizer
-model_name = 'facebook/opt-1.3b'
-model = AutoModelForCausalLM.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-# Apply QLoRA
-for name, param in model.named_parameters():
-    if 'lora' in name:
-        param.data = torch.quantize_per_tensor(param.data, scale=1.0, zero_point=0, dtype=torch.quint8)
-
-# Define training arguments
-training_args = TrainingArguments(
-    output_dir='./results',
-    per_device_train_batch_size=4,
-    per_device_eval_batch_size=4,
-    num_train_epochs=3,
-    logging_dir='./logs'
-)
-
-# Define a simple dataset
-class SimpleDataset(torch.utils.data.Dataset):
-    def __init__(self, tokenizer, texts):
-        self.tokenizer = tokenizer
-        self.texts = texts
-    def __len__(self):
-        return len(self.texts)
-    def __getitem__(self, idx):
-        return self.tokenizer(self.texts[idx], padding='max_length', truncation=True, max_length=512, return_tensors='pt')
-
-texts = ['Translate English to French: How are you?'] * 100
-dataset = SimpleDataset(tokenizer, texts)
-
-# Initialize Trainer
-trainer = Trainer(
-    model=model,
-    args=training_args,
-    train_dataset=dataset,
-    eval_dataset=dataset
-)
-
-# Train the model
-trainer.train()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which component of QLoRA involves introducing small, trainable matrices?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -88,31 +88,7 @@ with open('model.engine', 'wb') as f:
 
 > **💡 Tip:** When using TensorRT, ensure that your model is compatible with the TensorRT operations and that you have sufficient GPU memory to accommodate the optimized engine.
 
-TensorRT is a high-performance deep learning inference optimizer and runtime. It provides significant speedups by optimizing the model graph and utilizing tensor cores on NVIDIA GPUs. This makes it ideal for deploying deep learning models in production environments where low latency is critical.
-
-```python title="example2.py"
-import tensorrt as trt
-
-# Initialize the TensorRT engine
-TRT_LOGGER = trt.Logger(trt.Logger.INFO)
-builder = trt.Builder(TRT_LOGGER)
-network = builder.create_network(1 << int(trt.NetworkDefinitionCreationFlag.EXPLICIT_BATCH))
-profile = builder.create_optimization_profile()
-config = builder.create_builder_config()
-config.set_memory_pool_limits(trt.MemoryPoolType.WORKSPACE, 4 << 30)
-
-# Load and optimize the model
-with trt.Builder(TRT_LOGGER) as builder, builder.create_network() as network, trt.OnnxParser(network, TRT_LOGGER) as parser:
-    with open('model.onnx', 'rb') as model:
-        parser.parse(model.read())
-    engine = builder.build_engine(network, config)
-
-# Save the engine
-with open('model.engine', 'wb') as f:
-    f.write(engine.serialize())
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary benefit of using vLLM for inference?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -136,31 +112,7 @@ with open('model.engine', 'wb') as f:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-TensorRT is a high-performance deep learning inference optimizer and runtime. It provides significant speedups by optimizing the model graph and utilizing tensor cores on NVIDIA GPUs. This makes it ideal for deploying deep learning models in production environments where low latency is critical.
-
-```python title="example2.py"
-import tensorrt as trt
-
-# Initialize the TensorRT engine
-TRT_LOGGER = trt.Logger(trt.Logger.INFO)
-builder = trt.Builder(TRT_LOGGER)
-network = builder.create_network(1 << int(trt.NetworkDefinitionCreationFlag.EXPLICIT_BATCH))
-profile = builder.create_optimization_profile()
-config = builder.create_builder_config()
-config.set_memory_pool_limits(trt.MemoryPoolType.WORKSPACE, 4 << 30)
-
-# Load and optimize the model
-with trt.Builder(TRT_LOGGER) as builder, builder.create_network() as network, trt.OnnxParser(network, TRT_LOGGER) as parser:
-    with open('model.onnx', 'rb') as model:
-        parser.parse(model.read())
-    engine = builder.build_engine(network, config)
-
-# Save the engine
-with open('model.engine', 'wb') as f:
-    f.write(engine.serialize())
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the main advantage of using TensorRT for inference?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

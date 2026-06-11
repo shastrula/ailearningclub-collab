@@ -94,37 +94,7 @@ print("Accuracy:", accuracy_score(y_test, y_pred))
 
 > **💡 Tip:** When implementing Decision Trees, be cautious of overfitting. Use techniques like pruning (setting max_depth) and cross-validation to ensure your model generalizes well to unseen data.
 
-Pruning is a technique in machine learning and search algorithms that reduces the size of decision trees by removing sections of the tree that provide little power to classify instances. This helps to avoid overfitting and improve the model’s generalization ability.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import accuracy_score
-
-# Load dataset
-iris = load_iris()
-X = iris.data
-y = iris.target
-
-# Split dataset into training set and test set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)  # 70% training and 30% test
-
-# Create Decision Tree classifier object with max_depth to limit tree growth
-clf = DecisionTreeClassifier(max_depth=3)
-
-# Train Decision Tree Classifier
-clf = clf.fit(X_train,y_train)
-
-# Predict the response for test dataset
-y_pred = clf.predict(X_test)
-
-# Model Accuracy
-print("Accuracy:", accuracy_score(y_test, y_pred))
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of a Decision Tree in machine learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -148,37 +118,7 @@ print("Accuracy:", accuracy_score(y_test, y_pred))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Pruning is a technique in machine learning and search algorithms that reduces the size of decision trees by removing sections of the tree that provide little power to classify instances. This helps to avoid overfitting and improve the model’s generalization ability.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import accuracy_score
-
-# Load dataset
-iris = load_iris()
-X = iris.data
-y = iris.target
-
-# Split dataset into training set and test set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)  # 70% training and 30% test
-
-# Create Decision Tree classifier object with max_depth to limit tree growth
-clf = DecisionTreeClassifier(max_depth=3)
-
-# Train Decision Tree Classifier
-clf = clf.fit(X_train,y_train)
-
-# Predict the response for test dataset
-y_pred = clf.predict(X_test)
-
-# Model Accuracy
-print("Accuracy:", accuracy_score(y_test, y_pred))
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which parameter can be adjusted to prevent overfitting in a Decision Tree?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

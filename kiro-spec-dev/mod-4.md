@@ -72,16 +72,6 @@ Because tasks.md tracks completion with checkboxes, you can stop and resume at a
 # and starts from task 4.
 ```
 
-Because tasks.md tracks completion with checkboxes, you can stop and resume at any time — even in a new session. Kiro reads the file, sees which tasks are done, and picks up where you left off. This is one of the biggest advantages over freeform prompting.
-
-```bash title="resuming a spec"
-# In a new Kiro session:
-"Continue implementing the tasks in .kiro/specs/user-auth/tasks.md"
-
-# Kiro reads tasks.md, sees tasks 1-3 are checked off,
-# and starts from task 4.
-```
-
 <div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ How does Kiro know where to resume work after you close and reopen a session?</p>
   <div class="space-y-2">

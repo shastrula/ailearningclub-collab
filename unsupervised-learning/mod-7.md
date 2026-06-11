@@ -74,24 +74,7 @@ plt.show()
 
 > **💡 Tip:** When interpreting a dendrogram, look for the longest vertical line that can be drawn without crossing any horizontal lines. This line indicates the optimal number of clusters.
 
-A dendrogram is a tree-like diagram that records the sequences of merges or splits. It is a useful tool for interpreting the results of hierarchical clustering, allowing us to visualize the structure of the data and the relationships between clusters.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-from scipy.cluster.hierarchy import dendrogram, linkage
-
-# Generate linkage matrix
-linked = linkage(X, 'ward')
-
-# Plot dendrogram
-plt.figure(figsize=(10, 7))
-dendrogram(linked,
-            orientation='top',
-            distances=True)
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary approach of Agglomerative Clustering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -115,24 +98,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-A dendrogram is a tree-like diagram that records the sequences of merges or splits. It is a useful tool for interpreting the results of hierarchical clustering, allowing us to visualize the structure of the data and the relationships between clusters.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-from scipy.cluster.hierarchy import dendrogram, linkage
-
-# Generate linkage matrix
-linked = linkage(X, 'ward')
-
-# Plot dendrogram
-plt.figure(figsize=(10, 7))
-dendrogram(linked,
-            orientation='top',
-            distances=True)
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does the longest vertical line in a dendrogram indicate?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -82,25 +82,7 @@ print(df_filled)
 
 > **💡 Tip:** When handling missing data, consider the nature of your dataset and the implications of each method. Removing data might lead to loss of information, while filling might introduce bias.
 
-Missing data is a common issue in real-world datasets. Pandas offers several methods to handle missing values, such as `dropna` to remove them and `fillna` to replace them with specified values or methods like forward fill or backward fill.
-
-```python title="example2.py"
-import pandas as pd
-import numpy as np
-
-# Create a DataFrame with missing values
-df = pd.DataFrame({'A': [1, 2, np.nan], 'B': [4, np.nan, 6], 'C': [7, 8, 9]})
-
-# Remove rows with any missing values
-df_cleaned = df.dropna()
-print(df_cleaned)
-
-# Fill missing values with a specified value
-df_filled = df.fillna(0)
-print(df_filled)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which function is used to get a concise summary of a DataFrame in Pandas?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,25 +106,7 @@ print(df_filled)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Missing data is a common issue in real-world datasets. Pandas offers several methods to handle missing values, such as `dropna` to remove them and `fillna` to replace them with specified values or methods like forward fill or backward fill.
-
-```python title="example2.py"
-import pandas as pd
-import numpy as np
-
-# Create a DataFrame with missing values
-df = pd.DataFrame({'A': [1, 2, np.nan], 'B': [4, np.nan, 6], 'C': [7, 8, 9]})
-
-# Remove rows with any missing values
-df_cleaned = df.dropna()
-print(df_cleaned)
-
-# Fill missing values with a specified value
-df_filled = df.fillna(0)
-print(df_filled)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What method can be used to fill missing values in a DataFrame with a specified value?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

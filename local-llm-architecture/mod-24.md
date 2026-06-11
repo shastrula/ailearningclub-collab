@@ -81,21 +81,7 @@ for text in dataset:
 
 > **💡 Tip:** Ensure that your hardware meets the minimum requirements for running LLMs to avoid performance issues. Regularly update your models and dependencies to benefit from the latest improvements and security patches.
 
-After completing this course, the next steps involve selecting the appropriate hardware based on your specific needs, configuring your environment for private AI deployment, and planning for enterprise-level rollout. This includes setting up necessary infrastructure, conducting thorough testing, and ensuring compliance with organizational policies and data regulations.
-
-```python title="example2.py"
-import llama_cpp
-
-# Initialize llama.cpp with a specific model
-model = llama_cpp.initialize('path/to/model')
-
-# Load a dataset for testing
-dataset = ["The quick brown fox jumps over the lazy dog.", "To be or not to be, that is the question."]
-
-# Process each text in the dataset
-for text in dataset:
-    output = model.process(text)
-    print(f'Input: {text} ->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ What is the primary benefit of using Ollama for local LLM deployment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -119,21 +105,7 @@ for text in dataset:
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-After completing this course, the next steps involve selecting the appropriate hardware based on your specific needs, configuring your environment for private AI deployment, and planning for enterprise-level rollout. This includes setting up necessary infrastructure, conducting thorough testing, and ensuring compliance with organizational policies and data regulations.
-
-```python title="example2.py"
-import llama_cpp
-
-# Initialize llama.cpp with a specific model
-model = llama_cpp.initialize('path/to/model')
-
-# Load a dataset for testing
-dataset = ["The quick brown fox jumps over the lazy dog.", "To be or not to be, that is the question."]
-
-# Process each text in the dataset
-for text in dataset:
-    output = model.process(text)
-    print(f'Input: {text} ->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which factor is crucial for the successful enterprise deployment of LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

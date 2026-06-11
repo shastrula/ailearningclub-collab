@@ -66,9 +66,7 @@ When providing feedback, focus on specific aspects of the work rather than makin
 
 > **💡 Tip:** Use the 'sandwich' method for feedback: start with positive feedback, provide constructive criticism, and end with another positive comment.
 
-When providing feedback, focus on specific aspects of the work rather than making general comments. Highlight both strengths and areas for improvement, and suggest actionable steps for improvement.
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the most effective way to structure your feedback?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -87,34 +87,7 @@ plt.show()
 
 > **💡 Tip:** When training autoencoders, ensure your loss function aligns with the data distribution. For instance, use 'binary_crossentropy' for binary data and'mse' for continuous data.
 
-Training an autoencoder involves feeding it input data and adjusting the weights to minimize the difference between the input and the reconstructed output. Evaluation can be done by measuring the reconstruction error or by using the encoded representations for downstream tasks like clustering or classification.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-
-# Assuming autoencoder is trained and x_test is available
-encoded_imgs = autoencoder.encoder(x_test).numpy()
-decoded_imgs = autoencoder.decoder(encoded_imgs).numpy()
-
-# Plot original and reconstructed images
-num_images = 10
-plt.figure(figsize=(20, 4))
-for i in range(num_images):
-    ax = plt.subplot(2, num_images, i + 1)
-    plt.imshow(x_test[i].reshape(28, 28))
-    plt.gray()
-    ax.get_xaxis().set_visible(False)
-    ax.get_yaxis().set_visible(False)
-
-    ax = plt.subplot(2, num_images, i + 1 + num_images)
-    plt.imshow(decoded_imgs[i].reshape(28, 28))
-    plt.gray()
-    ax.get_xaxis().set_visible(False)
-    ax.get_yaxis().set_visible(False)
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary goal of an autoencoder?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -138,34 +111,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Training an autoencoder involves feeding it input data and adjusting the weights to minimize the difference between the input and the reconstructed output. Evaluation can be done by measuring the reconstruction error or by using the encoded representations for downstream tasks like clustering or classification.
-
-```python title="example2.py"
-import matplotlib.pyplot as plt
-
-# Assuming autoencoder is trained and x_test is available
-encoded_imgs = autoencoder.encoder(x_test).numpy()
-decoded_imgs = autoencoder.decoder(encoded_imgs).numpy()
-
-# Plot original and reconstructed images
-num_images = 10
-plt.figure(figsize=(20, 4))
-for i in range(num_images):
-    ax = plt.subplot(2, num_images, i + 1)
-    plt.imshow(x_test[i].reshape(28, 28))
-    plt.gray()
-    ax.get_xaxis().set_visible(False)
-    ax.get_yaxis().set_visible(False)
-
-    ax = plt.subplot(2, num_images, i + 1 + num_images)
-    plt.imshow(decoded_imgs[i].reshape(28, 28))
-    plt.gray()
-    ax.get_xaxis().set_visible(False)
-    ax.get_yaxis().set_visible(False)
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which part of the autoencoder is responsible for dimensionality reduction?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

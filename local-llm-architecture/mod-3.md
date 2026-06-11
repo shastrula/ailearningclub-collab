@@ -88,31 +88,7 @@ print(output)
 
 > **💡 Tip:** Ensure your GPU drivers are up to date and compatible with CUDA or ROCm to avoid performance issues when using GPU acceleration with llama.cpp.
 
-To ensure optimal performance when running LLMs with llama.cpp, it is essential to configure your hardware correctly. This includes utilizing GPUs for accelerated computation and ensuring sufficient RAM to handle large model sizes. Proper hardware configuration can significantly reduce inference times and improve overall efficiency.
-
-```python title="example2.py"
-import llama_cpp
-
-# Set hardware configuration
-config = {
-    'use_gpu': True,
-    'gpu_id': 0,
-    'batch_size': 8,
-   'max_seq_len': 256
-}
-
-# Initialize the model with configuration
-model_path = 'path/to/your/model.bin'
-model = llama_cpp.Model(model_path, config)
-
-# Generate text using the configured model
-prompt = 'The quick brown fox'
-output = model.generate(prompt, max_length=50)
-
-print(output)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of llama.cpp?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -136,31 +112,7 @@ print(output)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-To ensure optimal performance when running LLMs with llama.cpp, it is essential to configure your hardware correctly. This includes utilizing GPUs for accelerated computation and ensuring sufficient RAM to handle large model sizes. Proper hardware configuration can significantly reduce inference times and improve overall efficiency.
-
-```python title="example2.py"
-import llama_cpp
-
-# Set hardware configuration
-config = {
-    'use_gpu': True,
-    'gpu_id': 0,
-    'batch_size': 8,
-   'max_seq_len': 256
-}
-
-# Initialize the model with configuration
-model_path = 'path/to/your/model.bin'
-model = llama_cpp.Model(model_path, config)
-
-# Generate text using the configured model
-prompt = 'The quick brown fox'
-output = model.generate(prompt, max_length=50)
-
-print(output)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which hardware component is crucial for optimal performance when using llama.cpp?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

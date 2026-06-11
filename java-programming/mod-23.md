@@ -85,28 +85,7 @@ class Service {
 
 > **💡 Tip:** Always mock external dependencies in integration tests to isolate the component under test and avoid flakiness.
 
-Integration testing involves testing the interactions between different components or modules of an application. It ensures that the integrated parts of the application work together as expected. This is often done using frameworks like JUnit in conjunction with other tools like Mockito for mocking dependencies.
-
-```java title="example2.java"
-@Test
-public void testIntegration() {
-    Service service = new Service(new Repository());
-    String result = service.process();
-    assertEquals("Processed Data", result);
-}
-
-class Repository {
-    public String getData() { return "Data"; }
-}
-
-class Service {
-    private Repository repo;
-    public Service(Repository repo) { this.repo = repo; }
-    public String process() { return "Processed " + repo.getData(); }
-}
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of unit testing?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -130,28 +109,7 @@ class Service {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Integration testing involves testing the interactions between different components or modules of an application. It ensures that the integrated parts of the application work together as expected. This is often done using frameworks like JUnit in conjunction with other tools like Mockito for mocking dependencies.
-
-```java title="example2.java"
-@Test
-public void testIntegration() {
-    Service service = new Service(new Repository());
-    String result = service.process();
-    assertEquals("Processed Data", result);
-}
-
-class Repository {
-    public String getData() { return "Data"; }
-}
-
-class Service {
-    private Repository repo;
-    public Service(Repository repo) { this.repo = repo; }
-    public String process() { return "Processed " + repo.getData(); }
-}
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which framework is commonly used for unit testing in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -85,7 +85,7 @@ public class Example2 {
 
 > **💡 Tip:** When using generics, always specify the type to avoid ClassCastException at runtime.
 
-Generics provide compile-time type safety by allowing you to specify the type of objects that a collection can hold. This prevents the need for type casting and reduces the risk of runtime errors. Generics are specified within angle brackets (<>
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does the List interface allow in Java Collections Framework?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -109,7 +109,7 @@ Generics provide compile-time type safety by allowing you to specify the type of
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Generics provide compile-time type safety by allowing you to specify the type of objects that a collection can hold. This prevents the need for type casting and reduces the risk of runtime errors. Generics are specified within angle brackets (<>
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ How do you specify generics in a Java collection?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

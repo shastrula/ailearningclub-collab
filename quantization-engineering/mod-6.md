@@ -84,27 +84,7 @@ print(weights_int8)
 
 > **💡 Tip:** When performing quantization, ensure that the scale factor is chosen carefully to avoid overflow and underflow issues. Additionally, always test the quantized model to verify that it maintains acceptable performance levels.
 
-INT8 quantization is a widely-used technique that converts floating-point weights and activations to 8-bit integers. This method strikes a balance between model size reduction and performance, making it suitable for various deployment scenarios. The quantization process involves determining a scale factor and zero-point for each tensor to maintain accuracy.
-
-```python title="example2.py"
-import numpy as np
-
-# Example weights
-weights_fp32 = np.array([1.2, -0.5, 0.8, -1.1], dtype=np.float32)
-
-# Scaling factor
-scale = np.max(np.abs(weights_fp32))
-
-# Quantization to INT8
-weights_int8 = np.round(weights_fp32 / scale * 127).astype(np.int8)
-
-# Clipping to ensure values are within INT8 range
-weights_int8 = np.clip(weights_int8, -128, 127)
-
-print(weights_int8)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of INT4 quantization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -128,27 +108,7 @@ print(weights_int8)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-INT8 quantization is a widely-used technique that converts floating-point weights and activations to 8-bit integers. This method strikes a balance between model size reduction and performance, making it suitable for various deployment scenarios. The quantization process involves determining a scale factor and zero-point for each tensor to maintain accuracy.
-
-```python title="example2.py"
-import numpy as np
-
-# Example weights
-weights_fp32 = np.array([1.2, -0.5, 0.8, -1.1], dtype=np.float32)
-
-# Scaling factor
-scale = np.max(np.abs(weights_fp32))
-
-# Quantization to INT8
-weights_int8 = np.round(weights_fp32 / scale * 127).astype(np.int8)
-
-# Clipping to ensure values are within INT8 range
-weights_int8 = np.clip(weights_int8, -128, 127)
-
-print(weights_int8)
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ Which range does INT8 quantization clip values to ensure they fit within the INT8 format?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

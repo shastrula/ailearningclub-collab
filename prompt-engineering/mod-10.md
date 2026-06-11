@@ -80,23 +80,7 @@ print(result[0]['generated_text'])
 
 > **💡 Tip:** When using CoT prompting, ensure that the intermediate steps are logically connected and relevant to the final answer to improve the model's performance.
 
-Chain-of-Thought (CoT) prompting encourages language models to generate intermediate reasoning steps before arriving at a final answer. ReAct prompting combines reasoning and action, allowing the model to perform a series of steps to solve a problem. These techniques enhance the model's ability to handle complex tasks and provide more accurate responses.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# CoT prompting example
-cot_pipeline = pipeline("text-generation")
-
-# Example input
-prompt = "What is the capital of France? Let's think step by step: France is a country in Europe. The capital of France is "
-
-# Generate text using CoT
-result = cot_pipeline(prompt, max_length=50)
-print(result[0]['generated_text'])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ Which technique involves using a language model without any specific training data for a task?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,23 +104,7 @@ print(result[0]['generated_text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Chain-of-Thought (CoT) prompting encourages language models to generate intermediate reasoning steps before arriving at a final answer. ReAct prompting combines reasoning and action, allowing the model to perform a series of steps to solve a problem. These techniques enhance the model's ability to handle complex tasks and provide more accurate responses.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# CoT prompting example
-cot_pipeline = pipeline("text-generation")
-
-# Example input
-prompt = "What is the capital of France? Let's think step by step: France is a country in Europe. The capital of France is "
-
-# Generate text using CoT
-result = cot_pipeline(prompt, max_length=50)
-print(result[0]['generated_text'])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does CoT prompting aim to enhance in language models?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -94,21 +94,7 @@ public class Example2 {
 
 > **💡 Tip:** Avoid using synchronized on large blocks of code or methods to prevent performance bottlenecks. Instead, synchronize only the critical sections that access shared resources.
 
-Thread synchronization is vital to prevent data inconsistency when multiple threads access shared resources. Java provides the synchronized keyword and the Lock interface to manage thread synchronization. Synchronized methods or blocks ensure that only one thread can execute them at a time.
-
-```java title="example2.java"
-public class Example2 {
-    private int counter = 0;
-
-    public synchronized void increment() {
-        counter++;
-        System.out.println("Counter incremented by " + Thread.currentThread().getName() + " - New value: " + counter);
-    }
-
-    public static void main(String[] args) {
-        Example2 example = new Example2();
-
-        Runnable task = () ->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How can you create a thread in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -132,21 +118,7 @@ public class Example2 {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Thread synchronization is vital to prevent data inconsistency when multiple threads access shared resources. Java provides the synchronized keyword and the Lock interface to manage thread synchronization. Synchronized methods or blocks ensure that only one thread can execute them at a time.
-
-```java title="example2.java"
-public class Example2 {
-    private int counter = 0;
-
-    public synchronized void increment() {
-        counter++;
-        System.out.println("Counter incremented by " + Thread.currentThread().getName() + " - New value: " + counter);
-    }
-
-    public static void main(String[] args) {
-        Example2 example = new Example2();
-
-        Runnable task = () ->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of the synchronized keyword in Java?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

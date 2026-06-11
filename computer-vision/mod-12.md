@@ -88,31 +88,7 @@ print(calculate_map(ground_truth, predictions))
 
 > **💡 Tip:** When evaluating object detection models, ensure that the IoU threshold is appropriately set to match the specific requirements of your application.
 
-Mean Average Precision (mAP) is a comprehensive metric used to evaluate object detection models. It considers both the precision and recall of the model across different Intersection over Union (IoU) thresholds. mAP provides a single scalar value that summarizes the model's performance, making it easier to compare different models.
-
-```python title="example2.py"
-from sklearn.metrics import average_precision_score
-
-def calculate_map(gt, pred):
-    # Flatten the ground truth and predictions
-    gt_flat = [item for sublist in gt for item in sublist]
-    pred_flat = [item for sublist in pred for item in sublist]
-
-    # Calculate average precision for each class
-    aps = [average_precision_score(gt_flat, pred_flat) for gt, pred in zip(gt, pred)]
-
-    # Calculate mean average precision
-    map_score = sum(aps) / len(aps)
-
-    return map_score
-
-# Example usage
-ground_truth = [[1, 0, 1], [0, 1, 0]]
-predictions = [[0.9, 0.1, 0.8], [0.2, 0.9, 0.3]]
-print(calculate_map(ground_truth, predictions))
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does a higher IoU value indicate in object detection?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -136,31 +112,7 @@ print(calculate_map(ground_truth, predictions))
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Mean Average Precision (mAP) is a comprehensive metric used to evaluate object detection models. It considers both the precision and recall of the model across different Intersection over Union (IoU) thresholds. mAP provides a single scalar value that summarizes the model's performance, making it easier to compare different models.
-
-```python title="example2.py"
-from sklearn.metrics import average_precision_score
-
-def calculate_map(gt, pred):
-    # Flatten the ground truth and predictions
-    gt_flat = [item for sublist in gt for item in sublist]
-    pred_flat = [item for sublist in pred for item in sublist]
-
-    # Calculate average precision for each class
-    aps = [average_precision_score(gt_flat, pred_flat) for gt, pred in zip(gt, pred)]
-
-    # Calculate mean average precision
-    map_score = sum(aps) / len(aps)
-
-    return map_score
-
-# Example usage
-ground_truth = [[1, 0, 1], [0, 1, 0]]
-predictions = [[0.9, 0.1, 0.8], [0.2, 0.9, 0.3]]
-print(calculate_map(ground_truth, predictions))
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What does mAP summarize in object detection model evaluation?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

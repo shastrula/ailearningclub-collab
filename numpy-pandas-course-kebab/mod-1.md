@@ -78,25 +78,7 @@ print('Element-wise Multiplication:', multiplication)
 
 > **💡 Tip:** When performing operations on NumPy arrays, ensure that the arrays have compatible shapes to avoid broadcasting errors.
 
-NumPy arrays support a wide range of operations, including arithmetic operations, aggregations, and broadcasting. These operations are performed element-wise, making it easy to perform complex computations on large datasets.
-
-```python title="example2.py"
-import numpy as np
-
-# Creating two 1D arrays
-array1 = np.array([1, 2, 3])
-array2 = np.array([4, 5, 6])
-
-# Element-wise addition
-addition = array1 + array2
-print('Element-wise Addition:', addition)
-
-# Element-wise multiplication
-multiplication = array1 * array2
-print('Element-wise Multiplication:', multiplication)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary advantage of using NumPy arrays over Python lists?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,25 +102,7 @@ print('Element-wise Multiplication:', multiplication)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-NumPy arrays support a wide range of operations, including arithmetic operations, aggregations, and broadcasting. These operations are performed element-wise, making it easy to perform complex computations on large datasets.
-
-```python title="example2.py"
-import numpy as np
-
-# Creating two 1D arrays
-array1 = np.array([1, 2, 3])
-array2 = np.array([4, 5, 6])
-
-# Element-wise addition
-addition = array1 + array2
-print('Element-wise Addition:', addition)
-
-# Element-wise multiplication
-multiplication = array1 * array2
-print('Element-wise Multiplication:', multiplication)
-```
-
->
+<div class="quiz" data-correct="0">
   <p class="font-semibold mb-3">❓ What will be the output of element-wise addition of arrays [1, 2, 3] and [4, 5, 6]?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

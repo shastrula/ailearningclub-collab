@@ -102,45 +102,7 @@ print(output)
 
 > **💡 Tip:** When applying QLoRA, ensure that the quantization scales and zero points are carefully calibrated to maintain model accuracy.
 
-QLoRA extends the LoRA technique by incorporating quantization, which further reduces the memory footprint and computational requirements. Quantization involves converting the model parameters to lower precision, such as int8, without significantly compromising performance. QLoRA is particularly useful for deploying LLMs on resource-constrained environments.
-
-```python title="example2.py"
-import torch
-import torch.nn as nn
-
-# Define a simple neural network
-class SimpleNN(nn.Module):
-    def __init__(self):
-        super(SimpleNN, self).__init__()
-        self.linear = nn.Linear(10, 5)
-
-    def forward(self, x):
-        return self.linear(x)
-
-# Initialize the model
-model = SimpleNN()
-
-# LoRA adaptation
-lora_rank = 2
-lora_A = nn.Parameter(torch.randn(5, lora_rank))
-lora_B = nn.Parameter(torch.randn(lora_rank, 10))
-
-# Apply LoRA to the linear layer
-original_weight = model.linear.weight
-adapted_weight = original_weight + lora_A @ lora_B
-model.linear.weight.data = adapted_weight
-
-# Quantization
-quantized_weight = torch.quantize_per_tensor(adapted_weight, scale=1.0, zero_point=0, dtype=torch.qint8)
-model.linear.weight = nn.Parameter(quantized_weight)
-
-# Example input
-input_tensor = torch.randn(1, 10)
-output = model(input_tensor)
-print(output)
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary benefit of using LoRA for fine-tuning LLMs?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -164,45 +126,7 @@ print(output)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-QLoRA extends the LoRA technique by incorporating quantization, which further reduces the memory footprint and computational requirements. Quantization involves converting the model parameters to lower precision, such as int8, without significantly compromising performance. QLoRA is particularly useful for deploying LLMs on resource-constrained environments.
-
-```python title="example2.py"
-import torch
-import torch.nn as nn
-
-# Define a simple neural network
-class SimpleNN(nn.Module):
-    def __init__(self):
-        super(SimpleNN, self).__init__()
-        self.linear = nn.Linear(10, 5)
-
-    def forward(self, x):
-        return self.linear(x)
-
-# Initialize the model
-model = SimpleNN()
-
-# LoRA adaptation
-lora_rank = 2
-lora_A = nn.Parameter(torch.randn(5, lora_rank))
-lora_B = nn.Parameter(torch.randn(lora_rank, 10))
-
-# Apply LoRA to the linear layer
-original_weight = model.linear.weight
-adapted_weight = original_weight + lora_A @ lora_B
-model.linear.weight.data = adapted_weight
-
-# Quantization
-quantized_weight = torch.quantize_per_tensor(adapted_weight, scale=1.0, zero_point=0, dtype=torch.qint8)
-model.linear.weight = nn.Parameter(quantized_weight)
-
-# Example input
-input_tensor = torch.randn(1, 10)
-output = model(input_tensor)
-print(output)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How does QLoRA differ from LoRA?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

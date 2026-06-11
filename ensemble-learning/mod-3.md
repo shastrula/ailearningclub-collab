@@ -80,30 +80,7 @@ print(f'OOB Score: {oob_score}')
 
 > **💡 Tip:** When using weighted bagging, ensure that the weights are appropriately scaled to avoid overfitting to the minority class.
 
-Out-of-Bag (OOB) evaluation is a technique used in bagging to assess the model's performance without needing a separate validation set. During training, each base model is trained on a different bootstrap sample, and the remaining samples (those not included in the bootstrap sample) are used for evaluation. This method provides an unbiased estimate of the model's generalization performance.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.datasets import make_classification
-
-# Generate a synthetic dataset
-X, y = make_classification(n_samples=1000, n_features=20, n_classes=2, random_state=42)
-
-# Define the RandomForestClassifier with OOB evaluation
-rf_clf = RandomForestClassifier(n_estimators=100, oob_score=True, random_state=42)
-
-# Fit the model
-rf_clf.fit(X, y)
-
-# Get the OOB score
-oob_score = rf_clf.oob_score_
-
-# Output the OOB score
-print(f'OOB Score: {oob_score}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of weighted bagging?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -127,30 +104,7 @@ print(f'OOB Score: {oob_score}')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Out-of-Bag (OOB) evaluation is a technique used in bagging to assess the model's performance without needing a separate validation set. During training, each base model is trained on a different bootstrap sample, and the remaining samples (those not included in the bootstrap sample) are used for evaluation. This method provides an unbiased estimate of the model's generalization performance.
-
-```python title="example2.py"
-import numpy as np
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.datasets import make_classification
-
-# Generate a synthetic dataset
-X, y = make_classification(n_samples=1000, n_features=20, n_classes=2, random_state=42)
-
-# Define the RandomForestClassifier with OOB evaluation
-rf_clf = RandomForestClassifier(n_estimators=100, oob_score=True, random_state=42)
-
-# Fit the model
-rf_clf.fit(X, y)
-
-# Get the OOB score
-oob_score = rf_clf.oob_score_
-
-# Output the OOB score
-print(f'OOB Score: {oob_score}')
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What does OOB evaluation provide?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

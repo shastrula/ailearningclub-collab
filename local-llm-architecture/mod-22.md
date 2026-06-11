@@ -82,25 +82,7 @@ print(f'Available Disk Space: {available_disk_space:.2f} GB')
 
 > **💡 Tip:** Ensure your system has sufficient memory and disk space before deploying large LLMs to avoid performance issues and potential crashes.
 
-Deploying LLMs locally requires careful consideration of hardware requirements. GPUs are often necessary for efficient model inference, though CPU-only setups can work for smaller models. Private AI deployment ensures data security and compliance with organizational policies. It allows for customization and control over the model's behavior and data handling.
-
-```python title="example2.py"
-import psutil
-
-# Check available memory
-memory_info = psutil.virtual_memory()
-available_memory = memory_info.available / (1024 ** 3)
-
-# Check available disk space
-disk_usage = psutil.disk_usage('/')
-available_disk_space = disk_usage.free / (1024 ** 3)
-
-# Print hardware information
-print(f'Available Memory: {available_memory:.2f} GB')
-print(f'Available Disk Space: {available_disk_space:.2f} GB')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ What is the primary function of Ollama in LLM deployment?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -124,25 +106,7 @@ print(f'Available Disk Space: {available_disk_space:.2f} GB')
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Deploying LLMs locally requires careful consideration of hardware requirements. GPUs are often necessary for efficient model inference, though CPU-only setups can work for smaller models. Private AI deployment ensures data security and compliance with organizational policies. It allows for customization and control over the model's behavior and data handling.
-
-```python title="example2.py"
-import psutil
-
-# Check available memory
-memory_info = psutil.virtual_memory()
-available_memory = memory_info.available / (1024 ** 3)
-
-# Check available disk space
-disk_usage = psutil.disk_usage('/')
-available_disk_space = disk_usage.free / (1024 ** 3)
-
-# Print hardware information
-print(f'Available Memory: {available_memory:.2f} GB')
-print(f'Available Disk Space: {available_disk_space:.2f} GB')
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Why is it important to consider hardware requirements when deploying LLMs locally?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

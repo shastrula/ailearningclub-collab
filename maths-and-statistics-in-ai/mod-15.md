@@ -68,6 +68,35 @@ Learning from others' experiences:
 - **RMSE** (Root Mean Squared Error): Square root of MSE
 - **R²**: Proportion of variance explained
 
+<div class="quiz" data-correct="2">
+  <p class="font-semibold mb-3">❓ What does R² = 0.92 mean?</p>
+  <div class="space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8888888888" value="0">
+      <span>92% of predictions are correct</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8888888888" value="1">
+      <span>The model has 92% accuracy</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8888888888" value="2">
+      <span>The model explains 92% of variance in y</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="radio" name="q8888888888" value="3">
+      <span>92% of data points fit the line</span>
+    </label>
+  </div>
+  <button class="quiz-btn mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700">Check Answer</button>
+  <p class="quiz-result text-sm mt-2 hidden"></p>
+</div>
+## For Regression
+- **MAE** (Mean Absolute Error): Average absolute difference
+- **MSE** (Mean Squared Error): Average squared difference
+- **RMSE** (Root Mean Squared Error): Square root of MSE
+- **R²**: Proportion of variance explained
+
 ### For Regression
 - **MAE** (Mean Absolute Error): Average absolute difference
 - **MSE** (Mean Squared Error): Average squared difference

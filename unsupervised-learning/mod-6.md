@@ -86,33 +86,7 @@ plt.show()
 
 > **💡 Tip:** When choosing the number of clusters in hierarchical clustering, consider using domain knowledge or techniques like the elbow method to determine the optimal number of clusters.
 
-Divisive hierarchical clustering is a top-down approach where all data points start in one cluster, and clusters are recursively split into smaller clusters. This method is less common than agglomerative clustering but can be useful in certain applications where a top-down approach is more intuitive.
-
-```python title="example2.py"
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.cluster.hierarchy import dendrogram, linkage, cut_tree
-from sklearn.datasets import make_blobs
-
-# Generate sample data
-X, _ = make_blobs(n_samples=50, n_features=2, centers=4, cluster_std=0.60, random_state=0)
-
-# Perform divisive hierarchical clustering
-linked = linkage(X, 'ward')
-
-# Cut the dendrogram to form 4 clusters
-clusters = cut_tree(linked, n_clusters=4).reshape(-1,)
-
-# Plot the clusters
-plt.figure(figsize=(10, 7))
-plt.scatter(X[:, 0], X[:, 1], c=clusters, cmap='viridis')
-plt.title('Divisive Hierarchical Clustering')
-plt.xlabel('Feature 1')
-plt.ylabel('Feature 2')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary difference between agglomerative and divisive hierarchical clustering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -136,33 +110,7 @@ plt.show()
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Divisive hierarchical clustering is a top-down approach where all data points start in one cluster, and clusters are recursively split into smaller clusters. This method is less common than agglomerative clustering but can be useful in certain applications where a top-down approach is more intuitive.
-
-```python title="example2.py"
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.cluster.hierarchy import dendrogram, linkage, cut_tree
-from sklearn.datasets import make_blobs
-
-# Generate sample data
-X, _ = make_blobs(n_samples=50, n_features=2, centers=4, cluster_std=0.60, random_state=0)
-
-# Perform divisive hierarchical clustering
-linked = linkage(X, 'ward')
-
-# Cut the dendrogram to form 4 clusters
-clusters = cut_tree(linked, n_clusters=4).reshape(-1,)
-
-# Plot the clusters
-plt.figure(figsize=(10, 7))
-plt.scatter(X[:, 0], X[:, 1], c=clusters, cmap='viridis')
-plt.title('Divisive Hierarchical Clustering')
-plt.xlabel('Feature 1')
-plt.ylabel('Feature 2')
-plt.show()
-```
-
->
+<div class="quiz" data-correct="3">
   <p class="font-semibold mb-3">❓ Which linkage method is used in the provided code examples for hierarchical clustering?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

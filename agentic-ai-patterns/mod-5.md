@@ -104,47 +104,7 @@ print(result)
 
 > **💡 Tip:** Ensure that tasks are well-defined with clear dependencies to avoid conflicts and ensure smooth orchestration among agents.
 
-CrewAI allows for the orchestration of multiple agents to work together on complex tasks. This involves defining roles, setting goals, and specifying interactions between agents. The framework handles the coordination and ensures that agents can leverage each other’s outputs to achieve the overall objective.
-
-```python title="example2.py"
-from crewai import Agent, Task, Crew
-
-# Define agents
-researcher = Agent(
-  role='Senior Research Analyst',
-  goal='Conduct market research',
-  backstory='Experienced in market analysis with a focus on tech industries.',
-  verbose=True
-)
-writer = Agent(
-  role='Content Writer',
-  goal='Create engaging content',
-  backstory='Skilled in writing compelling narratives and reports.',
-  verbose=True
-)
-
-# Define tasks
-research_task = Task(
-  description='Analyze the latest trends in AI technology',
-  expected_output='A detailed report on AI trends',
-  agent=researcher
-)
-write_task = Task(
-  description='Write an article based on the research report',
-  expected_output='Engaging article on AI trends',
-  agent=writer,
-  depends_on=[research_task]
-)
-
-# Create a crew with the agents and tasks
-crew = Crew(agents=[researcher, writer], tasks=[research_task, write_task])
-
-# Run the crew
-result = crew.kickoff()
-print(result)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary role of an Agent in the CrewAI framework?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -168,47 +128,7 @@ print(result)
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-CrewAI allows for the orchestration of multiple agents to work together on complex tasks. This involves defining roles, setting goals, and specifying interactions between agents. The framework handles the coordination and ensures that agents can leverage each other’s outputs to achieve the overall objective.
-
-```python title="example2.py"
-from crewai import Agent, Task, Crew
-
-# Define agents
-researcher = Agent(
-  role='Senior Research Analyst',
-  goal='Conduct market research',
-  backstory='Experienced in market analysis with a focus on tech industries.',
-  verbose=True
-)
-writer = Agent(
-  role='Content Writer',
-  goal='Create engaging content',
-  backstory='Skilled in writing compelling narratives and reports.',
-  verbose=True
-)
-
-# Define tasks
-research_task = Task(
-  description='Analyze the latest trends in AI technology',
-  expected_output='A detailed report on AI trends',
-  agent=researcher
-)
-write_task = Task(
-  description='Write an article based on the research report',
-  expected_output='Engaging article on AI trends',
-  agent=writer,
-  depends_on=[research_task]
-)
-
-# Create a crew with the agents and tasks
-crew = Crew(agents=[researcher, writer], tasks=[research_task, write_task])
-
-# Run the crew
-result = crew.kickoff()
-print(result)
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ How does CrewAI handle the coordination of multiple agents?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

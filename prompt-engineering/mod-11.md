@@ -80,23 +80,7 @@ print(cot_result[0]['generated_text'])
 
 > **💡 Tip:** When using CoT prompting, ensure that the intermediate steps are clear and logically connected to the final answer to improve the model's performance.
 
-Chain-of-Thought (CoT) prompting encourages models to generate intermediate reasoning steps before arriving at a final answer, enhancing their problem-solving capabilities. ReAct (Reason + Act) prompting combines reasoning with actionable steps, allowing models to perform tasks that require both understanding and execution. These techniques are particularly useful for complex, multi-step tasks.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Text generation pipeline
-generator = pipeline("text-generation")
-
-# Example CoT prompt
-cot_prompt = "To solve 2 + 2, first identify the numbers 2 and 2. Then, add them together to get 4."
-
-# Generate text using CoT
-cot_result = generator(cot_prompt, max_length=50)
-print(cot_result[0]['generated_text'])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary difference between zero-shot and few-shot learning?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,23 +104,7 @@ print(cot_result[0]['generated_text'])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Chain-of-Thought (CoT) prompting encourages models to generate intermediate reasoning steps before arriving at a final answer, enhancing their problem-solving capabilities. ReAct (Reason + Act) prompting combines reasoning with actionable steps, allowing models to perform tasks that require both understanding and execution. These techniques are particularly useful for complex, multi-step tasks.
-
-```python title="example2.py"
-from transformers import pipeline
-
-# Text generation pipeline
-generator = pipeline("text-generation")
-
-# Example CoT prompt
-cot_prompt = "To solve 2 + 2, first identify the numbers 2 and 2. Then, add them together to get 4."
-
-# Generate text using CoT
-cot_result = generator(cot_prompt, max_length=50)
-print(cot_result[0]['generated_text'])
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ How does Chain-of-Thought (CoT) prompting improve model performance?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

@@ -80,23 +80,7 @@ public class GarbageCollectionExample {
 
 > **💡 Tip:** Avoid calling System.gc() frequently as it can negatively impact performance. Instead, rely on the JVM's automatic garbage collection process.
 
-Garbage collection in Java is an automatic memory management process that reclaims memory occupied by objects that are no longer in use. The JVM's garbage collector periodically identifies and frees up memory, reducing the risk of memory leaks. Developers can influence garbage collection by using specific object references and patterns.
-
-```java title="example2.java"
-public class GarbageCollectionExample {
-    public static void main(String[] args) {
-        // Create objects that will be garbage collected
-        Object obj1 = new Object();
-        Object obj2 = new Object();
-        obj1 = null;
-        obj2 = null;
-        System.gc(); // Request the garbage collector to run
-        System.out.println("Garbage collection requested");
-    }
-}
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the primary purpose of the Java Virtual Machine's garbage collector?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -120,23 +104,7 @@ public class GarbageCollectionExample {
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Garbage collection in Java is an automatic memory management process that reclaims memory occupied by objects that are no longer in use. The JVM's garbage collector periodically identifies and frees up memory, reducing the risk of memory leaks. Developers can influence garbage collection by using specific object references and patterns.
-
-```java title="example2.java"
-public class GarbageCollectionExample {
-    public static void main(String[] args) {
-        // Create objects that will be garbage collected
-        Object obj1 = new Object();
-        Object obj2 = new Object();
-        obj1 = null;
-        obj2 = null;
-        System.gc(); // Request the garbage collector to run
-        System.out.println("Garbage collection requested");
-    }
-}
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which memory region in Java stores class structures and method bytecodes?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">

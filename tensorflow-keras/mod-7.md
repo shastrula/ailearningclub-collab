@@ -84,27 +84,7 @@ print('Augmented Image:', augmented_images[0][0])
 
 > **💡 Tip:** When applying data augmentation, ensure that the transformations are realistic and relevant to the problem domain to avoid introducing noise that could degrade model performance.
 
-Data augmentation involves creating modified copies of the data to increase the dataset's size and variability. Common techniques include rotation, scaling, flipping, and adding noise. These methods help prevent overfitting and improve the model's ability to generalize to new data.
-
-```python title="example2.py"
-import numpy as np
-import tensorflow as tf
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-
-# Sample image
-image = np.array([[[1], [2]], [[3], [4]]]).reshape((1, 2, 2, 1))
-
-# Data augmentation
-datagen = ImageDataGenerator(rotation_range=45, width_shift_range=0.2, height_shift_range=0.2, horizontal_flip=True)
-
-# Generating augmented images
-augmented_images = [image for image in datagen.flow(image, batch_size=1)]
-
-print('Original Image:', image)
-print('Augmented Image:', augmented_images[0][0])
-```
-
->
+<div class="quiz" data-correct="1">
   <p class="font-semibold mb-3">❓ What is the purpose of data normalization?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
@@ -128,27 +108,7 @@ print('Augmented Image:', augmented_images[0][0])
   <p class="quiz-result text-sm mt-2 hidden"></p>
 </div>
 
-Data augmentation involves creating modified copies of the data to increase the dataset's size and variability. Common techniques include rotation, scaling, flipping, and adding noise. These methods help prevent overfitting and improve the model's ability to generalize to new data.
-
-```python title="example2.py"
-import numpy as np
-import tensorflow as tf
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-
-# Sample image
-image = np.array([[[1], [2]], [[3], [4]]]).reshape((1, 2, 2, 1))
-
-# Data augmentation
-datagen = ImageDataGenerator(rotation_range=45, width_shift_range=0.2, height_shift_range=0.2, horizontal_flip=True)
-
-# Generating augmented images
-augmented_images = [image for image in datagen.flow(image, batch_size=1)]
-
-print('Original Image:', image)
-print('Augmented Image:', augmented_images[0][0])
-```
-
->
+<div class="quiz" data-correct="2">
   <p class="font-semibold mb-3">❓ Which technique is used to prevent overfitting by creating modified copies of data?</p>
   <div class="space-y-2">
     <label class="flex items-center gap-2 cursor-pointer">
