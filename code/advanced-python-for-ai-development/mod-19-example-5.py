@@ -1,0 +1,7 @@
+# requirements.txt
+numpy==1.24.3
+pandas==2.0.3
+scikit-learn==1.3.0
+torch==2.0.1
+
+# Use: pip install -r requirements.txt
